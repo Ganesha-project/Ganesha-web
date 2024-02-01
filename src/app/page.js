@@ -1,0 +1,34 @@
+import { BodyLanding } from "@/components/BodyLanding";
+import { ImgProduk } from "@/components/ImgProduk";
+import { BannerText } from "@/components/BannerText";
+import home from "../public/BG/block.png"
+import { LegalityApprove } from "@/components/LeagalityApprove";
+import { VoCarousel } from "@/components/VoCarousel";
+
+
+export default function Home() {
+  const other = ""
+  const other2 = "Sinergi Layanan Bisnis"
+  const main = "Multifungsi"
+  const secondary = "  Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya."
+  return (
+    <>
+
+      <ImgProduk socmed={home} styles='bg-white mt-[0vh]' />
+      <BannerText
+        other2={other2}
+        main={main}
+        other={other}
+        secondary={secondary}
+        ganesha={'ganeshaconsulting.com'}
+        styles='bg-[#82498C] bg-clip-text text-transparent bg-opacity-100'
+        btn1='Lebih Lanjut'
+        styleL='bg-[#82498C] bg-opacity-30'
+        styleR='hidden'
+        href1='#product' />
+      <BodyLanding />
+      <LegalityApprove/>
+      <VoCarousel/>
+    </>
+  );
+}

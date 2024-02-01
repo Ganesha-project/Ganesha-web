@@ -1,0 +1,175 @@
+{
+    "packages": [
+        {
+            "type": "Mini Web Company Profile",
+            "price": 800000,
+            "priceOriginal": 1140000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "1 Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 2x",
+                    "status": true
+                },
+                {
+                    "feature": "7 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": false
+                }
+            ]
+        },
+        {
+            "type": "Company Profile Startup",
+            "price": 1500000,
+            "priceOriginal": 2850000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "Up to 8 Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 3x",
+                    "status": true
+                },
+                {
+                    "feature": "7 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": false
+                }
+            ]
+        },
+        {
+            "type": "Company Blog Website",
+            "price": 3000000,
+            "priceOriginal": 5700000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "Dynamic Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 5x",
+                    "status": true
+                },
+                {
+                    "feature": "10 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": true
+                }
+            ]
+        }
+    ]
+}
