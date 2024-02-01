@@ -4,6 +4,7 @@ import { BannerText } from "@/components/BannerText";
 import home from "../public/BG/block.png"
 import { LegalityApprove } from "@/components/LeagalityApprove";
 import { VoCarousel } from "@/components/VoCarousel";
+import { VisiMisi } from "@/components/VisiMisi";
 
 
 export default function Home() {
@@ -27,8 +28,9 @@ export default function Home() {
         styleR='hidden'
         href1='#product' />
       <BodyLanding />
-      <LegalityApprove/>
-      <VoCarousel/>
+      <VisiMisi />
+      <LegalityApprove />
+      <VoCarousel />
     </>
   );
 }

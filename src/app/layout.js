@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { FloatingButton } from "@/components/FloatingButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+      <link rel="icon" type="image/png" sizes="16x16" href="/Artboard2.png" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <section className="font-quicksand">
           <Navbar />
+          <FloatingButton />
           {children}
           <Footer />
         </section>

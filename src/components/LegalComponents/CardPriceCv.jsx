@@ -47,7 +47,7 @@ export const CardPriceCV = ({ data }) => {
                             <div className="mt-3 flex justify-center">
                                 <a 
                                 href={el.link}
-                                className="text-white font-extrabold w-full md:w-full bg-gradient-to-br from-orange-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:focus:ring-yellow-800 rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                className="text-white font-extrabold w-full md:w-full bg-gradient-to-br from-orange-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
                                     Konsultasi Sekarang
                                 </a>
                             </div>

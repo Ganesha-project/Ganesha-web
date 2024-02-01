@@ -27,7 +27,7 @@ export default async function WebPage() {
                 btn2='Konsultasi Sekarang'
                 styleL='bg-sky-200'
                 styleR='bg-sky-200'
-                href1='#packages' />
+                href1='#packages'/>
             <CardWeb data={data} />
             <HeaderWeb />
             <WebBody />

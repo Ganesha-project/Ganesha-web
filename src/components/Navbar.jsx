@@ -1,21 +1,18 @@
-'use client'
-
-import Artboard2 from '../public/IMG/Artboard2.png'
+"use client"
+import Artboard2 from '../public/IMG/Artboard2.png';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { RiCustomerServiceFill } from 'react-icons/ri';
 
 export const Navbar = ({ children }) => {
-
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(scrollPosition > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -25,21 +22,14 @@ export const Navbar = ({ children }) => {
     };
   }, []);
 
+  const isActive = (pathname) => router.pathname === pathname;
+
   return (
     <>
       <nav className={`font-quicksand fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#dcdcdc70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-          <a
-            href='/'
-            className="flex items-center space-x-3 rtl:space-x-reverse p-1"
-          >
-            <Image
-              src={Artboard2}
-              className=""
-              width={40}
-              height={40}
-              alt="Ganesha Logo"
-            />
+          <a href='/' className="flex items-center space-x-3 rtl:space-x-reverse p-1">
+            <Image src={Artboard2} className="" width={40} height={40} alt="Ganesha Logo" />
             <span className="self-center text-[#ffffff] text-2xl font-semibold blackspace-nowrap">
               {/* GaneshaConsulting */}
             </span>
@@ -47,9 +37,15 @@ export const Navbar = ({ children }) => {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-revers">
             <a
               href='/contact'
-              className="hidden lg:visible text-gray-800 bg-[#ffffff81] backdrop-blur-sm hover:bg-[#e9b3ee] focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block"
+              className={`hidden lg:visible text-gray-800 bg-[#ffffff81] backdrop-blur-sm hover:bg-[#e9b3ee] focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block ${isActive('/contact') && 'border-b-2 border-violet-300'}`}
             >
               Hubungi Kami
+            </a>
+            <a
+              href='/contact'
+              className="visible lg:hidden px-0 py-2 text-center md:inline-block"
+            >
+              <span><RiCustomerServiceFill size={25} color='grey' /></span>
             </a>
             <button
               data-collapse-toggle="navbar-sticky"
@@ -84,7 +80,7 @@ export const Navbar = ({ children }) => {
               <li>
                 <a
                   href='/'
-                  className="block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0"
+                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive === '/' ? "text-violet-800 border-b-2 border-violet-300 " : "text-gray-800"}`}
                   aria-current="page"
                 >
                   GaneshaConsulting
@@ -96,7 +92,7 @@ export const Navbar = ({ children }) => {
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  className="block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0"
+                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
                   type="button"
                 >
                   Produk & Layanan
@@ -151,7 +147,7 @@ export const Navbar = ({ children }) => {
                   id="dropdownHoverButton2"
                   data-dropdown-toggle="dropdownHover2"
                   data-dropdown-trigger="hover"
-                  className="block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0"
+                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products/legalitas') && 'border-b-2 border-violet-300'}`}
                   type="button"
                 >
                   Legalitas
@@ -195,7 +191,7 @@ export const Navbar = ({ children }) => {
               <li>
                 <a
                   href='/price-list'
-                  className="block py-2 px-3 text-gray-800 rounded hover:bg-slate-100  md:hover:bg-transparent md:hover:text-[#f599ff]  md:p-0"
+                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/price-list') && 'border-b-2 border-violet-300'}`}
                 >
                   List Harga
                 </a>
@@ -203,7 +199,7 @@ export const Navbar = ({ children }) => {
               {/* <li>
                 <a
                   href='/karir'
-                  className="block py-2 px-3 text-gray-800 rounded hover:bg-slate-100  md:hover:bg-transparent md:hover:text-[#f599ff]  md:p-0"
+                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/karir') && 'border-b-2 border-violet-300'}`}
                 >
                   Karir
                 </a>

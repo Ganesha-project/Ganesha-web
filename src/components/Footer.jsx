@@ -15,7 +15,7 @@ export const Footer = () => {
         <>
             <>
                 {/* Footer container */}
-                <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+                <footer className="bg-neutral-100 text-center text-neutral-600 lg:text-left">
                     {/* Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. */}
                     <div className="mx-6 pt-8 text-center md:text-left">
                         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -37,22 +37,22 @@ export const Footer = () => {
                                     Produk Dan Jasa
                                 </h6>
                                 <p className="mb-4">
-                                    <a href="/all-products/sosmed" className="text-neutral-600 dark:text-neutral-200">
+                                    <a href="/all-products/sosmed" className="text-neutral-600">
                                         Social Media Management
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href="/all-products/web" className="text-neutral-600 dark:text-neutral-200">
+                                    <a href="/all-products/web" className="text-neutral-600">
                                         Website Development
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href="/all-products/legalitas" className="text-neutral-600 dark:text-neutral-200">
+                                    <a href="/all-products/legalitas" className="text-neutral-600">
                                         Legalitas Bisnis
                                     </a>
                                 </p>
                                 <p>
-                                    <a href="all-products/legalitas/badan-usaha" className="text-neutral-600 dark:text-neutral-200">
+                                    <a href="all-products/legalitas/badan-usaha" className="text-neutral-600">
                                         Badan Usaha Lainnya
                                     </a>
                                 </p>
@@ -63,22 +63,22 @@ export const Footer = () => {
                                     Social Media Kami
                                 </h6>
                                 <p className="mb-4">
-                                    <a href={igLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-neutral-200">
+                                    <a href={igLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
                                         <span className='flex justify-center items-center'><FaInstagram /></span>Instagram
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href={fbLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-neutral-200">
+                                    <a href={fbLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
                                         <span className='flex justify-center items-center'><FaFacebook /></span>Facebook
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href={linkedin} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-neutral-200">
+                                    <a href={linkedin} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
                                         <span className='flex justify-center items-center'><FaLinkedin /></span>LinkedIn
                                     </a>
                                 </p>
                                 <p>
-                                    <a href={waLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-neutral-200">
+                                    <a href={waLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
                                         <span className='flex justify-center items-center'><FaWhatsapp /></span>WhatsApp
                                     </a>
                                 </p>
@@ -109,10 +109,10 @@ export const Footer = () => {
 
                                     + 62 888 712 7000
                                 </p>
-                                <div className="text-right object-right dark:bg-neutral-700 flex justify-center lg:justify-end">
+                                <div className="text-right object-right flex justify-center lg:justify-end">
                                     <div className="bg-[#772a7d31] w-full flex justify-center lg:w-fit p-5 rounded-[40px]">
                                         <a
-                                            className="font-semibold text-neutral-600 dark:text-neutral-400"
+                                            className="font-semibold text-neutral-600 "
                                             href="/"
                                         >
                                             <span className=''>
@@ -144,11 +144,11 @@ export const Footer = () => {
                     </div>
                     {/*Copyright section*/}
 
-                    <div className="bg-neutral-100 p-6 text-right object-right dark:bg-neutral-700 flex justify-center lg:justify-center">
+                    <div className="bg-neutral-100 p-6 text-right object-right flex justify-center lg:justify-center">
                         <div className="bg-slate-200 w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
                             <span>© 2024 Copyright:{' '}</span>
                             <a
-                                className="font-semibold text-neutral-600 dark:text-neutral-400"
+                                className="font-semibold text-neutral-600"
                                 href="/"
                             >
                                  Ganesha Consulting
