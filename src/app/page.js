@@ -21,7 +21,7 @@ export default function Home() {
         main={main}
         other={other}
         secondary={secondary}
-        ganesha={'ganeshaconsulting.com'}
+        ganesha={'ganeshaconsulting.co.id'}
         styles='bg-[#82498C] bg-clip-text text-transparent bg-opacity-100'
         btn1='Lebih Lanjut'
         styleL='bg-[#82498C] bg-opacity-30'

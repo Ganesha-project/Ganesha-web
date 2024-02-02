@@ -243,7 +243,7 @@ export const FaqProduct = () => {
                         >
                             <div className="flex items-center gap-2">
                                 <FaInfoCircle color='white' size={20} />
-                                <span className="font-bold text-white lg:text-2xl text-xl text-left">PKP ( Pengusaha Kena Pajak ) Adalah...</span>
+                                <span className="font-bold text-white lg:text-2xl text-xl text-left">NIB ( Nomor Induk Berusaha ) Adalah...</span>
                             </div>
                             <svg
                                 data-accordion-icon=""
@@ -270,7 +270,7 @@ export const FaqProduct = () => {
                     >
                         <div className="p-5 border w-full md:w-[40vw] rounded-[40px] bg-slate-900 border-gray-200">
                             <p className="mb-2 text-lg text-white">
-                                PKP adalah singkatan dari "Pengusaha Kena Pajak." Dalam konteks perpajakan di Indonesia, PKP merujuk kepada pengusaha atau badan usaha yang memiliki kewajiban untuk melakukan pemungutan dan penyetoran pajak pertambahan nilai (PPN) sesuai dengan peraturan perpajakan yang berlaku. PKP biasanya terlibat dalam kegiatan usaha yang mencapai batas omzet tertentu yaitu 4,8 M yang ditentukan oleh peraturan perpajakan. Sebagai contoh, toko retail besar atau perusahaan manufaktur yang mencapai batas omzet tertentu akan dianggap sebagai PKP. Mereka harus mengumpulkan dan menyetorkan pajak pertambahan nilai (PPN) sesuai dengan peraturan perpajakan yang berlaku.
+                            NIB adalah singkatan dari Nomor Induk Berusaha, yang merupakan identifikasi resmi yang diberikan pemerintah kepada perusahaan atau usaha di Indonesia. NIB diperlukan sebagai bagian dari upaya pemerintah Indonesia untuk menyederhanakan proses perizinan dan memudahkan kegiatan berusaha.
                             </p>
                         </div>
                     </div>
