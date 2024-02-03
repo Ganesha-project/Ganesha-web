@@ -2,8 +2,8 @@
     "packages": [
         {
             "type": "Mini Web Company Profile",
-            "price": 800000,
-            "priceOriginal": 1140000,
+            "price": 1000000,
+            "priceOriginal": 1900000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -52,15 +52,43 @@
                     "status": true
                 },
                 {
+                    "feature": "Managed Server Data",
+                    "status": false
+                },
+                {
                     "feature": "CMS Admin",
+                    "status": false
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": false
+                },
+                {
+                    "feature": "Free 10 Related Article Content",
+                    "status": false
+                },
+                {
+                    "feature": "Free 5 Design Product",
+                    "status": false
+                },
+                {
+                    "feature": "Login Owner & User",
+                    "status": false
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": false
+                },
+                {
+                    "feature": "Client Request Feature",
                     "status": false
                 }
             ]
         },
         {
-            "type": "Company Profile Startup",
-            "price": 1500000,
-            "priceOriginal": 2850000,
+            "type": "Company Profile Basic",
+            "price": 2000000,
+            "priceOriginal": 3800000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -97,11 +125,11 @@
                     "status": true
                 },
                 {
-                    "feature": "Revisi 3x",
+                    "feature": "Revisi 2x",
                     "status": true
                 },
                 {
-                    "feature": "7 Hari Pengerjaan",
+                    "feature": "10 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -109,15 +137,128 @@
                     "status": true
                 },
                 {
+                    "feature": "Managed Server Data",
+                    "status": false
+                },
+                {
                     "feature": "CMS Admin",
+                    "status": false
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": false
+                },
+                {
+                    "feature": "Free 10 Related Article Content",
+                    "status": false
+                },
+                {
+                    "feature": "Free 5 Design Product",
+                    "status": false
+                },
+                {
+                    "feature": "Login Owner & User",
+                    "status": false
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": false
+                },
+                {
+                    "feature": "Client Request Feature",
+                    "status": false
+                }
+            ]
+        },
+        {
+            "type": "Dynamic Data Company Profile",
+            "price": 4000000,
+            "priceOriginal": 7600000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "Up to 15 Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 4x",
+                    "status": true
+                },
+                {
+                    "feature": "20 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "Managed Server Data",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": true
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": false
+                },
+                {
+                    "feature": "Free 10 Related Article Content",
+                    "status": false
+                },
+                {
+                    "feature": "Free 5 Design Product",
+                    "status": false
+                },
+                {
+                    "feature": "Login Owner & User",
+                    "status": false
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": false
+                },
+                {
+                    "feature": "Client Request Feature",
                     "status": false
                 }
             ]
         },
         {
             "type": "Company Blog Website",
-            "price": 3000000,
-            "priceOriginal": 5700000,
+            "price": 5500000,
+            "priceOriginal": 10450000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -154,11 +295,11 @@
                     "status": true
                 },
                 {
-                    "feature": "Revisi 5x",
+                    "feature": "Revisi 4x",
                     "status": true
                 },
                 {
-                    "feature": "10 Hari Pengerjaan",
+                    "feature": "15 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -166,7 +307,193 @@
                     "status": true
                 },
                 {
+                    "feature": "Managed Server Data",
+                    "status": true
+                },
+                {
                     "feature": "CMS Admin",
+                    "status": true
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": true
+                },
+                {
+                    "feature": "Free 10 Related Article Content",
+                    "status": true
+                },
+                {
+                    "feature": "Login Owner Only",
+                    "status": true
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": false
+                },
+                {
+                    "feature": "Client Request Feature",
+                    "status": false
+                }
+            ]
+        },
+        {
+            "type": "Company Business E-Commerce",
+            "price": 9000000,
+            "priceOriginal": 17100000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "Dynamic Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 4x",
+                    "status": true
+                },
+                {
+                    "feature": "30 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "Managed Server Data",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": true
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": true
+                },
+                {
+                    "feature": "Free 5 Design Product",
+                    "status": true
+                },
+                {
+                    "feature": "Login Owner & User",
+                    "status": true
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": true
+                },
+                {
+                    "feature": "Client Request Feature",
+                    "status": false
+                }
+            ]
+        },
+        {
+            "type": "Custom Web Client Request",
+            "price": 10000000,
+            "priceOriginal": 19000000,
+            "discount": 47,
+            "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+            "features": [
+                {
+                    "feature": "Dynamic Page",
+                    "status": true
+                },
+                {
+                    "feature": "Domain Included",
+                    "status": true
+                },
+                {
+                    "feature": "SEO Friendly",
+                    "status": true
+                },
+                {
+                    "feature": "Design Premium",
+                    "status": true
+                },
+                {
+                    "feature": "Design Responsive",
+                    "status": true
+                },
+                {
+                    "feature": "Lifetime Support & Maintenance Teknis",
+                    "status": true
+                },
+                {
+                    "feature": "Content Writing",
+                    "status": true
+                },
+                {
+                    "feature": "SSL Included (Https)",
+                    "status": true
+                },
+                {
+                    "feature": "Revisi 4x",
+                    "status": true
+                },
+                {
+                    "feature": "30 Hari Pengerjaan",
+                    "status": true
+                },
+                {
+                    "feature": "Integrasi Sosial media",
+                    "status": true
+                },
+                {
+                    "feature": "Managed Server Data",
+                    "status": true
+                },
+                {
+                    "feature": "CMS Admin",
+                    "status": true
+                },
+                {
+                    "feature": "Free 1 Professional Email",
+                    "status": true
+                },
+                {
+                    "feature": "Free Design Or Content",
+                    "status": true
+                },
+                {
+                    "feature": "Login Owner & User",
+                    "status": true
+                },
+                {
+                    "feature": "Payment Gateway",
+                    "status": true
+                },
+                {
+                    "feature": "Client Request Feature",
                     "status": true
                 }
             ]
