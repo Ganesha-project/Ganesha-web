@@ -1,17 +1,36 @@
+import { BannerText } from '@/components/BannerText';
 import { ImgProduk } from '@/components/ImgProduk';
-import { CardProduct } from '@/components/CardProduct'
+import { CardWeb } from '@/components/WebComponents/CardWeb';
 import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-// import { ImgProduk } from '../components/ImgProduk'
-import socmed from "../../public/BG/allproducts.png"
+import { HeaderWeb } from '@/components/WebComponents/HeaderWeb';
+import { WebBody } from '@/components/WebComponents/WebBody';
+import socmed from '../../public/BG/tax.png';
+import fs from 'fs'
+import { CardTax } from '@/components/TaxComponents/CardTax';
 
-export default function KonsultanPajakPage() {
-    const imgProduct = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+export default async function WebPage() {
+    const main = "Pajak";
+    const other = "";
+    const other2 = "Konsultan";
+    const secondary =
+        "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.";
+    let rawData = await fs.promises.readFile('public/JSON/Pajak.json', 'utf-8');
+    let data = JSON.parse(rawData);
 
     return (
         <>
-            <ImgProduk image={imgProduct} socmed={socmed} />
-            <CardProduct />
+
+            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
+            <BannerText
+                other={other} other2={other2} main={main} secondary={secondary}
+                styles='bg-[#84534C]'
+                btn1='Lebih Lanjut'
+                btn2='Konsultasi Sekarang'
+                styleL='bg-[#F2E6DD]'
+                styleR='bg-[#F2E6DD]'
+                href1='#packages'/>
+            <CardTax data={data}/>
         </>
-    )
+    );
 }
+

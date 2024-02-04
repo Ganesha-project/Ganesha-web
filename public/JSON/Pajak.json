@@ -1,0 +1,59 @@
+{
+    "type": [
+        {
+            "name": "Perorangan",
+            "product": [
+                {
+                    "name": "SPT Masa Bulanan",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "SPT Tahunan",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        },
+        {
+            "name": "Badan Usaha",
+            "product": [
+                {
+                    "name": "SPT Tahunan",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "PPN",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Pajak Daerah",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        },
+        {
+            "name": "Badan Usaha PMA",
+            "product": [
+                {
+                    "name": "SPT Tahunan",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "PPN",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Pajak Daerah",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        },
+        {
+            "name": "Peltihan Perpajakan",
+            "product": [
+                {
+                    "name": "Brevet Pajak"
+                }
+            ]
+        }
+    ]
+}
