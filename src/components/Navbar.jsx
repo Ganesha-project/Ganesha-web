@@ -88,62 +88,6 @@ export const Navbar = ({ children }) => {
                 </a>
               </li>
               <li>
-                <>
-                  <button
-                    id="dropdownDefaultButton"
-                    data-dropdown-toggle="dropdown"
-                    className="gap-1 flex items-center py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 "
-                    type="button"
-                  >
-                    All Products{" "} <IoIosArrowDown />
-                  </button>
-                  {/* Dropdown menu */}
-                  <div
-                    id="dropdown"
-                    className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-screen dark:bg-gray-700"
-                  >
-                    <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                      aria-labelledby="dropdownDefaultButton"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Dashboard
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Settings
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Earnings
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Sign out
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </>
-
-              </li>
-              <li>
                 <a
                   href='/all-products'
                   id="dropdownHoverButton"

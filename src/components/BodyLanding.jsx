@@ -1,11 +1,13 @@
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat } from "react-icons/fa6";
+import { FaBuildingWheat, FaUserGear, FaUserTie } from "react-icons/fa6";
 import { Tb24Hours } from "react-icons/tb";
-import { BiMedal } from "react-icons/bi";
-import { HiLightningBolt } from "react-icons/hi";
-import { RiAppsFill } from "react-icons/ri";
+import { BiMath, BiMedal } from "react-icons/bi";
+import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
+import { RiAppsFill, RiFilePaper2Fill } from "react-icons/ri";
+import { GrTechnology } from "react-icons/gr";
+import { SiReadthedocs } from "react-icons/si";
 
 export const BodyLanding = () => {
     return (
@@ -38,7 +40,6 @@ export const BodyLanding = () => {
 
 
             <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
-
                 <div>
                     <a href="/all-products/legalitas">
                         <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
@@ -60,6 +61,96 @@ export const BodyLanding = () => {
                                     color='black'
                                 />
                             </span>Badan Usaha Lainnya</p>
+                    </a>
+                </div>
+            </div>
+
+            <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
+                <div>
+                    <a href="/konsultan-pajak">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <HiReceiptTax
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Konsultan Pajak</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="all-products/legalitas/badan-usaha">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <FaUserTie
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Audit</p>
+                    </a>
+                </div>
+            </div>
+            <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
+                <div>
+                    <a href="/all-products/legalitas">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <FaUserGear
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Pelayanan Managemen</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="all-products/legalitas/badan-usaha">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <BiMath
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Pelayanan Akuntansi</p>
+                    </a>
+                </div>
+            </div>
+
+            <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
+                <div>
+                    <a href="/all-products/legalitas">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <GrTechnology
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Software Management System</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="all-products/legalitas/badan-usaha">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <SiReadthedocs
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>HAKI (Merek, Hak Cipta, Paten)</p>
+                    </a>
+                </div>
+            </div>
+            <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
+                <div>
+                    <a href="/all-products/legalitas">
+                        <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
+                            <span>
+                                <RiFilePaper2Fill
+                                    size={40}
+                                    color='black'
+                                />
+                            </span>Izin Tambahan</p>
                     </a>
                 </div>
             </div>
