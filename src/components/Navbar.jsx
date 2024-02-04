@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
+import { IoIosArrowDown } from "react-icons/io";
 
 export const Navbar = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -87,15 +88,71 @@ export const Navbar = ({ children }) => {
                 </a>
               </li>
               <li>
+                <>
+                  <button
+                    id="dropdownDefaultButton"
+                    data-dropdown-toggle="dropdown"
+                    className="gap-1 flex items-center py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 "
+                    type="button"
+                  >
+                    All Products{" "} <IoIosArrowDown />
+                  </button>
+                  {/* Dropdown menu */}
+                  <div
+                    id="dropdown"
+                    className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-screen dark:bg-gray-700"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Settings
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Earnings
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Sign out
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+
+              </li>
+              <li>
                 <a
                   href='/all-products'
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
+                  className={`gap-1 py-2 px-3 flex items-center text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
                   type="button"
                 >
-                  Produk & Layanan
+                  Produk & Layanan <IoIosArrowDown />
                 </a>
                 {/* Dropdown menu */}
                 <div
@@ -147,10 +204,10 @@ export const Navbar = ({ children }) => {
                   id="dropdownHoverButton2"
                   data-dropdown-toggle="dropdownHover2"
                   data-dropdown-trigger="hover"
-                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products/legalitas') && 'border-b-2 border-violet-300'}`}
+                  className={`flex gap-1 items-center py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products/legalitas') && 'border-b-2 border-violet-300'}`}
                   type="button"
                 >
-                  Legalitas
+                  Legalitas <IoIosArrowDown />
                 </a>
                 {/* Dropdown menu */}
                 <div
