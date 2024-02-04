@@ -1,8 +1,8 @@
 {
-    "type": [
+    "types": [
         {
             "name": "Perorangan",
-            "product": [
+            "products": [
                 {
                     "name": "SPT Masa Bulanan",
                     "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
@@ -15,7 +15,7 @@
         },
         {
             "name": "Badan Usaha",
-            "product": [
+            "products": [
                 {
                     "name": "SPT Tahunan",
                     "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
@@ -32,7 +32,7 @@
         },
         {
             "name": "Badan Usaha PMA",
-            "product": [
+            "products": [
                 {
                     "name": "SPT Tahunan",
                     "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
@@ -48,10 +48,11 @@
             ]
         },
         {
-            "name": "Peltihan Perpajakan",
-            "product": [
+            "name": "Pelatihan Perpajakan",
+            "products": [
                 {
-                    "name": "Brevet Pajak"
+                    "name": "Brevet Pajak",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
                 }
             ]
         }

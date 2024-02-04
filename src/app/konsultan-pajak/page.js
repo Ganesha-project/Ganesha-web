@@ -1,12 +1,8 @@
+import fs from 'fs'
+import socmed from '../../public/BG/tax.png';
 import { BannerText } from '@/components/BannerText';
 import { ImgProduk } from '@/components/ImgProduk';
-import { CardWeb } from '@/components/WebComponents/CardWeb';
-import { Navbar } from '@/components/Navbar';
-import { HeaderWeb } from '@/components/WebComponents/HeaderWeb';
-import { WebBody } from '@/components/WebComponents/WebBody';
-import socmed from '../../public/BG/tax.png';
-import fs from 'fs'
-import { CardTax } from '@/components/TaxComponents/CardTax';
+import { ExtrasCard } from '@/components/TaxComponents/ExtrasCard';
 
 export default async function WebPage() {
     const main = "Pajak";
@@ -28,8 +24,8 @@ export default async function WebPage() {
                 btn2='Konsultasi Sekarang'
                 styleL='bg-[#F2E6DD]'
                 styleR='bg-[#F2E6DD]'
-                href1='#packages'/>
-            <CardTax data={data}/>
+                href1='#packages' />
+            <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} />
         </>
     );
 }
