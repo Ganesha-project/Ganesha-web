@@ -1,0 +1,21 @@
+{
+    "types": [
+        {
+            "name": "Tipe Sistem",
+            "products": [
+                {
+                    "name": "Accounting Software",
+                    "descriptions": "Accounting Software adalah perangkat lunak yang dirancang untuk membantu perusahaan dalam melakukan pencatatan keuangan, pengelolaan transaksi, dan penyusunan laporan keuangan. Ini menyediakan alat yang diperlukan untuk memudahkan proses akuntansi dan analisis keuangan."
+                },
+                {
+                    "name": "AR System",
+                    "descriptions": "AR System (Account Receivable System) adalah sistem yang mengelola dan memantau seluruh siklus piutang perusahaan. Ini mencakup pemantauan tagihan, pengelolaan pembayaran, dan penanganan situasi piutang agar keuangan perusahaan tetap sehat."
+                },
+                {
+                    "name": "PMS",
+                    "descriptions": "PMS (Property Management System) adalah sistem yang digunakan untuk mengelola properti dan aset perusahaan. Ini mencakup pemantauan inventaris, perawatan properti, dan pelacakan status aset untuk memastikan penggunaan yang efisien dan optimal."
+                }
+            ]
+        }
+    ]
+}

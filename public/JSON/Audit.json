@@ -1,0 +1,17 @@
+{
+    "types": [
+        {
+            "name": "Tipe Audit",
+            "products": [
+                {
+                    "name": "Audit External",
+                    "descriptions": "Audit External adalah jenis pemeriksaan keuangan yang dilakukan oleh pihak eksternal untuk mengevaluasi keuangan perusahaan. Pemeriksaan ini bertujuan untuk memastikan kepatuhan terhadap regulasi, mendeteksi potensi risiko, dan memberikan keyakinan kepada pemangku kepentingan eksternal."
+                },
+                {
+                    "name": "Audit Internal",
+                    "descriptions": "Audit Internal adalah proses pemeriksaan yang dilakukan oleh tim internal perusahaan untuk mengevaluasi efektivitas kontrol internal, memberikan saran perbaikan, dan memastikan bahwa operasi perusahaan berjalan sesuai dengan kebijakan dan prosedur yang telah ditetapkan."
+                }
+            ]
+        }
+    ]
+}
