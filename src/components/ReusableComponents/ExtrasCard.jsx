@@ -6,8 +6,8 @@ export const ExtrasCard = ({ data, accent1, accent2 }) => {
             <div className='m-10 lg:m-32'>
                 {data.types.map((type, index) => (
                     <div key={index} className='mb-10 flex flex-col items-center justify-center'>
-                        <h1 className={`${accent1} lg:mx-32 mx-10 font-extrabold text-3xl lg:text-5xl text-center uppercase lg:w-max text-white rounded-full p-10`}>{type.name}</h1>
-                        <div className='lg:px-28 px-5 flex lg:w-[120%] lg:flex-wrap flex-col justify-center lg:flex-row'>
+                        <h1 className={`${accent1} lg:mx-32 mx-10 font-extrabold text-3xl lg:text-5xl text-center uppercase text-white rounded-full p-10`}>{type.name}</h1>
+                        <div className='lg:px-28 px-5 flex lg:flex-wrap flex-col justify-center lg:flex-row'>
                             {type.products.map((product, productIndex) => (
                                 <div key={productIndex} className={`${accent2} flex-shrink-0 lg:w-[50lvh] md:w-[45lvh] w-[40lvh] hover:bg-opacity-50 p-10 flex flex-col items-center justify-center mt-10 lg:my-10 lg:mx-5 rounded-[40px]`}>
                                     <h1 className='font-bold text-4xl text-center lg:text-center'>{product.name}</h1>
