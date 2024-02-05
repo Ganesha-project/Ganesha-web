@@ -1,0 +1,21 @@
+{
+    "types": [
+        {
+            "name": "Tipe Sistem",
+            "products": [
+                {
+                    "name": "Accounting Software",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "AR System",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "PMS",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        }
+    ]
+}

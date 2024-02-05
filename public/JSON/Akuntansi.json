@@ -1,0 +1,29 @@
+{
+    "types": [
+        {
+            "name": "Tipe Servis",
+            "products": [
+                {
+                    "name": "Jurnal",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Buku Besar",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Laporan Keuangan",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Data Entry",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                },
+                {
+                    "name": "Cost Control",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        }
+    ]
+}

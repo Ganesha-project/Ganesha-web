@@ -79,7 +79,7 @@ export const BodyLanding = () => {
                 </div>
 
                 <div>
-                    <a href="all-products/legalitas/badan-usaha">
+                    <a href="audit">
                         <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
                             <span>
                                 <FaUserTie

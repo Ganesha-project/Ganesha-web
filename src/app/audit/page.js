@@ -5,12 +5,12 @@ import { ImgProduk } from '@/components/ImgProduk';
 import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
 
 export default async function WebPage() {
-    const main = "Pajak";
+    const main = "Audit";
     const other = "";
-    const other2 = "Konsultan";
+    const other2 = "System";
     const secondary =
         "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.";
-    let rawData = await fs.promises.readFile('public/JSON/Pajak.json', 'utf-8');
+    let rawData = await fs.promises.readFile('public/JSON/Audit.json', 'utf-8');
     let data = JSON.parse(rawData);
 
     return (

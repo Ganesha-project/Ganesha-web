@@ -1,0 +1,13 @@
+{
+    "types": [
+        {
+            "name": "Tipe Servis",
+            "products": [
+                {
+                    "name": "HAKI (Merek, Hak Cipta, Paten, Dll)",
+                    "Descriptions": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?"
+                }
+            ]
+        }
+    ]
+}

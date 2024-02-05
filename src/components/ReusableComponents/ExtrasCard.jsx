@@ -8,8 +8,8 @@ export const ExtrasCard = ({ data, accent1, accent2 }) => {
                         <div className='lg:px-28 px-5 flex flex-col justify-center lg:flex-row'>
                             {type.products.map((product, productIndex) => (
                                 <div key={productIndex} className={`${accent2} flex-shrink-0 lg:w-[50lvh] md:w-[45lvh] w-[40lvh] hover:bg-opacity-50 p-10 flex flex-col items-center justify-center mt-10 lg:my-10 lg:mx-5 rounded-[40px]`}>
-                                    <h1 className='font-bold text-4xl text-center lg:text-left'>{product.name}</h1>
-                                    <p className='mt-3 font-semibold text-xl text-center lg:text-left'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur unde asperiores adipisci quo, iure, molestiae velit itaque impedit dicta officia non distinctio harum aperiam sapiente excepturi autem nihil tenetur?</p>
+                                    <h1 className='font-bold text-4xl text-center lg:text-center'>{product.name}</h1>
+                                    <p className='mt-3 flex-grow font-semibold text-xl text-center lg:text-left'>{product.descriptions}</p>
                                     <a href="" className={`${accent1} hover:bg-opacity-50 p-3 rounded-[40px] mt-5 w-full text-center text-white font-bold block lg:inline-block`}>
                                         Konsultasi Sekarang
                                     </a>
