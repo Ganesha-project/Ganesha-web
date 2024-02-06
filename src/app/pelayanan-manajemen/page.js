@@ -22,10 +22,10 @@ export default async function PelayananManajemenPage() {
                 styles='bg-[#DF6443]'
                 btn1='Lebih Lanjut'
                 btn2='Konsultasi Sekarang'
-                styleL='bg-[#A1DDDB]'
-                styleR='bg-[#A1DDDB]'
+                styleL='bg-[#ECECEC]'
+                styleR='bg-[#ECECEC]'
                 href1='#packages' />
-            <ExtrasCard data={data} accent1={'bg-[#DF6443]'} accent2={'bg-[#A1DDDB]'} />
+            <ExtrasCard data={data} accent1={'bg-[#DF6443]'} accent2={'bg-[#ECECEC]'} />
         </>
     );
 }

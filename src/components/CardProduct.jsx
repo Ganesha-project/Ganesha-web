@@ -3,7 +3,8 @@ import socmed from '../public/BG/socmed.png'
 import web from '../public/BG/web.png'
 import tax from '../public/BG/tax.png'
 import legal from '../public/BG/law.png'
-import { BiCamera } from 'react-icons/bi'
+import audit from '../public/BG/audit.jpg'
+import pelmanajemen from '../public/BG/management.jpg'
 
 export const CardProduct = () => {
     return (
@@ -135,17 +136,70 @@ export const CardProduct = () => {
                             Konsultan Pajak
                         </h5>
                     </a>
-                    <p className="mb-5 min-w-full lg:min-w-[53vw] p-7 w-max flex-grow text-justify rounded-[30px] bg-[#F1E5DC] font-normal text-xl text-gray-800">
-                        Coming Soon!
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#F1E5DC] font-normal text-xl text-gray-800">
+                    Optimalkan struktur pajak perusahaan Anda dengan bantuan Konsultan Pajak kami. Solusi efisien untuk mengelola kewajiban pajak dan memastikan kepatuhan peraturan
                     </p>
                     <a
-                        href="#legal"
-                        className="cursor-not-allowed w-full disabled font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#83514D] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                        href="/konsultan-pajak"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#83514D] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
                     >
                         Read more
                     </a>
                 </div>
+            </div>
 
+            <div id='Audit' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="max-w-lg w-[80vw] lg:w-[420px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={audit}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/audit">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#305782] text-5xl text-left font-bold py-3">
+                            Audit
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#B2DEE2] font-normal text-xl text-gray-800">
+                    Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.
+                    </p>
+                    <a
+                        href="/audit"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#305782] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+            
+            <div id='Audit' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="max-w-lg w-[80vw] lg:w-[420px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={pelmanajemen}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/pelayanan-manajemen">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#DF6443] text-5xl text-left font-bold py-3">
+                            Pelayanan Manajemen
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#ECECEC] font-normal text-xl text-gray-800">
+                    Tingkatkan efisiensi operasional dengan Pelayanan Manajemen kami, fokus pada perencanaan strategis dan implementasi praktik manajemen terbaik.
+                    </p>
+                    <a
+                        href="/pelayanan-manajemen"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#DF6443] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
             </div>
 
         </>
