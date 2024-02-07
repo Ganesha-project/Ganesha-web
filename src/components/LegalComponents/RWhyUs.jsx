@@ -1,9 +1,52 @@
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaBoltLightning } from "react-icons/fa6";
-import { GiChestnutLeaf } from "react-icons/gi";
 import { TbBulbFilled } from "react-icons/tb";
 import { IoSparkles } from "react-icons/io5";
 import { IoLeaf } from "react-icons/io5";
+
+export const metadata = {
+    title: "Kelebihan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
+    description: "Temukan kelebihan Ganesha Consulting dibandingkan tempat lain. Kami menawarkan harga ekonomis, proses super cepat, layanan anti ribet, kreatif & inovatif, serta ditangani oleh profesional.",
+    keywords: "kelebihan Ganesha Consulting, harga ekonomis, proses super cepat, layanan anti ribet, kreatif & inovatif, ditangani oleh profesional",
+    image: "/IMG/IconVector/checkgreen.png", // Path ke gambar terkait kelebihan Ganesha Consulting
+    url: "https://www.ganeshaconsulting.co.id/kelebihan-ganesha-consulting", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/kelebihan-ganesha-consulting",
+        title: "Kelebihan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
+        description: "Temukan kelebihan Ganesha Consulting dibandingkan tempat lain. Kami menawarkan harga ekonomis, proses super cepat, layanan anti ribet, kreatif & inovatif, serta ditangani oleh profesional.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/IconVector/checkgreen.png",
+            alt: "Ganesha Consulting - Kelebihan Ganesha Consulting"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
 
 export const RWhyUs = ({ color }) => {
     return (

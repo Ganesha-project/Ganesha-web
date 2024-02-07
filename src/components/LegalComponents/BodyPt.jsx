@@ -1,3 +1,46 @@
+export const metadata = {
+    title: "Pengertian PT dan Undang-Undang Terkait - Ganesha Consulting",
+    description: "Pelajari pengertian Perseroan Terbatas (PT) dan undang-undang terkait di Indonesia. Temukan informasi penting tentang pendirian, pengelolaan, dan persyaratan PT.",
+    keywords: "pengertian PT, undang-undang PT, Perseroan Terbatas, pendirian PT, regulasi PT, hukum PT, Ganesha Consulting",
+    image: "/IMG/IconVector/checkgreen.png", // Path ke gambar terkait pengertian PT
+    url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/pendirian-pt", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/pendirian-pt",
+        title: "Pengertian PT dan Undang-Undang Terkait - Ganesha Consulting",
+        description: "Pelajari pengertian Perseroan Terbatas (PT) dan undang-undang terkait di Indonesia. Temukan informasi penting tentang pendirian, pengelolaan, dan persyaratan PT.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/IconVector/checkgreen.png",
+            alt: "Ganesha Consulting - Pengertian PT dan Undang-Undang Terkait"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
 export const BodyPT = () => {
     return (
         <>
