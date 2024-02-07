@@ -5,6 +5,11 @@ import tax from '../public/BG/tax.png'
 import legal from '../public/BG/law.png'
 import audit from '../public/BG/audit.jpg'
 import pelmanajemen from '../public/BG/management.jpg'
+import izin from '../public/BG/izin.jpg'
+import akuntansi from '../public/BG/accounting.jpg'
+import software from '../public/BG/software.jpg'
+import haki from '../public/BG/patent.jpg'
+import badanUsaha from '../public/BG/Yayasan.png'
 
 export const CardProduct = () => {
     return (
@@ -67,7 +72,6 @@ export const CardProduct = () => {
             </div>
 
             <div id='socmed' />
-
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
@@ -121,7 +125,34 @@ export const CardProduct = () => {
                 </div>
             </div>
 
-            <div id='Pajak' />
+            <div id='legal' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="max-w-lg w-[80vw] lg:w-[420px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={badanUsaha}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/all-products/legalitas/badan-usaha">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#9e9710] text-5xl text-left font-bold py-3">
+                            Badan Usaha Lainnya
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#eaeaea] font-normal text-xl text-gray-800">
+                        Berbagai layanan pendirian badan usaha diantaranya: Yayasan, Perkumpulan atau Asosiasi, Firma Hukum, Virtual Office, PKP, NIB
+                    </p>
+                    <a
+                        href="/all-products/legalitas/badan-usaha"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#9e9710] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div id='pajak' />
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
@@ -131,13 +162,13 @@ export const CardProduct = () => {
                     />
                 </div>
                 <div className="md:ml-5 flex-grow">
-                    <a href="/all-products/legalitas">
+                    <a href="/konsultan-pajak">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#83514D] text-5xl text-left font-bold py-3">
                             Konsultan Pajak
                         </h5>
                     </a>
                     <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#F1E5DC] font-normal text-xl text-gray-800">
-                    Optimalkan struktur pajak perusahaan Anda dengan bantuan Konsultan Pajak kami. Solusi efisien untuk mengelola kewajiban pajak dan memastikan kepatuhan peraturan
+                        Optimalkan struktur pajak perusahaan Anda dengan bantuan Konsultan Pajak kami. Solusi efisien untuk mengelola kewajiban pajak dan memastikan kepatuhan peraturan
                     </p>
                     <a
                         href="/konsultan-pajak"
@@ -148,11 +179,38 @@ export const CardProduct = () => {
                 </div>
             </div>
 
-            <div id='Audit' />
+            <div id='izin-tambahan' />
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="max-w-lg w-[80vw] lg:w-[420px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="lg:ml-[-20lvh] max-w-[700px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={izin}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/pelayanan-manajemen">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#599DAD] text-5xl text-left font-bold py-3">
+                            Izin Tambahan
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#EBF2FB] font-normal text-xl text-gray-800">
+                        Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.
+                    </p>
+                    <a
+                        href="/pelayanan-manajemen"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#599DAD] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div id='audit' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="lg:ml-[-15lvh] max-w-[600px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={audit}
                         alt="image description"
                     />
@@ -164,7 +222,7 @@ export const CardProduct = () => {
                         </h5>
                     </a>
                     <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#B2DEE2] font-normal text-xl text-gray-800">
-                    Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.
+                        Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.
                     </p>
                     <a
                         href="/audit"
@@ -174,12 +232,12 @@ export const CardProduct = () => {
                     </a>
                 </div>
             </div>
-            
-            <div id='Audit' />
+
+            <div id='pelayanan-manajemen' />
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="max-w-lg w-[80vw] lg:w-[420px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="lg:ml-[-12lvh] max-w-[580px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={pelmanajemen}
                         alt="image description"
                     />
@@ -191,11 +249,92 @@ export const CardProduct = () => {
                         </h5>
                     </a>
                     <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#ECECEC] font-normal text-xl text-gray-800">
-                    Tingkatkan efisiensi operasional dengan Pelayanan Manajemen kami, fokus pada perencanaan strategis dan implementasi praktik manajemen terbaik.
+                        Tingkatkan efisiensi operasional dengan Pelayanan Manajemen kami, fokus pada perencanaan strategis dan implementasi praktik manajemen terbaik.
                     </p>
                     <a
                         href="/pelayanan-manajemen"
                         className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#DF6443] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div id='pelayanan-akuntansi' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={akuntansi}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/pelayanan-akuntansi">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#019C85] text-5xl text-left font-bold py-3">
+                            Pelayanan Akuntansi
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#A4F5EC] font-normal text-xl text-gray-800">
+                        Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.
+                    </p>
+                    <a
+                        href="/pelayanan-akuntansi"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#019C85] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div id='software-management' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={software}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/software-management-system">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#D268CB] text-5xl text-left font-bold py-3">
+                            Software Management System
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#EFC4E9] font-normal text-xl text-gray-800">
+                        Solusi terkini, dari Accounting Software hingga AR System, untuk meningkatkan efisiensi dan kinerja operasional.
+                    </p>
+                    <a
+                        href="/software-management-system"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#D268CB] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                    >
+                        Read more
+                    </a>
+                </div>
+            </div>
+
+            <div id='haki' />
+            <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
+                <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
+                    <Image
+                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        src={haki}
+                        alt="image description"
+                    />
+                </div>
+                <div className="md:ml-5 flex-grow">
+                    <a href="/haki">
+                        <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#E43B3B] text-5xl text-left font-bold py-3">
+                            HAKI | Hak Kekayaan Intelektual
+                        </h5>
+                    </a>
+                    <p className="mb-5 p-7 flex-grow text-justify rounded-[30px] bg-[#FFECD5] font-normal text-xl text-gray-800">
+                        Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami, memberikan keunggulan kompetitif.
+                    </p>
+                    <a
+                        href="/haki"
+                        className="w-full font-extrabold flex-grow text-left inline-flex items-center justify-center p-10 text-xl text-white bg-[#E43B3B] rounded-[30px] hover:bg-opacity-60 focus:ring-4 focus:outline-none focus:ring-blue-300"
                     >
                         Read more
                     </a>

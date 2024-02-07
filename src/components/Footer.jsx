@@ -9,7 +9,7 @@ export const Footer = () => {
     const waLink = "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
     const igLink = "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
     const fbLink = "https://www.facebook.com/profile.php?id=61555739807086"
-    const linkedin = ""
+    const linkedin = "https://www.linkedin.com/in/ganesha-multi-konsultan-4991412b2/"
 
     return (
         <>

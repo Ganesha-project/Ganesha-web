@@ -79,14 +79,14 @@ export const BodyLanding = () => {
                 </div>
 
                 <div>
-                    <a href="audit">
+                    <a href="izin-tambahan">
                         <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
                             <span>
-                                <FaUserTie
+                                <RiFilePaper2Fill
                                     size={40}
                                     color='black'
                                 />
-                            </span>Audit</p>
+                            </span>Izin Tambahan</p>
                     </a>
                 </div>
             </div>
@@ -143,15 +143,16 @@ export const BodyLanding = () => {
             </div>
             <div className="mt-5 m-10 lg:mt-10 mb-5 lg:mb-10 flex flex-col lg:flex-row gap-5 justify-center">
                 <div>
-                    <a href="izin-tambahan">
+                    <a href="audit">
                         <p className="flex w-full lg:w-[30vw] justify-center text-gray-800 items-center text-lg lg:text-xl gap-3 font-bold bg-[#d0aad6] p-5 lg:p-10 rounded-[40px] hover:bg-[#d7c6d9]">
                             <span>
-                                <RiFilePaper2Fill
+                                <FaUserTie
                                     size={40}
                                     color='black'
                                 />
-                            </span>Izin Tambahan</p>
+                            </span>Audit</p>
                     </a>
+
                 </div>
             </div>
 

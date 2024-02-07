@@ -14,7 +14,6 @@ export default function Home() {
   const secondary = "  Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya."
   return (
     <>
-
       <ImgProduk socmed={home} styles='bg-white mt-[0vh]' />
       <BannerText
         other2={other2}

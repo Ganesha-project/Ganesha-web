@@ -1,7 +1,7 @@
 "use client"
+import Image from 'next/image';
 import Artboard2 from '../public/IMG/Artboard2.png';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { IoIosArrowDown } from "react-icons/io";
