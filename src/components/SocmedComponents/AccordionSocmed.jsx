@@ -1,5 +1,49 @@
 import { FaInfoCircle } from "react-icons/fa";
 
+export const metadata = {
+    title: "Kenapa Perusahaan Membutuhkan Sosial Media Manajemen - Ganesha Consulting",
+    description: "Temukan mengapa sosial media manajemen penting bagi perusahaan. Dari membangun merek hingga pemasaran dan analisis kinerja, Ganesha Consulting memberikan solusi terbaik untuk kebutuhan bisnis Anda.",
+    keywords: "sosial media manajemen, kebutuhan perusahaan, Ganesha Consulting, pemasaran online, analisis kinerja, interaksi pelanggan",
+    image: "/IMG/VectorBg/medsos.jpg", // Path ke gambar terkait sosial media manajemen
+    url: "https://www.ganeshaconsulting.co.id/all-products/sosmed", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/all-products/sosmed",
+        title: "Kenapa Perusahaan Membutuhkan Sosial Media Manajemen - Ganesha Consulting",
+        description: "Temukan mengapa sosial media manajemen penting bagi perusahaan. Dari membangun merek hingga pemasaran dan analisis kinerja, Ganesha Consulting memberikan solusi terbaik untuk kebutuhan bisnis Anda.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/VectorBg/medsos.jpg",
+            alt: "Ganesha Consulting - Sosial Media Manajemen"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const AccordionSocmed = () => {
     return (
         <>

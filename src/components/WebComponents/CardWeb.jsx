@@ -2,6 +2,50 @@ import check from '../../public/IMG/IconVector/checkgreen.png'
 import cross from '../../public/IMG/IconVector/crossred.png'
 import Image from 'next/image'
 
+export const metadata = {
+    title: "Paket Pembuatan Website - Ganesha Consulting",
+    description: "Ganesha Consulting menawarkan berbagai paket pembuatan website dengan beragam fitur dan harga terjangkau. Dapatkan website dengan desain premium, SEO friendly, dan dukungan teknis seumur hidup.",
+    keywords: "paket website, pembuatan website, jasa pembuatan website, Ganesha Consulting, desain website, SEO friendly",
+    image: "/IMG/IconVector/web.png", // Path ke gambar banner
+    url: "https://www.ganeshaconsulting.com/webpage", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.com/webpage",
+        title: "Paket Pembuatan Website - Ganesha Consulting",
+        description: "Ganesha Consulting menawarkan berbagai paket pembuatan website dengan beragam fitur dan harga terjangkau. Dapatkan website dengan desain premium, SEO friendly, dan dukungan teknis seumur hidup.",
+        image: {
+            url: "https://www.ganeshaconsulting.com/IMG/IconVector/web.png",
+            alt: "Ganesha Consulting - Paket Pembuatan Website"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.com/",
+        logo: "https://www.ganeshaconsulting.com/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const CardWeb = ({ data }) => {
 
     const formatToRupiah = (amount) => {

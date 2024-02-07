@@ -3,6 +3,50 @@ import { GiSparkles } from "react-icons/gi";
 import { SiSimplenote } from "react-icons/si";
 import { TbListCheck } from "react-icons/tb";
 
+export const metadata = {
+    title: "Solusi Pembuatan Website Profesional - Ganesha Consulting",
+    description: "Ganesha Consulting menawarkan solusi pembuatan website profesional untuk meningkatkan presensi digital perusahaan Anda. Dengan desain kreatif, fitur lengkap, dan kemudahan penggunaan, buat perusahaan Anda terlihat profesional dan menarik dengan website modern.",
+    keywords: "pembuatan website, desain website, solusi website, Ganesha Consulting, website profesional, website modern",
+    image: "/IMG/IconVector/web.png", // Path ke gambar banner
+    url: "https://www.ganeshaconsulting.co.id/all-products/web", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/all-products/web",
+        title: "Solusi Pembuatan Website Profesional - Ganesha Consulting",
+        description: "Ganesha Consulting menawarkan solusi pembuatan website profesional untuk meningkatkan presensi digital perusahaan Anda. Dengan desain kreatif, fitur lengkap, dan kemudahan penggunaan, buat perusahaan Anda terlihat profesional dan menarik dengan website modern.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/IconVector/web.png",
+            alt: "Ganesha Consulting - Solusi Pembuatan Website Profesional"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const HeaderWeb = () => {
     return (
         <>

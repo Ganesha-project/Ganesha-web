@@ -5,6 +5,17 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { IoIosArrowDown } from "react-icons/io";
+import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
+import { TbWorldWww } from "react-icons/tb";
+import { GoLaw } from "react-icons/go";
+import { FaBuildingWheat, FaUserGear, FaUserTie } from "react-icons/fa6";
+import { Tb24Hours } from "react-icons/tb";
+import { BiMath, BiMedal } from "react-icons/bi";
+import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
+import { RiAppsFill, RiFilePaper2Fill } from "react-icons/ri";
+import { GrTechnology } from "react-icons/gr";
+import { SiReadthedocs } from "react-icons/si";
+
 
 export const Navbar = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +38,7 @@ export const Navbar = ({ children }) => {
 
   return (
     <>
-      <nav className={`font-quicksand fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#dcdcdc70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
+      <nav className={`font-quicksand fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#ffffff70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
           <a href='/' className="flex items-center space-x-3 rtl:space-x-reverse p-1">
             <Image src={Artboard2} className="" width={40} height={40} alt="Ganesha Logo" />
@@ -101,7 +112,7 @@ export const Navbar = ({ children }) => {
                 {/* Dropdown menu */}
                 <div
                   id="dropdownHover"
-                  className={`z-10 hidden bg-[#ffffff] rounded-xl text-gray-800 divide-y divide-gray-100 shadow w-fit`}
+                  className={`z-10 hidden bg-[#ffffff] text-gray-800 divide-y divide-gray-100 shadow w-fit rounded-lg`}
                 >
                   <ul
                     className="py-2 text-sm text-gray-800"
@@ -110,7 +121,7 @@ export const Navbar = ({ children }) => {
                     <li>
                       <a
                         href="/all-products/sosmed"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                        className="block px-4 py-2 hover:bg-[#bca0be72]"
                       >
                         Social Media Management
                       </a>
@@ -137,6 +148,62 @@ export const Navbar = ({ children }) => {
                         className="block px-4 py-2 hover:bg-[#762a7d72]"
                       >
                         Badan Usaha Lainnya
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="konsultan-pajak"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Konsultan Pajak
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="izin-tambahan"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Izin Tambahan
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="pelayanan-manajemen"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Pelayanan Manajemen
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="pelayanan-akuntansi"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Pelayanan Akuntansi
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="software-management-system"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Software Management System
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="haki"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        HAKI
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="audit"
+                        className="block px-4 py-2 hover:bg-[#762a7d72]"
+                      >
+                        Audit
                       </a>
                     </li>
                   </ul>

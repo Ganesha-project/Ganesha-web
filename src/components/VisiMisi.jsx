@@ -1,8 +1,17 @@
 import Image from "next/image"
 import visi from "../public/BG/mision.jpg"
-import { GiChestnutLeaf } from "react-icons/gi";
-import { TbBulbFilled } from "react-icons/tb";
-import { IoSparkles } from "react-icons/io5";
+
+export const metadata = {
+    title: 'Ganesha Consulting - Visi dan Misi',
+    description: 'Temukan visi dan misi Ganesha Consulting yang menekankan kreativitas, solusi bisnis terpercaya, dan komitmen terhadap kepuasan klien. Kami menyediakan layanan seperti desain inovatif, pengembangan website, konsultasi bisnis, perpajakan, dan manajemen izin usaha.',
+    keywords: 'Ganesha Consulting, visi dan misi, kreativitas, solusi bisnis, pengembangan website, konsultasi bisnis, perpajakan, manajemen izin usaha',
+    canonical: 'https://ganeshaconsulting.co.id',
+    ogTitle: 'Ganesha Consulting - Visi dan Misi',
+    ogDescription: 'Temukan visi dan misi Ganesha Consulting yang menekankan kreativitas, solusi bisnis terpercaya, dan komitmen terhadap kepuasan klien. Kami menyediakan layanan seperti desain inovatif, pengembangan website, konsultasi bisnis, perpajakan, dan manajemen izin usaha.',
+    twitterTitle: 'Ganesha Consulting - Visi dan Misi',
+    twitterDescription: 'Temukan visi dan misi Ganesha Consulting yang menekankan kreativitas, solusi bisnis terpercaya, dan komitmen terhadap kepuasan klien. Kami menyediakan layanan seperti desain inovatif, pengembangan website, konsultasi bisnis, perpajakan, dan manajemen izin usaha.',
+  };
+  
 
 export const VisiMisi = () => {
     return (

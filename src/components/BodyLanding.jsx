@@ -9,6 +9,18 @@ import { RiAppsFill, RiFilePaper2Fill } from "react-icons/ri";
 import { GrTechnology } from "react-icons/gr";
 import { SiReadthedocs } from "react-icons/si";
 
+export const metadata = {
+    title: 'Ganesha Consulting - Jasa dan Produk Kami',
+    description: 'Ganesha Consulting menawarkan berbagai layanan dan produk yang mencakup pengelolaan media sosial, pengembangan website, legalitas usaha, dan banyak lagi. Temukan solusi lengkap untuk kebutuhan bisnis Anda di Ganesha Consulting.',
+    keywords: 'Ganesha Consulting, jasa dan produk, pengelolaan media sosial, pengembangan website, legalitas usaha, solusi bisnis, konsultasi 24 jam, terjamin dan terpercaya, pelayanan cepat, layanan lengkap',
+    canonical: 'https://www.ganeshaconsulting.co.id',
+    ogTitle: 'Ganesha Consulting - Jasa dan Produk Kami',
+    ogDescription: 'Ganesha Consulting menawarkan berbagai layanan dan produk yang mencakup pengelolaan media sosial, pengembangan website, legalitas usaha, dan banyak lagi. Temukan solusi lengkap untuk kebutuhan bisnis Anda di Ganesha Consulting.',
+    twitterTitle: 'Ganesha Consulting - Jasa dan Produk Kami',
+    twitterDescription: 'Ganesha Consulting menawarkan berbagai layanan dan produk yang mencakup pengelolaan media sosial, pengembangan website, legalitas usaha, dan banyak lagi. Temukan solusi lengkap untuk kebutuhan bisnis Anda di Ganesha Consulting.',
+  };
+  
+
 export const BodyLanding = () => {
     return (
         <>

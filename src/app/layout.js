@@ -7,7 +7,10 @@ import { FloatingButton } from "@/components/FloatingButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "GaneshaConsulting",
+  title: {
+    default: "GaneshaConsulting",
+    template: '%s | GaneshaConsulting'
+  },
   description: "Legalkan Bisnis Mu Bersama Kami!",
 };
 

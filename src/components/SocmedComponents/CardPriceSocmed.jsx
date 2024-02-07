@@ -2,6 +2,50 @@ import check from '../../public/IMG/IconVector/checkgreen.png'
 import cross from '../../public/IMG/IconVector/crossred.png'
 import Image from 'next/image'
 
+export const metadata = {
+    title: "Paket Manajemen Sosial Media - Ganesha Consulting",
+    description: "Temukan paket manajemen sosial media terbaik untuk bisnis Anda di Ganesha Consulting. Dapatkan diskon hingga 47% untuk layanan berkualitas tinggi termasuk desain, penjadwalan posting, konsultasi iklan, dan banyak lagi!",
+    keywords: "paket manajemen sosial media, layanan sosial media, manajemen sosmed, paket layanan sosmed, Ganesha Consulting",
+    image: "/IMG/IconVector/checkgreen.png", // Path ke gambar terkait paket sosial media
+    url: "https://www.ganeshaconsulting.co.id/sosmedpage", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/sosmedpage",
+        title: "Paket Manajemen Sosial Media - Ganesha Consulting",
+        description: "Temukan paket manajemen sosial media terbaik untuk bisnis Anda di Ganesha Consulting. Dapatkan diskon hingga 47% untuk layanan berkualitas tinggi termasuk desain, penjadwalan posting, konsultasi iklan, dan banyak lagi!",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/IconVector/checkgreen.png",
+            alt: "Ganesha Consulting - Paket Manajemen Sosial Media"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const CardPriceSocmed = ({ data }) => {
     const formatToRupiah = (amount) => {
         if (typeof amount !== 'number') {

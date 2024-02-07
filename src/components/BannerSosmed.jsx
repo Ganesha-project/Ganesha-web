@@ -3,6 +3,50 @@ import bulb from "../public/IMG/IconVector/lightbulb-exclamation.png"
 import twentyfour from '../public/IMG/IconVector/24white.png'
 import Image from "next/image"
 
+export const metadata = {
+    title: "Sosial Media Manajemen - Ganesha Consulting",
+    description: "Apa itu sosial media manajemen? Temukan definisi, kelebihan, dan layanan terbaik di Ganesha Consulting. Kami menawarkan solusi sosial media yang kreatif, inovatif, dan terkini untuk memenuhi kebutuhan bisnis Anda.",
+    keywords: "sosial media manajemen, layanan sosmed, Ganesha Consulting, manajemen konten sosial media",
+    image: "/IMG/VectorBg/medsos.jpg", // Path ke gambar terkait sosial media manajemen
+    url: "https://www.ganeshaconsulting.co.id/all-products/sosmed", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/all-products/sosmed",
+        title: "Sosial Media Manajemen - Ganesha Consulting",
+        description: "Apa itu sosial media manajemen? Temukan definisi, kelebihan, dan layanan terbaik di Ganesha Consulting. Kami menawarkan solusi sosial media yang kreatif, inovatif, dan terkini untuk memenuhi kebutuhan bisnis Anda.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/IMG/VectorBg/medsos.jpg",
+            alt: "Ganesha Consulting - Sosial Media Manajemen"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const BannerSosmed = () => {
 
     return (

@@ -1,6 +1,50 @@
 import Image from "next/image"
 import webitem from "../../public/BG/webitem.jpg"
 
+export const metadata = {
+    title: "Pentingnya Sebuah Website Untuk Perusahaan - Ganesha Consulting",
+    description: "Pentingnya sebuah website untuk perusahaan tidak dapat diabaikan dalam era digital saat ini. Dengan website, perusahaan dapat meningkatkan eksposur global, aksesibilitas sepanjang waktu, dan kredibilitas. Temukan solusi pembuatan website profesional dengan Ganesha Consulting.",
+    keywords: "website perusahaan, pentingnya website, keberhasilan perusahaan, eksposur global, Ganesha Consulting, solusi website",
+    image: "/BG/webitem.jpg", // Path ke gambar konten
+    url: "https://www.ganeshaconsulting.co.id/webpage", // URL halaman Anda
+    author: "Ganesha Consulting",
+    siteName: "Ganesha Consulting",
+    type: "website",
+    robots: "index, follow", // Aturan indeks dan pengikutan
+    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
+    // Open Graph metadata untuk berbagi di media sosial
+    openGraph: {
+        type: "website",
+        url: "https://www.ganeshaconsulting.co.id/webpage",
+        title: "Pentingnya Sebuah Website Untuk Perusahaan - Ganesha Consulting",
+        description: "Pentingnya sebuah website untuk perusahaan tidak dapat diabaikan dalam era digital saat ini. Dengan website, perusahaan dapat meningkatkan eksposur global, aksesibilitas sepanjang waktu, dan kredibilitas. Temukan solusi pembuatan website profesional dengan Ganesha Consulting.",
+        image: {
+            url: "https://www.ganeshaconsulting.co.id/BG/webitem.jpg",
+            alt: "Ganesha Consulting - Pentingnya Sebuah Website Untuk Perusahaan"
+        }
+    },
+    // Twitter metadata untuk berbagi di Twitter
+    twitter: {
+        handle: "@ganeshaconsult",
+        site: "@ganeshaconsult",
+        cardType: "summary_large_image",
+    },
+    // Structured data untuk membantu mesin pencari memahami konten halaman
+    structuredData: {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        name: "Ganesha Consulting",
+        url: "https://www.ganeshaconsulting.co.id/",
+        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        sameAs: [
+            "https://www.facebook.com/ganeshaconsulting",
+            "https://twitter.com/ganeshaconsult",
+            "https://www.linkedin.com/company/ganeshaconsulting"
+        ]
+    }
+};
+
+
 export const WebBody = () => {
     return (
         <>

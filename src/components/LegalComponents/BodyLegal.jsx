@@ -1,11 +1,72 @@
 import Image from "next/image"
+import Head from 'next/head';
 import bodylegal from "../../public/BG/legalbody.jpg"
 import judge from "../../public/BG/judge_set1.jpg"
-
 
 export const BodyLegal = () => {
     return (
         <>
+            <Head>
+                {/* Metadata Umum */}
+                <title>Apa Itu Legalitas Usaha? - Ganesha Consulting</title>
+                <meta name="description" content="Temukan arti dan pentingnya legalitas usaha bagi bisnis Anda. Ganesha Consulting hadir memberikan layanan legalitas terpercaya dan terjangkau." />
+                <link rel="canonical" href="https://www.ganeshaconsulting.co.id/all-products/legalitas" />
+
+                {/* Metadata Gambar */}
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="Gambar ilustrasi legalitas usaha" />
+                <meta name="twitter:image" content="https://example.com/bodylegal.jpg" />
+
+                {/* Metadata Open Graph */}
+                <meta property="og:title" content="Apa Itu Legalitas Usaha? - Ganesha Consulting" />
+                <meta property="og:description" content="Temukan arti dan pentingnya legalitas usaha bagi bisnis Anda. Ganesha Consulting hadir memberikan layanan legalitas terpercaya dan terjangkau." />
+                <meta property="og:type" content="website" />
+
+                {/* Metadata Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Apa Itu Legalitas Usaha? - Ganesha Consulting" />
+                <meta name="twitter:description" content="Temukan arti dan pentingnya legalitas usaha bagi bisnis Anda. Ganesha Consulting hadir memberikan layanan legalitas terpercaya dan terjangkau." />
+
+                {/* Metadata Schema.org */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Article",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": "https://www.ganeshaconsulting.co.id/all-products/legalitas"
+                            },
+                            "headline": "Apa Itu Legalitas Usaha?",
+                            "description": "Temukan arti dan pentingnya legalitas usaha bagi bisnis Anda. Ganesha Consulting hadir memberikan layanan legalitas terpercaya dan terjangkau.",
+                            "image": {
+                                "@type": "ImageObject",
+                                "url": "https://www.ganeshaconsulting.co.id/all-products/legalitas",
+                                "width": 1200,
+                                "height": 630
+                            },
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Ganesha Consulting"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Ganesha Consulting",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://www.ganeshaconsulting.co.id/all-products/legalitas",
+                                    "width": 600,
+                                    "height": 60
+                                }
+                            },
+                            "datePublished": "2024-02-08",
+                            "dateModified": "2024-02-08"
+                        }
+                    `}
+                </script>
+            </Head>
+
             <div className="bg-[#1ab49d] w-auto h-auto m-10 md:m-32 rounded-[40px]">
                 <div className="p-6 md:p-10 flex flex-col md:flex-col lg:flex-row gap-7">
                     <Image

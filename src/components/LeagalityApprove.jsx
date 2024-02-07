@@ -3,6 +3,18 @@ import oss from "../public/BG/oss2.png"
 import djp from "../public/BG/djp1.png"
 import kemenkumham from "../public/BG/kemenkumham.png"
 
+export const metadata = {
+    title: 'Ganesha Consulting - Daftar Legalitas',
+    description: 'Lihat daftar legalitas resmi yang dimiliki oleh Ganesha Consulting, termasuk registrasi dari Kementerian Hukum dan HAM, Direktorat Jenderal Pajak, dan OSS (Online Single Submission).',
+    keywords: 'Ganesha Consulting, daftar legalitas, registrasi perusahaan, Kemenkumham, DJP, OSS, Online Single Submission',
+    canonical: 'https://www.ganeshaconsulting.co.id',
+    ogTitle: 'Ganesha Consulting - Daftar Legalitas',
+    ogDescription: 'Lihat daftar legalitas resmi yang dimiliki oleh Ganesha Consulting, termasuk registrasi dari Kementerian Hukum dan HAM, Direktorat Jenderal Pajak, dan OSS (Online Single Submission).',
+    twitterTitle: 'Ganesha Consulting - Daftar Legalitas',
+    twitterDescription: 'Lihat daftar legalitas resmi yang dimiliki oleh Ganesha Consulting, termasuk registrasi dari Kementerian Hukum dan HAM, Direktorat Jenderal Pajak, dan OSS (Online Single Submission).',
+  };
+  
+
 export const LegalityApprove = () => {
     return (
         <>
