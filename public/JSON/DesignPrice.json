@@ -107,7 +107,7 @@
                 },
                 {
                     "feature": "Raw File Editable",
-                    "status": false
+                    "status": true
                 }
             ]
         }

@@ -5,21 +5,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { IoIosArrowDown } from "react-icons/io";
-import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
-import { TbWorldWww } from "react-icons/tb";
-import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat, FaUserGear, FaUserTie } from "react-icons/fa6";
-import { Tb24Hours } from "react-icons/tb";
-import { BiMath, BiMedal } from "react-icons/bi";
-import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
-import { RiAppsFill, RiFilePaper2Fill } from "react-icons/ri";
-import { GrTechnology } from "react-icons/gr";
-import { SiReadthedocs } from "react-icons/si";
 
 
 export const Navbar = ({ children }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
