@@ -2,8 +2,8 @@
     "packages": [
         {
             "type": "Paket Minion",
-            "price": 500000,
-            "priceOriginal": 950000,
+            "price": 950000,
+            "priceOriginal": 1805000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Paket%20Design%20Social%20Media%nih!%20",
             "features": [
@@ -39,8 +39,8 @@
         },
         {
             "type": "Paket Turtle",
-            "price": 1100000,
-            "priceOriginal": 2090000,
+            "price": 2090000,
+            "priceOriginal": 6859000,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Paket%20Design%20Social%20Media%nih!%20",
             "discount": 47,
             "features": [

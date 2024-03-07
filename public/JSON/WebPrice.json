@@ -2,8 +2,8 @@
     "packages": [
         {
             "type": "Mini Web Company Profile",
-            "price": 1000000,
-            "priceOriginal": 1900000,
+            "price": 1805000,
+            "priceOriginal": 3429500,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -87,8 +87,8 @@
         },
         {
             "type": "Company Profile Basic",
-            "price": 2000000,
-            "priceOriginal": 3800000,
+            "price": 3420000,
+            "priceOriginal": 6498000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -172,8 +172,8 @@
         },
         {
             "type": "Dynamic Data Company Profile",
-            "price": 4000000,
-            "priceOriginal": 7600000,
+            "price": 7505000,
+            "priceOriginal": 14259500,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -257,8 +257,8 @@
         },
         {
             "type": "Company Blog Website",
-            "price": 5500000,
-            "priceOriginal": 10450000,
+            "price": 10450000,
+            "priceOriginal": 19855000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -338,8 +338,8 @@
         },
         {
             "type": "Company Business E-Commerce",
-            "price": 9000000,
-            "priceOriginal": 17100000,
+            "price": 17005000,
+            "priceOriginal": 32309500,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
@@ -419,8 +419,8 @@
         },
         {
             "type": "Custom Web Client Request",
-            "price": 10000000,
-            "priceOriginal": 19000000,
+            "price": 18715000,
+            "priceOriginal": 35558500,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
