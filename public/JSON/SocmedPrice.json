@@ -2,8 +2,8 @@
     "packages": [
         {
             "type": "Paket BotLane",
-            "price": 1140000,
-            "priceOriginal": 2166000,
+            "price": 600000,
+            "priceOriginal": 1140000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
             "features": [
@@ -76,8 +76,8 @@
         },
         {
             "type": "Paket Midlane",
-            "price": 2850000,
-            "priceOriginal": 5415000,
+            "price": 1500000,
+            "priceOriginal": 2850000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
             "features": [
@@ -149,8 +149,8 @@
         },
         {
             "type": "Paket Jungler",
-            "price": 5700000,
-            "priceOriginal": 10830000,
+            "price": 3000000,
+            "priceOriginal": 5700000,
             "discount": 47,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
             "features": [

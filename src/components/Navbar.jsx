@@ -110,6 +110,15 @@ export const Navbar = ({ children }) => {
                   >
                     <li>
                       <a
+                        href="/all-products"
+                        className="block px-4 py-2 hover:bg-[#bca0be72]"
+                      >
+                        All Products
+                      </a>
+                    </li>
+                    <li></li>
+                    <li>
+                      <a
                         href="/all-products/sosmed"
                         className="block px-4 py-2 hover:bg-[#bca0be72]"
                       >
