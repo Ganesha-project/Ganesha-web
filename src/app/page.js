@@ -5,6 +5,7 @@ import home from "../public/BG/block.png"
 import { LegalityApprove } from "@/components/LeagalityApprove";
 import { VoCarousel } from "@/components/VoCarousel";
 import { VisiMisi } from "@/components/VisiMisi";
+import { OurClient } from "@/components/OurClient";
 
 export const metadata = {
   title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
@@ -42,6 +43,7 @@ export default function Home() {
       <VisiMisi />
       <LegalityApprove />
       <VoCarousel />
+      <OurClient />
     </>
   );
 }

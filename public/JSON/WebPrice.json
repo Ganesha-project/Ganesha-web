@@ -2,9 +2,9 @@
     "packages": [
         {
             "type": "Mini Web Company Profile",
-            "price": 950000,
-            "priceOriginal": 1805000,
-            "discount": 47,
+            "price": 1200000,
+            "priceOriginal": 1716000,
+            "discount": 30,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -41,10 +41,6 @@
                 },
                 {
                     "feature": "Revisi 2x",
-                    "status": true
-                },
-                {
-                    "feature": "7 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -87,9 +83,9 @@
         },
         {
             "type": "Company Profile Basic",
-            "price": 1800000,
-            "priceOriginal": 3420000,
-            "discount": 47,
+            "price": 2500000,
+            "priceOriginal": 3575000,
+            "discount": 30,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -126,10 +122,6 @@
                 },
                 {
                     "feature": "Revisi 2x",
-                    "status": true
-                },
-                {
-                    "feature": "10 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -172,9 +164,9 @@
         },
         {
             "type": "Dynamic Data Company Profile",
-            "price": 3950000,
-            "priceOriginal": 7505000,
-            "discount": 47,
+            "price": 4500000,
+            "priceOriginal": 6435000,
+            "discount": 30,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -211,10 +203,6 @@
                 },
                 {
                     "feature": "Revisi 4x",
-                    "status": true
-                },
-                {
-                    "feature": "20 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -257,9 +245,9 @@
         },
         {
             "type": "Company Blog Website",
-            "price": 5500000,
-            "priceOriginal": 10450000,
-            "discount": 47,
+            "price": 8950000,
+            "priceOriginal": 12798500,
+            "discount": 30,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -296,10 +284,6 @@
                 },
                 {
                     "feature": "Revisi 4x",
-                    "status": true
-                },
-                {
-                    "feature": "15 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -338,9 +322,9 @@
         },
         {
             "type": "Company Business E-Commerce",
-            "price": 8950000,
-            "priceOriginal": 17005000,
-            "discount": 47,
+            "price": 24950000,
+            "priceOriginal": 47405000,
+            "discount": 30,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -377,10 +361,6 @@
                 },
                 {
                     "feature": "Revisi 4x",
-                    "status": true
-                },
-                {
-                    "feature": "30 Hari Pengerjaan",
                     "status": true
                 },
                 {
@@ -419,9 +399,9 @@
         },
         {
             "type": "Custom Web Client Request",
-            "price": 9850000,
-            "priceOriginal": 18715000,
-            "discount": 47,
+            "price": 0,
+            "priceOriginal": 0,
+            "discount": 0,
             "link": "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
             "features": [
                 {
@@ -458,10 +438,6 @@
                 },
                 {
                     "feature": "Revisi 4x",
-                    "status": true
-                },
-                {
-                    "feature": "30 Hari Pengerjaan",
                     "status": true
                 },
                 {

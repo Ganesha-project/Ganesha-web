@@ -5,11 +5,7 @@ import { GiMailbox } from "react-icons/gi"
 import { RiFacebookBoxFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill } from "react-icons/ri"
 
 export const BodyContact = () => {
-    const mailLink = "mailto:email@domain.com?subject=Konsultasi%20Ganesha%20Consulting&body=Halo%20kak%20saya%20mau%20konsultasi%20nih"
-    const waLink = "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
-    const igLink = "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-    const fbLink = "https://www.facebook.com/profile.php?id=61555739807086"
-    const linkedin = ""
+   
     return (
         <>
             <div className="m-10 lg:m-32">

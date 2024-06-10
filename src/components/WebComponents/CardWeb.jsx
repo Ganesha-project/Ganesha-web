@@ -71,22 +71,25 @@ export const CardWeb = ({ data }) => {
             <div className="m-10 lg:m-32 flex flex-wrap justify-center gap-7">
                 {data.packages.map((el) => (
                     <div key={el.type} className="max-w-sm p-6 bg-gradient-to-b from-sky-100 to-sky-200 rounded-[40px] hover:bg-gradient-to-t hover:from-sky-100 hover:to-sky-200 mb-4 md:mb-0">
-                        <div href="#" className="max-w-sm">
+                        <div href="#" className="max-w-sm flex flex-col justify-between h-full">
                             <div className='flex justify-center'>
                                 <h5 className="text-sky-600 mt-2 uppercase text-center text-3xl font-bold tracking-tight">
                                     {el.type}
                                 </h5>
                             </div>
                             <p className="mt-10 text-center line-through text-lg text-indigo-600">
-                                {formatToRupiah(el.priceOriginal)}
+                                {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                             </p>
                             <div className='mt-2 mb-2 flex justify-center'>
                                 <p className="uppercase text-center font-bold text-red-600 text-xl outline-2 border border-red-500 w-fit px-2 rounded-full">
-                                    Discount {el.discount}%
+                                {el.discount === 0 ? null : `Discount ${el.discount}%`}
+                                    
+                                    
                                 </p>
                             </div>
                             <p className="text-center font-bold text-sky-800 text-3xl">
-                                {formatToRupiah(el.price)}
+                            {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
+
                             </p>
                             <div className="mt-3 flex justify-center">
                                 <a
