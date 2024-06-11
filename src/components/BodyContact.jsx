@@ -3,6 +3,7 @@ import Image from "next/image"
 import cs2 from "../public/BG/cs2.jpg"
 import { GiMailbox } from "react-icons/gi"
 import { RiFacebookBoxFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill } from "react-icons/ri"
+import { MAILLINK } from "./Links/Links"
 
 export const BodyContact = () => {
    
@@ -17,7 +18,7 @@ export const BodyContact = () => {
                     <div className="lg:ml-5 mt-5 lg:mt-0">
                         <h1 className="mb-5 text-5xl lg:text-7xl font-extrabold bg-violet-900 bg-clip-text text-transparent">Kontak Kami</h1>
                         <a
-                            href={mailLink}
+                            href={MAILLINK}
                             className="mb-5 hover:bg-opacity-50 flex items-center gap-4 bg-violet-100 rounded-[40px] p-6">
                             <GiMailbox size={50} />
                             <div>
