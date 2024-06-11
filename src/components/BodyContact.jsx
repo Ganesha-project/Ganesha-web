@@ -3,7 +3,7 @@ import Image from "next/image"
 import cs2 from "../public/BG/cs2.jpg"
 import { GiMailbox } from "react-icons/gi"
 import { RiFacebookBoxFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill } from "react-icons/ri"
-import { MAILLINK } from "./Links/Links"
+import { FBLINK, IGLINK, LINKEDINLINK, MAILLINK, WALINK } from "./Links/Links"
 
 export const BodyContact = () => {
    
@@ -27,7 +27,7 @@ export const BodyContact = () => {
                             </div>
                         </a>
                         <a
-                            href={waLink}
+                            href={WALINK}
                             className="mb-5 hover:bg-opacity-50 flex items-center gap-4 bg-violet-100 rounded-[40px] p-6">
                             <RiWhatsappFill size={50} />
                             <div>
@@ -37,17 +37,17 @@ export const BodyContact = () => {
                         </a>
                         <div className="flex justify-between lg:justify-end gap-3">
                             <a
-                                href={igLink}
+                                href={IGLINK}
                                 className="flex hover:bg-opacity-50 flex-col w-fit items-center gap-4 bg-violet-100 rounded-[40px] p-6">
                                 <RiInstagramFill size={50} />
                             </a>
                             <a
-                                href={fbLink}
+                                href={FBLINK}
                                 className="flex hover:bg-opacity-50 flex-col w-fit items-center gap-4 bg-[#EA5554] rounded-[40px] p-6">
                                 <RiFacebookBoxFill size={50} color="white" />
                             </a>
                             <a
-                                href={linkedin}
+                                href={LINKEDINLINK}
                                 className="flex hover:bg-opacity-50 flex-col w-fit items-center gap-4 bg-violet-100 rounded-[40px] p-6">
                                 <RiLinkedinFill size={50} />
                             </a>
