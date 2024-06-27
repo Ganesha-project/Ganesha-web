@@ -43,7 +43,7 @@ export default function Home() {
       <VisiMisi />
       <LegalityApprove />
       <VoCarousel />
-      <OurClient />
+      {/* <OurClient /> */}
     </>
   );
 }
