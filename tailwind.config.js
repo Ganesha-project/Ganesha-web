@@ -13,13 +13,18 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        quicksand: ['Quicksand', 'sans-serif']
-      },
+      colors: {
+        mainColor: "#682D79",
+        secondaryColor: "#A781A9",
+        baseColor: '#CCB3CF',
+        secondaryYellow: "#EACE6C",
+        secondaryGray: "#F3F4F5",
+      }, 
       boxShadow: {
-        'custom': 'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
-      }
+        custom: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
+        mainShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+        secondaryShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+      },
     },
   },
   plugins: [require("daisyui")],

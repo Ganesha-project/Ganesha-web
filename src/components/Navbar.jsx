@@ -28,7 +28,7 @@ export const Navbar = ({ children }) => {
 
   return (
     <>
-      <nav className={`font-quicksand fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#ffffff70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#ffffff70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
           <a href='/' className="flex items-center space-x-3 rtl:space-x-reverse p-1">
             <Image src={Artboard2} className="" width={40} height={40} alt="Ganesha Logo" />
@@ -263,14 +263,14 @@ export const Navbar = ({ children }) => {
                   List Harga
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <a
-                  href='/karir'
+                  href='/articles'
                   className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/karir') && 'border-b-2 border-violet-300'}`}
                 >
-                  Karir
+                  Artikel
                 </a>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
