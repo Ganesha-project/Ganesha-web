@@ -5,7 +5,7 @@ export const Searchbar = () => {
         <>
             <form
                 action=""
-                className="mx-5 md:mx-0"
+                className="md:mx-0"
             >
                 <label className="input rounded-3xl bg-white bg-opacity-80 backdrop-blur-xl shadow flex items-center gap-2">
                     <IoIosSearch />

@@ -109,7 +109,7 @@ export const DataArticles = [
     {
         hot: false,
         title: "Artificial Intelligence Revolutionizing the Tech Industry",
-        thumbnailImg: "https://source.unsplash.com/random/?house",
+        thumbnailImg: "https://picsum.photos/500/500?random=431",
         exerp: "AI technology is rapidly transforming the tech industry with advancements in machine learning and data processing.",
         date: "1 Hour Ago | 28 June 2024",
         categories: "Teknologi"
@@ -117,7 +117,7 @@ export const DataArticles = [
     {
         hot: true,
         title: "Climate Change: A Global Call to Action",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=555",
         exerp: "World leaders are coming together to address the pressing issue of climate change and to discuss sustainable solutions.",
         date: "30 Mins Ago | 28 June 2024",
         categories: "Lingkungan"
@@ -125,7 +125,7 @@ export const DataArticles = [
     {
         hot: false,
         title: "Exploring the Wonders of the Deep Sea",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=177",
         exerp: "Marine biologists have discovered new species in the depths of the ocean, unveiling the mysteries of the deep sea.",
         date: "2 Hours Ago | 28 June 2024",
         categories: "Sains"
@@ -133,7 +133,7 @@ export const DataArticles = [
     {
         hot: true,
         title: "Economic Growth in Southeast Asia",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=810",
         exerp: "Southeast Asian countries are experiencing significant economic growth, attracting foreign investments and boosting trade.",
         date: "45 Mins Ago | 28 June 2024",
         categories: "Ekonomi"
@@ -141,7 +141,7 @@ export const DataArticles = [
     {
         hot: false,
         title: "The Rise of Electric Vehicles",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=719",
         exerp: "Electric vehicles are becoming more popular as consumers seek eco-friendly and cost-effective transportation options.",
         date: "3 Hours Ago | 28 June 2024",
         categories: "Otomotif"
@@ -149,7 +149,7 @@ export const DataArticles = [
     {
         hot: true,
         title: "Advancements in Medical Technology",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=532",
         exerp: "Recent advancements in medical technology are improving patient outcomes and revolutionizing healthcare practices.",
         date: "25 Mins Ago | 28 June 2024",
         categories: "Kesehatan"
@@ -157,7 +157,7 @@ export const DataArticles = [
     {
         hot: false,
         title: "The Future of Space Exploration",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=264",
         exerp: "Space agencies are planning ambitious missions to explore distant planets and expand our understanding of the universe.",
         date: "4 Hours Ago | 28 June 2024",
         categories: "Astronomi"
@@ -165,7 +165,7 @@ export const DataArticles = [
     {
         hot: true,
         title: "Innovations in Renewable Energy",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=284",
         exerp: "Innovations in renewable energy sources are paving the way for a sustainable future and reducing our reliance on fossil fuels.",
         date: "10 Mins Ago | 28 June 2024",
         categories: "Energi"
@@ -173,7 +173,7 @@ export const DataArticles = [
     {
         hot: false,
         title: "The Impact of Social Media on Society",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=331",
         exerp: "Social media platforms are having a profound impact on society, influencing communication, politics, and culture.",
         date: "5 Hours Ago | 28 June 2024",
         categories: "Sosial"
@@ -181,7 +181,7 @@ export const DataArticles = [
     {
         hot: true,
         title: "Breakthroughs in Quantum Computing",
-        thumbnailImg: "https://source.unsplash.com/random/",
+        thumbnailImg: "https://picsum.photos/500/500?random=429",
         exerp: "Quantum computing is making significant strides, promising to solve complex problems that are beyond the capabilities of classical computers.",
         date: "15 Mins Ago | 28 June 2024",
         categories: "Teknologi"

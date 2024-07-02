@@ -7,7 +7,18 @@ import { FaFire } from "react-icons/fa6"
 export const Featured = () => {
     return (
         <>
-            <div className="bg-white bg-opacity-80 backdrop-blur-xl p-5 shadow rounded-3xl">
+            <div className="relative md:mx-0 mx-5">
+                <div className="z-10 md:bg-white md:bg-opacity-25 md:backdrop-blur-xl md:p-5 md:shadow md:rounded-3xl w-fit">
+                    <h1 className="text-2xl md:text-3xl font-semibold text-mainColor">
+                        Ganesha News & Article
+                    </h1>
+                    <h2 className="md:text-xl">
+                        Artikel Berkualitas untuk Pembaca Cerdas, Hanya di Ganesha News!
+                    </h2>
+                </div>
+                <span className="bg-white w-[30lvw] blur-2xl -z-10 h-16 absolute inset-0"></span>
+            </div>
+            <div className="bg-white bg-opacity-25 backdrop-blur-xl p-5 shadow rounded-3xl">
                 <div className="flex md:flex-row flex-col gap-5">
                     <div className="md:w-[50%]">
                         <HighlightCarousel data={DataHighlight} />
@@ -17,7 +28,7 @@ export const Featured = () => {
                             {DataArticles.slice(0, 2).map((el, idx) => (
                                 <Link
                                     href=""
-                                    key={idx} className="flex gap-3 bg-white p-3 shadow rounded-2xl  group hover:bg-gray-50 duration-150">
+                                    key={idx} className="flex gap-3 bg-white bg-opacity-50 p-3 shadow rounded-2xl group hover:bg-gray-50 duration-150">
                                     <div className="relative h-[21lvh] w-[50%] overflow-hidden rounded-xl">
                                         <Image
                                             className="w-full h-[21lvh] object-cover rounded-xl group-hover:scale-125 duration-150"

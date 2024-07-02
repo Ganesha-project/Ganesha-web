@@ -4,7 +4,7 @@ import { FaSort } from "react-icons/fa6"
 export const TilesFilter = () => {
     return (
         <>
-            <div className="mx-5 md:mx-0 flex md:flex-row flex-col gap-5">
+            <div className="flex md:flex-row flex-col gap-5">
                 <div className="carousel md:flex gap-2 py-2 -my-2">
                     {DataCategoriesArticle.map((el, idx) => (
                         <a href={el.href} key={idx}
@@ -17,13 +17,7 @@ export const TilesFilter = () => {
                     ))}
                 </div>
 
-                <div className="flex justify-between items-center">
-                    <div className="relative block md:hidden">
-                        <span className="absolute top-1  w-full  h-10 z-30 text-2xl font-bold text-mainColor">
-                            Trending
-                        </span>
-                        <div className="w-28 blur-xl h-10 bg-white "/>
-                    </div>
+                <div className="flex justify-end">
                     <div className="dropdown dropdown-bottom dropdown-end flex justify-end">
                         <div tabIndex={0} role="button" className="flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow bg-opacity-80 backdrop-blur-xl truncate font-semibold text-mainColor">
                             <FaSort />

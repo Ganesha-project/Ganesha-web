@@ -19,7 +19,7 @@ export const HighlightCarousel = ({ data }) => {
 
     return (
         <>
-            <div className="overflow-hidden rounded-box h-[50lvh] shadow">
+            <div className="overflow-hidden rounded-box md:h-[50lvh] h-[30lvh] shadow">
                 <div
                     className="whitespace-nowrap transition-transform ease-in-out duration-700 w-full h-full"
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}

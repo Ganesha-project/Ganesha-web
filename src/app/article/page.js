@@ -4,18 +4,21 @@ import { Featured } from "@/components/ArticleComponent/Featured";
 import { Landing } from "@/components/ArticleComponent/Landing";
 import { Searchbar } from "@/components/ArticleComponent/Searchbar";
 import { TilesFilter } from "@/components/ArticleComponent/TilesFilter";
+import { DataArticles } from "../Database";
 
 export default async function ArticlesPage() {
 
     return (
         <>
             <BannerArticle >
-                <Landing />
-                <Searchbar />
-                <TilesFilter />
                 <Featured />
             </BannerArticle>
-            <ArticleCard />
+            <section className="md:px-24 px-5 space-y-5 pt-24 bg-gray-100">
+                <Searchbar />
+                <TilesFilter />
+                <ArticleCard data={DataArticles} />
+                <ArticleCard data={DataArticles}  />
+            </section>
         </>
     );
 }
