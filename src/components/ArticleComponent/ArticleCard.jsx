@@ -1,22 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FaFire } from "react-icons/fa6"
+import { Headtag } from "./HeadTag"
 
-export const ArticleCard = ({ data, categories, }) => {
+export const ArticleCard = ({ data, tag, }) => {
     return (
         <>
             <section className="space-y-5">
-                <div className="flex items-center justify-between">
-                    <h1 className="text-mainColor text-2xl font-semibold">
-                        Latest Update
-                    </h1>
-                    <a href=""
-                        className="px-3 py-1 bg-baseColor text-white rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor"
-                    >
-                        See More
-                    </a>
-                </div>
-
+                <Headtag label={tag}/>
                 <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
                     {data?.slice(0, 6).map((el, idx) => (
                         <Link
@@ -35,7 +26,7 @@ export const ArticleCard = ({ data, categories, }) => {
                                             {el.categories}
                                         </h1>
                                         {el.hot === true ? (
-                                            <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg bg-opacity-40 backdrop-blur-lg">
+                                            <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg ">
                                                 HOT
                                                 <FaFire className="text-sm" />
                                             </span>

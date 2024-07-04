@@ -11,13 +11,13 @@ export default async function ArticlesPage() {
     return (
         <>
             <BannerArticle >
-                <Featured />
+                <Featured  />
             </BannerArticle>
-            <section className="md:px-24 px-5 space-y-5 pt-24 bg-gray-100">
+            <section className="md:px-24 px-5 space-y-5 pt-24 mb-10">
                 <Searchbar />
                 <TilesFilter />
-                <ArticleCard data={DataArticles} />
-                <ArticleCard data={DataArticles}  />
+                <ArticleCard data={DataArticles.new} tag={DataArticles.label.new} />
+                <ArticleCard data={DataArticles.trend} tag={DataArticles.label.trend} />
             </section>
         </>
     );

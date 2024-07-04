@@ -25,7 +25,7 @@ export const Featured = () => {
                     </div>
                     <div className="md:w-[50%]">
                         <div className="flex flex-col gap-5">
-                            {DataArticles.slice(0, 2).map((el, idx) => (
+                            {DataArticles.new.slice(0, 2).map((el, idx) => (
                                 <Link
                                     href=""
                                     key={idx} className="flex gap-3 bg-white bg-opacity-50 p-3 shadow rounded-2xl group hover:bg-gray-50 duration-150">

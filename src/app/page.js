@@ -6,6 +6,7 @@ import { LegalityApprove } from "@/components/LeagalityApprove";
 import { VoCarousel } from "@/components/VoCarousel";
 import { VisiMisi } from "@/components/VisiMisi";
 import { OurClient } from "@/components/OurClient";
+import { HomeBanner } from "@/components/HomeBanner";
 
 export const metadata = {
   title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
@@ -27,23 +28,7 @@ export default function Home() {
   const secondary = "  Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya."
   return (
     <>
-      <ImgProduk socmed={home} styles='bg-white mt-[0vh]' />
-      <BannerText
-        other2={other2}
-        main={main}
-        other={other}
-        secondary={secondary}
-        ganesha={'ganeshaconsulting.co.id'}
-        styles='bg-[#82498C] bg-clip-text text-transparent bg-opacity-100'
-        btn1='Lebih Lanjut'
-        styleL='bg-[#82498C] bg-opacity-30'
-        styleR='hidden'
-        href1='#product' />
-      <BodyLanding />
-      <VisiMisi />
-      <LegalityApprove />
-      <VoCarousel />
-      {/* <OurClient /> */}
+      <HomeBanner />
     </>
   );
 }
