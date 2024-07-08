@@ -6,7 +6,7 @@ import { IoSunnySharp } from "react-icons/io5";
 import { IoMoonSharp } from "react-icons/io5";
 
 export default function ThemeSwitch() {
-  const { systemTheme, theme, setTheme } = useTheme('dark');
+  const { systemTheme, theme, setTheme } = useTheme('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
