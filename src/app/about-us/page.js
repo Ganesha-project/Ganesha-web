@@ -36,13 +36,13 @@ export default function AboutUs() {
                 ganesha={'ganeshaconsulting.co.id'}
                 styles='bg-[#82498C] bg-clip-text text-transparent bg-opacity-100'
                 btn1='Lebih Lanjut'
-                styleL='bg-[#82498C] bg-opacity-30'
+                styleL='bg-[#82498C] bg-opacity-30 dark:text-white'
                 styleR='hidden'
                 href1='#product' />
             <BodyLanding />
             <VisiMisi />
             <LegalityApprove />
-            <VoCarousel />
+            {/* <VoCarousel /> */}
             {/* <OurClient /> */}
         </>
     );

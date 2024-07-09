@@ -60,7 +60,7 @@ export default async function AuditPage() {
     return (
         <>
 
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="h-[45lvw] mt-7 translate-y-[7%]" />
+            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="h-[45lvw] mt-7 translate-y-[7%] dark:invert saturate-150 dark:hue-rotate-180" />
             <BannerText
                 other={other} other2={other2} main={main} secondary={secondary}
                 styles='bg-[#305782]'

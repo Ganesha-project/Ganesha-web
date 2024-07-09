@@ -15,12 +15,12 @@ export const CardProduct = () => {
     return (
         <>
             <div className="z-40 absolute top-1/2 left-1/3 ml-10 transform -translate-x-[65%] -translate-y-1/2" >
-                <h1 className="mb-5 text-gray-800 w-[50vw] font-extrabold text-6xl lg:text-9xl">Produk & Layanan <span className="bg-[#77297d00] rounded-xl" >Kami</span></h1>
+                <h1 className="mb-5 text-gray-800 dark:text-white w-[50vw] font-extrabold text-6xl lg:text-9xl">Produk & Layanan <span className="bg-[#77297d00] rounded-xl" >Kami</span></h1>
                 <div className='lg:w-[50vw]'>
                     <a
                         href='#web'
                         className='w-fit'>
-                        <span className='mb-3 bg-sky-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
+                        <span className='mb-3 bg-sky-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 dark:text-white rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
                             Website Development</span>
                     </a>
                 </div>
@@ -28,7 +28,7 @@ export const CardProduct = () => {
                     <a
                         href='#socmed'
                         className='w-fit'>
-                        <span className='mb-3 bg-violet-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
+                        <span className='mb-3 bg-violet-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 dark:text-white rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
                             Social Media Management</span>
                     </a>
                 </div>
@@ -36,7 +36,7 @@ export const CardProduct = () => {
                     <a
                         href='#legal'
                         className='w-fit'>
-                        <span className='mb-3 bg-teal-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
+                        <span className='mb-3 bg-teal-300 bg-opacity-50 hover:bg-opacity-30 hover:text-opacity-50 dark:text-white rounded-[40px]  text-center text-gray-800 p-3 font-medium'>
                             Jasa Legalitas Bisnis</span>
                     </a>
                 </div>
@@ -53,7 +53,7 @@ export const CardProduct = () => {
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/all-products/web">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text lg:text-left bg-[#68BDE7] text-5xl font-bold py-3">
                             Website Development
@@ -80,7 +80,7 @@ export const CardProduct = () => {
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/all-products/sosmed">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#A88BFA] text-5xl text-left font-bold py-3">
                             Social Media Management
@@ -107,7 +107,7 @@ export const CardProduct = () => {
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/all-products/legalitas">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#19B49D] text-5xl text-left font-bold py-3">
                             Legalitas Bisinis
@@ -134,7 +134,7 @@ export const CardProduct = () => {
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/all-products/legalitas/badan-usaha">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#9e9710] text-5xl text-left font-bold py-3">
                             Badan Usaha Lainnya
@@ -161,7 +161,7 @@ export const CardProduct = () => {
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/konsultan-pajak">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#83514D] text-5xl text-left font-bold py-3">
                             Konsultan Pajak
@@ -183,12 +183,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-20lvh] max-w-[700px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-20lvh] max-w-[700px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={izin}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/pelayanan-manajemen">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#599DAD] text-5xl text-left font-bold py-3">
                             Izin Tambahan
@@ -210,12 +210,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-15lvh] max-w-[600px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-15lvh] max-w-[600px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={audit}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/audit">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#305782] text-5xl text-left font-bold py-3">
                             Audit
@@ -237,12 +237,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-12lvh] max-w-[580px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-12lvh] max-w-[580px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={pelmanajemen}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/pelayanan-manajemen">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#DF6443] text-5xl text-left font-bold py-3">
                             Pelayanan Manajemen
@@ -264,12 +264,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={akuntansi}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/pelayanan-akuntansi">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#019C85] text-5xl text-left font-bold py-3">
                             Pelayanan Akuntansi
@@ -291,12 +291,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={software}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/software-management-system">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#D268CB] text-5xl text-left font-bold py-3">
                             Software Management System
@@ -318,12 +318,12 @@ export const CardProduct = () => {
             <div className="m-5 md:m-24 flex flex-col md:flex-col md:items-center lg:flex-row gap-5 max-w-fit p-6 rounded-3xl">
                 <div className={`self-end md:w-[420px] lg:h-max md:max-w-lg`}>
                     <Image
-                        className="lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 lg:ml-[-10lvh] max-w-[500px] w-[80vw] lg:w-[700px] flex justify-center lg:h-max md:self-center lg:self-end h-auto object-cover"
                         src={haki}
                         alt="image description"
                     />
                 </div>
-                <div className="md:ml-5 flex-grow">
+                <div className="md:ml-5 flex-grow z-10">
                     <a href="/haki">
                         <h5 className="lg:mb-5 mb-4 text-transparent bg-clip-text bg-[#E43B3B] text-5xl text-left font-bold py-3">
                             HAKI | Hak Kekayaan Intelektual

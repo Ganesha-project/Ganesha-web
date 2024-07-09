@@ -12,7 +12,7 @@ export const ArticleCard = ({ data, tag, }) => {
                     {data?.slice(0, 6).map((el, idx) => (
                         <Link
                             href="/article/1"
-                            key={idx} className="md:h-[45lvh] group bg-white rounded-2xl space-y-2 p-3 shadow-mainShadow flex flex-col justify-between duration-300 hover:bg-baseColor hover:bg-opacity-90">
+                            key={idx} className="md:h-[45lvh] group bg-white dark:bg-baseColor dark:bg-opacity-20 rounded-2xl space-y-2 p-3 shadow-mainShadow flex flex-col justify-between duration-300 hover:bg-baseColor hover:bg-opacity-90">
                             <div className="space-y-1 flex md:flex-col flex-row gap-2 w-full h-full">
                                 <div className="relative overflow-hidden rounded-xl md:w-full w-[50%]">
                                     <Image
@@ -34,22 +34,22 @@ export const ArticleCard = ({ data, tag, }) => {
                                     </div>
                                 </div>
 
-                                <div className="space-y-1 md:w-full w-[50%] flex flex-col justify-between h-auto">
+                                <div className="space-y-1 md:w-full w-[50%] flex flex-col justify-between h-auto dark:text-white">
                                     <div>
                                         <h1 className="font-bold text-xl group-hover:text-mainColor duration-150 truncate-last">
                                             {el.title}
                                         </h1>
-                                        <h2 className="truncate">
+                                        <h2 className="truncate dark:text-gray-200">
                                             {el.exerp}
                                         </h2>
                                     </div>
-                                    <span className="block md:hidden text-mainColor mt-auto">
+                                    <span className="block md:hidden text-mainColor mt-auto dark:text-baseColor">
                                         {el.date}
                                     </span>
                                 </div>
                             </div>
 
-                            <span className="text-mainColor mt-auto md:block hidden">
+                            <span className="text-mainColor mt-auto md:block hidden  dark:text-baseColor">
                                 {el.date}
                             </span>
                         </Link>

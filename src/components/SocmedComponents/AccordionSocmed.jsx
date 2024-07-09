@@ -48,7 +48,7 @@ export const AccordionSocmed = () => {
     return (
         <>
             <div className="m-10 flex-col lg:flex-row lg:m-32 flex gap-5 items-center justify-center">
-                <h1 className="mt-5 text-gray-900 md:bg-transparent lg:bg-transparent lg:rounded-none bg-violet-200 rounded-[40px] lg:p-0 p-5 font-bold text-3xl md:text-5xl lg:text-7xl w-full lg:w-[40vw] capitalize text-center lg:text-right font-poppin">
+                <h1 className="mt-5 text-gray-900 dark:text-baseColor md:bg-transparent lg:bg-transparent lg:rounded-none bg-violet-200 rounded-[40px] lg:p-0 p-5 font-bold text-3xl md:text-5xl lg:text-7xl w-full lg:w-[40vw] capitalize text-center lg:text-right font-poppin">
                     Kenapa perusahaan{' '}
                     <span className="font-extrabold text-violet-700">membutuhkan</span> Sosial Media Manajemen
                 </h1>

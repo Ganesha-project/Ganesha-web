@@ -6,7 +6,7 @@ import { IoSparkles } from "react-icons/io5";
 export const BodyCV = () => {
     return (
         <>
-            <div className="m-10 md:m-32">
+            <div className="m-10 md:m-3 text-gray-900">
                 <div className="flex flex-col md:flex-row gap-5">
                     <h1 className="text-center w-fit md:text-right text-3xl md:text-5xl md:w-[50vw] h-auto font-bold bg-orange-200 p-5 md:p-10 self-end rounded-[40px]">
                         Pengertian <span className="bg-orange-500 text-transparent bg-clip-text">CV</span>
@@ -17,7 +17,7 @@ export const BodyCV = () => {
                 </div>
             </div>
 
-            <div className="my-10 md:my-32">
+            <div className="my-10 md:my-32 text-gray-900">
                 <div className="m-10 md:m-32 rounded-[40px] bg-orange-200 h-auto w-auto">
                     <div>
                         <p className="bg-orange-500 text-white rounded-[40px] uppercase text-2xl md:text-4xl font-bold p-5 text-center">

@@ -78,7 +78,7 @@ export default async function AllProductsPage() {
 
     return (
         <>
-            <ImgProduk styles={'mt-[2vw]'} socmed={socmed} stylesImg={'h-[90vh] w-auto'} />
+            <ImgProduk styles={'mt-[2vw]'} socmed={socmed} stylesImg={'h-[90vh] w-auto dark:invert saturate-150 dark:hue-rotate-180'} />
             <PriceListBanner />
             <CardPriceSocmed data={dataSocmed} />
             <CardPriceDesign data={dataDesign} />

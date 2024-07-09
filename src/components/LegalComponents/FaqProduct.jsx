@@ -20,7 +20,7 @@ export const FaqProduct = () => {
                     data-active-classes="bg-slate-300 text-white"
                     className='flex flex-col justify-center w-[80vw] md:w-[50vw] lg:w-[40vw]'
                 >
-                    <h1 className='mb-3 font-extrabold text-4xl lg:text-6xl bg-slate-300 p-2 rounded-[40px] text-center'>Taukah Kamu ?</h1>
+                    <h1 className='mb-3 font-extrabold text-4xl lg:text-6xl bg-slate-300 p-2 rounded-[40px] text-center text-gray-900'>Taukah Kamu ?</h1>
 
                     {/* Accordion Items */}
                     {/* Item 1 */}

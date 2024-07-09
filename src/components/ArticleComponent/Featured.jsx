@@ -8,17 +8,17 @@ export const Featured = () => {
     return (
         <>
             <div className="relative md:mx-0 mx-5">
-                <div className="z-10 md:bg-white md:bg-opacity-25 md:backdrop-blur-xl md:p-5 md:shadow md:rounded-3xl w-fit">
-                    <h1 className="text-2xl md:text-3xl font-semibold text-mainColor">
+                <div className="z-10 md:bg-white md:dark:bg-[#2525256b] md:bg-opacity-25 md:backdrop-blur-xl md:p-5 md:shadow md:rounded-3xl w-fit">
+                    <h1 className="text-2xl md:text-3xl font-semibold text-mainColor dark:text-baseColor">
                         Ganesha News & Article
                     </h1>
-                    <h2 className="md:text-xl">
+                    <h2 className="md:text-xl text-gray-900 dark:text-white">
                         Artikel Berkualitas untuk Pembaca Cerdas, Hanya di Ganesha News!
                     </h2>
                 </div>
-                <span className="bg-white w-[30lvw] blur-2xl -z-10 h-16 absolute inset-0"></span>
+                <span className="bg-white dark:bg-transparent w-[30lvw] blur-2xl -z-10 h-16 absolute inset-0"></span>
             </div>
-            <div className="bg-white bg-opacity-25 backdrop-blur-xl p-5 shadow rounded-3xl">
+            <div className="bg-white bg-opacity-25 md:dark:bg-[#2525256b] md:bg-opacity-25 backdrop-blur-xl p-5 shadow rounded-3xl">
                 <div className="flex md:flex-row flex-col gap-5">
                     <div className="md:w-[50%]">
                         <HighlightCarousel data={DataHighlight} />
@@ -28,7 +28,7 @@ export const Featured = () => {
                             {DataArticles.new.slice(0, 2).map((el, idx) => (
                                 <Link
                                     href=""
-                                    key={idx} className="flex gap-3 bg-white bg-opacity-50 p-3 shadow rounded-2xl group hover:bg-gray-50 duration-150">
+                                    key={idx} className="flex gap-3 bg-white md:dark:bg-[#2525256b] bg-opacity-50 p-3 shadow rounded-2xl group hover:bg-gray-50 duration-150">
                                     <div className="relative h-[21lvh] w-[50%] overflow-hidden rounded-xl">
                                         <Image
                                             className="w-full h-[21lvh] object-cover rounded-xl group-hover:scale-125 duration-150"
@@ -48,14 +48,14 @@ export const Featured = () => {
                                     </div>
                                     <div className="w-[50%] flex flex-col justify-between gap-1">
                                         <div className="space-y-1">
-                                            <h1 className="font-bold text-xl group-hover:text-mainColor duration-150 truncate-last">
+                                            <h1 className="font-bold text-xl group-hover:text-mainColor duration-150 truncate-last dark:text-white">
                                                 {el.title}
                                             </h1>
                                             <h2 className="truncate">
                                                 {el.exerp}
                                             </h2>
                                         </div>
-                                        <span className="text-mainColor">
+                                        <span className="text-mainColor dark:text-baseColor">
                                             {el.date}
                                         </span>
                                     </div>

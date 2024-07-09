@@ -60,7 +60,7 @@ export default async function PendirianCvPage() {
 
     return (
         <>
-            <ImgProduk socmed={legal} styles='bg-white' />
+            <ImgProduk socmed={legal} stylesImg={'dark:invert saturate-150 dark:hue-rotate-180'} />
             <BannerText
                 main={main}
                 other2={other2}

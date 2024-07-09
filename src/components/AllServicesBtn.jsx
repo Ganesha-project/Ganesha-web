@@ -22,7 +22,7 @@ export const AllServicesBtn = () => {
     return (
         <>
             <section className="bg-baseColor bg-opacity-10 2xl:px-80">
-                <div className="md:px-24  px-5 flex space-y-5 py-14 md:py-24 flex-col h-full">
+                <div className="md:px-24 px-5 flex space-y-5 py-14 md:py-24 flex-col h-full">
                     <Title text={'Explore Our Services & Products Selection'} />
                     <label className="input input-bordered flex items-center gap-2 bg-opacity-60 rounded-full bg-baseColor dark:bg-opacity-10 text-gray-800 dark:text-white">
                         <FiSearch />
@@ -37,8 +37,8 @@ export const AllServicesBtn = () => {
                     <div className="flex lg:flex-row flex-col flex-wrap items-center justify-center gap-5 md:pb-5 md:gap-10">
                         {filteredProducts.slice(0, 5).map((el, idx) => (
                             <Link
-                            href={el.href}
-                            key={idx} className="p-5 group md:space-y-4 flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
+                                href={el.href}
+                                key={idx} className="p-5 group md:space-y-4 flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
                                 <span className="scale-0 group-hover:scale-[10] dark:bg-black bg-white w-full h-full duration-1000 rounded-full -z-30 absolute inset-0 ease-in"></span>
                                 <div className="md:h-[5rem] w-[3rem] md:w-[5rem] h-[3rem] justify-center flex items-center gap-1 group-hover:bg-mainColor ease-in-out duration-300 bg-secondaryColor bg-opacity-10 text-mainColor dark:text-baseColor group-hover:text-white text-xl md:text-3xl rounded-full font-bold ">
                                     {el.icon}
@@ -51,9 +51,9 @@ export const AllServicesBtn = () => {
                             </Link>
                         ))}
                     </div>
-                    <ExpandableButton>
+                    <ExpandableButton label={'Cek Semua Layanan'} className={'px-3 py-2 bg-mainColor text-white w-fit font-semibold mt-5 md:mt-0'} align={'items-center'}>
                         <span className="rounded-full bg-mainColor w-full h-1"></span>
-                        <div className="flex lg:flex-row flex-col flex-wrap items-center justify-center gap-5 md:gap-10 pb-10 ">
+                        <div className="flex lg:flex-row flex-col flex-wrap items-center grow w-full justify-center gap-5 md:gap-10 pb-10 ">
                             {filteredProducts.slice(5).map((el, idx) => (
                                 <div key={idx} className="p-5 group md:space-y-4 flex  dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
                                     <span className="scale-0 group-hover:scale-[10] dark:bg-black bg-white w-full h-full duration-1000 rounded-full -z-30 absolute inset-0 ease-in"></span>
@@ -61,7 +61,7 @@ export const AllServicesBtn = () => {
                                         {el.icon}
                                     </div>
                                     <div>
-                                        <h2 className="font-semibold text-gray-900 dark:text-white text-center md:mb-3">
+                                        <h2 className="font-semibold text-gray-900 dark:text-white md:text-center md:mb-3">
                                             {el.text}
                                         </h2>
                                     </div>

@@ -13,9 +13,9 @@ export const BodyContact = () => {
                 <div className="flex flex-col lg:flex-row">
                     <Image
                         src={cs2}
-                        className="w-full lg:w-[70vh] md:w-auto h-auto"
+                        className="w-full lg:w-[70vh] md:w-auto h-auto dark:invert saturate-150 dark:hue-rotate-180"
                     />
-                    <div className="lg:ml-5 mt-5 lg:mt-0">
+                    <div className="lg:ml-5 mt-5 lg:mt-0 text-gray-900">
                         <h1 className="mb-5 text-5xl lg:text-7xl font-extrabold bg-violet-900 bg-clip-text text-transparent">Kontak Kami</h1>
                         <a
                             href={MAILLINK}

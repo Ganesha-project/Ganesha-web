@@ -92,7 +92,7 @@ export const BodyLegal = () => {
                     </h1>
                     <Image
                         src={judge}
-                        className="dark:invert saturate-150 dark:hue-rotate-180  order-first lg:order-none w-full md:w-[50%] h-auto object-cover"
+                        className="dark:invert saturate-150 dark:hue-rotate-180 order-first lg:order-none w-full md:w-[50%] h-auto object-cover"
                     />
                 </div>
                 <div className="flex">

@@ -45,7 +45,7 @@ export const BodyPT = () => {
     return (
         <>
             <div className="m-10 md:m-32">
-                <div className="gap-5 flex flex-col md:flex-row">
+                <div className="gap-5 flex flex-col md:flex-row text-gray-900">
                     <h1 className="text-center lg:text-right w-fit text-4xl md:text-5xl md:w-[50vw] h-auto font-bold bg-cyan-200 p-5 md:p-10 lg:self-end rounded-[40px]">Pengertian <span className="bg-cyan-500 text-transparent bg-clip-text"> PT</span>
                     </h1>
                     <p className="text-xl md:text-2xl leading-7 tracking-wide bg-cyan-200 p-5 md:p-10 rounded-[40px]">
@@ -64,7 +64,7 @@ export const BodyPT = () => {
                     <div className="">
                         <p className=" bg-cyan-500 text-white rounded-[40px] uppercase text-4xl md:text-4xl font-bold p-5 text-center">Undang - Undang terkait PT di Indonesia</p>
                     </div>
-                    <div className="grid">
+                    <div className="grid text-gray-900">
                         <div className="flex mt-4 mx-5 gap-4">
                             <p className="self-start align-top text-center rounded-full flex items-center bg-clip-text text-transparent bg-cyan-700 p-1 text-xl font-bold">
                                 1.
