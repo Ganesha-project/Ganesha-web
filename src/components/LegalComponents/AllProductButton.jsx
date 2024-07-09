@@ -100,7 +100,7 @@ export const AllProductButton = () => {
                 </script>
             </Head>
 
-            <div className="bg-white p-10 lg:p-32 sm:p-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+            <div className="bg-white dark:bg-black p-10 lg:p-32 sm:p-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
                 <p className="font-extrabold text-6xl text-left flex items-center justify-center bg-indigo-200 text-gray-800 rounded-[40px] p-5">
                     Layanan Kami
                 </p>
@@ -120,7 +120,7 @@ export const AllProductButton = () => {
                         <div
                             className=" text-lg sm:text-2xl font-bold"
                         >
-                            <p>{el.name}</p>
+                            <p className="text-gray-700">{el.name}</p>
                         </div>
                     </a>
                 ))}

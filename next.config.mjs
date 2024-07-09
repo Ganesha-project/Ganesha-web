@@ -26,6 +26,10 @@ const nextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "source.unsplash.com/random/?people",
+            },
+            {
+                protocol: "https",
                 hostname: "media.cnn.com",
             },
             {

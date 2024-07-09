@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "swiper/css";
+@import "swiper/css/effect-cards";
+@import "swiper/css/pagination";
 body {
   @apply bg-white dark:bg-black;
 }
@@ -33,4 +35,36 @@ body {
   @media screen and (min-width: 1024px) {
     max-height: 3em; /* Untuk layar dengan lebar minimal 1024px, tampilkan lebih banyak teks */
   }
+}
+
+/* Infinite Running Card */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* ------ */
+
+
+.logo {
+mix-blend-mode: multiply;
 }

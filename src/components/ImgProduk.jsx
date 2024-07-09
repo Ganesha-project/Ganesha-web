@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const ImgProduk = ({ socmed, styles, stylesImg }) => {
   return (
-    <div className={`w-screen h-screen bg-white ${styles}`}>
+    <div className={` h-screen overflow-hidden ${styles}`}>
       <Image
         className={`${stylesImg} blur-3xl lg:blur-none lg:w-[90vh] lg:transform lg:translate-x-[110%] lg:translate-y-24 lg:object-cover lg:transition-all`}
         src={socmed}

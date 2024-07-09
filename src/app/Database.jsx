@@ -1,4 +1,71 @@
+import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
+import { TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
+import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
+import { RiFilePaperFill } from "react-icons/ri";
+import { MdHomeRepairService } from "react-icons/md";
+import { TbMathSymbols } from "react-icons/tb";
+import { RiAppsFill } from "react-icons/ri";
+import { SiReadthedocs } from "react-icons/si";
+import { HiReceiptTax } from "react-icons/hi";
+
+export const DataProduct = [
+    {
+        href: "/all-products/legalitas",
+        icon: <GoLaw />,
+        text: "Legalitas Usaha"
+    },
+    {
+        href: "/all-products/web",
+        icon: <TbWorldWww />,
+        text: "Website Development"
+    },
+    {
+        href: "/all-products/sosmed",
+        icon: <HiMiniDevicePhoneMobile />,
+        text: "Social Media Management"
+    },
+    {
+        href: "/all-products/legalitas/badan-usaha",
+        icon: <FaBuildingWheat />,
+        text: "Badan Usaha Lainnya"
+    },
+    {
+        href: "/konsultan-pajak",
+        icon: <HiReceiptTax />,
+        text: "Konsultan Pajak"
+    },
+    {
+        href: "/izin-tambahan",
+        icon: <RiFilePaperFill />,
+        text: "Izin Tambahan"
+    },
+    {
+        href: "/pelayanan-manajemen",
+        icon: <MdHomeRepairService />,
+        text: "Pelayanan Managemen"
+    },
+    {
+        href: "/pelayanan-akuntansi",
+        icon: <TbMathSymbols />,
+        text: "Pelayanan Akuntansi"
+    },
+    {
+        href: "/software-management-system",
+        icon: <RiAppsFill />,
+        text: "Software Management System"
+    },
+    {
+        href: "/haki",
+        icon: <SiReadthedocs />,
+        text: 'Haki'
+    },
+    {
+        href: "/audit",
+        icon: <FaUserTie />,
+        text: "Audit"
+    }
+];
 
 export const NavLinks = {
     main: [
@@ -1766,3 +1833,104 @@ export const DataHighlight = [
         imgUrl: 'https://plus.unsplash.com/premium_photo-1661963456199-ba147a77e2a7?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
 ]
+
+export const ppl = [
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1464863979621-258859e62245?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+]
+
+export const DataReview = [
+    {
+        photo: 'https://picsum.photos/200/300?random=1',
+        name: 'John Doe',
+        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
+        service: 'Legalitas Usaha'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=2',
+        name: 'Jane Smith',
+        review: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+        service: 'Website Development'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=3',
+        name: 'James Brown',
+        review: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        service: 'Social Media Management'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=4',
+        name: 'Mary Johnson',
+        review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        service: 'Badan Usaha Lainnya'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=5',
+        name: 'Robert Wilson',
+        review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        service: 'Konsultan Pajak'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=6',
+        name: 'Linda Martinez',
+        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        service: 'Izin Tambahan'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=7',
+        name: 'Michael Anderson',
+        review: 'Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.',
+        service: 'Pelayanan Managemen'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=8',
+        name: 'Patricia Thomas',
+        review: 'Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.',
+        service: 'Pelayanan Akuntansi'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=9',
+        name: 'Charles Jackson',
+        review: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        service: 'Software Management System'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=10',
+        name: 'Barbara Harris',
+        review: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.',
+        service: 'Haki'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=11',
+        name: 'Joseph Martin',
+        review: 'Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.',
+        service: 'Audit'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=12',
+        name: 'Susan Lee',
+        review: 'Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel.',
+        service: 'Legalitas Usaha'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=13',
+        name: 'Thomas Young',
+        review: 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
+        service: 'Website Development'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=14',
+        name: 'Jessica Walker',
+        review: 'Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum.',
+        service: 'Social Media Management'
+    },
+    {
+        photo: 'https://picsum.photos/200/300?random=15',
+        name: 'Daniel Hall',
+        review: 'Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+        service: 'Badan Usaha Lainnya'
+    }
+];

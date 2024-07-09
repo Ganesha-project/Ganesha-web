@@ -1,17 +1,12 @@
 'use client'
+import { ppl } from "@/app/Database";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 export const HomeBanner = () => {
-    const ppl = [
-        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'https://images.unsplash.com/photo-1464863979621-258859e62245?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    ]
+    
     const delay = 4000;
     const [index, setIndex] = useState(0);
 
@@ -74,7 +69,7 @@ export const HomeBanner = () => {
                             {ppl.map((el, idx) => (
                                 <img
                                     key={idx}
-                                    className="w-full h-screen object-cover inline-block shadow "
+                                    className="w-full h-screen object-cover inline-block shadow"
                                     src={el}
                                     alt="" />
                             ))}

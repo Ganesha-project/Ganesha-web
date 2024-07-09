@@ -23,7 +23,7 @@ export default function LegalitasPage() {
     const secondary = "Kami hadir bersama Konsultan yang profesional untuk memberikan pelayanan Legalitas terbaik  yang akan memastikan Bisnis mu sesuai dengan aturan hukum yang berlaku di Indonesia, Legalkan Bisnis Mu Bersama Ganesha Consulting!."
     return (
         <>
-            <ImgProduk socmed={legal} styles='bg-[#98AA85]' />
+            <ImgProduk socmed={legal} />
             <BannerText
                 main={main}
                 other2={other2}

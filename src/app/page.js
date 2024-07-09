@@ -7,6 +7,9 @@ import { VoCarousel } from "@/components/VoCarousel";
 import { VisiMisi } from "@/components/VisiMisi";
 import { OurClient } from "@/components/OurClient";
 import { HomeBanner } from "@/components/HomeBanner";
+import { AllServicesBtn } from "@/components/AllServicesBtn";
+import { ClientPhotos } from "@/components/ClientPhotos";
+import { ClientLogo } from "@/components/ClientLogo";
 
 export const metadata = {
   title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
@@ -29,6 +32,9 @@ export default function Home() {
   return (
     <>
       <HomeBanner />
+      <AllServicesBtn />
+      <ClientPhotos />
+      <ClientLogo />
     </>
   );
 }

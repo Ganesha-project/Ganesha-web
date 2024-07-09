@@ -39,7 +39,7 @@ export const Navbar = () => {
           <div className="flex gap-2 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-revers">
             <a
               href='/contact'
-              className={`hidden lg:visible text-gray-800 dark:text-white bg-[#ffffff81] backdrop-blur-sm hover:bg-[#e9b3ee] focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block ${isActive('/contact') && 'border-b-2 border-violet-300'}`}
+              className={`hidden lg:visible text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-[#ffffff81] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block ${isActive('/contact') && 'border-b-2 border-violet-300'}`}
             >
               Hubungi Kami
             </a>
