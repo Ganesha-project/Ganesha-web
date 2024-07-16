@@ -1,19 +1,21 @@
 'use client'
+import Link from 'next/link';
 import Image from 'next/image';
 import Artboard2 from '../public/IMG/Artboard2.png';
+import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { IoIosArrowDown } from "react-icons/io";
 import { NavLinks } from '@/app/Database';
-import ThemeSwitch from './ThemeSwitch';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { ExpandableButton } from './ExpandableButton';
-import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
+  const path = usePathname();
+  const product = path.startsWith('/all-products')
+  const legal = path.startsWith('/legalitas')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +30,10 @@ export const Navbar = () => {
     };
   }, []);
 
-  const isActive = (pathname) => router.pathname === pathname;
 
   return (
     <>
-      <nav className={`navbar fixed w-full z-50 top-0 start-0 ease-in-out duration-300
+      <nav className={`navbar fixed 2xl:px-80 md:px-24 w-full z-50 top-0 start-0 ease-in-out duration-300
         ${isScrolled ? 'bg-[#ffffff70] dark:bg-[#00000070] backdrop-blur-lg shadow-mainShadow' : 'sm:bg-transparent lg:bg-transparent'}
         `}>
         <div className="navbar-start">
@@ -136,23 +137,27 @@ export const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
             {NavLinks.main.slice(0, 1).map(link => (
-              <li key={link.href}>
+              <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
                   href={link.href}
-                  className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive(link.href) ? "text-violet-800 border-b-2 border-violet-300 " : "text-gray-800 dark:text-white"}`}
+                  className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
                   aria-current="page"
                 >
                   {link.label}
                 </a>
+                <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
             <li className='dropdown'>
-              <div
-                tabIndex={0}
-                role='button'
-                className={`gap-1 py-2 px-3 flex items-center text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
-              >
-                Produk & Layanan <IoIosArrowDown />
+              <div className='relative flex flex-col items-center group'>
+                <div
+                  tabIndex={0}
+                  role='button'
+                  className={`gap-1 py-2 px-3 flex items-center text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
+                >
+                  Produk & Layanan <IoIosArrowDown />
+                </div>
+                <span className={`${`${path === product ? 'scale-100' : 'scale-0'}`} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </div>
               <ul
                 tabIndex={0}
@@ -171,14 +176,17 @@ export const Navbar = () => {
               </ul>
             </li>
             <li className='dropdown'>
-              <a
-                tabIndex={1}
-                role='button'
-                className={`gap-1 py-2 px-3 flex items-center text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
+              <div className='relative flex flex-col items-center group'>
+                <a
+                  tabIndex={1}
+                  role='button'
+                  className={`gap-1 py-2 px-3 flex items-center text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
 
-              >
-                Legalitas <IoIosArrowDown />
-              </a>
+                >
+                  Legalitas <IoIosArrowDown />
+                </a>
+                <span className={`${`${path === legal ? 'scale-100' : 'scale-0'}`} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
+              </div>
               <ul
                 tabIndex={0}
                 className="dropdown-content menu bg-white dark:bg-black rounded-box z-[1] w-52 p-2 shadow dark:shadow-mainShadow"
@@ -196,13 +204,15 @@ export const Navbar = () => {
               </ul>
             </li>
             {NavLinks.others.map(link => (
-              <li key={link.href}>
+              <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
                   href={link.href}
-                  className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}
+                  className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
+                  aria-current="page"
                 >
                   {link.label}
                 </a>
+                <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
           </ul>
@@ -212,7 +222,7 @@ export const Navbar = () => {
             href='/contact'
             className={`flex items-center `}
           >
-            <span className='md:block hidden text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-[#ffffff81] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
+            <span className='md:block hidden text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-gray-200 bg-opacity-50 backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Hubungi Kami
             </span>
             <span className='md:hidden block text-xl text-gray-900 dark:text-white  dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-[#ffffff81] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full px-2 py-2 text-center'>

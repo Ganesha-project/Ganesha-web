@@ -18,9 +18,9 @@ export const CardPriceCV = ({ data }) => {
 
     return (
         <>
-        <div id='packages' />
-        <div id='legal' />
-            <div className='m-10 lg:m-32 flex items-center justify-center'>
+            <div id='packages' />
+            <div id='legal' />
+            <div className='md:px-24 px-5 2xl:px-80 flex items-center justify-center'>
                 <h1 className='font-extrabold text-3xl lg:text-5xl text-center uppercase text-white bg-orange-500 rounded-full p-10'>Paket Pendirian CV</h1>
             </div>
 
@@ -45,9 +45,9 @@ export const CardPriceCV = ({ data }) => {
                                 {formatToRupiah(el.price)}
                             </p>
                             <div className="mt-3 flex justify-center">
-                                <a 
-                                href={el.link}
-                                className="text-white font-extrabold w-full md:w-full bg-gradient-to-br from-orange-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                <a
+                                    href={el.link}
+                                    className="text-white font-extrabold w-full md:w-full bg-gradient-to-br from-orange-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
                                     Konsultasi Sekarang
                                 </a>
                             </div>
