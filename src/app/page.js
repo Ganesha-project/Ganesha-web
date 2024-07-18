@@ -1,15 +1,8 @@
-import { BodyLanding } from "@/components/BodyLanding";
-import { ImgProduk } from "@/components/ImgProduk";
-import { BannerText } from "@/components/BannerText";
-import home from "../public/BG/block.png"
-import { LegalityApprove } from "@/components/LeagalityApprove";
-import { VoCarousel } from "@/components/VoCarousel";
-import { VisiMisi } from "@/components/VisiMisi";
-import { OurClient } from "@/components/OurClient";
 import { HomeBanner } from "@/components/HomeBanner";
 import { AllServicesBtn } from "@/components/AllServicesBtn";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { ClientLogo } from "@/components/ClientLogo";
+import { WhyUs } from "@/components/WhyUs";
 
 export const metadata = {
   title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
@@ -25,15 +18,12 @@ export const metadata = {
 
 
 export default function Home() {
-  const other = ""
-  const other2 = "Sinergi Layanan Bisnis"
-  const main = "Multifungsi"
-  const secondary = "  Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya."
   return (
     <>
       <HomeBanner />
       <AllServicesBtn />
       <ClientPhotos />
+      <WhyUs />
       <ClientLogo />
     </>
   );

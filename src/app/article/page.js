@@ -10,6 +10,7 @@ import { SkeletonBanner } from "@/components/Skeleton/SkeletonBanner";
 import { SkeletonTiles } from "@/components/Skeleton/SkeletonTiles";
 import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";
 import { Headtag } from "@/components/ArticleComponent/HeadTag";
+import { Pagination } from "@/components/ArticleComponent/Pagination";
 
 export default function ArticlePage() {
     const [newData, setNewData] = useState(null);
@@ -17,11 +18,12 @@ export default function ArticlePage() {
     const [load, setLoad] = useState(true);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
+    const [itemsToShow, setItemsToShow] = useState(6); // Inisialisasi dengan 6 item
 
     useEffect(() => {
         async function fetchData() {
             try {
-                let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?populate=*`;
+                let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
                 let fetchCategoriesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/categories?populate=*`;
 
                 const [articlesRes, categoriesRes] = await Promise.all([
@@ -45,7 +47,7 @@ export default function ArticlePage() {
             }
         }
         fetchData();
-    }, []);
+    }, [itemsToShow]); // Menambahkan itemsToShow sebagai dependensi untuk useEffect
 
     const fetchFilteredData = async (search) => {
         try {
@@ -70,6 +72,10 @@ export default function ArticlePage() {
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
         fetchFilteredData(searchTerm);
+    };
+
+    const loadMore = () => {
+        setItemsToShow(prevItems => prevItems + 3);
     };
 
     return (
@@ -113,6 +119,7 @@ export default function ArticlePage() {
                         moms={<Headtag label={'Fresh Articles'} hide={true} />}
                     />
                 )}
+                <Pagination loadMore={loadMore} />
             </section>
         </>
     );

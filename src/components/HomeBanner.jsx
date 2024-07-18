@@ -52,14 +52,14 @@ export const HomeBanner = () => {
                             <h1 className="text-4xl font-[600] text-mainColor dark:text-secondaryColor capitalize">
                                 percayakan pada ganesha consulting!
                             </h1>
-                            <div className="flex gap-2">
+                            <a className="flex gap-2" href="#search">
                                 <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 dark:bg-secondaryColor bg-mainColor bg-opacity-80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     <FiSearch className="text-xl" />
                                 </span>
                                 <buttospann className="py-2 w-fit flex items-center gap-1 bg-mainColor dark:bg-secondaryColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     Cari Layanan
                                 </buttospann>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className="w-[40%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">

@@ -1,5 +1,5 @@
 import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
-import { TbWorldWww } from "react-icons/tb";
+import { Tb24Hours, TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
 import { RiFilePaperFill } from "react-icons/ri";
@@ -7,65 +7,77 @@ import { MdHomeRepairService } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
 import { SiReadthedocs } from "react-icons/si";
-import { HiReceiptTax } from "react-icons/hi";
+import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
+import { BiMedal } from "react-icons/bi";
 
 export const DataProduct = [
     {
         href: "/all-products/legalitas",
         icon: <GoLaw />,
-        text: "Legalitas Usaha"
+        text: "Legalitas Usaha",
+        keywords: ["legalitas usaha", "pendirian usaha", "dokumen legal", "perijinan usaha", "badan usaha", "usaha resmi"]
     },
     {
         href: "/all-products/web",
         icon: <TbWorldWww />,
-        text: "Website Development"
+        text: "Website Development",
+        keywords: ["website development", "pembuatan website", "pengembangan situs web", "desain web", "web developer", "jasa pembuatan website"]
     },
     {
         href: "/all-products/sosmed",
         icon: <HiMiniDevicePhoneMobile />,
-        text: "Social Media Management"
+        text: "Social Media Management",
+        keywords: ["social media management", "manajemen media sosial", "sosmed", "pengelolaan sosmed", "strategi media sosial", "konten sosmed"]
     },
     {
         href: "/all-products/legalitas/badan-usaha",
         icon: <FaBuildingWheat />,
-        text: "Badan Usaha Lainnya"
+        text: "Badan Usaha Lainnya",
+        keywords: ["badan usaha lainnya", "jenis badan usaha", "pendirian badan usaha", "dokumen badan usaha", "usaha kecil", "usaha menengah"]
     },
     {
         href: "/konsultan-pajak",
         icon: <HiReceiptTax />,
-        text: "Konsultan Pajak"
+        text: "Konsultan Pajak",
+        keywords: ["konsultan pajak", "jasa konsultan pajak", "perencanaan pajak", "penyusunan pajak", "laporan pajak", "konsultasi pajak"]
     },
     {
         href: "/izin-tambahan",
         icon: <RiFilePaperFill />,
-        text: "Izin Tambahan"
+        text: "Izin Tambahan",
+        keywords: ["izin tambahan", "perijinan tambahan", "dokumen izin", "proses perijinan", "syarat perijinan", "izin usaha"]
     },
     {
         href: "/pelayanan-manajemen",
         icon: <MdHomeRepairService />,
-        text: "Pelayanan Managemen"
+        text: "Pelayanan Managemen",
+        keywords: ["pelayanan manajemen", "jasa manajemen", "manajemen bisnis", "konsultan manajemen", "strategi manajemen", "pengelolaan bisnis"]
     },
     {
         href: "/pelayanan-akuntansi",
         icon: <TbMathSymbols />,
-        text: "Pelayanan Akuntansi"
+        text: "Pelayanan Akuntansi",
+        keywords: ["pelayanan akuntansi", "jasa akuntansi", "pembukuan", "laporan keuangan", "auditing", "akuntan"]
     },
     {
         href: "/software-management-system",
         icon: <RiAppsFill />,
-        text: "Software Management System"
+        text: "Software Management System",
+        keywords: ["software management system", "sistem manajemen perangkat lunak", "pengelolaan perangkat lunak", "software enterprise", "manajemen proyek", "software bisnis"]
     },
     {
         href: "/haki",
         icon: <SiReadthedocs />,
-        text: 'Haki'
+        text: "Haki",
+        keywords: ["haki", "hak atas kekayaan intelektual", "paten", "merek dagang", "hak cipta", "perlindungan kekayaan intelektual"]
     },
     {
         href: "/audit",
         icon: <FaUserTie />,
-        text: "Audit"
+        text: "Audit",
+        keywords: ["audit", "jasa audit", "auditor", "audit keuangan", "audit internal", "audit eksternal", "laporan audit"]
     }
-];
+]
 
 export const NavLinks = {
     main: [
@@ -156,7 +168,7 @@ export const NavLinks = {
             label: 'About Us'
         },
     ]
-};
+}
 
 export const DataCategoriesArticle = [
     {
@@ -244,8 +256,7 @@ export const DataCategoriesArticle = [
 export const DataSelectFilterArticle = [
     { label: "Newest", value: "desc" },
     { label: "Oldest", value: "asc" }
-];
-
+]
 
 export const DataArticles = {
     label: {
@@ -1934,3 +1945,29 @@ export const DataReview = [
         service: 'Badan Usaha Lainnya'
     }
 ];
+
+export const DataWhyUs = {
+    tag: "Kenapa Harus di Ganesha Consulting?",
+    points: [
+        {
+            head: "Konsultasi 24 Jam!",
+            logo: <Tb24Hours/>,
+            desc: "Kami memberikan pelayanan konsultasi kepada Client 24 Jam, Admin kami yang fast response siap melayani segala kebutuhan anda! Terjamin dan Terpercaya"
+        },
+        {
+            head: "Terjamin dan Terpercaya",
+            logo: <BiMedal/>,
+            desc: "Kami berkomitmen untuk memberikan solusi yang efektif dan efisien untuk menjamin kesuksesan bisnis anda, selain itu kami juga berkomitmen untuk menjaga kerahasiaan data pribadi perusahaan Anda."
+        },
+        {
+            head: "Pelayanan Cepat",
+            logo: <HiLightningBolt/>,
+            desc: "Jaminan konsultasi kapanpun anda butuhkan, Admin kami yang FastResponse akan siap melayani anda!"
+        },
+        {
+            head: "Layanan Lengkap",
+            logo: <RiAppsFill/>,
+            desc: "Jaminan konsultasi kapanpun anda butuhkan, Admin kami yang FastResponse akan siap melayani anda!"
+        }
+    ]
+};
