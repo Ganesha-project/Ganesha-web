@@ -11,7 +11,7 @@ export const Featured = ({ data }) => {
         <>
             <div className="relative md:mx-0 mx-5">
                 <div className="z-10 md:bg-white md:dark:bg-[#2525256b] md:bg-opacity-25 md:backdrop-blur-xl md:p-5 md:shadow md:rounded-3xl w-fit">
-                    <h1 className="text-2xl md:text-3xl font-semibold text-mainColor dark:text-baseColor">
+                    <h1 className="text-xl md:text-3xl font-semibold text-mainColor dark:text-baseColor">
                         Ganesha News & Article
                     </h1>
                     <h2 className="md:text-xl text-gray-900 dark:text-white">

@@ -242,10 +242,10 @@ export const DataCategoriesArticle = [
 ]
 
 export const DataSelectFilterArticle = [
-    'most popular',
-    'newest',
-    'latest',
-]
+    { label: "Newest", value: "desc" },
+    { label: "Oldest", value: "asc" }
+];
+
 
 export const DataArticles = {
     label: {

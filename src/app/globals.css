@@ -6,7 +6,6 @@ body {
   @apply bg-white dark:bg-black text-gray-900 dark:text-gray-100;
 }
 
-
 .truncate-last {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Jumlah baris yang ingin Anda tampilkan sebelum truncate */
@@ -64,7 +63,6 @@ body {
 }
 /* ------ */
 
-
 .logo {
-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
 }

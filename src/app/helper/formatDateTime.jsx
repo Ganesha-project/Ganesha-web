@@ -27,6 +27,15 @@ function formatDate(date) {
 
 // Combined function to get both relative time and formatted date
 export function formatDateTime(date) {
-    return `${timeAgo(date)} | ${formatDate(date)}`;
+    return (
+        <>
+            <div className="hidden md:block">
+                {`${timeAgo(date)} | ${formatDate(date)}`}
+            </div>
+            <div className="block md:hidden">
+                {`${timeAgo(date)}`}
+            </div>
+        </>
+    )
 }
 

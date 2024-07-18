@@ -8,7 +8,7 @@ export const SideRec = ({ data }) => {
         <>
             <section className="flex flex-col gap-5 sticky top-24">
                 <h1 className="text-2xl flex items-center gap-2 font-bold text-mainColor dark:text-baseColor pb-1 relative">
-                    Most Popular <FaFire />
+                   Our Collections <FaFire />
                     <span className="absolute bottom-0 w-[30px] h-1 bg-red-600 rounded-full"></span>
                 </h1>
                 <div className="flex flex-col gap-3">
@@ -29,7 +29,7 @@ export const SideRec = ({ data }) => {
                                             alt={el.attributes.Title} />
                                     </div>
 
-                                    <div className="space-y-1 w-full flex flex-col justify-between h-auto">
+                                    <div className="space-y-1 w-full flex flex-col h-auto">
                                         <h1 className="font-bold text-base group-hover:text-mainColor dark:group-hover:text-baseColor dark:text-gray-100 duration-150 truncate-last">
                                             {el.attributes.Title}
                                         </h1>

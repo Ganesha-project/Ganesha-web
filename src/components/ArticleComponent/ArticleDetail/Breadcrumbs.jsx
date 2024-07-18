@@ -1,7 +1,8 @@
+import { slugify } from "@/app/helper/slugify";
 import Link from "next/link";
 import { TiHome } from "react-icons/ti";
 
-const Breadcrumbs = ({ title, slug, categories }) => {
+const Breadcrumbs = ({ title, categories }) => {
 
     return (
         <div className="breadcrumbs text-sm">
@@ -14,17 +15,16 @@ const Breadcrumbs = ({ title, slug, categories }) => {
                 </li>
                 {categories ? (
                     <li>
-                        <Link href={`/article/${categories.toLowerCase()}`}>
+                        <Link href={`/articles/${slugify(categories.toLowerCase())}`}>
                             {categories}
                         </Link>
                     </li>
                 ) : null}
                 <li>
-                    <Link
-                        className="text-mainColor dark:text-baseColor"
-                        href={`/article/${slug}`}>
+                    <p
+                        className="text-mainColor dark:text-baseColor">
                         {title}
-                    </Link>
+                    </p>
                 </li>
             </ul>
         </div>

@@ -9,12 +9,14 @@ import { useEffect, useState } from "react";
 import { SkeletonBanner } from "@/components/Skeleton/SkeletonBanner";
 import { SkeletonTiles } from "@/components/Skeleton/SkeletonTiles";
 import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";
+import { Headtag } from "@/components/ArticleComponent/HeadTag";
 
-export default function ArticlesPage() {
+export default function ArticlePage() {
     const [newData, setNewData] = useState(null);
     const [categories, setCategories] = useState(null);
     const [load, setLoad] = useState(true);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         async function fetchData() {
@@ -66,6 +68,7 @@ export default function ArticlesPage() {
     };
 
     const handleSearch = (searchTerm) => {
+        setSearchTerm(searchTerm);
         fetchFilteredData(searchTerm);
     };
 
@@ -93,10 +96,23 @@ export default function ArticlesPage() {
                     <div>Error: {error}</div>
                 ) : load ? (
                     <SkeletonCard />
+                ) : newData && newData.data && newData.data.length === 0 ? (
+                    <div className="h-[30lvh] flex items-center justify-center">
+                        <p className="text-xl text-center">
+                            No articles found for
+                            <br />
+                            <span className="font-semibold text text-mainColor dark:text-baseColor">"{searchTerm}"</span>
+                            <br />
+                            Please try a different search term.
+                        </p>
+                    </div>
                 ) : (
-                    <ArticleCard data={newData} tag={DataArticles.label.new} />
+                    <ArticleCard
+                        data={newData}
+                        tag={DataArticles.label.new}
+                        moms={<Headtag label={'Fresh Articles'} hide={true} />}
+                    />
                 )}
-                {/* <ArticleCard data={DataArticles.trend} tag={DataArticles.label.trend} /> */}
             </section>
         </>
     );
