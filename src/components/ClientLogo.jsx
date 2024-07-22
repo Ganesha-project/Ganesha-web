@@ -20,16 +20,15 @@ export const ClientLogo = () => {
         'https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-letter-m-logo-png-png-image_5686007.png',
         'https://png.pngtree.com/png-vector/20220706/ourmid/pngtree-letter-n-logo-design-png-png-image_5687381.png',
         'https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-m-letter-logo-business-template-vector-icon-png-image_5287547.png',
-
     ]
 
     return (
         <>
-            <section className="md:mx-24 mx-5 space-y-5 2xl:px-80">
+            <section className="md:px-24 px-5 py-24 space-y-5 2xl:px-80 bg-baseColor bg-opacity-15">
                 <Title text={'Our Clients'} className={'mb-10'}/>
                 <div className="flex flex-wrap gap-5 justify-center">
                     {data.map((el, index) => (
-                        <div key={index} className="dark:bg-white bg-opacity-50 rounded-full h-32 w-32 flex items-center p-2 relative group">
+                        <div key={index} className="dark:bg-white  bg-opacity-50 rounded-full h-32 w-32 flex items-center p-2 relative group">
                             <img
                                 className="object-contain w-full h-full"
                                 src={el}

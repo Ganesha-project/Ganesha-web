@@ -1,23 +1,25 @@
+'use client';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchArticles } from '@/store/articleSlice';
 import { HomeBanner } from "@/components/HomeBanner";
 import { AllServicesBtn } from "@/components/AllServicesBtn";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { ClientLogo } from "@/components/ClientLogo";
 import { WhyUs } from "@/components/WhyUs";
-
-export const metadata = {
-  title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  description: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-  keywords: 'Ganesha Consulting, solusi bisnis, pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, perizinan',
-  hashtags: '#GaneshaConsulting #SolusiBisnis #PengembanganWebsite #ManajemenMediaSosial #LegalitasUsaha #DesainGrafis #Perpajakan #Perizinan #web #webdeveloper #desaingrafis #jasadesain #desainlogo #pembuatanwebsite #socialmedia #socialmediamarketing #socialmediamanagement #socialmediamarketingagency #ecommerce #jasa #jasalegalitas #perpajakan #jasapajak #pajak #jasapembuatanpt #jasalegalitasindonesia #jasapembuatanptdijakarta #jasapembuatanptjakarta #jasapembuatancv #jasapembuatancvmurah #jasapembuatancvmurah #virtualoffice #virtualofficejakarta #coworkingspace #coworking',
-  canonical: 'https://www.ganeshaconsulting.co.id',
-  ogTitle: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  ogDescription: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-  twitterTitle: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  twitterDescription: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-};
+import { ArticleReccomendation } from "@/components/ArticleComponent/ArticleReccomendation";
+import { DataArticles } from "./Database";
+import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomendation';
 
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const { articles, loading, error } = useSelector((state) => state.articles);
+
+  useEffect(() => {
+    dispatch(fetchArticles(6));
+  }, [dispatch]);
+
   return (
     <>
       <HomeBanner />
@@ -25,6 +27,13 @@ export default function Home() {
       <ClientPhotos />
       <WhyUs />
       <ClientLogo />
+      {error ? (
+        <div>Error: {error}</div>
+      ) : loading ? (
+        <SkeletonReccomendation />
+      ) : (
+        <ArticleReccomendation data={articles} />
+      )}
     </>
   );
 }
