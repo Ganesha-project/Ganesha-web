@@ -15,7 +15,7 @@ export const Footer = () => {
         <>
             <>
                 {/* Footer container */}
-                <footer className="bg-white 2xl:px-80 dark:bg-black text-center text-neutral-600 dark:text-gray-100 lg:text-left z-[!60px]">
+                <footer className="bg-white 2xl:px-80 dark:bg-black text-center text-neutral-600 dark:text-gray-100 lg:text-left !z-50">
                     {/* Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. */}
                     <div className="mx-6 pt-8 text-center md:text-left">
                         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">

@@ -20,14 +20,16 @@ export default function ThemeSwitch() {
     <> 
       {currentTheme === 'light' ? (
         <button
+        data-tip="Theme Switch"
           onClick={() => setTheme('dark')}
-          className=' text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white  bg-gray-200 bg-opacity-50] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-2 py-2 text-center md:inline-block'>
+          className='tooltip tooltip-left p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
           <IoSunnySharp className='text-xl' />
         </button>
       ) : (
         <button
+        data-tip="Theme Switch"
           onClick={() => setTheme('light')}
-          className=' text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white  bg-gray-200 bg-opacity-50] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-2 py-2 text-center md:inline-block'>
+          className='tooltip tooltip-left p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
           <IoMoonSharp className='text-xl' />
         </button>
       )}

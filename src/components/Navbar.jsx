@@ -5,7 +5,7 @@ import Artboard2 from '../public/IMG/Artboard2.png';
 import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
 import { RiCustomerServiceFill } from 'react-icons/ri';
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { NavLinks } from '@/app/Database';
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { ExpandableButton } from './ExpandableButton';
@@ -41,7 +41,7 @@ export const Navbar = () => {
             <div className="drawer">
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div tabIndex={0} role="button" className="drawer-content btn btn-ghost btn-circle lg:hidden">
-                <label htmlFor="my-drawer" className={`drawer-button text-white ${isScrolled ? '!text-gray-900 dark:!text-white' : ''}`}>
+                <label htmlFor="my-drawer" className={`drawer-button ${isScrolled ? '!text-gray-900 dark:!text-white' : ''}`}>
                   <HiMenuAlt2 size={25} />
                 </label>
               </div>
@@ -59,7 +59,7 @@ export const Navbar = () => {
                       Ganesha Consulting
                     </h1>
                   </div>
-                  <div className='flex flex-col gap-3  font-medium'>
+                  <div className='flex flex-col gap-3 font-medium'>
                     {NavLinks.main.slice(0, 1).map(link => (
                       <li key={link.href}>
                         <Link
@@ -222,13 +222,19 @@ export const Navbar = () => {
             href='/contact'
             className={`flex items-center `}
           >
-            <span className='md:block hidden text-gray-800 dark:text-white dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-gray-200 bg-opacity-50 backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
-              Hubungi Kami
+            <span className='md:block hidden font-semibold text-gray-800 dark:text-white bg-[#ffffff26] hover:bg-mainColor hover:text-white bg-gray-200 bg-opacity-50 backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
+              Contact
             </span>
-            <span className='md:hidden block text-xl text-gray-900 dark:text-white  dark:bg-[#63636355] hover:bg-mainColor hover:text-white bg-[#ffffff81] backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full px-2 py-2 text-center'>
-              <RiCustomerServiceFill />
+            <span data-tip={'Contact Us'} className='block md:hidden tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+              <RiCustomerServiceFill className='text-xl' />
             </span>
           </a>
+          <Link
+            href={'/services'}
+            data-tip={'Search'}
+            className='tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+            <IoIosSearch className='text-xl' />
+          </Link>
           <ThemeSwitch />
         </div>
       </nav>

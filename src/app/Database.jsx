@@ -12,25 +12,25 @@ import { BiMedal } from "react-icons/bi";
 
 export const DataProduct = [
     {
-        href: "/all-products/legalitas",
+        href: "/legalitas",
         icon: <GoLaw />,
         text: "Legalitas Usaha",
         keywords: ["legalitas usaha", "pendirian usaha", "dokumen legal", "perijinan usaha", "badan usaha", "usaha resmi"]
     },
     {
-        href: "/all-products/web",
+        href: "/web-development",
         icon: <TbWorldWww />,
         text: "Website Development",
         keywords: ["website development", "pembuatan website", "pengembangan situs web", "desain web", "web developer", "jasa pembuatan website"]
     },
     {
-        href: "/all-products/sosmed",
+        href: "/sosmed",
         icon: <HiMiniDevicePhoneMobile />,
         text: "Social Media Management",
         keywords: ["social media management", "manajemen media sosial", "sosmed", "pengelolaan sosmed", "strategi media sosial", "konten sosmed"]
     },
     {
-        href: "/all-products/legalitas/badan-usaha",
+        href: "/legalitas/badan-usaha",
         icon: <FaBuildingWheat />,
         text: "Badan Usaha Lainnya",
         keywords: ["badan usaha lainnya", "jenis badan usaha", "pendirian badan usaha", "dokumen badan usaha", "usaha kecil", "usaha menengah"]
@@ -76,7 +76,25 @@ export const DataProduct = [
         icon: <FaUserTie />,
         text: "Audit",
         keywords: ["audit", "jasa audit", "auditor", "audit keuangan", "audit internal", "audit eksternal", "laporan audit"]
-    }
+    },
+    {
+        href: "/pendirian-pt",
+        icon: <GoLaw />,
+        text: "Pendirian PT",
+        keywords: ["legalitas PT", "pendirian PT", "dokumen PT", "izin usaha PT", "badan hukum PT", "perusahaan resmi"]
+    },
+    {
+        href: "/pendirian-badan-usaha",
+        icon: <GoLaw />,
+        text: "Pendirian Badan Usaha",
+        keywords: ["legalitas badan usaha", "pendirian badan usaha", "dokumen badan usaha", "izin badan usaha", "jenis badan usaha", "perusahaan legal"]
+    },
+    {
+        href: "/pendirian-cv",
+        icon: <GoLaw />,
+        text: "Pendirian CV",
+        keywords: ["legalitas CV", "pendirian CV", "dokumen CV", "izin usaha CV", "badan usaha CV", "perusahaan CV"]
+    },
 ]
 
 export const NavLinks = {
@@ -92,23 +110,23 @@ export const NavLinks = {
     ],
     productsAndServices: [
         {
-            href: '/all-products',
-            label: 'All Products'
+            href: '/services',
+            label: 'All Services'
         },
         {
-            href: '/all-products/sosmed',
+            href: '/sosmed',
             label: 'Social Media Management'
         },
         {
-            href: '/all-products/web',
+            href: '/web',
             label: 'Website Development'
         },
         {
-            href: '/all-products/legalitas',
+            href: '/legalitas',
             label: 'Legalitas Bisnis'
         },
         {
-            href: '/all-products/legalitas/badan-usaha',
+            href: '/legalitas/badan-usaha',
             label: 'Badan Usaha Lainnya'
         },
         {
@@ -142,15 +160,15 @@ export const NavLinks = {
     ],
     legalities: [
         {
-            href: '/all-products/legalitas/pendirian-pt',
+            href: '/legalitas/pendirian-pt',
             label: 'Legalitas PT'
         },
         {
-            href: '/all-products/legalitas/pendirian-cv',
+            href: '/legalitas/pendirian-cv',
             label: 'Legalitas CV'
         },
         {
-            href: '/all-products/legalitas/badan-usaha',
+            href: '/legalitas/badan-usaha',
             label: 'Legalitas Badan Usaha Lainnya'
         },
     ],
@@ -169,6 +187,175 @@ export const NavLinks = {
         },
     ]
 }
+
+export const DataBanner = [
+    {
+        href: "legalitas",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/ks0afkihiqamf7bjzgfi.png",
+            mainText: "Jasa Legalitas Bisnis",
+            desc: "Kami hadir bersama Konsultan yang profesional untuk memberikan pelayanan Legalitas terbaik yang akan memastikan Bisnis mu sesuai dengan aturan hukum yang berlaku di Indonesia, Legalkan Bisnis Mu Bersama Ganesha Consulting!.",
+            accent: "bg-[#adb9f1] dark:bg-[#6077e749]",
+            accent2: "bg-[#D89DC7] dark:bg-[#d89dc75f]",
+            textAccent: "dark:text-[#adb9f1] text-[#6370ac]"
+        },
+    },
+    {
+        href: "pendirian-pt",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1721729237/GaneshaAssets/PT.png",
+            mainText: "Layanan Pendirian PT",
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!",
+            accent: "bg-[#8BD9D2] dark:bg-[#8bd9d370]",
+            accent2: "bg-[#FECC86] dark:bg-[#fecc8671]",
+            textAccent: "dark:text-[#8BD9D2] text-[#5c9d97]"
+        },
+    },
+    {
+        href: "pendirian-cv",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236555/GaneshaAssets/felydyeo20nq7t3zlvfu.svg",
+            mainText: "Layanan Pendirian CV",
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!",
+            accent: "bg-[#E8D0BE] dark:bg-[#e8d0be93]",
+            accent2: "bg-[#84514F] dark:bg-[#84514F]",
+            textAccent: "dark:text-[#E8D0BE] text-[#caa68a]"
+        },
+    },
+    {
+        href: "badan-usaha",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png",
+            mainText: "Layanan Pendirian Badan Usaha",
+            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat dan andal untuk membantu Anda dalam melengkapi semua aspek legalitas dan perizinan yang diperlukan!",
+            accent: "bg-[#F9A7A0] dark:bg-[#f9a7a095]",
+            accent2: "bg-[#F6B81C] dark:bg-[#f6b81c99]",
+            textAccent: "dark:text-[#F9A7A0] text-[#f09087]"
+        },
+    },
+    {
+        href: "badan-usaha",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png",
+            mainText: "Layanan Pendirian Badan Usaha",
+            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat dan andal untuk membantu Anda dalam melengkapi semua aspek legalitas dan perizinan yang diperlukan!",
+            accent: "bg-[#F9A7A0] dark:bg-[#f9a7a095]",
+            accent2: "bg-[#F6B81C] dark:bg-[#f6b81c99]",
+            textAccent: "dark:text-[#F9A7A0] text-[#f09087]"
+        },
+    },
+    {
+        href: "web-development",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/dktt01pu9es4cmoyr31t.png",
+            mainText: "Web Development Service",
+            desc: "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.",
+            accent: "bg-[#6ABDE7] dark:bg-[#6abde776]",
+            accent2: "bg-[#ec8e8e] dark:bg-[#ff515177]",
+            textAccent: "dark:text-[#6ABDE7] text-[#42aade]"
+        },
+    },
+    {
+        href: "web-development",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/dktt01pu9es4cmoyr31t.png",
+            mainText: "Web Development Service",
+            desc: "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.",
+            accent: "bg-[#6ABDE7] dark:bg-[#6abde776]",
+            accent2: "bg-[#ec8e8e] dark:bg-[#ff515177]",
+            textAccent: "dark:text-[#6ABDE7] text-[#42aade]"
+        },
+    },
+    {
+        href: "social-media-management",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236583/GaneshaAssets/phln59clbvfecosy0msj.png",
+            mainText: "Social Media Management",
+            desc: "Sosial Media Manajemen adalah kunci sukses modern untuk membentuk citra merek yang kuat, berinteraksi secara efektif dengan pelanggan, dan menavigasi dinamika digital dengan kesan yang positif.",
+            accent: "bg-[#A6DCA2] dark:bg-[#A6DCA276]",
+            accent2: "bg-[#D89BC6] dark:bg-[#d89bc6a3]",
+            textAccent: "dark:text-[#A6DCA2] text-[#7ddb76]"
+        },
+    },
+    {
+        href: "konsultan-pajak",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236583/GaneshaAssets/sltm2ppackpygizjbiuh.png",
+            mainText: "Tax Consultant",
+            accent: "bg-[#a5908e] dark:bg-[#89524F76]",
+            desc: "Optimalisasi Pajak Anda dengan Bantuan Ahli Pajak Terpercaya! Bingung dengan urusan pajak? Ganesha Consulting hadir untuk memberikan solusi tepat dan efisien bagi bisnis Anda. Dapatkan konsultasi profesional dan layanan yang komprehensif untuk semua kebutuhan perpajakan Anda. ",
+            accent: "bg-[#a5908e] dark:bg-[#89524F76]",
+            accent2: "bg-[#8A865C] dark:bg-[#8A865Ca3]",
+            textAccent: "dark:text-[#aa7a77] text-[#89524F]"
+        },
+    },
+    {
+        href: "audit",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722231099/GaneshaAssets/av6v4iikb50xagea3vwx.svg",
+            mainText: "System Audit",
+            desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.",
+            accent: "bg-[#cfe5dd] dark:bg-[#8cb0d380]",
+            accent2: "bg-[#ec8e8e] dark:bg-[#ff515177]",
+            textAccent: "dark:text-[#cfe5dd] text-[#657871]"
+        },
+    },
+    {
+        href: "perizinan",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/lxcyp5lzimn5rv6fusir.svg",
+            mainText: "Perizinan Tambahan",
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
+            accent: "bg-[#cfe5dd] dark:bg-[#cfe5ddb5]",
+            accent2: "bg-[#669EF0] dark:bg-[#669df0b5]",
+            textAccent: "dark:text-[#cfe5dd] text-[#657871]"
+        },
+    },
+    {
+        href: "pelayanan-manajemen",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236552/GaneshaAssets/nqpcv7r6kvy4xg9x4dyc.svg",
+            mainText: "Pelayanan Manajemen",
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
+            accent: "bg-[#e39f8c] dark:bg-[#e39f8cb5]",
+            accent2: "bg-[#006AA4] dark:bg-[#006ba4ab]",
+            textAccent: "dark:text-[#e39f8c] text-[#DF6443]"
+        },
+    },
+    {
+        href: "pelayanan-akuntansi",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236557/GaneshaAssets/f7ivo4yqe6wkvzvrkcun.svg",
+            mainText: "Pelayanan Akuntantsi",
+            desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.",
+            accent: "bg-[#27b19c] dark:bg-[#019C85b5]",
+            accent2: "bg-[#FF9092] dark:bg-[#ff9092d1]",
+            textAccent: "dark:text-[#019c85b2] text-[#019C85]"
+        },
+    },
+    {
+        href: "software-management-system",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236554/GaneshaAssets/c1ej5hdt6vdu6nrqy8ee.svg",
+            mainText: "Software Management System",
+            desc: "Solusi terkini, dari Accounting Software hingga AR System, untuk meningkatkan efisiensi dan kinerja operasional.",
+            accent: "bg-[#ecace7] dark:bg-[#fd8cf49d]",
+            accent2: "bg-[#265D6C] dark:bg-[#265d6cb2]",
+            textAccent: "dark:text-[#ecace7] text-[#FD8CF3]"
+        },
+    },
+    {
+        href: "haki",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236555/GaneshaAssets/gzm4wdyvieietlozpwbt.svg",
+            mainText: "HAKI - Hak Kekayaan Intelektual",
+            desc: "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami, memberikan keunggulan kompetitif.",
+            accent: "bg-[#eb9090] dark:bg-[#eb9090]",
+            accent2: "bg-[#FFEFD5] dark:bg-[#FFEFD5]",
+            textAccent: "dark:text-[#eb9090] text-[#eb9090]"
+        },
+    },
+]
 
 export const DataCategoriesArticle = [
     {
@@ -1951,22 +2138,22 @@ export const DataWhyUs = {
     points: [
         {
             head: "Konsultasi 24 Jam!",
-            logo: <Tb24Hours/>,
+            logo: <Tb24Hours />,
             desc: "Kami memberikan pelayanan konsultasi kepada Client 24 Jam, Admin kami yang fast response siap melayani segala kebutuhan anda! Terjamin dan Terpercaya"
         },
         {
             head: "Terjamin dan Terpercaya",
-            logo: <BiMedal/>,
+            logo: <BiMedal />,
             desc: "Kami berkomitmen untuk memberikan solusi yang efektif dan efisien untuk menjamin kesuksesan bisnis anda, selain itu kami juga berkomitmen untuk menjaga kerahasiaan data pribadi perusahaan Anda."
         },
         {
             head: "Pelayanan Cepat",
-            logo: <HiLightningBolt/>,
+            logo: <HiLightningBolt />,
             desc: "Jaminan konsultasi kapanpun anda butuhkan, Admin kami yang FastResponse akan siap melayani anda!"
         },
         {
             head: "Layanan Lengkap",
-            logo: <RiAppsFill/>,
+            logo: <RiAppsFill />,
             desc: "Jaminan konsultasi kapanpun anda butuhkan, Admin kami yang FastResponse akan siap melayani anda!"
         }
     ]

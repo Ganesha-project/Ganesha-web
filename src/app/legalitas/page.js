@@ -1,8 +1,10 @@
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk'
-import legal from '../../../public/BG/law.png'
-import { AllProductButton } from '@/components/LegalComponents/AllProductButton';
-import { BodyLegal } from '@/components/LegalComponents/BodyLegal';
+// import { BannerText } from '@/components/BannerText';
+// import { ImgProduk } from '@/components/ImgProduk'
+// import legal from '../../../public/BG/law.png'
+// import { AllProductButton } from '@/components/LegalComponents/AllProductButton';
+// import { BodyLegal } from '@/components/LegalComponents/BodyLegal';
+
+import { BannerService } from "@/components/ServicesComponent/BannerService";
 
 export const metadata = {
     title: 'Jasa Legalitas Bisnis - Ganesha Consulting',
@@ -23,7 +25,7 @@ export default function LegalitasPage() {
     const secondary = "Kami hadir bersama Konsultan yang profesional untuk memberikan pelayanan Legalitas terbaik  yang akan memastikan Bisnis mu sesuai dengan aturan hukum yang berlaku di Indonesia, Legalkan Bisnis Mu Bersama Ganesha Consulting!."
     return (
         <>
-            <ImgProduk socmed={legal} />
+            {/* <ImgProduk socmed={legal} />
             <BannerText
                 main={main}
                 other2={other2}
@@ -37,7 +39,9 @@ export default function LegalitasPage() {
                 href1='#paket'
             />
             <AllProductButton />
-            <BodyLegal />
+            <BodyLegal /> */}
+
+            <BannerService/>
         </>
     )
 }

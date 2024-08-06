@@ -42,8 +42,6 @@ export default function AboutUs() {
             <BodyLanding />
             <VisiMisi />
             <LegalityApprove />
-            {/* <VoCarousel /> */}
-            {/* <OurClient /> */}
         </>
     );
 }

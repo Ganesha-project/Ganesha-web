@@ -6,6 +6,7 @@ import { FloatingButton } from "@/components/FloatingButton";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import ClientProvider from '@/components/ClientProvider';
+import Head from 'next/head';
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -23,9 +24,14 @@ export const metadata = {
 export default function RootLayout({ children, pageProps }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      <Head>
         <link rel="icon" type="image/png" sizes="16x16" href="icon.png" />
-      </head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8227813889502050"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body className={`${quicksand.className}`}>
         <ThemeProvider enableSystem={true} attribute='class'>
           <ClientProvider>

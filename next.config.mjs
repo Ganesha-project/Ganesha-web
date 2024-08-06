@@ -41,6 +41,10 @@ const nextConfig = {
                 hostname: "plus.unsplash.com",
             },
             {
+                protocol: "https",
+                hostname: "res.cloudinary.com",
+            },
+            {
                 protocol: "http",
                 hostname: "localhost",
                 port: "1337", // Tambahkan port jika diperlukan

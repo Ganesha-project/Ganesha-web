@@ -3,6 +3,7 @@ import socmed from '../../public/BG/tax.png';
 import { BannerText } from '@/components/BannerText';
 import { ImgProduk } from '@/components/ImgProduk';
 import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
     title: "Konsultan Pajak - Ganesha Consulting",
@@ -59,7 +60,8 @@ export default async function KonsultanPajakPage() {
 
     return (
         <>
-
+            <BannerService />
+            {/* 
             <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
             <BannerText
                 other={other} other2={other2} main={main} secondary={secondary}
@@ -68,7 +70,7 @@ export default async function KonsultanPajakPage() {
                 btn2='Konsultasi Sekarang'
                 styleL='bg-[#F2E6DD]'
                 styleR='bg-[#F2E6DD]'
-                href1='#packages' />
+                href1='#packages' /> */}
             <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} />
         </>
     );

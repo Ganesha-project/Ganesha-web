@@ -1,10 +1,12 @@
-import fs from 'fs'
-import legal from '../../../../public/BG/VectorCV.jpg'
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk'
-import { BodyCV } from '@/components/LegalComponents/BodyCv';
-import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
-import { CardPriceCV } from '@/components/LegalComponents/CardPriceCv';
+// import fs from 'fs'
+// import legal from '../../../../public/BG/VectorCV.jpg'
+// import { BannerText } from '@/components/BannerText';
+// import { ImgProduk } from '@/components/ImgProduk'
+// import { BodyCV } from '@/components/LegalComponents/BodyCv';
+// import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+// import { CardPriceCV } from '@/components/LegalComponents/CardPriceCv';
+
+import { BannerService } from "@/components/ServicesComponent/BannerService";
 
 export const metadata = {
     title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
@@ -51,16 +53,17 @@ export const metadata = {
 
 
 export default async function PendirianCvPage() {
-    const other = ""
-    const other2 = "Layanan"
-    const main = "Pendirian CV"
-    const secondary = "Pembangunan PT tanpa ribet, hanya dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan PT Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!."
-    let rawData = await fs.promises.readFile('public/JSON/PaketCV.json', 'utf-8');
-    let data = JSON.parse(rawData);
+    // const other = ""
+    // const other2 = "Layanan"
+    // const main = "Pendirian CV"
+    // const secondary = "Pembangunan PT tanpa ribet, hanya dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan PT Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!."
+    // let rawData = await fs.promises.readFile('public/JSON/PaketCV.json', 'utf-8');
+    // let data = JSON.parse(rawData);
 
     return (
         <>
-            <ImgProduk socmed={legal} stylesImg={'dark:invert saturate-150 dark:hue-rotate-180'} />
+        <BannerService/>
+            {/* <ImgProduk socmed={legal} stylesImg={'dark:invert saturate-150 dark:hue-rotate-180'} />
             <BannerText
                 main={main}
                 other2={other2}
@@ -75,7 +78,7 @@ export default async function PendirianCvPage() {
             />
             <CardPriceCV data={data} />
             <BodyCV />
-            <RWhyUs color={"orange"} />
+            <RWhyUs color={"orange"} /> */}
         </>
     )
 }

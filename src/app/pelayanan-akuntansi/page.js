@@ -3,6 +3,7 @@ import socmed from '../../public/BG/accounting.jpg';
 import { BannerText } from '@/components/BannerText';
 import { ImgProduk } from '@/components/ImgProduk';
 import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
@@ -49,26 +50,12 @@ export const metadata = {
 
 
 export default async function PelayananAkuntansi() {
-    const main = "Akuntansi";
-    const other = "";
-    const other2 = "Pelayanan";
-    const secondary =
-        "Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.";
     let rawData = await fs.promises.readFile('public/JSON/Manajemen.json', 'utf-8');
     let data = JSON.parse(rawData);
 
     return (
         <>
-
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%] dark:invert saturate-150 dark:hue-rotate-180" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-[#019C85]'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-[#A4F5EC]'
-                styleR='bg-[#A4F5EC]'
-                href1='#packages' />
+            <BannerService />
             <ExtrasCard data={data} accent1={'bg-[#019C85]'} accent2={'bg-[#A4F5EC]'} />
         </>
     );

@@ -1,11 +1,13 @@
-import legal from '../../../../public/BG/VectorPT.png'
-import fs from 'fs'
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk'
-import { BodyPT } from '@/components/LegalComponents/BodyPt';
-import { CardPricePt } from '@/components/LegalComponents/CardPricePt';
-import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
-import { CardPricePma } from '@/components/LegalComponents/CardPricePma';
+// import fs from 'fs'
+// import legal from '../../../../public/BG/VectorPT.png'
+// import { BannerText } from '@/components/BannerText';
+// import { ImgProduk } from '@/components/ImgProduk'
+// import { BodyPT } from '@/components/LegalComponents/BodyPt';
+// import { CardPricePt } from '@/components/LegalComponents/CardPricePt';
+// import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+// import { CardPricePma } from '@/components/LegalComponents/CardPricePma';
+
+import { BannerService } from "@/components/ServicesComponent/BannerService";
 
 export const metadata = {
     title: "Pendirian PT - Ganesha Consulting",
@@ -52,19 +54,19 @@ export const metadata = {
 
 
 export default async function PendirianPtPage() {
-    const other = ""
-    const other2 = "Layanan"
-    const main = "Pendirian PT"
-    const secondary = "Pembangunan PT tanpa ribet, hanya dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan PT Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!."
-    let rawData = await fs.promises.readFile('public/JSON/PaketPT.json', 'utf-8');
-    let data = JSON.parse(rawData);
+    // const other = ""
+    // const other2 = "Layanan"
+    // const main = "Pendirian PT"
+    // const secondary = "Pembangunan PT tanpa ribet, hanya dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan PT Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!."
+    // let rawData = await fs.promises.readFile('public/JSON/PaketPT.json', 'utf-8');
+    // let data = JSON.parse(rawData);
 
-    let rawDataPma = await fs.promises.readFile('public/JSON/PaketPma.json', 'utf-8');
-    let dataPma = JSON.parse(rawDataPma);
+    // let rawDataPma = await fs.promises.readFile('public/JSON/PaketPma.json', 'utf-8');
+    // let dataPma = JSON.parse(rawDataPma);
 
     return (
         <>
-            <ImgProduk socmed={legal} stylesImg={'h-[90vh] w-auto'} styles='bg-white' />
+            {/* <ImgProduk socmed={legal} stylesImg={'h-[90vh] w-auto'} styles='bg-white' />
             <BannerText
                 main={main}
                 other2={other2}
@@ -80,7 +82,8 @@ export default async function PendirianPtPage() {
             <CardPricePt data={data} />
             <CardPricePma data={dataPma}/>
             <BodyPT />
-            <RWhyUs color={"cyan"} />
+            <RWhyUs color={"cyan"} /> */}
+            <BannerService />
         </>
     )
 }

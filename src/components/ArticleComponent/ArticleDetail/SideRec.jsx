@@ -13,7 +13,7 @@ export const SideRec = ({ data }) => {
                 </h1>
                 <div className="flex flex-col gap-3">
                     {data?.slice(0, 5).map((el, idx) => (
-                        <>
+                        <> 
                         {console.log(el)}
                             <Link
                                 href={el.attributes.Slug}
