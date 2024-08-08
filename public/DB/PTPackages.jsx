@@ -302,29 +302,9 @@ export const BadanUsahaPackages = [
             { feature: "Free Stempel Firma Hukum", status: true }
         ]
     },
-    {
-        type: "Virtual Office",
-        price: 2652000,
-        priceOriginal: 4163640,
-        link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Virtual%20Office%20nih!%20",
-        discount: 36,
-        features: [
-            { feature: "Perjanjian Sewa Menyewa 1 Tahun", status: true },
-            { feature: "Sudah Termasuk PPN dan PPH", status: true },
-            { feature: "Alamat Virtual Office Bisa PKP", status: true },
-            { feature: "Bisa Pakai Ruang Meeting diseluruh Cabang Virtual Office", status: true },
-            { feature: "Layanan Surat Menyurat", status: true },
-            { feature: "Notifikasi Atas Dokumen Atau Surat Masuk", status: true },
-            { feature: "Free Surat Domisili Gedung", status: true },
-            { feature: "Free Wifi", status: true },
-            { feature: "Self Service Pantry", status: true },
-            { feature: "Alamat Komersil dan Prestisius", status: true },
-            { feature: "Bonus Meeting Room Gratis 60-90 Jam Pertahun", status: true },
-            { feature: "Fasilitas Live Streaming", status: true },
-            { feature: "Fasilitas Podcast", status: true },
-            { feature: "Fasilitas Proyektor", status: true }
-        ]
-    },
+];
+
+export const ExtrasPackages = [
     {
         type: "Pengurusan PKP (Pengusaha Kena Pajak)",
         price: 1500000,
@@ -350,4 +330,30 @@ export const BadanUsahaPackages = [
             { feature: "Hak Akses OSS", status: true }
         ]
     }
-];
+]
+
+export const VOPAckages = [
+    {
+        type: "Virtual Office",
+        price: 2652000,
+        priceOriginal: 4163640,
+        link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Virtual%20Office%20nih!%20",
+        discount: 36,
+        features: [
+            { feature: "Perjanjian Sewa Menyewa 1 Tahun", status: true },
+            { feature: "Sudah Termasuk PPN dan PPH", status: true },
+            { feature: "Alamat Virtual Office Bisa PKP", status: true },
+            { feature: "Bisa Pakai Ruang Meeting diseluruh Cabang Virtual Office", status: true },
+            { feature: "Layanan Surat Menyurat", status: true },
+            { feature: "Notifikasi Atas Dokumen Atau Surat Masuk", status: true },
+            { feature: "Free Surat Domisili Gedung", status: true },
+            { feature: "Free Wifi", status: true },
+            { feature: "Self Service Pantry", status: true },
+            { feature: "Alamat Komersil dan Prestisius", status: true },
+            { feature: "Bonus Meeting Room Gratis 60-90 Jam Pertahun", status: true },
+            { feature: "Fasilitas Live Streaming", status: true },
+            { feature: "Fasilitas Podcast", status: true },
+            { feature: "Fasilitas Proyektor", status: true }
+        ]
+    },
+]

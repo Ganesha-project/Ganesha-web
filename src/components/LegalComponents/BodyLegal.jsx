@@ -1,7 +1,5 @@
 import Image from "next/image"
 import Head from 'next/head';
-import bodylegal from "../../public/BG/legalbody.jpg"
-import judge from "../../public/BG/judge_set1.jpg"
 import { DataPageLegal } from "@/app/Database";
 
 export const BodyLegal = () => {
@@ -127,19 +125,18 @@ export const BodyLegal = () => {
                     </div>
                 </div>
 
-
                 <div className="m-5 md:m-24 flex flex-col space-y-5">
-                    <h1 className="bg-[#000000] text-transparent bg-clip-text font-extrabold text-center text-xl md:text-4xl">Kemudahan Yang Kamu Dapatkan Di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting </span>!</h1>
-                    <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
+                    <h1 className="font-extrabold text-center text-xl md:text-4xl">Kemudahan Yang Kamu Dapatkan Di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting </span>!</h1>
+                    <div className="flex md:flex-row justify-center flex-wrap flex-col gap-5">
                         {DataPageLegal.whyUs.map((el, idx) => (
                             <div
                                 key={idx}
-                                className="space-y-3"
+                                className="space-y-3 md:w-[30%] flex flex-col"
                             >
-                                <h2 className="py-3 px-5 bg-mainColor bg-opacity-25 rounded-full md:text-2xl text-xl font-semibold text-center">
+                                <h2 className="py-3 px-5 bg-mainColor dark:bg-secondaryColor dark:bg-opacity-50 bg-opacity-50 rounded-full md:text-2xl text-xl font-semibold text-center">
                                     {el.title}
                                 </h2>
-                                <h3 className="py-4 px-5 bg-mainColor bg-opacity-15 rounded-3xl grow font-medium text-justify">
+                                <h3 className="py-4 px-5 bg-mainColor dark:bg-secondaryColor dark:bg-opacity-25 bg-opacity-30 rounded-3xl grow font-medium text-justify">
                                     {el.description}
                                 </h3>
                             </div>
@@ -147,7 +144,6 @@ export const BodyLegal = () => {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }

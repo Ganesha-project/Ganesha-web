@@ -26,8 +26,8 @@ export const BannerService = () => {
                 />
             </div>
             <div className="absolute w-full">
-            <div className={`absolute ${accent} md:right-[-15rem] md:top-[-20rem] rounded-full w-[80lvw] h-[80lvw] blur-[200px]`} />
-            <div className={`absolute ${accent2} md:right-[-15rem] md:top-[-20rem] rounded-full w-[40lvw] h-[40lvw] blur-[200px]`} />
+                <div className={`absolute ${accent} md:right-[-15rem] md:top-[-20rem] rounded-full w-[80lvw] h-[80lvw] blur-[200px]`} />
+                <div className={`absolute ${accent2} md:right-[-15rem] md:top-[-20rem] rounded-full w-[40lvw] h-[40lvw] blur-[200px]`} />
             </div>
 
             <div className="min-h-screen mx-5 z-40 flex flex-col gap-3 justify-end md:justify-center md:mx-10 pb-20 md:w-[40%]">

@@ -50,12 +50,12 @@ export const RWhyUs = ({ color }) => {
         <>
             <section className="md:px-24 px-5 my-20">
                 <div className={`bg-${color}-200 space-y-5 dark:bg-opacity-25 p-6 md:p-10 rounded-[40px] `}>
-                    <h1 className={`bg-${color}-500 text-transparent bg-clip-text text-xl md:text-4xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
+                    <h1 className={`bg-${color}-500 text-transparent bg-clip-text text-2xl md:text-4xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
                         Kelebihan di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting</span> dibanding tempat lain
                     </h1>
-                    <div className="md:flex md:flex-row flex-col gap-5">
+                    <div className="flex md:flex-row flex-col gap-5">
                         {DataPageLegal.whyUsData.map((el, idx) => (
-                            <div key={idx} className="flex flex-col gap-3 items-center p-5 bg-cyan-300 dark:bg-opacity-50 rounded-3xl md:w-[20%]">
+                            <div key={idx} className={`bg-${color}-500 flex flex-col gap-3 items-center p-5 dark:bg-opacity-50 rounded-3xl md:w-[20%]`}>
                                 <span className="text-5xl h-12">
                                     {el.icon}
                                 </span>

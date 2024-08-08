@@ -1,12 +1,15 @@
-// import fs from 'fs'
-// import legal from '../../../../public/BG/VectorCV.jpg'
-// import { BannerText } from '@/components/BannerText';
-// import { ImgProduk } from '@/components/ImgProduk'
-// import { BodyCV } from '@/components/LegalComponents/BodyCv';
-// import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
-// import { CardPriceCV } from '@/components/LegalComponents/CardPriceCv';
-
+import { BodyCV } from "@/components/LegalComponents/BodyCv";
+import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
+import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
+import { CVPackages } from "../../../public/DB/CVPackages";
+import { ExtrasPackages } from "../../../public/DB/PTPackages";
+import { Benefit } from "@/components/LegalComponents/Benefit";
+import { WhyCv } from "@/components/LegalComponents/WhyCv";
+import { UUCv } from "@/components/LegalComponents/UUCv";
+import { Faqs } from "@/components/LegalComponents/Faqs";
+import { dataPageCV } from "../Database";
+import { ClientPhotos } from "@/components/ClientPhotos";
 
 export const metadata = {
     title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
@@ -51,34 +54,32 @@ export const metadata = {
     }
 };
 
-
 export default async function PendirianCvPage() {
-    // const other = ""
-    // const other2 = "Layanan"
-    // const main = "Pendirian CV"
-    // const secondary = "Pembangunan PT tanpa ribet, hanya dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan PT Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!."
-    // let rawData = await fs.promises.readFile('public/JSON/PaketCV.json', 'utf-8');
-    // let data = JSON.parse(rawData);
-
     return (
         <>
-        <BannerService/>
-            {/* <ImgProduk socmed={legal} stylesImg={'dark:invert saturate-150 dark:hue-rotate-180'} />
-            <BannerText
-                main={main}
-                other2={other2}
-                other={other}
-                secondary={secondary}
-                styles='bg-orange-600 text-transparent bg-clip-text'
-                btn1='Pilih Paket'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-orange-200'
-                styleR='bg-orange-200'
-                href1='#packages'
+            <BannerService />
+            <ReusableCards
+                data={[...CVPackages, ...ExtrasPackages]}
+                cardColor={'bg-orange-100'}
+                typeColor={'text-orange-600'}
+                priceColor={'text-orange-800'}
+                buttonColor={'bg-orange-500'}
+                label={'Paket Pendirian CV'}
             />
-            <CardPriceCV data={data} />
+            <ClientPhotos />
+            <Benefit
+                color={'orange'}
+                title={'Yang Kamu Dapatkan dari pendirian CV di Ganesha Consulting'}
+            />
             <BodyCV />
-            <RWhyUs color={"orange"} /> */}
+            <UUCv />
+            <WhyCv />
+            <Faqs
+                text={'FAQ'}
+                color={'orange'}
+                data={dataPageCV.faqcv}
+            />
+            <RWhyUs color={"orange"} />
         </>
     )
 }
