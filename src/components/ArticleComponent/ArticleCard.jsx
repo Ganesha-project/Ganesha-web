@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FaFire } from "react-icons/fa6"
 import { Headtag } from "./HeadTag"
-import { formatDateTime } from "@/app/helper/formatDateTime"
+import { formatDateTime } from "@/helper/formatDateTime"
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
 
 export const ArticleCard = ({ data, moms }) => {

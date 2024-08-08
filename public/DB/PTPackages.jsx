@@ -151,6 +151,65 @@ export const PTPackages = [
             { feature: "Surat Pengukuhan Kena Pajak ( SPPKP )", status: true },
             { feature: "Sertifikat Elektronik", status: true }
         ]
+    },
+    {
+        type: "PAKET SILVER PT PERORANGAN (1 Hari Kerja)",
+        price: 600000,
+        priceOriginal: 942000,
+        link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
+        discount: 36,
+        features: [
+            { feature: "Free Konsultasi", status: true },
+            { feature: "Pesan Nama PT Perorangan", status: true },
+            { feature: "Surat Keputusan Kemenkumham", status: true },
+            { feature: "Surat Pernyataan Kemenkumham", status: true },
+            { feature: "NPWP PT Perorangan", status: true },
+            { feature: "Surat Keterangan Terdaftar Pajak PT (SKT)", status: true },
+            { feature: "Nomor Induk Berusaha (NIB)", status: true },
+            { feature: "Pernyataan Mandiri OSS (K3L, Tata Ruang dan SPPL)", status: true },
+            { feature: "Sertifikat Standar (Jika resiko KBLI Menengah Rendah)", status: true },
+            { feature: "Hak Akses OSS", status: true },
+            { feature: "Free Email PT Perorangan", status: true },
+            { feature: "Free Stempel PT Perorangan", status: true },
+            { feature: "Kop Surat", status: false },
+            { feature: "Logo Perusahaan", status: false },
+            { feature: "Company Profile", status: false },
+            { feature: "Kartu Nama", status: false },
+            { feature: "Invoice", status: false },
+            { feature: "Surat Pengukuhan Kena Pajak (SPPKP)", status: false },
+            { feature: "Sertifikat Elektronik", status: false },
+            { feature: "Website Company", status: false }
+        ]
+    },
+    {
+        type: "PAKET GOLD PT PERORANGAN (2 Hari Kerja)",
+        price: 450000,
+        priceOriginal: 1500000,
+        link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
+        discount: 36,
+        features: [
+            { feature: "Free Konsultasi", status: true },
+            { feature: "Pesan Nama PT Perorangan", status: true },
+            { feature: "Akta Penegasan Pendirian", status: true },
+            { feature: "Surat Keputusan Kemenkumham", status: true },
+            { feature: "Surat Pernyataan Kemenkumham", status: true },
+            { feature: "NPWP PT Perorangan", status: true },
+            { feature: "Surat Keterangan Terdaftar Pajak PT (SKT)", status: true },
+            { feature: "Nomor Induk Berusaha (NIB)", status: true },
+            { feature: "Pernyataan Mandiri OSS (K3L, Tata Ruang dan SPPL)", status: true },
+            { feature: "Sertifikat Standar (Jika resiko KBLI Menengah Rendah)", status: true },
+            { feature: "Hak Akses OSS", status: true },
+            { feature: "Free Email PT Perorangan", status: true },
+            { feature: "Free Stempel PT Perorangan", status: true },
+            { feature: "Kop Surat", status: false },
+            { feature: "Logo Perusahaan", status: false },
+            { feature: "Company Profile", status: false },
+            { feature: "Kartu Nama", status: false },
+            { feature: "Invoice", status: false },
+            { feature: "Surat Pengukuhan Kena Pajak (SPPKP)", status: false },
+            { feature: "Sertifikat Elektronik", status: false },
+            { feature: "Website Company", status: false }
+        ]
     }
 ];
 

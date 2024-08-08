@@ -8,7 +8,97 @@ import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
 import { SiReadthedocs } from "react-icons/si";
 import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
-import { BiMedal } from "react-icons/bi";
+import { BiMedal, BiSolidConversation } from "react-icons/bi";
+import { FaBuilding } from "react-icons/fa6";
+import { PiStampFill } from "react-icons/pi";
+import { BiSolidReport } from "react-icons/bi";
+import { RiBankCardFill } from "react-icons/ri";
+import { FaMoneyBill1Wave } from "react-icons/fa6";
+import { FaBoltLightning } from "react-icons/fa6";
+import { TbBulbFilled } from "react-icons/tb";
+import { IoSparkles } from "react-icons/io5";
+import { IoLeaf } from "react-icons/io5";
+
+export const legalitasUsaha = [
+    {
+        title: "Kepatuhan Hukum",
+        points: [
+            {
+                heading: "Mematuhi Peraturan dan Undang-Undang",
+                description: "Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain."
+            },
+            {
+                heading: "Menghindari Sanksi",
+                description: "Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
+            }
+        ]
+    },
+    {
+        title: "Kepercayaan dan Kredibilitas",
+        points: [
+            {
+                heading: "Kepercayaan Pelanggan",
+                description: "Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas."
+            },
+            {
+                heading: "Reputasi yang Baik",
+                description: "Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
+            }
+        ]
+    },
+    {
+        title: "Perlindungan Hukum",
+        points: [
+            {
+                heading: "Hak Kekayaan Intelektual",
+                description: "Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan."
+            },
+            {
+                heading: "Perlindungan Bisnis",
+                description: "Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
+            }
+        ]
+    },
+    {
+        title: "Akses ke Pembiayaan",
+        points: [
+            {
+                heading: "Pinjaman dan Investasi",
+                description: "Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal."
+            },
+            {
+                heading: "Subsidi dan Hibah",
+                description: "Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
+            }
+        ]
+    },
+    {
+        title: "Kemudahan Ekspansi",
+        points: [
+            {
+                heading: "Ekspansi Pasar",
+                description: "Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru."
+            },
+            {
+                heading: "Kemitraan Bisnis",
+                description: "Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
+            }
+        ]
+    },
+    {
+        title: "Kepastian Usaha",
+        points: [
+            {
+                heading: "Perlindungan Aset Pribadi",
+                description: "Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis."
+            },
+            {
+                heading: "Keberlanjutan Usaha",
+                description: "Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
+            }
+        ]
+    }
+];
 
 export const DataProduct = [
     {
@@ -2158,3 +2248,349 @@ export const DataWhyUs = {
         }
     ]
 };
+
+export const LegalItems = [
+    {
+        "name": "Pendirian PT",
+        "link": "legalitas/pendirian-pt",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Pendirian CV",
+        "link": "legalitas/pendirian-cv",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Pendirian Yayasan",
+        "link": "legalitas/badan-usaha",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Pendirian Firma Hukum",
+        "link": "legalitas/badan-usaha",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Pendirian Perkumpulan/Asosiasi",
+        "link": "legalitas/badan-usaha",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Pendirian Virtual Office | PKP | NIB",
+        "link": "legalitas/badan-usaha",
+        "icon": <FaBuilding />
+    },
+    {
+        "name": "Konsultan Pajak",
+        "link": "legalitas/badan-usaha",
+        "icon": <FaBuilding />
+    },
+]
+
+export const DataPageLegal = {
+    legalItems: [
+        {
+            "name": "Pendirian PT",
+            "link": "pendirian-pt",
+            "icon": <FaBuilding />
+        },
+        {
+            "name": "Pendirian CV",
+            "link": "pendirian-cv",
+            "icon": <FaBuilding />
+        },
+        {
+            "name": "Pendirian Yayasan",
+            "link": "badan-usaha",
+            "icon": <FaBuilding />
+        },
+        {
+            "name": "Pendirian Firma Hukum",
+            "link": "badan-usaha",
+            "icon": <FaBuilding />
+        },
+        {
+            "name": "Pendirian Perkumpulan/Asosiasi",
+            "link": "badan-usaha",
+            "icon": <FaBuilding />
+        },
+        {
+            "name": "Pendirian Virtual Office | PKP | NIB",
+            "link": "badan-usaha",
+            "icon": <FaBuilding />
+        },
+    ],
+    explainImg: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236549/GaneshaAssets/xbmc8qinkfrafxaiudw5.svg",
+    head: (
+        <h1>
+            Apa Itu <span className="text-mainColor dark:text-baseColor rounded-3xl">Legalitas</span> Usaha?
+        </h1>
+    ),
+    desc: (
+        <h1>
+            Legalitas Usaha adalah kepatuhan suatu bisnis dengan aturan hukum yang berlaku untuk memastikan bahwa <span className="font-extrabold text-yellow-500">Bisnis mu beroperasi secara sah</span> dan sesuai dengan ketentuan hukum yang berlaku di Indonesia.
+        </h1>
+    ),
+    whyUs: [
+        {
+            title: "Fasilitas Lengkap",
+            description: "Ganesha Consulting menyediakan fasilitas lengkap melalui layanan legalitasnya, memastikan bahwa bisnis Anda diakui secara resmi di mata hukum."
+        },
+        {
+            title: "Cepat dan Terpercaya",
+            description: "Layanan Ganesha Consulting tidak hanya cepat, tetapi juga terpercaya. Kami memastikan proses legalitas berjalan lancar dan sesuai dengan standar hukum yang berlaku."
+        },
+        {
+            title: "Harga Terjangkau",
+            description: "Menawarkan harga yang sangat terjangkau, Ganesha Consulting memahami pentingnya efisiensi biaya bagi bisnis Anda tanpa mengorbankan kualitas pelayanan."
+        },
+        {
+            title: "Konsultasi Gratis",
+            description: "Ganesha Consulting memberikan fasilitas konsultasi gratis, memberikan pelanggan informasi dan panduan tambahan tanpa biaya tambahan."
+        },
+        {
+            title: "Pelayanan Satu Atap",
+            description: "Dengan Ganesha Consulting, Anda mendapatkan pelayanan satu atap yang mencakup semua kebutuhan legalitas bisnis Anda, memberikan kenyamanan dan efisiensi."
+        }
+    ],
+    benefit: [
+        {
+            icon: <BiSolidConversation />,
+            text: 'Free Konsultasi',
+        },
+        {
+            icon: <PiStampFill />,
+            text: 'Free Stempel Nama Perusahaan',
+        },
+        {
+            icon: <BiSolidReport />,
+            text: 'Free Template Laporan Keuangan',
+        },
+        {
+            icon: <RiBankCardFill />,
+            text: 'Free Pembukaan Rekening Baru',
+            desc: [
+                {
+                    bank: 'BCA',
+                    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png'
+                },
+                {
+                    bank: 'MayBank',
+                    url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoVofoAlnBTk1SLiKLa_H8mZSGbrYOgOyj_ZDA_bxUAmeghVMUD9Hm11HPzCeg2ddZV-T1M4V3Nv1Hhmi0AuOxUiHFycqEuMF6eZr0j1Wc-hTz6JUMDzImK6zISbFFnluNHIljxUAK0--kTNbjgOxwJr9UCeX8hENG97ibxdElrdMYoswj2HXvHw/w640-h146/Maybank.png'
+                },
+                {
+                    bank: 'Sinarmas',
+                    url: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Bank_Sinarmas.png'
+                },
+                {
+                    bank: 'Bank DKI',
+                    url: 'https://cdn.healthtechalpha.com/static/corporatesById/895.png'
+                }
+            ]
+        },
+    ],
+    whyLegal: [
+        {
+            title: "Kepatuhan Hukum",
+            points: [
+                {
+                    heading: "Mematuhi Peraturan dan Undang-Undang",
+                    description: "Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain."
+                },
+                {
+                    heading: "Menghindari Sanksi",
+                    description: "Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
+                }
+            ]
+        },
+        {
+            title: "Kepercayaan dan Kredibilitas",
+            points: [
+                {
+                    heading: "Kepercayaan Pelanggan",
+                    description: "Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas."
+                },
+                {
+                    heading: "Reputasi yang Baik",
+                    description: "Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
+                }
+            ]
+        },
+        {
+            title: "Perlindungan Hukum",
+            points: [
+                {
+                    heading: "Hak Kekayaan Intelektual",
+                    description: "Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan."
+                },
+                {
+                    heading: "Perlindungan Bisnis",
+                    description: "Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
+                }
+            ]
+        },
+        {
+            title: "Akses ke Pembiayaan",
+            points: [
+                {
+                    heading: "Pinjaman dan Investasi",
+                    description: "Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal."
+                },
+                {
+                    heading: "Subsidi dan Hibah",
+                    description: "Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
+                }
+            ]
+        },
+        {
+            title: "Kemudahan Ekspansi",
+            points: [
+                {
+                    heading: "Ekspansi Pasar",
+                    description: "Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru."
+                },
+                {
+                    heading: "Kemitraan Bisnis",
+                    description: "Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
+                }
+            ]
+        },
+        {
+            title: "Kepastian Usaha",
+            points: [
+                {
+                    heading: "Perlindungan Aset Pribadi",
+                    description: "Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis."
+                },
+                {
+                    heading: "Keberlanjutan Usaha",
+                    description: "Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
+                }
+            ]
+        }
+    ],
+    faqData: [
+        {
+            question: "Berapa lama pembuatan PT?",
+            answer: "Lama Proses Pembuatan PT di Ganesha Consulting adalah 2 Hari Kerja setelah proses tandatangan akta pendirian."
+        },
+        {
+            question: "Berapa banyak KBLI yang bisa dipilih?",
+            answer: "Total KBLI yang bisa dipilih di Ganesha Consulting sebanyak 15 KBLI."
+        },
+        {
+            question: "Apa saja syarat mendirikan PT?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Minimal dua pendiri yang merupakan WNI atau badan hukum Indonesia.,
+                        </li>
+                        <li>
+                            Akta pendirian yang disahkan oleh notaris.,
+                        </li>
+                        <li>
+                            Modal dasar minimal sesuai dengan ketentuan yang berlaku.,
+                        </li>
+                        <li>
+                            Nama perusahaan yang disetujui oleh Kemenkumham.,
+                        </li>
+                        <li>
+                            Domisili perusahaan yang jelas.,
+                        </li>
+                        <li>
+                            NPWP perusahaan.,
+                        </li>
+                        <li>
+                            Izin usaha dan dokumen pendukung lainnya.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apakah pendirian PT membutuhkan modal besar?",
+            answer: "Modal dasar minimal PT ditentukan oleh ketentuan yang berlaku, dan dapat disesuaikan dengan kemampuan pendiri."
+        },
+        {
+            question: "Apa itu KBLI?",
+            answer: "KBLI, atau Klasifikasi Baku Lapangan Usaha Indonesia, adalah sistem klasifikasi yang digunakan untuk menggolongkan berbagai jenis kegiatan usaha di Indonesia. KBLI disusun oleh Badan Pusat Statistik (BPS) dan digunakan sebagai acuan resmi dalam pendaftaran dan perizinan usaha di Indonesia."
+        },
+        {
+            question: "Apa Kegunaan KBLI?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Pendaftaran Usaha: Mengidentifikasi jenis kegiatan usaha saat pendaftaran.
+                        </li>
+                        <li>
+                            Perizinan: Membantu pemerintah dalam mengeluarkan izin usaha.
+                        </li>
+                        <li>
+                            Statistik dan Data: Mengumpulkan data ekonomi untuk perencanaan dan kebijakan.
+                        </li>
+                        <li>
+                            Penyusunan Regulasi: Dasar dalam membuat kebijakan dan regulasi.
+                        </li>
+                        <li>
+                            Analisis Ekonomi: Memfasilitasi analisis dan pengembangan sektor usaha.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Bolehkah pemegang saham menjadi pengurus PT?",
+            answer: "Boleh! Pemegang saham boleh menjadi Direktur ataupun menjadi Komisaris. Namun tidak boleh menjadi Direktur yang merangkap sebagai Komisaris."
+        },
+        {
+            question: "Bagaimana cara melakukan setor modal?",
+            answer: "Modal bisa langsung saja disetorkan ke dalam kas perusahaan."
+        },
+        {
+            question: "Apa saja jenis badan usaha selain PT?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            CV (Commanditaire Vennootschap): Persekutuan komanditer.
+                        </li>
+                        <li>
+                            Firma (Fa): Persekutuan yang didirikan untuk menjalankan usaha bersama.
+                        </li>
+                        <li>
+                            Perusahaan Perorangan: Usaha yang dimiliki dan dijalankan oleh satu orang.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa saja tanggung jawab pemegang saham dalam PT?",
+            answer: "Pemegang saham bertanggung jawab atas kewajiban perusahaan sebatas jumlah saham yang dimiliki."
+        }
+    ],
+    whyUsData: [
+        {
+            text: "Harga Ekonomis",
+            icon: <FaMoneyBill1Wave />
+        },
+        {
+            text: "Proses Super Cepat",
+            icon: <FaBoltLightning />
+        },
+        {
+            text: "Anti Ribet",
+            icon: <IoLeaf />
+        },
+        {
+            text: "Kreatif & Inovatif",
+            icon: <TbBulbFilled />
+        },
+        {
+            text: "Ditangani Profesional",
+            icon: <IoSparkles />
+        }
+    ]
+}

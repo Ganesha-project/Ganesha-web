@@ -1,8 +1,5 @@
-import { FaMoneyBill1Wave } from "react-icons/fa6";
-import { FaBoltLightning } from "react-icons/fa6";
-import { TbBulbFilled } from "react-icons/tb";
-import { IoSparkles } from "react-icons/io5";
-import { IoLeaf } from "react-icons/io5";
+
+import { DataPageLegal } from "@/app/Database";
 
 export const metadata = {
     title: "Kelebihan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
@@ -51,54 +48,22 @@ export const metadata = {
 export const RWhyUs = ({ color }) => {
     return (
         <>
-            <section className="md:px-24 2xl:px-80 px-5 my-20">
-                <div className={`bg-${color}-200 p-6 md:p-10 rounded-[40px] `}>
-                    <div>
-                        <h1 className={`bg-${color}-500 text-transparent bg-clip-text text-4xl md:text-6xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
-                            Kelebihan di <span className="bg-[#772A7D] text-transparent bg-clip-text">Ganesha Consulting</span> dibanding tempat lain
-                        </h1>
-                    </div>
-                    <div className="flex flex-col md:flex-col lg:flex-row mt-10 gap-4 justify-around items-center">
-                        <div className={`bg-${color}-500 w-full md:w-[25vw] p-6 md:p-10 rounded-[40px] h-fit lg:h-[33vh]`}>
-                            <div className="mb-4 flex justify-center">
-                                <FaMoneyBill1Wave color="white" size={50} />
+            <section className="md:px-24 px-5 my-20">
+                <div className={`bg-${color}-200 space-y-5 dark:bg-opacity-25 p-6 md:p-10 rounded-[40px] `}>
+                    <h1 className={`bg-${color}-500 text-transparent bg-clip-text text-xl md:text-4xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
+                        Kelebihan di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting</span> dibanding tempat lain
+                    </h1>
+                    <div className="md:flex md:flex-row flex-col gap-5">
+                        {DataPageLegal.whyUsData.map((el, idx) => (
+                            <div key={idx} className="flex flex-col gap-3 items-center p-5 bg-cyan-300 dark:bg-opacity-50 rounded-3xl md:w-[20%]">
+                                <span className="text-5xl h-12">
+                                    {el.icon}
+                                </span>
+                                <h1 className="text-xl text-center font-bold">
+                                    {el.text}
+                                </h1>
                             </div>
-                            <p className="font-bold text-2xl md:text-3xl text-center text-white">
-                                Harga Ekonomis
-                            </p>
-                        </div>
-                        <div className={`bg-${color}-500 w-full md:w-[25vw] p-6 md:p-10 rounded-[40px] h-fit lg:h-[33vh]`}>
-                            <div className="mb-4 flex justify-center">
-                                <FaBoltLightning color="white" size={50} />
-                            </div>
-                            <p className="font-bold text-2xl md:text-3xl text-center text-white">
-                                Proses Super Cepat
-                            </p>
-                        </div>
-                        <div className={`bg-${color}-500 w-full md:w-[25vw] p-6 md:p-10 rounded-[40px] h-fit lg:h-[33vh]`}>
-                            <div className="mb-4 flex justify-center">
-                                <IoLeaf color="white" size={50} />
-                            </div>
-                            <p className="font-bold text-2xl md:text-3xl text-center text-white">
-                                Anti Ribet
-                            </p>
-                        </div>
-                        <div className={`bg-${color}-500 w-full md:w-[25vw] p-6 md:p-10 rounded-[40px] h-fit lg:h-[33vh]`}>
-                            <div className="mb-4 flex justify-center">
-                                <TbBulbFilled color="white" size={50} />
-                            </div>
-                            <p className="font-bold text-2xl md:text-3xl text-center text-white">
-                                Kreatif & Inofatif
-                            </p>
-                        </div>
-                        <div className={`bg-${color}-500 w-full md:w-[25vw] p-6 md:p-10 rounded-[40px] h-fit lg:h-[33vh]`}>
-                            <div className="mb-4 flex justify-center">
-                                <IoSparkles color="white" size={50} />
-                            </div>
-                            <p className="font-bold text-2xl md:text-3xl text-center text-white">
-                                Ditangani Profesional
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>

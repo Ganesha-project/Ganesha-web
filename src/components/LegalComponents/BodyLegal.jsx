@@ -2,6 +2,7 @@ import Image from "next/image"
 import Head from 'next/head';
 import bodylegal from "../../public/BG/legalbody.jpg"
 import judge from "../../public/BG/judge_set1.jpg"
+import { DataPageLegal } from "@/app/Database";
 
 export const BodyLegal = () => {
     return (
@@ -60,113 +61,92 @@ export const BodyLegal = () => {
                                     "height": 60
                                 }
                             },
-                            "datePublished": "2024-02-08",
+                            "datePublished": "2024-02-08",  
                             "dateModified": "2024-02-08"
                         }
                     `}
                 </script>
             </Head>
 
-            <div className="bg-[#1ab49d] w-auto h-auto m-10 md:m-32 rounded-[40px]">
-                <div className="p-6 md:p-10 flex flex-col md:flex-col lg:flex-row gap-7">
-                    <Image
-                        src={bodylegal}
-                        className="w-full md:w-[54%] h-auto object-cover rounded-[35px]"
-                    />
-                    <h1 className="text-4xl md:text-5xl lg:text-8xl text-left font-extrabold tracking-wide leading-normal text-white self-end">
-                        Apa Itu <span className="text-[#0d4c42] rounded-3xl">Legalitas</span> Usaha?
-                    </h1>
-                </div>
-                <div className="px-6 md:px-10 pb-6 md:pb-10">
-                    <p className="font-medium text-white text-justify text-lg md:text-4xl">
-                        Legalitas Usaha adalah kepatuhan suatu bisnis dengan aturan hukum yang berlaku untuk memastikan bahwa <span className="font-extrabold bg-yellow-200 bg-clip-text text-transparent">Bisnis mu beroperasi secara sah</span> dan sesuai dengan ketentuan hukum yang berlaku di Indonesia.
-                    </p>
-                </div>
-            </div>
-
-
-            <div className="m-10 md:m-32">
-                <div className="flex flex-col md:flex-row">
-                    <h1 className="self-end leading-snug tracking-wide font-extrabold text-3xl md:text-6xl my-5 px-8 text-gray-800 p-5 rounded-[40px] bg-[#E7F2F2]">
-                        Apa Kelebihan Memiliki <span className="bg-[#1ab49d] text-transparent bg-clip-text">Legalitas</span>?
-                    </h1>
-                    <Image
-                        src={judge}
-                        className="dark:invert saturate-150 dark:hue-rotate-180 order-first lg:order-none w-full md:w-[50%] h-auto object-cover"
-                    />
-                </div>
-                <div className="flex">
-                    <div className="">
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                            <p className="font-extrabold text-lg md:text-2xl text-gray-800 p-3 md:p-5 rounded-[40px] bg-[#5EEAD4]">
-                                Menciptakan citra kredibilitas yang tinggi.
-                            </p>
-                            <p className="font-extrabold text-lg md:text-2xl text-white p-3 md:p-5 rounded-[40px] bg-[#1ab49d]">
-                                Perlindungan hukum bagi pemilik usaha
-                            </p>
-                            <p className="font-extrabold text-lg md:text-2xl text-white p-3 md:p-5 rounded-[40px] bg-[#1ab49d]">
-                                Akses ke pembiayaan seperti pinjaman bank atau investasi lebih baik
-                            </p>
-                            <p className="font-extrabold text-lg md:text-2xl text-white p-3 md:p-5 rounded-[40px] bg-[#1ab49d]">
-                                Pemenuhan persyaratan bisnis yang berlaku di Indonesia
-                            </p>
-                            <p className="font-extrabold text-lg md:text-2xl text-gray-800 p-3 md:p-5 rounded-[40px] bg-[#E7F2F2]">
-                                Kemudahan beroperasi tanpa kendala hukum
-                            </p>
-                            <p className="font-extrabold text-lg md:text-2xl text-gray-800 p-3 md:p-5 rounded-[40px] bg-[#5EEAD4]">
-                                Meningkatnya kepercayaan dimata pelanggan dan mitra bisnis
-                            </p>
+            <section className="space-y-20 mb-10">
+                <div className="md:mx-24 mx-5">
+                    <div className="flex flex-col md:flex-row items-center md:gap-5 rounded-3xl">
+                        <Image
+                            width={500}
+                            height={500}
+                            src={DataPageLegal.explainImg}
+                            className="w-full md:w-[54%] h-[35lvh] md:h-[50lvh] object-cover rounded-[35px]"
+                        />
+                        <div className="space-y-3 md:space-y-5">
+                            <div className="text-2xl md:text-4xl text-left font-extrabold tracking-wide leading-normal dark:text-white">
+                                {DataPageLegal.head}
+                            </div>
+                            <div className="font-medium dark:text-white text-justify text-lg md:text-4xl">
+                                {DataPageLegal.desc}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div className="m-10 md:m-32 flex flex-col items-center justify-center">
-                <div className=" ">
-                    <h1 className="bg-[#08695b] text-transparent bg-clip-text font-extrabold py-3 text-4xl md:text-7xl">Kemudahan Yang Kamu Dapatkan Di <span className="bg-[#682D79] text-transparent bg-clip-text">Ganesha Consulting </span>!</h1>
-                </div>
-                <div className="mt-6 flex flex-col gap-5 md:flex-row">
-                    <div className="flex justify-center items-center w-full md:w-40 h-40 bg-[#08695b] rounded-full">
-                        <p className="font-bold text-2xl md:text-center text-white p-10">Fasilitas Lengkap</p>
+                <div className="mx-5 md:mx-24 space-y-5">
+                    <div className="flex md:flex-row flex-col">
+                        <h1 className="self-end leading-snug tracking-wide font-extrabold text-3xl md:text-6xl  text-gray-800 p-5 rounded-3xl bg-[#E7F2F2]">
+                            Apa Kelebihan Memiliki <span className="bg-secondaryColor text-transparent bg-clip-text">Legalitas</span>?
+                        </h1>
+                        <Image
+                            width={500}
+                            height={500}
+                            src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236548/GaneshaAssets/vakr9ynkwlrqy3lb4qwb.svg'}
+                            className="order-first lg:order-none w-full md:w-[60%] h-[40lvh] object-cover"
+                        />
                     </div>
-                    <div className="flex justify-center items-center w-full md:w-[70vw] h-auto bg-[#179f8a] rounded-[40px]">
-                        <p className="font-medium text-xl md:text-left p-10 text-white">Ganesha Consulting menyediakan fasilitas lengkap melalui layanan legalitasnya, memastikan bahwa bisnis Anda diakui secara resmi di mata hukum.</p>
-                    </div>
-                </div>
-                <div className="mt-6 flex flex-col gap-5 md:flex-row">
-                    <div className="flex justify-center items-center w-full md:w-[70vw] h-auto bg-[#179f8a] rounded-[40px]">
-                        <p className="font-medium text-xl md:text-right p-10 text-white">Layanan Ganesha Consulting tidak hanya cepat, tetapi juga terpercaya. Kami memastikan proses legalitas berjalan lancar dan sesuai dengan standar hukum yang berlaku.</p>
-                    </div>
-                    <div className="order-first lg:order-none flex justify-center items-center w-full md:w-40 h-40 bg-[#08695b] rounded-full">
-                        <p className="font-bold text-2xl md:text-center text-white p-10">Cepat dan Terpercaya</p>
-                    </div>
-                </div>
-                <div className="mt-6 flex flex-col gap-5 md:flex-row">
-                    <div className="flex justify-center items-center w-full md:w-40 h-40 bg-[#08695b] rounded-full">
-                        <p className="font-bold text-2xl md:text-center text-white p-10">Harga Terjangkau</p>
-                    </div>
-                    <div className="flex justify-center items-center w-full md:w-[70vw] h-auto bg-[#179f8a] rounded-[40px]">
-                        <p className="font-medium text-xl md:text-left p-10 text-white">Menawarkan harga yang sangat terjangkau, Ganesha Consulting memahami pentingnya efisiensi biaya bagi bisnis Anda tanpa mengorbankan kualitas pelayanan.</p>
-                    </div>
-                </div>
-                <div className="mt-6 flex flex-col gap-5 md:flex-row">
-                    <div className="flex justify-center items-center w-full md:w-[70vw] h-auto bg-[#179f8a] rounded-[40px]">
-                        <p className="font-medium text-xl md:text-right p-10 text-white">Ganesha Consulting memberikan fasilitas konsultasi gratis, memberikan pelanggan informasi dan panduan tambahan tanpa biaya tambahan.</p>
-                    </div>
-                    <div className="order-first lg:order-none flex justify-center items-center w-full md:w-40 h-40 bg-[#08695b] rounded-full">
-                        <p className="font-bold text-2xl md:text-center text-white p-10">Konsultasi Gratis</p>
-                    </div>
-                </div>
-                <div className="mt-6 flex flex-col gap-5 md:flex-row">
-                    <div className="flex justify-center items-center w-full md:w-40 h-40 bg-[#08695b] rounded-full">
-                        <p className="font-bold text-2xl md:text-center text-white p-10">Pelayanan Satu Atap</p>
-                    </div>
-                    <div className="flex justify-center items-center w-full md:w-[70vw] h-auto bg-[#179f8a] rounded-[40px]">
-                        <p className="font-medium text-xl md:text-left p-10 text-white">Dengan Ganesha Consulting, Anda mendapatkan pelayanan satu atap yang mencakup semua kebutuhan legalitas bisnis Anda, memberikan kenyamanan dan efisiensi.</p>
+                    <div className="flex">
+                        <div className="">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Menciptakan citra kredibilitas yang tinggi.
+                                </p>
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Perlindungan hukum bagi pemilik usaha
+                                </p>
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Akses ke pembiayaan seperti pinjaman bank atau investasi lebih baik
+                                </p>
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Pemenuhan persyaratan bisnis yang berlaku di Indonesia
+                                </p>
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Kemudahan beroperasi tanpa kendala hukum
+                                </p>
+                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
+                                    Meningkatnya kepercayaan dimata pelanggan dan mitra bisnis
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+
+                <div className="m-5 md:m-24 flex flex-col space-y-5">
+                    <h1 className="bg-[#000000] text-transparent bg-clip-text font-extrabold text-center text-xl md:text-4xl">Kemudahan Yang Kamu Dapatkan Di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting </span>!</h1>
+                    <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
+                        {DataPageLegal.whyUs.map((el, idx) => (
+                            <div
+                                key={idx}
+                                className="space-y-3"
+                            >
+                                <h2 className="py-3 px-5 bg-mainColor bg-opacity-25 rounded-full md:text-2xl text-xl font-semibold text-center">
+                                    {el.title}
+                                </h2>
+                                <h3 className="py-4 px-5 bg-mainColor bg-opacity-15 rounded-3xl grow font-medium text-justify">
+                                    {el.description}
+                                </h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
         </>
     )

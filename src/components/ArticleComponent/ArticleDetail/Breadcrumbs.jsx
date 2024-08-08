@@ -1,4 +1,4 @@
-import { slugify } from "@/app/helper/slugify";
+import { slugify } from "@/helper/slugify";
 import Link from "next/link";
 import { TiHome } from "react-icons/ti";
 
