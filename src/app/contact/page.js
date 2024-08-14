@@ -1,8 +1,7 @@
-import fs from 'fs'
-import socmed from "../../public/BG/cs.jpg"
-import { ContactUsPage } from "@/components/ContactUsBanner";
-import { ImgProduk } from '@/components/ImgProduk';
 import { BodyContact } from "@/components/BodyContact";
+import { Form } from "@/components/ContactComponents/Form";
+import { Maps } from "@/components/ContactComponents/Maps";
+import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
     title: "Hubungi Kami - Ganesha Consulting",
@@ -52,9 +51,10 @@ export default async function ContactPage() {
 
     return (
         <>
-            <ImgProduk styles={'mt-[2vw]'} socmed={socmed} stylesImg={'h-[90vh] w-auto dark:invert saturate-150 dark:hue-rotate-180'} />
-            <ContactUsPage/>
+            <BannerService />
             <BodyContact />
+            <Maps/>
+            <Form />
         </>
     )
 }

@@ -1,5 +1,4 @@
 import { DataWhyUs } from "@/app/Database"
-import { Headtag } from "./ArticleComponent/HeadTag"
 import { Title } from "./Title"
 
 export const WhyUs = () => {

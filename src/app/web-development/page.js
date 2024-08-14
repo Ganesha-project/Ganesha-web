@@ -1,12 +1,8 @@
-// import fs from 'fs'
-// import socmed from '../../../public/BG/web.png';
-// import { BannerText } from '@/components/BannerText';
-// import { ImgProduk } from '@/components/ImgProduk';
-// import { CardWeb } from '@/components/WebComponents/CardWeb';
-// import { HeaderWeb } from '@/components/WebComponents/HeaderWeb';
-// import { WebBody } from '@/components/WebComponents/WebBody';
-
+import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
+import { WebPackages } from "../../../public/DB/WebPackages";
+import { HeaderWeb } from "@/components/WebComponents/HeaderWeb";
+import { WebBody } from "@/components/WebComponents/WebBody";
 
 export const metadata = {
     title: "Jasa Pembuatan Website - Ganesha Consulting",
@@ -53,29 +49,20 @@ export const metadata = {
 
 
 export default async function WebPage() {
-    // const main = "Website";
-    // const other = "";
-    // const other2 = "Jasa Pembuatan";
-    // const secondary =
-    //     "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.";
-    // let rawData = await fs.promises.readFile('public/JSON/WebPrice.json', 'utf-8');
-    // let data = JSON.parse(rawData);
 
     return (
         <>
             <BannerService />
-            {/* <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-sky-400'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-sky-200'
-                styleR='bg-sky-200'
-                href1='#packages' />
-            <CardWeb data={data} />
+            <ReusableCards
+                data={WebPackages}
+                cardColor={'bg-sky-100'}
+                typeColor={'text-sky-600'}
+                priceColor={'text-sky-800'}
+                buttonColor={'bg-sky-500'}
+                label={'Paket Pembuatan Website'}
+            />
             <HeaderWeb />
-            <WebBody /> */}
+            <WebBody />
         </>
     );
 }

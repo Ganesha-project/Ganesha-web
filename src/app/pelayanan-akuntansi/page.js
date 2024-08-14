@@ -50,7 +50,7 @@ export const metadata = {
 
 
 export default async function PelayananAkuntansi() {
-    let rawData = await fs.promises.readFile('public/JSON/Manajemen.json', 'utf-8');
+    let rawData = await fs.promises.readFile('public/JSON/Akuntansi.json', 'utf-8');
     let data = JSON.parse(rawData);
 
     return (

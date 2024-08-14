@@ -1,8 +1,8 @@
 import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
-import { Tb24Hours, TbWorldWww } from "react-icons/tb";
+import { Tb24Hours, TbMail, TbMailFilled, TbPhone, TbPhoneCall, TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
-import { RiFilePaperFill } from "react-icons/ri";
+import { RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, RiMailFill, RiPhoneFill, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
@@ -18,6 +18,7 @@ import { FaBoltLightning } from "react-icons/fa6";
 import { TbBulbFilled } from "react-icons/tb";
 import { IoSparkles } from "react-icons/io5";
 import { IoLeaf } from "react-icons/io5";
+import { IoIosCall } from "react-icons/io";
 
 export const legalitasUsaha = [
     {
@@ -114,13 +115,13 @@ export const DataProduct = [
         keywords: ["website development", "pembuatan website", "pengembangan situs web", "desain web", "web developer", "jasa pembuatan website"]
     },
     {
-        href: "/sosmed",
+        href: "/social-media-management",
         icon: <HiMiniDevicePhoneMobile />,
         text: "Social Media Management",
         keywords: ["social media management", "manajemen media sosial", "sosmed", "pengelolaan sosmed", "strategi media sosial", "konten sosmed"]
     },
     {
-        href: "/legalitas/badan-usaha",
+        href: "/badan-usaha",
         icon: <FaBuildingWheat />,
         text: "Badan Usaha Lainnya",
         keywords: ["badan usaha lainnya", "jenis badan usaha", "pendirian badan usaha", "dokumen badan usaha", "usaha kecil", "usaha menengah"]
@@ -132,7 +133,7 @@ export const DataProduct = [
         keywords: ["konsultan pajak", "jasa konsultan pajak", "perencanaan pajak", "penyusunan pajak", "laporan pajak", "konsultasi pajak"]
     },
     {
-        href: "/izin-tambahan",
+        href: "/perizinan",
         icon: <RiFilePaperFill />,
         text: "Izin Tambahan",
         keywords: ["izin tambahan", "perijinan tambahan", "dokumen izin", "proses perijinan", "syarat perijinan", "izin usaha"]
@@ -204,11 +205,11 @@ export const NavLinks = {
             label: 'All Services'
         },
         {
-            href: '/sosmed',
+            href: '/social-media-management',
             label: 'Social Media Management'
         },
         {
-            href: '/web',
+            href: '/web-development',
             label: 'Website Development'
         },
         {
@@ -250,15 +251,15 @@ export const NavLinks = {
     ],
     legalities: [
         {
-            href: '/legalitas/pendirian-pt',
+            href: '/pendirian-pt',
             label: 'Legalitas PT'
         },
         {
-            href: '/legalitas/pendirian-cv',
+            href: '/pendirian-cv',
             label: 'Legalitas CV'
         },
         {
-            href: '/legalitas/badan-usaha',
+            href: '/badan-usaha',
             label: 'Legalitas Badan Usaha Lainnya'
         },
     ],
@@ -318,31 +319,9 @@ export const DataBanner = [
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png",
             mainText: "Layanan Pendirian Badan Usaha",
             desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat dan andal untuk membantu Anda dalam melengkapi semua aspek legalitas dan perizinan yang diperlukan!",
-            accent: "bg-[#F9A7A0] dark:bg-[#f9a7a095]",
+            accent: "bg-[#9da8b6] dark:bg-[#64758B95]",
             accent2: "bg-[#F6B81C] dark:bg-[#f6b81c99]",
-            textAccent: "dark:text-[#F9A7A0] text-[#f09087]"
-        },
-    },
-    {
-        href: "badan-usaha",
-        data: {
-            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png",
-            mainText: "Layanan Pendirian Badan Usaha",
-            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat dan andal untuk membantu Anda dalam melengkapi semua aspek legalitas dan perizinan yang diperlukan!",
-            accent: "bg-[#F9A7A0] dark:bg-[#f9a7a095]",
-            accent2: "bg-[#F6B81C] dark:bg-[#f6b81c99]",
-            textAccent: "dark:text-[#F9A7A0] text-[#f09087]"
-        },
-    },
-    {
-        href: "web-development",
-        data: {
-            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/dktt01pu9es4cmoyr31t.png",
-            mainText: "Web Development Service",
-            desc: "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.",
-            accent: "bg-[#6ABDE7] dark:bg-[#6abde776]",
-            accent2: "bg-[#ec8e8e] dark:bg-[#ff515177]",
-            textAccent: "dark:text-[#6ABDE7] text-[#42aade]"
+            textAccent: "dark:text-[#bac6da] text-[#4e4e4e]"
         },
     },
     {
@@ -362,9 +341,9 @@ export const DataBanner = [
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236583/GaneshaAssets/phln59clbvfecosy0msj.png",
             mainText: "Social Media Management",
             desc: "Sosial Media Manajemen adalah kunci sukses modern untuk membentuk citra merek yang kuat, berinteraksi secara efektif dengan pelanggan, dan menavigasi dinamika digital dengan kesan yang positif.",
-            accent: "bg-[#A6DCA2] dark:bg-[#A6DCA276]",
+            accent: "bg-[#a889ef] dark:bg-[#a889ef96]",
             accent2: "bg-[#D89BC6] dark:bg-[#d89bc6a3]",
-            textAccent: "dark:text-[#A6DCA2] text-[#7ddb76]"
+            textAccent: "dark:text-[#baa9e3] text-[#8B5CF6]"
         },
     },
     {
@@ -385,7 +364,7 @@ export const DataBanner = [
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722231099/GaneshaAssets/av6v4iikb50xagea3vwx.svg",
             mainText: "System Audit",
             desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.",
-            accent: "bg-[#cfe5dd] dark:bg-[#8cb0d380]",
+            accent: "bg-[#ead08d] dark:bg-[#ead08d99]",
             accent2: "bg-[#ec8e8e] dark:bg-[#ff515177]",
             textAccent: "dark:text-[#cfe5dd] text-[#657871]"
         },
@@ -402,23 +381,12 @@ export const DataBanner = [
         },
     },
     {
-        href: "pelayanan-manajemen",
-        data: {
-            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236552/GaneshaAssets/nqpcv7r6kvy4xg9x4dyc.svg",
-            mainText: "Pelayanan Manajemen",
-            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
-            accent: "bg-[#e39f8c] dark:bg-[#e39f8cb5]",
-            accent2: "bg-[#006AA4] dark:bg-[#006ba4ab]",
-            textAccent: "dark:text-[#e39f8c] text-[#DF6443]"
-        },
-    },
-    {
         href: "pelayanan-akuntansi",
         data: {
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236557/GaneshaAssets/f7ivo4yqe6wkvzvrkcun.svg",
             mainText: "Pelayanan Akuntantsi",
             desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.",
-            accent: "bg-[#27b19c] dark:bg-[#019C85b5]",
+            accent: "bg-[#70bcb1] dark:bg-[#70bcb1a8]",
             accent2: "bg-[#FF9092] dark:bg-[#ff9092d1]",
             textAccent: "dark:text-[#019c85b2] text-[#019C85]"
         },
@@ -435,14 +403,59 @@ export const DataBanner = [
         },
     },
     {
+        href: "pelayanan-manajemen",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236552/GaneshaAssets/nqpcv7r6kvy4xg9x4dyc.svg",
+            mainText: "Pelayanan Manajemen",
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
+            accent: "bg-[#e39f8c] dark:bg-[#e39f8cb5]",
+            accent2: "bg-[#006AA4] dark:bg-[#006ba4ab]",
+            textAccent: "dark:text-[#e39f8c] text-[#DF6443]"
+        },
+    },
+    {
         href: "haki",
         data: {
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236555/GaneshaAssets/gzm4wdyvieietlozpwbt.svg",
             mainText: "HAKI - Hak Kekayaan Intelektual",
             desc: "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami, memberikan keunggulan kompetitif.",
             accent: "bg-[#eb9090] dark:bg-[#eb9090]",
-            accent2: "bg-[#FFEFD5] dark:bg-[#FFEFD5]",
+            accent2: "bg-[#aa9168] dark:bg-[#aa9168]",
             textAccent: "dark:text-[#eb9090] text-[#eb9090]"
+        },
+    },
+    {
+        href: "price-list",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/gdoh9ffyjrko6vj4gms3.svg",
+            mainText: "Daftar Harga Paket Kami",
+            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda. Klik untuk melihat harga dan dapatkan layanan terbaik dari kami!",
+            accent: "bg-[#cf9898] dark:bg-[#cd7575]",
+            accent2: "bg-[#7FAEF1] dark:bg-[#7FAEF1]",
+            textAccent: "dark:text-[#eb9090] text-[#eb9090]"
+        },
+    },
+    {
+        href: "contact",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/lless9yoyqqflx15prvq.svg",
+            mainText: "Layanan Konsultasi 24 jam!",
+            desc: "Selalu Siap Memberikan Solusi Terbaik untuk Anda!",
+            accent: "bg-[#b5b9dd] dark:bg-[#42497A]",
+            accent2: "bg-[#FE5455] dark:bg-[#FE5455]",
+            textAccent: "dark:text-[#c0c4e8] text-[#6f79c3]"
+        },
+    },
+    {
+        href: "about-us",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/jdmjdjpcfgaa51jxv85u.png",
+            mainText: "One-stop Solution for your Business!",
+            desc: "Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya. Lebih Lanjut",
+            accent: "bg-[#D398D9] dark:bg-[#d298d98e]",
+            accent2: "bg-[#75297C] dark:bg-[#75297C]",
+            textAccent: "dark:text-[#D398D9] text-[#71237a]",
+            visibility: "hidden"
         },
     },
 ]
@@ -2594,6 +2607,7 @@ export const DataPageLegal = {
         }
     ]
 }
+
 export const dataPageCV = {
     whyCV: [
         {
@@ -2806,5 +2820,254 @@ export const dataPageCV = {
                 </>
             )
         }
+    ]
+}
+
+export const dataPageBadanUsaha = {
+    faqDataBU: [
+        {
+            question: "Apa itu Yayasan?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Yayasan adalah badan hukum yang didirikan untuk tujuan sosial, kemanusiaan, atau keagamaan. Yayasan tidak bertujuan untuk mencari keuntungan dan memiliki aset yang digunakan untuk mencapai tujuan sosialnya.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa syarat pendirian Yayasan?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>Pendiri: Minimal dua orang sebagai pendiri.</li>
+                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
+                        <li>Anggaran Dasar: Berisi tujuan, struktur organisasi, dan cara pengelolaan.</li>
+                        <li>Kepengurusan: Memiliki pengurus dan penasihat.</li>
+                        <li>Domisili: Alamat yang jelas.</li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa itu Perkumpulan?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Perkumpulan adalah organisasi yang terdiri dari sekelompok orang yang bergabung untuk tujuan tertentu. Biasanya perkumpulan berfokus pada kegiatan sosial, profesional, atau kegiatan yang bersifat komunitas.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa syarat mendirikan Perkumpulan?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>Pendiri: Minimal tiga orang.</li>
+                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
+                        <li>Anggaran Dasar: Menyusun struktur, tujuan, dan cara pengelolaan.</li>
+                        <li>Pendaftaran: Mengurus pendaftaran di instansi terkait.</li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa itu Asosiasi?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Asosiasi adalah organisasi yang dibentuk untuk tujuan tertentu yang biasanya melibatkan anggota dengan kepentingan yang sama, seperti profesional atau hobi.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa syarat mendirikan Asosiasi?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>Pendiri: Minimal dua orang.</li>
+                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
+                        <li>Anggaran Dasar: Mencakup struktur, tujuan, dan pengelolaan.</li>
+                        <li>Pendaftaran: Harus didaftarkan di instansi pemerintah yang relevan.</li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa itu Firma Hukum?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Firma hukum adalah bentuk badan usaha di bidang hukum yang dibentuk oleh sekelompok pengacara atau konsultan hukum yang bekerja sama.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apa syarat mendirikan Firma Hukum?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>Pendiri: Beberapa orang yang memenuhi syarat sebagai pengacara.</li>
+                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
+                        <li>Pendaftaran: Harus terdaftar di Pengadilan Negeri.</li>
+                        <li>Lisensi: Memiliki izin praktik dari organisasi profesi hukum.</li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Apakah Yayasan dapat melakukan kegiatan komersial?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Ya, yayasan dapat melakukan kegiatan komersial untuk mendukung tujuan sosialnya, namun keuntungan dari kegiatan tersebut harus digunakan untuk kegiatan yang sesuai dengan tujuan yayasan dan tidak boleh dibagikan kepada pendiri atau pengurus.
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        {
+            question: "Bagaimana mengurus perubahan struktur atau anggaran dasar di Badan Usaha Diatas?",
+            answer: (
+                <>
+                    <ul className="list-item list-decimal mx-5">
+                        <li>
+                            Yayasan: Perubahan harus disetujui oleh pengurus dan diubah akta pendirian di hadapan notaris, lalu didaftarkan ulang di Kemenkumham.
+                        </li>
+                        <li>
+                            Perkumpulan dan Asosiasi: Perubahan harus disetujui oleh anggota dan diubah akta pendirian di hadapan notaris, lalu didaftarkan di Kemenkumham.
+                        </li>
+                        <li>
+                            Firma Hukum: Perubahan harus diubah dalam akta pendirian oleh notaris dan diberitahukan kepada Pengadilan Negeri.
+                        </li>
+                    </ul>
+                </>
+            )
+        }
+    ]
+}
+
+export const dataContact = {
+    mail: [
+        {
+            label: "Email",
+            icon: <TbMailFilled />,
+            data: "ganehsamultikreatif@gmail.com",
+            link: "mailto:ganehsamultikreatif@gmail.com"
+        },
+        {
+            label: "Email",
+            icon: <TbMail />,
+            data: "commercial@ganeshaconsulting.co.id",
+            link: "mailto:commercial@ganeshaconsulting.co.id"
+        }
+    ],
+    phone: [
+        {
+            label: "Phone",
+            icon: <IoIosCall />,
+            data: "+62 888 712 7000",
+            link: "tel:628887127000"
+        }
+    ],
+    media: [
+        {
+            label: "Instagram",
+            icon: <RiInstagramFill />,
+            data: "@ganeshamultikreatif",
+            link: "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        },
+        {
+            label: "FaceBook",
+            icon: <RiFacebookBoxFill />,
+            class: "bg-[#EA5554] !text-white",
+            data: "Ganesha Consulting",
+            link: "https://www.facebook.com/profile.php?id=61555739807086"
+        },
+        {
+            label: "LinkedIn",
+            icon: <RiLinkedinFill />,
+            data: "Ganesha Multi Kreatif",
+            link: "https://www.linkedin.com/company/ganesha-multi-kreatif/"
+        },
+        {
+            label: "WhatsApp",
+            icon: <RiWhatsappFill />,
+            data: "+62 888 712 7000",
+            link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
+        }
+    ],
+    address: [
+        {
+            label: "Operational Office",
+            data: "Jl. Raya Masjid Al Hidayah No.5, RT.6/RW.7, Pejaten Barat, Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510",
+            embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126905.92489499568!2d106.7575353514891!3d-6.288666897638287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3007a6e8e39%3A0xf83b477d03a6931f!2sGANESHA%20CONSULTING%20-%20OPERATIONAL!5e0!3m2!1sid!2sid!4v1723453298072!5m2!1sid!2sid",
+            link: "https://maps.app.goo.gl/jvz8ScJZtUmAnT7SA"
+        },
+        {
+            label: "Head Office",
+            data: "Menara Cakrawala 12th Floor Unit 5A, Jalan M.H. Thamrin, Desa/Kelurahan Kebon Sirih, Kec. Menteng, Kota Adm. Jakarta Pusat, Provinsi DKI Jakarta 10340",
+            embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.586712234682!2d106.82116857499005!3d-6.1860248938015285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f428abe15763%3A0x7c3a05b23a1bfef!2sMenara%20Cakrawala!5e0!3m2!1sid!2sid!4v1723453764481!5m2!1sid!2sid",
+            link: "https://maps.app.goo.gl/8wg4sGKQiffsFRML8"
+        }
+    ]
+}
+
+export const dataFormContact = [
+    {
+        placeholder: "Nama",
+        name: "nama"
+    },
+    {
+        placeholder: "Email",
+        name: "email"
+    },
+    {
+        placeholder: "Telepon",
+        name: "phone"
+    },
+]
+
+export const dataAboutus = {
+    content: (
+        <>
+            <p>
+                Kami Ganesha Multi Kreatif adalah penyedia layanan terpadu yang mengedepankan profesionalisme dan inovasi untuk mendukung kesuksesan bisnis Anda. Kami adalah semangat anak muda yang mengedepankan kreativitas dan professionalitas. "Ganesha" merupakan simbol dari harapan dan keberuntungan, sementara "Multi Kreatif" mencerminkan kemampuan serbaguna kami.
+            </p>
+            <p>
+                Sebagai konsultan yang inovatif, kami menawarkan berbagai macam layanan diantaranya adalah Pendirian Badan Usaha, Pengurusan Perizinan, Pembuatan Website, Desain Grafis, Pengelolaan Sosial Media, Konsultasi Pajak dan layanan eksklusif lainnya. Kami berkomitmen untuk memberikan pelayanan yang berkualitas dan kreatif, menjadikan kami destinasi satu atap untuk mejadi solusi kesuksesan bisnis Anda.
+            </p>
+        </>
+    ),
+    vision: (
+        <>
+            <p>
+                Menjadikan kami pusat kreativitas dan solusi bisnis terkemuka kepada klien untuk mencapai potensi penuh melalui berbagai macam layanan yang kami berikan.
+            </p>
+        </>
+    ),
+    mission: [
+        "Menjadi Mitra Terpercaya dalam Solusi Legalitas",
+        "Menciptakan Website yang Menarik dan Fungsional",
+        "Memberikan Layanan Perpajakan yang Profesional",
+        "Menyediakan Layanan Perizinan yang Cepat dan Efisien",
+        "Menyediakan Beragam Jasa Lainnya dengan Kualitas Terbaik"
+    ],
+    support: [
+        "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236583/GaneshaAssets/dyk0z2tljjojwiu6sjiy.png",
+        "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/ujefi3yj3hdylvkfy8cj.png",
+        "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/isqbllhdm2budvmyd005.png",
     ]
 }

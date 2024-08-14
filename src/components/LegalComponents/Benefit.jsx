@@ -14,7 +14,7 @@ export const Benefit = ({ color, title, className, iconClassName, icons }) => {
                     {DataPageLegal.benefit.map((el, idx) => (
                         <div
                             key={idx}
-                            className={`p-5 md:w-[30%] grow bg-${color}-100 dark:bg-opacity-15 rounded-3xl flex items-center flex-col space-y-5`}
+                            className={`p-5 md:w-[30%] grow bg-${color}-100 dark:bg-opacity-25 rounded-3xl flex items-center flex-col space-y-5`}
                         >
                             <span className={`text-5xl text-${color}-700`}>
                                 {el.icon}

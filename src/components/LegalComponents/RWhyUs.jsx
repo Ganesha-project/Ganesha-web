@@ -56,10 +56,10 @@ export const RWhyUs = ({ color }) => {
                     <div className="flex md:flex-row flex-col gap-5">
                         {DataPageLegal.whyUsData.map((el, idx) => (
                             <div key={idx} className={`bg-${color}-500 flex flex-col gap-3 items-center p-5 dark:bg-opacity-50 rounded-3xl md:w-[20%]`}>
-                                <span className="text-5xl h-12">
+                                <span className={`text-white text-5xl h-12`}>
                                     {el.icon}
                                 </span>
-                                <h1 className="text-xl text-center font-bold">
+                                <h1 className="text-xl text-white text-center font-bold">
                                     {el.text}
                                 </h1>
                             </div>

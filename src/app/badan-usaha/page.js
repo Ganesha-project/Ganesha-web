@@ -1,14 +1,14 @@
-// import legal from '../../../../public/BG/Yayasan.png'
-// import fs from 'fs'
-// import { ImgProduk } from '@/components/ImgProduk'
-// import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
-// import { BannerBadanUsaha } from '@/components/LegalComponents/BannerBadanUsaha';
-// import { CardPriceBadanUsaha } from '@/components/LegalComponents/CardPriceBadanUsaha';
-// import { FaqProduct } from '@/components/LegalComponents/FaqProduct';
-
+import { FaqProduct } from "@/components/LegalComponents/FaqProduct";
+import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
+import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
+import { BadanUsahaPackages } from "../../../public/DB/PTPackages";
+import { Benefit } from "@/components/LegalComponents/Benefit";
+import { ClientPhotos } from "@/components/ClientPhotos";
+import { Faqs } from "@/components/LegalComponents/Faqs";
+import { dataPageBadanUsaha } from "../Database";
 
-export const metadata = {
+const metadata = {
     title: "Pendirian Badan Usaha dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
     description: "Pendirian badan usaha tanpa ribet dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan badan usaha Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!",
     keywords: "pendirian badan usaha, layanan pendirian badan usaha, Ganesha Consulting, layanan cepat badan usaha, layanan terpercaya badan usaha, harga terjangkau badan usaha",
@@ -53,17 +53,25 @@ export const metadata = {
 
 
 export default async function PendirianBadanUsaha() {
-    // let rawData = await fs.promises.readFile('public/JSON/BadanUsaha.json', 'utf-8');
-    // let data = JSON.parse(rawData);
-
     return (
         <>
-            {/* <ImgProduk socmed={legal} styles='bg-teal-300' />
-            <CardPriceBadanUsaha data={data} />
-            <BannerBadanUsaha />
-            <FaqProduct />
-            <RWhyUs color={"slate"} /> */}
             <BannerService />
+            <ReusableCards
+                data={BadanUsahaPackages}
+                cardColor={'bg-gray-200'}
+                typeColor={'text-gray-600'}
+                priceColor={'text-gray-800'}
+                buttonColor={'bg-gray-500'}
+                label={'Paket Pendirian Badan Usaha'}
+            />
+            <ClientPhotos />
+            <Faqs
+                className2={'!bg-gray-300 dark:!bg-opacity-25 w-full'}
+                text={'FAQ'}
+                color={'gray'}
+                data={dataPageBadanUsaha.faqDataBU}
+            />
+            <RWhyUs color={"gray"} />
         </>
     )
 }

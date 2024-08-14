@@ -28,7 +28,7 @@ export const ClientLogo = () => {
                 <Title text={'Our Clients'} className={'mb-10'}/>
                 <div className="flex flex-wrap gap-5 justify-center">
                     {data.map((el, index) => (
-                        <div key={index} className="dark:bg-white  bg-opacity-50 rounded-full h-32 w-32 flex items-center p-2 relative group">
+                        <div key={index} className="dark:bg-white  bg-opacity-50 rounded-[30px] h-32 w-32 flex items-center p-2 relative group">
                             <img
                                 className="object-contain w-full h-full"
                                 src={el}

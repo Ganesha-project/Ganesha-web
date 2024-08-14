@@ -9,9 +9,9 @@ export const ExtrasCard = ({ data, accent1, accent2 }) => {
                         <h1 className={`${accent1} mb-10 mx-10 font-extrabold text-3xl lg:text-4xl text-center uppercase text-white rounded-full p-5`}>{type.name}</h1>
                         <div className='px-5 flex flex-col lg:flex-row gap-10 flex-wrap justify-center'>
                             {type.products.map((product, productIndex) => (
-                                <div key={productIndex} className={`${accent2} flex-shrink-0 lg:w-[50lvh] md:w-[45lvh] w-[40lvh] hover:bg-opacity-50 p-5 text-gray-900 flex flex-col items-center justify-center rounded-[40px]`}>
+                                <div key={productIndex} className={`${accent2} flex-shrink-0 lg:w-[50lvh] md:w-[45lvh] w-[40lvh] hover:bg-opacity-50 dark:bg-opacity-100 duration-300 dark:hover:brightness-110 p-5 text-gray-900 flex flex-col items-center justify-center rounded-[40px]`}>
                                     <h1 className='font-bold text-2xl text-center lg:text-center'>{product.name}</h1>
-                                    <p className='mt-3 flex-grow font-semibold text-lg text-center lg:text-left'>{product.descriptions}</p>
+                                    <p className='mt-3 flex-grow font-medium text-lg text-center lg:text-justify'>{product.descriptions}</p>
                                     <a href={waLink} className={`${accent1} hover:bg-opacity-50 p-3 rounded-[40px] mt-5 w-full text-center text-white font-bold block lg:inline-block`}>
                                         Konsultasi Sekarang
                                     </a>

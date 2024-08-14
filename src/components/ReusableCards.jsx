@@ -8,7 +8,7 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
             <section className="md:m-24 m-5 space-y-5">
                 <div className="flex justify-center">
                     {label ? (
-                        <h1 className={`${cardColor} ${priceColor} rounded-full w-fit px-5 py-5 font-semibold md:text-5xl text-2xl uppercase`}>
+                        <h1 className={`${cardColor} ${priceColor} text-center rounded-full w-fit px-5 py-5 font-semibold md:text-5xl text-2xl uppercase`}>
                             {label}
                         </h1>
                     ) : null}
@@ -28,10 +28,10 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
                                         {el.type}
                                     </h1>
                                     <h3 className="text-center line-through text-lg text-red-600">
-                                        {formatToRupiah(el.priceOriginal)}
+                                        {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                                     </h3>
                                     <h2 className={`${priceColor ? priceColor : 'text-cyan-800'} font-bold text-3xl`}>
-                                        {formatToRupiah(el.price)}
+                                        {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
                                     <a
                                         href={el.link}
@@ -39,11 +39,14 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
                                         Konsultasi Sekarang
                                     </a>
                                 </div>
-                                <div className="absolute top-[-30px] right-[-10px]">
-                                    <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-xl animate-pulse">
-                                        OFF {el.discount}%
-                                    </p>
-                                </div>
+                                {el.discount !== 0 ? (
+
+                                    <div className="absolute top-[-30px] right-[-10px]">
+                                        <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-xl animate-pulse">
+                                            OFF {el.discount}%
+                                        </p>
+                                    </div>
+                                ) : null}
                                 <div>
                                     {el.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-center gap-3">
