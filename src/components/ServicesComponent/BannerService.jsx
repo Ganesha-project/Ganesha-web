@@ -17,12 +17,12 @@ export const BannerService = () => {
     return (
         <section className="relative overflow-hidden">
             <div className="flex justify-center">
-                <Image
+                <img
                     src={bannerImage}
                     alt={mainText}
                     width={500}
-                    height={500}
-                    className="absolute z-20 md:bottom-0 md:right-0 w-[60vw] md:w-[50vw] h-auto top-20"
+                    height={1000}
+                    className="absolute object-cover z-20 md:bottom-0 md:right-0 w-[60vw] md:w-[50vw] h-auto md:top-auto top-20"
                 />
             </div>
             <div className="absolute w-full">

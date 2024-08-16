@@ -1,7 +1,10 @@
 import { BodyContact } from "@/components/BodyContact";
 import { Form } from "@/components/ContactComponents/Form";
 import { Maps } from "@/components/ContactComponents/Maps";
+import { Faqs } from "@/components/LegalComponents/Faqs";
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { FaqMainData } from "../Database";
+import { FaInfoCircle } from "react-icons/fa";
 
 export const metadata = {
     title: "Hubungi Kami - Ganesha Consulting",
@@ -53,8 +56,77 @@ export default async function ContactPage() {
         <>
             <BannerService />
             <BodyContact />
-            <Maps/>
+            <Maps />
             <Form />
+            <Faqs
+                text={'FAQ Social Media Management'}
+                icons={<FaInfoCircle />}
+                className2={'dark:!bg-opacity-100 !text-gray-800'}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Sosmed]} />
+            <Faqs
+                text={'FAQ Web Development'}
+                icons={<FaInfoCircle />}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Web]} />
+            <Faqs
+                text={'FAQ Accounting'}
+                icons={<FaInfoCircle />}
+                className2={'dark:!bg-opacity-100 !text-gray-800'}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Accounting]} />
+            <Faqs
+                text={'FAQ Audit'}
+                icons={<FaInfoCircle />}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Audit]} />
+            <Faqs
+                text={'FAQ Badan Usaha'}
+                icons={<FaInfoCircle />}
+                className2={'dark:!bg-opacity-100 !text-gray-800'}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.BadanUsaha]} />
+            <Faqs
+                text={'FAQ HAKI'}
+                icons={<FaInfoCircle />}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Haki]} />
+            <Faqs
+                text={'FAQ Perpajakkan'}
+                icons={<FaInfoCircle />}
+                className2={'dark:!bg-opacity-100 !text-gray-800'}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Pajak]} />
+            <Faqs
+                text={'FAQ Perizinan'}
+                icons={<FaInfoCircle />}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Perizinan]} />
+            <Faqs
+                text={'FAQ Software Management System'}
+                icons={<FaInfoCircle />}
+                className2={'dark:!bg-opacity-100 !text-gray-800'}
+                className={'!text-left !justify-start'}
+                iconClassName={'text-3xl'}
+                color={'red'}
+                data={[...FaqMainData.Software]} />
+
         </>
     )
 }

@@ -1,7 +1,3 @@
-import fs from 'fs'
-import socmed from '../../public/BG/tax.png';
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk';
 import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
@@ -50,28 +46,10 @@ export const metadata = {
 
 
 export default async function KonsultanPajakPage() {
-    const main = "Pajak";
-    const other = "";
-    const other2 = "Konsultan";
-    const secondary =
-        "Optimalkan struktur pajak perusahaan Anda dengan bantuan Konsultan Pajak kami. Solusi efisien untuk mengelola kewajiban pajak dan memastikan kepatuhan peraturan.";
-    let rawData = await fs.promises.readFile('public/JSON/Pajak.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
             <BannerService />
-            {/* 
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-[#84534C]'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-[#F2E6DD]'
-                styleR='bg-[#F2E6DD]'
-                href1='#packages' /> */}
-            <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} />
+            {/* <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} /> */}
         </>
     );
 }

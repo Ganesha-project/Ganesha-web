@@ -82,3 +82,8 @@ body {
 .logo {
   mix-blend-mode: multiply;
 }
+
+.blurry {
+  -webkit-backdrop-filter: blur(24px) !important;
+  backdrop-filter: blur(24px) !important;
+}

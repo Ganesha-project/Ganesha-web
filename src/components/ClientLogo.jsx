@@ -1,46 +1,67 @@
+import { ClientsReview } from "../../public/DB/Clients"
+import { ExpandableButton } from "./ExpandableButton"
 import { Title } from "./Title"
 
 export const ClientLogo = () => {
-    let data = [
-        'https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-m-company-logo-png-image_6092974.png',
-        'https://png.pngtree.com/png-vector/20221115/ourmid/pngtree-company-logo-vector-png-image_6454975.png',
-        'https://png.pngtree.com/png-clipart/20220919/original/pngtree-letter-s-and-n-company-logo-png-image_8624357.png',
-        'https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-m-company-logo-png-image_6092974.png',
-        'https://png.pngtree.com/png-vector/20221115/ourmid/pngtree-company-logo-vector-png-image_6454975.png',
-        'https://png.pngtree.com/png-clipart/20220919/original/pngtree-letter-s-and-n-company-logo-png-image_8624357.png',
-        'https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-m-company-logo-png-image_6092974.png',
-        'https://png.pngtree.com/png-vector/20221115/ourmid/pngtree-company-logo-vector-png-image_6454975.png',
-        'https://png.pngtree.com/png-clipart/20220919/original/pngtree-letter-s-and-n-company-logo-png-image_8624357.png',
-        'https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-m-company-logo-png-image_6092974.png',
-        'https://png.pngtree.com/png-vector/20221115/ourmid/pngtree-company-logo-vector-png-image_6454975.png',
-        'https://png.pngtree.com/png-clipart/20220919/original/pngtree-letter-s-and-n-company-logo-png-image_8624357.png',
-        'https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-m-company-logo-png-image_6092974.png',
-        'https://png.pngtree.com/png-vector/20221115/ourmid/pngtree-company-logo-vector-png-image_6454975.png',
-        'https://png.pngtree.com/png-clipart/20220919/original/pngtree-letter-s-and-n-company-logo-png-image_8624357.png',
-        'https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-letter-m-logo-png-png-image_5686007.png',
-        'https://png.pngtree.com/png-vector/20220706/ourmid/pngtree-letter-n-logo-design-png-png-image_5687381.png',
-        'https://png.pngtree.com/png-vector/20220623/ourmid/pngtree-m-letter-logo-business-template-vector-icon-png-image_5287547.png',
-    ]
 
     return (
         <>
-            <section className="md:px-24 px-5 py-24 space-y-5 2xl:px-80 bg-baseColor bg-opacity-15">
-                <Title text={'Our Clients'} className={'mb-10'}/>
-                <div className="flex flex-wrap gap-5 justify-center">
-                    {data.map((el, index) => (
-                        <div key={index} className="dark:bg-white  bg-opacity-50 rounded-[30px] h-32 w-32 flex items-center p-2 relative group">
+            <section className="hidden md:block py-10 md:py-24 space-y-5 2xl:px-80">
+                <Title text={'Our Clients'} className={'mb-5 md:mb-10'} />
+                <div className="carousel w-[100%] md:flex md:flex-wrap gap-5 md:justify-center">
+                    {ClientsReview.map((el, index) => (
+                        <div key={index} className={`${index === 0 ? 'pl-5 md:pl-0' : ''} ${index === ClientsReview.length - 1 ? 'pr-5 md:pr-0' : ''} carousel-item`}>
+                            <div className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
+                                <img
+                                    className="object-contain w-full h-full bg-blend-multiply"
+                                    src={el.clientLogo}
+                                    alt={el.ptName} />
+                                <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
+                                    <h4 className="text-center text-gray-900 font-semibold">
+                                        {el.ptName}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section className="md:hidden block py-10 md:py-24 space-y-5 2xl:px-80">
+                <Title text={'Our Clients'} className={'mb-5 md:mb-10'} />
+                <div className="mx-5 flex justify-center flex-wrap gap-4">
+                    {ClientsReview.slice(0, 6).map((el, idx) => (
+                        <div key={idx} className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
                             <img
-                                className="object-contain w-full h-full"
-                                src={el}
-                                alt={el} />
-                            <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-full">
-                                <h4 className="text-center truncate-last-2 text-gray-900 font-semibold">
-                                    PT Cinta
+                                className="object-contain w-full h-full bg-blend-multiply"
+                                src={el.clientLogo}
+                                alt={el.ptName} />
+                            <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
+                                <h4 className="text-center text-gray-900 font-semibold">
+                                    {el.ptName}
                                 </h4>
                             </div>
                         </div>
                     ))}
                 </div>
+                <ExpandableButton
+                    align={'items-center'}
+                    label={'Show All'}
+                    className={'px-4 py-2 bg-secondaryColor w-fit rounded-full font-bold'}
+                    classNameInner={"flex flex-wrap gap-4 justify-center mx-5 pb-10"}>
+                    {ClientsReview.slice(6).map((el, idx) => (
+                        <div key={idx} className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
+                            <img
+                                className="object-contain w-full h-full bg-blend-multiply"
+                                src={el.clientLogo}
+                                alt={el.ptName} />
+                            <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
+                                <h4 className="text-center text-gray-900 font-semibold">
+                                    {el.ptName}
+                                </h4>
+                            </div>
+                        </div>
+                    ))}
+                </ExpandableButton>
             </section>
         </>
     )

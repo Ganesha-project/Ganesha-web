@@ -16,9 +16,10 @@ import { RiBankCardFill } from "react-icons/ri";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaBoltLightning } from "react-icons/fa6";
 import { TbBulbFilled } from "react-icons/tb";
-import { IoSparkles } from "react-icons/io5";
+import { IoSearchCircle, IoSparkles } from "react-icons/io5";
 import { IoLeaf } from "react-icons/io5";
-import { IoIosCall } from "react-icons/io";
+import { IoIosCall, IoMdListBox } from "react-icons/io";
+import { RiBuilding2Fill } from "react-icons/ri";
 
 export const legalitasUsaha = [
     {
@@ -127,6 +128,12 @@ export const DataProduct = [
         keywords: ["badan usaha lainnya", "jenis badan usaha", "pendirian badan usaha", "dokumen badan usaha", "usaha kecil", "usaha menengah"]
     },
     {
+        href: "/virtual-office",
+        icon: <RiBuilding2Fill />,
+        text: "Virtual Office",
+        keywords: ["vrtual office", "virtual", "ofice"]
+    },
+    {
         href: "/konsultan-pajak",
         icon: <HiReceiptTax />,
         text: "Konsultan Pajak",
@@ -192,92 +199,155 @@ export const NavLinks = {
     main: [
         {
             href: '/',
-            label: 'Home'
+            label: 'Home',
+            desc: "Mulai perjalanan Anda bersama kami!",
+            accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
         },
         {
             href: '/contact',
-            label: 'Hubungi Kami'
+            label: 'Hubungi Kami',
+            desc: "Selalu Siap Memberikan Solusi Terbaik untuk Anda!",
+            accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
         },
     ],
     productsAndServices: [
         {
             href: '/services',
-            label: 'All Services'
+            icon: <IoSearchCircle />,
+            label: 'Find Services',
+            desc: "Temukan berbagai layanan terbaik kami untuk membantu bisnis Anda berkembang.",
+            accent: "dark:bg-[#b0f1ad] bg-[#cbdfc9]",
         },
         {
             href: '/social-media-management',
-            label: 'Social Media Management'
+            icon: <HiMiniDevicePhoneMobile />,
+            label: 'Social Media Management',
+            desc: "Sosial Media Manajemen adalah kunci sukses modern untuk membentuk citra merek yang kuat.",
+            accent: "dark:bg-[#a889ef] bg-[#a889ef96]",
         },
         {
             href: '/web-development',
-            label: 'Website Development'
+            icon: <TbWorldWww />,
+            label: 'Website Development',
+            desc: "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami.",
+            accent: "dark:bg-[#6ABDE7] bg-[#6abde776]",
         },
         {
             href: '/legalitas',
-            label: 'Legalitas Bisnis'
+            icon: <GoLaw />,
+            label: 'Legalitas Bisnis',
+            desc: "Kami hadir bersama Konsultan yang profesional untuk memberikan pelayanan Legalitas terbaik.",
+            accent: "dark:bg-[#adb9f1] bg-[#6077e749]",
         },
         {
-            href: '/legalitas/badan-usaha',
-            label: 'Badan Usaha Lainnya'
+            href: '/badan-usaha',
+            icon: <FaBuildingWheat />,
+            label: 'Badan Usaha Lainnya',
+            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat.",
+            accent: "dark:bg-[#9da8b6] bg-[#64758B95]",
+        },
+        {
+            href: '/virtual-office',
+            icon: <RiBuilding2Fill />,
+            label: 'Virtual Office',
+            desc: "Layanan audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
+            accent: "dark:bg-[#b4bdc6] bg-[#D1D2D399]",
         },
         {
             href: '/konsultan-pajak',
-            label: 'Konsultan Pajak'
+            icon: <HiReceiptTax />,
+            label: 'Konsultan Pajak',
+            desc: "Optimalisasi Pajak Anda dengan Bantuan Ahli Pajak Terpercaya!",
+            accent: "dark:bg-[#a5908e] bg-[#89524F76]",
         },
         {
-            href: '/izin-tambahan',
-            label: 'Izin Tambahan'
+            href: '/perizinan',
+            icon: <RiFilePaperFill />,
+            label: 'Izin Tambahan',
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien.",
+            accent: "dark:bg-[#cfe5dd] bg-[#cfe5ddb5]",
         },
         {
             href: '/pelayanan-manajemen',
-            label: 'Pelayanan Manajemen'
+            icon: <MdHomeRepairService />,
+            label: 'Pelayanan Manajemen',
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien.",
+            accent: "dark:bg-[#e39f8c] bg-[#e39f8cb5]",
         },
         {
             href: '/pelayanan-akuntansi',
-            label: 'Pelayanan Akuntansi'
+            icon: <TbMathSymbols />,
+            label: 'Pelayanan Akuntansi',
+            desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan dan pelaporan pajak.",
+            accent: "dark:bg-[#70bcb1] bg-[#70bcb1a8]",
         },
         {
             href: '/software-management-system',
-            label: 'Software Management System'
+            icon: <RiAppsFill />,
+            label: 'Software Management System',
+            desc: "Solusi terkini untuk meningkatkan efisiensi dan kinerja operasional.",
+            accent: "dark:bg-[#ecace7] bg-[#fd8cf49d]",
         },
         {
             href: '/haki',
-            label: 'HAKI'
+            icon: <SiReadthedocs />,
+            label: 'HAKI',
+            desc: "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami.",
+            accent: "dark:bg-[#eb9090] bg-[#eb9090]",
         },
         {
             href: '/audit',
-            label: 'Audit'
+            icon: <FaUserTie />,
+            label: 'Audit',
+            desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
+            accent: "dark:bg-[#ead08d] bg-[#ead08d99]",
         },
     ],
     legalities: [
         {
             href: '/pendirian-pt',
-            label: 'Legalitas PT'
+            icon: <GoLaw />,
+            label: 'Legalitas PT',
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT yang cepat.",
+            accent: "dark:bg-[#8BD9D2] bg-[#8bd9d370]",
         },
         {
             href: '/pendirian-cv',
-            label: 'Legalitas CV'
+            icon: <GoLaw />,
+            label: 'Legalitas CV',
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian CV yang cepat.",
+            accent: "dark:bg-[#E8D0BE] bg-[#e8d0be93]",
         },
         {
             href: '/badan-usaha',
-            label: 'Legalitas Badan Usaha Lainnya'
+            icon: <FaBuildingWheat />,
+            label: 'Legalitas Badan Usaha Lainnya',
+            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat.",
+            accent: "dark:bg-[#9da8b6] bg-[#64758B95]",
         },
     ],
     others: [
         {
             href: '/price-list',
-            label: 'List Harga'
+            label: 'List Harga',
+            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
+            accent: "dark:bg-[#cf9898] bg-[#cd7575]",
         },
         {
             href: '/article',
-            label: 'Artikel'
+            label: 'Artikel',
+            desc: "Baca artikel terbaru kami untuk mendapatkan wawasan lebih lanjut.",
+            accent: "dark:bg-[#adb9f1] bg-[#6077e749]",
         },
         {
             href: '/about-us',
-            label: 'About Us'
+            label: 'About Us',
+            desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
+            accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
         },
     ]
 }
+
 
 export const DataBanner = [
     {
@@ -356,6 +426,17 @@ export const DataBanner = [
             accent: "bg-[#a5908e] dark:bg-[#89524F76]",
             accent2: "bg-[#8A865C] dark:bg-[#8A865Ca3]",
             textAccent: "dark:text-[#aa7a77] text-[#89524F]"
+        },
+    },
+    {
+        href: "virtual-office",
+        data: {
+            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1723691284/GaneshaAssets/bqp9x1unwnsqwx1ulgmr.png",
+            mainText: "Virtual Office",
+            desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.",
+            accent: "bg-[#b4bdc6] dark:bg-[#D1D2D399]",
+            accent2: "bg-[#89CEE8] dark:bg-[#89CEE8]",
+            textAccent: "dark:text-[#D1D2D3] text-[#636b74]"
         },
     },
     {
@@ -3071,3 +3152,132 @@ export const dataAboutus = {
         "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/isqbllhdm2budvmyd005.png",
     ]
 }
+
+export const FaqMainData = {
+    BadanUsaha: [
+        {
+            question: "Apa itu pendirian badan usaha?",
+            answer: "Pendirian badan usaha adalah proses formal untuk mendirikan sebuah entitas hukum yang sah, seperti PT (Perseroan Terbatas) atau CV (Commanditaire Vennootschap), yang akan menjalankan kegiatan bisnis secara legal."
+        },
+        {
+            question: "Apa yang diperlukan untuk mendirikan badan usaha?",
+            answer: "Dokumen yang diperlukan termasuk Akta Pendirian, NPWP, NIB Berbasis Resiko, dan dokumen pendukung lainnya sesuai jenis badan usaha yang didirikan."
+        },
+        {
+            question: "Berapa lama proses pendirian badan usaha?",
+            answer: "Proses pendirian badan usaha biasanya memakan waktu antara 2-3 Hari kerja setelah Akta Perusahaan ditandatangani."
+        }
+    ],
+    Haki: [
+        {
+            question: "Apa itu HAKI?",
+            answer: "HAKI (Hak Atas Kekayaan Intelektual) mencakup hak cipta, hak paten, hak merek, dan hak desain industri yang memberikan perlindungan hukum terhadap hasil kreativitas dan inovasi."
+        },
+        {
+            question: "Mengapa penting untuk mendaftarkan HAKI?",
+            answer: "Pendaftaran HAKI penting untuk melindungi hak cipta dan kekayaan intelektual Anda dari pelanggaran dan penyalahgunaan oleh pihak lain, serta memberikan hak eksklusif atas penggunaan dan eksploitasi."
+        },
+        {
+            question: "Bagaimana cara mendaftarkan HAKI?",
+            answer: "Proses pendaftaran HAKI melibatkan pengajuan permohonan ke lembaga terkait seperti DJKI (Direktorat Jenderal Kekayaan Intelektual) dengan menyertakan dokumen dan bukti pendukung."
+        }
+    ],
+    Web: [
+        {
+            question: "Apa saja yang termasuk dalam jasa pembuatan website?",
+            answer: "Jasa pembuatan website mencakup desain, pengembangan, pemrograman, pengaturan hosting, dan optimisasi SEO untuk memastikan website berfungsi dengan baik dan sesuai kebutuhan Anda."
+        },
+        {
+            question: "Berapa lama waktu yang dibutuhkan untuk membuat website?",
+            answer: "Waktu pembuatan website bervariasi tergantung pada kompleksitas dan fitur yang diinginkan."
+        },
+        {
+            question: "Apakah ada biaya tambahan setelah website selesai dibuat?",
+            answer: "Biaya tambahan mungkin dikenakan untuk layanan pemeliharaan, pembaruan, atau fitur tambahan yang tidak termasuk dalam paket awal."
+        }
+    ],
+    Software: [
+        {
+            question: "Apa itu Software Management System?",
+            answer: "Software Management System adalah sistem perangkat lunak yang dirancang untuk mengelola dan mengatur penggunaan, distribusi, dan pemeliharaan perangkat lunak di dalam organisasi."
+        },
+        {
+            question: "Apa manfaat menggunakan Software Management System?",
+            answer: "Manfaatnya termasuk efisiensi dalam pengelolaan lisensi perangkat lunak, pengurangan risiko hukum, dan peningkatan produktivitas serta keamanan TI."
+        },
+        {
+            question: "Apakah sistem ini memerlukan pelatihan khusus?",
+            answer: "Ya, pelatihan mungkin diperlukan untuk memastikan staf dapat menggunakan sistem dengan efektif dan memanfaatkan semua fiturnya."
+        }
+    ],
+    Pajak: [
+        {
+            question: "Apa itu konsultasi perpajakan?",
+            answer: "Konsultasi perpajakan adalah layanan profesional yang membantu perusahaan dan individu dalam perencanaan pajak, kepatuhan, dan pengelolaan kewajiban pajak mereka."
+        },
+        {
+            question: "Apa manfaat dari konsultasi perpajakan?",
+            answer: "Manfaatnya termasuk optimasi pengurangan pajak, kepatuhan terhadap regulasi perpajakan, dan perlindungan dari potensi masalah hukum terkait pajak."
+        },
+        {
+            question: "Bagaimana cara memulai konsultasi perpajakan?",
+            answer: "Anda dapat memulai dengan menghubungi kami untuk penjadwalan sesi konsultasi di mana kami akan membahas kebutuhan perpajakan Anda dan merancang strategi yang sesuai."
+        }
+    ],
+    Perizinan: [
+        {
+            question: "Apa yang dimaksud dengan perizinan?",
+            answer: "Perizinan adalah proses mendapatkan izin resmi dari pemerintah atau lembaga terkait untuk menjalankan aktivitas bisnis tertentu secara legal."
+        },
+        {
+            question: "Apa saja jenis izin yang diperlukan untuk bisnis?",
+            answer: "Jenis izin bervariasi tergantung pada jenis bisnis dan lokasi, seperti Izin Lokasi, dan izin khusus sesuai dengan industri."
+        },
+        {
+            question: "Berapa lama proses perizinan?",
+            answer: "Waktu proses perizinan tergantung pada jenis izin dan kecepatan lembaga pemerintahan dalam memproses permohonan."
+        }
+    ],
+    Sosmed: [
+        {
+            question: "Apa itu Social Media management?",
+            answer: "Social media management adalah layanan yang mengelola akun media sosial perusahaan, termasuk pembuatan konten, penjadwalan, interaksi dengan audiens, dan analisis hasil."
+        },
+        {
+            question: "Mengapa penting untuk menggunakan Social Media Management?",
+            answer: "Social media management membantu membangun dan mempertahankan kehadiran online yang konsisten, meningkatkan keterlibatan audiens, dan memanfaatkan peluang pemasaran."
+        },
+        {
+            question: "Apa saja yang termasuk dalam layanan Social Media Management?",
+            answer: "Layanan termasuk pengelolaan akun, pembuatan dan kurasi konten, penjadwalan posting, pemantauan interaksi, serta laporan dan analisis performa."
+        }
+    ],
+    Audit: [
+        {
+            question: "Apa itu audit?",
+            answer: "Audit adalah evaluasi sistematis terhadap laporan keuangan, sistem, dan proses bisnis untuk memastikan akurasi, kepatuhan, dan efektivitas."
+        },
+        {
+            question: "Apa perbedaan antara audit internal dan audit eksternal?",
+            answer: "Audit internal dilakukan oleh auditor internal untuk menilai kontrol internal dan proses operasional, sedangkan audit eksternal dilakukan oleh auditor independen untuk menilai laporan keuangan perusahaan."
+        },
+        {
+            question: "Mengapa perusahaan memerlukan audit?",
+            answer: "Audit membantu memastikan laporan keuangan akurat, mematuhi regulasi, mengidentifikasi risiko, dan meningkatkan kepercayaan investor serta pemangku kepentingan lainnya."
+        }
+    ],
+    Accounting: [
+        {
+            question: "Apa yang dimaksud dengan accounting?",
+            answer: "Accounting adalah proses pencatatan, klasifikasi, dan pelaporan transaksi keuangan perusahaan untuk menyediakan informasi yang akurat tentang kondisi keuangan dan hasil operasional."
+        },
+        {
+            question: "Apa manfaat dari layanan accounting?",
+            answer: "Layanan accounting membantu perusahaan dalam pengelolaan keuangan yang efektif, kepatuhan perpajakan, pembuatan laporan keuangan, dan perencanaan keuangan."
+        },
+        {
+            question: "Apakah layanan accounting termasuk pelaporan pajak?",
+            answer: "Ya, layanan accounting sering kali mencakup pelaporan pajak dan membantu perusahaan mematuhi kewajiban perpajakan serta mengoptimalkan kewajiban pajak."
+        }
+    ]
+};

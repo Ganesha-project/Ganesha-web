@@ -5,7 +5,7 @@ import { dataContact } from "@/app/Database"
 export const BodyContact = () => {
     return (
         <>
-            <section className="m-5 lg:m-24 space-y-10">
+            <section className="mx-5 md:m-24 space-y-10">
                 <div className="flex flex-col items-center lg:flex-row justify-between">
                     <Image
                         width={500}
@@ -13,7 +13,7 @@ export const BodyContact = () => {
                         src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/yglkieiqquwszhg3vedd.svg'}
                         className="w-full lg:w-[50%] md:w-auto h-auto"
                     />
-                    <div className="md:w-[50%] text-gray-900 space-y-5">
+                    <div className="md:w-[50%] w-full text-gray-900 space-y-3 md:space-y-5">
                         <h1 className="text-xl lg:text-4xl font-extrabold text-mainColor dark:text-baseColor">Kontak Kami</h1>
                         {[...dataContact.mail, ...dataContact.phone].map((el, idx) => (
                             <Link
@@ -27,7 +27,7 @@ export const BodyContact = () => {
                                             {el.label}
                                         </p>
                                     </span>
-                                    <p className="text-xl lg:text-2xl font-extrabold">{el.data}</p>
+                                    <p className="text-sm lg:text-2xl font-extrabold pb-1 md:pb-0">{el.data}</p>
                                 </div>
                             </Link>
                         ))}
