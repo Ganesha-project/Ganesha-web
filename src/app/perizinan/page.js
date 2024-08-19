@@ -1,5 +1,3 @@
-import fs from 'fs'
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
@@ -47,13 +45,9 @@ export const metadata = {
 
 
 export default async function IzinTambahanPage() {
-    let rawData = await fs.promises.readFile('public/JSON/IzinTambahan.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
             <BannerService />
-            <ExtrasCard data={data} accent1={'bg-[#599DAD]'} accent2={'bg-[#EBF2FB]'} />
         </>
     );
 }

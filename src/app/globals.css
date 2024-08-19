@@ -87,3 +87,34 @@ body {
   -webkit-backdrop-filter: blur(24px) !important;
   backdrop-filter: blur(24px) !important;
 }
+
+.mega-menu {
+  -webkit-backdrop-filter: blur(24px) !important;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8); /* Fallback */
+  will-change: transform;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Add these styles in your CSS file or a <style> block */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.mega-menu {
+  backdrop-filter: blur(10px);
+}
+
+
+.noBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noBar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

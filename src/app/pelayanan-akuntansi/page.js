@@ -1,8 +1,3 @@
-import fs from 'fs'
-import socmed from '../../public/BG/accounting.jpg';
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk';
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
@@ -50,13 +45,9 @@ export const metadata = {
 
 
 export default async function PelayananAkuntansi() {
-    let rawData = await fs.promises.readFile('public/JSON/Akuntansi.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
             <BannerService />
-            <ExtrasCard data={data} accent1={'bg-[#019C85]'} accent2={'bg-[#A4F5EC]'} />
         </>
     );
 }

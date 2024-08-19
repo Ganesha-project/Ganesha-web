@@ -39,7 +39,7 @@ export const FloatingButton = () => {
     };
     return (
         <>
-            <div className="fixed bottom-5 right-5 z-50">
+            <div className="fixed bottom-5 right-5 z-[100]">
                 <section className="flex flex-col gap-3 duration-300">
                     <button
                         onClick={scrollToTop}

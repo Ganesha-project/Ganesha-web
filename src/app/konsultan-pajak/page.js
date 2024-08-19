@@ -1,4 +1,4 @@
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
@@ -49,7 +49,7 @@ export default async function KonsultanPajakPage() {
     return (
         <>
             <BannerService />
-            {/* <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} /> */}
+
         </>
     );
 }

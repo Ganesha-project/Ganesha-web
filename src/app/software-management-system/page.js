@@ -1,5 +1,4 @@
-import fs from 'fs'
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
@@ -47,13 +46,9 @@ export const metadata = {
 
 
 export default async function SoftwareManagementSystem() {
-    let rawData = await fs.promises.readFile('public/JSON/Software.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
             <BannerService />
-            <ExtrasCard data={data} accent1={'bg-[#D268CB]'} accent2={'bg-[#EFC4E9]'} />
         </>
     );
 }

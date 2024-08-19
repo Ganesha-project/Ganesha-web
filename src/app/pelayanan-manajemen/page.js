@@ -1,5 +1,3 @@
-import fs from 'fs'
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 
 export const metadata = {
@@ -45,15 +43,10 @@ export const metadata = {
     }
 };
 
-
 export default async function PelayananManajemenPage() {
-    let rawData = await fs.promises.readFile('public/JSON/Pajak.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
             <BannerService />
-            <ExtrasCard data={data} accent1={'bg-[#DF6443]'} accent2={'bg-[#ECECEC]'} />
         </>
     );
 }
