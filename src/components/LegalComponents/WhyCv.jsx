@@ -1,7 +1,7 @@
 import { dataPageCV } from "@/app/Database"
 import { Title } from "../Title"
 
-export const WhyCv = () => {
+export const  WhyCv = () => {
     return (
         <>
             <section className="md:mx-24 mx-5 py-10 md:py-20 space-y-10">

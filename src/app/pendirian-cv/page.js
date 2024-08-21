@@ -1,15 +1,15 @@
-import { BodyCV } from "@/components/LegalComponents/BodyCv";
 import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
 import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
 import { CVPackages } from "../../../public/DB/CVPackages";
 import { ExtrasPackages } from "../../../public/DB/PTPackages";
 import { Benefit } from "@/components/LegalComponents/Benefit";
-import { WhyCv } from "@/components/LegalComponents/WhyCv";
-import { UUCv } from "@/components/LegalComponents/UUCv";
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { dataPageCV } from "../Database";
 import { ClientPhotos } from "@/components/ClientPhotos";
+import { Explanation } from "@/components/LegalComponents/Explanation";
+import { Laws } from "@/components/LegalComponents/Laws";
+import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 
 export const metadata = {
     title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
@@ -71,9 +71,21 @@ export default async function PendirianCvPage() {
                 color={'orange'}
                 title={'Yang Kamu Dapatkan dari pendirian CV di Ganesha Consulting'}
             />
-            <BodyCV />
-            <UUCv />
-            <WhyCv />
+            <Explanation
+                desc={dataPageCV.whatCv.desc}
+                text={'Apa Itu CV?'}
+            />
+            <Laws
+                data={dataPageCV.undangUndangTerkait}
+                text1={'Undang - Undang'}
+                text={'Terkait CV di Indonesia'}
+                classNameTitle={'!font-bold text-2xl'}
+            />
+            <WhyLegal
+                data={dataPageCV.whyCV}
+                text1={'Mengapa'}
+                text={'Legalitas Usaha diperlukan?'}
+            />
             <Faqs
                 text={'FAQ'}
                 color={'orange'}

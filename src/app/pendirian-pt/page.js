@@ -12,6 +12,8 @@ import { ClientPhotos } from '@/components/ClientPhotos';
 import { DataPageLegal } from '../Database';
 import { Popup } from '@/components/Popup';
 import { useEffect, useState } from 'react';
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { Laws } from '@/components/LegalComponents/Laws';
 
 export default async function PendirianPtPage() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -45,14 +47,26 @@ export default async function PendirianPtPage() {
                 label={'Paket Pendirian PT'}
             />
             <Benefit
-                color={'cyan'}
-                title={'Yang Kamu Dapatkan dari pendirian PT di Ganesha Consulting'}
+                opening={'Benefit'}
+                title={'Dari Pendirian PT di Ganesha Consulting'}
             />
             <ClientPhotos />
-            <WhyLegal />
-            <BodyPT />
+            <WhyLegal
+                data={DataPageLegal.whyLegal}
+                text1={'Mengapa'}
+                text={'Legalitas Usaha diperlukan?'}
+            />
+            <Explanation
+                text={'Apa itu PT?'}
+                desc={DataPageLegal.whatPt.desc}
+            />
+            <Laws
+                data={DataPageLegal.legalTexts}
+                text={'Terkait PT di Indonesia'}
+                text1={'Undang - Undang'}
+            />
             <Faqs
-                text={'FAQ'}
+                text={'FAQs'}
                 color={'cyan'}
                 data={DataPageLegal.faqData}
             />

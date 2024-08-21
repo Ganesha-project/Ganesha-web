@@ -52,10 +52,10 @@ export const MegaMenuNavbar = ({ title, href, links, isExpanded, setIsExpanded, 
             <div
                 onMouseEnter={() => setIsExpanded(true)}
                 onMouseLeave={() => setIsExpanded(false)}
-                className={`fixed left-0 right-0 top-0 pt-10 transform opacity-0 max-h-0 pointer-events-none transition-all duration-500 ease-in-out origin-top bg-white dark:bg-black dark:bg-opacity-50 bg-opacity-50 backdrop-blur-lg shadow-mainShadow
+                className={`-z-50 fixed left-0 right-0 top-0 pt-10 transform opacity-0 max-h-0 pointer-events-none transition-all duration-500 ease-in-out origin-top bg-white dark:bg-black dark:bg-opacity-80 bg-opacity-80 backdrop-blur-lg shadow-mainShadow
                     ${isExpanded
                         ?
-                        "-z-50 group-hover:opacity-100 group-hover:max-h-screen"
+                        "group-hover:opacity-100 group-hover:max-h-screen md:group-hover:max-h-[800px] overflow-y-scroll noBar group-hover:pointer-events-auto "
                         :
                         "opacity-0 max-h-0 "
                     } 
@@ -69,7 +69,7 @@ export const MegaMenuNavbar = ({ title, href, links, isExpanded, setIsExpanded, 
                             </h1>
                         ) : null}
                         {links ? (
-                            <div className="grid grid-cols-2">
+                            <div className={`${links.length <= 4 ? "flex flex-col" : "grid grid-cols-2"} -mx-3`}>
                                 {links.map((link, index) => (
                                     <Link
                                         href={link.href}

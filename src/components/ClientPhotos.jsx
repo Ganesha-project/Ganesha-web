@@ -21,8 +21,10 @@ export const ClientPhotos = () => {
 
     return (
         <>
-            <section className='relative overflow-hidden  py-16'>
-                <Title text={'What Our Client Say'} icon={<FaQuoteRight />} iconClassName={'text-red-500'} />
+            <section classNa me='relative overflow-hidden py-16'>
+                <div className='md:mx-24 mx-5 mt-10'>
+                    <Title className={'flex justify-center'} text={'What Our Client Say'} icon={<FaQuoteRight />} iconClassName={'text-red-500'} />
+                </div>
                 <div className='marquee'>
                     <div className='flex gap-5 md:gap-10 marquee-content py-16'>
                         {ClientsReview.concat(ClientsReview).map((el, idx) => (

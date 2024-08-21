@@ -6,7 +6,7 @@ import { RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, Ri
 import { MdHomeRepairService } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
-import { SiReadthedocs } from "react-icons/si";
+import { SiReadthedocs, SiRescuetime } from "react-icons/si";
 import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
 import { BiMedal, BiSolidConversation } from "react-icons/bi";
 import { FaBuilding } from "react-icons/fa6";
@@ -20,6 +20,12 @@ import { IoSearchCircle, IoSparkles } from "react-icons/io5";
 import { IoLeaf } from "react-icons/io5";
 import { IoIosCall, IoMdListBox } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
+import { BsStars } from "react-icons/bs";
+import { FaMapSigns } from "react-icons/fa";
+import { TbCategoryFilled } from "react-icons/tb";
+import { GiSparkles } from "react-icons/gi";
+import { SiSimplenote } from "react-icons/si";
+import { TbListCheck } from "react-icons/tb";
 
 export const legalitasUsaha = [
     {
@@ -2488,25 +2494,17 @@ export const DataPageLegal = {
             title: "Kepatuhan Hukum",
             points: [
                 {
-                    heading: "Mematuhi Peraturan dan Undang-Undang",
-                    description: "Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain."
-                },
-                {
-                    heading: "Menghindari Sanksi",
-                    description: "Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
+                    heading: "Mematuhi Peraturan",
+                    description: "Legalitas usaha memastikan bisnis mematuhi peraturan seperti perpajakan dan ketenagakerjaan, menghindari sanksi hukum."
                 }
             ]
         },
         {
-            title: "Kepercayaan dan Kredibilitas",
+            title: "Kepercayaan & Kredibilitas",
             points: [
                 {
                     heading: "Kepercayaan Pelanggan",
-                    description: "Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas."
-                },
-                {
-                    heading: "Reputasi yang Baik",
-                    description: "Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
+                    description: "Bisnis legal meningkatkan rasa aman dan kepercayaan dari pelanggan dan investor, serta membangun reputasi yang baik."
                 }
             ]
         },
@@ -2515,11 +2513,7 @@ export const DataPageLegal = {
             points: [
                 {
                     heading: "Hak Kekayaan Intelektual",
-                    description: "Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan."
-                },
-                {
-                    heading: "Perlindungan Bisnis",
-                    description: "Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
+                    description: "Legalitas melindungi merek dagang dan memberikan perlindungan hukum terhadap konflik yang mungkin timbul."
                 }
             ]
         },
@@ -2528,11 +2522,7 @@ export const DataPageLegal = {
             points: [
                 {
                     heading: "Pinjaman dan Investasi",
-                    description: "Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal."
-                },
-                {
-                    heading: "Subsidi dan Hibah",
-                    description: "Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
+                    description: "Hanya bisnis legal yang biasanya mendapatkan akses ke pinjaman, investasi, subsidi, dan hibah."
                 }
             ]
         },
@@ -2541,11 +2531,7 @@ export const DataPageLegal = {
             points: [
                 {
                     heading: "Ekspansi Pasar",
-                    description: "Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru."
-                },
-                {
-                    heading: "Kemitraan Bisnis",
-                    description: "Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
+                    description: "Legalitas mempermudah bisnis untuk memperluas pasar dan menjalin kemitraan baru."
                 }
             ]
         },
@@ -2553,12 +2539,8 @@ export const DataPageLegal = {
             title: "Kepastian Usaha",
             points: [
                 {
-                    heading: "Perlindungan Aset Pribadi",
-                    description: "Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis."
-                },
-                {
-                    heading: "Keberlanjutan Usaha",
-                    description: "Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
+                    heading: "Perlindungan Aset",
+                    description: "Struktur legal seperti perseroan terbatas melindungi aset pribadi pemilik dari kewajiban bisnis."
                 }
             ]
         }
@@ -2686,78 +2668,116 @@ export const DataPageLegal = {
             text: "Ditangani Profesional",
             icon: <IoSparkles />
         }
-    ]
+    ],
+    legalTexts: [
+        {
+            number: '1',
+            text: "Undang-Undang No. 40 Tahun 2007 tentang Perseroan Terbatas: Undang-undang ini menyediakan kerangka hukum untuk pendirian, pengelolaan, dan pembubaran PT. Regulasi ini mencakup persyaratan minimum, hak dan kewajiban pemegang saham, serta ketentuan-ketentuan lain yang berkaitan dengan PT."
+        },
+        {
+            number: '2',
+            text: "Peraturan Pemerintah No. 27 Tahun 2018 tentang Pendaftaran Perusahaan: Menetapkan persyaratan dan prosedur pendaftaran perusahaan, termasuk PT, serta proses perubahan data perusahaan."
+        },
+        {
+            number: '3',
+            text: "Peraturan Pemerintah No. 29 Tahun 2016 tentang Pekerja Asing: Menetapkan aturan terkait penggunaan pekerja asing di perusahaan, termasuk PT."
+        },
+        {
+            number: '4',
+            text: "Penting untuk selalu merujuk pada undang-undang terkait dan mendapatkan nasihat hukum untuk memahami secara menyeluruh dan akurat mengenai persyaratan dan regulasi PT."
+        }
+    ],
+    whatPt: {
+        desc: 'PT adalah singkatan dari yaitu bentuk badan hukum yang diterapkan pada perusahaan di Indonesia. Dengan status hukum terpisah, PT memungkinkan pemiliknya memiliki tanggung jawab terbatas sesuai dengan modal. PT memiliki aturan hukum dan persyaratan tertentu yang diatur oleh Undang-Undang Perseroan Terbatas di Indonesia.'
+    }
+
 }
 
 export const dataPageCV = {
     whyCV: [
         {
-            "title": "Kepatuhan Hukum",
-            "points": [
-                "Mematuhi Peraturan dan Undang-Undang: Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain.",
-                "Menghindari Sanksi: Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
+            title: "Kepatuhan Hukum",
+            points: [
+                {
+                    heading: "Mematuhi Regulasi",
+                    description: "Legalitas usaha memastikan bisnis mematuhi semua peraturan yang berlaku, menghindari sanksi hukum."
+                }
             ]
         },
         {
-            "title": "Kepercayaan dan Kredibilitas",
-            "points": [
-                "Kepercayaan Pelanggan: Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas.",
-                "Reputasi yang Baik: Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
+            title: "Kepercayaan & Kredibilitas",
+            points: [
+                {
+                    heading: "Kepercayaan Pelanggan",
+                    description: "Bisnis legal memberikan rasa aman dan meningkatkan kepercayaan dari pelanggan dan investor."
+                }
             ]
         },
         {
-            "title": "Perlindungan Hukum",
-            "points": [
-                "Hak Kekayaan Intelektual: Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan.",
-                "Perlindungan Bisnis: Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
+            title: "Perlindungan Hukum",
+            points: [
+                {
+                    heading: "Perlindungan Kekayaan Intelektual",
+                    description: "Legalitas usaha melindungi merek dagang dan kekayaan intelektual dari penyalahgunaan."
+                }
             ]
         },
         {
-            "title": "Akses ke Pembiayaan",
-            "points": [
-                "Pinjaman dan Investasi: Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal.",
-                "Subsidi dan Hibah: Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
+            title: "Akses ke Pembiayaan",
+            points: [
+                {
+                    heading: "Pinjaman & Investasi",
+                    description: "Hanya bisnis legal yang biasanya dapat mengakses pinjaman, investasi, dan hibah."
+                }
             ]
         },
         {
-            "title": "Kemudahan Ekspansi",
-            "points": [
-                "Ekspansi Pasar: Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru.",
-                "Kemitraan Bisnis: Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
+            title: "Kemudahan Ekspansi",
+            points: [
+                {
+                    heading: "Ekspansi Pasar",
+                    description: "Legalitas mempermudah bisnis untuk memperluas pasar dan menjalin kemitraan."
+                }
             ]
         },
         {
-            "title": "Kepastian Usaha",
-            "points": [
-                "Perlindungan Aset Pribadi: Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis.",
-                "Keberlanjutan Usaha: Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
+            title: "Kepastian Usaha",
+            points: [
+                {
+                    heading: "Perlindungan Aset",
+                    description: "Struktur legal melindungi aset pribadi pemilik dari kewajiban bisnis."
+                }
             ]
         }
     ],
     undangUndangTerkait: [
         {
-            title: "Pendirian Yayasan",
+            number: '1',
+            text: "Pendirian Yayasan",
             points: [
                 "Undang-Undang Nomor 16 Tahun 2001 tentang Yayasan",
                 "Mengatur tentang pendirian, pengelolaan, dan tata kelola yayasan, termasuk ketentuan mengenai tujuan, struktur organisasi, dan kewajiban administratif yayasan."
             ]
         },
         {
-            title: "Pendirian Perkumpulan",
+            number: '2',
+            text: "Pendirian Perkumpulan",
             points: [
                 "Undang-Undang Nomor 17 Tahun 2013 tentang Organisasi Kemasyarakatan",
                 "Menyediakan regulasi untuk pendirian, pengelolaan, dan pembubaran organisasi kemasyarakatan yang dapat mencakup perkumpulan. Mengatur tentang hak dan kewajiban, serta tata cara pendaftaran dan pengawasan."
             ]
         },
         {
-            title: "Pendirian Asosiasi",
+            number: '3',
+            text: "Pendirian Asosiasi",
             points: [
                 "Undang-Undang Nomor 17 Tahun 2013 tentang Organisasi Kemasyarakatan",
                 "Juga berlaku untuk asosiasi, karena asosiasi adalah jenis organisasi yang memiliki tujuan tertentu dan berfungsi untuk kepentingan anggotanya. Mengatur tata cara pendirian, pengelolaan, dan pendaftaran asosiasi."
             ]
         },
         {
-            title: "Pendirian Firma Hukum",
+            number: '4',
+            text: "Pendirian Firma Hukum",
             points: [
                 "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas (UU PT)",
                 "Meskipun khusus mengatur Perseroan Terbatas (PT), beberapa prinsip dalam UU PT juga bisa diterapkan untuk firma hukum dalam hal struktur dan administrasi."
@@ -2901,7 +2921,10 @@ export const dataPageCV = {
                 </>
             )
         }
-    ]
+    ],
+    whatCv: {
+        desc: 'CV (commanditaire vennootschap) adalah salah satu bentuk badan usaha di Indonesia yang dibentuk minimal dua orang atau lebih, tujuannya agar tercapainya cita-cita bersama. Oleh karena itu dalam CV terdapat dua sekutu yang berbeda. Yaitu sekutu komanditer dan sekutu komplementer.'
+    }
 }
 
 export const dataPageBadanUsaha = {
@@ -3281,3 +3304,133 @@ export const FaqMainData = {
         }
     ]
 };
+
+
+export const dataPageVO = {
+    FAQ: [
+        {
+            question: "Apa itu Virtual Office?",
+            answer: "Virtual Office adalah layanan yang menyediakan alamat bisnis resmi, penanganan surat, dan layanan telepon tanpa memerlukan kantor fisik. Ini memungkinkan bisnis untuk memiliki kehadiran profesional di lokasi strategis tanpa harus menyewa ruang kantor."
+        },
+        {
+            question: "Apa saja layanan yang biasanya disediakan oleh Virtual Office?",
+            answer: "Layanan Virtual Office umumnya mencakup:\n* Alamat bisnis resmi.\n* Penanganan surat dan paket.\n* Layanan penerimaan dan penerusan telepon.\n* Akses ke ruang meeting dan coworking space.\n* Dukungan administrasi seperti sekretaris virtual."
+        },
+        {
+            question: "Bagaimana Virtual Office dapat membantu bisnis saya?",
+            answer: "Virtual Office dapat meningkatkan citra profesional bisnis Anda dengan menyediakan alamat bergengsi, menghemat biaya operasional, dan menawarkan fleksibilitas untuk bekerja dari mana saja. Ini juga mempermudah ekspansi bisnis tanpa perlu komitmen ruang fisik."
+        },
+        {
+            question: "Apakah saya bisa menggunakan alamat Virtual Office untuk keperluan legal seperti pendaftaran bisnis?",
+            answer: "Ya, alamat Virtual Office biasanya dapat digunakan untuk pendaftaran bisnis, pembuatan dokumen legal, dan keperluan korespondensi lainnya, tergantung pada kebijakan penyedia layanan dan peraturan setempat."
+        },
+        {
+            question: "Apakah saya bisa menerima surat dan paket di alamat Virtual Office?",
+            answer: "Tentu, penyedia Virtual Office biasanya menawarkan layanan penanganan surat dan paket. Surat dan paket dapat diteruskan ke alamat yang Anda pilih atau disimpan untuk diambil."
+        },
+        {
+            question: "Apakah Virtual Office menyediakan ruang kerja atau meeting?",
+            answer: "Ya, kebanyakan penyedia Virtual Office menyediakan akses ke ruang meeting, ruang konferensi, atau coworking space yang dapat digunakan sesuai kebutuhan Anda, biasanya dengan biaya tambahan atau sesuai dengan paket yang dipilih."
+        },
+        {
+            question: "Apakah saya bisa menggunakan layanan telepon dengan Virtual Office?",
+            answer: "Ya, banyak Virtual Office menawarkan layanan penerimaan telepon dengan nomor telepon khusus untuk bisnis Anda. Panggilan dapat diteruskan ke nomor yang Anda pilih atau diurus oleh resepsionis virtual."
+        },
+        {
+            question: "Apakah ada batasan dalam penggunaan Virtual Office?",
+            answer: "Batasan bisa berbeda-beda tergantung pada penyedia layanan, misalnya dalam hal durasi penggunaan ruang meeting atau layanan tambahan. Penting untuk memahami syarat dan ketentuan yang berlaku sebelum memilih paket."
+        },
+        {
+            question: "Siapa yang paling diuntungkan dengan Virtual Office?",
+            answer: "Virtual Office sangat bermanfaat bagi startup, freelancer, usaha kecil, dan perusahaan yang ingin memperluas jangkauan tanpa biaya tinggi. Ini juga ideal untuk bisnis yang beroperasi secara remote atau tidak memerlukan ruang kantor fisik permanen."
+        },
+        {
+            question: "Bagaimana cara mendaftar layanan Virtual Office?",
+            answer: "Anda dapat mendaftar melalui penyedia layanan Virtual Office dengan memilih paket yang sesuai dengan kebutuhan bisnis Anda. Proses biasanya melibatkan pengisian formulir, pemilihan layanan, dan pembayaran. Setelah itu, Anda akan diberikan akses ke alamat bisnis dan layanan lainnya."
+        }
+    ],
+    Location: [
+        {
+            image: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=2834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=4'],
+            location: 'Jakarta Pusat',
+            name: 'Menara Cakrawala - Sarinah Thamrin'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1704853241465-3c65c2c90533?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
+            location: 'Jakarta Selatan',
+            name: 'Gedung BEI SCBD (NEW!)'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1697198649995-8a9807c19083?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
+            location: 'Jakarta Selatan',
+            name: 'Bellezza BSA Permata Hijau'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1712472256854-48b7b966a6e9?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
+            location: 'Jakarta Timur',
+            name: 'MTH Square Cawang'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1534239697798-120952b76f2b?q=80&w=3089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
+            location: 'Jakarta Utara',
+            name: 'Arcade Business Center PIK'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1462396240927-52058a6a84ec?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
+            location: 'Jakarta Barat',
+            name: 'Permata Regency'
+        }
+    ],
+    benefit: [
+        {
+            icon: <FaMapSigns />,
+            text: 'Alamat Bisnis Strategis',
+            description: 'Dengan virtual office, Anda mendapatkan alamat bisnis di lokasi strategis yang meningkatkan kredibilitas perusahaan tanpa harus menyewa ruang kantor fisik.',
+        },
+        {
+            icon: <FaMoneyBill1Wave />,
+            text: 'Penghematan Biaya',
+            description: 'Mengurangi biaya sewa, utilitas, dan perawatan kantor, memungkinkan Anda menjalankan bisnis dengan lebih efisien.',
+        },
+        {
+            icon: <SiRescuetime />,
+            text: 'Meningkatkan Fleksibilitas Kerja',
+            description: 'Karyawan dapat bekerja dari mana saja, memberi mereka kebebasan dan meningkatkan produktivitas tanpa batasan lokasi.',
+        },
+        {
+            icon: <BsStars />,
+            text: 'Layanan Profesional',
+            description: 'Virtual office menyediakan penanganan surat dan panggilan telepon, serta akses ke ruang meeting saat diperlukan, memastikan operasional berjalan lancar.',
+        }
+    ]
+}
+
+export const dataPageWeb = {
+    contentData: {
+        heading: "Buat Perusahaan Anda Terlihat Proffesional dan Menarik dengan website yang Modern",
+        features: [
+            {
+                title: "Kreatif dan Efektif",
+                icon: <TbCategoryFilled />
+            },
+            {
+                title: "Desain Professional",
+                icon: <GiSparkles />
+            },
+            {
+                title: "Fitur Lengkap",
+                icon: <TbListCheck />
+            },
+            {
+                title: "Efisien dan Mudah",
+                icon: <SiSimplenote />
+            }
+        ]
+    }
+}

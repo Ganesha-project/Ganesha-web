@@ -25,12 +25,12 @@ export default function ThemeSwitch() {
       />
 
       {/* Sun icon (for light mode) */}
-      <div className='swap-off tooltip tooltip-left p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+      <div className='swap-off tooltip tooltip-left p-2 rounded-full bg-gray-200 bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
         <IoSunnySharp className="text-xl" />
       </div>
 
       {/* Moon icon (for dark mode) */}
-      <div className='swap-on tooltip tooltip-left p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+      <div className='swap-on tooltip tooltip-left p-2 rounded-full bg-gray-200 bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
         <IoMoonSharp className="text-xl" />
       </div>
     </label>

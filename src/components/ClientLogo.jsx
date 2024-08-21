@@ -7,7 +7,7 @@ export const ClientLogo = () => {
     return (
         <>
             <section className="hidden md:block py-10 md:py-24 space-y-5 2xl:px-80">
-                <Title text={'Our Clients'} className={'mb-5 md:mb-10'} />
+                <Title text={'Our Clients'} className={'mb-5 md:mb-10 md:mx-24 mx-5 flex justify-center'} />
                 <div className="carousel w-[100%] md:flex md:flex-wrap gap-5 md:justify-center">
                     {ClientsReview.map((el, index) => (
                         <div key={index} className={`${index === 0 ? 'pl-5 md:pl-0' : ''} ${index === ClientsReview.length - 1 ? 'pr-5 md:pr-0' : ''} carousel-item`}>

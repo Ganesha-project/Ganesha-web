@@ -24,8 +24,13 @@ export const MobileDrawer = () => {
                             <div className={`z-10 rounded-xl mt-2 text-gray-800 dark:text-white divide-y divide-gray-100 shadow`}>
                                 <ul className="text-sm text-gray-800 dark:text-white">
                                     {NavLinks.productsAndServices.map(link => (
-                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
-                                            <a href={link.href}>
+                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 dark:hover:bg-opacity-40 hover:bg-opacity-45 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
+                                            <a href={link.href}
+                                                className="flex items-center gap-2"
+                                            >
+                                                <span>
+                                                    {link.icon}
+                                                </span>
                                                 {link.label}
                                             </a>
                                         </li>
@@ -36,11 +41,16 @@ export const MobileDrawer = () => {
                     </li>
                     <li>
                         <ExpandableButton label={'Legalitas'} order={'order-last'} className={'hover:bg-baseColor px-3 py-1 rounded-xl dark:hover:bg-mainColor dark:bg-opacity-50 bg-opacity-50'}>
-                        <div className={`z-10 rounded-xl mt-2 text-gray-800 dark:text-white divide-y divide-gray-100 shadow`}>
+                            <div className={`z-10 rounded-xl mt-2 text-gray-800 dark:text-white divide-y divide-gray-100 shadow`}>
                                 <ul className="text-sm text-gray-800 dark:text-white">
                                     {NavLinks.legalities.map(link => (
-                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
-                                            <a href={link.href}>
+                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 dark:hover:bg-opacity-40 hover:bg-opacity-45 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
+                                            <a href={link.href}
+                                                className="flex items-center gap-2"
+                                            >
+                                                <span>
+                                                    {link.icon}
+                                                </span>
                                                 {link.label}
                                             </a>
                                         </li>
@@ -59,7 +69,7 @@ export const MobileDrawer = () => {
                             </a>
                         </li>
                     ))}
-                    <SearchNavbar/>
+                    <SearchNavbar />
                 </div>
             </ul>
         </>

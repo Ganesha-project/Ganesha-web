@@ -21,7 +21,7 @@ export const ExpandableButton = ({ children, label, className, order, align, cla
         <>
             <div className={`${align} flex flex-col`}>
                 <div
-                    className={`overflow-hidden transition-all duration-700 ease-in-out ${order} hover:cursor-pointer ${isExpanded ? 'max-h-[500px]' : 'max-h-0'}`}
+                    className={`overflow-hidden transition-all w-full duration-700 ease-in-out ${order} hover:cursor-pointer ${isExpanded ? 'max-h-[500px]' : 'max-h-0'}`}
                     style={{ maxHeight: contentHeight }}
                     onMouseEnter={() => setIsExpanded(true)}
                 >

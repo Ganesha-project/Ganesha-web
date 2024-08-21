@@ -114,7 +114,7 @@ export const Navbar = () => {
           <div className='md:hidden block'>
             <MegaMenuNavbar
               icon={<HiOutlineMenu className='text-xl' />}
-              iconClassName={'p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
+              iconClassName={'p-2 rounded-full bg-gray-200 bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
               arrowVisibility={'hidden'}
               children={
                 <MobileDrawer />

@@ -31,7 +31,7 @@ export const SearchNavbar = () => {
                         Find Products & Services
                     </h1>
 
-                    <label className="z-[60] input text-gray-800 dark:text-gray-200 rounded-3xl bg-baseColor dark:bg-baseColor dark:bg-opacity-30 bg-opacity-50 flex items-center gap-2 shadow-mainShadow">
+                    <label className="z-[60] input text-gray-800 dark:text-gray-200 rounded-3xl bg-gray-300 dark:bg-baseColor dark:bg-opacity-30 bg-opacity-50 flex items-center gap-2 shadow-mainShadow">
                         <IoIosSearch className="text-gray-800 dark:text-white" />
                         <input
                             type="text"

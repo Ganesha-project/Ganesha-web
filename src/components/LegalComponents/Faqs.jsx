@@ -3,29 +3,31 @@ import { BsFillQuestionCircleFill } from "react-icons/bs"
 export const Faqs = ({ data, text, color, className, iconClassName, icons, className2 }) => {
     return (
         <>
-            <section className="md:m-24 m-5 space-y-5">
-                <h1 className={`${className} text-xl md:text-4xl font-semibold !text-${color}-800 dark:!text-${color}-300 text-center flex items-center gap-3 justify-center`}>
+            <section className="md:p-24 p-5 space-y-5 bg-secondaryGray dark:bg-darkColor">
+                <h1 className={`text-2xl md:text-4xl font-semibold bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800  via-mainColor to-baseColor bg-clip-text text-transparent flex items-center gap-2`}>
                     <div className={iconClassName}>
                         {icons}
                     </div>
                     {text}
                 </h1>
-                {data.map((el, idx) => (
-                    <div key={idx} className={`collapse collapse-plus h-fit `}>
-                        <input type="checkbox" className="w-full" name="my-accordion-3" />
-                        <div className={`${className2} collapse-title flex items-center gap-3 md:text-xl font-medium rounded-full dark:bg-opacity-25 bg-${color}-100`}>
-                            <span className="h-5 w-5">
-                                <BsFillQuestionCircleFill />
-                            </span>
-                            {el.question}
-                        </div>
-                        <div className="collapse-content">
-                            <div className={`bg-${color}-100 dark:bg-opacity-30 mt-3 rounded-3xl p-5`}>
-                                {el.answer}
+                <div className="md:grid md:grid-cols-2 flex flex-col gap-2">
+                    {data.map((el, idx) => (
+                        <div key={idx} className={`collapse collapse-arrow min-h-[15lvh]  `}>
+                            <input type="checkbox" className="w-full" name="my-accordion-3" />
+                            <div className={`${className2} collapse-title flex items-center px-10 gap-3 md:text-xl font-medium rounded-3xl from-white to-gray-200 dark:from-black dark:to-darkColor bg-gradient-to-tl`}>
+                                <span className="h-5 w-5">
+                                    <BsFillQuestionCircleFill />
+                                </span>
+                                {el.question}
+                            </div>
+                            <div className="collapse-content">
+                                <div className={`bg-white dark:text-white dark:bg-black dark:brightness-125 mt-3 rounded-3xl p-5`}>
+                                    {el.answer}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </section>
         </>
     )

@@ -1,12 +1,17 @@
-export const Title = ({ text, icon, className, iconClassName }) => {
+export const Title = ({ text1, text, icon, className, iconClassName }) => {
     return (
         <>
-            <h1 className={`${className} text-xl md:text-4xl font-semibold text-mainColor dark:text-baseColor text-center flex items-center gap-2 justify-center`}>
+        <div className={`${className} space-y-2`}>
+            <span className="md:text-xl font-medium">
+                {text1}
+            </span>
+            <h1 className={`text-2xl md:text-4xl font-semibold bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800 via-mainColor to-baseColor bg-clip-text text-transparent flex items-center gap-2`}>
                 {text}
                 <div className={iconClassName}>
                     {icon}
                 </div>
             </h1>
+        </div>
         </>
     )
 }

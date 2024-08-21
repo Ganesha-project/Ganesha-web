@@ -1,7 +1,5 @@
-import { TbCategoryFilled } from "react-icons/tb";
-import { GiSparkles } from "react-icons/gi";
-import { SiSimplenote } from "react-icons/si";
-import { TbListCheck } from "react-icons/tb";
+import { dataPageWeb } from "@/app/Database";
+import Image from "next/image";
 
 export const metadata = {
     title: "Solusi Pembuatan Website Profesional - Ganesha Consulting",
@@ -46,71 +44,38 @@ export const metadata = {
     }
 };
 
-
 export const HeaderWeb = () => {
     return (
         <>
-            <div className='lg:m-32 m-10 flex flex-col md:flex-row py-20 px-6 md:px-20 gap-6'>
-                <div className='flex flex-col gap-6'>
-                    <div
-                        className=" lg: flex justify-center items-center flex-col gap-3 w-full md:w-56 h-56 max-w-lg p-6 bg-sky-400 rounded-full hover:bg-sky-500"
-                    >
-                        <TbCategoryFilled
-                            color='white'
-                            size={50}
-                        />
-                        <h5 className="text-2xl font-bold text-center tracking-tight text-white">
+            <section className="md:mx-24 mx-5">
+                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gradient-to-b dark:from-[#212121] from-gray-200 to-transparent">
+                    <div className="relative flex flex-col justify-between md:w-[50%] bg-darkColor rounded-[35px] overflow-hidden duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
+                        <img
+                            className="rounded-[35px] w-full h-[60lvh] md:h-full object-cover brightness-90"
+                            src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="computer coding" />
+                        <div className="absolute inset-5 z-20">
+                            <h1 className="text-2xl md:text-3xl font-semibold ">
+                                {dataPageWeb.contentData.heading}
+                            </h1>
+                        </div>
+                        <div className="w-full h-[50%] bg-gradient-to-b from-white dark:from-darkColor to-transparent absolute top-0"></div>
 
-                            Kreatif dan Efektif
-                        </h5>
                     </div>
-                    <div
-                        className="flex justify-center items-center flex-col gap-3 w-full md:w-56 h-56 max-w-lg p-6 bg-sky-500 rounded-[40px] hover:bg-sky-500"
-                    >
-                        <GiSparkles
-                            color='white'
-                            size={50}
-                        />
-                        <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-white">
-                            Desain Professional
-                        </h5>
+                    <div className="flex flex-col md:w-[50%] md:grid md:grid-cols-2 gap-5">
+                        {dataPageWeb.contentData.features.map((el, idx) => (
+                            <div key={idx} className="md:h-[20lvw] md:w-[20lvw] p-5 flex items-center justify-center flex-col gap-10 rounded-[35px] bg-gray-50 dark:bg-darkColor duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
+                                <div className="text-4xl md:text-6xl">
+                                    {el.icon}
+                                </div>
+                                <h1 className="font-bold text-xl md:text-3xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-center">
+                                    {el.title}
+                                </h1>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className='order-first lg:order-none p-5 flex bg-sky-400 rounded-[40px] justify-center items-center w-full md:w-auto'>
-                    <h1 className="text-white text-3xl lg:text-6xl font-extrabold capitalize font-poppins text-center md:text-left">
-
-                        Buat Perusahaan Anda Terlihat
-                        <span className='bg-[#8bfffb] text-transparent bg-clip-text rounded-2xl'> Proffesional</span> dan
-                        <span className='bg-yellow-300 text-transparent bg-clip-text rounded-2xl'> Menarik</span> dengan website yang
-                        <span className='bg-red-300 text-transparent bg-clip-text rounded-2xl'> Modern</span>
-                    </h1>
-                </div>
-                <div className='flex flex-col gap-6'>
-                    <div
-                        className="flex justify-center items-center flex-col gap-3 w-full md:w-56 h-56 max-w-lg p-6 bg-sky-500 rounded-[40px] hover:bg-sky-500"
-                    >
-                        <TbListCheck
-                            color='white'
-                            size={50}
-                        />
-                        <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-white">
-                            Fitur Lengkap
-                        </h5>
-                    </div>
-                    <div
-                        className="flex justify-center items-center flex-col gap-3 w-full md:w-56 h-56 max-w-lg p-6 bg-sky-500 rounded-full hover:bg-sky-500"
-                    >
-                        <SiSimplenote
-                            color='white'
-                            size={50}
-                        />
-                        <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-white">
-                            Efisien dan Mudah
-                        </h5>
-                    </div>
-                </div>
-
-            </div>
+            </section>
         </>
     )
 }
