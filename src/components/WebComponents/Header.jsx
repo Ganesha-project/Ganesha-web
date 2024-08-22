@@ -1,4 +1,3 @@
-import { dataPageWeb } from "@/app/Database";
 import Image from "next/image";
 
 export const metadata = {
@@ -44,29 +43,29 @@ export const metadata = {
     }
 };
 
-export const HeaderWeb = () => {
+export const Header = ({ data }) => {
     return (
         <>
             <section className="md:mx-24 mx-5">
-                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor">
+                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor md:h-[80lvh]">
                     <div className="relative flex flex-col justify-between md:w-[50%] bg-darkColor rounded-[35px] overflow-hidden duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
                         <Image
                             width={500}
                             height={500}
                             className="rounded-[35px] w-full h-[60lvh] md:h-full object-cover brightness-90"
-                            src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="computer coding" />
+                            src={data.image}
+                            alt={data.heading} />
                         <div className="absolute inset-5 z-20">
-                            <h1 className="text-2xl md:text-3xl font-semibold ">
-                                {dataPageWeb.contentData.heading}
+                            <h1 className="text-2xl md:text-3xl font-semibold text-white">
+                                {data.heading}
                             </h1>
                         </div>
-                        <div className="w-full h-[50%] bg-gradient-to-b from-white dark:from-darkColor to-transparent absolute top-0"></div>
+                        <div className="w-full h-[50%] bg-gradient-to-b from-[#00000087] to-transparent absolute top-0"></div>
 
                     </div>
                     <div className="flex flex-col md:w-[50%] md:grid md:grid-cols-2 gap-5">
-                        {dataPageWeb.contentData.features.map((el, idx) => (
-                            <div key={idx} className="md:h-[20lvw] md:w-[20lvw] p-5 flex items-center justify-center flex-col gap-10 rounded-[35px] bg-gradient-to-b dark:from-black from-gray-50 to-transparent duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
+                        {data.features.map((el, idx) => (
+                            <div key={idx} className={`rounded-[35px] p-5 flex items-center justify-center flex-col gap-10  bg-gradient-to-b dark:from-black from-gray-50 to-transparent duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow`}>
                                 <div className="text-4xl md:text-6xl">
                                     {el.icon}
                                 </div>

@@ -1,77 +1,39 @@
-import { FaInfoCircle } from "react-icons/fa";
-
-const accordionData = [
-    {
-        id: 1,
-        title: "Membangun Merek dan Identitas Online",
-        description: [
-            "Sosial Media Manajemen membantu perusahaan dalam membangun dan mengelola citra merek mereka secara online.",
-            "Memastikan konsistensi pesan, gaya visual, dan nilai-nilai merek di seluruh platform media sosial."
-        ],
-        buttonClass: "bg-violet-500",
-        contentClass: "bg-violet-500",
-    },
-    {
-        id: 2,
-        title: "Interaksi dengan Pelanggan",
-        description: [
-            "Menyediakan platform untuk berinteraksi langsung dengan pelanggan.",
-            "Menanggapi pertanyaan, umpan balik, dan komentar pelanggan secara cepat dan efektif."
-        ],
-        buttonClass: "bg-violet-600",
-        contentClass: "bg-violet-600",
-    },
-    {
-        id: 3,
-        title: "Pemasaran dan Promosi",
-        description: [
-            "Membantu perusahaan dalam merancang dan melaksanakan kampanye pemasaran online.",
-            "Menjangkau audiens target melalui iklan yang disesuaikan dan promosi produk atau layanan."
-        ],
-        buttonClass: "bg-violet-700",
-        contentClass: "bg-violet-700",
-    },
-    {
-        id: 4,
-        title: "Analisis Kinerja dan Penelitian Pasar",
-        description: [
-            "Menyediakan alat analisis untuk melacak kinerja kampanye dan konten.",
-            "Memantau tren pasar dan mengumpulkan wawasan yang dapat membantu perusahaan dalam mengambil keputusan strategis."
-        ],
-        buttonClass: "bg-violet-800",
-        contentClass: "bg-violet-800",
-    }
-];
+import { Title } from "../Title";
+import { accordionData } from "../../../public/Data/SocmedData";
 
 export const AccordionSocmed = () => {
     return (
-        <div className="m-10 flex-col lg:flex-row lg:m-32 flex gap-5 items-center justify-center">
-            <h1 className="mt-5 text-gray-900 dark:text-gray-800 md:dark:text-baseColor md:bg-transparent lg:bg-transparent lg:rounded-none bg-violet-200 rounded-[40px] lg:p-0 p-5 font-bold text-3xl md:text-5xl lg:text-7xl w-full lg:w-[40vw] capitalize text-center lg:text-right">
-                Kenapa perusahaan{' '}
-                <span className="font-extrabold text-violet-700">membutuhkan</span> Sosial Media Manajemen
-            </h1>
-            <div className="lg:left-1/2 -ml-0.5 w-2.5 h-[55vh] rounded-lg bg-violet-900 hidden lg:block"></div>
+        <section className="md:px-24 px-5 md:my-24 my-10 space-y-10">
+            <Title text1={'Kenapa perusahaan'} text={'Membutuhkan Social Meda Management'} />
 
-            <div className="space-y-3">
-                {/* Accordion */}
-                {accordionData.map(({ id, title, description, buttonClass, contentClass }) => (
-                    <div key={id} className={`collapse collapse-plus h-fit ${buttonClass}`}>
-                        <input type="radio" name="accordion" id={`item${id}`} />
-                        <div className={`!rounded-full collapse-title text-xl font-medium flex items-center gap-2 ${buttonClass} text-white`}>
-                            <FaInfoCircle color='white' /> {title}
+            <div className="flex flex-col md:flex-row gap-10 items-center justify-center md:pl-10 md:pt-10 md:pb-10 md:pr-0 p-5 md:p-0 dark:bg-darkColor bg-gray-100 rounded-3xl">
+                <div className="space-y-3 md:w-[50%]">
+                    {/* Accordion */}
+                    {accordionData.map(({ id, title, description,}) => (
+                        <div key={id} className={`collapse collapse-arrow h-fit border-b rounded-none dark:border-b-gray-500 border-gray-300`}>
+                            <input type="radio" name="accordion" id={`item${id}`} />
+                            <div className={`collapse-title text-xl md:text-2xl font-bold flex items-center gap-2`}>
+                                {title}
+                            </div>
+                            <div className={`collapse-content`}>
+                                <ul className="text-gray-700 dark:text-gray-200">
+                                    {description.map((text, index) => (
+                                        <li key={index}>
+                                            <p className="mb-2 text-lg">{text}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className={`collapse-content ${contentClass}`}>
-                            <ul className="ps-5 text-white list-disc">
-                                {description.map((text, index) => (
-                                    <li key={index}>
-                                        <p className="mb-2 text-lg">{text}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="md:w-[50%] md:order-none order-first">
+                    <img
+                        className="md:h-[70lvh] w-full object-cover rounded-3xl md:rounded-r-none md:rounded-l-3xl"
+                        src="https://images.unsplash.com/photo-1491951931722-5a446214b4e2?q=80&w=2256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="" />
+                </div>
             </div>
-        </div>
+        </section>
     );
 };

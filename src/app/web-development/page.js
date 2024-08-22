@@ -1,14 +1,14 @@
 import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
 import { WebPackages } from "../../../public/DB/WebPackages";
-import { HeaderWeb } from "@/components/WebComponents/HeaderWeb";
 import { WebBody } from "@/components/WebComponents/WebBody";
 import { Clients } from "@/components/WebComponents/Clients";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { dataPageWeb } from "../Database";
 import { Benefit } from "@/components/LegalComponents/Benefit";
-import { BenefitWeb, FAQ } from "../../../public/Data/ClientWeb";
+import { BenefitWeb, FAQ } from "../../../public/Data/WebData";
 import { Faqs } from "@/components/LegalComponents/Faqs";
+import { Header } from "@/components/WebComponents/Header";
 
 export const metadata = {
     title: "Jasa Pembuatan Website - Ganesha Consulting",
@@ -68,7 +68,9 @@ export default async function WebPage() {
                 label={'Paket Pembuatan Website'}
             />
             <Clients />
-            <HeaderWeb />
+            <Header
+                data={dataPageWeb.contentData}
+            />
             <WhyLegal
                 data={dataPageWeb.whyWebsite}
                 text1={'Mengapa'}

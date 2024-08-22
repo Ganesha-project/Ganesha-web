@@ -2,8 +2,13 @@ import { BannerSosmed } from "@/components/BannerSosmed";
 import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
 import { AccordionSocmed } from "@/components/SocmedComponents/AccordionSocmed";
-import { HeaderContentSosmed } from "@/components/SocmedComponents/HeaderContentSosmed";
 import { SMPackages } from "../../../public/DB/SMPackages";
+import { Header } from "@/components/WebComponents/Header";
+import { dataPageSocmed, faqSocialMediaManagement } from "../../../public/Data/SocmedData";
+import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
+import { Explanation } from "@/components/LegalComponents/Explanation";
+import { Faqs } from "@/components/LegalComponents/Faqs";
+import { Clients } from "@/components/SocmedComponents/Clients";
 
 export const metadata = {
     title: "Manajemen Sosial Media & Desain - Ganesha Consulting",
@@ -61,9 +66,26 @@ export default async function SosmedPage() {
                 buttonColor={'bg-violet-500'}
                 label={'Paket Social Media Management'}
             />
-            <HeaderContentSosmed />
+            <Clients/>
+            <Header
+                data={dataPageSocmed.contentData}
+            />
+            <WhyLegal
+                data={dataPageSocmed.whySocmed}
+                text1={'Mengapa'}
+                text={'Perusahaan membutuhkan Social Media?'}
+            />
             <BannerSosmed />
+            <Explanation
+                text1={'Apa sih kelebihan'}
+                text={'Social Media Managemet di Ganesha Consulting?'}
+                desc={dataPageSocmed.whywe.desc}
+            />
             <AccordionSocmed />
+            <Faqs
+                text={'FAQs'}
+                data={faqSocialMediaManagement}
+            />
         </>
     )
 }

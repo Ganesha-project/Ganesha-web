@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { dataClientWeb } from "../../../public/Data/WebData"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { dataClientSocmed } from "../../../public/Data/SocmedData";
 
 export const Clients = () => {
-    let data = dataClientWeb
+    let data = dataClientSocmed
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
 
@@ -52,14 +53,22 @@ export const Clients = () => {
                             <Link
                                 key={idx}
                                 href={el.link}
-                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[40lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
+                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
                             >
-                                <Image
-                                    className="rounded-2xl w-full h-fit object-cover"
-                                    width={500}
-                                    height={500}
-                                    src={el.preview}
-                                    alt={el.name} />
+                                <div className="flex gap-2 w-full justify-between bg-white rounded-2xl">
+                                    <Image
+                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
+                                        width={75}
+                                        height={25}
+                                        src={el.preview}
+                                        alt={el.name} />
+                                    <Image
+                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
+                                        width={75}
+                                        height={25}
+                                        src={el.preview2}
+                                        alt={el.name} />
+                                </div>
                                 <div>
                                     <h1 className="text-2xl font-bold">
                                         {el.brandName ? el.brandName : el.name}
