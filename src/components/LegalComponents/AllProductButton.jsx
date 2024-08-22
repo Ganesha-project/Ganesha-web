@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from "next/link";
 import { DataPageLegal } from "@/app/Database";
+import { Title } from '../Title';
 
 export const AllProductButton = () => {
 
@@ -32,20 +33,18 @@ export const AllProductButton = () => {
 
             </Head>
             <section className="md:mx-24 mx-5 py-24 space-y-5">
-                <h1 className="text-4xl font-bold">
-                    Layanan  Legalitas Kami
-                </h1>
+                <Title text={"Layanan Legalitas Kami"} className={'py-5'} />
                 <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
                     {DataPageLegal.legalItems.map((el, idx) => (
                         <Link
                             key={idx}
                             href={el.link}
-                            className="group flex flex-row items-center gap-3 duration-300 hover:shadow-secondaryShadow ease-in-out p-5 rounded-3xl bg-mainColor dark:bg-baseColor dark:bg-opacity-25 hover:bg-opacity-40 dark:hover:bg-opacity-50 bg-opacity-15"
+                            className="group flex flex-row items-center gap-3 duration-300 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-bl from-gray-100 to-white dark:from-darkColor dark:to-transparent"
                         >
-                            <div className="md:text-3xl text-xl p-3 w-fit bg-white text-mainColor dark:text-baseColor rounded-full dark:bg-black">
+                            <div className="md:text-3xl text-xl p-3 w-fit bg-gradient-radial from-gray-200 to-white dark:from-gray-600 dark:to-black text-darkColor dark:text-secondaryGray rounded-full ">
                                 {el.icon}
                             </div>
-                            <h2 className="text-lg md:text-xl font-semibold text-mainColor dark:text-baseColor">
+                            <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-bl from-darkColor to-mainColor dark:from-secondaryGray dark:to-baseColor bg-clip-text text-transparent">
                                 {el.name}
                             </h2>
                         </Link>

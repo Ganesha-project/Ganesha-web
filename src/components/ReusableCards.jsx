@@ -41,23 +41,29 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
 
             <section className="py-10 space-y-5">
                 <div className="md:mx-24 mx-5 space-y-5">
-                    <div className={`flex justify-center md:justify-between w-full items-center bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase `}>
-                        {label ? (
-                            <>
-                                <h1 className={`dark:text-gray-50 px-7 py-5 rounded-full`}>
-                                    {label}
-                                </h1>
-                            </>
-                        ) : null}
-                        <div className={`items-center space-x-2 md:block hidden`}>
-                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                                <IoIosArrowBack className="text-2xl md:text-[2rem]" />
-                            </button>
-                            <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                                <IoIosArrowForward className="text-2xl md:text-[2rem]" />
-                            </button>
+                    {data.length <= 3 ? (
+                        <h1 className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase`}>
+                            {label}
+                        </h1>
+                    ) : (
+                        <div className={`flex justify-center md:justify-between w-full items-center bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase `}>
+                            {label ? (
+                                <>
+                                    <h1 className={`dark:text-gray-50 px-7 py-5 rounded-full`}>
+                                        {label}
+                                    </h1>
+                                </>
+                            ) : null}
+                            <div className={`items-center space-x-2 md:block hidden`}>
+                                <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                    <IoIosArrowBack className="text-2xl md:text-[2rem]" />
+                                </button>
+                                <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                    <IoIosArrowForward className="text-2xl md:text-[2rem]" />
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     {data.length <= 3 ? null : (
                         <div className={`flex justify-center w-full items-center gap-3 md:hidden`}>
                             <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
@@ -72,7 +78,7 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
 
                 <div className="relative overflow-x-scroll noBar">
                     <div
-                        className={`${data.length <= 3 ? "flex md:flex-row flex-col justify-center px-5 md:mx-0" : "grid grid-flow-col"} gap-5 transform transition-transform duration-500 ease-in-out py-5`}
+                        className={`${data.length <= 3 ? "flex md:flex-row flex-col justify-center px-5 md:px-24" : "grid grid-flow-col"} gap-5 transform transition-transform duration-500 ease-in-out py-5`}
                         style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
 
                     >

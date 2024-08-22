@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Head from 'next/head';
 import { DataPageLegal } from "@/app/Database";
+import { Title } from "../Title";
 
 export const BodyLegal = () => {
     return (
@@ -66,81 +67,11 @@ export const BodyLegal = () => {
                 </script>
             </Head>
 
-            <section className="space-y-20 mb-10">
-                <div className="md:mx-24 mx-5">
-                    <div className="flex flex-col md:flex-row items-center md:gap-5 rounded-3xl">
-                        <Image
-                            width={500}
-                            height={500}
-                            src={DataPageLegal.explainImg}
-                            className="w-full md:w-[54%] h-[35lvh] md:h-[50lvh] object-cover rounded-[35px]"
-                        />
-                        <div className="space-y-3 md:space-y-5">
-                            <div className="text-2xl md:text-4xl text-left font-extrabold tracking-wide leading-normal dark:text-white">
-                                {DataPageLegal.head}
-                            </div>
-                            <div className="font-medium dark:text-white text-justify text-lg md:text-4xl">
-                                {DataPageLegal.desc}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="mx-5 md:mx-24 space-y-5">
-                    <div className="flex md:flex-row flex-col">
-                        <h1 className="self-end leading-snug tracking-wide font-extrabold text-3xl md:text-6xl  text-gray-800 p-5 rounded-3xl bg-[#E7F2F2]">
-                            Apa Kelebihan Memiliki <span className="bg-secondaryColor text-transparent bg-clip-text">Legalitas</span>?
-                        </h1>
-                        <Image
-                            width={500}
-                            height={500}
-                            src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236548/GaneshaAssets/vakr9ynkwlrqy3lb4qwb.svg'}
-                            className="order-first lg:order-none w-full md:w-[60%] h-[40lvh] object-cover"
-                        />
-                    </div>
-                    <div className="flex">
-                        <div className="">
-                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Menciptakan citra kredibilitas yang tinggi.
-                                </p>
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Perlindungan hukum bagi pemilik usaha
-                                </p>
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Akses ke pembiayaan seperti pinjaman bank atau investasi lebih baik
-                                </p>
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Pemenuhan persyaratan bisnis yang berlaku di Indonesia
-                                </p>
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Kemudahan beroperasi tanpa kendala hukum
-                                </p>
-                                <p className="font-extrabold text-lg md:text-2xl dark:text-white p-3 md:p-5 rounded-3xl bg-secondaryColor bg-opacity-25">
-                                    Meningkatnya kepercayaan dimata pelanggan dan mitra bisnis
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="m-5 md:m-24 flex flex-col space-y-5">
-                    <h1 className="font-extrabold text-center text-xl md:text-4xl">Kemudahan Yang Kamu Dapatkan Di <span className="text-mainColor dark:text-secondaryColor">Ganesha Consulting </span>!</h1>
-                    <div className="flex md:flex-row justify-center flex-wrap flex-col gap-5">
-                        {DataPageLegal.whyUs.map((el, idx) => (
-                            <div
-                                key={idx}
-                                className="space-y-3 md:w-[30%] flex flex-col"
-                            >
-                                <h2 className="py-3 px-5 bg-mainColor dark:bg-secondaryColor dark:bg-opacity-50 bg-opacity-50 rounded-full md:text-2xl text-xl font-semibold text-center">
-                                    {el.title}
-                                </h2>
-                                <h3 className="py-4 px-5 bg-mainColor dark:bg-secondaryColor dark:bg-opacity-25 bg-opacity-30 rounded-3xl grow font-medium text-justify">
-                                    {el.description}
-                                </h3>
-                            </div>
-                        ))}
+            <section className="from-gray-100 via-white dark:from-darkColor to-transparent bg-gradient-to-b md:my-20 my-5">
+                <div className="md:px-24 px-5 from-gray-100 via-white to-transparent dark:from-darkColor dark:via-black space-y-10 bg-gradient-to-t md:py-20 py-10">
+                    <Title text={'Legalitas Usaha?'} text1={'Apa itu'} />
+                    <div className="md:text-2xl bg-gradient-to-bl from-darkColor via-gray-800 to-sky-500 dark:from-white dark:via-gray-200 dark:to-sky-300 bg-clip-text text-transparent">
+                        {DataPageLegal.desc}
                     </div>
                 </div>
             </section>

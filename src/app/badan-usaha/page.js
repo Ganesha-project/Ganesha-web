@@ -1,4 +1,3 @@
-import { FaqProduct } from "@/components/LegalComponents/FaqProduct";
 import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
 import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
@@ -6,7 +5,10 @@ import { BadanUsahaPackages } from "../../../public/DB/PTPackages";
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { Faqs } from "@/components/LegalComponents/Faqs";
-import { dataPageBadanUsaha } from "../Database";
+import { dataPageBadanUsaha, DataPageLegal } from "../Database";
+import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
+import { undangUndangTerkait, whyBadanUsaha } from "../../../public/Data/BadanUsahaData";
+import { Laws } from "@/components/LegalComponents/Laws";
 
 const metadata = {
     title: "Pendirian Badan Usaha dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
@@ -51,7 +53,6 @@ const metadata = {
     }
 };
 
-
 export default async function PendirianBadanUsaha() {
     return (
         <>
@@ -64,14 +65,29 @@ export default async function PendirianBadanUsaha() {
                 buttonColor={'bg-gray-500'}
                 label={'Paket Pendirian Badan Usaha'}
             />
+            <Benefit
+                data={DataPageLegal.benefit}
+                opening={'Benefit'}
+                title={'Dari Pendirian Badan Usaha di Ganesha Consulting'}
+            />
+            <WhyLegal
+                data={whyBadanUsaha}
+                text1={'Mengapa'}
+                text={'Badan Usaha diperlukan?'}
+            />
             <ClientPhotos />
+            <Laws
+                data={undangUndangTerkait}
+                text1={'Undang - Undang'}
+                text={'Terkait Badan Usaha di Indonesia'}
+            />
+            <RWhyUs />
             <Faqs
                 className2={'!bg-gray-300 dark:!bg-opacity-25 w-full'}
                 text={'FAQ'}
                 color={'gray'}
                 data={dataPageBadanUsaha.faqDataBU}
             />
-            <RWhyUs color={"gray"} />
         </>
     )
 }

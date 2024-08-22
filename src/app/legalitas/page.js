@@ -1,6 +1,10 @@
 import { AllProductButton } from "@/components/LegalComponents/AllProductButton";
+import { Benefit } from "@/components/LegalComponents/Benefit";
 import { BodyLegal } from "@/components/LegalComponents/BodyLegal";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
+import { DataPageLegal } from "../Database";
+import { AccordionLegal } from "@/components/LegalComponents/AccrodionLegal";
+import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
 
 export const metadata = {
     title: 'Jasa Legalitas Bisnis - Ganesha Consulting',
@@ -20,6 +24,13 @@ export default function LegalitasPage() {
             <BannerService />
             <AllProductButton />
             <BodyLegal />
+            <Benefit
+                data={DataPageLegal.whyUs}
+                opening={'Kemudahan'}
+                title={'Yang Kamu dapatkan di Ganesha Consulting'}
+            />
+            <AccordionLegal />
+            <RWhyUs />
         </>
     )
 }

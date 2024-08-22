@@ -1,12 +1,12 @@
 import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
 import { Tb24Hours, TbMail, TbMailFilled, TbPhone, TbPhoneCall, TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
+import { FaBuildingWheat, FaPersonShelter, FaUserTie } from "react-icons/fa6";
 import { RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, RiMailFill, RiPhoneFill, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
-import { SiReadthedocs, SiRescuetime } from "react-icons/si";
+import { SiLightning, SiReadthedocs, SiRescuetime } from "react-icons/si";
 import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
 import { BiMedal, BiSolidConversation } from "react-icons/bi";
 import { FaBuilding } from "react-icons/fa6";
@@ -16,7 +16,7 @@ import { RiBankCardFill } from "react-icons/ri";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { FaBoltLightning } from "react-icons/fa6";
 import { TbBulbFilled } from "react-icons/tb";
-import { IoSearchCircle, IoSparkles } from "react-icons/io5";
+import { IoChatbubble, IoSearchCircle, IoSparkles } from "react-icons/io5";
 import { IoLeaf } from "react-icons/io5";
 import { IoIosCall, IoMdListBox } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
@@ -2429,28 +2429,33 @@ export const DataPageLegal = {
     ),
     desc: (
         <h1>
-            Legalitas Usaha adalah kepatuhan suatu bisnis dengan aturan hukum yang berlaku untuk memastikan bahwa <span className="font-extrabold text-yellow-500">Bisnis mu beroperasi secara sah</span> dan sesuai dengan ketentuan hukum yang berlaku di Indonesia.
+            Legalitas Usaha adalah kepatuhan suatu bisnis dengan aturan hukum yang berlaku untuk memastikan bahwa <span className="font-extrabold">Bisnis mu beroperasi secara sah</span> dan sesuai dengan ketentuan hukum yang berlaku di Indonesia.
         </h1>
     ),
     whyUs: [
         {
-            title: "Fasilitas Lengkap",
+            icon: <TbListCheck/>,
+            text: "Fasilitas Lengkap",
             description: "Ganesha Consulting menyediakan fasilitas lengkap melalui layanan legalitasnya, memastikan bahwa bisnis Anda diakui secara resmi di mata hukum."
         },
         {
-            title: "Cepat dan Terpercaya",
+            icon: <SiLightning/>,
+            text: "Cepat dan Terpercaya",
             description: "Layanan Ganesha Consulting tidak hanya cepat, tetapi juga terpercaya. Kami memastikan proses legalitas berjalan lancar dan sesuai dengan standar hukum yang berlaku."
         },
         {
-            title: "Harga Terjangkau",
+            icon: <FaMoneyBill1Wave/>,
+            text: "Harga Terjangkau",
             description: "Menawarkan harga yang sangat terjangkau, Ganesha Consulting memahami pentingnya efisiensi biaya bagi bisnis Anda tanpa mengorbankan kualitas pelayanan."
         },
         {
-            title: "Konsultasi Gratis",
+            icon: <IoChatbubble/>,
+            text: "Konsultasi Gratis",
             description: "Ganesha Consulting memberikan fasilitas konsultasi gratis, memberikan pelanggan informasi dan panduan tambahan tanpa biaya tambahan."
         },
         {
-            title: "Pelayanan Satu Atap",
+            icon: <FaPersonShelter/>,
+            text: "Pelayanan Satu Atap",
             description: "Dengan Ganesha Consulting, Anda mendapatkan pelayanan satu atap yang mencakup semua kebutuhan legalitas bisnis Anda, memberikan kenyamanan dan efisiensi."
         }
     ],

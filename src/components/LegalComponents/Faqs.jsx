@@ -21,7 +21,7 @@ export const Faqs = ({ data, text, color, className, iconClassName, icons, class
                                 {el.question}
                             </div>
                             <div className="collapse-content">
-                                <div className={`bg-white dark:text-white dark:bg-black dark:brightness-125 mt-3 rounded-3xl p-5`}>
+                                <div className={`-m-3 from-white to-gray-200 dark:from-black dark:to-darkColor bg-gradient-to-bl dark:text-white mt-3 rounded-3xl p-5`}>
                                     {el.answer}
                                 </div>
                             </div>
