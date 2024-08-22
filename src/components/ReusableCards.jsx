@@ -50,20 +50,20 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
                             </>
                         ) : null}
                         <div className={`items-center space-x-2 md:block hidden`}>
-                            <button onClick={handlePrevClick} className={`dark:bg-[#373737] dark:text-gray-100 bg-gray-100 text-gray-700 px-7 py-7 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                                <IoIosArrowBack className="text-[2rem]" />
+                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                             </button>
-                            <button onClick={handleNextClick} className={`dark:bg-[#373737] dark:text-gray-100 bg-gray-100 text-gray-700 px-7 py-7 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                                <IoIosArrowForward className="text-[2rem]" />
+                            <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                             </button>
                         </div>
                     </div>
                     {data.length <= 3 ? null : (
                         <div className={`flex justify-center w-full items-center gap-3 md:hidden`}>
-                            <button onClick={handlePrevClick} className="dark:bg-darkColor dark:text-gray-100 bg-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out">
+                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                             </button>
-                            <button onClick={handleNextClick} className="dark:bg-darkColor dark:text-gray-100 bg-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out">
+                            <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                             </button>
                         </div>
@@ -72,14 +72,14 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
 
                 <div className="relative overflow-x-scroll noBar">
                     <div
-                        className={`${data.length <= 3 ? "flex md:flex-row flex-col justify-center px-5 md:mx-0" : "grid grid-flow-col"}  gap-5 transform transition-transform duration-500 ease-in-out py-5`}
+                        className={`${data.length <= 3 ? "flex md:flex-row flex-col justify-center px-5 md:mx-0" : "grid grid-flow-col"} gap-5 transform transition-transform duration-500 ease-in-out py-5`}
                         style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
 
                     >
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`hover:brightness-105 bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && data.length > 4 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 && data.length > 4 ? 'mr-5 md:mr-24' : ''} md:w-[30vw] w-[90vw] p-5 rounded-3xl space-y-5 relative hover:scale-[.97] duration-300 ease-in-out hover:shadow-secondaryShadow hover:brightness-105`}
+                                className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && data.length > 4 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 && data.length > 4 ? 'mr-5 md:mr-24' : ''} md:w-[30vw] w-[90vw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
                             >
                                 <div className="flex flex-col justify-center items-center gap-3 mt-5">
                                     <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-3xl font-bold tracking-tight`}>

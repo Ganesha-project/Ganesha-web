@@ -1,6 +1,5 @@
-import { DataPageLegal } from "@/app/Database"
 
-export const Benefit = ({ color, title, className, iconClassName, icons, opening }) => {
+export const Benefit = ({ data, color, title, className, iconClassName, icons, opening }) => {
     return (
         <>
             <section className="md:m-24 m-5 py-10 md:py-16 space-y-5">
@@ -12,9 +11,9 @@ export const Benefit = ({ color, title, className, iconClassName, icons, opening
                         {title}
                     </h1>
                 </div>
-                <div className="flex md:flex-row flex-col gap-5 md:justify-between">
-                    {DataPageLegal.benefit.map((el, idx) => (
-                        <div key={idx} className="overflow-hidden group flex flex-col min-w-[100%] md:min-w-[5%] md:w-[25%] md:hover:w-[100%] ease-in-out transition-all duration-500 space-y-5 dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b rounded-3xl p-6 md:p-10">
+                <div className={`${data.length > 4 ? "flex flex-wrap" : "flex md:flex-row flex-col flex-nowrap"} gap-5`}>
+                    {data.map((el, idx) => (
+                        <div key={idx} className="grow overflow-hidden group flex flex-col hover:shadow-mainShadow min-w-[100%] md:min-w-[5%] md:w-[25%] origin-bottom hover:scale-105 ease-in-out transition-all duration-500 space-y-5 dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b rounded-3xl p-6 md:p-10">
                             <div className="text-3xl md:text-5xl group-hover:drop-shadow-2xl duration-300 ease-in-out">
                                 {el.icon}
                             </div>

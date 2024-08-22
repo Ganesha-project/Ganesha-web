@@ -3,6 +3,12 @@ import { BannerService } from "@/components/ServicesComponent/BannerService";
 import { WebPackages } from "../../../public/DB/WebPackages";
 import { HeaderWeb } from "@/components/WebComponents/HeaderWeb";
 import { WebBody } from "@/components/WebComponents/WebBody";
+import { Clients } from "@/components/WebComponents/Clients";
+import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
+import { dataPageWeb } from "../Database";
+import { Benefit } from "@/components/LegalComponents/Benefit";
+import { BenefitWeb, FAQ } from "../../../public/Data/ClientWeb";
+import { Faqs } from "@/components/LegalComponents/Faqs";
 
 export const metadata = {
     title: "Jasa Pembuatan Website - Ganesha Consulting",
@@ -61,8 +67,23 @@ export default async function WebPage() {
                 buttonColor={'bg-sky-500'}
                 label={'Paket Pembuatan Website'}
             />
+            <Clients />
             <HeaderWeb />
+            <WhyLegal
+                data={dataPageWeb.whyWebsite}
+                text1={'Mengapa'}
+                text={'Perusahaan membutuhkan Website?'}
+            />
             <WebBody />
+            <Benefit
+                data={BenefitWeb}
+                opening={'Yang Kamu Dapatkan'}
+                title={'dari pembuatan Web di Ganesha Consulting'}
+            />
+            <Faqs
+                text={'FAQs'}
+                data={FAQ}
+            />
         </>
     );
 }

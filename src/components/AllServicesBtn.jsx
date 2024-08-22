@@ -68,7 +68,7 @@ export const AllServicesBtn = () => {
                         {filteredProducts.slice(0, 5).map((el, idx) => (
                             <Link
                                 href={el.href}
-                                key={idx} className="p-5 group md:space-y-4 flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
+                                key={idx} className="p-5 group md:space-y-4 transition-all flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
                                 <span className="scale-0 group-hover:scale-[10] dark:bg-black bg-white w-full h-full duration-1000 rounded-full -z-30 absolute inset-0 ease-in"></span>
                                 <div className="md:h-[5rem] w-[3rem] md:w-[5rem] h-[3rem] justify-center flex items-center gap-1 group-hover:bg-mainColor ease-in-out duration-300 bg-secondaryColor bg-opacity-10 text-mainColor dark:text-baseColor group-hover:text-white text-xl md:text-3xl rounded-full font-bold ">
                                     {el.icon}
@@ -87,7 +87,7 @@ export const AllServicesBtn = () => {
                             {filteredProducts.slice(5).map((el, idx) => (
                                 <Link
                                     href={el.href}
-                                    key={idx} className="p-5 group md:space-y-4 flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
+                                    key={idx} className="p-5 group md:space-y-4 transition-all flex dark:bg-mainColor bg-baseColor bg-opacity-20 dark:bg-opacity-20 md:flex-col gap-3 md:justify-between items-center w-full overflow-hidden md:w-[15lvw] md:h-[15lvw] border border-secondaryColor rounded-3xl border-opacity-[100%] hover:border-opacity-[0%] hover:shadow-mainShadow hover:scale-95 translate-y-4 duration-300 ease-in-out">
                                     <span className="scale-0 group-hover:scale-[10] dark:bg-black bg-white w-full h-full duration-1000 rounded-full -z-30 absolute inset-0 ease-in"></span>
                                     <div className="md:h-[5rem] w-[3rem] md:w-[5rem] h-[3rem] justify-center flex items-center gap-1 group-hover:bg-mainColor ease-in-out duration-300 bg-secondaryColor bg-opacity-10 text-mainColor dark:text-baseColor group-hover:text-white text-xl md:text-3xl rounded-full font-bold ">
                                         {el.icon}

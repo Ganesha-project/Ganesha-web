@@ -48,9 +48,11 @@ export const HeaderWeb = () => {
     return (
         <>
             <section className="md:mx-24 mx-5">
-                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gradient-to-b dark:from-[#212121] from-gray-200 to-transparent">
+                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor">
                     <div className="relative flex flex-col justify-between md:w-[50%] bg-darkColor rounded-[35px] overflow-hidden duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
-                        <img
+                        <Image
+                            width={500}
+                            height={500}
                             className="rounded-[35px] w-full h-[60lvh] md:h-full object-cover brightness-90"
                             src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="computer coding" />
@@ -64,7 +66,7 @@ export const HeaderWeb = () => {
                     </div>
                     <div className="flex flex-col md:w-[50%] md:grid md:grid-cols-2 gap-5">
                         {dataPageWeb.contentData.features.map((el, idx) => (
-                            <div key={idx} className="md:h-[20lvw] md:w-[20lvw] p-5 flex items-center justify-center flex-col gap-10 rounded-[35px] bg-gray-50 dark:bg-darkColor duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
+                            <div key={idx} className="md:h-[20lvw] md:w-[20lvw] p-5 flex items-center justify-center flex-col gap-10 rounded-[35px] bg-gradient-to-b dark:from-black from-gray-50 to-transparent duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
                                 <div className="text-4xl md:text-6xl">
                                     {el.icon}
                                 </div>

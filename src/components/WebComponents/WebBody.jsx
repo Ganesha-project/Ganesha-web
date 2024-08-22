@@ -58,12 +58,12 @@ export const WebBody = () => {
                             alt="image web"
                         />
                     </div>
-                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-sky-200 to-white dark:from-sky-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <div className="flex flex-col justify-evenly text-2xl md:text-5xl font-bold w-full md:w-fit h-full rounded-md lg:text-left md:text-right tracking-wider">
                             <p>
                                 Pentingnya
                             </p>
-                            <p className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
+                            <p className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-500 dark:to-sky-300 bg-clip-text text-transparent">
                                 Website
                             </p>
                             <p>

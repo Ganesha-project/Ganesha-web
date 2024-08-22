@@ -26,6 +26,7 @@ import { TbCategoryFilled } from "react-icons/tb";
 import { GiSparkles } from "react-icons/gi";
 import { SiSimplenote } from "react-icons/si";
 import { TbListCheck } from "react-icons/tb";
+import { SlSocialInstagram } from "react-icons/sl";
 
 export const legalitasUsaha = [
     {
@@ -2468,7 +2469,18 @@ export const DataPageLegal = {
         },
         {
             icon: <RiBankCardFill />,
-            text: 'Free Pembukaan Rekening Baru',
+            text: (
+                <>
+                    <p className="text-sm md:!text-lg">
+                        Free Pembukaan Rekening Baru
+                        <br />
+                        <span className="font-bold text-2xl md:text-3xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
+                            BCA, MayBank, Sinarmas, Bank DKI
+                        </span>
+                    </p>
+
+                </>
+            ),
             desc: [
                 {
                     bank: 'BCA',
@@ -3420,7 +3432,7 @@ export const dataPageWeb = {
                 icon: <TbCategoryFilled />
             },
             {
-                title: "Desain Professional",
+                title: "Desain Responsif",
                 icon: <GiSparkles />
             },
             {
@@ -3428,9 +3440,75 @@ export const dataPageWeb = {
                 icon: <TbListCheck />
             },
             {
-                title: "Efisien dan Mudah",
-                icon: <SiSimplenote />
+                title: "Integrasi Sosial Media",
+                icon: <SlSocialInstagram />
             }
         ]
-    }
+    },
+    whyWebsite: [
+        {
+            title: "Meningkatkan Kredibilitas",
+            points: [
+                {
+                    heading: "Kredibilitas Perusahaan",
+                    description: "Website memberikan kesan profesional dan meningkatkan kredibilitas perusahaan di mata pelanggan dan mitra bisnis."
+                }
+            ]
+        },
+        {
+            title: "Akses Informasi 24 Jam",
+            points: [
+                {
+                    heading: "Informasi Selalu Tersedia",
+                    description: "Pelanggan dapat mengakses informasi tentang produk, layanan, dan kontak perusahaan kapan saja dan di mana saja, tanpa terbatas oleh jam operasional."
+                }
+            ]
+        },
+        {
+            title: "Memperluas Jangkauan Pasar",
+            points: [
+                {
+                    heading: "Pasar yang Lebih Luas",
+                    description: "Website memungkinkan perusahaan menjangkau pasar yang lebih luas, baik secara nasional maupun internasional. Potensi pelanggan tidak lagi terbatas pada lokasi geografis tertentu."
+                }
+            ]
+        },
+        {
+            title: "Pemasaran Efektif",
+            points: [
+                {
+                    heading: "Alat Pemasaran",
+                    description: "Website adalah alat pemasaran yang sangat efektif. Dengan konten yang tepat dan strategi SEO, perusahaan dapat menarik lebih banyak pengunjung dan mengubah mereka menjadi pelanggan."
+                }
+            ]
+        },
+        {
+            title: "Komunikasi Lebih Mudah",
+            points: [
+                {
+                    heading: "Kemudahan Komunikasi",
+                    description: "Melalui formulir kontak, live chat, atau fitur lainnya, website memudahkan pelanggan untuk berkomunikasi dengan perusahaan, mengajukan pertanyaan, atau memberikan feedback."
+                }
+            ]
+        },
+        {
+            title: "Meningkatkan Penjualan",
+            points: [
+                {
+                    heading: "Peluang Penjualan Online",
+                    description: "Website e-commerce memungkinkan perusahaan untuk menjual produk atau layanan secara online, membuka peluang penjualan yang lebih besar."
+                }
+            ]
+        },
+        {
+            title: "Branding",
+            points: [
+                {
+                    heading: "Identitas Merek",
+                    description: "Website membantu membangun dan memperkuat identitas merek. Melalui desain, konten, dan pengalaman pengguna yang konsisten, perusahaan dapat membedakan dirinya dari kompetitor."
+                }
+            ]
+        }
+    ]
+
 }

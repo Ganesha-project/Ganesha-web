@@ -68,7 +68,6 @@ export default async function PendirianCvPage() {
             />
             <ClientPhotos />
             <Benefit
-                color={'orange'}
                 title={'Yang Kamu Dapatkan dari pendirian CV di Ganesha Consulting'}
             />
             <Explanation

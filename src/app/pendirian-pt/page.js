@@ -1,6 +1,4 @@
-"use client"
 
-import { BodyPT } from '@/components/LegalComponents/BodyPt';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { ReusableCards } from '@/components/ReusableCards';
 import { BannerService } from "@/components/ServicesComponent/BannerService";
@@ -10,33 +8,12 @@ import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { Faqs } from '@/components/LegalComponents/Faqs';
 import { ClientPhotos } from '@/components/ClientPhotos';
 import { DataPageLegal } from '../Database';
-import { Popup } from '@/components/Popup';
-import { useEffect, useState } from 'react';
 import { Explanation } from '@/components/LegalComponents/Explanation';
 import { Laws } from '@/components/LegalComponents/Laws';
 
-export default async function PendirianPtPage() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    useEffect(() => {
-        // Atur kondisi di sini, misalnya berdasarkan query params
-        const queryParams = new URLSearchParams(window.location.search);
-        if (queryParams.get('showPopup') === 'true') {
-            setIsPopupOpen(true);
-        }
-    }, []);
-
-    const handleClosePopup = () => {
-        setIsPopupOpen(false);
-    };
+export default function PendirianPtPage() {
     return (
         <>
-            <Popup
-                isOpen={isPopupOpen}
-                onClose={handleClosePopup}
-                title="Popup Title"
-                content={<p>This is the content of the popup.</p>}
-            />
             <BannerService />
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
@@ -47,6 +24,7 @@ export default async function PendirianPtPage() {
                 label={'Paket Pendirian PT'}
             />
             <Benefit
+                data={DataPageLegal.benefit}
                 opening={'Benefit'}
                 title={'Dari Pendirian PT di Ganesha Consulting'}
             />
@@ -67,7 +45,6 @@ export default async function PendirianPtPage() {
             />
             <Faqs
                 text={'FAQs'}
-                color={'cyan'}
                 data={DataPageLegal.faqData}
             />
             <RWhyUs color={"cyan"} />
