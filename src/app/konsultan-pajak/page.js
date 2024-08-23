@@ -1,5 +1,11 @@
 
+import { Explanation } from '@/components/LegalComponents/Explanation';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPagePajak, taxConsultingFAQ, whyTaxConsultant } from '../../../public/Data/PajakData';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 
 export const metadata = {
     title: "Konsultan Pajak - Ganesha Consulting",
@@ -49,7 +55,22 @@ export default async function KonsultanPajakPage() {
     return (
         <>
             <BannerService />
-
+            <Explanation
+                text1={'Apa itu'}
+                text={'Konsultasi Pajak?'}
+                desc={dataPagePajak.what.desc}
+            />
+            <WhyLegal
+                data={whyTaxConsultant}
+                text1={'Mengapa'}
+                text={'Konsultan Pajak Diperlukan?'}
+            />
+            <CopyWriting/>
+            <Faqs
+                text={'FAQs'}
+                data={taxConsultingFAQ}
+            />
+            <RWhyUs/>
         </>
     );
 }
