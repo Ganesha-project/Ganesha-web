@@ -42,9 +42,11 @@ export const ReusableCards = ({ data, cardColor, typeColor, priceColor, buttonCo
             <section className="py-10 space-y-5">
                 <div className="md:mx-24 mx-5 space-y-5">
                     {data.length <= 3 ? (
-                        <h1 className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase`}>
-                            {label}
-                        </h1>
+                        <div className="flex justify-center w-full items-center">
+                            <h1 className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase w-fit`}>
+                                {label}
+                            </h1>
+                        </div>
                     ) : (
                         <div className={`flex justify-center md:justify-between w-full items-center bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase `}>
                             {label ? (

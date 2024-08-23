@@ -1,4 +1,12 @@
+import { KindOfService } from '@/components/PartnerComponents/KindOfService';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPageHaki, HakiFAQ, HakiTypes, whyHaki } from '../../../public/Data/HakiData';
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { HakiPackages } from '../../../public/DB/HakiPackages';
+import { ReusableCards } from '@/components/ReusableCards';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 
 export const metadata = {
     title: "HAKI | Hak Kekayaan Intelektual - Ganesha Consulting",
@@ -49,7 +57,30 @@ export default async function HakiPage() {
     return (
         <>
             <BannerService />
-
+            <ReusableCards
+                data={HakiPackages}
+                label={'Paket HAKI'}
+            />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Hak Kekayaan Intelektual (HAKI)?'}
+                desc={dataPageHaki.what.desc}
+            />
+            <KindOfService
+                data={HakiTypes}
+                text1={'Jenis - jenis'}
+                text={'Hak Kekayaan Intelektual (HAKI)'}
+            />
+            <WhyLegal
+                data={whyHaki}
+                text1={'Mengapa'}
+                text={'Perusahaan membutuhkan HAKI?'}
+            />
+            <Faqs
+                text={'FAQs'}
+                data={HakiFAQ}
+            />
+            <RWhyUs />
         </>
     );
 }

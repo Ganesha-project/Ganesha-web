@@ -18,9 +18,6 @@ export default function PendirianPtPage() {
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
                 cardColor={'bg-cyan-100'}
-                typeColor={'text-cyan-600'}
-                priceColor={'text-cyan-800'}
-                buttonColor={'bg-cyan-500'}
                 label={'Paket Pendirian PT'}
             />
             <Benefit
@@ -47,7 +44,7 @@ export default function PendirianPtPage() {
                 text={'FAQs'}
                 data={DataPageLegal.faqData}
             />
-            <RWhyUs color={"cyan"} />
+            <RWhyUs />
         </>
     )
 }

@@ -1,5 +1,10 @@
 
+import { Explanation } from '@/components/LegalComponents/Explanation';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPageSMS, faqsSMS, reasonsCompaniesNeedSMS, softwareManagementSystems } from '../../../public/Data/SMSData';
+import { KindOfService } from '@/components/PartnerComponents/KindofService';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
 
 export const metadata = {
     title: "Software Management System - Ganesha Consulting",
@@ -49,6 +54,25 @@ export default async function SoftwareManagementSystem() {
     return (
         <>
             <BannerService />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Software Management System (SMS)?'}
+                desc={dataPageSMS.what.desc}
+            />
+            <KindOfService
+                data={softwareManagementSystems}
+                text1={'Jenis - jenis'}
+                text={'Software Management Systems (SMS)'}
+            />
+            <WhyLegal
+                data={reasonsCompaniesNeedSMS}
+                text1={'Mengapa'}
+                text={'Perusahaan Membutuhkan SMS?'}
+            />
+              <Faqs
+                text={'FAQs'}
+                data={faqsSMS}
+            />
         </>
     );
 }
