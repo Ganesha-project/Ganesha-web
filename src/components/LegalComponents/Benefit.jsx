@@ -1,18 +1,15 @@
+import { Title } from "../Title"
 
 export const Benefit = ({ data, color, title, className, iconClassName, icons, opening }) => {
     return (
         <>
             <section className="md:m-24 m-5 py-10 md:py-16 space-y-5">
                 <div className="space-y-1">
-                    <span className="text-lg md:text-xl">
-                        {opening}
-                    </span>
-                    <h1 className="font-bold text-2xl md:text-4xl">
-                        {title}
-                    </h1>
+             
+                    <Title text1={opening} text={title}/>
                 </div>
-                <div className={`${data.length > 4 ? "flex flex-wrap" : "flex md:flex-row flex-col flex-nowrap"} gap-5`}>
-                    {data.map((el, idx) => (
+                <div className={`${data?.length > 4 ? "flex flex-wrap" : "flex md:flex-row flex-col flex-nowrap"} gap-5`}>
+                    {data?.map((el, idx) => (
                         <div key={idx} className="grow overflow-hidden group flex flex-col hover:shadow-mainShadow min-w-[100%] md:min-w-[5%] md:w-[25%] origin-bottom hover:scale-105 ease-in-out transition-all duration-500 space-y-5 dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b rounded-3xl p-6 md:p-10">
                             <div className="text-3xl md:text-5xl group-hover:drop-shadow-2xl duration-300 ease-in-out">
                                 {el.icon}

@@ -476,7 +476,7 @@ export const DataBanner = [
             desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.",
             accent: "bg-[#70bcb1] dark:bg-[#70bcb1a8]",
             accent2: "bg-[#FF9092] dark:bg-[#ff9092d1]",
-            textAccent: "dark:text-[#019c85b2] text-[#019C85]"
+            textAccent: "dark:text-[#26d3b9] text-[#019C85]"
         },
     },
     {

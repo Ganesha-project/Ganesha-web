@@ -1,4 +1,10 @@
+import { Explanation } from '@/components/LegalComponents/Explanation';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPageAccounting, faqAccounting, whyAccounting } from '../../../public/Data/AccountingData';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { Faqs } from '@/components/LegalComponents/Faqs';
 
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
@@ -43,11 +49,26 @@ export const metadata = {
     }
 };
 
-
 export default async function PelayananAkuntansi() {
     return (
         <>
             <BannerService />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Hak Kekayaan Intelektual (HAKI)?'}
+                desc={dataPageAccounting.what.desc}
+            />
+            <WhyLegal
+                data={whyAccounting}
+                text1={'Kenapa'}
+                text={'Accounting Penting untuk Bisnis Anda?'}
+            />
+            <CopyWriting data={dataPageAccounting.copywriting}/>
+            <Faqs
+                text={'FAQs'}
+                data={faqAccounting}
+            />
+            <RWhyUs/>
         </>
     );
 }

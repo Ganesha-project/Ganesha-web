@@ -5,7 +5,7 @@ import { CVPackages } from "../../../public/DB/CVPackages";
 import { ExtrasPackages } from "../../../public/DB/PTPackages";
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { Faqs } from "@/components/LegalComponents/Faqs";
-import { dataPageCV } from "../Database";
+import { dataPageCV, DataPageLegal } from "../Database";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { Explanation } from "@/components/LegalComponents/Explanation";
 import { Laws } from "@/components/LegalComponents/Laws";
@@ -60,15 +60,16 @@ export default async function PendirianCvPage() {
             <BannerService />
             <ReusableCards
                 data={[...CVPackages, ...ExtrasPackages]}
-                cardColor={'bg-orange-100'}
-                typeColor={'text-orange-600'}
-                priceColor={'text-orange-800'}
-                buttonColor={'bg-orange-500'}
                 label={'Paket Pendirian CV'}
+                scrollToLg={29}
+                scrollToMd={29}
+                scrollToSm={15}
             />
             <ClientPhotos />
             <Benefit
-                title={'Yang Kamu Dapatkan dari pendirian CV di Ganesha Consulting'}
+                data={DataPageLegal.benefit}
+                opening={'Yang Kamu Dapatkan'}
+                title={'Dari Pendirian CV di Ganesha Consulting'}
             />
             <Explanation
                 desc={dataPageCV.whatCv.desc}

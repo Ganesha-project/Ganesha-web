@@ -11,14 +11,17 @@ export const Clients = () => {
     let data = dataClientWeb
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
+    const [scrollTo, setScrollto] = useState(10);
 
     // Update itemsToShow based on screen size
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1024) {
                 setItemsToShow(2); // 3 items for large screens
+                setScrollto(30)
             } else {
                 setItemsToShow(1); // 1 item for smaller screens
+                setScrollto(15)
             }
         };
 
@@ -41,12 +44,12 @@ export const Clients = () => {
     };
     return (
         <>
-            <section className="md:py-20 bg-gray-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
+            <section className="bg-gray-100 dark:bg-darkColor md:py-20 py-10 md:my-10 my-5">
                 <Title className={'md:mx-24 mx-5'} text1={"Explore"} text={'Our Works'} />
-                <div className="relative overflow-x-scroll noBar h-full">
+                <div className="relative carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
-                        style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
+                        style={{ transform: `translateX(-${currentIndex * (scrollTo / itemsToShow)}%)` }}
                     >
                         {data.map((el, idx) => (
                             <Link
@@ -79,24 +82,15 @@ export const Clients = () => {
                         ))}
                     </div>
                 </div>
-                <div className="absolute inset-5 md:block hidden md:top-[40%]">
-                    <div className={`flex justify-between w-full items-center gap-3`}>
-                        <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowBack className="text-2xl md:text-[2rem]" />
-                        </button>
-                        <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowForward className="text-2xl md:text-[2rem]" />
-                        </button>
-                    </div>
-                </div >
-                <div className="md:hidden block mx-5">
+  
+                <div className="block mx-5">
                     <div className={`flex justify-center w-full items-center gap-3`}>
-                        <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "scale-0" : "scale-100"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowBack className="text-2xl md:text-[2rem]" />
-                        </button>
-                        <button onClick={handleNextClick} className={`${currentIndex < data.length - itemsToShow - 1 ? "scale-100" : "scale-0"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowForward className="text-2xl md:text-[2rem]" />
-                        </button>
+                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowBack className="text-2xl md:text-[2rem]" />
+                            </button>
+                            <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowForward className="text-2xl md:text-[2rem]" />
+                            </button>
                     </div>
                 </div>
             </section >

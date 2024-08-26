@@ -61,11 +61,10 @@ export default async function WebPage() {
             <BannerService />
             <ReusableCards
                 data={WebPackages}
-                cardColor={'bg-sky-100'}
-                typeColor={'text-sky-600'}
-                priceColor={'text-sky-800'}
-                buttonColor={'bg-sky-500'}
                 label={'Paket Pembuatan Website'}
+                scrollToLg={50}
+                scrollToMd={40}
+                scrollToSm={17}
             />
             <Clients />
             <Header
@@ -79,8 +78,8 @@ export default async function WebPage() {
             <WebBody />
             <Benefit
                 data={BenefitWeb}
-                opening={'Yang Kamu Dapatkan'}
-                title={'dari pembuatan Web di Ganesha Consulting'}
+                opening={'Yang kamu dapatkan dari'}
+                title={'Pembuatan Web di Ganesha Consulting'}
             />
             <Faqs
                 text={'FAQs'}

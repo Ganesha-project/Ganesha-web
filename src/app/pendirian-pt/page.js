@@ -17,8 +17,8 @@ export default function PendirianPtPage() {
             <BannerService />
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
-                cardColor={'bg-cyan-100'}
                 label={'Paket Pendirian PT'}
+                scrollToLg={25}
             />
             <Benefit
                 data={DataPageLegal.benefit}

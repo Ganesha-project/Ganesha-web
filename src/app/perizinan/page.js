@@ -1,4 +1,6 @@
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { whyPerizinan } from '../../../public/Data/DataPerizinan';
 
 export const metadata = {
     title: "Izin Tambahan - Ganesha Consulting",
@@ -48,6 +50,11 @@ export default async function IzinTambahanPage() {
     return (
         <>
             <BannerService />
+            <WhyLegal
+                data={whyPerizinan}
+                text1={'Mengapa'}
+                text={'Mengapa Perizinan dibutuhkan?'}
+            />
         </>
     );
 }

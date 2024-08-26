@@ -65,7 +65,7 @@ export default async function KonsultanPajakPage() {
                 text1={'Mengapa'}
                 text={'Konsultan Pajak Diperlukan?'}
             />
-            <CopyWriting/>
+            <CopyWriting data={dataPagePajak.copywriting}/>
             <Faqs
                 text={'FAQs'}
                 data={taxConsultingFAQ}

@@ -2,6 +2,10 @@ export const dataPagePajak = {
     what: {
         desc: 'Konsultasi pajak adalah layanan profesional yang membantu individu atau perusahaan dalam memahami, mengelola, dan memenuhi kewajiban perpajakan mereka. Konsultan pajak memberikan saran, perencanaan, dan bantuan terkait pengisian serta pelaporan pajak sesuai dengan peraturan yang berlaku. Tujuan dari konsultasi pajak adalah untuk memastikan kepatuhan terhadap peraturan perpajakan, mengoptimalkan kewajiban pajak, dan menghindari denda atau sanksi yang dapat timbul akibat kesalahan dalam pelaporan atau pembayaran pajak.'
     },
+    copywriting: {
+        head: "Jangan Tunggu Sampai Terlambat!",
+        body: "Hubungi kami sekarang dan jadikan pajak Anda lebih mudah dan teratur! Dengan konsultasi pajak profesional dari kami, Anda dapat fokus pada yang terpenting mengembangkan bisnis Anda dan menikmati hasil kerja keras Anda tanpa khawatir soal pajak!"
+    }
 }
 
 export const whyTaxConsultant = [
