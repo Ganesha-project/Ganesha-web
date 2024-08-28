@@ -58,7 +58,6 @@ export const Navbar = () => {
 
             <MegaMenuNavbar
               title="Produk & Layanan"
-              href={'/services'}
               label={'Our Service Collections'}
               links={NavLinks.productsAndServices}
               isExpanded={isExpanded}
@@ -66,7 +65,6 @@ export const Navbar = () => {
             />
             <MegaMenuNavbar
               title="Legalitas"
-              href={'/legalitas'}
               label={'Our Legality Services'}
               links={NavLinks.legalities}
               isExpanded={isExpanded}

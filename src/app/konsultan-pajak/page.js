@@ -6,6 +6,8 @@ import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { Faqs } from '@/components/LegalComponents/Faqs';
 import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { ReusableCards } from '@/components/ReusableCards';
+import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
 
 export const metadata = {
     title: "Konsultan Pajak - Ganesha Consulting",
@@ -55,6 +57,34 @@ export default async function KonsultanPajakPage() {
     return (
         <>
             <BannerService />
+            <ReusableCards
+                data={pelaporanSPT}
+                label={'Paket Pelaporan SPT'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMDN}
+                label={'Paket Konsultan Pajak PMDN'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMA}
+                label={'Paket Konsultan Pajak PMA'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
+                label={'Paket Pajak Daerah & Brevet'}
+                scrollToLg={55}
+                scrollToMd={55}
+                scrollToSm={20}
+            />
             <Explanation
                 text1={'Apa itu'}
                 text={'Konsultasi Pajak?'}
@@ -65,12 +95,12 @@ export default async function KonsultanPajakPage() {
                 text1={'Mengapa'}
                 text={'Konsultan Pajak Diperlukan?'}
             />
-            <CopyWriting data={dataPagePajak.copywriting}/>
+            <CopyWriting data={dataPagePajak.copywriting} />
             <Faqs
                 text={'FAQs'}
                 data={taxConsultingFAQ}
             />
-            <RWhyUs/>
+            <RWhyUs />
         </>
     );
 }

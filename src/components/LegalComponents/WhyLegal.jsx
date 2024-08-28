@@ -72,10 +72,10 @@ export const WhyLegal = ({ data, text, text1 }) => {
                     </div>
                 </div>
                 <div className="flex justify-center w-full items-center space-x-2">
-                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                     </button>
-                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                     </button>
                 </div>

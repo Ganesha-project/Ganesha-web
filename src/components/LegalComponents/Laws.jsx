@@ -12,7 +12,7 @@ export const Laws = ({ text, text1, data, classNameTitle }) => {
                                 {el.number}
                             </div>
                             <div className="space-y-3">
-                                <h1 className={`${classNameTitle} font-medium`}>
+                                <h1 className={`${classNameTitle} bg-gradient-to-b dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-400 bg-clip-text text-transparent text-lg md:text-2xl font-medium`}>
                                     {el.text}
                                 </h1>
                                 {el.points ? (

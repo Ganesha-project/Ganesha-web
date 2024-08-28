@@ -133,7 +133,7 @@ export const FAQ = [
 ]
 export const dataPageWeb = {
     contentData: {
-        image: "https://images.unsplash.com/photo-1669023414162-5bb06bbff0ec?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1667984436061-07f5cec0480d?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         heading: "Buat Perusahaan Anda Terlihat Proffesional dan Menarik dengan website yang Modern",
         features: [
             {

@@ -5,6 +5,8 @@ import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { Faqs } from '@/components/LegalComponents/Faqs';
+import { ReusableCards } from '@/components/ReusableCards';
+import { AccountantPackages } from '../../../public/DB/AccountantPackages';
 
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
@@ -53,9 +55,16 @@ export default async function PelayananAkuntansi() {
     return (
         <>
             <BannerService />
+            <ReusableCards  
+                data={AccountantPackages}
+                label={'Paket Pelayanan Akuntansi'}
+                scrollToLg={13}
+                scrollToMd={13}
+                scrollToSm={4.5}
+            />
             <Explanation
                 text1={'Apa itu'}
-                text={'Hak Kekayaan Intelektual (HAKI)?'}
+                text={'Accounting?'}
                 desc={dataPageAccounting.what.desc}
             />
             <WhyLegal
@@ -72,4 +81,3 @@ export default async function PelayananAkuntansi() {
         </>
     );
 }
-

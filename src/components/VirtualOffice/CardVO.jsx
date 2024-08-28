@@ -2,10 +2,12 @@
 
 import { dataPageVO } from "@/app/Database"
 import { FaPlus } from "react-icons/fa6"
+import { Title } from "../Title"
 
 export const CardVO = () => {
     return (
-        <section className="md:m-24 m-5 py-10 md:py-16">
+        <section className="md:m-24 m-5 py-10 md:py-16 space-y-10">
+            <Title text1={'Preview'} text={'Lokasi Vitrual Office Kami'}/>
             <div className="flex flex-col gap-5">
                 {dataPageVO.Location.map((el, idx) => (
                     <div key={idx}>

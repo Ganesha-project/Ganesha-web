@@ -13,10 +13,6 @@ export default async function VirtualOfficePage() {
             <BannerService />
             <ReusableCards
                 data={VirtualOfficePackages}
-                cardColor={'bg-gray-100'}
-                typeColor={'text-gray-600'}
-                priceColor={'text-gray-800'}
-                buttonColor={'bg-gray-500'}
                 label={'Paket Sewa Virtual Office'}
             />
             <CardVO />

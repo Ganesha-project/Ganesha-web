@@ -6,7 +6,7 @@ import { FaQuoteRight } from 'react-icons/fa6';
 import { Title } from './Title';
 import { useState } from 'react';
 import SkeletonImage from './Skeleton/SkeletonImage';
-import { ClientsReview } from '../../public/DB/Clients';
+import { ClientsReview } from '../../public/Data/Clients';
 
 
 export const ClientPhotos = () => {

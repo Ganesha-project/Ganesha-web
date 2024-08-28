@@ -3111,9 +3111,9 @@ export const dataContact = {
             link: "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         },
         {
-            label: "FaceBook",
+            label: "Facebook",
             icon: <RiFacebookBoxFill />,
-            class: "bg-[#EA5554] !text-white",
+            class: "bg-gradient-to-b to-transparent from-[#EA5554] !text-white",
             data: "Ganesha Consulting",
             link: "https://www.facebook.com/profile.php?id=61555739807086"
         },

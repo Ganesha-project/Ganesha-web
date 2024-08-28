@@ -4,6 +4,11 @@ import { BadanUsahaPackages, ExtrasPackages, PMAPackages, PTPackages } from '../
 import { CVPackages } from '../../../public/DB/CVPackages';
 import { WebPackages } from '../../../public/DB/WebPackages';
 import { SMPackages } from '../../../public/DB/SMPackages';
+import { VirtualOfficePackages } from '../../../public/DB/OtherPackages';
+import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
+import { HakiPackages } from '../../../public/DB/HakiPackages';
+import { servicePackages } from '../../../public/DB/IzinPackages';
+import { AccountantPackages } from '../../../public/DB/AccountantPackages';
 
 export const metadata = {
     title: "Semua Produk - Ganesha Consulting",
@@ -57,43 +62,70 @@ export default async function AllProductsPage() {
             <BannerService />
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
-                cardColor={'bg-cyan-100'}
-                typeColor={'text-cyan-600'}
-                priceColor={'text-cyan-800'}
-                buttonColor={'bg-cyan-500'}
                 label={'Paket Pendirian PT'}
             />
             <ReusableCards
                 data={[...CVPackages]}
-                cardColor={'bg-orange-100'}
-                typeColor={'text-orange-600'}
-                priceColor={'text-orange-800'}
-                buttonColor={'bg-orange-500'}
                 label={'Paket Pendirian CV'}
             />
             <ReusableCards
                 data={BadanUsahaPackages}
-                cardColor={'bg-gray-200'}
-                typeColor={'text-gray-600'}
-                priceColor={'text-gray-800'}
-                buttonColor={'bg-gray-500'}
                 label={'Paket Pendirian Badan Usaha'}
             />
             <ReusableCards
                 data={WebPackages}
-                cardColor={'bg-sky-100'}
-                typeColor={'text-sky-600'}
-                priceColor={'text-sky-800'}
-                buttonColor={'bg-sky-500'}
                 label={'Paket Pembuatan Website'}
             />
             <ReusableCards
                 data={SMPackages}
-                cardColor={'bg-violet-100'}
-                typeColor={'text-violet-600'}
-                priceColor={'text-violet-800'}
-                buttonColor={'bg-violet-500'}
                 label={'Paket Social Media Management'}
+            />
+            <ReusableCards
+                data={VirtualOfficePackages}
+                label={'Paket Sewa Virtual Office'}
+            />
+            <ReusableCards
+                data={servicePackages}
+                label={'Paket Perizinan'}
+            />
+            <ReusableCards
+                data={pelaporanSPT}
+                label={'Paket Pelaporan SPT'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMDN}
+                label={'Paket Konsultan Pajak PMDN'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMA}
+                label={'Paket Konsultan Pajak PMA'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
+                label={'Paket Pajak Daerah & Brevet'}
+                scrollToLg={55}
+                scrollToMd={55}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={HakiPackages}
+                label={'Paket HAKI'}
+            />
+            <ReusableCards
+                data={AccountantPackages}
+                label={'Paket Pelayanan Akuntansi'}
+                scrollToLg={13}
+                scrollToMd={13}
+                scrollToSm={4.5}
             />
         </>
     )

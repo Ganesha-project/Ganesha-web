@@ -5,19 +5,19 @@ import { Title } from "../Title"
 export const Form = () => {
     return (
         <>
-        <section className="md:m-24 m-5 space-y-5">
+        <section className="md:m-24 m-5 space-y-5 md:py-20 py-10">
                 <Title text={'Tulis Pertanyaan Kamu Disini!'} />
                 <form action="" className="space-y-3">
                     {dataFormContact.map((el, idx) => (
-                        <label key={idx} className="input input-bordered rounded-full bg-baseColor dark:bg-opacity-50 flex items-center gap-2">
+                        <label key={idx} className="input input-bordered rounded-2xl bg-gray-100 dark:bg-darkColor flex items-center gap-2">
                             <span className="font-semibold">
                                 {el.placeholder}
                             </span>
                             <input type="text" name={el.name} className="grow" />
                         </label>
                     ))}
-                    <textarea name="message" id="" cols="30" rows="5" className="rounded-3xl bg-baseColor dark:bg-opacity-50 placeholder:text-gray-900 dark:placeholder:text-white px-4 py-3 w-full placeholder:font-semibold" placeholder="Pesan"></textarea>
-                    <button className="px-4 py-2 rounded-full bg-red-400 text-white btn btn-ghost">
+                    <textarea name="message" id="" cols="30" rows="5" className="border border-[#E2E6EA] dark:border-[#3D3F41] rounded-2xl bg-gray-100 dark:bg-darkColor placeholder:text-gray-900 dark:placeholder:text-white px-4 py-3 w-full placeholder:font-semibold" placeholder="Pesan"></textarea>
+                    <button className="px-4 py-2 rounded-2xl w-full bg-gradient-to-bl from-gray-100 dark:from-darkColor to-sky-200 dark:to-sky-800  btn btn-ghost border-none hover:brightness-105">
                         Kirim
                         <IoSend />
                     </button>

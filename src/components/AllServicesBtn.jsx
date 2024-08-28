@@ -48,7 +48,7 @@ export const AllServicesBtn = () => {
                             {searchTerm !== "" && (
                                 <button
                                     type="button"
-                                    className="flex items-center gap-1 md:pr-3 p-1 md:pl-1 py-1 bg-red-500 rounded-full text-white font-semibold md:ml-2 hover:bg-red-600 duration-300 ease-in-out"
+                                    className="flex items-center gap-1 md:pr-3 p-1 md:pl-1 py-1 bg-gray-200 dark:bg-darkColor rounded-full  font-semibold md:ml-2 hover:bg-red-600 duration-300 ease-in-out"
                                     onClick={handleResetSearch}
                                 >
                                     <TiDelete className="text-xl" />

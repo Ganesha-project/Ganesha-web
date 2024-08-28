@@ -20,7 +20,7 @@ export const Benefit = () => {
                             </span>
                             <div className="space-y-2">
                                 <h1 className="font-bold text-2xl md:text-3xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
-                                    {el.type}
+                                    {el.text}
                                 </h1>
                                 <h2 className=" text-sm">
                                     {el.description}

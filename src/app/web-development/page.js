@@ -4,9 +4,8 @@ import { WebPackages } from "../../../public/DB/WebPackages";
 import { WebBody } from "@/components/WebComponents/WebBody";
 import { Clients } from "@/components/WebComponents/Clients";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
-import { dataPageWeb } from "../Database";
 import { Benefit } from "@/components/LegalComponents/Benefit";
-import { BenefitWeb, FAQ } from "../../../public/Data/WebData";
+import { BenefitWeb, dataPageWeb, FAQ } from "../../../public/Data/WebData";
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { Header } from "@/components/WebComponents/Header";
 

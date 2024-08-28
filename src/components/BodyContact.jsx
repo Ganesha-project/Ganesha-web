@@ -1,49 +1,39 @@
 import Image from "next/image"
 import Link from "next/link"
 import { dataContact } from "@/app/Database"
+import { Title } from "./Title"
 
 export const BodyContact = () => {
     return (
         <>
-            <section className="mx-5 md:m-24 space-y-10">
-                <div className="flex flex-col items-center lg:flex-row justify-between">
+            <section className="md:mx-24 mx-5 space-y-10 md:py-20 py-10">
+                <Title text1={'List'} text={'Kontak Kami'} />
+                <div className="flex flex-wrap gap-5">
                     <Image
                         width={500}
                         height={500}
                         src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/yglkieiqquwszhg3vedd.svg'}
-                        className="w-full lg:w-[50%] md:w-auto h-auto"
+                        className="w-full lg:w-[25%] md:w-auto h-auto p-5 rounded-3xl bg-[#F7EEFF] duration-300 ease-in-out hover:-translate-y-3 origin-bottom hover:shadow-mainShadow"
                     />
-                    <div className="md:w-[50%] w-full text-gray-900 space-y-3 md:space-y-5">
-                        <h1 className="text-xl lg:text-4xl font-extrabold text-mainColor dark:text-baseColor">Kontak Kami</h1>
-                        {[...dataContact.mail, ...dataContact.phone].map((el, idx) => (
-                            <Link
-                                key={idx}
-                                href={el.link}
-                                className="hover:brightness-110 ease-in-out duration-300 flex gap-4 bg-violet-100 rounded-3xl py-2 px-4">
-                                <div className="text-xl md:text-3xl flex md:flex-row flex-col md:items-center gap-1 mt-1 md:mt-0 md:gap-3">
-                                    <span className="text-[#42497A] flex items-center gap-2">
-                                        {el.icon}
-                                        <p className="block md:hidden font-semibold text-base">
-                                            {el.label}
-                                        </p>
-                                    </span>
-                                    <p className="text-sm lg:text-2xl font-extrabold pb-1 md:pb-0">{el.data}</p>
-                                </div>
-                            </Link>
-                        ))}
-                        <div className="flex justify-end lg:justify-end gap-3">
-                            {dataContact.media.slice(0, 3).map((el, idx) => (
-                                <Link
-                                    key={idx}
-                                    href={el.link}
-                                    className={`${el.class ? el.class : "bg-violet-100 "} text-[#42497A] flex hover:bg-opacity-50 flex-col w-fit items-center gap-4 rounded-[40px] p-4`}>
-                                    <span className="text-2xl md:text-4xl">
-                                        {el.icon}
-                                    </span>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
+                    {[...dataContact.mail, ...dataContact.phone, ...dataContact.media].map((el, idx) => (
+                        <Link
+                            href={el.link}
+                            key={idx}
+                            className="grow flex flex-col justify-between p-5 rounded-3xl dark:bg-darkColor bg-gray-200 hover:invert duration-300 ease-in-out hover:-translate-y-3 origin-bottom hover:shadow-mainShadow"
+                        >
+                            <div className="text-3xl md:text-5xl mb-10">
+                                {el.icon}
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <h1 className="font-medium text-lg md:text-xl">
+                                    {el.label}
+                                </h1>
+                                <h2 className="font-bold text-xl bg-gradient-to-bl dark:from-secondaryColor dark:to-gray-100 from-mainColor to-darkColor bg-clip-text text-transparent">
+                                    {el.data}
+                                </h2>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </section>
         </>

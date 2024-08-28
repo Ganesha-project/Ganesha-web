@@ -1,6 +1,10 @@
 import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
-import { whyPerizinan } from '../../../public/Data/DataPerizinan';
+import { faqPerizinan, whyPerizinan } from '../../../public/Data/DataPerizinan';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { servicePackages } from '../../../public/DB/IzinPackages';
+import { ReusableCards } from '@/components/ReusableCards';
 
 export const metadata = {
     title: "Izin Tambahan - Ganesha Consulting",
@@ -50,11 +54,23 @@ export default async function IzinTambahanPage() {
     return (
         <>
             <BannerService />
+            <ReusableCards
+                data={servicePackages}
+                label={'Paket Perizinan'}
+                scrollToLg={20}
+                scrollToMd={15}
+                scrollToSm={8}
+            />
             <WhyLegal
                 data={whyPerizinan}
                 text1={'Mengapa'}
                 text={'Mengapa Perizinan dibutuhkan?'}
             />
+            <Faqs
+                text={'FAQs'}
+                data={faqPerizinan}
+            />
+            <RWhyUs />
         </>
     );
 }

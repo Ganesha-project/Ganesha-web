@@ -1,8 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
 import { formatToRupiah } from "@/helper/formatToRupiah";
-import { BsFillCheckCircleFill, BsFillXCircleFill } from "react-icons/bs";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircle, BsInfoCircleFill } from "react-icons/bs";
+import { IoIosArrowBack, IoIosArrowForward, IoMdInformationCircle } from "react-icons/io";
+import { TbInfoSquareFilled } from "react-icons/tb";
 
 export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm, }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,10 +65,10 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
                                 </>
                             ) : null}
                             <div className={`items-center space-x-2 md:block hidden`}>
-                                <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                     <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                                 </button>
-                                <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                     <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                                 </button>
                             </div>
@@ -75,10 +76,10 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
                     )}
                     {totalItems <= 3 ? null : (
                         <div className={`flex justify-center w-full items-center gap-3 md:hidden`}>
-                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                             </button>
-                            <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                            <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                             </button>
                         </div>
@@ -96,13 +97,13 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
                                 className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24' : ''} md:w-[30vw] w-[90vw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
                             >
                                 <div className="flex flex-col justify-center items-center gap-3 mt-5">
-                                    <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-3xl font-bold tracking-tight`}>
+                                    <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-xl md:text-3xl font-bold tracking-tight`}>
                                         {el.type}
                                     </h1>
                                     <h3 className="text-center line-through text-lg dark:text-red-500 text-red-600">
                                         {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                                     </h3>
-                                    <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-3xl`}>
+                                    <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-xl md:text-3xl`}>
                                         {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
                                     <a
@@ -119,7 +120,7 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
                                     </div>
                                 ) : null}
                                 <div>
-                                    {el.features.map((feature, idx) => (
+                                    {el.features?.map((feature, idx) => (
                                         <div key={idx} className="flex items-center gap-3">
                                             <span className="items-start">
                                                 {feature.status === true ? (<BsFillCheckCircleFill className="text-green-500" />) : (<BsFillXCircleFill className="text-red-500" />)}
@@ -129,6 +130,18 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
                                             </h4>
                                         </div>
                                     ))}
+                                    {el.requirements ? (
+                                        <>
+                                            <p className="mt-5 mb-2 font-semibold px-2 bg-yellow-400 dark:bg-amber-500 rounded-full w-fit">
+                                                Persyaratan
+                                            </p>
+                                            {el.requirements?.map(el => (
+                                                <div className="flex items-center gap-3" >
+                                                    <BsInfoCircleFill className="dark:text-amber-500 text-yellow-400" />  {el}
+                                                </div>
+                                            ))}
+                                        </>
+                                    ) : null}
                                 </div>
                             </div>
                         ))}

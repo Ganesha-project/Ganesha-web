@@ -1,4 +1,4 @@
-import { ClientsReview } from "../../public/DB/Clients"
+import { ClientsReview } from "../../public/Data/Clients"
 import { ExpandableButton } from "./ExpandableButton"
 import { Title } from "./Title"
 
@@ -27,7 +27,7 @@ export const ClientLogo = () => {
                 </div>
             </section>
             <section className="md:hidden block py-10 md:py-24 space-y-5 2xl:px-80">
-                <Title text={'Our Clients'} className={'mb-5 md:mb-10'} />
+                <Title text={'Our Clients'} className={'mb-5 md:mb-10 md:mx-24 mx-5 flex justify-center'} />
                 <div className="mx-5 flex justify-center flex-wrap gap-4">
                     {ClientsReview.slice(0, 6).map((el, idx) => (
                         <div key={idx} className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
@@ -46,7 +46,7 @@ export const ClientLogo = () => {
                 <ExpandableButton
                     align={'items-center'}
                     label={'Show All'}
-                    className={'px-4 py-2 bg-secondaryColor w-fit rounded-full font-bold'}
+                    className={'px-4 py-2 bg-baseColor dark:bg-secondaryColor w-fit rounded-full font-bold'}
                     classNameInner={"flex flex-wrap gap-4 justify-center mx-5 pb-10"}>
                     {ClientsReview.slice(6).map((el, idx) => (
                         <div key={idx} className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
