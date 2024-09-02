@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from "next/link";
-import { DataPageLegal } from "@/app/Database";
 import { Title } from '../Title';
+import { DataPageLegal } from '../../../public/Data/LegalitasData';
 
 export const AllProductButton = () => {
 

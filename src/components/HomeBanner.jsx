@@ -1,24 +1,27 @@
 'use client'
-import { ppl } from "@/app/Database";
+
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import { ClientsReview } from "../../public/Data/Clients";
 
 export const HomeBanner = () => {
-
+    // Filter only items with a client photo
+    const filteredClients = ClientsReview.filter(el => el.clientPhoto);
     const delay = 4000;
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIndex(prevIndex =>
-                prevIndex === ppl.length - 1 ? 0 : prevIndex + 1
-            );
-        }, delay);
+        if (filteredClients.length > 0) {
+            const timer = setTimeout(() => {
+                setIndex(prevIndex =>
+                    prevIndex === filteredClients.length - 1 ? 0 : prevIndex + 1
+                );
+            }, delay);
 
-        return () => clearTimeout(timer);
-    }, [index]);
+            return () => clearTimeout(timer);
+        }
+    }, [index, filteredClients.length]);
 
     return (
         <>
@@ -26,7 +29,7 @@ export const HomeBanner = () => {
                 <div className="flex justify-between gap-10 px-24 2xl:px-80">
                     <div className="w-[60%] flex flex-col gap-20 relative">
                         <div className="flex flex-col justify-center h-full gap-3">
-                            <div className="flex flex-col justify-between py-5  gap-5">
+                            <div className="flex flex-col justify-between py-5 gap-5">
                                 <h1 className="text-4xl font-[500] tracking-[1px] capitalize relative py-5">
                                     <span className="text-rose-400">
                                         no ribet!
@@ -41,7 +44,6 @@ export const HomeBanner = () => {
                                         Proses terpercaya <br />
                                     </span>
                                     <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
-
                                 </h1>
                                 <div className="relative textsec darl:text-baseColor">
                                     <p className="">
@@ -66,12 +68,15 @@ export const HomeBanner = () => {
                         <div
                             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                             className="whitespace-nowrap transition-transform ease-in-out duration-700">
-                            {ppl.map((el, idx) => (
-                                <img
+                            {filteredClients.map((el, idx) => (
+                                <Image
+                                    width={500}
+                                    height={500}
                                     key={idx}
                                     className="w-full h-screen object-cover inline-block shadow"
-                                    src={el}
-                                    alt="" />
+                                    src={el.clientPhoto}
+                                    alt="client ganesha consulting"
+                                />
                             ))}
                         </div>
                         <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-l from-transparent to-[#ffffff] dark:to-black w-[80%] group-hover:w-[100%] group-hover:backdrop-blur-xl duration-300 ease-in-out">
@@ -89,17 +94,20 @@ export const HomeBanner = () => {
                     <div
                         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                         className="whitespace-nowrap transition-transform ease-in-out duration-700">
-                        {ppl.map((el, idx) => (
+                        {filteredClients.map((el, idx) => (
                             <img
+                                width={500}
+                                height={500}
                                 key={idx}
-                                className="w-full h-screen object-cover inline-block shadow "
-                                src={el}
-                                alt="" />
+                                className="w-full h-screen object-cover inline-block shadow"
+                                src={el.clientPhoto}
+                                alt="client ganesha consulting"
+                            />
                         ))}
                     </div>
                     <div className="absolute z-10 inset-0 flex flex-col justify-center h-full gap-3">
                         <div className="flex flex-col justify-between py-5 gap-5 mx-5">
-                            <h1 className="text-xl font-[500] tracking-[1px] capitalize relative py-5 ">
+                            <h1 className="text-xl font-[500] tracking-[1px] capitalize relative py-5">
                                 <span className="text-rose-200">
                                     no ribet!
                                 </span> <br />
@@ -113,7 +121,6 @@ export const HomeBanner = () => {
                                     Proses terpercaya <br />
                                 </span>
                                 <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
-
                             </h1>
                             <div className="relative text-white">
                                 <p className="truncate-last">
@@ -138,5 +145,5 @@ export const HomeBanner = () => {
                 </div>
             </section>
         </>
-    )
-}
+    );
+};

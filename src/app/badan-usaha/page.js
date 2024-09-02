@@ -5,10 +5,10 @@ import { BadanUsahaPackages } from "../../../public/DB/PTPackages";
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { Faqs } from "@/components/LegalComponents/Faqs";
-import { dataPageBadanUsaha, DataPageLegal } from "../Database";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
-import { undangUndangTerkait, whyBadanUsaha } from "../../../public/Data/BadanUsahaData";
+import { dataPageBadanUsaha, undangUndangTerkait, whyBadanUsaha } from "../../../public/Data/BadanUsahaData";
 import { Laws } from "@/components/LegalComponents/Laws";
+import { DataPageLegal } from "../../../public/Data/LegalitasData";
 
 const metadata = {
     title: "Pendirian Badan Usaha dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",

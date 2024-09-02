@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Head from 'next/head';
-import { DataPageLegal } from "@/app/Database";
 import { Title } from "../Title";
+import { DataPageLegal } from "../../../public/Data/LegalitasData";
 
 export const BodyLegal = () => {
     return (

@@ -1,113 +1,18 @@
 import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
-import { Tb24Hours, TbMail, TbMailFilled, TbPhone, TbPhoneCall, TbWorldWww } from "react-icons/tb";
+import { Tb24Hours, TbMail, TbMailFilled, TbWorldWww } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat, FaPersonShelter, FaUserTie } from "react-icons/fa6";
-import { RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, RiMailFill, RiPhoneFill, RiWhatsappFill } from "react-icons/ri";
+import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
+import { RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { TbMathSymbols } from "react-icons/tb";
 import { RiAppsFill } from "react-icons/ri";
-import { SiLightning, SiReadthedocs, SiRescuetime } from "react-icons/si";
+import { SiReadthedocs } from "react-icons/si";
 import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
-import { BiMedal, BiSolidConversation } from "react-icons/bi";
-import { FaBuilding } from "react-icons/fa6";
-import { PiStampFill } from "react-icons/pi";
-import { BiSolidReport } from "react-icons/bi";
-import { RiBankCardFill } from "react-icons/ri";
-import { FaMoneyBill1Wave } from "react-icons/fa6";
-import { FaBoltLightning } from "react-icons/fa6";
-import { TbBulbFilled } from "react-icons/tb";
-import { IoChatbubble, IoSearchCircle, IoSparkles } from "react-icons/io5";
-import { IoLeaf } from "react-icons/io5";
-import { IoIosCall, IoMdListBox } from "react-icons/io";
+import { BiMedal } from "react-icons/bi";
+import { IoSearchCircle } from "react-icons/io5";
+import { IoIosCall } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
-import { BsStars } from "react-icons/bs";
-import { FaMapSigns } from "react-icons/fa";
-import { TbCategoryFilled } from "react-icons/tb";
-import { GiSparkles } from "react-icons/gi";
-import { SiSimplenote } from "react-icons/si";
-import { TbListCheck } from "react-icons/tb";
-import { SlSocialInstagram } from "react-icons/sl";
 
-export const legalitasUsaha = [
-    {
-        title: "Kepatuhan Hukum",
-        points: [
-            {
-                heading: "Mematuhi Peraturan dan Undang-Undang",
-                description: "Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain."
-            },
-            {
-                heading: "Menghindari Sanksi",
-                description: "Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
-            }
-        ]
-    },
-    {
-        title: "Kepercayaan dan Kredibilitas",
-        points: [
-            {
-                heading: "Kepercayaan Pelanggan",
-                description: "Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas."
-            },
-            {
-                heading: "Reputasi yang Baik",
-                description: "Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
-            }
-        ]
-    },
-    {
-        title: "Perlindungan Hukum",
-        points: [
-            {
-                heading: "Hak Kekayaan Intelektual",
-                description: "Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan."
-            },
-            {
-                heading: "Perlindungan Bisnis",
-                description: "Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
-            }
-        ]
-    },
-    {
-        title: "Akses ke Pembiayaan",
-        points: [
-            {
-                heading: "Pinjaman dan Investasi",
-                description: "Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal."
-            },
-            {
-                heading: "Subsidi dan Hibah",
-                description: "Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
-            }
-        ]
-    },
-    {
-        title: "Kemudahan Ekspansi",
-        points: [
-            {
-                heading: "Ekspansi Pasar",
-                description: "Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru."
-            },
-            {
-                heading: "Kemitraan Bisnis",
-                description: "Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
-            }
-        ]
-    },
-    {
-        title: "Kepastian Usaha",
-        points: [
-            {
-                heading: "Perlindungan Aset Pribadi",
-                description: "Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis."
-            },
-            {
-                heading: "Keberlanjutan Usaha",
-                description: "Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
-            }
-        ]
-    }
-];
 
 export const DataProduct = [
     {
@@ -355,7 +260,6 @@ export const NavLinks = {
     ]
 }
 
-
 export const DataBanner = [
     {
         href: "legalitas",
@@ -538,7 +442,7 @@ export const DataBanner = [
         href: "about-us",
         data: {
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/jdmjdjpcfgaa51jxv85u.png",
-            mainText: "One-stop Solution for your Business!",
+            mainText: "Ganesha Consulting",
             desc: "Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya. Lebih Lanjut",
             accent: "bg-[#D398D9] dark:bg-[#d298d98e]",
             accent2: "bg-[#75297C] dark:bg-[#75297C]",
@@ -547,1782 +451,6 @@ export const DataBanner = [
         },
     },
 ]
-
-export const DataCategoriesArticle = [
-    {
-        href: '/perizinan',
-        name: 'perizinan',
-        icon: <GoLaw />
-    },
-    {
-        href: '/konstruksi',
-        name: 'konstruksi',
-        icon: <GoLaw />
-    },
-    {
-        href: '/kementrian perdaagngan',
-        name: 'kementrian perdaagngan',
-        icon: <GoLaw />
-    },
-    {
-        href: '/legalitas',
-        name: 'legalitas',
-        icon: <GoLaw />
-    },
-    {
-        href: '/kemenkumham',
-        name: 'kemenkumham',
-        icon: <GoLaw />
-    },
-    {
-        href: '/perpajakan',
-        name: 'perpajakan',
-        icon: <GoLaw />
-    },
-    {
-        href: '/notaris',
-        name: 'notaris',
-        icon: <GoLaw />
-    },
-    {
-        href: '/oss',
-        name: 'OSS',
-        icon: <GoLaw />
-    },
-    {
-        href: '/bkpm',
-        name: 'BKPM',
-        icon: <GoLaw />
-    },
-    {
-        href: '/badan-usaha',
-        name: 'badan usaha',
-        icon: <GoLaw />
-    },
-    {
-        href: '/perseroan-terbatas',
-        name: 'perseroan terbatas',
-        icon: <GoLaw />
-    },
-    {
-        href: '/halal',
-        name: 'halal',
-        icon: <GoLaw />
-    },
-    {
-        href: '/HAKI',
-        name: 'HAKI',
-        icon: <GoLaw />
-    },
-    {
-        href: '/pariwisata',
-        name: 'pariwisata',
-        icon: <GoLaw />
-    },
-    {
-        href: '/IZIN',
-        name: 'IZIN',
-        icon: <GoLaw />
-    },
-    {
-        href: '/merek',
-        name: 'merek',
-        icon: <GoLaw />
-    }
-]
-
-export const DataSelectFilterArticle = [
-    { label: "Newest", value: "desc" },
-    { label: "Oldest", value: "asc" }
-]
-
-export const DataArticles = {
-    label: {
-        new: 'Latest Update',
-        trend: 'Trending',
-    },
-    new: [
-        {
-            hot: true,
-            title: "An unprecedented debate could shake up a White House race like no other",
-            thumbnailImg: "https://media.cnn.com/api/v1/images/stellar/prod/03-screenshot-2024-06-25-at-1-43-21-am.png?c=16x9&q=h_653,w_1160,c_fill/f_webp",
-            exerp: "Judge Aileen Cannon wants to hold additional hearings on Donald Trump's attempts to challenge key evidence in his classified documents case and will allow the former president's lawyers to question witnesses about the investigation and search of Mar-a-Lago.",
-            date: "20 Mins Ago | 28 June 2024",
-            categories: "Perizinan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Adegan Seks Teraneh Bagi Scarlett Johansson",
-            thumbnailImg: "https://akcdn.detik.net.id/community/media/visual/2017/11/23/8aae36dd-ed53-471b-aef9-65635b915115_43.jpg?w=700&q=90",
-            exerp: "Scarlett Johansson telah melakoni banyak sekali proyek dan melakukan berbagai adegan intim. Ada salah satu film yang ternyata cukup membekas untuknya, yakni Her. Baca artikel detikpop",
-            date: "12 Mins Ago | 28 June 2024",
-            categories: "Pajak",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "Artificial Intelligence Revolutionizing the Tech Industry",
-            thumbnailImg: "https://picsum.photos/500/500?random=431",
-            exerp: "AI technology is rapidly transforming the tech industry with advancements in machine learning and data processing.",
-            date: "1 Hour Ago | 28 June 2024",
-            categories: "Teknologi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Climate Change: A Global Call to Action",
-            thumbnailImg: "https://picsum.photos/500/500?random=555",
-            exerp: "World leaders are coming together to address the pressing issue of climate change and to discuss sustainable solutions.",
-            date: "30 Mins Ago | 28 June 2024",
-            categories: "Lingkungan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "Exploring the Wonders of the Deep Sea",
-            thumbnailImg: "https://picsum.photos/500/500?random=177",
-            exerp: "Marine biologists have discovered new species in the depths of the ocean, unveiling the mysteries of the deep sea.",
-            date: "2 Hours Ago | 28 June 2024",
-            categories: "Sains",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Economic Growth in Southeast Asia",
-            thumbnailImg: "https://picsum.photos/500/500?random=810",
-            exerp: "Southeast Asian countries are experiencing significant economic growth, attracting foreign investments and boosting trade.",
-            date: "45 Mins Ago | 28 June 2024",
-            categories: "Ekonomi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "The Rise of Electric Vehicles",
-            thumbnailImg: "https://picsum.photos/500/500?random=719",
-            exerp: "Electric vehicles are becoming more popular as consumers seek eco-friendly and cost-effective transportation options.",
-            date: "3 Hours Ago | 28 June 2024",
-            categories: "Otomotif",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Advancements in Medical Technology",
-            thumbnailImg: "https://picsum.photos/500/500?random=532",
-            exerp: "Recent advancements in medical technology are improving patient outcomes and revolutionizing healthcare practices.",
-            date: "25 Mins Ago | 28 June 2024",
-            categories: "Kesehatan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "The Future of Space Exploration",
-            thumbnailImg: "https://picsum.photos/500/500?random=264",
-            exerp: "Space agencies are planning ambitious missions to explore distant planets and expand our understanding of the universe.",
-            date: "4 Hours Ago | 28 June 2024",
-            categories: "Astronomi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Innovations in Renewable Energy",
-            thumbnailImg: "https://picsum.photos/500/500?random=284",
-            exerp: "Innovations in renewable energy sources are paving the way for a sustainable future and reducing our reliance on fossil fuels.",
-            date: "10 Mins Ago | 28 June 2024",
-            categories: "Energi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "The Impact of Social Media on Society",
-            thumbnailImg: "https://picsum.photos/500/500?random=331",
-            exerp: "Social media platforms are having a profound impact on society, influencing communication, politics, and culture.",
-            date: "5 Hours Ago | 28 June 2024",
-            categories: "Sosial"
-        },
-        {
-            hot: true,
-            title: "Breakthroughs in Quantum Computing",
-            thumbnailImg: "https://picsum.photos/500/500?random=429",
-            exerp: "Quantum computing is making significant strides, promising to solve complex problems that are beyond the capabilities of classical computers.",
-            date: "15 Mins Ago | 28 June 2024",
-            categories: "Teknologi"
-        }
-    ],
-    trend: [
-
-        {
-            hot: false,
-            title: "The Rise of Electric Vehicles",
-            thumbnailImg: "https://picsum.photos/500/500?random=719",
-            exerp: "Electric vehicles are becoming more popular as consumers seek eco-friendly and cost-effective transportation options.",
-            date: "3 Hours Ago | 28 June 2024",
-            categories: "Otomotif",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Advancements in Medical Technology",
-            thumbnailImg: "https://picsum.photos/500/500?random=532",
-            exerp: "Recent advancements in medical technology are improving patient outcomes and revolutionizing healthcare practices.",
-            date: "25 Mins Ago | 28 June 2024",
-            categories: "Kesehatan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "The Future of Space Exploration",
-            thumbnailImg: "https://picsum.photos/500/500?random=264",
-            exerp: "Space agencies are planning ambitious missions to explore distant planets and expand our understanding of the universe.",
-            date: "4 Hours Ago | 28 June 2024",
-            categories: "Astronomi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Innovations in Renewable Energy",
-            thumbnailImg: "https://picsum.photos/500/500?random=284",
-            exerp: "Innovations in renewable energy sources are paving the way for a sustainable future and reducing our reliance on fossil fuels.",
-            date: "10 Mins Ago | 28 June 2024",
-            categories: "Energi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "The Impact of Social Media on Society",
-            thumbnailImg: "https://picsum.photos/500/500?random=331",
-            exerp: "Social media platforms are having a profound impact on society, influencing communication, politics, and culture.",
-            date: "5 Hours Ago | 28 June 2024",
-            categories: "Sosial"
-        },
-        {
-            hot: true,
-            title: "Breakthroughs in Quantum Computing",
-            thumbnailImg: "https://picsum.photos/500/500?random=429",
-            exerp: "Quantum computing is making significant strides, promising to solve complex problems that are beyond the capabilities of classical computers.",
-            date: "15 Mins Ago | 28 June 2024",
-            categories: "Teknologi"
-        },
-        {
-            hot: true,
-            title: "An unprecedented debate could shake up a White House race like no other",
-            thumbnailImg: "https://media.cnn.com/api/v1/images/stellar/prod/03-screenshot-2024-06-25-at-1-43-21-am.png?c=16x9&q=h_653,w_1160,c_fill/f_webp",
-            exerp: "Judge Aileen Cannon wants to hold additional hearings on Donald Trump's attempts to challenge key evidence in his classified documents case and will allow the former president's lawyers to question witnesses about the investigation and search of Mar-a-Lago.",
-            date: "20 Mins Ago | 28 June 2024",
-            categories: "Perizinan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Adegan Seks Teraneh Bagi Scarlett Johansson",
-            thumbnailImg: "https://akcdn.detik.net.id/community/media/visual/2017/11/23/8aae36dd-ed53-471b-aef9-65635b915115_43.jpg?w=700&q=90",
-            exerp: "Scarlett Johansson telah melakoni banyak sekali proyek dan melakukan berbagai adegan intim. Ada salah satu film yang ternyata cukup membekas untuknya, yakni Her. Baca artikel detikpop",
-            date: "12 Mins Ago | 28 June 2024",
-            categories: "Pajak",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "Artificial Intelligence Revolutionizing the Tech Industry",
-            thumbnailImg: "https://picsum.photos/500/500?random=431",
-            exerp: "AI technology is rapidly transforming the tech industry with advancements in machine learning and data processing.",
-            date: "1 Hour Ago | 28 June 2024",
-            categories: "Teknologi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Climate Change: A Global Call to Action",
-            thumbnailImg: "https://picsum.photos/500/500?random=555",
-            exerp: "World leaders are coming together to address the pressing issue of climate change and to discuss sustainable solutions.",
-            date: "30 Mins Ago | 28 June 2024",
-            categories: "Lingkungan",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: false,
-            title: "Exploring the Wonders of the Deep Sea",
-            thumbnailImg: "https://picsum.photos/500/500?random=177",
-            exerp: "Marine biologists have discovered new species in the depths of the ocean, unveiling the mysteries of the deep sea.",
-            date: "2 Hours Ago | 28 June 2024",
-            categories: "Sains",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-        {
-            hot: true,
-            title: "Economic Growth in Southeast Asia",
-            thumbnailImg: "https://picsum.photos/500/500?random=810",
-            exerp: "Southeast Asian countries are experiencing significant economic growth, attracting foreign investments and boosting trade.",
-            date: "45 Mins Ago | 28 June 2024",
-            categories: "Ekonomi",
-            content: (
-                <>
-                    <p>
-                        Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
-                        tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
-                        Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
-                        sunyi.
-                        <br />
-                        <br />
-                        Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
-                        muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
-                        tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
-                        jeda iklan atau ucapan DJ antar lagu.
-                        <br />
-                        <br />
-                        Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
-                        namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
-                        lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
-                        dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
-                        terakhir di lagu tengah diputar dinyanyikan.
-                        <br />
-                        Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
-                        diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
-                        lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
-                        mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
-                        <br />
-                        <br />
-                        Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
-                        hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
-                        beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
-                        <br />
-                        <br />
-                        Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
-                        tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
-                        mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
-                        inginkan.
-                        <br />
-                        <br />
-                        Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
-                        Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
-                        baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
-                        headset Vision Pro karyanya.
-                        <br />
-                        <br />
-                        Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
-                        pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
-                        memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
-                        di Inggris, Prancis, Jerman, Australia dan Kanada.
-                        <br />
-                        <br />
-                        Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
-                        Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
-                        berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
-                        tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
-                        eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
-                        <br />
-                        <br />
-                        Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
-                        Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
-                        berbagai layar di perangkat dengan tombol Option + Space.
-                        <br />
-                        <br />
-                        Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
-                        mendukung opsi pencarian multi-modal.
-                    </p>
-
-                </>
-            )
-        },
-    ]
-}
-
-export const DataHighlight = [
-    {
-        title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
-        imgUrl: 'https://images.unsplash.com/photo-1613690399151-65ea69478674?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-        title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
-        imgUrl: 'https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-        title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
-        imgUrl: 'https://images.unsplash.com/photo-1518527989017-5baca7a58d3c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-        title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
-        imgUrl: 'https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-        title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
-        imgUrl: 'https://plus.unsplash.com/premium_photo-1661963456199-ba147a77e2a7?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-]
-
-export const ppl = [
-    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1464863979621-258859e62245?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-]
-
-export const DataReview = [
-    {
-        photo: 'https://picsum.photos/200/300?random=1',
-        name: 'John Doe',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
-        service: 'Legalitas Usaha'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=2',
-        name: 'Jane Smith',
-        review: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-        service: 'Website Development'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=3',
-        name: 'James Brown',
-        review: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        service: 'Social Media Management'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=4',
-        name: 'Mary Johnson',
-        review: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        service: 'Badan Usaha Lainnya'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=5',
-        name: 'Robert Wilson',
-        review: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        service: 'Konsultan Pajak'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=6',
-        name: 'Linda Martinez',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
-        service: 'Izin Tambahan'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=7',
-        name: 'Michael Anderson',
-        review: 'Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.',
-        service: 'Pelayanan Managemen'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=8',
-        name: 'Patricia Thomas',
-        review: 'Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.',
-        service: 'Pelayanan Akuntansi'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=9',
-        name: 'Charles Jackson',
-        review: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        service: 'Software Management System'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=10',
-        name: 'Barbara Harris',
-        review: 'Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.',
-        service: 'Haki'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=11',
-        name: 'Joseph Martin',
-        review: 'Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.',
-        service: 'Audit'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=12',
-        name: 'Susan Lee',
-        review: 'Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel.',
-        service: 'Legalitas Usaha'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=13',
-        name: 'Thomas Young',
-        review: 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-        service: 'Website Development'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=14',
-        name: 'Jessica Walker',
-        review: 'Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum.',
-        service: 'Social Media Management'
-    },
-    {
-        photo: 'https://picsum.photos/200/300?random=15',
-        name: 'Daniel Hall',
-        review: 'Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-        service: 'Badan Usaha Lainnya'
-    }
-];
 
 export const DataWhyUs = {
     tag: "Kenapa Harus di Ganesha Consulting?",
@@ -2349,736 +477,6 @@ export const DataWhyUs = {
         }
     ]
 };
-
-export const LegalItems = [
-    {
-        "name": "Pendirian PT",
-        "link": "legalitas/pendirian-pt",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Pendirian CV",
-        "link": "legalitas/pendirian-cv",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Pendirian Yayasan",
-        "link": "legalitas/badan-usaha",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Pendirian Firma Hukum",
-        "link": "legalitas/badan-usaha",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Pendirian Perkumpulan/Asosiasi",
-        "link": "legalitas/badan-usaha",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Pendirian Virtual Office | PKP | NIB",
-        "link": "legalitas/badan-usaha",
-        "icon": <FaBuilding />
-    },
-    {
-        "name": "Konsultan Pajak",
-        "link": "legalitas/badan-usaha",
-        "icon": <FaBuilding />
-    },
-]
-
-export const DataPageLegal = {
-    legalItems: [
-        {
-            "name": "Pendirian PT",
-            "link": "pendirian-pt",
-            "icon": <FaBuilding />
-        },
-        {
-            "name": "Pendirian CV",
-            "link": "pendirian-cv",
-            "icon": <FaBuilding />
-        },
-        {
-            "name": "Pendirian Yayasan",
-            "link": "badan-usaha",
-            "icon": <FaBuilding />
-        },
-        {
-            "name": "Pendirian Firma Hukum",
-            "link": "badan-usaha",
-            "icon": <FaBuilding />
-        },
-        {
-            "name": "Pendirian Perkumpulan/Asosiasi",
-            "link": "badan-usaha",
-            "icon": <FaBuilding />
-        },
-        {
-            "name": "Pendirian Virtual Office | PKP | NIB",
-            "link": "badan-usaha",
-            "icon": <FaBuilding />
-        },
-    ],
-    explainImg: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236549/GaneshaAssets/xbmc8qinkfrafxaiudw5.svg",
-    head: (
-        <h1>
-            Apa Itu <span className="text-mainColor dark:text-baseColor rounded-3xl">Legalitas</span> Usaha?
-        </h1>
-    ),
-    desc: (
-        <h1>
-            Legalitas Usaha adalah kepatuhan suatu bisnis dengan aturan hukum yang berlaku untuk memastikan bahwa <span className="font-extrabold">Bisnis mu beroperasi secara sah</span> dan sesuai dengan ketentuan hukum yang berlaku di Indonesia.
-        </h1>
-    ),
-    whyUs: [
-        {
-            icon: <TbListCheck/>,
-            text: "Fasilitas Lengkap",
-            description: "Ganesha Consulting menyediakan fasilitas lengkap melalui layanan legalitasnya, memastikan bahwa bisnis Anda diakui secara resmi di mata hukum."
-        },
-        {
-            icon: <SiLightning/>,
-            text: "Cepat dan Terpercaya",
-            description: "Layanan Ganesha Consulting tidak hanya cepat, tetapi juga terpercaya. Kami memastikan proses legalitas berjalan lancar dan sesuai dengan standar hukum yang berlaku."
-        },
-        {
-            icon: <FaMoneyBill1Wave/>,
-            text: "Harga Terjangkau",
-            description: "Menawarkan harga yang sangat terjangkau, Ganesha Consulting memahami pentingnya efisiensi biaya bagi bisnis Anda tanpa mengorbankan kualitas pelayanan."
-        },
-        {
-            icon: <IoChatbubble/>,
-            text: "Konsultasi Gratis",
-            description: "Ganesha Consulting memberikan fasilitas konsultasi gratis, memberikan pelanggan informasi dan panduan tambahan tanpa biaya tambahan."
-        },
-        {
-            icon: <FaPersonShelter/>,
-            text: "Pelayanan Satu Atap",
-            description: "Dengan Ganesha Consulting, Anda mendapatkan pelayanan satu atap yang mencakup semua kebutuhan legalitas bisnis Anda, memberikan kenyamanan dan efisiensi."
-        }
-    ],
-    benefit: [
-        {
-            icon: <BiSolidConversation />,
-            text: 'Free Konsultasi',
-        },
-        {
-            icon: <PiStampFill />,
-            text: 'Free Stempel Nama Perusahaan',
-        },
-        {
-            icon: <BiSolidReport />,
-            text: 'Free Template Laporan Keuangan',
-        },
-        {
-            icon: <RiBankCardFill />,
-            text: (
-                <>
-                    <p className="text-sm md:!text-lg">
-                        Free Pembukaan Rekening Baru
-                        <br />
-                        <span className="font-bold text-2xl md:text-3xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
-                            BCA, MayBank, Sinarmas, Bank DKI
-                        </span>
-                    </p>
-
-                </>
-            ),
-            desc: [
-                {
-                    bank: 'BCA',
-                    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png'
-                },
-                {
-                    bank: 'MayBank',
-                    url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoVofoAlnBTk1SLiKLa_H8mZSGbrYOgOyj_ZDA_bxUAmeghVMUD9Hm11HPzCeg2ddZV-T1M4V3Nv1Hhmi0AuOxUiHFycqEuMF6eZr0j1Wc-hTz6JUMDzImK6zISbFFnluNHIljxUAK0--kTNbjgOxwJr9UCeX8hENG97ibxdElrdMYoswj2HXvHw/w640-h146/Maybank.png'
-                },
-                {
-                    bank: 'Sinarmas',
-                    url: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Bank_Sinarmas.png'
-                },
-                {
-                    bank: 'Bank DKI',
-                    url: 'https://cdn.healthtechalpha.com/static/corporatesById/895.png'
-                }
-            ]
-        },
-    ],
-    whyLegal: [
-        {
-            title: "Kepatuhan Hukum",
-            points: [
-                {
-                    heading: "Mematuhi Peraturan",
-                    description: "Legalitas usaha memastikan bisnis mematuhi peraturan seperti perpajakan dan ketenagakerjaan, menghindari sanksi hukum."
-                }
-            ]
-        },
-        {
-            title: "Kepercayaan & Kredibilitas",
-            points: [
-                {
-                    heading: "Kepercayaan Pelanggan",
-                    description: "Bisnis legal meningkatkan rasa aman dan kepercayaan dari pelanggan dan investor, serta membangun reputasi yang baik."
-                }
-            ]
-        },
-        {
-            title: "Perlindungan Hukum",
-            points: [
-                {
-                    heading: "Hak Kekayaan Intelektual",
-                    description: "Legalitas melindungi merek dagang dan memberikan perlindungan hukum terhadap konflik yang mungkin timbul."
-                }
-            ]
-        },
-        {
-            title: "Akses ke Pembiayaan",
-            points: [
-                {
-                    heading: "Pinjaman dan Investasi",
-                    description: "Hanya bisnis legal yang biasanya mendapatkan akses ke pinjaman, investasi, subsidi, dan hibah."
-                }
-            ]
-        },
-        {
-            title: "Kemudahan Ekspansi",
-            points: [
-                {
-                    heading: "Ekspansi Pasar",
-                    description: "Legalitas mempermudah bisnis untuk memperluas pasar dan menjalin kemitraan baru."
-                }
-            ]
-        },
-        {
-            title: "Kepastian Usaha",
-            points: [
-                {
-                    heading: "Perlindungan Aset",
-                    description: "Struktur legal seperti perseroan terbatas melindungi aset pribadi pemilik dari kewajiban bisnis."
-                }
-            ]
-        }
-    ],
-    faqData: [
-        {
-            question: "Berapa lama pembuatan PT?",
-            answer: "Lama Proses Pembuatan PT di Ganesha Consulting adalah 2 Hari Kerja setelah proses tandatangan akta pendirian."
-        },
-        {
-            question: "Berapa banyak KBLI yang bisa dipilih?",
-            answer: "Total KBLI yang bisa dipilih di Ganesha Consulting sebanyak 15 KBLI."
-        },
-        {
-            question: "Apa saja syarat mendirikan PT?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Minimal dua pendiri yang merupakan WNI atau badan hukum Indonesia.,
-                        </li>
-                        <li>
-                            Akta pendirian yang disahkan oleh notaris.,
-                        </li>
-                        <li>
-                            Modal dasar minimal sesuai dengan ketentuan yang berlaku.,
-                        </li>
-                        <li>
-                            Nama perusahaan yang disetujui oleh Kemenkumham.,
-                        </li>
-                        <li>
-                            Domisili perusahaan yang jelas.,
-                        </li>
-                        <li>
-                            NPWP perusahaan.,
-                        </li>
-                        <li>
-                            Izin usaha dan dokumen pendukung lainnya.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah pendirian PT membutuhkan modal besar?",
-            answer: "Modal dasar minimal PT ditentukan oleh ketentuan yang berlaku, dan dapat disesuaikan dengan kemampuan pendiri."
-        },
-        {
-            question: "Apa itu KBLI?",
-            answer: "KBLI, atau Klasifikasi Baku Lapangan Usaha Indonesia, adalah sistem klasifikasi yang digunakan untuk menggolongkan berbagai jenis kegiatan usaha di Indonesia. KBLI disusun oleh Badan Pusat Statistik (BPS) dan digunakan sebagai acuan resmi dalam pendaftaran dan perizinan usaha di Indonesia."
-        },
-        {
-            question: "Apa Kegunaan KBLI?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Pendaftaran Usaha: Mengidentifikasi jenis kegiatan usaha saat pendaftaran.
-                        </li>
-                        <li>
-                            Perizinan: Membantu pemerintah dalam mengeluarkan izin usaha.
-                        </li>
-                        <li>
-                            Statistik dan Data: Mengumpulkan data ekonomi untuk perencanaan dan kebijakan.
-                        </li>
-                        <li>
-                            Penyusunan Regulasi: Dasar dalam membuat kebijakan dan regulasi.
-                        </li>
-                        <li>
-                            Analisis Ekonomi: Memfasilitasi analisis dan pengembangan sektor usaha.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Bolehkah pemegang saham menjadi pengurus PT?",
-            answer: "Boleh! Pemegang saham boleh menjadi Direktur ataupun menjadi Komisaris. Namun tidak boleh menjadi Direktur yang merangkap sebagai Komisaris."
-        },
-        {
-            question: "Bagaimana cara melakukan setor modal?",
-            answer: "Modal bisa langsung saja disetorkan ke dalam kas perusahaan."
-        },
-        {
-            question: "Apa saja jenis badan usaha selain PT?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            CV (Commanditaire Vennootschap): Persekutuan komanditer.
-                        </li>
-                        <li>
-                            Firma (Fa): Persekutuan yang didirikan untuk menjalankan usaha bersama.
-                        </li>
-                        <li>
-                            Perusahaan Perorangan: Usaha yang dimiliki dan dijalankan oleh satu orang.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa saja tanggung jawab pemegang saham dalam PT?",
-            answer: "Pemegang saham bertanggung jawab atas kewajiban perusahaan sebatas jumlah saham yang dimiliki."
-        }
-    ],
-    whyUsData: [
-        {
-            text: "Harga Ekonomis",
-            icon: <FaMoneyBill1Wave />
-        },
-        {
-            text: "Proses Super Cepat",
-            icon: <FaBoltLightning />
-        },
-        {
-            text: "Anti Ribet",
-            icon: <IoLeaf />
-        },
-        {
-            text: "Kreatif & Inovatif",
-            icon: <TbBulbFilled />
-        },
-        {
-            text: "Ditangani Profesional",
-            icon: <IoSparkles />
-        }
-    ],
-    legalTexts: [
-        {
-            number: '1',
-            text: "Undang-Undang No. 40 Tahun 2007 tentang Perseroan Terbatas: Undang-undang ini menyediakan kerangka hukum untuk pendirian, pengelolaan, dan pembubaran PT. Regulasi ini mencakup persyaratan minimum, hak dan kewajiban pemegang saham, serta ketentuan-ketentuan lain yang berkaitan dengan PT."
-        },
-        {
-            number: '2',
-            text: "Peraturan Pemerintah No. 27 Tahun 2018 tentang Pendaftaran Perusahaan: Menetapkan persyaratan dan prosedur pendaftaran perusahaan, termasuk PT, serta proses perubahan data perusahaan."
-        },
-        {
-            number: '3',
-            text: "Peraturan Pemerintah No. 29 Tahun 2016 tentang Pekerja Asing: Menetapkan aturan terkait penggunaan pekerja asing di perusahaan, termasuk PT."
-        },
-        {
-            number: '4',
-            text: "Penting untuk selalu merujuk pada undang-undang terkait dan mendapatkan nasihat hukum untuk memahami secara menyeluruh dan akurat mengenai persyaratan dan regulasi PT."
-        }
-    ],
-    whatPt: {
-        desc: 'PT adalah singkatan dari yaitu bentuk badan hukum yang diterapkan pada perusahaan di Indonesia. Dengan status hukum terpisah, PT memungkinkan pemiliknya memiliki tanggung jawab terbatas sesuai dengan modal. PT memiliki aturan hukum dan persyaratan tertentu yang diatur oleh Undang-Undang Perseroan Terbatas di Indonesia.'
-    }
-
-}
-
-export const dataPageCV = {
-    whyCV: [
-        {
-            title: "Kepatuhan Hukum",
-            points: [
-                {
-                    heading: "Mematuhi Regulasi",
-                    description: "Legalitas usaha memastikan bisnis mematuhi semua peraturan yang berlaku, menghindari sanksi hukum."
-                }
-            ]
-        },
-        {
-            title: "Kepercayaan & Kredibilitas",
-            points: [
-                {
-                    heading: "Kepercayaan Pelanggan",
-                    description: "Bisnis legal memberikan rasa aman dan meningkatkan kepercayaan dari pelanggan dan investor."
-                }
-            ]
-        },
-        {
-            title: "Perlindungan Hukum",
-            points: [
-                {
-                    heading: "Perlindungan Kekayaan Intelektual",
-                    description: "Legalitas usaha melindungi merek dagang dan kekayaan intelektual dari penyalahgunaan."
-                }
-            ]
-        },
-        {
-            title: "Akses ke Pembiayaan",
-            points: [
-                {
-                    heading: "Pinjaman & Investasi",
-                    description: "Hanya bisnis legal yang biasanya dapat mengakses pinjaman, investasi, dan hibah."
-                }
-            ]
-        },
-        {
-            title: "Kemudahan Ekspansi",
-            points: [
-                {
-                    heading: "Ekspansi Pasar",
-                    description: "Legalitas mempermudah bisnis untuk memperluas pasar dan menjalin kemitraan."
-                }
-            ]
-        },
-        {
-            title: "Kepastian Usaha",
-            points: [
-                {
-                    heading: "Perlindungan Aset",
-                    description: "Struktur legal melindungi aset pribadi pemilik dari kewajiban bisnis."
-                }
-            ]
-        }
-    ],
-    undangUndangTerkait: [
-        {
-            number: '1',
-            text: "Pendirian Yayasan",
-            points: [
-                "Undang-Undang Nomor 16 Tahun 2001 tentang Yayasan",
-                "Mengatur tentang pendirian, pengelolaan, dan tata kelola yayasan, termasuk ketentuan mengenai tujuan, struktur organisasi, dan kewajiban administratif yayasan."
-            ]
-        },
-        {
-            number: '2',
-            text: "Pendirian Perkumpulan",
-            points: [
-                "Undang-Undang Nomor 17 Tahun 2013 tentang Organisasi Kemasyarakatan",
-                "Menyediakan regulasi untuk pendirian, pengelolaan, dan pembubaran organisasi kemasyarakatan yang dapat mencakup perkumpulan. Mengatur tentang hak dan kewajiban, serta tata cara pendaftaran dan pengawasan."
-            ]
-        },
-        {
-            number: '3',
-            text: "Pendirian Asosiasi",
-            points: [
-                "Undang-Undang Nomor 17 Tahun 2013 tentang Organisasi Kemasyarakatan",
-                "Juga berlaku untuk asosiasi, karena asosiasi adalah jenis organisasi yang memiliki tujuan tertentu dan berfungsi untuk kepentingan anggotanya. Mengatur tata cara pendirian, pengelolaan, dan pendaftaran asosiasi."
-            ]
-        },
-        {
-            number: '4',
-            text: "Pendirian Firma Hukum",
-            points: [
-                "Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan Terbatas (UU PT)",
-                "Meskipun khusus mengatur Perseroan Terbatas (PT), beberapa prinsip dalam UU PT juga bisa diterapkan untuk firma hukum dalam hal struktur dan administrasi."
-            ]
-        }
-    ],
-    faqcv: [
-        {
-            question: "Berapa lama proses pembuatan CV?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Proses pembuatan CV memakan waktu 2 hari kerja setelah akta pendirian ditandatangani.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa saja syarat mendirikan CV?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Pendiri: Minimal dua orang, terdiri dari sekutu aktif dan sekutu pasif.</li>
-                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
-                        <li>Nama CV: Nama yang unik dan belum digunakan oleh perusahaan lain.</li>
-                        <li>Domisili: Alamat usaha yang jelas.</li>
-                        <li>NPWP: Nomor Pokok Wajib Pajak untuk CV.</li>
-                        <li>Izin Usaha: Mengurus izin usaha sesuai dengan jenis kegiatan yang dijalankan.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Mengapa memilih mendirikan CV?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Modal Minimal: Tidak ada ketentuan modal minimal yang diperlukan.</li>
-                        <li>Kemudahan Pengelolaan: Proses pengambilan keputusan lebih cepat karena tidak ada struktur manajemen yang kompleks.</li>
-                        <li>Perpajakan: Pajak yang dikenakan bisa lebih rendah dibandingkan dengan PT, tergantung pada pendapatan dan skala usaha.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah CV harus memiliki izin usaha?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Ya, CV harus memiliki izin usaha sesuai dengan jenis kegiatan yang dijalankan, seperti SIUP (Surat Izin Usaha Perdagangan) atau izin lainnya yang relevan.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa tanggung jawab sekutu dalam CV?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Sekutu Aktif: Bertanggung jawab penuh atas semua kewajiban dan utang perusahaan.</li>
-                        <li>Sekutu Pasif: Bertanggung jawab terbatas pada jumlah modal yang disetorkan.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa kelebihan dan kekurangan CV dibandingkan PT?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Kelebihan:
-                            <ul className="list-item list-disc ml-5">
-                                <li>Proses pendirian lebih mudah dan cepat.</li>
-                                <li>Modal minimal tidak ditentukan.</li>
-                                <li>Struktur pengelolaan sederhana.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Kekurangan:
-                            <ul className="list-item list-disc ml-5">
-                                <li>Tanggung jawab sekutu aktif tidak terbatas.</li>
-                                <li>Kurang menarik bagi investor besar dibandingkan PT.</li>
-                                <li>Lebih sulit untuk mendapatkan pendanaan dari bank atau investor.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah CV wajib melakukan audit?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Tidak wajib, namun audit bisa dilakukan jika diperlukan, terutama untuk kepentingan internal atau jika ada permintaan dari pihak eksternal seperti investor atau kreditur.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah CV dapat dimiliki oleh warga negara asing?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Tidak, CV hanya dapat didirikan oleh warga negara Indonesia. Namun, warga negara asing dapat menjadi mitra atau investor melalui perjanjian khusus, tetapi tidak sebagai sekutu dalam CV.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Bagaimana cara memilih nama CV?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Unik: Nama CV harus unik dan belum digunakan oleh perusahaan lain.</li>
-                        <li>Tidak Melanggar Hukum: Nama tidak boleh mengandung kata-kata yang bertentangan dengan ketertiban umum dan/atau kesusilaan.</li>
-                        <li>Relevan: Sebaiknya mencerminkan jenis usaha atau visi perusahaan.</li>
-                        <li>Penggunaan Bahasa: Disarankan menggunakan bahasa Indonesia sesuai dengan peraturan yang berlaku.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah CV dapat mengubah jenis usahanya?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Ya, CV dapat mengubah jenis usahanya dengan menyusun akta perubahan melalui notaris dan melaporkannya ke instansi terkait untuk mendapatkan izin usaha yang sesuai dengan jenis usaha baru.
-                        </li>
-                    </ul>
-                </>
-            )
-        }
-    ],
-    whatCv: {
-        desc: 'CV (commanditaire vennootschap) adalah salah satu bentuk badan usaha di Indonesia yang dibentuk minimal dua orang atau lebih, tujuannya agar tercapainya cita-cita bersama. Oleh karena itu dalam CV terdapat dua sekutu yang berbeda. Yaitu sekutu komanditer dan sekutu komplementer.'
-    }
-}
-
-export const dataPageBadanUsaha = {
-    faqDataBU: [
-        {
-            question: "Apa itu Yayasan?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Yayasan adalah badan hukum yang didirikan untuk tujuan sosial, kemanusiaan, atau keagamaan. Yayasan tidak bertujuan untuk mencari keuntungan dan memiliki aset yang digunakan untuk mencapai tujuan sosialnya.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa syarat pendirian Yayasan?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Pendiri: Minimal dua orang sebagai pendiri.</li>
-                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
-                        <li>Anggaran Dasar: Berisi tujuan, struktur organisasi, dan cara pengelolaan.</li>
-                        <li>Kepengurusan: Memiliki pengurus dan penasihat.</li>
-                        <li>Domisili: Alamat yang jelas.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa itu Perkumpulan?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Perkumpulan adalah organisasi yang terdiri dari sekelompok orang yang bergabung untuk tujuan tertentu. Biasanya perkumpulan berfokus pada kegiatan sosial, profesional, atau kegiatan yang bersifat komunitas.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa syarat mendirikan Perkumpulan?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Pendiri: Minimal tiga orang.</li>
-                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
-                        <li>Anggaran Dasar: Menyusun struktur, tujuan, dan cara pengelolaan.</li>
-                        <li>Pendaftaran: Mengurus pendaftaran di instansi terkait.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa itu Asosiasi?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Asosiasi adalah organisasi yang dibentuk untuk tujuan tertentu yang biasanya melibatkan anggota dengan kepentingan yang sama, seperti profesional atau hobi.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa syarat mendirikan Asosiasi?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Pendiri: Minimal dua orang.</li>
-                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
-                        <li>Anggaran Dasar: Mencakup struktur, tujuan, dan pengelolaan.</li>
-                        <li>Pendaftaran: Harus didaftarkan di instansi pemerintah yang relevan.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa itu Firma Hukum?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Firma hukum adalah bentuk badan usaha di bidang hukum yang dibentuk oleh sekelompok pengacara atau konsultan hukum yang bekerja sama.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apa syarat mendirikan Firma Hukum?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>Pendiri: Beberapa orang yang memenuhi syarat sebagai pengacara.</li>
-                        <li>Akta Pendirian: Dibuat oleh notaris.</li>
-                        <li>Pendaftaran: Harus terdaftar di Pengadilan Negeri.</li>
-                        <li>Lisensi: Memiliki izin praktik dari organisasi profesi hukum.</li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Apakah Yayasan dapat melakukan kegiatan komersial?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Ya, yayasan dapat melakukan kegiatan komersial untuk mendukung tujuan sosialnya, namun keuntungan dari kegiatan tersebut harus digunakan untuk kegiatan yang sesuai dengan tujuan yayasan dan tidak boleh dibagikan kepada pendiri atau pengurus.
-                        </li>
-                    </ul>
-                </>
-            )
-        },
-        {
-            question: "Bagaimana mengurus perubahan struktur atau anggaran dasar di Badan Usaha Diatas?",
-            answer: (
-                <>
-                    <ul className="list-item list-decimal mx-5">
-                        <li>
-                            Yayasan: Perubahan harus disetujui oleh pengurus dan diubah akta pendirian di hadapan notaris, lalu didaftarkan ulang di Kemenkumham.
-                        </li>
-                        <li>
-                            Perkumpulan dan Asosiasi: Perubahan harus disetujui oleh anggota dan diubah akta pendirian di hadapan notaris, lalu didaftarkan di Kemenkumham.
-                        </li>
-                        <li>
-                            Firma Hukum: Perubahan harus diubah dalam akta pendirian oleh notaris dan diberitahukan kepada Pengadilan Negeri.
-                        </li>
-                    </ul>
-                </>
-            )
-        }
-    ]
-}
 
 export const dataContact = {
     mail: [
@@ -3323,197 +721,1766 @@ export const FaqMainData = {
 };
 
 
-export const dataPageVO = {
-    FAQ: [
-        {
-            question: "Apa itu Virtual Office?",
-            answer: "Virtual Office adalah layanan yang menyediakan alamat bisnis resmi, penanganan surat, dan layanan telepon tanpa memerlukan kantor fisik. Ini memungkinkan bisnis untuk memiliki kehadiran profesional di lokasi strategis tanpa harus menyewa ruang kantor."
-        },
-        {
-            question: "Apa saja layanan yang biasanya disediakan oleh Virtual Office?",
-            answer: "Layanan Virtual Office umumnya mencakup:\n* Alamat bisnis resmi.\n* Penanganan surat dan paket.\n* Layanan penerimaan dan penerusan telepon.\n* Akses ke ruang meeting dan coworking space.\n* Dukungan administrasi seperti sekretaris virtual."
-        },
-        {
-            question: "Bagaimana Virtual Office dapat membantu bisnis saya?",
-            answer: "Virtual Office dapat meningkatkan citra profesional bisnis Anda dengan menyediakan alamat bergengsi, menghemat biaya operasional, dan menawarkan fleksibilitas untuk bekerja dari mana saja. Ini juga mempermudah ekspansi bisnis tanpa perlu komitmen ruang fisik."
-        },
-        {
-            question: "Apakah saya bisa menggunakan alamat Virtual Office untuk keperluan legal seperti pendaftaran bisnis?",
-            answer: "Ya, alamat Virtual Office biasanya dapat digunakan untuk pendaftaran bisnis, pembuatan dokumen legal, dan keperluan korespondensi lainnya, tergantung pada kebijakan penyedia layanan dan peraturan setempat."
-        },
-        {
-            question: "Apakah saya bisa menerima surat dan paket di alamat Virtual Office?",
-            answer: "Tentu, penyedia Virtual Office biasanya menawarkan layanan penanganan surat dan paket. Surat dan paket dapat diteruskan ke alamat yang Anda pilih atau disimpan untuk diambil."
-        },
-        {
-            question: "Apakah Virtual Office menyediakan ruang kerja atau meeting?",
-            answer: "Ya, kebanyakan penyedia Virtual Office menyediakan akses ke ruang meeting, ruang konferensi, atau coworking space yang dapat digunakan sesuai kebutuhan Anda, biasanya dengan biaya tambahan atau sesuai dengan paket yang dipilih."
-        },
-        {
-            question: "Apakah saya bisa menggunakan layanan telepon dengan Virtual Office?",
-            answer: "Ya, banyak Virtual Office menawarkan layanan penerimaan telepon dengan nomor telepon khusus untuk bisnis Anda. Panggilan dapat diteruskan ke nomor yang Anda pilih atau diurus oleh resepsionis virtual."
-        },
-        {
-            question: "Apakah ada batasan dalam penggunaan Virtual Office?",
-            answer: "Batasan bisa berbeda-beda tergantung pada penyedia layanan, misalnya dalam hal durasi penggunaan ruang meeting atau layanan tambahan. Penting untuk memahami syarat dan ketentuan yang berlaku sebelum memilih paket."
-        },
-        {
-            question: "Siapa yang paling diuntungkan dengan Virtual Office?",
-            answer: "Virtual Office sangat bermanfaat bagi startup, freelancer, usaha kecil, dan perusahaan yang ingin memperluas jangkauan tanpa biaya tinggi. Ini juga ideal untuk bisnis yang beroperasi secara remote atau tidak memerlukan ruang kantor fisik permanen."
-        },
-        {
-            question: "Bagaimana cara mendaftar layanan Virtual Office?",
-            answer: "Anda dapat mendaftar melalui penyedia layanan Virtual Office dengan memilih paket yang sesuai dengan kebutuhan bisnis Anda. Proses biasanya melibatkan pengisian formulir, pemilihan layanan, dan pembayaran. Setelah itu, Anda akan diberikan akses ke alamat bisnis dan layanan lainnya."
-        }
-    ],
-    Location: [
-        {
-            image: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=2834&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=1', 'https://picsum.photos/200/300?random=4'],
-            location: 'Jakarta Pusat',
-            name: 'Menara Cakrawala - Sarinah Thamrin'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1704853241465-3c65c2c90533?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
-            location: 'Jakarta Selatan',
-            name: 'Gedung BEI SCBD (NEW!)'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1697198649995-8a9807c19083?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
-            location: 'Jakarta Selatan',
-            name: 'Bellezza BSA Permata Hijau'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1712472256854-48b7b966a6e9?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
-            location: 'Jakarta Timur',
-            name: 'MTH Square Cawang'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1534239697798-120952b76f2b?q=80&w=3089&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
-            location: 'Jakarta Utara',
-            name: 'Arcade Business Center PIK'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1462396240927-52058a6a84ec?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            images: ['https://picsum.photos/700/800?random=1', 'https://picsum.photos/700/800?random=2', 'https://picsum.photos/700/800?random=3', 'https://picsum.photos/700/800?random=4', 'https://picsum.photos/700/800?random=5'],
-            location: 'Jakarta Barat',
-            name: 'Permata Regency'
-        }
-    ],
-    benefit: [
-        {
-            icon: <FaMapSigns />,
-            text: 'Alamat Bisnis Strategis',
-            description: 'Dengan virtual office, Anda mendapatkan alamat bisnis di lokasi strategis yang meningkatkan kredibilitas perusahaan tanpa harus menyewa ruang kantor fisik.',
-        },
-        {
-            icon: <FaMoneyBill1Wave />,
-            text: 'Penghematan Biaya',
-            description: 'Mengurangi biaya sewa, utilitas, dan perawatan kantor, memungkinkan Anda menjalankan bisnis dengan lebih efisien.',
-        },
-        {
-            icon: <SiRescuetime />,
-            text: 'Meningkatkan Fleksibilitas Kerja',
-            description: 'Karyawan dapat bekerja dari mana saja, memberi mereka kebebasan dan meningkatkan produktivitas tanpa batasan lokasi.',
-        },
-        {
-            icon: <BsStars />,
-            text: 'Layanan Profesional',
-            description: 'Virtual office menyediakan penanganan surat dan panggilan telepon, serta akses ke ruang meeting saat diperlukan, memastikan operasional berjalan lancar.',
-        }
-    ]
-}
+// export const DataCategoriesArticle = [
+//     {
+//         href: '/perizinan',
+//         name: 'perizinan',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/konstruksi',
+//         name: 'konstruksi',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/kementrian perdaagngan',
+//         name: 'kementrian perdaagngan',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/legalitas',
+//         name: 'legalitas',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/kemenkumham',
+//         name: 'kemenkumham',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/perpajakan',
+//         name: 'perpajakan',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/notaris',
+//         name: 'notaris',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/oss',
+//         name: 'OSS',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/bkpm',
+//         name: 'BKPM',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/badan-usaha',
+//         name: 'badan usaha',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/perseroan-terbatas',
+//         name: 'perseroan terbatas',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/halal',
+//         name: 'halal',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/HAKI',
+//         name: 'HAKI',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/pariwisata',
+//         name: 'pariwisata',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/IZIN',
+//         name: 'IZIN',
+//         icon: <GoLaw />
+//     },
+//     {
+//         href: '/merek',
+//         name: 'merek',
+//         icon: <GoLaw />
+//     }
+// ]
 
-export const dataPageWeb = {
-    contentData: {
-        heading: "Buat Perusahaan Anda Terlihat Proffesional dan Menarik dengan website yang Modern",
-        features: [
-            {
-                title: "Kreatif dan Efektif",
-                icon: <TbCategoryFilled />
-            },
-            {
-                title: "Desain Responsif",
-                icon: <GiSparkles />
-            },
-            {
-                title: "Fitur Lengkap",
-                icon: <TbListCheck />
-            },
-            {
-                title: "Integrasi Sosial Media",
-                icon: <SlSocialInstagram />
-            }
-        ]
-    },
-    whyWebsite: [
-        {
-            title: "Meningkatkan Kredibilitas",
-            points: [
-                {
-                    heading: "Kredibilitas Perusahaan",
-                    description: "Website memberikan kesan profesional dan meningkatkan kredibilitas perusahaan di mata pelanggan dan mitra bisnis."
-                }
-            ]
-        },
-        {
-            title: "Akses Informasi 24 Jam",
-            points: [
-                {
-                    heading: "Informasi Selalu Tersedia",
-                    description: "Pelanggan dapat mengakses informasi tentang produk, layanan, dan kontak perusahaan kapan saja dan di mana saja, tanpa terbatas oleh jam operasional."
-                }
-            ]
-        },
-        {
-            title: "Memperluas Jangkauan Pasar",
-            points: [
-                {
-                    heading: "Pasar yang Lebih Luas",
-                    description: "Website memungkinkan perusahaan menjangkau pasar yang lebih luas, baik secara nasional maupun internasional. Potensi pelanggan tidak lagi terbatas pada lokasi geografis tertentu."
-                }
-            ]
-        },
-        {
-            title: "Pemasaran Efektif",
-            points: [
-                {
-                    heading: "Alat Pemasaran",
-                    description: "Website adalah alat pemasaran yang sangat efektif. Dengan konten yang tepat dan strategi SEO, perusahaan dapat menarik lebih banyak pengunjung dan mengubah mereka menjadi pelanggan."
-                }
-            ]
-        },
-        {
-            title: "Komunikasi Lebih Mudah",
-            points: [
-                {
-                    heading: "Kemudahan Komunikasi",
-                    description: "Melalui formulir kontak, live chat, atau fitur lainnya, website memudahkan pelanggan untuk berkomunikasi dengan perusahaan, mengajukan pertanyaan, atau memberikan feedback."
-                }
-            ]
-        },
-        {
-            title: "Meningkatkan Penjualan",
-            points: [
-                {
-                    heading: "Peluang Penjualan Online",
-                    description: "Website e-commerce memungkinkan perusahaan untuk menjual produk atau layanan secara online, membuka peluang penjualan yang lebih besar."
-                }
-            ]
-        },
-        {
-            title: "Branding",
-            points: [
-                {
-                    heading: "Identitas Merek",
-                    description: "Website membantu membangun dan memperkuat identitas merek. Melalui desain, konten, dan pengalaman pengguna yang konsisten, perusahaan dapat membedakan dirinya dari kompetitor."
-                }
-            ]
-        }
-    ]
+// export const DataSelectFilterArticle = [
+//     { label: "Newest", value: "desc" },
+//     { label: "Oldest", value: "asc" }
+// ]
 
-}
+// export const DataArticles = {
+//     label: {
+//         new: 'Latest Update',
+//         trend: 'Trending',
+//     },
+//     new: [
+//         {
+//             hot: true,
+//             title: "An unprecedented debate could shake up a White House race like no other",
+//             thumbnailImg: "https://media.cnn.com/api/v1/images/stellar/prod/03-screenshot-2024-06-25-at-1-43-21-am.png?c=16x9&q=h_653,w_1160,c_fill/f_webp",
+//             exerp: "Judge Aileen Cannon wants to hold additional hearings on Donald Trump's attempts to challenge key evidence in his classified documents case and will allow the former president's lawyers to question witnesses about the investigation and search of Mar-a-Lago.",
+//             date: "20 Mins Ago | 28 June 2024",
+//             categories: "Perizinan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Adegan Seks Teraneh Bagi Scarlett Johansson",
+//             thumbnailImg: "https://akcdn.detik.net.id/community/media/visual/2017/11/23/8aae36dd-ed53-471b-aef9-65635b915115_43.jpg?w=700&q=90",
+//             exerp: "Scarlett Johansson telah melakoni banyak sekali proyek dan melakukan berbagai adegan intim. Ada salah satu film yang ternyata cukup membekas untuknya, yakni Her. Baca artikel detikpop",
+//             date: "12 Mins Ago | 28 June 2024",
+//             categories: "Pajak",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "Artificial Intelligence Revolutionizing the Tech Industry",
+//             thumbnailImg: "https://picsum.photos/500/500?random=431",
+//             exerp: "AI technology is rapidly transforming the tech industry with advancements in machine learning and data processing.",
+//             date: "1 Hour Ago | 28 June 2024",
+//             categories: "Teknologi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Climate Change: A Global Call to Action",
+//             thumbnailImg: "https://picsum.photos/500/500?random=555",
+//             exerp: "World leaders are coming together to address the pressing issue of climate change and to discuss sustainable solutions.",
+//             date: "30 Mins Ago | 28 June 2024",
+//             categories: "Lingkungan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "Exploring the Wonders of the Deep Sea",
+//             thumbnailImg: "https://picsum.photos/500/500?random=177",
+//             exerp: "Marine biologists have discovered new species in the depths of the ocean, unveiling the mysteries of the deep sea.",
+//             date: "2 Hours Ago | 28 June 2024",
+//             categories: "Sains",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Economic Growth in Southeast Asia",
+//             thumbnailImg: "https://picsum.photos/500/500?random=810",
+//             exerp: "Southeast Asian countries are experiencing significant economic growth, attracting foreign investments and boosting trade.",
+//             date: "45 Mins Ago | 28 June 2024",
+//             categories: "Ekonomi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "The Rise of Electric Vehicles",
+//             thumbnailImg: "https://picsum.photos/500/500?random=719",
+//             exerp: "Electric vehicles are becoming more popular as consumers seek eco-friendly and cost-effective transportation options.",
+//             date: "3 Hours Ago | 28 June 2024",
+//             categories: "Otomotif",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Advancements in Medical Technology",
+//             thumbnailImg: "https://picsum.photos/500/500?random=532",
+//             exerp: "Recent advancements in medical technology are improving patient outcomes and revolutionizing healthcare practices.",
+//             date: "25 Mins Ago | 28 June 2024",
+//             categories: "Kesehatan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "The Future of Space Exploration",
+//             thumbnailImg: "https://picsum.photos/500/500?random=264",
+//             exerp: "Space agencies are planning ambitious missions to explore distant planets and expand our understanding of the universe.",
+//             date: "4 Hours Ago | 28 June 2024",
+//             categories: "Astronomi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Innovations in Renewable Energy",
+//             thumbnailImg: "https://picsum.photos/500/500?random=284",
+//             exerp: "Innovations in renewable energy sources are paving the way for a sustainable future and reducing our reliance on fossil fuels.",
+//             date: "10 Mins Ago | 28 June 2024",
+//             categories: "Energi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "The Impact of Social Media on Society",
+//             thumbnailImg: "https://picsum.photos/500/500?random=331",
+//             exerp: "Social media platforms are having a profound impact on society, influencing communication, politics, and culture.",
+//             date: "5 Hours Ago | 28 June 2024",
+//             categories: "Sosial"
+//         },
+//         {
+//             hot: true,
+//             title: "Breakthroughs in Quantum Computing",
+//             thumbnailImg: "https://picsum.photos/500/500?random=429",
+//             exerp: "Quantum computing is making significant strides, promising to solve complex problems that are beyond the capabilities of classical computers.",
+//             date: "15 Mins Ago | 28 June 2024",
+//             categories: "Teknologi"
+//         }
+//     ],
+//     trend: [
+
+//         {
+//             hot: false,
+//             title: "The Rise of Electric Vehicles",
+//             thumbnailImg: "https://picsum.photos/500/500?random=719",
+//             exerp: "Electric vehicles are becoming more popular as consumers seek eco-friendly and cost-effective transportation options.",
+//             date: "3 Hours Ago | 28 June 2024",
+//             categories: "Otomotif",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Advancements in Medical Technology",
+//             thumbnailImg: "https://picsum.photos/500/500?random=532",
+//             exerp: "Recent advancements in medical technology are improving patient outcomes and revolutionizing healthcare practices.",
+//             date: "25 Mins Ago | 28 June 2024",
+//             categories: "Kesehatan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "The Future of Space Exploration",
+//             thumbnailImg: "https://picsum.photos/500/500?random=264",
+//             exerp: "Space agencies are planning ambitious missions to explore distant planets and expand our understanding of the universe.",
+//             date: "4 Hours Ago | 28 June 2024",
+//             categories: "Astronomi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Innovations in Renewable Energy",
+//             thumbnailImg: "https://picsum.photos/500/500?random=284",
+//             exerp: "Innovations in renewable energy sources are paving the way for a sustainable future and reducing our reliance on fossil fuels.",
+//             date: "10 Mins Ago | 28 June 2024",
+//             categories: "Energi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "The Impact of Social Media on Society",
+//             thumbnailImg: "https://picsum.photos/500/500?random=331",
+//             exerp: "Social media platforms are having a profound impact on society, influencing communication, politics, and culture.",
+//             date: "5 Hours Ago | 28 June 2024",
+//             categories: "Sosial"
+//         },
+//         {
+//             hot: true,
+//             title: "Breakthroughs in Quantum Computing",
+//             thumbnailImg: "https://picsum.photos/500/500?random=429",
+//             exerp: "Quantum computing is making significant strides, promising to solve complex problems that are beyond the capabilities of classical computers.",
+//             date: "15 Mins Ago | 28 June 2024",
+//             categories: "Teknologi"
+//         },
+//         {
+//             hot: true,
+//             title: "An unprecedented debate could shake up a White House race like no other",
+//             thumbnailImg: "https://media.cnn.com/api/v1/images/stellar/prod/03-screenshot-2024-06-25-at-1-43-21-am.png?c=16x9&q=h_653,w_1160,c_fill/f_webp",
+//             exerp: "Judge Aileen Cannon wants to hold additional hearings on Donald Trump's attempts to challenge key evidence in his classified documents case and will allow the former president's lawyers to question witnesses about the investigation and search of Mar-a-Lago.",
+//             date: "20 Mins Ago | 28 June 2024",
+//             categories: "Perizinan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Adegan Seks Teraneh Bagi Scarlett Johansson",
+//             thumbnailImg: "https://akcdn.detik.net.id/community/media/visual/2017/11/23/8aae36dd-ed53-471b-aef9-65635b915115_43.jpg?w=700&q=90",
+//             exerp: "Scarlett Johansson telah melakoni banyak sekali proyek dan melakukan berbagai adegan intim. Ada salah satu film yang ternyata cukup membekas untuknya, yakni Her. Baca artikel detikpop",
+//             date: "12 Mins Ago | 28 June 2024",
+//             categories: "Pajak",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "Artificial Intelligence Revolutionizing the Tech Industry",
+//             thumbnailImg: "https://picsum.photos/500/500?random=431",
+//             exerp: "AI technology is rapidly transforming the tech industry with advancements in machine learning and data processing.",
+//             date: "1 Hour Ago | 28 June 2024",
+//             categories: "Teknologi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Climate Change: A Global Call to Action",
+//             thumbnailImg: "https://picsum.photos/500/500?random=555",
+//             exerp: "World leaders are coming together to address the pressing issue of climate change and to discuss sustainable solutions.",
+//             date: "30 Mins Ago | 28 June 2024",
+//             categories: "Lingkungan",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: false,
+//             title: "Exploring the Wonders of the Deep Sea",
+//             thumbnailImg: "https://picsum.photos/500/500?random=177",
+//             exerp: "Marine biologists have discovered new species in the depths of the ocean, unveiling the mysteries of the deep sea.",
+//             date: "2 Hours Ago | 28 June 2024",
+//             categories: "Sains",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//         {
+//             hot: true,
+//             title: "Economic Growth in Southeast Asia",
+//             thumbnailImg: "https://picsum.photos/500/500?random=810",
+//             exerp: "Southeast Asian countries are experiencing significant economic growth, attracting foreign investments and boosting trade.",
+//             date: "45 Mins Ago | 28 June 2024",
+//             categories: "Ekonomi",
+//             content: (
+//                 <>
+//                     <p>
+//                         Jakarta: Bulan Mei lalu, beredar sejumlah informasi terkait fitur baru akan
+//                         tersedia di Apple Music melalui update iOS 18. Fitur ini bertajuk Smart
+//                         Crossfade dan disebut akan menjadikan transisi antar lagu mulus tanpa jeda
+//                         sunyi.
+//                         <br />
+//                         <br />
+//                         Saat lagu yang saat ini diputar menghilang perlahan, lagu selanjutnya akan
+//                         muncul secara perlahan. Hal ini serupa metode pemutaran di radio beberapa
+//                         tahun lalu, kerap dilakukan saat dua lagu diputar secara terus menerus tanpa
+//                         jeda iklan atau ucapan DJ antar lagu.
+//                         <br />
+//                         <br />
+//                         Mengutip Phone Arena, Apple menambahkan Crossfade untuk Apple Music di iOS 17
+//                         namun berencana untuk menjadikannya lebih cerdas di iOS 18. Smart Crossfade
+//                         lebih mulus dan tidak setiap transisi antara lagu akan memungkinkan kemunculan
+//                         dan menghilang secara perlahan, beberapa lagi akan dimulai segera setelah kata
+//                         terakhir di lagu tengah diputar dinyanyikan.
+//                         <br />
+//                         Apple juga memastikan fitur ini tidak akan mengubah suara album saat fitur ini
+//                         diaktifkan. Dengan fitur Smart Crossfade, lagu-lagu akan dipisahkan satu sama
+//                         lain seperti di album. Fitur Smart Crossfade aktif setelah pengguna
+//                         mengaktifkan Crossfire di pengaturan aplikasi Apple Music.
+//                         <br />
+//                         <br />
+//                         Dengan Crossfade, pengguna dapat mengatur durasi crossfade dari satu detik
+//                         hingga 12 detik. Jika pengguna merupakan pelanggan Apple Music dengan iOS 18
+//                         beta, pengguna dapat mencoba fitur Smart Crossfade tersebut.
+//                         <br />
+//                         <br />
+//                         Untuk mengakses fitur ini, pengguna dapat membuka Settings, lalu Music dan
+//                         tuas di Crossfade. Pengguna dapat menyesuaikan pengaturan tersebut hingga
+//                         mendapatkan durasi Crossfade, dari satu hingga 12 detik, yang pengguna
+//                         inginkan.
+//                         <br />
+//                         <br />
+//                         Pengguna juga masih dapat melakukan langkah tersebut untuk mengaktifkan
+//                         Crossfade di iOS 17 kendati tidak dapat memanfaatkan fitur Smart Crossfade
+//                         baru hingga iOS 18 diinstal. Sebelumnya, Apple telah memulai pendistribusian
+//                         headset Vision Pro karyanya.
+//                         <br />
+//                         <br />
+//                         Tiongkok, Hong Kong, Jepang dan Singapura menjadi empat pasar pertama di luar
+//                         pasar Amerika Serikat yang memasarkan Vision Pro. Apple dijadwalkan untuk
+//                         memperluas ketersediaan Vision Pro di lima pasar lainnya mulai tanggal 12 Juli
+//                         di Inggris, Prancis, Jerman, Australia dan Kanada.
+//                         <br />
+//                         <br />
+//                         Perangkat ini dipasarkan seharga CNY30.000 di Tiongkok, HKD28.000 di Hong
+//                         Kong, JPY600.000 di Jepang dan SGD5.300 (Rp63,8 juta) di Singapura untuk model
+//                         berpenyimpanan 256GB. Sementara itu, aplikasi ChatGPT OpenAI untuk macOS kini
+//                         tersedia untuk diunduh secara gratis, setelah sebelumnya tersedia secara
+//                         eksklusif untuk ChatGPT Plus sejak bulan Mei lalu.
+//                         <br />
+//                         <br />
+//                         Aplikasi desktop ini hanya tersedia untuk perangkat macOS 14+ dengan Apple
+//                         Silicon M1 atau lebih baik. Pengguna dapat mengakses form ChatGPT untuk
+//                         berbagai layar di perangkat dengan tombol Option + Space.
+//                         <br />
+//                         <br />
+//                         Antarmuka pengguna (UI) aplikasi ini serupa dengan ChatGPT versi web, dan
+//                         mendukung opsi pencarian multi-modal.
+//                     </p>
+
+//                 </>
+//             )
+//         },
+//     ]
+// }
+
+// export const DataHighlight = [
+//     {
+//         title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
+//         imgUrl: 'https://images.unsplash.com/photo-1613690399151-65ea69478674?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+//     },
+//     {
+//         title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
+//         imgUrl: 'https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+//     },
+//     {
+//         title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
+//         imgUrl: 'https://images.unsplash.com/photo-1518527989017-5baca7a58d3c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+//     },
+//     {
+//         title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
+//         imgUrl: 'https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+//     },
+//     {
+//         title: 'Mau Kredit Mobil Listrik BYD Dolphin? Segini Cicilannya Tiap Bulan',
+//         imgUrl: 'https://plus.unsplash.com/premium_photo-1661963456199-ba147a77e2a7?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+//     },
+// ]
+
+// export const ppl = [
+//     'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1464863979621-258859e62245?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+// ]
+
+// export const legalitasUsaha = [
+//     {
+//         title: "Kepatuhan Hukum",
+//         points: [
+//             {
+//                 heading: "Mematuhi Peraturan dan Undang-Undang",
+//                 description: "Legalitas usaha memastikan bahwa bisnis mematuhi semua peraturan dan undang-undang yang berlaku. Ini termasuk peraturan tentang perpajakan, ketenagakerjaan, lingkungan, dan lain-lain."
+//             },
+//             {
+//                 heading: "Menghindari Sanksi",
+//                 description: "Tanpa legalitas yang sesuai, bisnis dapat menghadapi sanksi hukum, denda, atau bahkan penutupan oleh otoritas yang berwenang."
+//             }
+//         ]
+//     },
+//     {
+//         title: "Kepercayaan dan Kredibilitas",
+//         points: [
+//             {
+//                 heading: "Kepercayaan Pelanggan",
+//                 description: "Usaha yang legal memberikan rasa aman dan kepercayaan kepada pelanggan, mitra bisnis, dan investor. Mereka cenderung lebih percaya dan merasa aman bertransaksi dengan bisnis yang memiliki legalitas yang jelas."
+//             },
+//             {
+//                 heading: "Reputasi yang Baik",
+//                 description: "Memiliki legalitas usaha yang lengkap dan sesuai juga meningkatkan reputasi bisnis di mata publik dan pemangku kepentingan lainnya."
+//             }
+//         ]
+//     },
+//     {
+//         title: "Perlindungan Hukum",
+//         points: [
+//             {
+//                 heading: "Hak Kekayaan Intelektual",
+//                 description: "Legalitas usaha memungkinkan bisnis untuk mendaftarkan merek dagang, paten, atau hak cipta, sehingga melindungi kekayaan intelektual mereka dari penyalahgunaan."
+//             },
+//             {
+//                 heading: "Perlindungan Bisnis",
+//                 description: "Legalitas usaha memberikan perlindungan hukum terhadap perselisihan atau konflik yang mungkin timbul, baik dengan pelanggan, pemasok, maupun karyawan."
+//             }
+//         ]
+//     },
+//     {
+//         title: "Akses ke Pembiayaan",
+//         points: [
+//             {
+//                 heading: "Pinjaman dan Investasi",
+//                 description: "Bank dan lembaga keuangan lainnya biasanya hanya memberikan pinjaman atau investasi kepada bisnis yang memiliki legalitas yang lengkap dan sesuai. Investor juga lebih cenderung berinvestasi pada bisnis yang legal."
+//             },
+//             {
+//                 heading: "Subsidi dan Hibah",
+//                 description: "Banyak program subsidi atau hibah dari pemerintah yang hanya dapat diakses oleh bisnis yang memiliki legalitas usaha yang sah."
+//             }
+//         ]
+//     },
+//     {
+//         title: "Kemudahan Ekspansi",
+//         points: [
+//             {
+//                 heading: "Ekspansi Pasar",
+//                 description: "Legalitas usaha memudahkan proses ekspansi ke pasar baru, baik di dalam negeri maupun internasional. Bisnis yang legal lebih mudah mendapatkan izin dan lisensi untuk beroperasi di wilayah baru."
+//             },
+//             {
+//                 heading: "Kemitraan Bisnis",
+//                 description: "Legalitas usaha memungkinkan bisnis untuk menjalin kemitraan strategis dengan perusahaan lain yang mungkin memiliki persyaratan legalitas tertentu."
+//             }
+//         ]
+//     },
+//     {
+//         title: "Kepastian Usaha",
+//         points: [
+//             {
+//                 heading: "Perlindungan Aset Pribadi",
+//                 description: "Struktur bisnis yang legal, seperti perseroan terbatas, dapat melindungi aset pribadi pemilik dari kewajiban bisnis."
+//             },
+//             {
+//                 heading: "Keberlanjutan Usaha",
+//                 description: "Legalitas usaha memberikan dasar yang kuat untuk kelangsungan dan perkembangan bisnis dalam jangka panjang."
+//             }
+//         ]
+//     }
+// ];

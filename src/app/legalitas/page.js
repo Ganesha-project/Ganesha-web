@@ -2,9 +2,9 @@ import { AllProductButton } from "@/components/LegalComponents/AllProductButton"
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { BodyLegal } from "@/components/LegalComponents/BodyLegal";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
-import { DataPageLegal } from "../Database";
 import { AccordionLegal } from "@/components/LegalComponents/AccrodionLegal";
 import { RWhyUs } from "@/components/LegalComponents/RWhyUs";
+import { DataPageLegal } from "../../../public/Data/LegalitasData";
 
 export const metadata = {
     title: 'Jasa Legalitas Bisnis - Ganesha Consulting',

@@ -2,9 +2,9 @@ import { ReusableCards } from '@/components/ReusableCards';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 import { VirtualOfficePackages } from '../../../public/DB/OtherPackages';
 import { Faqs } from '@/components/LegalComponents/Faqs';
-import { dataPageVO } from '../Database';
 import { CardVO } from '@/components/VirtualOffice/CardVO';
 import { Benefit } from '@/components/VirtualOffice/Benefit';
+import { dataPageVO } from '../../../public/Data/VOData';
 
 
 export default async function VirtualOfficePage() {

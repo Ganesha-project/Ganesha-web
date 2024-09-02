@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DataBanner } from "@/app/Database";
 import { usePathname } from "next/navigation";
+import { WALINK } from "../Links/Links";
 
 export const BannerService = () => {
     const pathname = usePathname();
@@ -38,9 +39,9 @@ export const BannerService = () => {
                     {desc}
                 </h2>
                 <Link
-                    href={bannerData.href}
+                    href={WALINK}
                     className={`${accent} ${visibility} dark:text-white font-bold z-40 w-fit px-4 py-1 text-gray-800 rounded-full duration-300 ease-in-out hover:brightness-75`}>
-                    Check
+                    Contact
                 </Link>
             </div>
         </section>

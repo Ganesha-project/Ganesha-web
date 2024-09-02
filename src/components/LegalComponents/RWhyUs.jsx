@@ -1,5 +1,5 @@
+import { DataPageLegal } from "../../../public/Data/LegalitasData";
 
-import { DataPageLegal } from "@/app/Database";
 
 export const metadata = {
     title: "Kelebihan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",

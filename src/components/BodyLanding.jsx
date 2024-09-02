@@ -22,14 +22,14 @@ export const BodyLanding = () => {
                     {DataBanner.slice(0, 13).map((el, idx) => (
                         <Link
                             href={"/" + el.href}
-                            key={idx} className={`carousel-item w-[75%] md:w-[30%] duration-300 ease-in-out hover:scale-105 hover:origin-bottom  ${idx === 0 ? 'pl-5 md:pl-24' : ''} ${idx === DataBanner.length - 5 ? 'pr-5 md:pr-24' : ''}`}>
-                            <div className="flex flex-col gap-0 duration-300 ease-in-out hover:shadow-[0px_2px_35px_0px_#692d7991] dark:hover:shadow-[0px_2px_35px_0px_#a781a98a] rounded-3xl">
+                            key={idx} className={`carousel-item w-[75%] md:w-[30%] duration-300 ease-in-out hover:scale-[1.03] hover:origin-bottom  ${idx === 0 ? 'pl-5 md:pl-24' : ''} ${idx === DataBanner.length - 5 ? 'pr-5 md:pr-24' : ''}`}>
+                            <div className={`${el.data.accent} flex h-[80lvh] flex-col gap-0 duration-300 ease-in-out hover:shadow-[0px_2px_35px_0px_#692d7991] dark:hover:shadow-[0px_2px_35px_0px_#a781a98a] rounded-3xl`}>
                                 <img
-                                    className={`grow object-contain p-3 rounded-t-3xl md:h-auto min-h-[50lvh] ${el.data.accent}`}
+                                    className={`grow object-contain p-10 rounded-t-3xl md:h-auto min-h-[50lvh]`}
                                     src={el.data.bannerImage}
                                     alt={el.data.mainText} />
-                                <div className={`${el.data.accent}  px-5 py-3 m5 rounded-b-3xl`}>
-                                    <h1 className={`${el.data.textAccent} brightness-50 dark:brightness-125 font-semibold md:text-xl`}>
+                                <div className={`bg-white dark:bg-black dark:bg-opacity-20 bg-opacity-20 p-5 rounded-b-3xl space-y-1`}>
+                                    <h1 className={`${el.data.textAccent} brightness-95 dark:brightness-125 font-semibold text-xl md:text-2xl`}>
                                         {el.data.mainText}
                                     </h1>
                                     <p className="truncate-last-1 text-sm">

@@ -1,4 +1,4 @@
-import { dataPageVO } from "@/app/Database"
+import { dataPageVO } from "../../../public/Data/VOData"
 
 export const Benefit = () => {
     return (

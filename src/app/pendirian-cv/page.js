@@ -5,11 +5,12 @@ import { CVPackages } from "../../../public/DB/CVPackages";
 import { ExtrasPackages } from "../../../public/DB/PTPackages";
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { Faqs } from "@/components/LegalComponents/Faqs";
-import { dataPageCV, DataPageLegal } from "../Database";
 import { ClientPhotos } from "@/components/ClientPhotos";
 import { Explanation } from "@/components/LegalComponents/Explanation";
 import { Laws } from "@/components/LegalComponents/Laws";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
+import { DataPageLegal } from "../../../public/Data/LegalitasData";
+import { dataPageCV } from "../../../public/Data/CVData";
 
 export const metadata = {
     title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
