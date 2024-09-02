@@ -54,7 +54,7 @@ export const Searchbar = ({
                 )}
                 <button type="submit" className="">
                     <span className="block md:hidden p-2 rounded-full -mr-2">
-                        <IoIosSearch className={`text-white ${searchButtonColor}`} />
+                        <IoIosSearch className={`text-white`} />
                     </span>
                     <span className={`hidden md:block md:px-3 md:py-1 btnbtncir ${searchButtonColor} rounded-full text-white font-semibold -mr-2 ${searchButtonHoverColor} duration-300 ease-in-out`}>
                         {searchButtonText}

@@ -13,7 +13,6 @@ import { IoSearchCircle } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
 
-
 export const DataProduct = [
     {
         href: "/legalitas",
@@ -105,7 +104,7 @@ export const DataProduct = [
         text: "Pendirian CV",
         keywords: ["legalitas CV", "pendirian CV", "dokumen CV", "izin usaha CV", "badan usaha CV", "perusahaan CV"]
     },
-]
+];
 
 export const NavLinks = {
     main: [
@@ -258,7 +257,7 @@ export const NavLinks = {
             accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
         },
     ]
-}
+};
 
 export const DataBanner = [
     {
@@ -450,7 +449,7 @@ export const DataBanner = [
             visibility: "hidden"
         },
     },
-]
+];
 
 export const DataWhyUs = {
     tag: "Kenapa Harus di Ganesha Consulting?",
@@ -542,7 +541,7 @@ export const dataContact = {
             link: "https://maps.app.goo.gl/8wg4sGKQiffsFRML8"
         }
     ]
-}
+};
 
 export const dataFormContact = [
     {
@@ -557,7 +556,7 @@ export const dataFormContact = [
         placeholder: "Telepon",
         name: "phone"
     },
-]
+];
 
 export const dataAboutus = {
     content: (
@@ -589,7 +588,7 @@ export const dataAboutus = {
         "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/ujefi3yj3hdylvkfy8cj.png",
         "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236582/GaneshaAssets/isqbllhdm2budvmyd005.png",
     ]
-}
+};
 
 export const FaqMainData = {
     BadanUsaha: [
@@ -719,7 +718,6 @@ export const FaqMainData = {
         }
     ]
 };
-
 
 // export const DataCategoriesArticle = [
 //     {

@@ -4,7 +4,6 @@ import { BannerArticle } from "@/components/ArticleComponent/Banner";
 import { Featured } from "@/components/ArticleComponent/Featured";
 import { Searchbar } from "@/components/ArticleComponent/Searchbar";
 import { TilesFilter } from "@/components/ArticleComponent/TilesFilter";
-import { DataArticles } from "../Database";
 import { useEffect, useState } from "react";
 import { SkeletonBanner } from "@/components/Skeleton/SkeletonBanner";
 import { SkeletonTiles } from "@/components/Skeleton/SkeletonTiles";
@@ -115,7 +114,6 @@ export default function ArticlePage() {
                 ) : (
                     <ArticleCard
                         data={newData}
-                        tag={DataArticles.label.new}
                         moms={<Headtag label={'Fresh Articles'} hide={true} />}
                     />
                 )}
