@@ -1,5 +1,3 @@
-import { DataArticles } from "@/app/Database"
-import Image from "next/image"
 import Breadcrumbs from "./Breadcrumbs"
 import { formatDateTime } from "@/helper/formatDateTime";
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;

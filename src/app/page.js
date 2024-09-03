@@ -8,7 +8,6 @@ import { ClientPhotos } from "@/components/ClientPhotos";
 import { ClientLogo } from "@/components/ClientLogo";
 import { WhyUs } from "@/components/WhyUs";
 import { ArticleReccomendation } from "@/components/ArticleComponent/ArticleReccomendation";
-import { DataArticles } from "./Database";
 import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomendation';
 
 

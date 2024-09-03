@@ -1,4 +1,4 @@
-import { DataSelectFilterArticle } from "@/app/Database"
+import { DataSelectFilterArticle } from "@/app/Database";
 import { FaSort } from "react-icons/fa6"
 
 export const Headtag = ({ label, visibility, children, filter, hide, setSortOrder }) => {

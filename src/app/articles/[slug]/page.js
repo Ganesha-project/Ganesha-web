@@ -2,7 +2,6 @@
 
 import { TopCategory } from "@/components/ArticleComponent/TopCategory";
 import { ArticleCard } from "@/components/ArticleComponent/ArticleCard";
-import { DataArticles } from "../../Database";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";

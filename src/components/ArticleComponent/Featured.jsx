@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { DataArticles, DataHighlight } from "@/app/Database"
 import { HighlightCarousel } from "./HightlightCarousel"
 import { FaFire } from "react-icons/fa6"
 import { formatDateTime } from "@/helper/formatDateTime"

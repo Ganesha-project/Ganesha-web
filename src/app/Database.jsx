@@ -716,3 +716,8 @@ export const FaqMainData = {
         }
     ]
 };
+
+export const DataSelectFilterArticle = [
+    { label: "Newest", value: "desc" },
+    { label: "Oldest", value: "asc" }
+]
