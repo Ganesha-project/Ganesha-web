@@ -1,45 +1,9 @@
-import Image from "next/image"
-import Head from 'next/head';
-import pt from "../../public/IMG/IconVector/building.png"
+import Head from 'next/head'
+import Link from "next/link";
+import { Title } from '../Title';
+import { DataPageLegal } from '../../../public/Data/LegalitasData';
 
 export const AllProductButton = () => {
-    const items = [
-        {
-            "name": "Pendirian PT",
-            "link": "legalitas/pendirian-pt",
-            "image": pt
-        },
-        {
-            "name": "Pendirian CV",
-            "link": "legalitas/pendirian-cv",
-            "image": pt
-        },
-        {
-            "name": "Pendirian Yayasan",
-            "link": "legalitas/badan-usaha",
-            "image": pt
-        },
-        {
-            "name": "Pendirian Firma Hukum",
-            "link": "legalitas/badan-usaha",
-            "image": pt
-        },
-        {
-            "name": "Pendirian Perkumpulan/Asosiasi",
-            "link": "legalitas/badan-usaha",
-            "image": pt
-        },
-        {
-            "name": "Pendirian Virtual Office | PKP | NIB",
-            "link": "legalitas/badan-usaha",
-            "image": pt
-        },
-        {
-            "name": "Konsultan Pajak",
-            "link": "legalitas/badan-usaha",
-            "image": pt
-        },
-    ]
 
     return (
         <>
@@ -67,65 +31,26 @@ export const AllProductButton = () => {
                 <meta name="twitter:title" content="Layanan Kami - Ganesha Consulting" />
                 <meta name="twitter:description" content="Temukan berbagai layanan legalitas bisnis yang ditawarkan oleh Ganesha Consulting. Mulai dari pendirian PT, CV, yayasan, hingga konsultan pajak." />
 
-                {/* Metadata Schema.org */}
-                <script type="application/ld+json">
-                    {`
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "ItemList",
-                            "name": "Layanan Kami",
-                            "description": "Temukan berbagai layanan legalitas bisnis yang ditawarkan oleh Ganesha Consulting. Mulai dari pendirian PT, CV, yayasan, hingga konsultan pajak.",
-                            "url": "https://www.ganeshaconsulting.co.id/all-products/legalitas",
-                            "itemListElement": [
-                                ${items.map((item, index) => `
-                                    {
-                                        "@type": "ListItem",
-                                        "position": ${index + 1},
-                                        "item": {
-                                            "@type": "Service",
-                                            "name": "${item.name}",
-                                            "description": "Layanan ${item.name}",
-                                            "url": "https://ganeshaconsulting.co.id/${item.link}",
-                                            "image": "https://ganeshaconsulting.co.id/${item.image}",
-                                            "provider": {
-                                                "@type": "Organization",
-                                                "name": "Ganesha Consulting"
-                                            }
-                                        }
-                                    }
-                                `).join(',')}
-                            ]
-                        }
-                    `}
-                </script>
             </Head>
-
-            <div className="bg-white p-10 lg:p-32 sm:p-14 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
-                <p className="font-extrabold text-6xl text-left flex items-center justify-center bg-indigo-200 text-gray-800 rounded-[40px] p-5">
-                    Layanan Kami
-                </p>
-                {items.map((el, index) => (
-                    <a
-                        key={index}
-                        href={el.link}
-                        className={`w-full h-full flex items-center gap-3 p-8 sm:p-14 hover:bg-opacity-70
-                ${index === 3 ? 'bg-orange-200' : index === 6 ? 'bg-slate-200' : index === 1 ? 'bg-pink-200' : 'bg-teal-300'}
-                rounded-[40px]`}
-                    >
-                        <Image
-                            src={el.image === "" ? "" : pt}
-                            className="h-10 w-10 object-cover"
-                        />
-
-                        <div
-                            className=" text-lg sm:text-2xl font-bold"
+            <section className="md:mx-24 mx-5 py-24 space-y-5">
+                <Title text={"Layanan Legalitas Kami"} className={'py-5'} />
+                <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
+                    {DataPageLegal.legalItems.map((el, idx) => (
+                        <Link
+                            key={idx}
+                            href={el.link}
+                            className="group flex flex-row items-center gap-3 duration-300 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-bl from-gray-100 to-white dark:from-darkColor dark:to-transparent"
                         >
-                            <p>{el.name}</p>
-                        </div>
-                    </a>
-                ))}
-                <p className="font-extrabold text-4xl sm:text-6xl text-right flex items-center justify-center bg-[#dffbff] rounded-[40px]"></p>
-            </div>
+                            <div className="md:text-3xl text-xl p-3 w-fit bg-gradient-radial from-gray-200 to-white dark:from-gray-600 dark:to-black text-darkColor dark:text-secondaryGray rounded-full ">
+                                {el.icon}
+                            </div>
+                            <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-bl from-darkColor to-mainColor dark:from-secondaryGray dark:to-baseColor bg-clip-text text-transparent">
+                                {el.name}
+                            </h2>
+                        </Link>
+                    ))}
+                </div>
+            </section>
 
         </>
     )

@@ -1,15 +1,22 @@
-"use client"
+'use client'
 import Image from 'next/image';
 import Artboard2 from '../public/IMG/Artboard2.png';
+import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { RiCustomerServiceFill } from 'react-icons/ri';
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
+import { NavLinks } from '@/app/Database';
+import { HiOutlineMenu } from 'react-icons/hi';
+import { usePathname } from "next/navigation";
+import { MegaMenuNavbar } from './MegaMenuNavbar';
+import { SearchNavbar } from './SearchNavbar';
+import { MobileDrawer } from './MobileDrawer';
 
 
-export const Navbar = ({ children }) => {
-  const router = useRouter();
+export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const path = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,258 +31,98 @@ export const Navbar = ({ children }) => {
     };
   }, []);
 
-  const isActive = (pathname) => router.pathname === pathname;
-
   return (
     <>
-      <nav className={`font-quicksand fixed w-full z-50 top-0 start-0 ${isScrolled ? 'bg-[#ffffff70] backdrop-blur-lg' : 'sm:bg-transparent backdrop-blur-lg lg:bg-transparent'}`}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
-          <a href='/' className="flex items-center space-x-3 rtl:space-x-reverse p-1">
-            <Image src={Artboard2} className="" width={40} height={40} alt="Ganesha Logo" />
-            <span className="self-center text-[#ffffff] text-2xl font-semibold blackspace-nowrap">
-              {/* GaneshaConsulting */}
-            </span>
+      <nav className={`navbar fixed 2xl:px-80 md:px-24 w-full z-[100] top-0 start-0 ease-in-out duration-300
+        ${isScrolled && isExpanded !== true ? 'bg-[#ffffff70] dark:bg-[#00000070] backdrop-blur-lg shadow-mainShadow' : 'bg-transparent sm:bg-transparent lg:bg-transparent'}
+        `}>
+        <div className="navbar-start">
+          <a className="btn btn-ghost text-xl">
+            <Image src={Artboard2} width={40} height={40} alt="Ganesha Logo" />
           </a>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-revers">
-            <a
-              href='/contact'
-              className={`hidden lg:visible text-gray-800 bg-[#ffffff81] backdrop-blur-sm hover:bg-[#e9b3ee] focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block ${isActive('/contact') && 'border-b-2 border-violet-300'}`}
-            >
-              Hubungi Kami
-            </a>
-            <a
-              href='/contact'
-              className="visible lg:hidden px-0 py-2 text-center md:inline-block"
-            >
-              <span><RiCustomerServiceFill size={25} color='grey' /></span>
-            </a>
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            className="items-center bg-[#fff] rounded-3xl md:bg-transparent lg:bg-transparent justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
-          >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
-              <li>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+            {NavLinks.main.slice(0, 1).map(link => (
+              <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
-                  href='/'
-                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive === '/' ? "text-violet-800 border-b-2 border-violet-300 " : "text-gray-800"}`}
+                  href={link.href}
+                  className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
                   aria-current="page"
                 >
-                  GaneshaConsulting
+                  {link.label}
                 </a>
+                <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
-              <li>
+            ))}
+
+            <MegaMenuNavbar
+              title="Produk & Layanan"
+              label={'Our Service Collections'}
+              links={NavLinks.productsAndServices}
+              isExpanded={isExpanded}
+              setIsExpanded={setIsExpanded}
+            />
+            <MegaMenuNavbar
+              title="Legalitas"
+              label={'Our Legality Services'}
+              links={NavLinks.legalities}
+              isExpanded={isExpanded}
+              setIsExpanded={setIsExpanded}
+            />
+            {NavLinks.others.map(link => (
+              <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
-                  href='/all-products'
-                  id="dropdownHoverButton"
-                  data-dropdown-toggle="dropdownHover"
-                  data-dropdown-trigger="hover"
-                  className={`gap-1 py-2 px-3 flex items-center text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products') && 'border-b-2 border-violet-300'}`}
-                  type="button"
+                  href={link.href}
+                  className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
+                  aria-current="page"
                 >
-                  Produk & Layanan <IoIosArrowDown />
+                  {link.label}
                 </a>
-                {/* Dropdown menu */}
-                <div
-                  id="dropdownHover"
-                  className={`z-10 hidden bg-[#ffffff] text-gray-800 divide-y divide-gray-100 shadow w-fit rounded-lg`}
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-800"
-                    aria-labelledby="dropdownHoverButton"
-                  >
-                    <li>
-                      <a
-                        href="/all-products"
-                        className="block px-4 py-2 hover:bg-[#bca0be72]"
-                      >
-                        All Products
-                      </a>
-                    </li>
-                    <li></li>
-                    <li>
-                      <a
-                        href="/all-products/sosmed"
-                        className="block px-4 py-2 hover:bg-[#bca0be72]"
-                      >
-                        Social Media Management
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/all-products/web"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Website Development
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/all-products/legalitas"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Legalitas Bisnis
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/all-products/legalitas/badan-usaha"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Badan Usaha Lainnya
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="konsultan-pajak"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Konsultan Pajak
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="izin-tambahan"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Izin Tambahan
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="pelayanan-manajemen"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Pelayanan Manajemen
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="pelayanan-akuntansi"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Pelayanan Akuntansi
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="software-management-system"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Software Management System
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="haki"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        HAKI
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="audit"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Audit
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
-              <li>
-                <a
-                  href='/all-products/legalitas'
-                  id="dropdownHoverButton2"
-                  data-dropdown-toggle="dropdownHover2"
-                  data-dropdown-trigger="hover"
-                  className={`flex gap-1 items-center py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/all-products/legalitas') && 'border-b-2 border-violet-300'}`}
-                  type="button"
-                >
-                  Legalitas <IoIosArrowDown />
-                </a>
-                {/* Dropdown menu */}
-                <div
-                  id="dropdownHover2"
-                  className={`z-10 hidden bg-[#ffffff] rounded-xl text-gray-800 divide-y divide-gray-100 shadow w-fit`}
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-800"
-                    aria-labelledby="dropdownHoverButton2"
-                  >
-                    <li>
-                      <a
-                        href="/all-products/legalitas/pendirian-pt"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Legalitas PT
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/all-products/legalitas/pendirian-cv"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Legalitas CV
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/all-products/legalitas/badan-usaha"
-                        className="block px-4 py-2 hover:bg-[#762a7d72]"
-                      >
-                        Legalitas Badan Usaha Lainnya
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  href='/price-list'
-                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/price-list') && 'border-b-2 border-violet-300'}`}
-                >
-                  List Harga
-                </a>
-              </li>
-              {/* <li>
-                <a
-                  href='/karir'
-                  className={`block py-2 px-3 text-gray-800 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-[#f599ff] md:p-0 ${isActive('/karir') && 'border-b-2 border-violet-300'}`}
-                >
-                  Karir
-                </a>
-              </li> */}
-            </ul>
+            ))}
+          </ul>
+        </div>
+        <div className="navbar-end pr-3 space-x-2">
+          <a
+            href='/contact'
+            className={`flex items-center `}
+          >
+            <span className='md:block hidden font-semibold text-gray-800 dark:text-white bg-[#ffffff26] hover:bg-mainColor hover:text-white bg-gray-200 bg-opacity-50 backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
+              Contact
+            </span>
+            <span data-tip={'Contact Us'} className='block md:hidden tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+              <RiCustomerServiceFill className='text-xl' />
+            </span>
+          </a>
+          <div className='hidden md:block'>
+            <MegaMenuNavbar
+              icon={<IoIosSearch className='text-xl' />}
+              iconClassName={'p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
+              arrowVisibility={'hidden'}
+              children={
+                <SearchNavbar />
+              }
+              isExpanded={isExpanded}
+              setIsExpanded={setIsExpanded}
+            />
+          </div>
+          <ThemeSwitch />
+          <div className='md:hidden block'>
+            <MegaMenuNavbar
+              icon={<HiOutlineMenu className='text-xl' />}
+              iconClassName={'p-2 rounded-full bg-gray-200 bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
+              arrowVisibility={'hidden'}
+              children={
+                <MobileDrawer />
+              }
+              isExpanded={isExpanded}
+              setIsExpanded={setIsExpanded}
+            />
           </div>
         </div>
-      </nav>
-      {children}
+      </nav >
     </>
   );
 };

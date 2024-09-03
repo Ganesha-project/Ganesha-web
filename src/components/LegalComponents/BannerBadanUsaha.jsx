@@ -3,8 +3,8 @@ export const BannerBadanUsaha = () => {
         <>
             <div className="z-40 absolute top-[50%] md:top-[50%] lg:top-[50%] left-[35%] lg:left-[25%] md:left-[40%] ml-10 transform -translate-x-1/2 -translate-y-1/2" >
                 <div>
-                    <h1 className="text-gray-800 font-medium text-3xl w-[50vw]">Layanan Pendirian</h1>
-                    <h1 className="mt-3 bg-[#ffffff92] p-3 rounded-[40px] lg:bg-none text-gray-700 font-extrabold text-5xl w-fit lg:w-[47vw]">
+                    <h1 className="text-gray-800 dark:text-white font-medium text-3xl w-[50vw]">Layanan Pendirian</h1>
+                    <h1 className="mt-3 bg-[#ffffff92] dark:bg-transparent dark:p-0 p-3 rounded-[40px] lg:bg-none text-gray-700 font-extrabold text-5xl w-fit lg:w-[47vw]">
                         <span className="bg-pink-400 rounded-xl text-transparent bg-clip-text"> Yayasan |</span>
                         <span className="bg-blue-400 rounded-xl text-transparent bg-clip-text"> Perkumpulan -</span>
                         <span className="bg-blue-400 rounded-xl text-transparent bg-clip-text"> Asosiasi |</span>

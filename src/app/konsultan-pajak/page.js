@@ -1,8 +1,13 @@
-import fs from 'fs'
-import socmed from '../../public/BG/tax.png';
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk';
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPagePajak, taxConsultingFAQ, whyTaxConsultant } from '../../../public/Data/PajakData';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { ReusableCards } from '@/components/ReusableCards';
+import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
 
 export const metadata = {
     title: "Konsultan Pajak - Ganesha Consulting",
@@ -49,27 +54,53 @@ export const metadata = {
 
 
 export default async function KonsultanPajakPage() {
-    const main = "Pajak";
-    const other = "";
-    const other2 = "Konsultan";
-    const secondary =
-        "Optimalkan struktur pajak perusahaan Anda dengan bantuan Konsultan Pajak kami. Solusi efisien untuk mengelola kewajiban pajak dan memastikan kepatuhan peraturan.";
-    let rawData = await fs.promises.readFile('public/JSON/Pajak.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
-
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-[#84534C]'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-[#F2E6DD]'
-                styleR='bg-[#F2E6DD]'
-                href1='#packages' />
-            <ExtrasCard data={data} accent1={'bg-[#84534C]'} accent2={'bg-[#F2E6DD]'} />
+            <BannerService />
+            <ReusableCards
+                data={pelaporanSPT}
+                label={'Paket Pelaporan SPT'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMDN}
+                label={'Paket Konsultan Pajak PMDN'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={konsultanPajakPMA}
+                label={'Paket Konsultan Pajak PMA'}
+                scrollToLg={40}
+                scrollToMd={40}
+                scrollToSm={20}
+            />
+            <ReusableCards
+                data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
+                label={'Paket Pajak Daerah & Brevet'}
+                scrollToLg={55}
+                scrollToMd={55}
+                scrollToSm={20}
+            />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Konsultasi Pajak?'}
+                desc={dataPagePajak.what.desc}
+            />
+            <WhyLegal
+                data={whyTaxConsultant}
+                text1={'Mengapa'}
+                text={'Konsultan Pajak Diperlukan?'}
+            />
+            <CopyWriting data={dataPagePajak.copywriting} />
+            <Faqs
+                text={'FAQs'}
+                data={taxConsultingFAQ}
+            />
+            <RWhyUs />
         </>
     );
 }

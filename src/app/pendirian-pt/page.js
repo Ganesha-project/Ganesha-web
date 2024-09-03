@@ -1,0 +1,50 @@
+
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { ReusableCards } from '@/components/ReusableCards';
+import { BannerService } from "@/components/ServicesComponent/BannerService";
+import { ExtrasPackages, PMAPackages, PTPackages } from '../../../public/DB/PTPackages';
+import { Benefit } from '@/components/LegalComponents/Benefit';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { ClientPhotos } from '@/components/ClientPhotos';
+import { DataPageLegal } from '../Database';
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { Laws } from '@/components/LegalComponents/Laws';
+
+export default function PendirianPtPage() {
+    return (
+        <>
+            <BannerService />
+            <ReusableCards
+                data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
+                label={'Paket Pendirian PT'}
+                scrollToLg={25}
+            />
+            <Benefit
+                data={DataPageLegal.benefit}
+                opening={'Benefit'}
+                title={'Dari Pendirian PT di Ganesha Consulting'}
+            />
+            <ClientPhotos />
+            <WhyLegal
+                data={DataPageLegal.whyLegal}
+                text1={'Mengapa'}
+                text={'Legalitas Usaha diperlukan?'}
+            />
+            <Explanation
+                text={'Apa itu PT?'}
+                desc={DataPageLegal.whatPt.desc}
+            />
+            <Laws
+                data={DataPageLegal.legalTexts}
+                text={'Terkait PT di Indonesia'}
+                text1={'Undang - Undang'}
+            />
+            <Faqs
+                text={'FAQs'}
+                data={DataPageLegal.faqData}
+            />
+            <RWhyUs />
+        </>
+    )
+}

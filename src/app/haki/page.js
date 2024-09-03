@@ -1,8 +1,12 @@
-import fs from 'fs'
-import socmed from '../../public/BG/patent.jpg';
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk';
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+import { KindOfService } from '@/components/PartnerComponents/KindOfService';
+import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPageHaki, HakiFAQ, HakiTypes, whyHaki } from '../../../public/Data/HakiData';
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { HakiPackages } from '../../../public/DB/HakiPackages';
+import { ReusableCards } from '@/components/ReusableCards';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 
 export const metadata = {
     title: "HAKI | Hak Kekayaan Intelektual - Ganesha Consulting",
@@ -49,27 +53,34 @@ export const metadata = {
 
 
 export default async function HakiPage() {
-    const main = "HAKI";
-    const other = "| Hak Kekayaan Intelektual";
-    const other2 = "";
-    const secondary =
-        "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami, memberikan keunggulan kompetitif.";
-    let rawData = await fs.promises.readFile('public/JSON/HAKI.json', 'utf-8');
-    let data = JSON.parse(rawData);
 
     return (
         <>
-
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-[#E43B3B]'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-[#FFECD5]'
-                styleR='bg-[#FFECD5]'
-                href1='#packages' />
-            <ExtrasCard data={data} accent1={'bg-[#E43B3B]'} accent2={'bg-[#FFECD5]'} />
+            <BannerService />
+            <ReusableCards
+                data={HakiPackages}
+                label={'Paket HAKI'}
+            />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Hak Kekayaan Intelektual (HAKI)?'}
+                desc={dataPageHaki.what.desc}
+            />
+            <KindOfService
+                data={HakiTypes}
+                text1={'Jenis - jenis'}
+                text={'Hak Kekayaan Intelektual (HAKI)'}
+            />
+            <WhyLegal
+                data={whyHaki}
+                text1={'Mengapa'}
+                text={'Perusahaan membutuhkan HAKI?'}
+            />
+            <Faqs
+                text={'FAQs'}
+                data={HakiFAQ}
+            />
+            <RWhyUs />
         </>
     );
 }

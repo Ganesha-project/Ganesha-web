@@ -15,16 +15,17 @@ export const Footer = () => {
         <>
             <>
                 {/* Footer container */}
-                <footer className="bg-neutral-100 text-center text-neutral-600 lg:text-left">
+                <footer className="bg-white 2xl:px-80 dark:bg-black text-center text-neutral-600 dark:text-gray-100 lg:text-left !z-50">
                     {/* Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. */}
                     <div className="mx-6 pt-8 text-center md:text-left">
                         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                             {/* TW elements section */}
-                            <div className="bg-slate-200 p-5 rounded-[40px]">
+                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
                                 <h6 className="mb-4 gap-2 flex items-center justify-center font-semibold uppercase md:justify-start">
                                     <span className='flex justify-center items-center'><TbBuildingBank /></span>
                                     PT Ganesha Multi Kreatif
                                 </h6>
+
                                 <p className="">
                                     Menara Cakrawala 12th Floor Unit 5A, Jalan M.H. Thamrin,
                                     Desa/Kelurahan Kebon Sirih, Kec. Menteng, Kota Adm. Jakarta Pusat, Provinsi DKI Jakarta,
@@ -32,76 +33,64 @@ export const Footer = () => {
                                 </p>
                             </div>
                             {/* Products section */}
-                            <div className="bg-slate-200 p-5 rounded-[40px]">
+                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
                                 <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                     Produk Dan Jasa
                                 </h6>
                                 <p className="mb-4">
-                                    <a href="/all-products/sosmed" className="text-neutral-600">
+                                    <a href="/all-products/sosmed" className="text-neutral-600 dark:text-gray-100">
                                         Social Media Management
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href="/all-products/web" className="text-neutral-600">
+                                    <a href="/all-products/web" className="text-neutral-600 dark:text-gray-100">
                                         Website Development
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href="/all-products/legalitas" className="text-neutral-600">
+                                    <a href="/all-products/legalitas" className="text-neutral-600 dark:text-gray-100">
                                         Legalitas Bisnis
                                     </a>
                                 </p>
                                 <p>
-                                    <a href="all-products/legalitas/badan-usaha" className="text-neutral-600">
+                                    <a href="all-products/legalitas/badan-usaha" className="text-neutral-600 dark:text-gray-100">
                                         Badan Usaha Lainnya
                                     </a>
                                 </p>
                             </div>
                             {/* Useful links section */}
-                            <div className="bg-slate-200 p-5 rounded-[40px]">
+                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
                                 <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                     Social Media Kami
                                 </h6>
                                 <p className="mb-4">
-                                    <a href={igLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
+                                    <a href={igLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
                                         <span className='flex justify-center items-center'><FaInstagram /></span>Instagram
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href={fbLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
+                                    <a href={fbLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
                                         <span className='flex justify-center items-center'><FaFacebook /></span>Facebook
                                     </a>
                                 </p>
                                 <p className="mb-4">
-                                    <a href={linkedin} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
+                                    <a href={linkedin} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
                                         <span className='flex justify-center items-center'><FaLinkedin /></span>LinkedIn
                                     </a>
                                 </p>
                                 <p>
-                                    <a href={waLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600">
+                                    <a href={waLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
                                         <span className='flex justify-center items-center'><FaWhatsapp /></span>WhatsApp
                                     </a>
                                 </p>
                             </div>
                             {/* Contact section */}
-                            <div className='bg-slate-200 p-5 rounded-[40px]'>
+                            <div className='bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px] overflow-hidden'>
                                 <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                                     Contact
                                 </h6>
-                                {/* <p className="mb-4 flex items-center justify-center md:justify-start">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        className="mr-3 h-5 w-5"
-                                    >
-                                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-                                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
-                                    </svg>
-                                    New York, NY 10012, US
-                                </p> */}
                                 <p className="mb-4 gap-2 flex items-center justify-center md:justify-start">
-                                    <span className='flex justify-center items-center'><TbMailFilled /></span>
+                                    <span className='flex justify-center items-center tr'><TbMailFilled /></span>
                                     ganeshamultikreatif@gmail.com
                                 </p>
                                 <p className="mb-4 gap-2 flex items-center justify-center md:justify-start">
@@ -112,7 +101,7 @@ export const Footer = () => {
                                 <div className="text-right object-right flex justify-center lg:justify-end">
                                     <div className="bg-[#772a7d31] w-full flex justify-center lg:w-fit p-5 rounded-[40px]">
                                         <a
-                                            className="font-semibold text-neutral-600 "
+                                            className="font-semibold text-neutral-600 dark:text-gray-100 "
                                             href="/"
                                         >
                                             <span className=''>
@@ -144,11 +133,11 @@ export const Footer = () => {
                     </div>
                     {/*Copyright section*/}
 
-                    <div className="bg-neutral-100 p-6 text-right object-right flex justify-center lg:justify-center">
-                        <div className="bg-slate-200 w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
+                    <div className="bg-neutral-10 dark:bg-black p-6 text-right object-right flex justify-center lg:justify-center">
+                        <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
                             <span>© 2024 Copyright:{' '}</span>
                             <a
-                                className="font-semibold text-neutral-600"
+                                className="font-semibold text-neutral-600 dark:text-gray-100"
                                 href="/"
                             >
                                  Ganesha Consulting

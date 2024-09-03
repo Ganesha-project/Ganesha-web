@@ -1,3 +1,7 @@
+import Image from "next/image";
+import { Title } from "../Title";
+import { DataPageLegal } from "@/app/Database";
+
 export const metadata = {
     title: "Pengertian PT dan Undang-Undang Terkait - Ganesha Consulting",
     description: "Pelajari pengertian Perseroan Terbatas (PT) dan undang-undang terkait di Indonesia. Temukan informasi penting tentang pendirian, pengelolaan, dan persyaratan PT.",
@@ -44,65 +48,21 @@ export const metadata = {
 export const BodyPT = () => {
     return (
         <>
-            <div className="m-10 md:m-32">
-                <div className="gap-5 flex flex-col md:flex-row">
-                    <h1 className="text-center lg:text-right w-fit text-4xl md:text-5xl md:w-[50vw] h-auto font-bold bg-cyan-200 p-5 md:p-10 lg:self-end rounded-[40px]">Pengertian <span className="bg-cyan-500 text-transparent bg-clip-text"> PT</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl leading-7 tracking-wide bg-cyan-200 p-5 md:p-10 rounded-[40px]">
-                        PT adalah singkatan dari <span className="font-bold">"Perseroan Terbatas”</span> yaitu
-                        bentuk badan hukum yang diterapkan pada perusahaan di Indonesia.
-                        Dengan status hukum terpisah, PT memungkinkan pemiliknya memiliki
-                        tanggung jawab terbatas sesuai dengan modal.
-                        PT memiliki aturan hukum dan persyaratan tertentu yang diatur
-                        oleh Undang-Undang Perseroan Terbatas di Indonesia.
-                    </p>
+            <section className="md:mx-24 mx-5 space-y-10 md:py-20 py-10">
+                <Title text1={'Undang - undang'} text={'Terkait PT di Indonesia'} />
+                <div className="md:grid md:grid-cols-2 flex flex-col gap-5">
+                    {DataPageLegal.legalTexts.map((el, idx) => (
+                        <div key={idx} className="space-y-10 p-10 rounded-3xl dark:from-darkColor dark:to-transparent bg-gradient-to-b from-gray-200 to-transparent duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow">
+                            <div className="h-14 w-14 bg-gradient-to-bl dark:from-darkColor dark:to-sky-600 from-gray-200 to-sky-300 rounded-full flex items-center justify-center text-2xl md:text-4xl">
+                                {el.number}
+                            </div>
+                            <h1 className="font-medium">
+                                {el.text}
+                            </h1>
+                        </div>
+                    ))}
                 </div>
-            </div>
-
-            <div className="my-10 md:my-32">
-                <div className="m-8 md:m-32 rounded-[40px] bg-cyan-200 h-fit w-auto">
-                    <div className="">
-                        <p className=" bg-cyan-500 text-white rounded-[40px] uppercase text-4xl md:text-4xl font-bold p-5 text-center">Undang - Undang terkait PT di Indonesia</p>
-                    </div>
-                    <div className="grid">
-                        <div className="flex mt-4 mx-5 gap-4">
-                            <p className="self-start align-top text-center rounded-full flex items-center bg-clip-text text-transparent bg-cyan-700 p-1 text-xl font-bold">
-                                1.
-                            </p>
-                            <p className="font-medium text-xl md:text-2xl text-justify">
-                                Undang-Undang No. 40 Tahun 2007 tentang Perseroan Terbatas: Undang-undang ini menyediakan kerangka hukum untuk pendirian, pengelolaan, dan pembubaran PT. Regulasi ini mencakup persyaratan minimum, hak dan kewajiban pemegang saham, serta ketentuan-ketentuan lain yang berkaitan dengan PT.
-                            </p>
-                        </div>
-                        <div className="flex mt-4 mx-5 gap-4">
-                            <p className="self-start text-center rounded-full flex items-center align-middle bg-clip-text text-transparent bg-cyan-700 p-1 text-xl font-bold">
-                                2.
-                            </p>
-                            <p className="font-medium text-xl md:text-2xl text-justify">
-                                Peraturan Pemerintah No. 27 Tahun 2018 tentang Pendaftaran Perusahaan: Menetapkan persyaratan dan prosedur pendaftaran perusahaan, termasuk PT, serta proses perubahan data perusahaan.
-                            </p>
-                        </div>
-                        <div className="flex mt-4 mx-5 gap-4">
-                            <p className="self-start text-center rounded-full flex items-center align-middle bg-clip-text text-transparent bg-cyan-700 p-1 text-xl font-bold">
-                                3.
-                            </p>
-                            <p className="font-medium text-xl md:text-2xl text-justify">
-                                Peraturan Pemerintah No. 29 Tahun 2016 tentang Pekerja Asing: Menetapkan aturan terkait penggunaan pekerja asing di perusahaan, termasuk PT.
-                            </p>
-                        </div>
-                        <div className="flex mt-4 mx-5 gap-4">
-                            <p className="self-start text-center rounded-full flex items-center align-middle bg-clip-text text-transparent bg-cyan-700 p-1 text-xl font-bold">
-                                4.
-                            </p>
-                            <p className="font-medium text-xl md:text-2xl text-justify">
-                                Penting untuk selalu merujuk pada undang-undang terkait dan mendapatkan nasihat hukum untuk memahami secara menyeluruh dan akurat mengenai persyaratan dan regulasi PT.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="mt-4">
-                        <p className="bg-cyan-500 text-white rounded-[40px] uppercase text-xl md:text-4xl font-bold p-5 text-center">Penting untuk selalu merujuk pada undang-undang terkait dan mendapatkan nasihat hukum untuk memahami secara menyeluruh dan akurat mengenai persyaratan dan regulasi PT.</p>
-                    </div>
-                </div>
-            </div>
+            </section>
 
         </>
     )

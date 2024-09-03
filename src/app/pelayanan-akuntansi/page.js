@@ -1,8 +1,12 @@
-import fs from 'fs'
-import socmed from '../../public/BG/accounting.jpg';
-import { BannerText } from '@/components/BannerText';
-import { ImgProduk } from '@/components/ImgProduk';
-import { ExtrasCard } from '@/components/ReusableComponents/ExtrasCard';
+import { Explanation } from '@/components/LegalComponents/Explanation';
+import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { dataPageAccounting, faqAccounting, whyAccounting } from '../../../public/Data/AccountingData';
+import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
+import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
+import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { Faqs } from '@/components/LegalComponents/Faqs';
+import { ReusableCards } from '@/components/ReusableCards';
+import { AccountantPackages } from '../../../public/DB/AccountantPackages';
 
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
@@ -47,30 +51,33 @@ export const metadata = {
     }
 };
 
-
 export default async function PelayananAkuntansi() {
-    const main = "Akuntansi";
-    const other = "";
-    const other2 = "Pelayanan";
-    const secondary =
-        "Dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat.";
-    let rawData = await fs.promises.readFile('public/JSON/Manajemen.json', 'utf-8');
-    let data = JSON.parse(rawData);
-
     return (
         <>
-
-            <ImgProduk socmed={socmed} styles='bg-sky-300' stylesImg="translate-y-[7%]" />
-            <BannerText
-                other={other} other2={other2} main={main} secondary={secondary}
-                styles='bg-[#019C85]'
-                btn1='Lebih Lanjut'
-                btn2='Konsultasi Sekarang'
-                styleL='bg-[#A4F5EC]'
-                styleR='bg-[#A4F5EC]'
-                href1='#packages' />
-            <ExtrasCard data={data} accent1={'bg-[#019C85]'} accent2={'bg-[#A4F5EC]'} />
+            <BannerService />
+            <ReusableCards  
+                data={AccountantPackages}
+                label={'Paket Pelayanan Akuntansi'}
+                scrollToLg={13}
+                scrollToMd={13}
+                scrollToSm={4.5}
+            />
+            <Explanation
+                text1={'Apa itu'}
+                text={'Accounting?'}
+                desc={dataPageAccounting.what.desc}
+            />
+            <WhyLegal
+                data={whyAccounting}
+                text1={'Kenapa'}
+                text={'Accounting Penting untuk Bisnis Anda?'}
+            />
+            <CopyWriting data={dataPageAccounting.copywriting}/>
+            <Faqs
+                text={'FAQs'}
+                data={faqAccounting}
+            />
+            <RWhyUs/>
         </>
     );
 }
-

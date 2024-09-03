@@ -1,49 +1,39 @@
-import { BodyLanding } from "@/components/BodyLanding";
-import { ImgProduk } from "@/components/ImgProduk";
-import { BannerText } from "@/components/BannerText";
-import home from "../public/BG/block.png"
-import { LegalityApprove } from "@/components/LeagalityApprove";
-import { VoCarousel } from "@/components/VoCarousel";
-import { VisiMisi } from "@/components/VisiMisi";
-import { OurClient } from "@/components/OurClient";
-
-export const metadata = {
-  title: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  description: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-  keywords: 'Ganesha Consulting, solusi bisnis, pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, perizinan',
-  hashtags: '#GaneshaConsulting #SolusiBisnis #PengembanganWebsite #ManajemenMediaSosial #LegalitasUsaha #DesainGrafis #Perpajakan #Perizinan #web #webdeveloper #desaingrafis #jasadesain #desainlogo #pembuatanwebsite #socialmedia #socialmediamarketing #socialmediamanagement #socialmediamarketingagency #ecommerce #jasa #jasalegalitas #perpajakan #jasapajak #pajak #jasapembuatanpt #jasalegalitasindonesia #jasapembuatanptdijakarta #jasapembuatanptjakarta #jasapembuatancv #jasapembuatancvmurah #jasapembuatancvmurah #virtualoffice #virtualofficejakarta #coworkingspace #coworking',
-  canonical: 'https://www.ganeshaconsulting.co.id',
-  ogTitle: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  ogDescription: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-  twitterTitle: 'Ganesha Consulting - Solusi Bisnis All-in-One',
-  twitterDescription: 'Ganesha Consulting menyediakan solusi all-in-one untuk bisnis Anda, termasuk pengembangan website, manajemen media sosial, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya.',
-};
+'use client';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchArticles } from '@/store/articleSlice';
+import { HomeBanner } from "@/components/HomeBanner";
+import { AllServicesBtn } from "@/components/AllServicesBtn";
+import { ClientPhotos } from "@/components/ClientPhotos";
+import { ClientLogo } from "@/components/ClientLogo";
+import { WhyUs } from "@/components/WhyUs";
+import { ArticleReccomendation } from "@/components/ArticleComponent/ArticleReccomendation";
+import { DataArticles } from "./Database";
+import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomendation';
 
 
 export default function Home() {
-  const other = ""
-  const other2 = "Sinergi Layanan Bisnis"
-  const main = "Multifungsi"
-  const secondary = "  Kami menyediakan solusi all-in-one untuk bisnis anda, mulai dari pengembangan website, sosial media manajemen, legalitas usaha, desain grafis, perpajakan, dan perizinan lainnya."
+  const dispatch = useDispatch();
+  const { articles, loading, error } = useSelector((state) => state.articles);
+
+  useEffect(() => {
+    dispatch(fetchArticles(6));
+  }, [dispatch]);
+
   return (
     <>
-      <ImgProduk socmed={home} styles='bg-white mt-[0vh]' />
-      <BannerText
-        other2={other2}
-        main={main}
-        other={other}
-        secondary={secondary}
-        ganesha={'ganeshaconsulting.co.id'}
-        styles='bg-[#82498C] bg-clip-text text-transparent bg-opacity-100'
-        btn1='Lebih Lanjut'
-        styleL='bg-[#82498C] bg-opacity-30'
-        styleR='hidden'
-        href1='#product' />
-      <BodyLanding />
-      <VisiMisi />
-      <LegalityApprove />
-      <VoCarousel />
-      {/* <OurClient /> */}
+      <HomeBanner />
+      <AllServicesBtn />
+      <ClientPhotos />
+      <WhyUs />
+      <ClientLogo />
+      {error ? (
+        <div>Error: {error}</div>
+      ) : loading ? (
+        <SkeletonReccomendation />
+      ) : (
+        <ArticleReccomendation data={articles} />
+      )}
     </>
   );
 }

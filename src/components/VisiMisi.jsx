@@ -20,10 +20,10 @@ export const VisiMisi = () => {
                 <div className="flex justify-center lg:flex-row flex-col relative">
                     <Image
                         src={visi}
-                        className="w-full h-auto object-cover absolute"
+                        className="w-full h-auto object-cover absolute dark:invert saturate-150 dark:hue-rotate-180"
                     />
                     <div className="z-40 p-4 lg:p-10 lg:ml-[40vw] mt-[70vh] lg:mt-[15vw]">
-                        <div className="bg-[#d1afdb] rounded-[40px] backdrop-blur-[10px] p-4 lg:p-10">
+                        <div className="bg-[#d1afdb] rounded-[40px] backdrop-blur-[10px] p-4 lg:p-10 text-gray-900">
                             <h1 className="text-3xl lg:text-6xl font-extrabold">Visi Kami</h1>
                             <p className="text-lg lg:text-2xl font-medium mt-2 lg:mt-5">
                                 Menjadikan pusat kreativitas dan solusi bisnis terkemuka kepada klien untuk mencapai potensi penuh melalui desain inovatif, pengembangan website, konsultasi bisnis, Perpajakan dan layanan pengelolaan izin usaha yang handal.
@@ -33,8 +33,8 @@ export const VisiMisi = () => {
                 </div>
             </div>
 
-            <div class="m-8 md:m-32 justify-center">
-                <h1 className="text-3xl lg:text-6xl font-extrabold mb-5">
+            <div class="m-8 md:m-32 justify-center text-gray-900">
+                <h1 className="text-3xl lg:text-6xl font-extrabold mb-5 dark:text-white">
                     Misi Kami
                 </h1>
                 <div className="flex flex-col gap-3">

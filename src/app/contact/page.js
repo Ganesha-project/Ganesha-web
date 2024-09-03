@@ -1,8 +1,10 @@
-import fs from 'fs'
-import socmed from "../../public/BG/cs.jpg"
-import { ContactUsPage } from "@/components/ContactUsBanner";
-import { ImgProduk } from '@/components/ImgProduk';
 import { BodyContact } from "@/components/BodyContact";
+import { Form } from "@/components/ContactComponents/Form";
+import { Maps } from "@/components/ContactComponents/Maps";
+import { Faqs } from "@/components/LegalComponents/Faqs";
+import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { FaqMainData } from "../Database";
+import { FaInfoCircle } from "react-icons/fa";
 
 export const metadata = {
     title: "Hubungi Kami - Ganesha Consulting",
@@ -47,14 +49,41 @@ export const metadata = {
     }
 };
 
-
 export default async function ContactPage() {
 
     return (
         <>
-            <ImgProduk styles={'mt-[2vw]'} socmed={socmed} stylesImg={'h-[90vh] w-auto'} />
-            <ContactUsPage/>
+            <BannerService />
             <BodyContact />
+            <Maps />
+            <Form />
+            <Faqs
+                text={'FAQ Social Media Management'}
+                data={[...FaqMainData.Sosmed]} />
+            <Faqs
+                text={'FAQ Web Development'}
+                data={[...FaqMainData.Web]} />
+            <Faqs
+                text={'FAQ Accounting'}
+                data={[...FaqMainData.Accounting]} />
+            <Faqs
+                text={'FAQ Audit'}
+                data={[...FaqMainData.Audit]} />
+            <Faqs
+                text={'FAQ Badan Usaha'}
+                data={[...FaqMainData.BadanUsaha]} />
+            <Faqs
+                text={'FAQ HAKI'}
+                data={[...FaqMainData.Haki]} />
+            <Faqs
+                text={'FAQ Perpajakkan'}
+                data={[...FaqMainData.Pajak]} />
+            <Faqs
+                text={'FAQ Perizinan'}
+                data={[...FaqMainData.Perizinan]} />
+            <Faqs
+                text={'FAQ Software Management System'}
+                data={[...FaqMainData.Software]} />
         </>
     )
 }

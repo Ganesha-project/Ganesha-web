@@ -1,11 +1,17 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingButton } from "@/components/FloatingButton";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
+import ClientProvider from '@/components/ClientProvider';
+import Head from 'next/head';
 
-const inter = Inter({ subsets: ["latin"] });
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '700']
+});
 
 export const metadata = {
   title: {
@@ -15,29 +21,27 @@ export const metadata = {
   description: "Legalkan Bisnis Mu Bersama Kami!",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, pageProps }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      <Head>
         <link rel="icon" type="image/png" sizes="16x16" href="icon.png" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={inter.className}>
-        <section className="font-quicksand">
-          <Navbar />
-          <FloatingButton />
-          {children}
-          <Analytics />
-          <Footer />
-        </section>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js" async />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8227813889502050"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
+      <body className={`${quicksand.className}`}>
+        <ThemeProvider enableSystem={true} attribute='class'>
+          <ClientProvider>
+            <Navbar />
+            <FloatingButton />
+            {children}
+            <Analytics />
+            <Footer />
+          </ClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

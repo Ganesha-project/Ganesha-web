@@ -4,9 +4,9 @@ export const BannerText = ({ main, other, other2, secondary, styles, href1, href
         <>
             <div className="z-40 absolute top-[50%] md:top-[50%] lg:top-[50%] left-[35%] lg:left-[25%] md:left-[40%] ml-10 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="">
-                    <h1 className="text-gray-800 font-semibold text-xl md:text-xl lg:text-2xl md:w-[50vw]"><span className={`${styles} lg:text-clip text-transparent bg-clip-text`}>{ganesha}</span></h1>
-                    <h1 className="text-gray-800 font-extrabold text-6xl md:text-7xl lg:text-8xl md:w-[50vw]">{other2} <span className={`${styles} lg:text-clip text-transparent bg-clip-text rounded-3xl`}>{main}</span> {other}</h1>
-                    <h1 className="mt-3 text-gray-700 font-normal text-xl lg:text-xl md:w-[47vw]">{secondary}</h1>
+                    <h1 className="text-gray-800 dark:text-white font-semibold text-xl md:text-xl lg:text-2xl md:w-[50vw]"><span className={`${styles} lg:text-clip text-transparent bg-clip-text`}>{ganesha}</span></h1>
+                    <h1 className="text-gray-800 dark:text-white font-extrabold text-6xl md:text-7xl lg:text-8xl md:w-[50vw]">{other2} <span className={`${styles} lg:text-clip text-transparent bg-clip-text rounded-3xl`}>{main}</span> {other}</h1>
+                    <h1 className="mt-3 text-gray-700 dark:text-gray-200 font-normal text-xl lg:text-xl md:w-[47vw]">{secondary}</h1>
                     <div className="mt-4 flex flex-col md:flex-row gap-3">
                         <a
                             href={href1}

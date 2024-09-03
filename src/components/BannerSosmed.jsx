@@ -51,28 +51,37 @@ export const BannerSosmed = () => {
 
     return (
         <>
-
-            <div className="px-10 md:px-20 lg:px-36 py-10 md:py-16 lg:py-24">
-                <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
-                    <Image src={medsosPict} className="w-full order-1 md:w-[50%] h-auto md:h-[50vw] lg:h-auto object-cover" alt="medsos image" />
-                    <div className="mx-10 bg-violet-100 p-5 rounded-[40px] w-full md:w-[50%]">
-                        <h1 className="lg:mt-4 md:mt-0 text-gray-900 font-bold lg:text-right text-3xl md:text-6xl lg:text-7xl font-poppins">Apa itu Sosial Media Manajemen?</h1>
-                        <h1 className="mt-4 text-justify lg:text-justify text-gray-900 text-xl md:text-2xl lg:text-xl tracking-wide leading-relaxed">
+            <section className="md:mx-24 mx-5 md:py-20 py-10">
+                <div className="flex md:flex-row flex-col gap-5">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-[#f5eafa] transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                        <Image
+                            width={100}
+                            height={100}
+                            className="w-full h-auto object-cover"
+                            src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236550/GaneshaAssets/cp0gzma6qaoa9p3nfxcv.svg'}
+                            alt="image socmed"
+                        />
+                    </div>
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-fuchsia-200 to-white dark:from-fuchsia-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                        <div className="flex flex-col justify-evenly text-2xl md:text-5xl font-bold w-full md:w-fit h-full rounded-md lg:text-left md:text-right tracking-wider">
+                            <p>
+                                Apa itu
+                            </p>
+                            <p className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-violet-500 dark:to-violet-300 bg-clip-text text-transparent">
+                                Social Media
+                            </p>
+                            <p>
+                                Management
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                        <p className="flex items-center justify-center text-justify text-xl leading-relaxed tracking-wide md:text-justify h-full bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-fuchsia-800 dark:to-fuchsia-300 bg-clip-text text-transparent">
                             Sosial Media Manajemen adalah proses pengelolaan dan pengelolaan aktivitas serta konten di platform media sosial untuk mencapai tujuan tertentu, seperti membangun merek, meningkatkan visibilitas, atau berinteraksi dengan audiens.
-                        </h1>
+                        </p>
                     </div>
                 </div>
-            </div>
-
-            <div className="m-10 lg:m-32 md:m-10 flex flex-wrap gap-5 md:gap-7 justify-center">
-                <p className="bg-violet-100 p-5 rounded-[40px] text-3xl lg:text-5xl lg:leading-normal font-bold lg:w-[70vw] text-left capitalize">Apasih Kelebihan Social Media Management Di <span className='bg-violet-800 bg-clip-text text-transparent font-extrabold '>Ganesha Consulting</span>?</p>
-                <div className="flex justify-center items-center flex-row gap-3 w-fit h-auto lg:w-full lg:h-auto p-4 md:p-6 bg-violet-600 rounded-[40px] hover:bg-violet-500">
-                    <h5 className="mb-2 text-xl md:text-2xl font-medium text-justify tracking-tight text-white">
-                        Karena kami berkomitmen untuk memberikan pelayanan Social Media yang terbaik, ditangani oleh para tenaga professional dengan memberikan strategi yang kreatif, inovatif, serta menyediakan konten-konten yang Up to Date!
-                    </h5>
-                </div>
-            </div>
-
+            </section>
         </>
     )
 }
