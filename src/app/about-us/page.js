@@ -25,7 +25,7 @@ export default function AboutUs() {
             <About />
             <VM />
             <WhyUs />
-            <Support />
+            {/* <Support /> */}
         </>
     );
 }
