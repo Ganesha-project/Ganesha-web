@@ -7,9 +7,9 @@ import { Benefit } from '@/components/LegalComponents/Benefit';
 import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { Faqs } from '@/components/LegalComponents/Faqs';
 import { ClientPhotos } from '@/components/ClientPhotos';
-import { DataPageLegal } from '../Database';
 import { Explanation } from '@/components/LegalComponents/Explanation';
 import { Laws } from '@/components/LegalComponents/Laws';
+import { DataPageLegal } from '../../../public/Data/LegalitasData';
 
 export default function PendirianPtPage() {
     return (

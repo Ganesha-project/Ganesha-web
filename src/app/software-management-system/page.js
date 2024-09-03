@@ -2,9 +2,9 @@
 import { Explanation } from '@/components/LegalComponents/Explanation';
 import { BannerService } from '@/components/ServicesComponent/BannerService';
 import { dataPageSMS, faqsSMS, reasonsCompaniesNeedSMS, softwareManagementSystems } from '../../../public/Data/SMSData';
-import { KindOfService } from '@/components/PartnerComponents/KindofService';
 import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { Faqs } from '@/components/LegalComponents/Faqs';
+import { KindOfService } from '@/components/PartnerComponents/KindOfService';
 
 export const metadata = {
     title: "Software Management System - Ganesha Consulting",

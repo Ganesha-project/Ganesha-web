@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image';
-import { DataReview } from '@/app/Database';
 import { FaQuoteRight } from 'react-icons/fa6';
 import { Title } from './Title';
 import { useState } from 'react';
