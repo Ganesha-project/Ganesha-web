@@ -1,5 +1,13 @@
 export const ClientsReview = [
     {
+        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/qatjte1cixr8epyeo34t.webp',
+        clientLogo: '',
+        clientName: '',
+        ptName: '',
+        review: '',
+        service: ''
+    },
+    {
         clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ztne5enfp7y6paomxi5p.webp',
         clientLogo: '',
         clientName: '',
@@ -9,14 +17,6 @@ export const ClientsReview = [
     },
     {
         clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/xet7za6udlkyp1il2aju.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
-    {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/qatjte1cixr8epyeo34t.webp',
         clientLogo: '',
         clientName: '',
         ptName: '',
