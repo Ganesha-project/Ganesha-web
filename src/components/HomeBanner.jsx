@@ -32,16 +32,16 @@ export const HomeBanner = () => {
                             <div className="flex flex-col justify-between py-5 gap-5">
                                 <h1 className="text-4xl font-[500] tracking-[1px] capitalize relative py-5">
                                     <span className="text-rose-400">
-                                        no ribet!
+                                       one
                                     </span> <br />
                                     <span className="textsec darl:text-baseColor">
-                                        transparan <br />
+                                        stop <br />
                                     </span>
                                     <span className="text-teal-500">
-                                        Pasti cepat <br />
+                                        solutions <br />
                                     </span>
                                     <span className="text-amber-500 dark:text-amber-200">
-                                        Proses terpercaya <br />
+                                        for your buisness <br />
                                     </span>
                                     <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
                                 </h1>
@@ -58,9 +58,9 @@ export const HomeBanner = () => {
                                 <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 dark:bg-secondaryColor bg-mainColor bg-opacity-80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     <FiSearch className="text-xl" />
                                 </span>
-                                <buttospann className="py-2 w-fit flex items-center gap-1 bg-mainColor dark:bg-secondaryColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
+                                <button className="py-2 w-fit flex items-center gap-1 bg-mainColor dark:bg-secondaryColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     Cari Layanan
-                                </buttospann>
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -109,16 +109,16 @@ export const HomeBanner = () => {
                         <div className="flex flex-col justify-between py-5 gap-5 mx-5">
                             <h1 className="text-xl font-[500] tracking-[1px] capitalize relative py-5">
                                 <span className="text-rose-200">
-                                    no ribet!
+                                    one
                                 </span> <br />
                                 <span className="text-white">
-                                    transparan <br />
+                                    stop <br />
                                 </span>
                                 <span className="text-green-200">
-                                    Pasti cepat <br />
+                                    solutions <br />
                                 </span>
                                 <span className="text-white">
-                                    Proses terpercaya <br />
+                                    for your buisnes <br />
                                 </span>
                                 <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
                             </h1>
@@ -130,14 +130,14 @@ export const HomeBanner = () => {
                             <h1 className="text-xl font-[600] text-violet-100 capitalize">
                                 percayakan pada ganesha consulting!
                             </h1>
-                            <div className="flex gap-2">
+                            <a className="flex gap-2" href="#search">
                                 <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 bg-mainColor bg-opacity-80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     <FiSearch className="text-xl" />
                                 </span>
                                 <buttospann className="py-2 w-fit flex items-center gap-1 bg-mainColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     Cari Layanan
                                 </buttospann>
-                            </div>
+                            </a>
                         </div>
                         <span className="absolute bottom-[10px] left-[-100px] mt-auto w-[50lvh] blur-[200px] h-[50lvh] bg-white rounded-full -z-10"></span>
                     </div>
