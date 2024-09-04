@@ -79,7 +79,7 @@ export const HomeBanner = () => {
                                 />
                             ))}
                         </div>
-                        <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-l from-transparent to-[#ffffff] dark:to-black w-[80%] group-hover:w-[100%] group-hover:backdrop-blur-xl duration-300 ease-in-out">
+                        <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-l from-transparent to-[#ffffff] dark:to-black w-[80%] group-hover:w-[100%] group-hover:backdrop-blur-[3px] duration-300 ease-in-out">
                             <p className="dark:text-white text-gray-900 opacity-0 group-hover:opacity-100 ease-in-out duration-300 font-semibold text-2xl">
                                 Our Clients
                             </p>

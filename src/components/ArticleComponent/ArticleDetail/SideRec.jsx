@@ -22,7 +22,7 @@ export const SideRec = ({ data }) => {
                                 <div className="space-y-1 flex  flex-row gap-4 w-full h-full">
                                     <div className="overflow-hidden rounded-xl max-w-[15lvh] min-w-[15lvh]">
                                         <img
-                                            className="w-full h-full object-cover rounded-xl group-hover:scale-125 duration-150"
+                                            className="w-full h-full object-cover rounded-xl group-hover:scale-125 duration-150 bg-baseColor"
                                             width={500}
                                             height={500}
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}

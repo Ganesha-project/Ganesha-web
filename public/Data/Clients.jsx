@@ -80,7 +80,7 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725013466/GaneshaAssets/ClientsPhoto/zx8cjkikqndo8ktywov1.webp',
+        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725420145/GaneshaAssets/ClientsPhoto/rrc8jzexag9s2hba19uy.webp',
         clientLogo: '',
         clientName: '',
         ptName: '',

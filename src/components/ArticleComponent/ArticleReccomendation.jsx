@@ -7,17 +7,17 @@ export const ArticleReccomendation = ({ data }) => {
         <>
             <section className="md:px-24 space-y-5 py-24 flex flex-col justify-center items-center">
                 <Title text={'Read Our Articles'} />
-                <div className="md:flex md:flex-row carousel md:flex-wrap gap-5 md:items-center md:justify-center ">
+                <div className="flex md:flex-row flex-col md:flex-wrap gap-5 md:items-center md:justify-center ">
                     {data?.data?.map((el, idx) => (
                         <a
                             href={'/article/' + el.attributes.Slug}
                             key={idx}
-                            className={`md:w-[30%] carousel-item relative hover:scale-95 duration-300 ease-in-out rounded-3xl ${idx === 0 ? 'pl-5 md:pl-0' : ''} ${idx === 5 ? 'mr-5 md:mr-0' : ''}`}
+                            className={`md:w-[30%] carousel-item relative hover:scale-95 duration-300 ease-in-out rounded-3xl`}
                         >
                             <img
                                 width={500}
                                 height={500} 
-                                className="md:w-full w-[70lvw] h-[40lvh] md:h-[25lvw] object-cover rounded-3xl"
+                                className="md:w-full w-[70lvw] h-[40lvh] md:h-[25lvw] object-cover rounded-3xl bg-baseColor"
                                 src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                 alt={el?.attributes?.Title}
                             />
