@@ -8,7 +8,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { dataClientSocmed } from "../../../public/Data/SocmedData";
 
-export const SocmedWork = () => {
+export const SocmedWork = ({text1, text}) => {
     let data = dataClientSocmed
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
@@ -46,7 +46,7 @@ export const SocmedWork = () => {
     return (
         <>
             <section className="md:py-20 bg-gray-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
-                <Title className={'md:mx-24 mx-5'} text1={"Explore"} text={'Our Works'} />
+                <Title className={'md:mx-24 mx-5'} text1={text1 || "Explore"} text={text || 'Our Works'} />
                 <div className="carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"

@@ -7,7 +7,7 @@ import { dataClientWeb } from "../../../public/Data/WebData"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-export const WebWork = () => {
+export const WebWork = ({text1, text}) => {
     let data = dataClientWeb
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
@@ -45,7 +45,7 @@ export const WebWork = () => {
     return (
         <>
             <section className="bg-gray-100 dark:bg-darkColor md:py-20 py-10 md:my-10 my-5">
-                <Title className={'md:mx-24 mx-5'} text1={"Explore"} text={'Our Works'} />
+                <Title className={'md:mx-24 mx-5'} text1={"Explore" || text1} text={text || "Our Works"} />
                 <div className="relative carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"

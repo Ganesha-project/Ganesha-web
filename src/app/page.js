@@ -26,8 +26,8 @@ export default function Home() {
       <HomeBanner />
       <AllServicesBtn />
       <ClientPhotos />
-      <WebWork />
-      <SocmedWork />
+      <WebWork text={'Our Websites Work'} />
+      <SocmedWork text={'Our Social Media Work'} />
       <WhyUs />
       <ClientLogo />
       {error ? (
