@@ -215,12 +215,4 @@ export const dataClientSocmed = [
         link: "https://www.instagram.com/savierjasmine88?igsh=dmR4ajA4dmFtNms1",
         package: "Paket Botlane"
     },
-    {
-        preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724316792/GaneshaAssets/SocmedSS/pfm5thpodb5xpquy5rqm.webp",
-        preview2: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724316794/GaneshaAssets/SocmedSS/n1pe4rai9rjsq7ahwmfe.webp",
-        brandName: "Teman Bumi Niaga",
-        name: "@temanbuminiaga.co.id",
-        link: "https://www.instagram.com/temanbuminiaga.co.id?igsh=eDV5MmQ5bTNuNWpl",
-        package: "Paket Botlane"
-    },
 ]
