@@ -6,10 +6,9 @@ import { useEffect, useState } from "react";
 import { dataClientWeb } from "../../../public/Data/WebData"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { dataClientSocmed } from "../../../public/Data/SocmedData";
 
-export const Clients = () => {
-    let data = dataClientSocmed
+export const WebWork = () => {
+    let data = dataClientWeb
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
     const [scrollTo, setScrollto] = useState(10);
@@ -45,9 +44,9 @@ export const Clients = () => {
     };
     return (
         <>
-            <section className="md:py-20 bg-gray-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
+            <section className="bg-gray-100 dark:bg-darkColor md:py-20 py-10 md:my-10 my-5">
                 <Title className={'md:mx-24 mx-5'} text1={"Explore"} text={'Our Works'} />
-                <div className="carousel w-[100%]">
+                <div className="relative carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
                         style={{ transform: `translateX(-${currentIndex * (scrollTo / itemsToShow)}%)` }}
@@ -56,22 +55,14 @@ export const Clients = () => {
                             <Link
                                 key={idx}
                                 href={el.link}
-                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
+                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[40lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
                             >
-                                <div className="flex gap-2 w-full justify-between bg-white rounded-2xl">
-                                    <Image
-                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
-                                        width={75}
-                                        height={25}
-                                        src={el.preview}
-                                        alt={el.name} />
-                                    <Image
-                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
-                                        width={75}
-                                        height={25}
-                                        src={el.preview2}
-                                        alt={el.name} />
-                                </div>
+                                <Image
+                                    className="rounded-2xl w-full h-fit object-cover"
+                                    width={500}
+                                    height={500}
+                                    src={el.preview}
+                                    alt={el.name} />
                                 <div>
                                     <h1 className="text-2xl font-bold">
                                         {el.brandName ? el.brandName : el.name}
@@ -91,15 +82,15 @@ export const Clients = () => {
                         ))}
                     </div>
                 </div>
-
+  
                 <div className="block mx-5">
                     <div className={`flex justify-center w-full items-center gap-3`}>
-                        <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowBack className="text-2xl md:text-[2rem]" />
-                        </button>
-                        <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
-                            <IoIosArrowForward className="text-2xl md:text-[2rem]" />
-                        </button>
+                            <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowBack className="text-2xl md:text-[2rem]" />
+                            </button>
+                            <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <IoIosArrowForward className="text-2xl md:text-[2rem]" />
+                            </button>
                     </div>
                 </div>
             </section >

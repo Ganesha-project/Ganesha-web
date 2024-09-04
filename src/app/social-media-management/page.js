@@ -8,7 +8,7 @@ import { dataPageSocmed, faqSocialMediaManagement } from "../../../public/Data/S
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { Explanation } from "@/components/LegalComponents/Explanation";
 import { Faqs } from "@/components/LegalComponents/Faqs";
-import { Clients } from "@/components/SocmedComponents/Clients";
+import { SocmedWork } from "@/components/SocmedComponents/SocmedWork";
 
 export const metadata = {
     title: "Manajemen Sosial Media & Desain - Ganesha Consulting",
@@ -66,7 +66,7 @@ export default async function SosmedPage() {
                 buttonColor={'bg-violet-500'}
                 label={'Paket Social Media Management'}
             />
-            <Clients/>
+            <SocmedWork/>
             <Header
                 data={dataPageSocmed.contentData}
             />

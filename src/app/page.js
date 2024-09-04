@@ -9,6 +9,8 @@ import { ClientLogo } from "@/components/ClientLogo";
 import { WhyUs } from "@/components/WhyUs";
 import { ArticleReccomendation } from "@/components/ArticleComponent/ArticleReccomendation";
 import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomendation';
+import { WebWork } from '@/components/WebComponents/WebWork';
+import { SocmedWork } from '@/components/SocmedComponents/SocmedWork';
 
 
 export default function Home() {
@@ -24,6 +26,8 @@ export default function Home() {
       <HomeBanner />
       <AllServicesBtn />
       <ClientPhotos />
+      <WebWork />
+      <SocmedWork />
       <WhyUs />
       <ClientLogo />
       {error ? (

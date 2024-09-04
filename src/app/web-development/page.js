@@ -2,12 +2,12 @@ import { ReusableCards } from "@/components/ReusableCards";
 import { BannerService } from "@/components/ServicesComponent/BannerService";
 import { WebPackages } from "../../../public/DB/WebPackages";
 import { WebBody } from "@/components/WebComponents/WebBody";
-import { Clients } from "@/components/WebComponents/Clients";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { Benefit } from "@/components/LegalComponents/Benefit";
 import { BenefitWeb, dataPageWeb, FAQ } from "../../../public/Data/WebData";
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { Header } from "@/components/WebComponents/Header";
+import { WebWork } from "@/components/WebComponents/WebWork";
 
 export const metadata = {
     title: "Jasa Pembuatan Website - Ganesha Consulting",
@@ -52,7 +52,6 @@ export const metadata = {
     }
 };
 
-
 export default async function WebPage() {
     return (
         <>
@@ -64,7 +63,7 @@ export default async function WebPage() {
                 scrollToMd={40}
                 scrollToSm={17}
             />
-            <Clients />
+            <WebWork />
             <Header
                 data={dataPageWeb.contentData}
             />
