@@ -4,6 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaPlus } from "react-icons/fa6"
 import { Title } from "../Title"
 import { dataPageVO } from "../../../public/Data/VOData";
+import Image from "next/image";
 
 export const CardVO = () => {
     const data = dataPageVO.Location
@@ -70,10 +71,15 @@ export const CardVO = () => {
                                     </div>
                                     <div className="z-30 absolute bottom-0 left-0">
                                     </div>
-                                    <div className={`absolute right-5 bottom-5  ${idx === dataPageVO.Location.length - 1 ? 'right-28' : ''}`}>
+                                    <div className={`absolute !z-50 right-5 bottom-5  ${idx === dataPageVO.Location.length - 1 ? 'right-28' : ''}`}>
                                         <button className="h-10 w-10 flex items-center justify-center rounded-full dark:bg-black bg-white">
                                             <FaPlus className="dark:text-gray-100 text-gray-600 text-xl group-hover:rotate-90 duration-300 ease-in-out" />
                                         </button>
+                                    </div>
+                                    <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-2xl duration-300 ease-in-out">
+                                        <div className="group-hover:scale-100 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
+                                            Click Me!
+                                        </div>
                                     </div>
                                 </div>
                                 <dialog id={`modal-${idx}`} className="modal backdrop-blur-md py-5">
@@ -90,20 +96,14 @@ export const CardVO = () => {
                                                     All Views of Our Virtual Office
                                                 </h1>
                                             </div>
-                                            <div className="flex flex-col gap-10 w-full">
+                                            <div className="flex flex-col gap-10 w-full items-center justify-center">
                                                 {el.images.map(el => (
-                                                    <div className="relative overflow-hidden rounded-2xl shadow-mainShadow">
-                                                        <img
-                                                            className="z-50 rounded-2xl w-full h-auto max-h-screen object-contain"
-                                                            src={el}
-                                                            alt={el} />
-                                                        <img
-                                                            width={10}
-                                                            height={10}
-                                                            className="absolute inset-0 -z-10 rounded-2xl w-full h-auto max-h-screen object-cover brightness-105 blur-[100px]"
-                                                            src={el}
-                                                            alt={el} />
-                                                    </div>
+                                                    <Image
+                                                        width={500}
+                                                        height={500}
+                                                        className="z-50 max-h-screen rounded-2xl object-contain"
+                                                        src={el}
+                                                        alt={el} />
                                                 ))}
                                             </div>
                                         </section>
