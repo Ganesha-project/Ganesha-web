@@ -37,7 +37,7 @@ export const Navbar = () => {
         ${isScrolled && isExpanded !== true ? 'bg-[#ffffff70] dark:bg-[#00000070] backdrop-blur-lg shadow-mainShadow' : 'bg-transparent sm:bg-transparent lg:bg-transparent'}
         `}>
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl">
+          <a className="btn btn-ghost text-xl" href='/'>
             <Image src={Artboard2} width={40} height={40} alt="Ganesha Logo" />
           </a>
         </div>
@@ -55,7 +55,6 @@ export const Navbar = () => {
                 <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
-
             <MegaMenuNavbar
               title="Produk & Layanan"
               label={'Our Service Collections'}
@@ -70,7 +69,7 @@ export const Navbar = () => {
               isExpanded={isExpanded}
               setIsExpanded={setIsExpanded}
             />
-            {NavLinks.others.map(link => (
+            {NavLinks.others.slice(0, 3).map(link => (
               <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
                   href={link.href}
@@ -82,6 +81,7 @@ export const Navbar = () => {
                 <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
+        
           </ul>
         </div>
         <div className="navbar-end pr-3 space-x-2">

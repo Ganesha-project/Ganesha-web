@@ -254,6 +254,12 @@ export const NavLinks = {
             desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
             accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
         },
+        {
+            href: '/contact',
+            label: 'Hubungi Kami',
+            desc: "Selalu Siap Memberikan Solusi Terbaik untuk Anda!",
+            accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
+        },
     ]
 };
 
