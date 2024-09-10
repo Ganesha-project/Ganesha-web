@@ -55,7 +55,7 @@ body {
 /* Infinite Running Card */
 .marquee {
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   width: 100%;
   position: relative;
 }
