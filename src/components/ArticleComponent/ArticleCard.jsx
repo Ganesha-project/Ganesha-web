@@ -30,7 +30,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                             alt={el?.attributes?.Title} />
                                         <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
-                                            <h1 className="px-2 py-1 h-fit text-sm bg-baseColor bg-opacity-40 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
+                                            <h1 className="px-2 py-1 h-fit text-sm bg-black bg-opacity-35 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
                                                 {el?.attributes?.category?.data?.attributes?.ArticleCategory}
                                             </h1>
                                             {el.attributes.Trending === true ? (

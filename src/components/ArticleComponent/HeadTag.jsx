@@ -3,7 +3,7 @@ import { FaSort } from "react-icons/fa6"
 
 export const Headtag = ({ label, visibility, children, filter, hide, setSortOrder }) => {
     const handleSort = (order) => {
-        setSortOrder(order);
+        setSortOrder(order); // Set order ketika user memilih opsi sort
     };
 
     return (
@@ -26,7 +26,7 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                                     <li key={idx}>
                                         <a
                                             className="capitalize cursor-pointer"
-                                            onClick={() => handleSort(el.value)}
+                                            onClick={() => handleSort(el.value)} // Panggil handleSort
                                         >
                                             {el.label}
                                         </a>
@@ -48,4 +48,4 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
             </div>
         </>
     );
-}
+};

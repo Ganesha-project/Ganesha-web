@@ -26,7 +26,7 @@ export const Featured = ({ data }) => {
                     </div>
                     <div className="md:w-[50%] md:h-[50lvh] h-[50lvh] overflow-y-scroll noBar">
                         <div className="flex flex-col gap-5">
-                            {data?.data?.filter(el => el.attributes.Trending === true).map((el, idx) => (
+                            {data?.data?.map((el, idx) => (
                                 <Link
                                     href={'article/' + el.attributes.Slug}
                                     key={idx} className="flex gap-3 bg-white dark:bg-[#2d2d2da7] bg-opacity-50 p-3 shadow rounded-2xl group dark:hover:bg-opacity-80 dark:bg-opacity-50 hover:bg-gray-50 duration-150">
@@ -38,7 +38,7 @@ export const Featured = ({ data }) => {
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                             alt={el.attributes.Title} />
                                         <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
-                                            <h1 className="px-2 py-1 h-fit text-sm bg-baseColor bg-opacity-40 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
+                                            <h1 className="px-2 py-1 h-fit text-sm bg-black bg-opacity-40 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
                                                 {el?.attributes?.category?.data?.attributes?.ArticleCategory}
                                             </h1>
                                             {el.attributes.Trending === true ? (

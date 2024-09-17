@@ -14,20 +14,24 @@ import { Pagination } from "@/components/ArticleComponent/Pagination";
 export default function ArticlePage() {
     const [newData, setNewData] = useState(null);
     const [categories, setCategories] = useState(null);
+    const [trendingData, setTrendingData] = useState(null);
     const [load, setLoad] = useState(true);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [itemsToShow, setItemsToShow] = useState(6); // Inisialisasi dengan 6 item
+    const [sort, setSort] = useState('DESC'); // State baru untuk urutan artikel
 
     useEffect(() => {
         async function fetchData() {
             try {
-                let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
+                let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
                 let fetchCategoriesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/categories?populate=*`;
+                let fetchTrending = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:DESC&filters[Trending][$eq]=true&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
 
-                const [articlesRes, categoriesRes] = await Promise.all([
+                const [articlesRes, categoriesRes, trendingRes] = await Promise.all([
                     fetch(fetchArticlesUrl),
                     fetch(fetchCategoriesUrl),
+                    fetch(fetchTrending),
                 ]);
 
                 if (!articlesRes.ok || !categoriesRes.ok) {
@@ -36,9 +40,11 @@ export default function ArticlePage() {
 
                 const articlesData = await articlesRes.json();
                 const categoriesData = await categoriesRes.json();
+                const trendingData = await trendingRes.json();
 
                 setNewData(articlesData);
                 setCategories(categoriesData);
+                setTrendingData(trendingData);
                 setLoad(false);
             } catch (error) {
                 setError(error.message);
@@ -46,7 +52,7 @@ export default function ArticlePage() {
             }
         }
         fetchData();
-    }, [itemsToShow]); // Menambahkan itemsToShow sebagai dependensi untuk useEffect
+    }, [itemsToShow, sort]); // Tambahkan sort ke dalam dependency array
 
     const fetchFilteredData = async (search) => {
         try {
@@ -77,6 +83,10 @@ export default function ArticlePage() {
         setItemsToShow(prevItems => prevItems + 3);
     };
 
+    const setSortOrder = (order) => {
+        setSort(order); // Set urutan berdasarkan input dari Headtag
+    };
+
     return (
         <>
             <BannerArticle>
@@ -85,7 +95,7 @@ export default function ArticlePage() {
                 ) : load ? (
                     <SkeletonBanner />
                 ) : (
-                    <Featured data={newData} />
+                    <Featured data={trendingData} />
                 )}
             </BannerArticle>
             <section className="md:px-24 2xl:px-80 px-5 space-y-5 pt-24 mb-10">
@@ -115,12 +125,11 @@ export default function ArticlePage() {
                     <ArticleCard
                         isSearching={!!searchTerm}
                         data={newData}
-                        moms={<Headtag label={'Fresh Articles'} hide={true} />}
+                        moms={<Headtag label={'Fresh Articles'} filter={true} setSortOrder={setSortOrder} />} // Pasang setSortOrder di sini
                         loadMore={loadMore}
                         items={itemsToShow}
                     />
                 )}
-           
             </section>
         </>
     );
