@@ -4,10 +4,9 @@ import { FaFire } from "react-icons/fa6"
 import { Headtag } from "./HeadTag"
 import { formatDateTime } from "@/helper/formatDateTime"
 import { slugify } from "@/helper/slugify"
-import { Pagination } from "./Pagination"
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
 
-export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
+export const ArticleCardCategory = ({ data, moms, category }) => {
     console.log('====================================');
     console.log(data);
     console.log('====================================');
@@ -16,23 +15,23 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
             <section className="space-y-5">
                 {moms}
                 <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
-                    {data?.data?.map((el, idx) => (
+                    {data?.data?.slice(0, 6).map((el, idx) => (
                         <>
                             <Link
-                                href={'/article/' + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
+                                href={'/article/' + slugify(category?.ArticleCategory) + "/" + el.attributes.Slug}
                                 key={idx} className="md:min-h-[45lvh] group bg-white dark:bg-baseColor dark:bg-opacity-20 rounded-2xl space-y-2 p-3 shadow-mainShadow flex flex-col justify-between duration-300 hover:bg-baseColor hover:bg-opacity-90">
                                 <div className="space-y-1 flex md:flex-col flex-row gap-2 w-full h-[20lvh] md:h-full">
                                     <div className="relative overflow-hidden rounded-xl md:w-full w-[50%]">
                                         <img
-                                            className="w-full h-[20lvh] md:h-[35lvh] object-cover rounded-xl group-hover:scale-125 duration-150"
+                                            className="w-full h-[20lvh] md:h-[25lvh] object-cover rounded-xl group-hover:scale-125 duration-150"
                                             width={500}
                                             height={500}
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                             alt={el?.attributes?.Title} />
                                         <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
-                                            <h1 className="px-2 py-1 h-fit text-sm bg-baseColor bg-opacity-40 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
-                                                {el?.attributes?.category?.data?.attributes?.ArticleCategory}
-                                            </h1>
+                                            {/* <h1 className="px-2 py-1 h-fit text-sm bg-baseColor bg-opacity-40 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
+                                                {category?.ArticleCategory}
+                                            </h1> */}
                                             {el.attributes.Trending === true ? (
                                                 <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg ">
                                                     HOT
@@ -64,9 +63,6 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                         </>
                     ))}
                 </div>
-                <Pagination
-                    className={`${data.data?.length <= items ? 'cursor-not-allowed opacity-25' : ''}`}
-                    loadMore={loadMore} />
             </section>
         </>
     )

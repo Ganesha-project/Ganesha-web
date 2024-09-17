@@ -95,7 +95,7 @@ export default function ArticlePage() {
                 ) : load ? (
                     <SkeletonTiles />
                 ) : (
-                    <TilesFilter categories={categories} />
+                    <TilesFilter categories={newData} />
                 )}
                 {error ? (
                     <div>Error: {error}</div>
@@ -113,11 +113,14 @@ export default function ArticlePage() {
                     </div>
                 ) : (
                     <ArticleCard
+                        isSearching={!!searchTerm}
                         data={newData}
                         moms={<Headtag label={'Fresh Articles'} hide={true} />}
+                        loadMore={loadMore}
+                        items={itemsToShow}
                     />
                 )}
-                <Pagination loadMore={loadMore} />
+           
             </section>
         </>
     );

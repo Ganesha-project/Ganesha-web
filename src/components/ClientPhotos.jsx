@@ -24,7 +24,7 @@ export const ClientPhotos = () => {
                 <div className='md:mx-24 mx-5 mt-10'>
                     <Title className={'flex justify-center'} text={'Our Clients'} icon={<FaQuoteRight />} iconClassName={'text-red-500'} />
                 </div>
-                <div className='marquee'>
+                <div className='marquee noBar'>
                     <div className='flex gap-5 md:gap-10 marquee-content py-16'>
                         {ClientsReview.concat(ClientsReview).map((el, idx) => (
                             <>

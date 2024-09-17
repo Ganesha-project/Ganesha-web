@@ -1,14 +1,15 @@
 "use client";
 
 import { TopCategory } from "@/components/ArticleComponent/TopCategory";
-import { ArticleCard } from "@/components/ArticleComponent/ArticleCard";
+import { ArticleCardCategory } from "@/components/ArticleComponent/ArticleCardCategory";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";
 import { SkeletonTopCategory } from "@/components/Skeleton/SkeletonTopCategory";
 import { Headtag } from "@/components/ArticleComponent/HeadTag";
+import { slugify } from "@/helper/slugify";
 
-export default function ArticlesPage() {
+export default function ArticlesCategoriesPage() {
     const { slug } = useParams()  // Ambil slug dari URL
 
     const [newData, setNewData] = useState(null);
@@ -20,7 +21,7 @@ export default function ArticlesPage() {
         async function fetchData() {
             if (!slug) return;  // Jangan lakukan apa-apa jika slug belum ada
             try {
-                let fetchCategoryUrl = `http://localhost:1337/api/categories/${slug}?populate[articles]=*`;
+                let fetchCategoryUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/categories/${slug}?populate[articles]=*`;
 
                 const categoryRes = await fetch(fetchCategoryUrl);
 
@@ -66,10 +67,9 @@ export default function ArticlesPage() {
                         </p>
                     </div>
                 ) : (
-                    <ArticleCard
+                    <ArticleCardCategory
+                        category={category}
                         data={newData}
-                        tag={DataArticles.label.new}
-                        filter={true}
                         moms={<Headtag label={'Latest Update'} hide={true} />}
                     />
                 )}
