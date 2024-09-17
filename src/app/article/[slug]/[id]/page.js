@@ -77,12 +77,11 @@ export default function ArticleDetail() {
             {load ? (
                 data ? (
                     <>
-                        <ArticleDetailSkeleton />
                         <section className="flex md:flex-row flex-col gap-20 mx-5 md:mx-24 2xl:mx-80">
                             <div className="md:w-[70%]">
-                                {/* 
+                                
                                 <BannerArticleDetail data={data} />
-                                <ArticleContent data={data} /> */}
+                                <ArticleContent data={data} />
                             </div>
                             <div className="md:w-[30%]">
                                 <SideRec data={articles} />
