@@ -5,6 +5,7 @@ import { SideRec } from "@/components/ArticleComponent/ArticleDetail/SideRec";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Head from 'next/head';
+import { ArticleDetailSkeleton } from "@/components/Skeleton/ArticleDetailSkeleton";
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
 
 export default function ArticleDetail() {
@@ -73,25 +74,27 @@ export default function ArticleDetail() {
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={`https://ganeshaconsulting.co.id/articles/${id}`} />
             </Head>
-            <section className="flex md:flex-row flex-col gap-20 mx-5 md:mx-24 2xl:mx-80">
-                <div className="md:w-[70%]">
-                    {load ? (
-                        data ? (
-                            <>
+            {load ? (
+                data ? (
+                    <>
+                        <ArticleDetailSkeleton />
+                        <section className="flex md:flex-row flex-col gap-20 mx-5 md:mx-24 2xl:mx-80">
+                            <div className="md:w-[70%]">
+                                {/* 
                                 <BannerArticleDetail data={data} />
-                                <ArticleContent data={data} />
-                            </>
-                        ) : (
-                            <p>No article data available</p>
-                        )
-                    ) : (
-                        <p>Loading...</p>
-                    )}
-                </div>
-                <div className="md:w-[30%]">
-                    <SideRec data={articles} />
-                </div>
-            </section>
+                                <ArticleContent data={data} /> */}
+                            </div>
+                            <div className="md:w-[30%]">
+                                <SideRec data={articles} />
+                            </div>
+                        </section>
+                    </>
+                ) : (
+                    <p>No article data available</p>
+                )
+            ) : (
+                <ArticleDetailSkeleton />
+            )}
         </>
     );
 }
