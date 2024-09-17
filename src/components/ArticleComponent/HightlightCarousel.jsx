@@ -10,7 +10,7 @@ export const HighlightCarousel = ({ data }) => {
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
-        const featuredArticles = data?.data?.filter(el => el.attributes.Featured === true) || [];
+        const featuredArticles = data?.data?.filter(el => el.attributes.Trending === true) || [];
         setFilteredData(featuredArticles);
     }, [data]);
 
@@ -42,7 +42,7 @@ export const HighlightCarousel = ({ data }) => {
                             <img
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-2xl hover:scale-125 duration-150"
+                                className="w-full h-full object-cover rounded-2xl hover:scale-125 duration-150 bg-baseColor"
                                 src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                 alt={el.attributes.Title}
                             />

@@ -12,7 +12,6 @@ import { MegaMenuNavbar } from './MegaMenuNavbar';
 import { SearchNavbar } from './SearchNavbar';
 import { MobileDrawer } from './MobileDrawer';
 
-
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);

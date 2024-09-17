@@ -24,13 +24,13 @@ export const Featured = ({ data }) => {
                     <div className="md:w-[50%]">
                         <HighlightCarousel data={data} />
                     </div>
-                    <div className="md:w-[50%]">
+                    <div className="md:w-[50%] md:h-[50lvh] h-[50lvh] overflow-y-scroll noBar">
                         <div className="flex flex-col gap-5">
-                            {data?.data?.filter(el => el.attributes.Featured === true).slice(0, 2).map((el, idx) => (
+                            {data?.data?.filter(el => el.attributes.Trending === true).map((el, idx) => (
                                 <Link
                                     href={'article/' + el.attributes.Slug}
                                     key={idx} className="flex gap-3 bg-white dark:bg-[#2d2d2da7] bg-opacity-50 p-3 shadow rounded-2xl group dark:hover:bg-opacity-80 dark:bg-opacity-50 hover:bg-gray-50 duration-150">
-                                    <div className="relative h-[21lvh] w-[50%] overflow-hidden rounded-xl">
+                                    <div className="relative h-[20lvh] w-[50%] overflow-hidden rounded-xl">
                                         <img
                                             className="w-full h-[21lvh] object-cover rounded-xl group-hover:scale-125 duration-150"
                                             width={500}
