@@ -4,12 +4,12 @@ import { TiDelete } from "react-icons/ti";
 
 export const Searchbar = ({
     onSearch,
-    placeholder = "Find Articles...",
+    placeholder = "Cari judul artikel...",
     resetButtonText = "Reset Search",
     searchButtonText = "Search",
     searchIconColor = "text-gray-800 dark:text-white",
     resetButtonColor = "bg-red-500",
-    searchButtonColor = "bg-mainColor",
+    searchButtonColor = "dark:bg-secondaryColor bg-mainColor",
     searchButtonHoverColor = "hover:bg-secondaryColor",
     resetButtonHoverColor = "hover:bg-red-600"
 }) => {
@@ -53,10 +53,10 @@ export const Searchbar = ({
                     </button>
                 )}
                 <button type="submit" className="">
-                    <span className="block md:hidden p-2 rounded-full -mr-2">
-                        <IoIosSearch className={`text-white`} />
+                    <span className="hidden md:block p-2 rounded-full -mr-2">
+                        <IoIosSearch className={`dark:text-white`} />
                     </span>
-                    <span className={`hidden md:block md:px-3 md:py-1 btnbtncir ${searchButtonColor} rounded-full text-white font-semibold -mr-2 ${searchButtonHoverColor} duration-300 ease-in-out`}>
+                    <span className={` md:block md:px-3 py-1 px-2 md:py-1 btnbtncir ${searchButtonColor} rounded-full text-white font-semibold -mr-2 ${searchButtonHoverColor} duration-300 ease-in-out`}>
                         {searchButtonText}
                     </span>
                 </button>

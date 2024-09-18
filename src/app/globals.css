@@ -118,3 +118,26 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.carousel2 {
+  display: inline-flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel2::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marqueeText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-marqueeText {
+  animation: marquee 5s linear infinite;
+}

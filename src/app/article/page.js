@@ -125,7 +125,7 @@ export default function ArticlePage() {
                     <ArticleCard
                         isSearching={!!searchTerm}
                         data={newData}
-                        moms={<Headtag label={'Fresh Articles'} filter={true} setSortOrder={setSortOrder} />} // Pasang setSortOrder di sini
+                        moms={<Headtag label={'Our Articles'} filter={true} setSortOrder={setSortOrder} />} // Pasang setSortOrder di sini
                         loadMore={loadMore}
                         items={itemsToShow}
                     />

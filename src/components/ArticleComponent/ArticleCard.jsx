@@ -8,9 +8,6 @@ import { Pagination } from "./Pagination"
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
 
 export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
-    console.log('====================================');
-    console.log(data);
-    console.log('====================================');
     return (
         <>
             <section className="space-y-5">
@@ -30,8 +27,8 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                             alt={el?.attributes?.Title} />
                                         <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
-                                            <h1 className="px-2 py-1 h-fit text-sm bg-black bg-opacity-35 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
-                                                {el?.attributes?.category?.data?.attributes?.ArticleCategory}
+                                            <h1 className="relative overflow-hidden truncate-last-1 text-xs text-wrap px-2 py-1 h-fit bg-black bg-opacity-35 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
+                                                    {el?.attributes?.category?.data?.attributes?.ArticleCategory}
                                             </h1>
                                             {el.attributes.Trending === true ? (
                                                 <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg ">
@@ -51,7 +48,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                                                 {el?.attributes?.Excerpt}
                                             </h2>
                                         </div>
-                                        <span className="block md:hidden text-mainColor mt-auto dark:text-baseColor">
+                                        <span className="block md:hidden w-fit rounded-full text-mainColor mt-auto dark:text-baseColor text-sm">
                                             {formatDateTime(el?.attributes?.PublishTime)}
                                         </span>
                                     </div>
@@ -60,6 +57,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                                 <span className="text-mainColor mt-auto md:block hidden  dark:text-baseColor">
                                     {formatDateTime(el?.attributes?.PublishTime)}
                                 </span>
+
                             </Link>
                         </>
                     ))}

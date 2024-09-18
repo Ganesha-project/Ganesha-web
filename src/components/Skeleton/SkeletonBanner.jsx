@@ -3,7 +3,7 @@ export const SkeletonBanner = () => {
         <>
             <div className="mx-5 md:mx-0">
                 <div className="z-10 md:bg-white animate-pulse md:dark:bg-[#2525256b] md:bg-opacity-25 md:backdrop-blur-xl md:p-5 md:shadow md:rounded-3xl w-fit">
-                    <h1 className="text-2xl md:text-3xl font-semibold text-mainColor dark:text-baseColor">
+                    <h1 className="text-3xl md:text-3xl font-semibold text-mainColor dark:text-baseColor">
                         Ganesha News & Article
                     </h1>
                     <h2 className="md:text-xl text-gray-900 dark:text-white">
