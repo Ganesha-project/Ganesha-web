@@ -5,7 +5,7 @@ import { TbBrandFunimation } from "react-icons/tb";
 
 export const dataPageSocmed = {
     contentData: {
-        image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         heading: "Pengelolaan Sosial Media di Seluruh Indonesia, Ekonomis, Cepat, dan Terpecaya",
         features: [
             {

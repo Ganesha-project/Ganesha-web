@@ -53,7 +53,7 @@ export const Header = ({ data }) => {
                             width={500}
                             height={500}
                             className="rounded-[35px] w-full h-[60lvh] md:h-full object-cover brightness-90"
-                            src={data.image}
+                            src={data.img}
                             alt={data.heading} />
                         <div className="absolute inset-5 z-20">
                             <h1 className="text-2xl md:text-3xl font-semibold text-white">

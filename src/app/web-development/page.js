@@ -4,7 +4,7 @@ import { WebPackages } from "../../../public/DB/WebPackages";
 import { WebBody } from "@/components/WebComponents/WebBody";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { Benefit } from "@/components/LegalComponents/Benefit";
-import { BenefitWeb, dataPageWeb, FAQ } from "../../../public/Data/WebData";
+import { BenefitWeb, dataHeader, dataPageWeb, FAQ } from "../../../public/Data/WebData";
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { Header } from "@/components/WebComponents/Header";
 import { WebWork } from "@/components/WebComponents/WebWork";
@@ -65,7 +65,7 @@ export default async function WebPage() {
             />
             <WebWork />
             <Header
-                data={dataPageWeb.contentData}
+                data={dataHeader.contentData}
             />
             <WhyLegal
                 data={dataPageWeb.whyWebsite}

@@ -4,6 +4,31 @@ import { AiFillSafetyCertificate } from "react-icons/ai";
 import { GiSparkles } from "react-icons/gi";
 import { SlSocialInstagram } from "react-icons/sl";
 
+export const dataHeader = {
+    contentData: {
+        img: "https://images.unsplash.com/photo-1667984436061-07f5cec0480d?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        heading: "Buat Perusahaan Anda Terlihat Proffesional dan Menarik dengan website yang Modern",
+        features: [
+            {
+                title: "Kreatif dan Efektif",
+                icon: <TbCategoryFilled />
+            },
+            {
+                title: "Desain Responsif",
+                icon: <GiSparkles />
+            },
+            {
+                title: "Fitur Lengkap",
+                icon: <TbListCheck />
+            },
+            {
+                title: "Integrasi Sosial Media",
+                icon: <SlSocialInstagram />
+            }
+        ]
+    }
+}
+
 export const dataClientWeb = [
     {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300577/GaneshaAssets/WebSS/clti96ddpgr0jt9mhv1b.webp",
@@ -132,28 +157,7 @@ export const FAQ = [
     }
 ]
 export const dataPageWeb = {
-    contentData: {
-        image: "https://images.unsplash.com/photo-1667984436061-07f5cec0480d?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        heading: "Buat Perusahaan Anda Terlihat Proffesional dan Menarik dengan website yang Modern",
-        features: [
-            {
-                title: "Kreatif dan Efektif",
-                icon: <TbCategoryFilled />
-            },
-            {
-                title: "Desain Responsif",
-                icon: <GiSparkles />
-            },
-            {
-                title: "Fitur Lengkap",
-                icon: <TbListCheck />
-            },
-            {
-                title: "Integrasi Sosial Media",
-                icon: <SlSocialInstagram />
-            }
-        ]
-    },
+
     whyWebsite: [
         {
             title: "Meningkatkan Kredibilitas",
