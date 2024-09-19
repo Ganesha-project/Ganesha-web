@@ -11,32 +11,24 @@ import { AccountantPackages } from '../../../public/DB/AccountantPackages';
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
     description: "Dapatkan dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat. Hubungi kami untuk konsultasi lebih lanjut!",
-    keywords: "pelayanan akuntansi, dukungan akuntansi, pencatatan keuangan, pelaporan pajak, analisis keuangan, Ganesha Consulting",
-    image: "/BG/accounting.jpg", // Path ke gambar terkait Pelayanan Akuntansi
-    url: "https://www.ganeshaconsulting.co.id/pelayanan-akuntansi", // URL halaman Pelayanan Akuntansi Anda
+    keywords: "pelayanan akuntansi, dukungan akuntansi, pencatatan keuangan, pelaporan pajak, analisis keuangan, Jasa Akuntansi Omzet Kurang dari 2,5M, Jasa Akuntansi Omzet 2,5M s/d 5M, Jasa Akuntansi Omzet 5M s/d 7,5M, Jasa Akuntansi Omzet 7,5M s/d 10M, Jasa Akuntansi Omzet 10M s/d 12,5M, Jasa Akuntansi Omzet 12,5M s/d 15M, Jasa Akuntansi Omzet 15M s/d 17,5M, Jasa Akuntansi Omzet 17,5M s/d 20M, Jasa Akuntansi Omzet 20M s/d 25M, Jasa Akuntansi Omzet 25M s/d 30M, Ganesha Consulting",
+    image: "\https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236557/GaneshaAssets/f7ivo4yqe6wkvzvrkcun.svg",
+    url: "https://www.ganeshaconsulting.co.id/pelayanan-akuntansi",
     author: "Ganesha Consulting",
     siteName: "Ganesha Consulting",
     type: "website",
-    robots: "index, follow", // Aturan indeks dan pengikutan
-    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
-    // Open Graph metadata untuk berbagi di media sosial
+    robots: "index, follow",
+    locale: "id_ID",
     openGraph: {
         type: "website",
         url: "https://www.ganeshaconsulting.co.id/pelayanan-akuntansi",
         title: "Pelayanan Akuntansi - Ganesha Consulting",
         description: "Dapatkan dukungan akuntansi terpercaya untuk pencatatan keuangan, pelaporan pajak, dan analisis keuangan yang akurat. Hubungi kami untuk konsultasi lebih lanjut!",
         image: {
-            url: "https://www.ganeshaconsulting.co.id/BG/accounting.jpg",
+            url: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236557/GaneshaAssets/f7ivo4yqe6wkvzvrkcun.svg",
             alt: "Ganesha Consulting - Pelayanan Akuntansi"
         }
     },
-    // Twitter metadata untuk berbagi di Twitter
-    twitter: {
-        handle: "@ganeshaconsult",
-        site: "@ganeshaconsult",
-        cardType: "summary_large_image",
-    },
-    // Structured data untuk membantu mesin pencari memahami konten halaman
     structuredData: {
         "@context": "http://schema.org",
         "@type": "Organization",
