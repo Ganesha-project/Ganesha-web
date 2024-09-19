@@ -37,7 +37,7 @@ export default function RootLayout({ children, pageProps }) {
         <ThemeProvider enableSystem={true} attribute='class'>
           <ClientProvider>
             <Navbar />
-            {/* <FloatingButton /> */}
+            <FloatingButton />
             <NavigationMobile/>
             {children}
             <Analytics />

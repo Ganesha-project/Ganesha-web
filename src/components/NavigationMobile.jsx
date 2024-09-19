@@ -1,12 +1,12 @@
 'use client'
 
-import { NavLinks } from "@/app/Database";
 import Link from "next/link";
+import { NavLinks } from "@/app/Database";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // pindahhin nanti
-import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiBookOpenFill, RiBookOpenLine, RiHomeFill, RiHomeLine, RiSearchFill, RiSearchLine } from "react-icons/ri";
+import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiBookOpenFill, RiBookOpenLine, RiHomeFill, RiHomeLine, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
 
 export const NavigationMobile = () => {
     const [isMinimized, setIsMinimized] = useState(false);
@@ -71,7 +71,7 @@ export const NavigationMobile = () => {
             <section className="lg:hidden block">
                 <div className={`fixed bottom-3 left-3 right-3 z-[150] duration-300 ease-in-out transition-all
                             ${visible ? 'transform translate-y-0' : 'translate-y-[120%]'}
-                            ${isMinimized ? 'transform -translate-x-[105%]' : ''}
+                            ${isMinimized ? 'transform translate-x-[105%]' : ''}
                     `}>
                     <div className="w-full flex justify-between items-center gap-2 relative">
                         <div className="flex justify-between items-center w-full py-3 px-10 shadow-custom dark:bg-[#1c1c1c] dark:bg-opacity-50 dark:shadow bg-gray-200 bg-opacity-50 backdrop-blur-md rounded-full">
@@ -96,10 +96,10 @@ export const NavigationMobile = () => {
                                     </button>
                                 </Link>
                             ))}
-                            <div className="dropdown dropdown-top dropdown-end">
+                            <div className="dropdown dropdown-top dropdown-end flex items-center">
                                 <label
                                     tabIndex={0}
-                                    className="swap swap-rotate hover:swap-active opacity-60 hover:opacity-100 duration-300 ease-in-out">
+                                    className="swap swap-rotate hover:swap-active opacity-60 hover:opacity-100 duration-300 ease-in-out !place-items-center">
                                     <span className="swap-off">
                                         <RiAppsLine className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
                                     </span>
@@ -119,13 +119,13 @@ export const NavigationMobile = () => {
                                 </ul>
                             </div>
 
-                            <button onClick={toggleMinimize} className={`${isMinimized ? "rotate-180 scale-0" : ""} bg-baseColor bg-opacity-50 h-fit -mr-7 p-1 rounded-full text-2xl flex flex-col items-center duration-300 ease-in-out`}>
+                            <button onClick={toggleMinimize} className={`${isMinimized ? "scale-0" : "rotate-180"} bg-baseColor bg-opacity-50 h-fit -mr-7 p-1 rounded-full text-2xl flex flex-col items-center duration-300 ease-in-out`}>
                                 <RiArrowDropLeftLine />
                             </button>
                         </div>
                     </div>
                 </div>
-                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"} z-50 rotate-180 shadow-secondaryShadow bg-opacity-45 backdrop-blur-md bg-white rounded-full fixed bottom-3 left-3 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
+                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"} z-50 p-2 shadow-secondaryShadow bg-opacity-45 dark:bg-opacity-45 backdrop-blur-md bg-white dark:bg-darkColor rounded-full fixed bottom-5 right-5 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
                     <RiArrowDropLeftLine />
                 </button>
             </section>
