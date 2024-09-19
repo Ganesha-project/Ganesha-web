@@ -37,7 +37,7 @@ export const metadata = {
         "@type": "Organization",
         name: "Ganesha Consulting",
         url: "https://www.ganeshaconsulting.co.id/",
-        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        logo: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75",
         description: "Ganesha Consulting menawarkan layanan Konsultan Pajak yang membantu perusahaan dalam optimasi pajak dan kepatuhan regulasi. Temukan paket kami untuk pelaporan SPT, pajak daerah, dan konsultasi pajak.",
         sameAs: [
             "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",

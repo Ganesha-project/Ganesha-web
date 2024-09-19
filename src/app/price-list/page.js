@@ -11,11 +11,11 @@ import { servicePackages } from '../../../public/DB/IzinPackages';
 import { AccountantPackages } from '../../../public/DB/AccountantPackages';
 
 export const metadata = {
-    title: "Semua Produk - Ganesha Consulting",
-    description: "Lihat semua produk dan layanan yang ditawarkan oleh Ganesha Consulting, termasuk pembuatan website, manajemen media sosial, desain grafis, pendirian PT, dan banyak lagi. Hubungi kami untuk konsultasi lebih lanjut!",
-    keywords: "semua produk, layanan, pembuatan website, manajemen media sosial, desain grafis, pendirian PT, Ganesha Consulting",
-    image: "/BG/list.jpg", // Path ke gambar terkait Semua Produk
-    url: "https://www.ganeshaconsulting.co.id/price-list", // URL halaman Semua Produk Anda
+    title: "Price List semua Layanan - Ganesha Consulting",
+    description: "Lihat Price List semua Layanan dan layanan yang ditawarkan oleh Ganesha Consulting, termasuk pembuatan website, manajemen media sosial, desain grafis, pendirian PT, dan banyak lagi. Hubungi kami untuk konsultasi lebih lanjut!",
+    keywords: "Price List semua Layanan, layanan, pembuatan website, manajemen media sosial, desain grafis, pendirian PT, Ganesha Consulting",
+    image: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/gdoh9ffyjrko6vj4gms3.svg", // Path ke gambar terkait Price List semua Layanan
+    url: "https://www.ganeshaconsulting.co.id/price-list", // URL halaman Price List semua Layanan Anda
     author: "Ganesha Consulting",
     siteName: "Ganesha Consulting",
     type: "website",
@@ -25,18 +25,12 @@ export const metadata = {
     openGraph: {
         type: "website",
         url: "https://www.ganeshaconsulting.co.id/price-list",
-        title: "Semua Produk - Ganesha Consulting",
-        description: "Lihat semua produk dan layanan yang ditawarkan oleh Ganesha Consulting, termasuk pembuatan website, manajemen media sosial, desain grafis, pendirian PT, dan banyak lagi. Hubungi kami untuk konsultasi lebih lanjut!",
+        title: "Price List semua Layanan - Ganesha Consulting",
+        description: "Lihat Price List semua Layanan dan layanan yang ditawarkan oleh Ganesha Consulting, termasuk pembuatan website, manajemen media sosial, desain grafis, pendirian PT, dan banyak lagi. Hubungi kami untuk konsultasi lebih lanjut!",
         image: {
-            url: "https://www.ganeshaconsulting.co.id/BG/list.jpg",
-            alt: "Ganesha Consulting - Semua Produk"
+            url: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/gdoh9ffyjrko6vj4gms3.svg",
+            alt: "Ganesha Consulting - Price List semua Layanan"
         }
-    },
-    // Twitter metadata untuk berbagi di Twitter
-    twitter: {
-        handle: "@ganeshaconsult",
-        site: "@ganeshaconsult",
-        cardType: "summary_large_image",
     },
     // Structured data untuk membantu mesin pencari memahami konten halaman
     structuredData: {
@@ -44,7 +38,7 @@ export const metadata = {
         "@type": "Organization",
         name: "Ganesha Consulting",
         url: "https://www.ganeshaconsulting.co.id/",
-        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        logo: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75",
         sameAs: [
             "https://www.facebook.com/ganeshaconsulting",
             "https://twitter.com/ganeshaconsult",
@@ -52,7 +46,6 @@ export const metadata = {
         ]
     }
 };
-
 
 export default async function AllProductsPage() {
 

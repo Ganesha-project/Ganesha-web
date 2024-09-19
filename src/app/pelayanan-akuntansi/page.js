@@ -34,7 +34,7 @@ export const metadata = {
         "@type": "Organization",
         name: "Ganesha Consulting",
         url: "https://www.ganeshaconsulting.co.id/",
-        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        logo: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75",
         sameAs: [
             "https://www.facebook.com/ganeshaconsulting",
             "https://twitter.com/ganeshaconsult",
