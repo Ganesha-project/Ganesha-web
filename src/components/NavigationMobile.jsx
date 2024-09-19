@@ -70,7 +70,7 @@ export const NavigationMobile = () => {
     return (
         <>
             <section className="lg:hidden block">
-                <div className={`fixed bottom-3 left-3 right-3 z-50 duration-300 ease-in-out transition-all
+                <div className={`fixed bottom-3 left-3 right-3 z-[150] duration-300 ease-in-out transition-all
                             ${visible ? 'transform translate-y-0' : 'translate-y-[120%]'}
                             ${isMinimized ? 'transform -translate-x-[105%]' : ''}
                     `}>
@@ -79,19 +79,17 @@ export const NavigationMobile = () => {
                             {NavigationLinks.map((el, idx) => (
                                 <Link href={el.link} key={idx}>
                                     <button
-                                        className={`${
-                                            (el.link === "/" && path === "/") ||
+                                        className={`${(el.link === "/" && path === "/") ||
                                             (el.link !== "/" && path.startsWith(el.link))
-                                                ? "bg-gray-300 dark:bg-darkColor px-3 py-[6px] rounded-full"
-                                                : "bg-opacity-0"
-                                        } ${idx === 0 && path.startsWith(el.link) ? "!-ml-7" : ""} text-xl flex flex-row items-center gap-2 opacity-60`}>
+                                            ? "bg-gray-300 dark:bg-darkColor px-3 py-[6px] rounded-full"
+                                            : "bg-opacity-0"
+                                            } ${(el.link === "/" && path === "/") ? "!-ml-7" : ""} text-xl flex flex-row items-center gap-2 opacity-60`}>
                                         {el.icon}
-                                        <span className={`${
-                                            (el.link === "/" && path === "/") ||
+                                        <span className={`${(el.link === "/" && path === "/") ||
                                             (el.link !== "/" && path.startsWith(el.link))
-                                                ? "block font-semibold"
-                                                : "hidden"
-                                        } text-xs`}>
+                                            ? "block font-semibold"
+                                            : "hidden"
+                                            } text-xs`}>
                                             {el.label}
                                         </span>
                                     </button>
@@ -106,8 +104,15 @@ export const NavigationMobile = () => {
                                 <ul tabIndex={0} className="mb-5 dropdown-content menu bg-gray-200 dark:bg-darkColor rounded-box z-[1] w-52 p-2 shadow">
                                     {NavLinks.productsAndServices.map((el, id) => (
                                         <li key={id}>
-                                            <a href={el.href}>
-                                                {el.label}
+                                            <a href={el.href}
+                                                className="flex items-center gap-2"
+                                            >
+                                                <span>
+                                                    {el.icon}
+                                                </span>
+                                                <span className="font-semibold">
+                                                    {el.label}
+                                                </span>
                                             </a>
                                         </li>
                                     ))}
