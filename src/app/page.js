@@ -11,6 +11,7 @@ import { ArticleReccomendation } from "@/components/ArticleComponent/ArticleRecc
 import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomendation';
 import { WebWork } from '@/components/WebComponents/WebWork';
 import { SocmedWork } from '@/components/SocmedComponents/SocmedWork';
+import Head from 'next/head';
 
 
 export default function Home() {
