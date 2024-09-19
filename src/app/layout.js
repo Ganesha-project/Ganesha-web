@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import ClientProvider from '@/components/ClientProvider';
 import Head from 'next/head';
+import { NavigationMobile } from "@/components/NavigationMobile";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -36,7 +37,8 @@ export default function RootLayout({ children, pageProps }) {
         <ThemeProvider enableSystem={true} attribute='class'>
           <ClientProvider>
             <Navbar />
-            <FloatingButton />
+            {/* <FloatingButton /> */}
+            <NavigationMobile/>
             {children}
             <Analytics />
             <Footer />
