@@ -10,48 +10,51 @@ import { dataPageBadanUsaha, undangUndangTerkait, whyBadanUsaha } from "../../..
 import { Laws } from "@/components/LegalComponents/Laws";
 import { DataPageLegal } from "../../../public/Data/LegalitasData";
 
-const metadata = {
-    title: "Pendirian Badan Usaha dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
-    description: "Pendirian badan usaha tanpa ribet dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan badan usaha Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!",
-    keywords: "pendirian badan usaha, layanan pendirian badan usaha, Ganesha Consulting, layanan cepat badan usaha, layanan terpercaya badan usaha, harga terjangkau badan usaha",
-    image: "/BG/Yayasan.png", // Path ke gambar terkait pendirian badan usaha
-    url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/badan-usaha", // URL halaman Anda
+export const metadata = {
+    title: "Pendirian Badan Usaha - Yayasan, Firma Hukum, & Asosiasi dengan Ganesha Consulting",
+    description: "Ganesha Consulting menyediakan layanan pendirian badan usaha termasuk yayasan, firma hukum, dan perkumpulan/asosiasi. Dapatkan solusi terpercaya dan harga terjangkau untuk memulai badan usaha Anda di Indonesia. Hubungi kami untuk layanan profesional dan cepat!",
+    keywords: "pendirian badan usaha, yayasan, firma hukum, perkumpulan, asosiasi, Ganesha Consulting, layanan pendirian badan usaha, konsultasi bisnis",
+    canonical: "https://www.ganeshaconsulting.co.id/badan-usaha",
+    image: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png", // Path ke gambar terkait pendirian badan usaha
+    url: "https://www.ganeshaconsulting.co.id/badan-usaha",
     author: "Ganesha Consulting",
     siteName: "Ganesha Consulting",
     type: "website",
-    robots: "index, follow", // Aturan indeks dan pengikutan
-    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
-    // Open Graph metadata untuk berbagi di media sosial
+    robots: "index, follow",
+    locale: "id_ID",
+    // Open Graph metadata
     openGraph: {
         type: "website",
         url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/badan-usaha",
-        title: "Pendirian Badan Usaha dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
-        description: "Pendirian badan usaha tanpa ribet dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan badan usaha Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!",
+        title: "Pendirian Badan Usaha - Yayasan, Firma Hukum, & Asosiasi dengan Ganesha Consulting",
+        description: "Ganesha Consulting menyediakan layanan pendirian badan usaha termasuk yayasan, firma hukum, dan perkumpulan/asosiasi. Dapatkan solusi terpercaya dan harga terjangkau untuk memulai badan usaha Anda di Indonesia. Hubungi kami untuk layanan profesional dan cepat!",
         image: {
-            url: "https://www.ganeshaconsulting.co.id/BG/Yayasan.png",
+            url: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236584/GaneshaAssets/vvl30klk2osin5jcrvi3.png",
             alt: "Ganesha Consulting - Pendirian Badan Usaha"
         }
     },
-    // Twitter metadata untuk berbagi di Twitter
-    twitter: {
-        handle: "@ganeshaconsult",
-        site: "@ganeshaconsult",
-        cardType: "summary_large_image",
-    },
-    // Structured data untuk membantu mesin pencari memahami konten halaman
+    // Structured data
     structuredData: {
         "@context": "http://schema.org",
         "@type": "Organization",
         name: "Ganesha Consulting",
         url: "https://www.ganeshaconsulting.co.id/",
-        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        logo: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75",
+        description: "Ganesha Consulting menyediakan layanan pendirian badan usaha dengan solusi cepat dan terpercaya untuk yayasan, firma hukum, dan asosiasi di Indonesia.",
         sameAs: [
-            "https://www.facebook.com/ganeshaconsulting",
-            "https://twitter.com/ganeshaconsult",
-            "https://www.linkedin.com/company/ganeshaconsulting"
-        ]
+            "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+            "https://www.facebook.com/profile.php?id=61555739807086",
+            "https://www.linkedin.com/company/ganesha-multi-kreatif/",
+            "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
+        ],
+        contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+628887127000",
+            contactType: "Customer Service"
+        }
     }
 };
+
 
 export default async function PendirianBadanUsaha() {
     return (
