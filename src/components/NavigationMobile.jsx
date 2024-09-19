@@ -10,12 +10,7 @@ import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiBookOpenFill, RiBookOpen
 
 export const NavigationMobile = () => {
     const [isMinimized, setIsMinimized] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
-    
     const path = usePathname();
 
     const NavigationLinks = [
@@ -101,28 +96,28 @@ export const NavigationMobile = () => {
                                     </button>
                                 </Link>
                             ))}
-                    <div className="dropdown dropdown-top dropdown-end">
-  <label
-    tabIndex={0}
-    className="swap swap-rotate hover:swap-active">
-    <span className="swap-off">
-      <RiAppsLine className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
-    </span>
-    <span className="swap-on">
-      <RiAppsFill className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
-    </span>
-  </label>
-  <ul tabIndex={0} className="mb-5 dropdown-content menu bg-gray-200 dark:bg-darkColor rounded-box z-[1] w-52 p-2 shadow">
-    {NavLinks.productsAndServices.map((el, id) => (
-      <li key={id}>
-        <a href={el.href} className="flex items-center gap-2">
-          <span>{el.icon}</span>
-          <span className="font-semibold">{el.label}</span>
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
+                            <div className="dropdown dropdown-top dropdown-end">
+                                <label
+                                    tabIndex={0}
+                                    className="swap swap-rotate hover:swap-active opacity-60 hover:opacity-100 duration-300 ease-in-out">
+                                    <span className="swap-off">
+                                        <RiAppsLine className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
+                                    </span>
+                                    <span className="swap-on">
+                                        <RiAppsFill className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
+                                    </span>
+                                </label>
+                                <ul tabIndex={0} className="mb-5 dropdown-content menu bg-gray-200 dark:bg-darkColor rounded-box z-[1] w-52 p-2 shadow">
+                                    {NavLinks.productsAndServices.map((el, id) => (
+                                        <li key={id}>
+                                            <a href={el.href} className="flex items-center gap-2">
+                                                <span>{el.icon}</span>
+                                                <span className="font-semibold">{el.label}</span>
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
                             <button onClick={toggleMinimize} className={`${isMinimized ? "rotate-180 scale-0" : ""} bg-baseColor bg-opacity-50 h-fit -mr-7 p-1 rounded-full text-2xl flex flex-col items-center duration-300 ease-in-out`}>
                                 <RiArrowDropLeftLine />
