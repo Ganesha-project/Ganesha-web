@@ -36,7 +36,7 @@ export const Navbar = () => {
         ${isScrolled && isExpanded !== true ? 'bg-[#ffffff70] dark:bg-[#00000070] backdrop-blur-lg shadow-mainShadow' : 'bg-transparent sm:bg-transparent lg:bg-transparent'}
         `}>
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl" href='/'>
+          <a className="ml-2 md:ml-0 text-xl duration-200 ease-in-out hover:drop-shadow-[0px_0px_15px_#d093d4] dark:hover:drop-shadow-[0px_0px_15px_#CCB3CF] hover:scale-[1.1]" href='/'>
             <Image src={Artboard2} width={40} height={40} alt="Ganesha Logo" />
           </a>
         </div>
