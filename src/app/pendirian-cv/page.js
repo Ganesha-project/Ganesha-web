@@ -13,45 +13,40 @@ import { DataPageLegal } from "../../../public/Data/LegalitasData";
 import { dataPageCV } from "../../../public/Data/CVData";
 
 export const metadata = {
-    title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
-    description: "Pembangunan CV tanpa ribet dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan CV Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!",
-    keywords: "pendirian CV, layanan pembangunan CV, Ganesha Consulting, layanan cepat CV, layanan terpercaya CV, harga terjangkau CV",
-    image: "/BG/VectorCV.jpg", // Path ke gambar terkait pendirian CV
-    url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/pendirian-cv", // URL halaman Anda
-    author: "Ganesha Consulting",
-    siteName: "Ganesha Consulting",
-    type: "website",
-    robots: "index, follow", // Aturan indeks dan pengikutan
-    locale: "id_ID", // Lokalisasi halaman (misalnya, Indonesia)
-    // Open Graph metadata untuk berbagi di media sosial
+    title: "Jasa Pendirian CV - Ganesha Consulting",
+    description: "Ganesha Consulting menyediakan layanan pendirian CV dengan proses cepat dan terpercaya. Dapatkan solusi terbaik untuk memulai bisnis Anda dengan CV yang sah di Indonesia. Hubungi kami untuk informasi lebih lanjut!",
+    keywords: "pendirian CV, layanan pendirian CV, Ganesha Consulting, legalitas CV, konsultasi bisnis CV, harga pendirian CV",
+    canonical: "https://www.ganeshaconsulting.co.id/pendirian-cv",
+    // Open Graph metadata
     openGraph: {
         type: "website",
-        url: "https://www.ganeshaconsulting.co.id/all-products/legalitas/pendirian-cv",
-        title: "Pendirian CV dengan Ganesha Consulting - Solusi Terbaik untuk Bisnis Anda",
-        description: "Pembangunan CV tanpa ribet dengan Ganesha Consulting! Dapatkan layanan cepat, terpercaya, dan harga terjangkau untuk memastikan CV Anda tumbuh sukses. Hubungi kami sekarang untuk memulai langkah pertama menuju kesuksesan bisnis Anda!",
+        url: "https://www.ganeshaconsulting.co.id/pendirian-cv",
+        title: "Jasa Pendirian CV - Ganesha Consulting",
+        description: "Ganesha Consulting menyediakan layanan pendirian CV dengan proses cepat dan terpercaya. Dapatkan solusi terbaik untuk memulai bisnis Anda dengan CV yang sah di Indonesia. Hubungi kami untuk informasi lebih lanjut!",
         image: {
-            url: "https://www.ganeshaconsulting.co.id/BG/VectorCV.jpg",
+            url: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236555/GaneshaAssets/felydyeo20nq7t3zlvfu.svg",
             alt: "Ganesha Consulting - Pendirian CV"
         }
     },
-    // Twitter metadata untuk berbagi di Twitter
-    twitter: {
-        handle: "@ganeshaconsult",
-        site: "@ganeshaconsult",
-        cardType: "summary_large_image",
-    },
-    // Structured data untuk membantu mesin pencari memahami konten halaman
+    // Structured data
     structuredData: {
         "@context": "http://schema.org",
         "@type": "Organization",
         name: "Ganesha Consulting",
         url: "https://www.ganeshaconsulting.co.id/",
-        logo: "https://www.ganeshaconsulting.co.id/logo.png",
+        logo: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75",
+        description: "Ganesha Consulting menawarkan layanan pendirian CV dengan proses yang cepat, terpercaya, dan harga terjangkau. Hubungi kami untuk memulai bisnis Anda dengan legalitas yang sah.",
         sameAs: [
-            "https://www.facebook.com/ganeshaconsulting",
-            "https://twitter.com/ganeshaconsult",
-            "https://www.linkedin.com/company/ganeshaconsulting"
-        ]
+            "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+            "https://www.facebook.com/profile.php?id=61555739807086",
+            "https://www.linkedin.com/company/ganesha-multi-kreatif/",
+            "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
+        ],
+        contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+628887127000",
+            contactType: "Customer Service"
+        }
     }
 };
 
