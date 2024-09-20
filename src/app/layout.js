@@ -32,7 +32,16 @@ export default function RootLayout({ children, pageProps }) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8227813889502050"
           crossOrigin="anonymous"
-        ></script>
+        ></Script>
+        <Script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-591QLGLD19" />
+        <Script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-591QLGLD19');
+          `}
+        </Script>
       </Head>
       <body className={`${quicksand.className}`}>
         <ThemeProvider enableSystem={true} attribute='class'>
@@ -46,15 +55,6 @@ export default function RootLayout({ children, pageProps }) {
           </ClientProvider>
         </ThemeProvider>
 
-        <Script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-591QLGLD19" />
-        <Script>
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-591QLGLD19');
-          `}
-        </Script>
       </body>
     </html>
   );
