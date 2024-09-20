@@ -5,12 +5,14 @@ import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
 import { RiCustomerServiceFill } from 'react-icons/ri';
 import { IoIosSearch } from "react-icons/io";
-import { NavLinks } from '@/app/Database';
+import { dataContact, NavLinks } from '@/app/Database';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { usePathname } from "next/navigation";
 import { MegaMenuNavbar } from './MegaMenuNavbar';
 import { SearchNavbar } from './SearchNavbar';
 import { MobileDrawer } from './MobileDrawer';
+import { SlSocialInstagram } from 'react-icons/sl';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,21 +82,31 @@ export const Navbar = () => {
                 <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
-        
+
           </ul>
         </div>
         <div className="navbar-end pr-3 space-x-2">
-          <a
+
+          <Link
             href='/contact'
             className={`flex items-center `}
           >
             <span className='md:block hidden font-semibold text-gray-800 dark:text-white bg-[#ffffff26] hover:bg-mainColor hover:text-white bg-gray-200 bg-opacity-50 backdrop-blur-sm ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Contact
             </span>
-            <span data-tip={'Contact Us'} className='block md:hidden tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
+            <span data-tip={'Contact Us'} className='block md:hidden tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-40 dark:bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
               <RiCustomerServiceFill className='text-xl' />
             </span>
-          </a>
+          </Link>
+
+          <Link
+            href={dataContact.media[0].link}
+            data-tip={'Our Instragram'}
+            className='block md:hidden tooltip tooltip-bottom p-2 rounded-full bg-white bg-opacity-40 dark:bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'
+          >
+            <SlSocialInstagram className='text-xl' />
+          </Link>
+
           <div className='hidden md:block'>
             <MegaMenuNavbar
               icon={<IoIosSearch className='text-xl' />}
@@ -111,7 +123,7 @@ export const Navbar = () => {
           <div className='md:hidden block'>
             <MegaMenuNavbar
               icon={<HiOutlineMenu className='text-xl' />}
-              iconClassName={'p-2 rounded-full bg-gray-200 bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
+              iconClassName={'p-2 rounded-full bg-gray-200 bg-opacity-40 dark:bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor '}
               arrowVisibility={'hidden'}
               children={
                 <MobileDrawer />

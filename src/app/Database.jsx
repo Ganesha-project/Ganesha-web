@@ -2,14 +2,15 @@ import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
 import { TbMail, TbMailFilled, TbWorldWww, TbMathSymbols, TbHours24 } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
-import { RiAppsFill, RiFacebookBoxFill, RiFilePaperFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill } from "react-icons/ri";
+import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { SiReadthedocs } from "react-icons/si";
-import { HiLightningBolt, HiReceiptTax } from "react-icons/hi";
+import { HiDeviceMobile, HiLightningBolt, HiOfficeBuilding, HiReceiptTax } from "react-icons/hi";
 import { IoSearchCircle } from "react-icons/io5";
 import { IoIosCall } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
 import { BiMedal } from "react-icons/bi";
+import { BsBuildingAdd, BsBuildingFillAdd } from "react-icons/bs";
 
 export const DataProduct = [
     {
@@ -215,14 +216,14 @@ export const NavLinks = {
     legalities: [
         {
             href: '/pendirian-pt',
-            icon: <GoLaw />,
+            icon: <BsBuildingAdd />,
             label: 'Legalitas PT',
             desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT yang cepat.",
             accent: "dark:bg-[#8BD9D2] bg-[#8bd9d370]",
         },
         {
             href: '/pendirian-cv',
-            icon: <GoLaw />,
+            icon: <HiOfficeBuilding />,
             label: 'Legalitas CV',
             desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian CV yang cepat.",
             accent: "dark:bg-[#E8D0BE] bg-[#e8d0be93]",
@@ -262,6 +263,138 @@ export const NavLinks = {
         },
     ]
 };
+
+export const BtmNavigationLinks = {
+    main: [
+        {
+            icon: <RiHomeLine />,
+            iconActive: <RiHomeFill />,
+            label: "Home",
+            link: "/"
+        },
+        {
+            icon: <RiSearchLine />,
+            iconActive: <RiSearchFill />,
+            label: "Search",
+            link: "/services"
+        },
+        {
+            icon: <RiBookOpenLine />,
+            iconActive: <RiBookOpenFill />,
+            label: "Articles",
+            link: "/article"
+        },
+    ],
+    drawerMain: [
+        {
+            href: '/services',
+            icon: <IoSearchCircle />,
+            label: 'Find Services',
+            desc: "Temukan berbagai layanan terbaik kami untuk membantu bisnis Anda berkembang.",
+            accent: "bg-[#89af85]",
+        },
+
+        {
+            href: '/social-media-management',
+            icon: <RiInstagramFill />,
+            label: 'Social Media Management',
+            accent: " bg-[#a889ef96]",
+        },
+        {
+            href: '/web-development',
+            icon: <TbWorldWww />,
+            label: 'Website Development',
+            accent: " bg-[#6abde776]",
+        },
+        {
+            href: '/virtual-office',
+            icon: <RiBuilding2Fill />,
+            label: 'Virtual Office',
+            desc: "Layanan audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
+            accent: "bg-[#D1D2D399]",
+        },
+    ],
+    legalities: [
+        {
+            href: '/legalitas',
+            icon: <GoLaw />,
+            label: 'Legalitas Bisnis',
+            accent: " bg-[#6077e749]",
+        },
+        {
+            href: '/pendirian-pt',
+            icon: <BsBuildingFillAdd />,
+            label: 'Pendirian PT',
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT yang cepat.",
+            accent: "bg-[#8bd9d370]",
+        },
+        {
+            href: '/pendirian-cv',
+            icon: <HiOfficeBuilding />,
+            label: 'Pendirian CV',
+            desc: "Ayo Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian CV yang cepat.",
+            accent: "bg-[#e8d0be93]",
+        },
+        {
+            href: '/badan-usaha',
+            icon: <FaBuildingWheat />,
+            label: 'Badan Usaha',
+            desc: "Mulai Bisnis Anda dengan Langkah Yang Tepat! Kami menyediakan layanan pendirian badan usaha yang cepat.",
+            accent: "bg-[#64758B95]",
+        },
+    ],
+    other: [
+        {
+            href: '/konsultan-pajak',
+            icon: <HiReceiptTax />,
+            label: 'Pajak',
+            desc: "Optimalisasi Pajak Anda dengan Bantuan Ahli Pajak Terpercaya!",
+            accent: "bg-[#89524F76]",
+        },
+        {
+            href: '/perizinan',
+            icon: <RiFilePaperFill />,
+            label: 'Perizinan',
+            desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien.",
+            accent: "bg-[#cfe5ddb5]",
+        },
+        // {
+        //     href: '/pelayanan-manajemen',
+        //     icon: <MdHomeRepairService />,
+        //     label: 'Pelayanan Manajemen',
+        //     desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien.",
+        //     accent: "bg-[#e39f8cb5]",
+        // },
+        {
+            href: '/pelayanan-akuntansi',
+            icon: <TbMathSymbols />,
+            label: 'Pelayanan Akuntansi',
+            desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan dan pelaporan pajak.",
+            accent: "bg-[#70bcb1a8]",
+        },
+        // {
+        //     href: '/software-management-system',
+        //     icon: <RiAppsFill />,
+        //     label: 'Software Management System',
+        //     desc: "Solusi terkini untuk meningkatkan efisiensi dan kinerja operasional.",
+        //     accent: "bg-[#fd8cf49d]",
+        // },
+        {
+            href: '/haki',
+            icon: <SiReadthedocs />,
+            label: 'HAKI',
+            desc: "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami.",
+            accent: "bg-[#eb9090]",
+        },
+        // {
+        //     href: '/audit',
+        //     icon: <FaUserTie />,
+        //     label: 'Audit',
+        //     desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
+        //     accent: "bg-[#ead08d99]",
+        // },
+    ]
+}
 
 export const DataBanner = [
     {

@@ -69,7 +69,9 @@ export const MobileDrawer = () => {
                             </a>
                         </li>
                     ))}
-                    <SearchNavbar />
+                        <div className="flex flex-col justify-center gap-3 md:px-5 py-5 px-3">
+                            <SearchNavbar />
+                        </div>
                 </div>
             </ul>
         </>
