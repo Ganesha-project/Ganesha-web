@@ -46,7 +46,7 @@ export default function RootLayout({ children, pageProps }) {
           </ClientProvider>
         </ThemeProvider>
 
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-591QLGLD19"></Script>
+        <Script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-591QLGLD19" />
         <Script>
           {`
           window.dataLayer = window.dataLayer || [];
