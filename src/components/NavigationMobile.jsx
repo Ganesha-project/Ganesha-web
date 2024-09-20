@@ -135,7 +135,7 @@ export const NavigationMobile = () => {
                                     </span>
                                 </button>
                                 <dialog id="my_modal_5" className="modal modal-bottom origin-center snap-center place-self-center">
-                                    <div className="modal-box dark:bg-opacity-80 dark:bg-darkColor bg-gray-50 bg-opacity-50 backdrop-blur-lg shadow-custom space-y-5">
+                                    <div className="modal-box dark:bg-opacity-80 dark:bg-darkColor bg-gray-50 bg-opacity-50 backdrop-blur-lg shadow-custom space-y-5 max-h-[80%]">
                                         <SearchNavbar label={false} className={'rounded-xl !h-[40px] !outline-none !border-none '}/>
                                         <div>
                                             <h3 className="font-bold mb-3 text-[16px]">Main Menu</h3>
