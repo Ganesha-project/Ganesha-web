@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import ClientProvider from '@/components/ClientProvider';
 import Head from 'next/head';
 import { NavigationMobile } from "@/components/NavigationMobile";
+import Script from "next/script";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export default function RootLayout({ children, pageProps }) {
     <html lang="en" className="scroll-smooth">
       <Head>
         <link rel="icon" type="image/png" sizes="16x16" href="icon.png" />
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8227813889502050"
           crossOrigin="anonymous"
@@ -38,12 +39,22 @@ export default function RootLayout({ children, pageProps }) {
           <ClientProvider>
             <Navbar />
             <FloatingButton />
-            <NavigationMobile/>
+            <NavigationMobile />
             {children}
             <Analytics />
             <Footer />
           </ClientProvider>
         </ThemeProvider>
+
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-591QLGLD19"></Script>
+        <Script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-591QLGLD19');
+          `}
+        </Script>
       </body>
     </html>
   );
