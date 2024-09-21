@@ -7,7 +7,7 @@ import { WALINK } from "./Links/Links";
 import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiWhatsappFill } from "react-icons/ri";
 import { IoArrowUp } from "react-icons/io5";
 import { SearchNavbar } from "./SearchNavbar";
-import { IoIosArrowBack, IoIosArrowDropleft, IoIosArrowDropleftCircle } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 export const NavigationMobile = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -43,10 +43,14 @@ export const NavigationMobile = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos, visible, handleScroll]);
+    }, [prevScrollPos, visible]);
 
     const toggleMinimize = () => {
+        // Jika tombol maximize ditekan, setVisible(true) untuk menampilkan navigasi
         setIsMinimized(!isMinimized);
+        if (isMinimized) {
+            setVisible(true); // Pasti tampilkan navigasi saat maximize
+        }
     };
 
     const [isVisible, setIsVisible] = useState(false);
@@ -74,7 +78,6 @@ export const NavigationMobile = () => {
         });
     };
 
-    // Fungsi untuk melacak konversi saat tombol WhatsApp ditekan
     const gtagSendEvent = (url) => {
         var callback = () => {
             if (typeof url === 'string') {
@@ -98,7 +101,7 @@ export const NavigationMobile = () => {
                     <div className="flex flex-col gap-2 w-full items-end">
                         <div className="space-x-2">
                             <button
-                                onClick={() => gtagSendEvent(WALINK)} // Menggunakan gtagSendEvent
+                                onClick={() => gtagSendEvent(WALINK)}
                                 className={`${isVisible ? "" : "translate-x-[52px]"} self-end bg-[#4ded6a87] hover:bg-[#35a549] backdrop-blur-md hover:scale-95 duration-300 ease-in-out text-white font-bold text-xl p-3 rounded-full shadow-custom`}
                             >
                                 <RiWhatsappFill className="drop-shadow-md" />
@@ -123,18 +126,12 @@ export const NavigationMobile = () => {
                                             ${(el.link === "/" && path === "/") ? "!-ml-7" : ""} text-xl flex flex-row items-center gap-2`}
                                         >
                                             {(el.link === "/" && path === "/") || (el.link !== "/" && path.startsWith(el.link)) ? el.iconActive : el.icon}
-
-                                            <span className={`${(el.link === "/" && path === "/") ||
-                                                (el.link !== "/" && path.startsWith(el.link))
-                                                ? "block font-semibold"
-                                                : "hidden"
-                                                } text-xs`}>
+                                            <span className={`${(el.link === "/" && path === "/") || (el.link !== "/" && path.startsWith(el.link)) ? "block font-semibold" : "hidden"} text-xs`}>
                                                 {el.label}
                                             </span>
                                         </button>
                                     </Link>
                                 ))}
-                                {/* Tombol untuk membuka menu */}
                                 <button
                                     onClick={() => document.getElementById('my_modal_5').showModal()}
                                     className="swap swap-rotate hover:swap-active opacity-60 hover:opacity-100 duration-300 ease-in-out !place-items-center">
@@ -145,14 +142,13 @@ export const NavigationMobile = () => {
                                         <RiAppsFill className="text-xl duration-300 ease-in-out hover:drop-shadow-[0px_0px_5px_#aa0ab5] dark:hover:drop-shadow-[0px_0px_5px_#e600ff] hover:scale-[1.1] hover:animate-bounce" />
                                     </span>
                                 </button>
-                                {/* Modal untuk menu */}
                                 <dialog id="my_modal_5" className="modal modal-bottom origin-center snap-center place-self-center">
                                     <div className="modal-box dark:bg-opacity-80 dark:bg-darkColor bg-gray-50 bg-opacity-50 backdrop-blur-lg shadow-custom space-y-5 max-h-[80%]">
                                         <SearchNavbar
                                             label={false}
                                             className={'rounded-xl !h-[40px] !outline-none !border-none'}
-                                            readOnly={isDrawerOpen} // Set readOnly ketika drawer terbuka
-                                            onFocus={() => setIsDrawerOpen(false)} // Buat editable saat di-click
+                                            readOnly={isDrawerOpen}
+                                            onFocus={() => setIsDrawerOpen(false)}
                                         />
                                         <div>
                                             <h3 className="font-bold mb-3 text-[16px]">Main Menu</h3>
@@ -174,7 +170,7 @@ export const NavigationMobile = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <h3 className="font-bold mb-3 text-[16px]" >Legalitas Menu</h3>
+                                            <h3 className="font-bold mb-3 text-[16px]">Legalitas Menu</h3>
                                             <div className="w-full flex">
                                                 {BtmNavigationLinks.legalities.map((el, idx) => (
                                                     <Link
