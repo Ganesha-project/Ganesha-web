@@ -18,13 +18,13 @@ export const CardVO = () => {
         const handleResize = () => {
             if (window.innerWidth >= 1024) {
                 setItemsToShow(3);
-                setScrollTo(80)
+                setScrollTo(50)
             } else if (window.innerWidth >= 768) {
                 setItemsToShow(2);
-                setScrollTo(80)
+                setScrollTo(20)
             } else {
                 setItemsToShow(1);
-                setScrollTo(100)
+                setScrollTo(20)
             }
         };
 
@@ -54,8 +54,8 @@ export const CardVO = () => {
                             <>
                                 <div
                                     key={idx}
-                                    onClick={() => document.getElementById(`modal-${idx}`).showModal()}
-                                    className={`${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === dataPageVO.Location.length - 1 ? 'mr-5 md:mr-24' : ''} cursor-pointer carousel-item w-[80lvw] md:w-[25lvw] h-[80lvh] relative group duration-300 ease-in-out hover:-translate-y-3 overflow-hidden hover:shadow-mainShadow rounded-3xl`}>
+                                    className={`
+                                    ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === dataPageVO.Location.length - 1 ? 'mr-5 md:mr-24' : ''} carousel-item w-[80lvw] md:w-[25lvw] h-[80lvh] relative group duration-300 ease-in-out hover:-translate-y-3 overflow-hidden hover:shadow-mainShadow rounded-3xl`}>
                                     <img
                                         className="w-full h-[80lvh] rounded-3xl object-cover"
                                         src={el.image}
@@ -72,13 +72,20 @@ export const CardVO = () => {
                                     <div className="z-30 absolute bottom-0 left-0">
                                     </div>
                                     <div className={`absolute !z-50 right-5 bottom-5  ${idx === dataPageVO.Location.length - 1 ? 'right-28' : ''}`}>
-                                        <button className="h-10 w-10 flex items-center justify-center rounded-full dark:bg-black bg-white">
+                                        <button
+                                            onClick={() => document.getElementById(`modal-${idx}`).showModal()}
+                                            className="h-10 w-10 flex items-center justify-center rounded-full dark:bg-black bg-white">
                                             <FaPlus className="dark:text-gray-100 text-gray-600 text-xl group-hover:rotate-90 duration-300 ease-in-out" />
                                         </button>
                                     </div>
                                     <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-2xl duration-300 ease-in-out">
-                                        <div className="group-hover:scale-100 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
-                                            Click Me!
+                                        <div
+                                            className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
+                                            <button
+                                                onClick={() => document.getElementById(`modal-${idx}`).showModal()}
+                                                className="flex font-semibold items-center pl-2 py-1 bg-white dark:bg-darkColor dark:bg-opacity-20 bg-opacity-20 rounded-full">
+                                                Preview <span className="mx-1 p-1 bg-white dark:bg-darkColor dark:text-white rounded-full text-[13px] text-gray-800"> <FaPlus /> </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

@@ -50,7 +50,7 @@ export const WhyLegal = ({ data, text, text1 }) => {
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''} md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
+                                className={`${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''} shimmer relative group md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
                             >
                                 <h1 className="text-2xl font-semibold h-[30lvh] bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
                                     {el.title}
@@ -67,6 +67,9 @@ export const WhyLegal = ({ data, text, text1 }) => {
                                         </div>
                                     ))}
                                 </div>
+                                {/* <div className="absolute inset-0 h-full w-full shimmer-bg group-hover:shimmer-hover"></div> */}
+                            {/* <div className="absolute left-0 top-[-20px] h-full w-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] overflow-hidden rounded-3xl bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat shadow-2xl transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1300ms]"></div> */}
+
                             </div>
                         ))}
                     </div>
@@ -80,6 +83,30 @@ export const WhyLegal = ({ data, text, text1 }) => {
                     </button>
                 </div>
             </section>
+            <CardShineEffect />
         </>
     );
 };
+export const CardShineEffect = () => {
+    return (
+        <div className="bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-baseColor relative max-w-md overflow-hidden rounded-xl border border-slate-900 bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat px-8 py-16 shadow-2xl transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1500ms]">
+            <span className="mb-4 inline-flex items-center justify-center rounded-md bg-blue-600 p-2 shadow-lg">
+                <svg
+                    className="h-6 w-6 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                />
+            </span>
+            <h3 className="mb-2 font-medium tracking-tight text-white">Hello!</h3>
+            <p className="text-sm text-slate-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex
+                obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil
+                quod quibusdam expedita nemo.
+            </p>
+        </div>
+    );
+};
+

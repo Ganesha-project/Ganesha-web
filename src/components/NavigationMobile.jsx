@@ -223,10 +223,7 @@ export const NavigationMobile = () => {
                         </div>
                     </div>
                 </div>
-                {/* <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"}  z-50 p-2 shadow-secondaryShadow bg-opacity-45 dark:bg-opacity-45 backdrop-blur-md bg-white dark:bg-darkColor rounded-full fixed bottom-5 right-5 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
-                    <RiArrowDropLeftLine className="drop-shadow-lg" />
-                </button> */}
-                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "translate-x-full scale-0"}  newCorner z-50 pl-[5.5px] pr-[5.5px] py-[7px] text-white bg-black rounded-l-3xl fixed bottom-5 right-0 text-[15px] flex flex-col items-center duration-300 ease-in-out`}>
+                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "translate-x-full scale-0"} shadow-[0px_2px_35px_0px_#cfa5d1] newCorner z-50 pl-[5.5px] pr-[5.5px] py-[7px] text-white bg-black rounded-l-3xl fixed bottom-5 right-0 text-[15px] flex flex-col items-center duration-300 ease-in-out`}>
                     <IoIosArrowBack className="drop-shadow-lg" />
                 </button>
             </section>

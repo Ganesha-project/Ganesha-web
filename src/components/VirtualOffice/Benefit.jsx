@@ -14,7 +14,7 @@ export const Benefit = () => {
                 </div>
                 <div className="flex md:flex-row flex-col gap-5 md:justify-between">
                     {dataPageVO.benefit.map((el, idx) => (
-                        <div key={idx} className="overflow-hidden flex flex-col min-w-[100%] md:min-w-[5%] md:w-[25%] md:hover:w-[100%] ease-in-out transition-all duration-500 space-y-5 dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b rounded-3xl p-6 md:p-10">
+                        <div key={idx} className="shimmer relative overflow-hidden flex flex-col min-w-[100%] md:min-w-[5%] md:w-[25%] md:hover:w-[100%] ease-in-out transition-all duration-500 space-y-5 dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b rounded-3xl p-6 md:p-10">
                             <span className="text-3xl md:text-5xl">
                                 {el.icon}
                             </span>

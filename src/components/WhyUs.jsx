@@ -9,7 +9,7 @@ export const WhyUs = () => {
                 <div className="flex md:flex-row flex-col gap-5">
                     {WhyUsData.points?.map((el, idx) => (
                         <>
-                            <div key={idx} className="md:h-[50lvh] group hover:brightness-110 flex flex-col min-w-[100%] md:min-w-[5%] md:w-[25%] md:hover:w-[100%] group duration-500 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-b from-[#64076f53] to-white dark:from-[#ccb3cfb9] dark:to-black dark:bg-opacity-25 hover:bg-opacity-40 dark:hover:bg-opacity-50 bg-opacity-15">
+                            <div key={idx} className="shimmer md:h-[50lvh] group hover:brightness-110 flex flex-col min-w-[100%] md:min-w-[5%] md:w-[25%] md:hover:w-[100%] group duration-500 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-b from-[#64076f53] to-white dark:from-[#ccb3cfb9] dark:to-black dark:bg-opacity-25 hover:bg-opacity-40 dark:hover:bg-opacity-50 bg-opacity-15">
                                 <div className="md:h-[10lvh] md:text-5xl text-4xl p-0 w-fit mb-5 group-hover:rotate-[360deg] duration-500 ease-in-out">
                                     {el.logo}
                                 </div>
