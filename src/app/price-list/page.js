@@ -9,6 +9,7 @@ import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDa
 import { HakiPackages } from '../../../public/DB/HakiPackages';
 import { servicePackages } from '../../../public/DB/IzinPackages';
 import { AccountantPackages } from '../../../public/DB/AccountantPackages';
+import { AdsBanner } from '@/components/AdsBanner';
 
 export const metadata = {
     title: "Price List semua Layanan - Ganesha Consulting",
@@ -53,6 +54,7 @@ export default async function AllProductsPage() {
     return (
         <>
             <BannerService />
+            <AdsBanner />
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
                 label={'Paket Pendirian PT'}

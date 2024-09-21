@@ -9,6 +9,7 @@ import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { dataPageBadanUsaha, undangUndangTerkait, whyBadanUsaha } from "../../../public/Data/BadanUsahaData";
 import { Laws } from "@/components/LegalComponents/Laws";
 import { DataPageLegal } from "../../../public/Data/LegalitasData";
+import { AdsBanner } from "@/components/AdsBanner";
 
 export const metadata = {
     title: "Pendirian Badan Usaha - Yayasan, Firma Hukum, & Asosiasi dengan Ganesha Consulting",
@@ -79,6 +80,7 @@ export default async function PendirianBadanUsaha() {
                 text={'Badan Usaha diperlukan?'}
             />
             <ClientPhotos />
+            <AdsBanner/>
             <Laws
                 data={undangUndangTerkait}
                 text1={'Undang - Undang'}

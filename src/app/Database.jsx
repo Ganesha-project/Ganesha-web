@@ -860,3 +860,22 @@ export const DataSelectFilterArticle = [
     { label: "Newest", value: "desc" },
     { label: "Oldest", value: "asc" }
 ]
+
+
+export const dataAdsBanner = [
+    {
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_2_11zon_b8dd76b534.webp",
+        href: "/web-development",
+        alt: "Ganesha Promo Web"
+    },
+    {
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_1_11zon_9f38d3100f.webp",
+        href: "/pendirian-pt",
+        alt: "Ganesha Promo Pendirian PT"
+    },
+    {
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_11zon_3_11zon_d42ca9df45.webp",
+        href: "/price-list",
+        alt: "Ganesha Promo Semua Paket"
+    },
+]

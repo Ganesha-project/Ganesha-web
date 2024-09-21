@@ -8,6 +8,7 @@ import { BenefitWeb, dataHeader, dataPageWeb, FAQ } from "../../../public/Data/W
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { Header } from "@/components/WebComponents/Header";
 import { WebWork } from "@/components/WebComponents/WebWork";
+import { AdsBanner } from "@/components/AdsBanner";
 
 export const metadata = {
     title: "Jasa Pembuatan Website Profesional - Ganesha Consulting",
@@ -65,6 +66,7 @@ export default async function WebPage() {
             <Header
                 data={dataHeader.contentData}
             />
+            <AdsBanner/>
             <WhyLegal
                 data={dataPageWeb.whyWebsite}
                 text1={'Mengapa'}

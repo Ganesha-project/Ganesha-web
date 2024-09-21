@@ -12,6 +12,7 @@ import { SkeletonReccomendation } from '@/components/Skeleton/SekeletonReccomend
 import { WebWork } from '@/components/WebComponents/WebWork';
 import { SocmedWork } from '@/components/SocmedComponents/SocmedWork';
 import Head from 'next/head';
+import { AdsBanner } from '@/components/AdsBanner';
 
 
 export default function Home() {
@@ -21,6 +22,8 @@ export default function Home() {
   useEffect(() => {
     dispatch(fetchArticles(6));
   }, [dispatch]);
+
+
 
   return (
     <>
@@ -60,12 +63,12 @@ export default function Home() {
           `}
         </script>
       </Head>
-
       <HomeBanner />
       <AllServicesBtn />
       <ClientPhotos />
       <WebWork text={'Our Websites Work'} />
       <SocmedWork text={'Our Social Media Work'} />
+      <AdsBanner />
       <WhyUs />
       <ClientLogo />
       {error ? (

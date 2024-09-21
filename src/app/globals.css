@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 body {
   @apply bg-white dark:bg-black text-gray-900 dark:text-gray-100;
@@ -108,15 +107,14 @@ body {
   backdrop-filter: blur(10px);
 }
 
-
 .noBar::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .noBar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .carousel2 {
@@ -140,4 +138,29 @@ body {
 }
 .animate-marqueeText {
   animation: marquee 5s linear infinite;
+}
+
+.newCorner::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  width: 30px;
+  height: 30px;
+  background: rgba(249, 30, 30, 0);
+  border-radius: 50%;
+  box-shadow: 17px 17px 0 #000000;
+}
+
+.newCorner::after {
+  content: "";
+  position: absolute;
+  z-index: -100;
+  right: 0px;
+  bottom: -30px;
+  width: 30px;
+  height: 30px;
+  background: rgba(249, 30, 30, 0);
+  border-radius: 50%;
+  box-shadow: 17px -17px 0 #000000;
 }

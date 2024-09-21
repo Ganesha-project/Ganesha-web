@@ -10,6 +10,7 @@ import { ClientPhotos } from '@/components/ClientPhotos';
 import { Explanation } from '@/components/LegalComponents/Explanation';
 import { Laws } from '@/components/LegalComponents/Laws';
 import { DataPageLegal } from '../../../public/Data/LegalitasData';
+import { AdsBanner } from '@/components/AdsBanner';
 
 export const metadata = {
     title: "Jasa Pendirian PT - Ganesha Consulting",
@@ -73,6 +74,7 @@ export default function PendirianPtPage() {
                 text={'Apa itu PT?'}
                 desc={DataPageLegal.whatPt.desc}
             />
+            <AdsBanner/>
             <Laws
                 data={DataPageLegal.legalTexts}
                 text={'Terkait PT di Indonesia'}

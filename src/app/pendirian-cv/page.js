@@ -11,6 +11,7 @@ import { Laws } from "@/components/LegalComponents/Laws";
 import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { DataPageLegal } from "../../../public/Data/LegalitasData";
 import { dataPageCV } from "../../../public/Data/CVData";
+import { AdsBanner } from "@/components/AdsBanner";
 
 export const metadata = {
     title: "Jasa Pendirian CV - Ganesha Consulting",
@@ -71,6 +72,7 @@ export default async function PendirianCvPage() {
                 desc={dataPageCV.whatCv.desc}
                 text={'Apa Itu CV?'}
             />
+            <AdsBanner/>
             <Laws
                 data={dataPageCV.undangUndangTerkait}
                 text1={'Undang - Undang'}

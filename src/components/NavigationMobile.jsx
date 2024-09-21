@@ -7,6 +7,7 @@ import { WALINK } from "./Links/Links";
 import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiWhatsappFill } from "react-icons/ri";
 import { IoArrowUp } from "react-icons/io5";
 import { SearchNavbar } from "./SearchNavbar";
+import { IoIosArrowBack, IoIosArrowDropleft, IoIosArrowDropleftCircle } from "react-icons/io";
 
 export const NavigationMobile = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -157,8 +158,11 @@ export const NavigationMobile = () => {
                         </div>
                     </div>
                 </div>
-                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"}  z-50 p-2 shadow-secondaryShadow bg-opacity-45 dark:bg-opacity-45 backdrop-blur-md bg-white dark:bg-darkColor rounded-full fixed bottom-5 right-5 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
+                {/* <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"}  z-50 p-2 shadow-secondaryShadow bg-opacity-45 dark:bg-opacity-45 backdrop-blur-md bg-white dark:bg-darkColor rounded-full fixed bottom-5 right-5 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
                     <RiArrowDropLeftLine className="drop-shadow-lg" />
+                </button> */}
+                  <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "translate-x-full scale-0"}  newCorner z-50 pl-[5.5px] pr-[5.5px] py-[7px] text-white bg-black rounded-l-3xl fixed bottom-5 right-0 text-[15px] flex flex-col items-center duration-300 ease-in-out`}>
+                    <IoIosArrowBack className="drop-shadow-lg" />
                 </button>
             </section>
         </>
