@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { DataProduct } from "@/app/Database";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { TiDelete } from "react-icons/ti";
 
-export const SearchNavbar = ({ label, className }) => {
+export const SearchNavbar = ({ label, className, readOnly, onFocus }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleSearchChange = (e) => {
@@ -40,6 +40,8 @@ export const SearchNavbar = ({ label, className }) => {
                         placeholder="Cari Layanan"
                         value={searchTerm}
                         onChange={handleSearchChange}
+                        readOnly={readOnly} // Set to readOnly based on prop
+                        onFocus={onFocus} // Handle focus event
                     />
                     {searchTerm !== "" && (
                         <button

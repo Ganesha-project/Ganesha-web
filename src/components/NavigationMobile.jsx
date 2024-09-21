@@ -14,7 +14,12 @@ export const NavigationMobile = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [isMinimized, setIsMinimized] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const path = usePathname();
+
+    const toggleDrawer = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -143,9 +148,69 @@ export const NavigationMobile = () => {
                                 {/* Modal untuk menu */}
                                 <dialog id="my_modal_5" className="modal modal-bottom origin-center snap-center place-self-center">
                                     <div className="modal-box dark:bg-opacity-80 dark:bg-darkColor bg-gray-50 bg-opacity-50 backdrop-blur-lg shadow-custom space-y-5 max-h-[80%]">
-                                        <SearchNavbar label={false} className={'rounded-xl !h-[40px] !outline-none !border-none '} />
-                                        {/* Konten menu */}
-                                        {/* ... */}
+                                        <SearchNavbar
+                                            label={false}
+                                            className={'rounded-xl !h-[40px] !outline-none !border-none'}
+                                            readOnly={isDrawerOpen} // Set readOnly ketika drawer terbuka
+                                            onFocus={() => setIsDrawerOpen(false)} // Buat editable saat di-click
+                                        />
+                                        <div>
+                                            <h3 className="font-bold mb-3 text-[16px]">Main Menu</h3>
+                                            <div className="w-full flex">
+                                                {BtmNavigationLinks.drawerMain.map((el, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        className={`w-[25%] flex flex-col items-center justify-center gap-1`}
+                                                        href={el.href}
+                                                    >
+                                                        <div className={`${el.accent} p-3 text-2xl w-fit rounded-full shadow-custom`}>
+                                                            {el.icon}
+                                                        </div>
+                                                        <span className="text-[10px] text-center truncate-last-1">
+                                                            {el.label}
+                                                        </span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold mb-3 text-[16px]" >Legalitas Menu</h3>
+                                            <div className="w-full flex">
+                                                {BtmNavigationLinks.legalities.map((el, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        className={`w-[25%] flex flex-col items-center justify-center gap-1`}
+                                                        href={el.href}
+                                                    >
+                                                        <div className={`${el.accent} p-3 text-2xl w-fit rounded-full shadow-custom`}>
+                                                            {el.icon}
+                                                        </div>
+                                                        <span className="text-[10px] text-center truncate-last-1">
+                                                            {el.label}
+                                                        </span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="-mx-6">
+                                            <h3 className="font-bold mb-3 text-[16px]  ml-6">Layanan Lainnya</h3>
+                                            <div className="w-full carousel2 gap-8">
+                                                {BtmNavigationLinks.other.map((el, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        className={`${idx === 0 ? 'ml-10 md:ml-0' : ''} ${idx === BtmNavigationLinks.other.length - 1 ? 'mr-10 md:mr-0' : ''} w-[25%] flex flex-col items-center justify-center gap-1`}
+                                                        href={el.href}
+                                                    >
+                                                        <div className={`${el.accent} p-3 text-2xl w-fit rounded-full shadow-custom`}>
+                                                            {el.icon}
+                                                        </div>
+                                                        <span className="text-[10px] text-center truncate-last-1">
+                                                            {el.label}
+                                                        </span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                     <form method="dialog" className="modal-backdrop">
                                         <button>close</button>
@@ -161,7 +226,7 @@ export const NavigationMobile = () => {
                 {/* <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "scale-0"}  z-50 p-2 shadow-secondaryShadow bg-opacity-45 dark:bg-opacity-45 backdrop-blur-md bg-white dark:bg-darkColor rounded-full fixed bottom-5 right-5 text-3xl flex flex-col items-center duration-300 ease-in-out`}>
                     <RiArrowDropLeftLine className="drop-shadow-lg" />
                 </button> */}
-                  <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "translate-x-full scale-0"}  newCorner z-50 pl-[5.5px] pr-[5.5px] py-[7px] text-white bg-black rounded-l-3xl fixed bottom-5 right-0 text-[15px] flex flex-col items-center duration-300 ease-in-out`}>
+                <button onClick={toggleMinimize} className={`${isMinimized ? "scale-100" : "translate-x-full scale-0"}  newCorner z-50 pl-[5.5px] pr-[5.5px] py-[7px] text-white bg-black rounded-l-3xl fixed bottom-5 right-0 text-[15px] flex flex-col items-center duration-300 ease-in-out`}>
                     <IoIosArrowBack className="drop-shadow-lg" />
                 </button>
             </section>
