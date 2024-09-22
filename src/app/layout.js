@@ -44,20 +44,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-591QLGLD19', {
               page_path: window.location.pathname,
             });
-
-            // Helper function to delay opening a URL until a gtag event is sent.
-            function gtagSendEvent(url) {
-              var callback = function () {
-                if (typeof url === 'string') {
-                  window.location = url;
-                }
-              };
-              gtag('event', 'contact_conversion', {
-                'event_callback': callback,
-                'event_timeout': 2000,
-              });
-              return false;
-            }
           `}
         </Script>
 

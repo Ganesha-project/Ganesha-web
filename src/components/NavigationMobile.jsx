@@ -78,13 +78,15 @@ export const NavigationMobile = () => {
         });
     };
 
-    const gtagSendEvent = (url) => {
-        var callback = () => {
+    // Fungsi pelacakan konversi Google Ads
+    const gtag_report_conversion = (url) => {
+        const callback = () => {
             if (typeof url === 'string') {
                 window.location = url;
             }
         };
-        gtag('event', 'ads_conversion_Hubungi_Kami_1', {
+        window.gtag('event', 'conversion', {
+            'send_to': 'AW-16462531026/BMEZCLa_z9QZENKT-ak9',
             'event_callback': callback,
             'event_timeout': 2000,
         });
@@ -101,7 +103,7 @@ export const NavigationMobile = () => {
                     <div className="flex flex-col gap-2 w-full items-end">
                         <div className="space-x-2">
                             <button
-                                onClick={() => gtagSendEvent(WALINK)}
+                                onClick={() => gtag_report_conversion(WALINK)}
                                 className={`${isVisible ? "" : "translate-x-[52px]"} self-end bg-[#4ded6a87] hover:bg-[#35a549] backdrop-blur-md hover:scale-95 duration-300 ease-in-out text-white font-bold text-xl p-3 rounded-full shadow-custom`}
                             >
                                 <RiWhatsappFill className="drop-shadow-md" />

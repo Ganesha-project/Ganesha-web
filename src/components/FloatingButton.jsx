@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { RiWhatsappFill } from 'react-icons/ri';
 
@@ -32,14 +31,15 @@ export const FloatingButton = () => {
         });
     };
 
-    // Fungsi untuk mengirim event gtag sebelum navigasi
-    const gtagSendEvent = (url) => {
+    // Fungsi pelacakan konversi Google Ads
+    const gtag_report_conversion = (url) => {
         const callback = () => {
             if (typeof url === 'string') {
                 window.location = url;
             }
         };
-        window.gtag('event', 'contact_conversion', {
+        window.gtag('event', 'conversion', {
+            'send_to': 'AW-16462531026/BMEZCLa_z9QZENKT-ak9',
             'event_callback': callback,
             'event_timeout': 2000,
         });
@@ -59,7 +59,7 @@ export const FloatingButton = () => {
                         </svg>
                     </button>
                     <button
-                        onClick={() => gtagSendEvent(WaLink)}
+                        onClick={() => gtag_report_conversion(WaLink)}
                         className="bg-[#4DED69] hover:bg-[#35a549] hover:scale-95 duration-300 ease-in-out text-white font-bold py-3 px-3 rounded-full shadow-lg"
                     >
                         <RiWhatsappFill size={25} />
@@ -68,4 +68,4 @@ export const FloatingButton = () => {
             </div>
         </>
     );
-}
+};
