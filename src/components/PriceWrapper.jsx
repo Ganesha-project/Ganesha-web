@@ -3,6 +3,7 @@ import { Title } from "./Title"
 import { PTPackages } from "../../public/DB/PTPackages"
 import { formatToRupiah } from "@/helper/formatToRupiah"
 import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "react-icons/bs"
+import { IoIosArrowForward } from "react-icons/io"
 
 export const PriceWrapper = ({ data, text1, text }) => {
     return (
@@ -57,7 +58,13 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                             <FaPlus className="text-lg md:text-xl text-gray-800 dark:text-gray-100" />
                                         </button>
                                     </form>
-                                    <section className="mt-7">
+                                    <section className="mt-7 space-y-5">
+                                        <a
+                                            href={el.href}
+                                            className="flex gap-2 items-center btn btn-ghost bg-gray-200 order-last md:order-none dark:bg-darkColor bg-opacity-30 rounded-full"
+                                        >
+                                            Cari Tahu Lebih Lengkap! <IoIosArrowForward/>
+                                        </a>
                                         <div className="carousel2 w-full md:flex md:flex-wrap md:justify-center gap-5">
                                             {el.items.map((el, idx) => (
                                                 <div
