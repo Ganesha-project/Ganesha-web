@@ -891,7 +891,7 @@ export const dataPriceWrapper = {
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/pt_1_11zon_d883df6829.webp",
             desc: "Pendirian PT proffesional, cepat dan murah hanya di Ganesha Consulting",
             items: [...PTPackages],
-            href: "/pendrian-pt"
+            href: "/pendirian-pt"
         },
         {
             tag: "Legalitas",
@@ -899,7 +899,7 @@ export const dataPriceWrapper = {
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/cv_3_11zon_e520b68e4b.webp",
             desc: "Pendirian CV proffesional, cepat dan murah hanya di Ganesha Consulting",
             items: [...CVPackages],
-            href: "/pendrian-cv"
+            href: "/pendirian-cv"
         },
         {
             tag: "Legalitas",
@@ -907,7 +907,7 @@ export const dataPriceWrapper = {
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/badan_4_11zon_11zon_43b7ee1b61.webp",
             desc: "Pendirian Firma Hukum, Asosiasi, Yayasan mudah dan cepat di Ganesha Consulting",
             items: [...BUPackages],
-            href: "/pendrian-badan-usaha"
+            href: "/pendirian-badan-usaha"
         },
         {
             tag: "Izin",
