@@ -18,7 +18,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                 `}
                         >
                             <img
-                                className="w-full h-full object-cover rounded-3xl"
+                                className="w-full h-full object-cover bg-baseColor rounded-3xl"
                                 src={el.image}
                                 alt={el.label}
                             />

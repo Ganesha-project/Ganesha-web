@@ -888,23 +888,23 @@ export const dataPriceWrapper = {
         {
             tag: "Legalitas",
             label: "Pendirian PT",
-            image: "https://img.freepik.com/free-photo/multiethnic-male-female-colleagues-sitting-office-discussing-charts-meeting_1098-17724.jpg?t=st=1727060021~exp=1727063621~hmac=fd48462bc0b2318516f0e2b0d27633c9cb56be1c5df55c33d23f3b88d0e8d833&w=1800",
-            desc: "Pendirian PT proffesional, cepat dan murah hanya di ganesha consulting",
+            image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/pt_1_11zon_d883df6829.webp",
+            desc: "Pendirian PT proffesional, cepat dan murah hanya di Ganesha Consulting",
             items: [...PTPackages],
             href: "/pendrian-pt"
         },
         {
             tag: "Legalitas",
             label: "Pendirian CV",
-            image: "https://img.freepik.com/free-photo/team-working-together-project_23-2149325455.jpg?t=st=1727060090~exp=1727063690~hmac=185f6fe6e7110fac42643eed71018fc900e5ab42b61c088ed62292724f5f4b0d&w=1800",
-            desc: "Pendirian CV proffesional, cepat dan murah hanya di ganesha consulting",
+            image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/cv_3_11zon_e520b68e4b.webp",
+            desc: "Pendirian CV proffesional, cepat dan murah hanya di Ganesha Consulting",
             items: [...CVPackages],
             href: "/pendrian-cv"
         },
         {
             tag: "Legalitas",
             label: "Pendirian Badan Usaha",
-            image: "https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg?t=st=1727064684~exp=1727068284~hmac=e52d674591ab9198945c043a5c9f588f72b78cc73f93e6445937895491bf7841&w=1800",
+            image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/badan_4_11zon_11zon_43b7ee1b61.webp",
             desc: "Pendirian Firma Hukum, Asosiasi, Yayasan mudah dan cepat di Ganesha Consulting",
             items: [...BUPackages],
             href: "/pendrian-badan-usaha"
@@ -912,7 +912,7 @@ export const dataPriceWrapper = {
         {
             tag: "Izin",
             label: "Perizinan",
-            image: "https://img.freepik.com/free-photo/court-hammer-books-judgment-law-concept_144627-30451.jpg?t=st=1727060205~exp=1727063805~hmac=592d1dcb4a18efd8c314e054abfc8ef3fa60bc740fa38da8a0cfcf602a93cdf7&w=826",
+            image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/izin_2_11zon_885422bfbc.webp",
             desc: "Izin SKPLA, Izin lalulintas, Amdal dan lain-lain lnegkap hanya di Ganesha Consulting",
             items: [...servicePackages],
             href: "/perizinan"
