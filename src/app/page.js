@@ -13,6 +13,8 @@ import { WebWork } from '@/components/WebComponents/WebWork';
 import { SocmedWork } from '@/components/SocmedComponents/SocmedWork';
 import Head from 'next/head';
 import { AdsBanner } from '@/components/AdsBanner';
+import { PriceWrapper } from '@/components/PriceWrapper';
+import { dataPriceWrapper } from './Database';
 
 
 export default function Home() {
@@ -65,6 +67,7 @@ export default function Home() {
       </Head>
       <HomeBanner />
       <AllServicesBtn />
+      <PriceWrapper text={"Our Main Services"} text1={"Some of"} data={dataPriceWrapper.legal} />
       <ClientPhotos />
       <WebWork text={'Our Websites Work'} />
       <SocmedWork text={'Our Social Media Work'} />

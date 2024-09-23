@@ -67,9 +67,6 @@ export const WhyLegal = ({ data, text, text1 }) => {
                                         </div>
                                     ))}
                                 </div>
-                                {/* <div className="absolute inset-0 h-full w-full shimmer-bg group-hover:shimmer-hover"></div> */}
-                            {/* <div className="absolute left-0 top-[-20px] h-full w-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] overflow-hidden rounded-3xl bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat shadow-2xl transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1300ms]"></div> */}
-
                             </div>
                         ))}
                     </div>

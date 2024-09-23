@@ -5,7 +5,7 @@ import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircle, BsInfoCircleFil
 import { IoIosArrowBack, IoIosArrowForward, IoMdInformationCircle } from "react-icons/io";
 import { TbInfoSquareFilled } from "react-icons/tb";
 
-export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm, }) => {
+export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm, visibility }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(1);
     const [scrollTo, setScrollTo] = useState(10);
@@ -44,7 +44,7 @@ export const ReusableCards = ({ data, label, scrollToLg, scrollToMd, scrollToSm,
     return (
         <>
             <section className="py-10 space-y-5">
-                <div className="md:mx-24 mx-5 space-y-5">
+                <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 mx-5 space-y-5`}>
                     {totalItems <= 3 ? (
                         <div className="flex justify-center w-full items-center">
                             <div className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase w-fit`}>

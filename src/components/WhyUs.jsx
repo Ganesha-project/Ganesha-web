@@ -5,7 +5,7 @@ export const WhyUs = () => {
     return (
         <>
             <section className="md:mx-24 mx-5 space-y-8 mb-20 2xl:mx-80">
-                <Title text1={'Kenapa'} text={'Harus Ganesha Consulting?'} />
+                <Title text1={'Why'} text={'Choose?'} />
                 <div className="flex md:flex-row flex-col gap-5">
                     {WhyUsData.points?.map((el, idx) => (
                         <>

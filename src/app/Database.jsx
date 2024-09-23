@@ -11,6 +11,10 @@ import { IoIosCall } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
 import { BiMedal } from "react-icons/bi";
 import { BsBuildingAdd, BsBuildingFillAdd } from "react-icons/bs";
+import { PTPackages } from "../../public/DB/PTPackages";
+import { CVPackages } from "../../public/DB/CVPackages";
+import { BUPackages } from "../../public/DB/OtherPackages";
+import { servicePackages } from "../../public/DB/IzinPackages";
 
 export const DataProduct = [
     {
@@ -859,8 +863,7 @@ export const FaqMainData = {
 export const DataSelectFilterArticle = [
     { label: "Newest", value: "desc" },
     { label: "Oldest", value: "asc" }
-]
-
+];
 
 export const dataAdsBanner = [
     {
@@ -878,4 +881,42 @@ export const dataAdsBanner = [
         href: "/price-list",
         alt: "Ganesha Promo Semua Paket"
     },
-]
+];
+
+export const dataPriceWrapper = {
+    legal: [
+        {
+            tag: "Legalitas",
+            label: "Pendirian PT",
+            image: "https://img.freepik.com/free-photo/multiethnic-male-female-colleagues-sitting-office-discussing-charts-meeting_1098-17724.jpg?t=st=1727060021~exp=1727063621~hmac=fd48462bc0b2318516f0e2b0d27633c9cb56be1c5df55c33d23f3b88d0e8d833&w=1800",
+            desc: "Pendirian PT proffesional, cepat dan murah hanya di ganesha consulting",
+            items: [...PTPackages],
+            href: "/pendrian-pt"
+        },
+        {
+            tag: "Legalitas",
+            label: "Pendirian CV",
+            image: "https://img.freepik.com/free-photo/team-working-together-project_23-2149325455.jpg?t=st=1727060090~exp=1727063690~hmac=185f6fe6e7110fac42643eed71018fc900e5ab42b61c088ed62292724f5f4b0d&w=1800",
+            desc: "Pendirian CV proffesional, cepat dan murah hanya di ganesha consulting",
+            items: [...CVPackages],
+            href: "/pendrian-cv"
+        },
+        {
+            tag: "Legalitas",
+            label: "Pendirian Badan Usaha",
+            image: "https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg?t=st=1727064684~exp=1727068284~hmac=e52d674591ab9198945c043a5c9f588f72b78cc73f93e6445937895491bf7841&w=1800",
+            desc: "Pendirian Firma Hukum, Asosiasi, Yayasan mudah dan cepat di Ganesha Consulting",
+            items: [...BUPackages],
+            href: "/pendrian-badan-usaha"
+        },
+        {
+            tag: "Izin",
+            label: "Perizinan",
+            image: "https://img.freepik.com/free-photo/court-hammer-books-judgment-law-concept_144627-30451.jpg?t=st=1727060205~exp=1727063805~hmac=592d1dcb4a18efd8c314e054abfc8ef3fa60bc740fa38da8a0cfcf602a93cdf7&w=826",
+            desc: "Izin SKPLA, Izin lalulintas, Amdal dan lain-lain lnegkap hanya di Ganesha Consulting",
+            items: [...servicePackages],
+            href: "/perizinan"
+        }
+
+    ]
+};
