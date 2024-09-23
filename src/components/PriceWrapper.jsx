@@ -61,7 +61,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                     <section className="mt-7 space-y-5">
                                         <a
                                             href={el.href}
-                                            className="flex gap-2 items-center btn btn-ghost bg-gray-200 order-last md:order-none dark:bg-darkColor bg-opacity-30 rounded-full"
+                                            className="flex gap-2 items-center btn btn-ghost bg-gray-200 order-last md:order-none dark:bg-darkColor rounded-full"
                                         >
                                             Cari Tahu Lebih Lengkap! <IoIosArrowForward/>
                                         </a>
@@ -71,7 +71,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                                     key={idx}
                                                     className="shimmer carousel-item md:w-[20lvw] w-[50lvw] h-[50lvw] md:h-[20lvw] p-5 rounded-3xl bg-gray-200 dark:bg-darkColor relative">
                                                     <h1 className="absolute left-5 top-5 font-bold">
-                                                        <span className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
+                                                        <span className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-wrap">
                                                             {el.type}
                                                         </span>
                                                     </h1>
