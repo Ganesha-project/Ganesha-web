@@ -6,6 +6,7 @@ import { FloatingButton } from "@/components/FloatingButton";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { NavigationMobile } from "@/components/NavigationMobile";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import ClientProvider from '@/components/ClientProvider';
 import Head from 'next/head';
 import Script from "next/script";
@@ -54,17 +55,17 @@ export default function RootLayout({ children }) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8227813889502050"
           crossOrigin="anonymous"
         />
-
         <ThemeProvider enableSystem={true} attribute="class">
           <ClientProvider>
             <Navbar />
             <FloatingButton />
             <NavigationMobile />
             {children}
-            <Analytics />
             <Footer />
           </ClientProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
