@@ -1,8 +1,6 @@
 import { FaPlus } from "react-icons/fa6"
 import { Title } from "./Title"
-import { PTPackages } from "../../public/DB/PTPackages"
 import { formatToRupiah } from "@/helper/formatToRupiah"
-import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "react-icons/bs"
 import { IoIosArrowForward } from "react-icons/io"
 
 export const PriceWrapper = ({ data, text1, text }) => {
@@ -46,13 +44,13 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                 <div>
                                     <button
                                         onClick={() => document.getElementById(`modal-${idx}`).showModal()}
-                                        className="btn btn-sm mt-2 btn-ghost rounded-full bg-darkColor bg-opacity-50 translate-y-[200%] group-hover:translate-y-0">
+                                        className="btn btn-sm mt-2 btn-ghost rounded-full bg-darkColor bg-opacity-50 translate-y-[200%] scale-0 group-hover:scale-100 origin-bottom group-hover:translate-y-0">
                                         Cek Pricelist
                                     </button>
                                 </div>
                             </div>
                             <dialog id={`modal-${idx}`} className="modal modal-bottom !p-[-1.5rem] backdrop-blur-md ">
-                                <div className="modal-box shadow-none bg-transparent md:w-[100%] md:h-full h-fit max-h-full max-w-full noBar">
+                                <div className="modal-box shadow-none bg-gray-50 dark:bg-black md:bg-transparent md:w-[100%] md:h-full h-fit max-h-full max-w-full noBar">
                                     <form method="dialog" className="flex justify-end self-end w-full">
                                         <button className="m-2 btn btn-circle btn-sm border-none bg-gray-200 focus:ring-0 dark:bg-darkColor hover:bg-gray-300 dark:hover:bg-gray-900 absolute right-0 top-0 rotate-45">
                                             <FaPlus className="text-lg md:text-xl text-gray-800 dark:text-gray-100" />
@@ -69,7 +67,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                             {el.items.map((el, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="shimmer carousel-item md:w-[20lvw] w-[50lvw] h-[50lvw] md:h-[20lvw] p-5 rounded-3xl bg-gray-200 dark:bg-darkColor relative">
+                                                    className="shimmer carousel-item md:w-[20lvw] w-[60lvw] h-[60lvw] md:h-[20lvw] p-5 rounded-3xl bg-gray-200 dark:bg-darkColor relative">
                                                     <h1 className="absolute left-5 top-5 font-bold">
                                                         <span className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-wrap">
                                                             {el.type}

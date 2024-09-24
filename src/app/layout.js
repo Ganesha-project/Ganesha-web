@@ -5,9 +5,9 @@ import { Footer } from "@/components/Footer";
 import { FloatingButton } from "@/components/FloatingButton";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
+import { NavigationMobile } from "@/components/NavigationMobile";
 import ClientProvider from '@/components/ClientProvider';
 import Head from 'next/head';
-import { NavigationMobile } from "@/components/NavigationMobile";
 import Script from "next/script";
 
 const quicksand = Quicksand({

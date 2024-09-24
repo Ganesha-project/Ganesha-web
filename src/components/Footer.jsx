@@ -1,152 +1,133 @@
-import Image from 'next/image'
-import logo from '../public/IMG/logos.png'
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa6'
-import { BiSolidPhoneCall } from 'react-icons/bi'
-import { TbBuildingBank, TbMailFilled } from 'react-icons/tb'
+import { BtmNavigationLinks, dataContact, NavLinks } from "@/app/Database"
+import { ExpandableButton } from "./ExpandableButton"
 
 export const Footer = () => {
-    const mailLink = "mailto:email@domain.com?subject=Konsultasi%20Ganesha%20Consulting&body=Halo%20kak%20saya%20mau%20konsultasi%20nih"
-    const waLink = "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20Ganesha%20Consulting"
-    const igLink = "https://www.instagram.com/ganeshamultikreatif?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-    const fbLink = "https://www.facebook.com/profile.php?id=61555739807086"
-    const linkedin = "https://www.linkedin.com/in/ganesha-multi-konsultan-4991412b2/"
-
     return (
         <>
-            <>
-                {/* Footer container */}
-                <footer className="bg-white 2xl:px-80 dark:bg-black text-center text-neutral-600 dark:text-gray-100 lg:text-left !z-50">
-                    {/* Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. */}
-                    <div className="mx-6 pt-8 text-center md:text-left">
-                        <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                            {/* TW elements section */}
-                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
-                                <h6 className="mb-4 gap-2 flex items-center justify-center font-semibold uppercase md:justify-start">
-                                    <span className='flex justify-center items-center'><TbBuildingBank /></span>
-                                    PT Ganesha Multi Kreatif
-                                </h6>
+            <footer className="h-full">
+                <div className="w-full h-full px-5 py-5 bg-gray-200 dark:bg-darkColor rounded-t-[35px] bg-opacity-20 dark:bg-opacity-50 shadow-[0px_45px_70px_10px_#4a4a4a] dark:shadow-[0px_45px_70px_10px_#ffffff]">
+                    <div className="flex md:flex-row gap-5 flex-col md:items-center md:justify-between">
+                        <div className="md:w-[50%] flex items-center gap-3">
+                            <img
+                                width={40}
+                                height={40}
+                                src="https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75"
+                                alt="Ganesha Consulting Logo"
+                            />
+                            <p className="font-bold text-lg">
+                                PT Ganesha Multi Kreatif
+                            </p>
+                        </div>
 
-                                <p className="">
-                                    Menara Cakrawala 12th Floor Unit 5A, Jalan M.H. Thamrin,
-                                    Desa/Kelurahan Kebon Sirih, Kec. Menteng, Kota Adm. Jakarta Pusat, Provinsi DKI Jakarta,
-                                    Kode Pos: 10340
-                                </p>
-                            </div>
-                            {/* Products section */}
-                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
-                                <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                    Produk Dan Jasa
-                                </h6>
-                                <p className="mb-4">
-                                    <a href="/all-products/sosmed" className="text-neutral-600 dark:text-gray-100">
-                                        Social Media Management
-                                    </a>
-                                </p>
-                                <p className="mb-4">
-                                    <a href="/all-products/web" className="text-neutral-600 dark:text-gray-100">
-                                        Website Development
-                                    </a>
-                                </p>
-                                <p className="mb-4">
-                                    <a href="/all-products/legalitas" className="text-neutral-600 dark:text-gray-100">
-                                        Legalitas Bisnis
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="all-products/legalitas/badan-usaha" className="text-neutral-600 dark:text-gray-100">
-                                        Badan Usaha Lainnya
-                                    </a>
-                                </p>
-                            </div>
-                            {/* Useful links section */}
-                            <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px]">
-                                <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                    Social Media Kami
-                                </h6>
-                                <p className="mb-4">
-                                    <a href={igLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
-                                        <span className='flex justify-center items-center'><FaInstagram /></span>Instagram
-                                    </a>
-                                </p>
-                                <p className="mb-4">
-                                    <a href={fbLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
-                                        <span className='flex justify-center items-center'><FaFacebook /></span>Facebook
-                                    </a>
-                                </p>
-                                <p className="mb-4">
-                                    <a href={linkedin} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
-                                        <span className='flex justify-center items-center'><FaLinkedin /></span>LinkedIn
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href={waLink} className="flex gap-2 lg:justify-start justify-center text-neutral-600 dark:text-gray-100">
-                                        <span className='flex justify-center items-center'><FaWhatsapp /></span>WhatsApp
-                                    </a>
-                                </p>
-                            </div>
-                            {/* Contact section */}
-                            <div className='bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white p-5 rounded-[40px] overflow-hidden'>
-                                <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                                    Contact
-                                </h6>
-                                <p className="mb-4 gap-2 flex items-center justify-center md:justify-start">
-                                    <span className='flex justify-center items-center tr'><TbMailFilled /></span>
-                                    ganeshamultikreatif@gmail.com
-                                </p>
-                                <p className="mb-4 gap-2 flex items-center justify-center md:justify-start">
-                                    <span className='flex justify-center items-center'><BiSolidPhoneCall /></span>
-
-                                    + 62 888 712 7000
-                                </p>
-                                <div className="text-right object-right flex justify-center lg:justify-end">
-                                    <div className="bg-[#772a7d31] w-full flex justify-center lg:w-fit p-5 rounded-[40px]">
-                                        <a
-                                            className="font-semibold text-neutral-600 dark:text-gray-100 "
-                                            href="/"
-                                        >
-                                            <span className=''>
-                                                <Image
-                                                    src={logo}
-                                                    className="lg:w-[7vw] w-[50vw] h-auto"
-                                                    alt="Ganesha Logo"
-                                                /> </span>
-                                        </a>
-                                    </div>
-                                </div>
-                                {/* <p className="flex items-center justify-center md:justify-start">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        className="mr-3 h-5 w-5"
+                        <div className="md:w-[40%] flex md:justify-end items-center">
+                            <p className="md:block hidden w-fit  font-bold text-lg bg-baseColor bg-opacity-10 px-5 py-[10px] rounded-l-full">
+                                Connect With Us!
+                            </p>
+                            <div className="md:flex carousel md:max-w-[60%] items-center gap-4 md:gap-5 px-1 py-1 rounded-l-full md:rounded-l-none w-full md:w-full justify-between rounded-r-full bg-gray-100 dark:bg-darkColor">
+                                {[...dataContact.media, ...dataContact.phone, ...dataContact.mail].map((el, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={el.link}
+                                        className="text-2xl px-2 py-2 hover:bg-white dark:hover:bg-black duration-200 rounded-full"
                                     >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                    + 01 234 567 89
-                                </p> */}
+                                        {el.icon}
+                                    </a>
+                                ))}
                             </div>
                         </div>
                     </div>
-                    {/*Copyright section*/}
+                    <div className="w-full h-[2px] bg-stone-300 dark:bg-stone-600 rounded-full mt-5 mb-10" />
 
-                    <div className="bg-neutral-10 dark:bg-black p-6 text-right object-right flex justify-center lg:justify-center">
-                        <div className="bg-slate-200 dark:bg-baseColor dark:bg-opacity-20 dark:text-white w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
+                    <div className="flex md:items-start items-center text-center md:text-start md:justify-between md:flex-row flex-col gap-10 md:gap-5">
+                        <div className="md:w-[30%]">
+                            <p className="uppercase text-sm font-semibold text-mainColor dark:text-baseColor tracking-wide mb-5">
+                                Address
+                            </p>
+                            <div className="space-y-4">
+                                {dataContact.address.map((el, idx) => (
+                                    <div key={idx} className="flex items-center md:items-start flex-col gap-1">
+                                        <span className="text-xs w-fit uppercase">
+                                            {el.label}
+                                        </span>
+                                        <h3 className="font-medium">
+                                            {el.data}
+                                        </h3>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="md:w-[15%]">
+                            <p className="uppercase text-sm font-semibold text-mainColor dark:text-baseColor tracking-wide mb-5">
+                                About
+                            </p>
+                            <div className="space-y-4">
+                                {NavLinks.others
+                                    .sort((a, b) => a.sort - b.sort)
+                                    .map((el, idx) => (
+                                        <div key={idx} className="flex flex-col">
+                                            <a href={el.href} className="font-medium link link-hover">
+                                                {el.label}
+                                            </a>
+                                        </div>
+                                    ))}
+                            </div>
+                        </div>
+                        <div className="md:w-[15%]">
+                            <p className="uppercase text-sm font-semibold text-mainColor dark:text-baseColor tracking-wide mb-5">
+                                Our Services
+                            </p>
+                            <div className="space-y-4">
+                                {[...BtmNavigationLinks.legalities]
+                                    .slice(1, 4)
+                                    .map((el, idx) => (
+                                        <div key={idx} className="flex flex-col">
+                                            <a href={el.href} className="font-medium link link-hover">
+                                                {el.label}
+                                            </a>
+                                        </div>
+                                    ))}
+                                <ExpandableButton align={'md:items-start items-center'} label={'More'} classNameInner={'space-y-4'} className={'font-medium'}>
+                                    {[...BtmNavigationLinks.legalities]
+                                        .map((el, idx) => (
+                                            <div key={idx} className="flex flex-col">
+                                                <a href={el.href} className="font-medium link link-hover">
+                                                    {el.label}
+                                                </a>
+                                            </div>
+                                        ))}
+                                </ExpandableButton>
+                            </div>
+                        </div>
+                        <div className="md:w-[15%]">
+                            <p className="uppercase text-sm font-semibold text-mainColor dark:text-baseColor tracking-wide mb-5">
+                                Permit
+                            </p>
+                            <div className="space-y-4">
+                                {BtmNavigationLinks.other.map((el, idx) => (
+                                    <div key={idx} className="flex flex-col">
+                                        <a href={el.href} className="font-medium link link-hover">
+                                            {el.label}
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="dark:bg-darkColor bg-gray-200 rounded-full bg-opacity-50 mt-10 text-right object-right flex justify-center lg:justify-center">
+                        <div className="dark:text-white w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
                             <span>© 2024 Copyright:{' '}</span>
                             <a
                                 className="font-semibold text-neutral-600 dark:text-gray-100"
                                 href="/"
                             >
-                                 Ganesha Consulting
+                                Ganesha Consulting
                             </a>
                         </div>
                     </div>
-
-                </footer>
-            </>
+                </div>
+            </footer>
         </>
     )
 }
