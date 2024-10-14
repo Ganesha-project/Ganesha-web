@@ -27,7 +27,7 @@ export const HomeBanner = () => {
         <>
             <section className="hidden md:block min-h-screen">
                 <div className="flex justify-between gap-10 px-24 2xl:px-80">
-                    <div className="w-[60%] flex flex-col gap-20 relative">
+                    <div className="w-[50%] flex flex-col gap-20 relative">
                         <div className="flex flex-col justify-center h-full gap-3">
                             <div className="flex flex-col justify-between py-5 gap-5">
                                 <h1 className="text-4xl font-[500] tracking-[1px] capitalize relative py-5">
@@ -64,7 +64,7 @@ export const HomeBanner = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="w-[40%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">
+                    <div className="w-[50%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">
                         <div
                             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                             className="whitespace-nowrap transition-transform ease-in-out duration-700">
