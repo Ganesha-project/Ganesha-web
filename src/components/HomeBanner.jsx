@@ -63,7 +63,7 @@ export const HomeBanner = () => {
                                 </button>
                             </a>
                         </div>
-                    </div>
+                    </div>x
                     <div className="w-[50%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">
                         <div
                             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
@@ -124,7 +124,7 @@ export const HomeBanner = () => {
                             </h1>
                             <div className="relative text-white">
                                 <p className="truncate-last">
-                                    Apakah Anda membutuhkan bantuan dalam mengelola risiko hukum perusahaan Anda? Tim kami siap mendukung dengan memberikan analisis hukum yang mendetail dan strategi mitigasi risiko yang efektif. Kami berkomitmen untuk melindungi kepentingan hukum Anda dengan pendekatan yang proaktif dan terukur.
+                                Temukan solusi lengkap untuk semua kebutuhan bisnis Anda di Ganesha Consulting! Kami memberikan layanan all-in-one untuk memenuhi segala kebutuhan Anda!
                                 </p>
                             </div>
                             <h1 className="text-xl font-[600] text-violet-100 capitalize">
