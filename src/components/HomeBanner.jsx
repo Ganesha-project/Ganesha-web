@@ -32,7 +32,7 @@ export const HomeBanner = () => {
                             <div className="flex flex-col justify-between py-5 gap-5">
                                 <h1 className="text-4xl font-[500] tracking-[1px] capitalize relative py-5">
                                     <span className="text-rose-400">
-                                       one
+                                        one
                                     </span> <br />
                                     <span className="textsec darl:text-baseColor">
                                         stop <br />
@@ -47,7 +47,7 @@ export const HomeBanner = () => {
                                 </h1>
                                 <div className="relative textsec darl:text-baseColor">
                                     <p className="">
-                                        Apakah Anda membutuhkan bantuan dalam mengelola risiko hukum perusahaan Anda? Tim kami siap mendukung dengan memberikan analisis hukum yang mendetail dan strategi mitigasi risiko yang efektif. Kami berkomitmen untuk melindungi kepentingan hukum Anda dengan pendekatan yang proaktif dan terukur.
+                                        Temukan solusi lengkap untuk semua kebutuhan bisnis Anda di Ganesha Consulting! Kami memberikan layanan all-in-one untuk memenuhi segala kebutuhan Anda!
                                     </p>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ export const HomeBanner = () => {
                             </h1>
                             <div className="relative text-white">
                                 <p className="truncate-last">
-                                Temukan solusi lengkap untuk semua kebutuhan bisnis Anda di Ganesha Consulting! Kami memberikan layanan all-in-one untuk memenuhi segala kebutuhan Anda!
+                                    Temukan solusi lengkap untuk semua kebutuhan bisnis Anda di Ganesha Consulting! Kami memberikan layanan all-in-one untuk memenuhi segala kebutuhan Anda!
                                 </p>
                             </div>
                             <h1 className="text-xl font-[600] text-violet-100 capitalize">
