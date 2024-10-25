@@ -63,7 +63,7 @@ export const HomeBanner = () => {
                                 </button>
                             </a>
                         </div>
-                    </div>x
+                    </div>
                     <div className="w-[50%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">
                         <div
                             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
