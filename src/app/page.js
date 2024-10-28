@@ -15,6 +15,7 @@ import Head from 'next/head';
 import { AdsBanner } from '@/components/AdsBanner';
 import { PriceWrapper } from '@/components/PriceWrapper';
 import { dataPriceWrapper } from './Database';
+import { Support } from '@/components/AboutUs/Support';
 
 
 export default function Home() {
@@ -74,6 +75,7 @@ export default function Home() {
       <AdsBanner />
       <WhyUs />
       <ClientLogo />
+      <Support />
       {error ? (
         <div>Error: {error}</div>
       ) : loading ? (
