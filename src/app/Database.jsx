@@ -876,11 +876,11 @@ export const dataAdsBanner = [
         href: "/pendirian-pt",
         alt: "Ganesha Promo Pendirian PT"
     },
-    {
-        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_11zon_3_11zon_d42ca9df45.webp",
-        href: "/price-list",
-        alt: "Ganesha Promo Semua Paket"
-    },
+    // {
+    //     bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_11zon_3_11zon_d42ca9df45.webp",
+    //     href: "/price-list",
+    //     alt: "Ganesha Promo Semua Paket"
+    // },
 ];
 
 export const dataPriceWrapper = {

@@ -16,6 +16,7 @@ import { AdsBanner } from '@/components/AdsBanner';
 import { PriceWrapper } from '@/components/PriceWrapper';
 import { dataPriceWrapper } from './Database';
 import { Support } from '@/components/AboutUs/Support';
+import { PseCertificate } from '@/components/PseCertificate';
 
 
 export default function Home() {
@@ -68,6 +69,8 @@ export default function Home() {
       </Head>
       <HomeBanner />
       <AllServicesBtn />
+      <Support />
+      <PseCertificate />
       <PriceWrapper text={"Our Main Services"} text1={"Some of"} data={dataPriceWrapper.legal} />
       <ClientPhotos />
       <WebWork text={'Our Websites Work'} />
@@ -75,7 +78,6 @@ export default function Home() {
       <AdsBanner />
       <WhyUs />
       <ClientLogo />
-      <Support />
       {error ? (
         <div>Error: {error}</div>
       ) : loading ? (
