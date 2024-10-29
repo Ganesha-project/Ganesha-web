@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { ClientsReview } from "../../public/Data/Clients";
+import { governLogo } from "@/app/Database";
 
 export const HomeBanner = () => {
     // Filter only items with a client photo
@@ -62,6 +63,24 @@ export const HomeBanner = () => {
                                     Cari Layanan
                                 </button>
                             </a>
+                            <div className="space-y-1 mt-10">
+                                <p className="text-sm text-mainColor dark:text-baseColor">
+                                    Supported by:
+                                </p>
+                                <div className="flex gap-3 relative px-3 bg-white rounded-2xl w-fit">
+                                    {governLogo.map((el, idx) => (
+                                        <>
+                                            <Image
+                                                key={idx}
+                                                width={100}
+                                                height={100}
+                                                className="w-[70px] h-[70px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
+                                                src={el.logoUrl}
+                                                alt={el.name} />
+                                        </>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="w-[50%] mr-[-6rem] 2xl:mr-[-20rem] relative group overflow-hidden">
