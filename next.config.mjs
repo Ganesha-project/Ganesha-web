@@ -45,6 +45,10 @@ const nextConfig = {
                 hostname: "res.cloudinary.com",
             },
             {
+                protocol: "https",
+                hostname: "cms-ganesha.ganeshaconsulting.co.id",
+            },
+            {
                 protocol: "http",
                 hostname: "localhost",
                 port: "1337", // Tambahkan port jika diperlukan
