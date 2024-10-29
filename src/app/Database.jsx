@@ -939,7 +939,7 @@ export const governLogo = [
         name: "DJP"
     },
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_5119ed2f8b.png",
+        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/haki_27b511a770.png",
         name: "Pengayoman"
     },
 ]

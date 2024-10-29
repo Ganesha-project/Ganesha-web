@@ -1,7 +1,7 @@
 export const PseCertificate = () => {
     return (
         <>
-            <section className="md:mx-24 mx-5 py-20">
+            <section className="md:mx-24 mx-5 pb-20">
                 <img
                     className="w-full h-full object-cover rounded-3xl hidden md:inline-block shadow-mainShadow"
                     src={'https://cms-ganesha.ganeshaconsulting.co.id/uploads/1_11zon_0a8babb962.webp'}

@@ -65,7 +65,7 @@ export const HomeBanner = () => {
                             </a>
                             <div className="space-y-1 mt-10">
                                 <p className="text-sm text-mainColor dark:text-baseColor">
-                                    Supported by:
+                                    Resmi terdaftar di:
                                 </p>
                                 <div className="flex gap-3 relative px-3 bg-white rounded-2xl w-fit">
                                     {governLogo.map((el, idx) => (
@@ -74,7 +74,7 @@ export const HomeBanner = () => {
                                                 key={idx}
                                                 width={100}
                                                 height={100}
-                                                className="w-[70px] h-[70px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
+                                                className="w-[85px] h-[85px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
                                                 src={el.logoUrl}
                                                 alt={el.name} />
                                         </>
@@ -159,7 +159,7 @@ export const HomeBanner = () => {
                             </a>
                             <div className="space-y-1 mt-10">
                                 <p className="text-sm text-white">
-                                    Supported by:
+                                    Resmi terdaftar di:
                                 </p>
                                 <div className="flex flex-wrap gap-3 relative">
                                     {governLogo.map((el, idx) => (
