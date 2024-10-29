@@ -157,6 +157,24 @@ export const HomeBanner = () => {
                                     Cari Layanan
                                 </buttospann>
                             </a>
+                            <div className="space-y-1 mt-10">
+                                <p className="text-sm text-white">
+                                    Supported by:
+                                </p>
+                                <div className="flex flex-wrap gap-3 relative">
+                                    {governLogo.map((el, idx) => (
+                                        <>
+                                            <Image
+                                                key={idx}
+                                                width={100}
+                                                height={100}
+                                                className="w-[50px] h-[50px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
+                                                src={el.logoUrl}
+                                                alt={el.name} />
+                                        </>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                         <span className="absolute bottom-[10px] left-[-100px] mt-auto w-[50lvh] blur-[200px] h-[50lvh] bg-white rounded-full -z-10"></span>
                     </div>
