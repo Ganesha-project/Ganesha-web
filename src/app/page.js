@@ -17,7 +17,8 @@ import { PriceWrapper } from '@/components/PriceWrapper';
 import { dataPriceWrapper } from './Database';
 import { Support } from '@/components/AboutUs/Support';
 import { PseCertificate } from '@/components/PseCertificate';
-
+import { Popup } from '@/components/Popup';
+import { PopupContent } from '@/components/PopupContent';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -27,7 +28,16 @@ export default function Home() {
     dispatch(fetchArticles(6));
   }, [dispatch]);
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  useEffect(() => {
+    // Timer untuk menampilkan popup 2 detik setelah halaman dimuat
+    const timer = setTimeout(() => {
+      setIsPopupOpen(true);
+    }, 2000);
 
+    // Bersihkan timer saat komponen di-unmount
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -68,6 +78,12 @@ export default function Home() {
         </script>
       </Head>
       <HomeBanner />
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        title="November DEALS"
+        content={<PopupContent />}
+      />
       <AllServicesBtn />
       <Support />
       <PseCertificate />
