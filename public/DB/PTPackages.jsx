@@ -183,8 +183,8 @@ export const PTPackages = [
     },
     {
         type: "PAKET GOLD PT PERORANGAN (2 Hari Kerja)",
-        price: 450000,
-        priceOriginal: 1500000,
+        price: 1500000,
+        priceOriginal: 2350000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
         discount: 36,
         features: [

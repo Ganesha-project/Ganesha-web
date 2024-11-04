@@ -11,6 +11,9 @@ import { Explanation } from '@/components/LegalComponents/Explanation';
 import { Laws } from '@/components/LegalComponents/Laws';
 import { DataPageLegal } from '../../../public/Data/LegalitasData';
 import { AdsBanner } from '@/components/AdsBanner';
+import { Support } from '@/components/AboutUs/Support';
+import { PseCertificate } from '@/components/PseCertificate';
+import { ClientLogo } from '@/components/ClientLogo';
 
 export const metadata = {
     title: "Jasa Pendirian PT - Ganesha Consulting",
@@ -65,6 +68,9 @@ export default function PendirianPtPage() {
                 title={'Dari Pendirian PT di Ganesha Consulting'}
             />
             <ClientPhotos />
+            <ClientLogo />
+            <Support />
+            <PseCertificate />
             <WhyLegal
                 data={DataPageLegal.whyLegal}
                 text1={'Mengapa'}
