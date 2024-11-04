@@ -12,6 +12,9 @@ import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { DataPageLegal } from "../../../public/Data/LegalitasData";
 import { dataPageCV } from "../../../public/Data/CVData";
 import { AdsBanner } from "@/components/AdsBanner";
+import { ClientLogo } from "@/components/ClientLogo";
+import { Support } from "@/components/AboutUs/Support";
+import { PseCertificate } from "@/components/PseCertificate";
 
 export const metadata = {
     title: "Jasa Pendirian CV - Ganesha Consulting",
@@ -68,11 +71,14 @@ export default async function PendirianCvPage() {
                 opening={'Yang Kamu Dapatkan'}
                 title={'Dari Pendirian CV di Ganesha Consulting'}
             />
+            <ClientLogo />
+            <Support />
+            <PseCertificate />
             <Explanation
                 desc={dataPageCV.whatCv.desc}
                 text={'Apa Itu CV?'}
             />
-            <AdsBanner/>
+            <AdsBanner />
             <Laws
                 data={dataPageCV.undangUndangTerkait}
                 text1={'Undang - Undang'}
