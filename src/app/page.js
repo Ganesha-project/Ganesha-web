@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchArticles } from '@/store/articleSlice';
 import { HomeBanner } from "@/components/HomeBanner";
