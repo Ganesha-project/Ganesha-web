@@ -11,7 +11,7 @@ export async function POST(req) {
         secure: false,
         auth: {
             user: process.env.NEXT_PUBLIC_USER,
-            pass: process.env.NEXT_PUBLIC_APP_PASSWORD,
+            pass: process.env.APP_PASSWORD,
         },
     });
 
