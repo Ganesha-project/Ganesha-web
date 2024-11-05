@@ -3,8 +3,8 @@ import { useState } from "react";
 import { dataFormContact } from "@/app/Database";
 import { IoSend } from "react-icons/io5";
 import { Title } from "../Title";
-import alertify from 'alertifyjs';
-import 'alertifyjs/build/css/alertify.css';
+import Toastify from 'toastify-js'; // Import Toastify
+import 'toastify-js/src/toastify.css'; // Import Toastify CSS
 
 export const Form = () => {
     const [formData, setFormData] = useState({
@@ -28,11 +28,25 @@ export const Form = () => {
             });
             const result = await response.json();
 
-            // Show a success message using Alertify if the request is successful
-            alertify.success(result.message);
+            // Show a success message using Toastify if the request is successful
+            Toastify({
+                text: result.message,
+                duration: 3000,
+                gravity: "top", // can be "top" or "bottom"
+                position: 'right', // can be "left", "center" or "right"
+                backgroundColor: "#4caf50", // Success color
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+            }).showToast();
         } catch (error) {
-            // Show an error message using Alertify if the request fails
-            alertify.error('Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.');
+            // Show an error message using Toastify if the request fails
+            Toastify({
+                text: 'Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.',
+                duration: 3000,
+                gravity: "top",
+                position: 'right',
+                backgroundColor: "#f44336", // Error color
+                stopOnFocus: true,
+            }).showToast();
         }
     };
 
