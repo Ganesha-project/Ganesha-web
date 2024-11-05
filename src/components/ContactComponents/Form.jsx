@@ -3,6 +3,8 @@ import { useState } from "react";
 import { dataFormContact } from "@/app/Database";
 import { IoSend } from "react-icons/io5";
 import { Title } from "../Title";
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
 
 export const Form = () => {
     const [formData, setFormData] = useState({
@@ -25,9 +27,12 @@ export const Form = () => {
                 body: JSON.stringify(formData),
             });
             const result = await response.json();
-            alert(result.message);
+
+            // Show a success message using Alertify if the request is successful
+            alertify.success(result.message);
         } catch (error) {
-            alert('Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.');
+            // Show an error message using Alertify if the request fails
+            alertify.error('Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.');
         }
     };
 
