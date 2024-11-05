@@ -687,7 +687,7 @@ export const dataContact = {
 export const dataFormContact = [
     {
         placeholder: "Nama",
-        name: "nama"
+        name: "name"
     },
     {
         placeholder: "Email",

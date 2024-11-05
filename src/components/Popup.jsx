@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WALINK } from "./Links/Links";
 
 
 export const Popup = ({ isOpen, onClose, title, content }) => {
@@ -28,7 +29,7 @@ export const Popup = ({ isOpen, onClose, title, content }) => {
                 <button
                     className="shimmer-animate ease-in-out duration-300 hover:scale-95 shadow-[0px_2px_35px_0px_#5dbed6c2] hover:shadow-[0px_2px_50px_0px_#48b0cae9] dark:hover:shadow-[0px_2px_50px_0px_#5dbed6e9] dark:hover:brightness-125 hover:brightness-105 mt-10 font-bold text-lg px-5 py-3 w-full bg-gradient-to-bl dark:from-darkColor dark:to-sky-700 from-secondaryGray to-sky-300 rounded-2xl"
                 >
-                    <Link href={""}>
+                    <Link href={WALINK}>
                         Konsultasi Sekarang
                     </Link>
                 </button>
