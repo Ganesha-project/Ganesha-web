@@ -16,6 +16,14 @@ export const ClientsReview = [
         service: ''
     },
     {
+        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_06_at_14_37_19_11zon_60804d5fa8.webp',
+        clientLogo: '',
+        clientName: '',
+        ptName: '',
+        review: '',
+        service: ''
+    },
+    {
         clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/xet7za6udlkyp1il2aju.webp',
         clientLogo: '',
         clientName: '',
@@ -164,6 +172,14 @@ export const ClientsReview = [
         clientLogo: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1723610188/GaneshaAssets/ClientLogo/c3omptqcoaopfkgdlmbu.jpg',
         clientName: '',
         ptName: 'PT Arsicon Nuansa Kreatif',
+        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
+        service: 'Legalitas Usaha'
+    },
+    {
+        clientPhoto: '',
+        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/PNG_LOGO_PT_AMS_905d800af5.png',
+        clientName: '',
+        ptName: 'PT AMS BERKAH BUMI',
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
         service: 'Legalitas Usaha'
     },
