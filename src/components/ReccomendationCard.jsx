@@ -61,7 +61,7 @@ export const ReccomendationCard = () => {
                             <Image
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-3xl"
+                                className="w-full h-full object-cover rounded-3xl bg-baseColor"
                                 src={el.image}
                                 alt={el.label}
                             />
@@ -76,7 +76,7 @@ export const ReccomendationCard = () => {
                                     </h2>
                                 </div>
                             </div>
-                            <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-2xl duration-300 ease-in-out">
+                            <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-3xl duration-300 ease-in-out">
                                 <div
                                     className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
                                     <button
