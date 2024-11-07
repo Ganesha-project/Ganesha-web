@@ -44,7 +44,7 @@ export const ReccomendationCard = () => {
 
     return (
         <>
-            <section className="bg-baseColor bg-opacity-30 dark:bg-opacity-15 py-10 md:py-24 relative">
+            <section className="bg-baseColor bg-opacity-10 dark:bg-opacity-15 py-10 md:py-24 relative">
                 <div className="md:mx-24 mx-5">
                     <Title text1="Jelajahi" text="Layanan Lain Kami" />
                 </div>
