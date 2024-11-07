@@ -44,7 +44,7 @@ export const CardVO = () => {
     return (
         <>
             <section className="py-20">
-                <Title text1={'Preview'} text={'Lokasi Vitrual Office Kami'} className={'md:mx-24 mx-5'} />
+                <Title text1={'Preview'} text={'Lokasi Virtual Office Kami'} className={'md:mx-24 mx-5'} />
                 <div className={`w-full carousel2`}>
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
