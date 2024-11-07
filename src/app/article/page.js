@@ -10,6 +10,7 @@ import { SkeletonTiles } from "@/components/Skeleton/SkeletonTiles";
 import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";
 import { Headtag } from "@/components/ArticleComponent/HeadTag";
 import { Pagination } from "@/components/ArticleComponent/Pagination";
+import Head from "next/head";
 
 export default function ArticlePage() {
     const [newData, setNewData] = useState(null);
@@ -89,6 +90,14 @@ export default function ArticlePage() {
 
     return (
         <>
+            <Head>
+                <title>{newData ? newData.data[0].attributes.Title : "Artikel Ganesha Consulting"}</title>
+                <meta property="og:title" content={newData ? newData.data[0].attributes.Title : "Artikel Ganesha Consulting"} />
+                <meta property="og:description" content={newData ? newData.data[0].attributes.Summary || "Pelajari panduan lengkap mengenai izin minuman beralkohol di Ganesha Consulting." : "Artikel Ganesha Consulting"} />
+                <meta property="og:image" content={newData ? newData.data[0].attributes.Thumbnail.url : "/default-thumbnail.jpg"} />
+                <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ""} />
+                <meta property="og:type" content="article" />
+            </Head>
             <BannerArticle>
                 {error ? (
                     <div>Error: {error}</div>
