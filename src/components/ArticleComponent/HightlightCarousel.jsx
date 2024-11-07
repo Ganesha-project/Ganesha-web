@@ -1,4 +1,5 @@
 'use client'
+import { slugify } from "@/helper/slugify";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -36,7 +37,7 @@ export const HighlightCarousel = ({ data }) => {
                     {filteredData.map((el, i) => (
                         <Link
                             key={i}
-                            href={'article/' + el.attributes.Slug}
+                            href={'article/'  + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
                             className="inline-block shadow w-full relative overflow-hidden rounded-2xl h-full"
                         >
                             <img

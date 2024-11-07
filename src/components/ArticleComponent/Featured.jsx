@@ -3,6 +3,7 @@ import Link from "next/link"
 import { HighlightCarousel } from "./HightlightCarousel"
 import { FaFire } from "react-icons/fa6"
 import { formatDateTime } from "@/helper/formatDateTime"
+import { slugify } from "@/helper/slugify"
 const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
 
 export const Featured = ({ data }) => {
@@ -28,8 +29,8 @@ export const Featured = ({ data }) => {
                         <div className="flex md:flex-col flex-row gap-5">
                             {data?.data?.map((el, idx) => (
                                 <Link
-                                    href={'article/' + el.attributes.Slug}
-                                    key={idx} 
+                                    href={'article/' + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
+                                    key={idx}
                                     className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === data?.data?.length - 1 ? 'mr-5 md:mr-0' : ''} flex md:flex-row flex-col md:min-w-0 min-w-[80lvw] gap-3 bg-white dark:bg-[#2d2d2da7] bg-opacity-50 p-3 shadow rounded-2xl group dark:hover:bg-opacity-80 dark:bg-opacity-50 hover:bg-gray-50 duration-150`}>
                                     <div className={`relative w-full overflow-hidden rounded-xl`}>
                                         <img
