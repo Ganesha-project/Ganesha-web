@@ -484,7 +484,7 @@ export const DataBanner = [
         data: {
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1723691284/GaneshaAssets/bqp9x1unwnsqwx1ulgmr.png",
             mainText: "Virtual Office",
-            desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda, mengidentifikasi risiko, dan memperbaiki kontrol internal.",
+            desc: "Tingkatkan Profesionalisme Bisnis Anda dengan Layanan Virtual Office Kami",
             accent: "bg-[#b4bdc6] dark:bg-[#D1D2D399]",
             accent2: "bg-[#89CEE8] dark:bg-[#89CEE8]",
             textAccent: "dark:text-[#D1D2D3] text-[#636b74]"
@@ -941,5 +941,38 @@ export const governLogo = [
     {
         logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/haki_27b511a770.png",
         name: "Pengayoman"
+    },
+]
+
+export const ReccomendationData = [
+    {
+        href: "virtual-office",
+        label: "Virtual Office",
+        image: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        desc: "Tingkatkan Profesionalisme Bisnis Anda dengan Layanan Virtual Office Kami",
+    },
+    {
+        href: "legalitas",
+        label: "Legalitas Bisnis",
+        image: "https://images.unsplash.com/photo-1568092806323-8ec13dfa9b92?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        desc: "Kami hadir bersama Konsultan yang profesional untuk memberikan pelayanan Legalitas terbaik yang akan memastikan Bisnis mu sesuai dengan aturan hukum yang berlaku di Indonesia, Legalkan Bisnis Mu Bersama Ganesha Consulting!.",
+    },
+    {
+        href: "web-development",
+        label: "Pendirian Website",
+        image: "https://images.unsplash.com/photo-1588058365815-c96ac30ee30f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        desc: "Optimalkan presensi digital perusahaan Anda dengan layanan pembuatan website kami. Desain estetik, fungsionalitas prima, dan pengalaman pengguna yang menarik, semuanya dalam satu paket. Bersama kami, hadirkan daya tarik dan kekuatan online untuk memperluas jangkauan bisnis Anda.",
+    },
+    {
+        href: "konsultan-pajak",
+        label: "Pelaporan Pajak",
+        image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        desc: "Optimalisasi Pajak Anda dengan Bantuan Ahli Pajak Terpercaya! Bingung dengan urusan pajak? Ganesha Consulting hadir untuk memberikan solusi tepat dan efisien bagi bisnis Anda. Dapatkan konsultasi profesional dan layanan yang komprehensif untuk semua kebutuhan perpajakan Anda.",
+    },
+    {
+        href: "perizinan",
+        label: "Perizinan Usaha",
+        image: "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
     },
 ]

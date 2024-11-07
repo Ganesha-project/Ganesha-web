@@ -18,6 +18,7 @@ import { ClientLogo } from '@/components/ClientLogo';
 import { Popup } from '@/components/Popup';
 import { PopupContent } from '@/components/PopupContent';
 import Head from 'next/head';
+import { ReccomendationCard } from '@/components/ReccomendationCard';
 
 export default function PendirianPtPage() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -112,6 +113,7 @@ export default function PendirianPtPage() {
                 data={DataPageLegal.faqData}
             />
             <RWhyUs />
+            <ReccomendationCard />
         </>
     )
 }
