@@ -80,6 +80,13 @@ export const dataClientWeb = [
         package: "Landing Page Company Profile"
     },
     {
+        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Screenshot_2024_11_15_at_13_08_56_11zon_11zon_ca229e6010.webp",
+        brandName: "Krek Digital",
+        name: "PT KREK TRANSFORMASI DIGITAL",
+        link: "https://www.krekdigital.com/",
+        package: "Company Profile Basic"
+    },
+    {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300575/GaneshaAssets/WebSS/bymn9u1iqdzgr3owimtr.webp",
         brandName: "SEIC",
         name: "PT Sentosa Indonesia Consultant",

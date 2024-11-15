@@ -24,6 +24,14 @@ export const ClientsReview = [
         service: ''
     },
     {
+        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_14_at_19_24_52_03f96c1beb.jpeg',
+        clientLogo: '',
+        clientName: '',
+        ptName: '',
+        review: '',
+        service: ''
+    },
+    {
         clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/xet7za6udlkyp1il2aju.webp',
         clientLogo: '',
         clientName: '',
