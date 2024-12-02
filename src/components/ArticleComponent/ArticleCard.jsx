@@ -28,7 +28,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                                             alt={el?.attributes?.Title} />
                                         <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
                                             <h1 className="relative overflow-hidden truncate-last-1 text-xs text-wrap px-2 py-1 h-fit bg-black bg-opacity-35 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
-                                                    {el?.attributes?.category?.data?.attributes?.ArticleCategory}
+                                                {el?.attributes?.category?.data?.attributes?.ArticleCategory}
                                             </h1>
                                             {el.attributes.Trending === true ? (
                                                 <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg ">
@@ -63,7 +63,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                     ))}
                 </div>
                 <Pagination
-                    className={`${data.data?.length <= 6 ? 'cursor-not-allowed opacity-25' : ''}`}
+                    className={`${data.data?.length <= 6 && 'cursor-not-allowed opacity-25'}`}
                     loadMore={loadMore} />
             </section>
         </>
