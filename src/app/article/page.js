@@ -19,7 +19,7 @@ export default function ArticlePage() {
     const [load, setLoad] = useState(true);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
-    const [itemsToShow, setItemsToShow] = useState(6); // Inisialisasi dengan 6 item
+    const [itemsToShow, setItemsToShow] = useState(9); // Inisialisasi dengan 6 item
     const [sort, setSort] = useState('DESC'); // State baru untuk urutan artikel
 
     useEffect(() => {
