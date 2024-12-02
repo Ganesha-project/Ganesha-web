@@ -63,7 +63,7 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
                     ))}
                 </div>
                 <Pagination
-                    className={`${data.data?.length <= items ? 'cursor-not-allowed opacity-25' : ''}`}
+                    className={`${data.data?.length <= 6 ? 'cursor-not-allowed opacity-25' : ''}`}
                     loadMore={loadMore} />
             </section>
         </>
