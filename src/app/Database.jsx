@@ -867,20 +867,20 @@ export const DataSelectFilterArticle = [
 
 export const dataAdsBanner = [
     {
-        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_2_11zon_b8dd76b534.webp",
-        href: "/web-development",
-        alt: "Ganesha Promo Web"
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_112afd99d6.webp",
+        href: "/price-list",
+        alt: "Ganesha Promo December Deals"
     },
     {
-        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_1_11zon_9f38d3100f.webp",
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_229469cff5.webp",
         href: "/pendirian-pt",
-        alt: "Ganesha Promo Pendirian PT"
+        alt: "Ganesha Promo Pendirian PT, CV, PMA"
     },
-    // {
-    //     bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_11zon_3_11zon_d42ca9df45.webp",
-    //     href: "/price-list",
-    //     alt: "Ganesha Promo Semua Paket"
-    // },
+    {
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_a67d3b687a.webp",
+        href: "/web-development",
+        alt: "Ganesha Promo Pendirian Website"
+    },
 ];
 
 export const dataPriceWrapper = {
