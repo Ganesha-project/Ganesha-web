@@ -12,7 +12,7 @@ export const Popup = ({ isOpen, onClose, title, content }) => {
                 <div className="flex gap-3 justify-between w-full">
                     <div className="shimmer-animate bg-white dark:bg-darkColor px-6 py-3 rounded-2xl w-full">
                         <h2 className="text-xl md:text-2xl font-bold text-center bg-gradient-to-bl text-transparent bg-clip-text dark:from-secondaryColor dark:to-purple-300 from-mainColor to-purple-400">
-                            {title}
+                            {"December Deals"}
                         </h2>
                     </div>
                     <button
@@ -22,8 +22,8 @@ export const Popup = ({ isOpen, onClose, title, content }) => {
                         Close
                     </button>
                 </div>
-                <div className="shimmer-animate bg-white dark:bg-darkColor rounded-2xl z-10 flex flex-col items-center justify-center">
-                    <div className=" p-6">{content}</div>
+                <div className="shimmer-animate rounded-2xl z-10 flex flex-col items-center justify-center">
+                    <div className="">{content}</div>
 
                 </div>
                 <button

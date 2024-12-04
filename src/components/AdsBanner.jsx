@@ -41,8 +41,14 @@ export const AdsBanner = () => {
                         <Link href={el.href}>
                             <img
                                 key={idx}
-                                className="w-full h-full object-cover rounded-3xl inline-block"
+                                className="w-full h-full object-cover rounded-3xl hidden md:inline-block bg-mainColor"
                                 src={el.bannerImg}
+                                alt={el.alt}
+                            />
+                            <img
+                                key={idx}
+                                className="md:hidden w-full h-full object-cover rounded-3xl inline-block bg-mainColor"
+                                src={el.bannerMobile}
                                 alt={el.alt}
                             />
                         </Link>

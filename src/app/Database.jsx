@@ -868,16 +868,19 @@ export const DataSelectFilterArticle = [
 export const dataAdsBanner = [
     {
         bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_112afd99d6.webp",
+        bannerMobile: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_9948c11149.webp",
         href: "/price-list",
         alt: "Ganesha Promo December Deals"
     },
     {
         bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_229469cff5.webp",
+        bannerMobile: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_11zon_5abcde9de5.webp",
         href: "/pendirian-pt",
         alt: "Ganesha Promo Pendirian PT, CV, PMA"
     },
     {
         bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_a67d3b687a.webp",
+        bannerMobile: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_11zon_b0375ea8ba.webp",
         href: "/web-development",
         alt: "Ganesha Promo Pendirian Website"
     },
