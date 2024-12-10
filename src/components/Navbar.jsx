@@ -43,7 +43,7 @@ export const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             {NavLinks.main.slice(0, 1).map(link => (
               <li key={link.href} className='relative flex flex-col items-center group'>
                 <a
@@ -82,7 +82,6 @@ export const Navbar = () => {
                 <span className={`${path === link.href ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
               </li>
             ))}
-
           </ul>
         </div>
         <div className="navbar-end pr-3 space-x-2">

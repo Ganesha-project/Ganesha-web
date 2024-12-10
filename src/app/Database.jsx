@@ -623,8 +623,8 @@ export const dataContact = {
         {
             label: "Email",
             icon: <TbMailFilled />,
-            data: "ganehsamultikreatif@gmail.com",
-            link: "mailto:ganehsamultikreatif@gmail.com"
+            data: "ganeshamultikreatif@gmail.com",
+            link: "mailto:ganeshamultikreatif@gmail.com"
         },
         {
             label: "Email",
