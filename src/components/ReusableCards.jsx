@@ -47,7 +47,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
     return (
         <>
             <section className="py-10 space-y-5">
-             
+
                 <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 mx-5 space-y-5`}>
                     {totalItems <= 3 ? (
                         <div className="flex justify-center w-full items-center">
@@ -157,17 +157,21 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     </div>
                 </div>
                 {/* Scroll Progress Dots */}
-                <div className="flex justify-center items-center mt-4">
-                    <div className="flex justify-center items-center bg-white dark:bg-darkColor px-2 py-2 rounded-full space-x-2">
-                        {Array.from({ length: totalDots }).map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => handleDotClick(index)}
-                                className={`w-2 h-2 rounded-full ${index === activeDot ? 'bg-mainColor dark:bg-baseColor' : 'bg-stone-300 dark:bg-stone-600'}`}
-                            ></button>
-                        ))}
-                    </div>
-                </div>
+                {totalItems >= 4 && (
+                    <>
+                        <div className="flex justify-center items-center mt-4">
+                            <div className="flex justify-center items-center bg-white dark:bg-darkColor px-2 py-2 rounded-full space-x-2">
+                                {Array.from({ length: totalDots }).map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleDotClick(index)}
+                                        className={`w-2 h-2 rounded-full ${index === activeDot ? 'bg-mainColor dark:bg-baseColor' : 'bg-stone-300 dark:bg-stone-600'}`}
+                                    ></button>
+                                ))}
+                            </div>
+                        </div>
+                    </>
+                )}
             </section>
         </>
     );
