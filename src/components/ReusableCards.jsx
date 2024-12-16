@@ -5,6 +5,7 @@ import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "reac
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export const ReusableCards = ({ data, label, visibility }) => {
+    const [scrollTo, setScrollTo] = useState(10);
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalItems = data.length;
     const [activeDot, setActiveDot] = useState(0);
@@ -46,7 +47,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
     return (
         <>
             <section className="py-10 space-y-5">
-
+             
                 <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 mx-5 space-y-5`}>
                     {totalItems <= 3 ? (
                         <div className="flex justify-center w-full items-center">
