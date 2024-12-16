@@ -50,9 +50,6 @@ export default async function PelayananAkuntansi() {
             <ReusableCards  
                 data={AccountantPackages}
                 label={'Paket Pelayanan Akuntansi'}
-                scrollToLg={13}
-                scrollToMd={13}
-                scrollToSm={4.5}
             />
             <Explanation
                 text1={'Apa itu'}

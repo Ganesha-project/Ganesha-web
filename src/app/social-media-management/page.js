@@ -54,10 +54,6 @@ export default async function SosmedPage() {
             <BannerService />
             <ReusableCards
                 data={SMPackages}
-                cardColor={'bg-violet-100'}
-                typeColor={'text-violet-600'}
-                priceColor={'text-violet-800'}
-                buttonColor={'bg-violet-500'}
                 label={'Paket Social Media Management'}
             />
             <SocmedWork />

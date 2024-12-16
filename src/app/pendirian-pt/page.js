@@ -82,7 +82,6 @@ export default function PendirianPtPage() {
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
                 label={'Paket Pendirian PT'}
-                scrollToLg={25}
             />
             <Benefit
                 data={DataPageLegal.benefit}

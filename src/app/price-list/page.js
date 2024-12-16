@@ -86,30 +86,18 @@ export default async function AllProductsPage() {
             <ReusableCards
                 data={pelaporanSPT}
                 label={'Paket Pelaporan SPT'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={konsultanPajakPMDN}
                 label={'Paket Konsultan Pajak PMDN'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={konsultanPajakPMA}
                 label={'Paket Konsultan Pajak PMA'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
                 label={'Paket Pajak Daerah & Brevet'}
-                scrollToLg={55}
-                scrollToMd={55}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={HakiPackages}
@@ -118,9 +106,6 @@ export default async function AllProductsPage() {
             <ReusableCards
                 data={AccountantPackages}
                 label={'Paket Pelayanan Akuntansi'}
-                scrollToLg={13}
-                scrollToMd={13}
-                scrollToSm={4.5}
             />
         </>
     )

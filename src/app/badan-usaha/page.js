@@ -63,10 +63,6 @@ export default async function PendirianBadanUsaha() {
             <BannerService />
             <ReusableCards
                 data={BadanUsahaPackages}
-                cardColor={'bg-gray-200'}
-                typeColor={'text-gray-600'}
-                priceColor={'text-gray-800'}
-                buttonColor={'bg-gray-500'}
                 label={'Paket Pendirian Badan Usaha'}
             />
             <Benefit

@@ -65,30 +65,18 @@ export default async function KonsultanPajakPage() {
             <ReusableCards
                 data={pelaporanSPT}
                 label={'Paket Pelaporan SPT'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={konsultanPajakPMDN}
                 label={'Paket Konsultan Pajak PMDN'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={konsultanPajakPMA}
                 label={'Paket Konsultan Pajak PMA'}
-                scrollToLg={40}
-                scrollToMd={40}
-                scrollToSm={20}
             />
             <ReusableCards
                 data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
                 label={'Paket Pajak Daerah & Brevet'}
-                scrollToLg={55}
-                scrollToMd={55}
-                scrollToSm={20}
             />
             <Explanation
                 text1={'Apa itu'}

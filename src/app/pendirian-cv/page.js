@@ -61,9 +61,6 @@ export default async function PendirianCvPage() {
             <ReusableCards
                 data={[...CVPackages, ...ExtrasPackages]}
                 label={'Paket Pendirian CV'}
-                scrollToLg={29}
-                scrollToMd={29}
-                scrollToSm={15}
             />
             <ClientPhotos />
             <Benefit

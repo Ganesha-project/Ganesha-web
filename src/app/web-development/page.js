@@ -58,9 +58,6 @@ export default async function WebPage() {
             <ReusableCards
                 data={WebPackages}
                 label={'Paket Pembuatan Website'}
-                scrollToLg={50}
-                scrollToMd={40}
-                scrollToSm={17}
             />
             <WebWork />
             <Header

@@ -62,9 +62,6 @@ export default async function IzinTambahanPage() {
             <ReusableCards
                 data={servicePackages}
                 label={'Paket Perizinan'}
-                scrollToLg={20}
-                scrollToMd={15}
-                scrollToSm={8}
             />
             <WhyLegal
                 data={whyPerizinan}
