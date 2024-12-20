@@ -54,9 +54,37 @@ export const WebPackages = [
         ]
     },
     {
-        type: "Dynamic Data Company Profile",
+        type: "Blog Static / Product Catalof",
         price: 4500000,
         priceOriginal: 6435000,
+        discount: 30,
+        link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
+        features: [
+            { feature: "Dynamic Page", status: true },
+            { feature: "Domain Included", status: true },
+            { feature: "SEO Friendly", status: true },
+            { feature: "Design Premium", status: true },
+            { feature: "Design Responsive", status: true },
+            { feature: "Lifetime Support & Maintenance Teknis", status: true },
+            { feature: "Content Writing", status: true },
+            { feature: "SSL Included (Https)", status: true },
+            { feature: "Revisi 4x", status: true },
+            { feature: "Integrasi Sosial media", status: true },
+            { feature: "Managed Server Data", status: true },
+            { feature: "1 Internal Admin", status: true },
+            { feature: "Client Request Feature", status: true },
+            { feature: "CMS Admin", status: false },
+            { feature: "Free 1 Professional Email", status: false },
+            { feature: "Free 10 Related Article Content", status: false },
+            { feature: "Free 5 Design Product", status: false },
+            { feature: "Login Owner & User", status: false },
+            { feature: "Payment Gateway", status: false },
+        ]
+    },
+    {
+        type: "Dynamic Data Company Profile",
+        price: 6900000,
+        priceOriginal: 9867000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
         features: [
