@@ -54,7 +54,7 @@ export const WebPackages = [
         ]
     },
     {
-        type: "Blog Static / Product Catalof",
+        type: "Blog Static / Product Catalog",
         price: 4500000,
         priceOriginal: 6435000,
         discount: 30,
