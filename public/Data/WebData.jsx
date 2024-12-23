@@ -45,6 +45,13 @@ export const dataClientWeb = [
         package: "Company Profile Basic"
     },
     {
+        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Web_PT_Wahyutatawasana_By_Ganeshaconsulting_51f64a2156.webp",
+        brandName: "Wahyutatawasana",
+        name: "PT Wahyutatawasana",
+        link: "https://www.wahyutatawasana.com/",
+        package: "Static Blog Company Profile"
+    },
+    {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300576/GaneshaAssets/WebSS/yksgoigvvphq5ufuj1zf.webp",
         brandName: "LPK Hidamari Kenshu Senta",
         name: "PT LPK Hidamari Kenshu Senta",
