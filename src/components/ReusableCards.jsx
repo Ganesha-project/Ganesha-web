@@ -96,7 +96,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                 </div>
 
                 <div ref={carouselRef} className={`${data.length <= 3 ? "flex justify-center" : "carousel"} relative  w-[100%]`}>
-                    <div ref={carouselRef} iv
+                    <div ref={carouselRef}
                         className={`${data.length <= 3 ? "flex-col md:flex-row" : ""} flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
                         style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }} // Removed itemsToShow from calculation
                     >

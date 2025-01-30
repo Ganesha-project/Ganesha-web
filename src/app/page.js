@@ -81,7 +81,6 @@ export default function Home() {
       <Popup
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
-        title="November DEALS"
         content={<PopupContent />}
       />
       <AllServicesBtn />

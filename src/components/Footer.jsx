@@ -105,7 +105,7 @@ export const Footer = () => {
                             </p>
                             <div className="space-y-4">
                                 {BtmNavigationLinks.other.map((el, idx) => (
-                                    <div key={idx} className="flex flex-col">
+                                    <div key={idx} className="flex lex-col">
                                         <a href={el.href} className="font-medium link link-hover">
                                             {el.label}
                                         </a>

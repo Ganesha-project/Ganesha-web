@@ -2,7 +2,7 @@ import Link from "next/link";
 import { WALINK } from "./Links/Links";
 
 
-export const Popup = ({ isOpen, onClose, title, content }) => {
+export const Popup = ({ isOpen, onClose, content }) => {
     if (!isOpen) return null;
 
     return (
@@ -12,7 +12,7 @@ export const Popup = ({ isOpen, onClose, title, content }) => {
                 <div className="flex gap-3 justify-between w-full">
                     <div className="shimmer-animate bg-white dark:bg-darkColor px-6 py-3 rounded-2xl w-full">
                         <h2 className="text-xl md:text-2xl font-bold text-center bg-gradient-to-bl text-transparent bg-clip-text dark:from-secondaryColor dark:to-purple-300 from-mainColor to-purple-400">
-                            {"December Deals"}
+                            {"Special Deals"}
                         </h2>
                     </div>
                     <button
