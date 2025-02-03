@@ -3,7 +3,7 @@ import { Title } from "../Title"
 export const Benefit = ({ data, color, title, className, iconClassName, icons, opening }) => {
     return (
         <>
-            <section className="md:m-24 m-5 py-10 md:py-16 space-y-5">
+            <section className="md:mx-24 2xl:mx-80 m-5 py-10 md:py-16 space-y-5">
                 <div className="space-y-1">
              
                     <Title text1={opening} text={title}/>

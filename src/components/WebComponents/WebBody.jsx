@@ -47,9 +47,9 @@ export const metadata = {
 export const WebBody = () => {
     return (
         <>
-            <section className="md:mx-24 mx-5 md:py-20 py-10">
+            <section className="md:mx-24 2xl:mx-80 mx-5 md:py-20 py-10">
                 <div className="flex md:flex-row flex-col gap-5">
-                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-[#EAF3FA] transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-[#EAF3FA] transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <Image
                             width={100}
                             height={100}
@@ -58,7 +58,7 @@ export const WebBody = () => {
                             alt="image web"
                         />
                     </div>
-                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-sky-200 to-white dark:from-sky-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-gradient-radial from-sky-200 to-white dark:from-sky-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <div className="flex flex-col justify-evenly text-2xl md:text-5xl font-bold w-full md:w-fit h-full rounded-md lg:text-left md:text-right tracking-wider">
                             <p>
                                 Pentingnya
@@ -74,7 +74,7 @@ export const WebBody = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] 2xl:h-[25lvw] md:h-[30lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <p className="flex items-center justify-center text-justify text-xl leading-relaxed tracking-wide md:text-justify h-full bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
                             Website adalah kunci keberhasilan perusahaan dalam era digital, memberikan eksposur global, aksesibilitas sepanjang waktu, dan meningkatkan kredibilitas. Sebagai platform informasi dan interaksi, website mendukung pertumbuhan bisnis, memperluas pasar, dan membangun brand awareness secara efektif.
                         </p>

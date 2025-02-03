@@ -6,7 +6,7 @@ import { Title } from "./Title"
 export const BodyContact = () => {
     return (
         <>
-            <section className="md:mx-24 mx-5 space-y-10 md:py-20 py-10">
+            <section className="md:mx-24 2xl:mx-80 mx-5 space-y-10 md:py-20 py-10">
                 <Title text1={'List'} text={'Kontak Kami'} />
                 <div className="flex flex-wrap gap-5">
                     <Image

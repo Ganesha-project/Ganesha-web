@@ -51,7 +51,7 @@ export const Form = () => {
     };
 
     return (
-        <section className="md:m-24 m-5 space-y-5 md:py-20 py-10">
+        <section className="md:m-24 m-5 2xl:mx-80 space-y-5 md:py-20 py-10">
             <Title text={'Tulis Pertanyaan Kamu Disini!'} />
             <form onSubmit={handleSubmit} className="space-y-3">
                 {dataFormContact.map((el, idx) => (

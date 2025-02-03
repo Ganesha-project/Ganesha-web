@@ -4,8 +4,8 @@ import { ExpandableButton } from "./ExpandableButton"
 export const Footer = () => {
     return (
         <>
-            <footer className="h-full mt-5">
-                <div className="w-full h-full px-5 py-5 bg-gray-200 dark:bg-darkColor rounded-t-[35px] bg-opacity-20 dark:bg-opacity-50 shadow-[0px_45px_70px_10px_#4a4a4a] dark:shadow-[0px_45px_70px_10px_#ffffff]">
+            <footer className="h-full mt-5 md:px-24 2xl:px-80">
+                <div className="w-full h-full px-5 py-5 bg-gray-200 dark:bg-darkColor rounded-t-[35px] bg-opacity-20 dark:bg-opacity-50 ">
                     <div className="flex md:flex-row gap-5 flex-col md:items-center md:justify-between">
                         <div className="md:w-[50%] flex items-center gap-3">
                             <img

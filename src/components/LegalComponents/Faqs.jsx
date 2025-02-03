@@ -3,7 +3,7 @@ import { BsFillQuestionCircleFill } from "react-icons/bs"
 export const Faqs = ({ data, text, color, className, iconClassName, icons, className2 }) => {
     return (
         <>
-            <section className="md:p-24 p-5 space-y-5 bg-secondaryGray dark:bg-darkColor">
+            <section className="md:px-24 2xl:px-80 2xl:py-24 py-10 px-5 space-y-5 bg-secondaryGray dark:bg-darkColor">
                 <h1 className={`text-2xl md:text-4xl font-semibold bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800  via-mainColor to-baseColor bg-clip-text text-transparent flex items-center gap-2`}>
                     <div className={iconClassName}>
                         {icons}

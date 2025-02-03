@@ -30,8 +30,8 @@ export const AllServicesBtn = () => {
     return (
         <>
             <div id="search" />
-            <section className="bg-baseColor bg-opacity-10 2xl:px-80">
-                <div className="md:px-24 px-5 flex space-y-5 py-14 md:py-24 flex-col h-full">
+            <section className="bg-baseColor bg-opacity-10">
+                <div className="md:px-24 2xl:px-80 px-5 flex space-y-5 py-14 md:py-24 flex-col h-full">
                     <Title text1={'Explore Our'} text={'Services & Products Selection'} />
                     <label className="input flex items-center gap-2 bg-opacity-60 rounded-full bg-baseColor dark:bg-opacity-10 text-gray-800 dark:text-white">
                         <div className="flex w-full items-center justify-between">

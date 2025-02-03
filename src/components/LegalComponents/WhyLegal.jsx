@@ -41,7 +41,7 @@ export const WhyLegal = ({ data, text, text1 }) => {
     return (
         <>
             <section className="py-20">
-                <Title text1={text1} text={text} className={'md:mx-24 mx-5'} />
+                <Title text1={text1} text={text} className={'md:mx-24 2xl:mx-80 mx-5'} />
                 <div className={`relative carousel w-[100%]`}>
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
@@ -50,7 +50,7 @@ export const WhyLegal = ({ data, text, text1 }) => {
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''} shimmer relative group md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
+                                className={`${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} shimmer relative group md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
                             >
                                 <h1 className="text-2xl font-semibold h-[30lvh] bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
                                     {el.title}

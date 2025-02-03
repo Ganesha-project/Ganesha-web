@@ -46,9 +46,8 @@ export const ReusableCards = ({ data, label, visibility }) => {
 
     return (
         <>
-            <section className="py-10 space-y-5">
-
-                <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 mx-5 space-y-5`}>
+            <section className={`py-10 space-y-5`}>
+                <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 2xl:mx-80 mx-5 space-y-5`}>
                     {totalItems <= 3 ? (
                         <div className="flex justify-center w-full items-center">
                             <div className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase w-fit`}>
@@ -95,15 +94,15 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     )}
                 </div>
 
-                <div ref={carouselRef} className={`${data.length <= 3 ? "flex justify-center" : "carousel"} relative  w-[100%]`}>
+                <div ref={carouselRef} className={`${data.length <= 3 ? "flex justify-center items-center flex-wrap 2xl:px-80 md:px-24" : "carousel"} relative w-[100%]`}>
                     <div ref={carouselRef}
-                        className={`${data.length <= 3 ? "flex-col md:flex-row" : ""} flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
+                        className={`${data.length <= 3 ? "flex-col md:flex-row flex-wrap justify-center" : ""} flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
                         style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }} // Removed itemsToShow from calculation
                     >
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24' : ''} md:w-[30vw] w-[90vw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
+                                className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} ${totalItems < 4 && "2xl:w-[32%]"} md:w-[30lvw] w-[90lvw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
                             >
                                 <div className="flex flex-col justify-center items-center gap-3 mt-5">
                                     <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-xl md:text-3xl font-bold tracking-tight`}>

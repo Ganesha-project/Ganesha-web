@@ -32,7 +32,7 @@ export const AdsBanner = () => {
 
     return (
         <>
-            <section className="md:mx-24 mx-5 py-20 relative group overflow-hidden">
+            <section className="md:mx-24 2xl:mx-80 mx-5 py-20 relative group overflow-hidden">
                 <div
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
                     className="whitespace-nowrap transition-transform ease-in-out duration-700 relative"

@@ -31,7 +31,7 @@ export const ClientLogo = () => {
         <>
             <section className="block py-10 md:py-24 space-y-5">
                 <Title text={'Our Clients'} className={'mb-5 md:mb-10 md:mx-24 mx-5 flex justify-center'} />
-                <div className="md:mx-24 mx-0">
+                <div className="md:mx-24 2xl:mx-80 mx-0">
                     <div className={`carousel2 w-[100%] ${isMobile ? 'overflow-hidden whitespace-nowrap gap-5 space-x-3' : 'md:flex md:flex-wrap md:gap-5 md:justify-center'}`}>
                         {filteredData.map((el, idx) => (
                             <div

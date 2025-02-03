@@ -48,7 +48,7 @@ export const metadata = {
 export const RWhyUs = ({ color }) => {
     return (
         <>
-            <section className="md:px-24 px-5 my-20">
+            <section className="md:px-24 2xl:px-80 px-5 my-20">
                 <div className={`bg-gradient-to-b dark:from-darkColor dark:to-black from-gray-200 to-white space-y-10 dark:bg-opacity-25 p-6 md:p-10 rounded-[40px] `}>
                     <h1 className={`text-2xl md:text-4xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
                         Kelebihan di <span className="bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800 via-mainColor to-baseColor bg-clip-text text-transparent">Ganesha Consulting</span> dibanding tempat lain

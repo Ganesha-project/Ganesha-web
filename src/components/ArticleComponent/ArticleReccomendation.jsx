@@ -6,14 +6,14 @@ export const ArticleReccomendation = ({ data }) => {
     return (
         <>
         {/* ${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === data.data.length - 1 ? 'mr-5 md:mr-0' : ''} */}
-            <section className="md:px-24 space-y-5 py-24 flex flex-col justify-center items-center">
+            <section className="md:px-24 2xl:px-80 space-y-5 py-24 flex flex-col justify-center items-center">
                 <Title text={'Read Our Articles'} />
-                <div className="snap-x md:flex md:flex-row carousel2 w-full md:flex-wrap gap-5 md:items-center md:justify-center ">
+                <div className="snap-x md:grid md:grid-cols-3 carousel2 w-full gap-5 md:items-center md:justify-center ">
                     {data?.data?.map((el, idx) => (
                         <a
                             href={'/article/' + el.attributes.Slug}
                             key={idx}
-                            className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === data.data.length - 1 ? 'mr-5 md:mr-0' : ''} snap-center md:w-[30%] carousel-item relative hover:scale-95 duration-300 ease-in-out rounded-3xl`}
+                            className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === data.data.length - 1 ? 'mr-5 md:mr-0' : ''} snap-center md:w-full carousel-item relative hover:scale-95 duration-300 ease-in-out rounded-3xl`}
                         >
                             <img
                                 width={500}

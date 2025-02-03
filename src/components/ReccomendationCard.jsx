@@ -45,7 +45,7 @@ export const ReccomendationCard = () => {
     return (
         <>
             <section className="bg-baseColor bg-opacity-10 dark:bg-opacity-15 py-10 md:py-24 relative">
-                <div className="md:mx-24 mx-5">
+                <div className="md:mx-24 mx-5 2xl:mx-80">
                     <Title text1="Jelajahi" text="Layanan Lain Kami" />
                 </div>
                 <div
@@ -56,7 +56,7 @@ export const ReccomendationCard = () => {
                         <Link
                             key={idx}
                             href={el.href}
-                            className={`group relative min-w-[75vw] md:min-w-[25vw] h-[65vh] ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === ReccomendationData.length - 1 ? 'mr-5 md:mr-24' : ''}`}
+                            className={`group relative min-w-[75vw] md:min-w-[25vw] h-[65vh] ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === ReccomendationData.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''}`}
                         >
                             <Image
                                 width={500}

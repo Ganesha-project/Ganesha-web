@@ -7,13 +7,13 @@ export const PriceWrapper = ({ data, text1, text }) => {
     return (
         <>
             <section className="py-20">
-                <Title text1={text1} text={text} className={'md:mx-24 mx-5'} />
+                <Title text1={text1} text={text} className={'md:mx-24 2xl:mx-80 mx-5'} />
                 <div className="carousel2 w-full gap-5 py-10">
                     {data.map((el, idx) => (
                         <div
                             key={idx}
                             className={`min-w-[85lvw] md:min-w-[25lvw] h-[70lvh] rounded-3xl overflow-hidden relative group
-                                ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}
+                                ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''}
                                 `}
                         >
                             <img

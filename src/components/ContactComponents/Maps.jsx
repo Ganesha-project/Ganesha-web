@@ -4,7 +4,7 @@ import { Title } from "../Title"
 export const Maps = () => {
     return (
         <>
-           <section class="m-5 lg:m-24 space-y-5">
+           <section class="m-5 lg:m-24 2xl:mx-80 space-y-5">
                 <Title text={"Our Address"} className={'!text-red-300'} />
                 <div className="flex flex-col lg:flex-row gap-5 justify-center">
                     <div className="space-y-5">

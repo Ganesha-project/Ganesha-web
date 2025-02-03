@@ -3,7 +3,7 @@ import { Title } from "../Title"
 export const KindOfService = ({ data, text, text1 }) => {
     return (
         <>
-            <section className="md:m-24 m-5 py-10 md:py-16 space-y-10">
+            <section className="md:m-24 m-5 2xl:mx-80 py-10 md:py-16 space-y-10">
                 <Title text={text} text1={text1} />
                 <div className={`${data.length >= 3 ? "flex flex-wrap" : "flex md:flex-row flex-col"}  gap-5 md:justify-evenly`}>
                     {data.map((el, idx) => (

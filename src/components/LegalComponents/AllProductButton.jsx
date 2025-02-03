@@ -32,7 +32,7 @@ export const AllProductButton = () => {
                 <meta name="twitter:description" content="Temukan berbagai layanan legalitas bisnis yang ditawarkan oleh Ganesha Consulting. Mulai dari pendirian PT, CV, yayasan, hingga konsultan pajak." />
 
             </Head>
-            <section className="md:mx-24 mx-5 py-24 space-y-5">
+            <section className="md:mx-24 2xl:mx-80 mx-5 py-24 space-y-5">
                 <Title text={"Layanan Legalitas Kami"} className={'py-5'} />
                 <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
                     {DataPageLegal.legalItems.map((el, idx) => (

@@ -44,7 +44,7 @@ export const CardVO = () => {
     return (
         <>
             <section className="py-20">
-                <Title text1={'Preview'} text={'Lokasi Virtual Office Kami'} className={'md:mx-24 mx-5'} />
+                <Title text1={'Preview'} text={'Lokasi Virtual Office Kami'} className={'md:mx-24 mx-5 2xl:mx-80'} />
                 <div className={`w-full carousel2`}>
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
@@ -54,8 +54,8 @@ export const CardVO = () => {
                             <div
                                 key={idx} // Perbaikan: Menambahkan key yang unik untuk setiap elemen
                                 className={`
-                                ${idx === 0 ? 'ml-5 md:ml-24' : ''} 
-                                ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''} 
+                                ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} 
+                                ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} 
                                 carousel-item w-[80lvw] md:w-[25lvw] h-[80lvh] relative group duration-300 ease-in-out hover:-translate-y-3 overflow-hidden hover:shadow-mainShadow rounded-3xl`}>
                                 
                                 <img

@@ -46,7 +46,7 @@ export const SocmedWork = ({text1, text}) => {
     return (
         <>
             <section className="md:py-20 bg-gray-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
-                <Title className={'md:mx-24 mx-5'} text1={text1 || "Explore"} text={text || 'Our Works'} />
+                <Title className={'md:mx-24 mx-5 2xl:mx-80'} text1={text1 || "Explore"} text={text || 'Our Works'} />
                 <div className="carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
@@ -56,7 +56,8 @@ export const SocmedWork = ({text1, text}) => {
                             <Link
                                 key={idx}
                                 href={el.link}
-                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
+                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit 
+                                    ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''}`}
                             >
                                 <div className="flex gap-2 w-full justify-between bg-white rounded-2xl">
                                     <Image

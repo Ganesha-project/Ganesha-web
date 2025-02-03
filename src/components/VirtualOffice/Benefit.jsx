@@ -3,7 +3,7 @@ import { dataPageVO } from "../../../public/Data/VOData"
 export const Benefit = () => {
     return (
         <>
-            <section className="md:m-24 m-5 py-10 md:py-16 space-y-5">
+            <section className="md:m-24 2xl:mx-80 m-5 py-10 md:py-16 space-y-5">
                 <div className="space-y-1">
                     <span className="text-lg md:text-xl">
                         Kenapa

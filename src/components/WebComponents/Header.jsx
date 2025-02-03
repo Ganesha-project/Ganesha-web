@@ -46,8 +46,8 @@ export const metadata = {
 export const Header = ({ data }) => {
     return (
         <>
-            <section className="md:mx-24 mx-5">
-                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor md:h-[80lvh]">
+            <section className="md:mx-24 2xl:mx-80 mx-5">
+                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor md:h-[80lvh] 2xl:h-[70lvh]">
                     <div className="relative flex flex-col justify-between md:w-[50%] bg-darkColor rounded-[35px] overflow-hidden duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
                         <Image
                             width={500}

@@ -45,7 +45,7 @@ export const WebWork = ({ text1, text }) => {
     return (
         <>
             <section className="bg-gray-100 dark:bg-darkColor md:py-20 py-10 md:my-10 my-5">
-                <Title className={'md:mx-24 mx-5'} text1={"Explore" || text1} text={text || "Our Works"} />
+                <Title className={'md:mx-24 mx-5 2xl:mx-80'} text1={"Explore" || text1} text={text || "Our Works"} />
                 <div className="relative carousel w-[100%]">
                     <div
                         className="grid grid-flow-col gap-5 transform transition-transform duration-500 ease-in-out py-10"
@@ -55,7 +55,8 @@ export const WebWork = ({ text1, text }) => {
                             <Link
                                 key={idx}
                                 href={el.link}
-                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[40lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit ${idx === 0 ? 'ml-5 md:ml-24' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24' : ''}`}
+                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[40lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit 
+                                    ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''}`}
                             >
                                 <Image
                                     className="rounded-2xl w-full h-fit object-cover"

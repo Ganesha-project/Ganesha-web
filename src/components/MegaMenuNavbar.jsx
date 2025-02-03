@@ -61,7 +61,7 @@ export const MegaMenuNavbar = ({ title, links, isExpanded, setIsExpanded, childr
                    `}
             >
                 <div className={`${isExpanded ? "flex justify-center md:min-h-fit opacity-100 min-h-screen duration-300 ease-in-out transition-all" : "opacity-0 min-h-0 duration-300 ease-in-out transition-all"} `}>
-                    <div className="grid gap-6 md:p-8 md:max-w-7xl w-full md:mx-auto">
+                    <div className="grid gap-6 md:py-8 2xl:mx-80 w-full md:mx-24">
                         {label ? (
                             <h1 className="text-2xl font-semibold">
                                 {label}

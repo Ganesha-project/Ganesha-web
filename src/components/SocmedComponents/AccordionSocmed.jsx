@@ -3,7 +3,7 @@ import { accordionData } from "../../../public/Data/SocmedData";
 
 export const AccordionSocmed = () => {
     return (
-        <section className="md:px-24 px-5 md:my-24 my-10 space-y-10">
+        <section className="md:px-24 px-5 2xl:px-80 md:my-24 my-10 space-y-10">
             <Title text1={'Kenapa perusahaan'} text={'Membutuhkan Social Meda Management'} />
 
             <div className="flex flex-col md:flex-row gap-10 items-center justify-center md:pl-10 md:pt-10 md:pb-10 md:pr-0 p-5 md:p-0 dark:bg-darkColor bg-gray-100 rounded-3xl">
@@ -29,7 +29,7 @@ export const AccordionSocmed = () => {
                 </div>
                 <div className="md:w-[50%] md:order-none order-first">
                     <img
-                        className="md:h-[70lvh] w-full object-cover rounded-3xl md:rounded-r-none md:rounded-l-3xl"
+                        className="md:h-[70lvh] 2xl:h-[50lvh] w-full object-cover rounded-3xl md:rounded-r-none md:rounded-l-3xl"
                         src="https://images.unsplash.com/photo-1491951931722-5a446214b4e2?q=80&w=2256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>

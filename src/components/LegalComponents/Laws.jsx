@@ -3,7 +3,7 @@ import { Title } from "../Title"
 export const Laws = ({ text, text1, data, classNameTitle }) => {
     return (
         <>
-            <section className="md:mx-24 mx-5 space-y-10 md:py-20 py-10">
+            <section className="md:mx-24 mx-5 2xl:mx-80 space-y-10 md:py-20 py-10">
                 <Title text1={text1} text={text} />
                 <div className="md:grid md:grid-cols-2 flex flex-col gap-5">
                     {data.map((el, idx) => (

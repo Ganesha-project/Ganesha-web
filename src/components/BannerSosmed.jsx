@@ -51,9 +51,9 @@ export const BannerSosmed = () => {
 
     return (
         <>
-            <section className="md:mx-24 mx-5 md:py-20 py-10">
+            <section className="md:mx-24 2xl:mx-80 mx-5 md:py-20 py-10">
                 <div className="flex md:flex-row flex-col gap-5">
-                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-[#f5eafa] transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-[#f5eafa] transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <Image
                             width={100}
                             height={100}
@@ -62,7 +62,7 @@ export const BannerSosmed = () => {
                             alt="image socmed"
                         />
                     </div>
-                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-fuchsia-200 to-white dark:from-fuchsia-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-gradient-radial from-fuchsia-200 to-white dark:from-fuchsia-950 dark:to-darkColor flex items-center justify-center transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <div className="flex flex-col justify-evenly text-2xl md:text-5xl font-bold w-full md:w-fit h-full rounded-md lg:text-left md:text-right tracking-wider">
                             <p>
                                 Apa itu
@@ -75,7 +75,7 @@ export const BannerSosmed = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
                         <p className="flex items-center justify-center text-justify text-xl leading-relaxed tracking-wide md:text-justify h-full bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-fuchsia-800 dark:to-fuchsia-300 bg-clip-text text-transparent">
                             Sosial Media Manajemen adalah proses pengelolaan dan pengelolaan aktivitas serta konten di platform media sosial untuk mencapai tujuan tertentu, seperti membangun merek, meningkatkan visibilitas, atau berinteraksi dengan audiens.
                         </p>
