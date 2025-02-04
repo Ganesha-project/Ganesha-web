@@ -36,7 +36,7 @@ export const SearchNavbar = ({ label, className, readOnly, onFocus }) => {
                     <IoIosSearch className="text-gray-800 dark:text-gray-200 text-xl" />
                     <input
                         type="text"
-                        className="grow placeholder:text-gray-800 dark:placeholder:text-gray-200 text-white"
+                        className="grow placeholder:text-gray-800 dark:placeholder:text-gray-200 text-black dark:text-white"
                         placeholder="Cari Layanan"
                         value={searchTerm}
                         onChange={handleSearchChange}
