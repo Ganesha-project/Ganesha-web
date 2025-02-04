@@ -59,7 +59,7 @@ export const MobileDrawer = () => {
                             </div>
                         </ExpandableButton>
                     </li>
-                    {NavLinks.others.map(link => (
+                    {[...NavLinks.others, ...NavLinks.about].map(link => (
                         <li key={link.href}>
                             <a
                                 href={link.href}

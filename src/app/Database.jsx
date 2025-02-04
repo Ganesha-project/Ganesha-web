@@ -253,6 +253,8 @@ export const NavLinks = {
             desc: "Baca artikel terbaru kami untuk mendapatkan wawasan lebih lanjut.",
             accent: "dark:bg-[#adb9f1] bg-[#6077e749]",
         },
+    ],
+    about: [
         {
             href: '/about-us',
             label: 'About Us',
