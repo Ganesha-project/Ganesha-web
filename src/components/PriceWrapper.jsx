@@ -21,14 +21,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                 src={el.image}
                                 alt={el.label}
                             />
-                            <div className="gradient-blur h-[40%] group-hover:h-[150%] duration-300 ease-in-out bg-gradient-to-t from-[#523b2ec8] to-transparent">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                            <div className="gradient-blur h-[50%] duration-300 ease-in-out bg-gradient-to-t from-[#523b2ec8] to-transparent"></div>
                             <div className="absolute z-[50] bottom-5 left-5 right-5 text-white">
                                 <div className="translate-y-[50%] group-hover:translate-y-0 duration-200 delay-75">
                                     <div className="text-xs uppercase font-medium tracking-wide brightness-200 filter opacity-80">

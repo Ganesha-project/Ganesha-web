@@ -15,7 +15,7 @@ export const AdsBanner = () => {
             const timer = setTimeout(() => {
                 setIndex(prevIndex =>
                     prevIndex === data.length - 1 ? 0 : prevIndex + 1
-                );
+                ); 
             }, delay);
 
             return () => clearTimeout(timer);
@@ -54,18 +54,22 @@ export const AdsBanner = () => {
                         </Link>
                     ))}
                 </div>
-                <button
-                    onClick={prevSlide}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
-                >
-                    <IoIosArrowBack />
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
-                >
-                    <IoIosArrowForward />
-                </button>
+                {data.length >= 2 && (
+                    <>
+                        <button
+                            onClick={prevSlide}
+                            className="absolute left-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
+                        >
+                            <IoIosArrowBack />
+                        </button>
+                        <button
+                            onClick={nextSlide}
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
+                        >
+                            <IoIosArrowForward />
+                        </button>
+                    </>
+                )}
             </section>
         </>
     );

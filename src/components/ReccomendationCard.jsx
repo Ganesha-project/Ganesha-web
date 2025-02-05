@@ -65,7 +65,7 @@ export const ReccomendationCard = () => {
                                 src={el.image}
                                 alt={el.label}
                             />
-                            <div className="gradient-blur2 h-[50%] duration-300 ease-in-out bg-gradient-to-t from-stone-700 to-transparent"></div>
+                            <div className="gradient-blur h-[50%] duration-300 ease-in-out bg-gradient-to-t from-stone-700 to-transparent"></div>
                             <div className="absolute bottom-0">
                                 <div className="m-5">
                                     <h1 className="text-white font-bold text-2xl">
