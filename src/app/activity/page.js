@@ -25,6 +25,9 @@ export default function Activity() {
                 }
 
                 const data = await res.json();
+                console.log('====================================');
+                console.log(data);
+                console.log('====================================');
 
                 // Format data
                 const formattedActivities = data.data.map((item) => ({
@@ -32,12 +35,15 @@ export default function Activity() {
                     date: item.attributes.date,
                     location: item.attributes.location,
                     description: item.attributes.descriptions,
+                    longDesc: item.attributes.longDesc,
                     ig: item.attributes.ig,
-                    imageUrl: item.attributes.mediaUrl?.data?.attributes?.formats?.medium?.url
-                        ? `https://cms-ganesha.ganeshaconsulting.co.id${item.attributes.mediaUrl.data.attributes.formats.medium.url}`
-                        : "https://via.placeholder.com/750", // Placeholder jika tidak ada gambar
+                    imageUrl: item.attributes.mediaUrl?.data?.length
+                        ? item.attributes.mediaUrl.data.map(img => `https://cms-ganesha.ganeshaconsulting.co.id${img.attributes.url}`)
+                        : ["https://via.placeholder.com/750"], // Placeholder jika tidak ada gambar
                 }));
-
+                console.log('====================================');
+                console.log(data);
+                console.log('====================================');
                 setActivities(formattedActivities);
                 setLoad(false);
             } catch (error) {
@@ -56,6 +62,7 @@ export default function Activity() {
         setSort(order);
     };
 
+
     return (
         <>
             {error ? (
@@ -73,7 +80,7 @@ export default function Activity() {
                 ) : load ? (
                     <>
                         <SkeletonCardActivity/>
-          </>
+                    </>
                 ) : activities.length === 0 ? (
                     <div className="h-[30lvh] flex items-center justify-center">
                         <p className="text-xl text-center">No activities found.</p>

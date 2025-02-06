@@ -20,7 +20,7 @@ function timeAgo(date) {
 }
 
 // Function to format date
-function formatDate(date) {
+export function formatDate(date) {
     const options = { day: '2-digit', month: 'long', year: 'numeric' };
     return new Date(date).toLocaleDateString('id-ID', options);
 }

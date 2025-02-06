@@ -7,6 +7,8 @@ export const SkeletonCardActivity = () => {
                     <div className="w-full  h-[25lvh] md:h-[50lvh] bg-gray-400 dark:bg-baseColor dark:bg-opacity-50 rounded-2xl animate-pulse bg-opacity-50"></div>
                     <div className="w-full  h-[25lvh] md:h-[50lvh] bg-gray-400 dark:bg-baseColor dark:bg-opacity-50 rounded-2xl animate-pulse bg-opacity-50"></div>
                     <div className="w-full  h-[25lvh] md:h-[50lvh] bg-gray-400 dark:bg-baseColor dark:bg-opacity-50 rounded-2xl animate-pulse bg-opacity-50"></div>
+                    <div className="w-full  h-[25lvh] md:h-[50lvh] bg-gray-400 dark:bg-baseColor dark:bg-opacity-50 rounded-2xl animate-pulse bg-opacity-50"></div>
+                    <div className="w-full  h-[25lvh] md:h-[50lvh] bg-gray-400 dark:bg-baseColor dark:bg-opacity-50 rounded-2xl animate-pulse bg-opacity-50"></div>
                 </div>
 
             </section>

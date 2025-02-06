@@ -72,16 +72,6 @@ export const Navbar = () => {
             />
             <li className='relative flex flex-col items-center group'>
               <a
-                href={'/artikel'}
-                className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
-                aria-current="page"
-              >
-                Artikel
-              </a>
-              <span className={`${path === '/artikel' ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
-            </li>
-            <li className='relative flex flex-col items-center group'>
-              <a
                 href={'/activity'}
                 className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
                 aria-current="page"
@@ -89,6 +79,16 @@ export const Navbar = () => {
                 Activity
               </a>
               <span className={`${path === '/activity' ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
+            </li>
+            <li className='relative flex flex-col items-center group'>
+              <a
+                href={'/artikel'}
+                className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
+                aria-current="page"
+              >
+                Artikel
+              </a>
+              <span className={`${path === '/artikel' ? 'scale-100' : 'scale-0'} absolute bottom-[-3px] w-10 h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-baseColor bg-mainColor rounded-full`}></span>
             </li>
             <MegaMenuNavbar
               title="About"
