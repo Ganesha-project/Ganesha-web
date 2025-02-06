@@ -73,7 +73,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                      `}
                         >
                             <img
-                                className="w-full h-full min-h-[25vh] group-hover:scale-110 object-cover group-hover:brightness-75 duration-300"
+                                className="w-full h-full min-h-[25vh] md:group-hover:scale-110 object-cover group-hover:brightness-75 duration-300"
                                 src={el.imageUrl[cardImageIndex[idx] || 0]}
                                 alt={el.title}
                             />
@@ -88,7 +88,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                 </>
                             )}
                             <div className="absolute inset-0 flex items-end p-1 md:p-3">
-                                <h1 className={`${el.ig === true && "scale-0 group-hover:scale-100 translate-y-full group-hover:translate-y-0"} duration-300 text-white md:text-sm bg-black/25 px-2 py-1 rounded-lg backdrop-blur-lg truncate text-xs`}>
+                                <h1 className={`${el.ig === true && "scale-0 group-hover:scale-100 translate-y-full group-hover:translate-y-0"} duration-300 text-white md:text-sm bg-black/25 px-2 py-1 rounded-lg backdrop-blur-lg truncate text-[10px]`}>
                                     {el.title}
                                 </h1>
                             </div>
@@ -112,7 +112,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
             {selectedIndex !== null && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-[99999] backdrop-blur-md px-3 md:px-0">
                     <button
-                        className="absolute top-2 right-2 text-[39px] hover:bg-black rounded-full text-white"
+                        className="absolute top-2 right-2 text-[39px] hover:bg-black rounded-full text-white z-50"
                         onClick={handleCloseModal}
                     >
                         <IoIosClose />
@@ -202,7 +202,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                         </button>
                     </div>
 
-                    <div className="absolute bottom-0 space-x-5 md:hidden">
+                    <div className="absolute bottom-[-3px] space-x-5 md:hidden">
                         <button
                             onClick={handlePrevActivity}
                             className="invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
