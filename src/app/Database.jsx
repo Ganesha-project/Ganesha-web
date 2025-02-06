@@ -2,12 +2,12 @@ import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
 import { TbMail, TbMailFilled, TbWorldWww, TbMathSymbols, TbHours24 } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
-import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
+import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiCustomerServiceFill, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { SiReadthedocs } from "react-icons/si";
 import { HiDeviceMobile, HiLightningBolt, HiOfficeBuilding, HiReceiptTax } from "react-icons/hi";
 import { IoSearchCircle } from "react-icons/io5";
-import { IoIosCall } from "react-icons/io";
+import { IoIosCall, IoIosInformationCircle } from "react-icons/io";
 import { RiBuilding2Fill } from "react-icons/ri";
 import { BiMedal } from "react-icons/bi";
 import { BsBuildingAdd, BsBuildingFillAdd } from "react-icons/bs";
@@ -114,12 +114,14 @@ export const NavLinks = {
         {
             href: '/',
             label: 'Home',
+            icon: <GoLaw />,
             desc: "Mulai perjalanan Anda bersama kami!",
             accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
         },
         {
             href: '/contact',
             label: 'Hubungi Kami',
+            icon: <RiCustomerServiceFill />,
             desc: "Selalu Siap Memberikan Solusi Terbaik untuk Anda!",
             accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
         },
@@ -258,12 +260,14 @@ export const NavLinks = {
         {
             href: '/about-us',
             label: 'About Us',
+            icon: <IoIosInformationCircle />,
             desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
             accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
         },
         {
             href: '/contact',
             label: 'Hubungi Kami',
+            icon: <RiCustomerServiceFill />,
             desc: "Selalu Siap Memberikan Solusi Terbaik untuk Anda!",
             accent: "dark:bg-[#b5b9dd] bg-[#42497A]",
         },
