@@ -62,15 +62,18 @@ export const Footer = () => {
                                 About
                             </p>
                             <div className="space-y-4">
-                                {NavLinks.others
-                                    .sort((a, b) => a.sort - b.sort)
-                                    .map((el, idx) => (
-                                        <div key={idx} className="flex flex-col">
-                                            <a href={el.href} className="font-medium link link-hover">
+                                <div className="flex flex-col space-y-4">
+                                    {[...NavLinks.about, ...NavLinks.others]
+                                        .sort((a, b) => a.sort - b.sort)
+                                        .map((el, idx) => (
+                                            <a key={idx} href={el.href} className="font-medium link link-hover">
                                                 {el.label}
                                             </a>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    <a href={'/activity'} className="font-medium link link-hover">
+                                        Activity
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div className="md:w-[15%]">
@@ -88,7 +91,7 @@ export const Footer = () => {
                                         </div>
                                     ))}
                                 <ExpandableButton align={'md:items-start items-center'} label={'More'} classNameInner={'space-y-4'} className={'font-medium'}>
-                                    {[...BtmNavigationLinks.legalities]
+                                    {[...BtmNavigationLinks.drawerMain]
                                         .map((el, idx) => (
                                             <div key={idx} className="flex flex-col">
                                                 <a href={el.href} className="font-medium link link-hover">
@@ -105,7 +108,7 @@ export const Footer = () => {
                             </p>
                             <div className="space-y-4">
                                 {BtmNavigationLinks.other.map((el, idx) => (
-                                    <div key={idx} className="flex lex-col">
+                                    <div key={idx} className="flex flex-col md:items-start items-center">
                                         <a href={el.href} className="font-medium link link-hover">
                                             {el.label}
                                         </a>
@@ -117,7 +120,7 @@ export const Footer = () => {
 
                     <div className="dark:bg-darkColor bg-gray-200 rounded-full bg-opacity-50 mt-10 text-right object-right flex justify-center lg:justify-center">
                         <div className="dark:text-white w-full p-5 rounded-[40px] flex justify-center items-center h-fit self-end">
-                            <span>© 2024 Copyright:{' '}</span>
+                            <span>© 2025 Copyright:{' '}</span>
                             <a
                                 className="font-semibold text-neutral-600 dark:text-gray-100"
                                 href="/"
