@@ -168,7 +168,6 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                         (
                                             <>
                                                 <ActivityLongDesc content={activities[selectedIndex].longDesc} />
-                                                <ActivityLongDesc content={activities[selectedIndex].longDesc} />
                                             </>
                                         )
                                     }
