@@ -59,6 +59,14 @@ export const MobileDrawer = () => {
                             </div>
                         </ExpandableButton>
                     </li>
+                    <li>
+                            <a
+                                href={'/activity'}
+                                className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}
+                            >
+                               Activity
+                            </a>
+                        </li>
                     {[...NavLinks.others, ...NavLinks.about].map(link => (
                         <li key={link.href}>
                             <a

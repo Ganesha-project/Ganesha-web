@@ -72,8 +72,10 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                      ${idx % 5 === 0 ? "md:col-span-1 col-span-2 row-span-1" : "col-span-1 row-span-1"}
                                      `}
                         >
-                            <img
-                                className="w-full h-full min-h-[25vh] md:group-hover:scale-110 object-cover group-hover:brightness-75 duration-300"
+                            <Image
+                                width={500}
+                                height={500}
+                                className="w-full h-full min-h-[25vh] object-cover group-hover:brightness-90 duration-300"
                                 src={el.imageUrl[cardImageIndex[idx] || 0]}
                                 alt={el.title}
                             />
@@ -119,7 +121,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                     </button>
                     <div className="relative flex flex-col md:flex-row w-full md:min-h-[87.5lvh] md:max-h-[87.5lvh] max-w-5xl bg-bgLight dark:bg-darkColor rounded-3xl overflow-hidden">
                         <div className="md:w-2/3 bg-black/90 dark:bg-black/40 flex items-center justify-center relative overflow-hidden">
-                            <img
+                            <Image
                                 width={500}
                                 height={500}
                                 src={activities[selectedIndex].imageUrl[imageIndex]}

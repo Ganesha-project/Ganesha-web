@@ -2,7 +2,7 @@ import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
 import { TbMail, TbMailFilled, TbWorldWww, TbMathSymbols, TbHours24 } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
 import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
-import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiCustomerServiceFill, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
+import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiCompass3Fill, RiCompass3Line, RiCustomerServiceFill, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { SiReadthedocs } from "react-icons/si";
 import { HiDeviceMobile, HiLightningBolt, HiOfficeBuilding, HiReceiptTax } from "react-icons/hi";
@@ -287,6 +287,12 @@ export const BtmNavigationLinks = {
             iconActive: <RiSearchFill />,
             label: "Search",
             link: "/services"
+        },
+        {
+            icon: <RiCompass3Line />,
+            iconActive: <RiCompass3Fill />,
+            label: "Activity",
+            link: "/activity"
         },
         {
             icon: <RiBookOpenLine />,
