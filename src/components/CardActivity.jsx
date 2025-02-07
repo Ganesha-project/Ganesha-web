@@ -62,14 +62,15 @@ export const CardActivity = ({ activities, loadMore, items }) => {
     return (
         <>
             <section className="mx-5 md:mx-24 2xl:mx-80">
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-1 md:gap-2 auto-cols-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2 auto-cols-auto">
                     {activities.map((el, idx) => (
                         <div
                             key={idx}
                             onClick={() => handleOpenModal(idx)}
                             className={`relative group cursor-pointer rounded-xl md:rounded-2xl overflow-hidden
-                                     ${idx % 6 === 0 ? "md:col-span-2  md:row-span-2 " : "col-span-1 row-span-1"}
+                                     ${idx % 3 === 0 ? "md:col-span-2  md:row-span-2 " : "col-span-1 row-span-1"}
                                      ${idx % 5 === 0 ? "md:col-span-1 col-span-2 row-span-1" : "col-span-1 row-span-1"}
+
                                      `}
                         >
                             <Image
@@ -126,14 +127,14 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                 height={500}
                                 src={activities[selectedIndex].imageUrl[imageIndex]}
                                 alt={activities[selectedIndex].title}
-                                className="w-full h-full max-h-[55lvh] md:max-h-full object-contain z-20"
+                                className="w-full h-full bg-bgLight dark:bg-darkColor rounded-3xl max-h-[55lvh] md:max-h-full object-contain z-20"
                             />
                             <Image
                                 width={1}
                                 height={1}
                                 src={activities[selectedIndex].imageUrl[imageIndex]}
                                 alt={activities[selectedIndex].title}
-                                className="w-full h-full object-cover absolute inset-0 z-10 blur-xl scale-125"
+                                className="w-full h-full bg-bgLight dark:bg-darkColor rounded-3xl object-cover absolute inset-0 z-10 blur-xl scale-125"
                             />
                             {activities[selectedIndex].imageUrl.length > 1 && (
                                 <>
