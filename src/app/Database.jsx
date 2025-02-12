@@ -1,7 +1,7 @@
 import { HiMiniDevicePhoneMobile, } from "react-icons/hi2";
 import { TbMail, TbMailFilled, TbWorldWww, TbMathSymbols, TbHours24 } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
+import { FaBuildingWheat, FaMoneyBills, FaUserTie } from "react-icons/fa6";
 import { RiAppsFill, RiBookOpenFill, RiBookOpenLine, RiCompass3Fill, RiCompass3Line, RiCustomerServiceFill, RiFacebookBoxFill, RiFilePaperFill, RiHomeFill, RiHomeLine, RiInstagramFill, RiLinkedinFill, RiSearchFill, RiSearchLine, RiWhatsappFill } from "react-icons/ri";
 import { MdHomeRepairService } from "react-icons/md";
 import { SiReadthedocs } from "react-icons/si";
@@ -263,6 +263,13 @@ export const NavLinks = {
             icon: <IoIosInformationCircle />,
             desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
             accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
+        },
+        {
+            href: '/price-list',
+            label: 'List Harga',
+            icon: <FaMoneyBills />,
+            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
+            accent: "dark:bg-[#cf9898] bg-[#cd7575]",
         },
         {
             href: '/contact',
@@ -979,3 +986,4 @@ export const ReccomendationData = [
         desc: "Bantuan penuh pengalaman untuk memperoleh izin tambahan secara cepat dan efisien. Solusi mudah untuk semua kendala perizinan.",
     },
 ]
+
