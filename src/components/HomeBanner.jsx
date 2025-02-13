@@ -42,7 +42,7 @@ export const HomeBanner = () => {
                                         solutions <br />
                                     </span>
                                     <span className="text-amber-500 dark:text-amber-200">
-                                        for your buisness <br />
+                                        for your business <br />
                                     </span>
                                     <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
                                 </h1>
@@ -137,7 +137,7 @@ export const HomeBanner = () => {
                                     solutions <br />
                                 </span>
                                 <span className="text-white">
-                                    for your buisnes <br />
+                                    for your business <br />
                                 </span>
                                 <span className="w-24 h-1 rounded-full absolute bottom-0 bg-baseColor"></span>
                             </h1>
