@@ -1,17 +1,12 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { IoIosClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowDown } from "react-icons/fa6";
-import Image from "next/image";
-import { formatDate, formatDateTime } from "@/helper/formatDateTime";
-import { ArticleContent } from "./ArticleComponent/ArticleDetail/ArticleContent";
+import { formatDate } from "@/helper/formatDateTime";
 import { ActivityLongDesc } from "./ActivityLongDesc";
 
 export const CardActivity = ({ activities, loadMore, items }) => {
-    console.log('=sadsa===================================');
-    console.log(activities);
-    console.log('====================================');
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [imageIndex, setImageIndex] = useState(0);
     const [cardImageIndex, setCardImageIndex] = useState({});
@@ -127,14 +122,14 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                 height={500}
                                 src={activities[selectedIndex].imageUrl[imageIndex]}
                                 alt={activities[selectedIndex].title}
-                                className="w-full h-full bg-bgLight dark:bg-darkColor rounded-3xl max-h-[55lvh] md:max-h-full object-contain z-20"
+                                className="w-full h-full rounded-3xl max-h-[55lvh] md:max-h-full object-contain z-20"
                             />
                             <Image
                                 width={1}
                                 height={1}
                                 src={activities[selectedIndex].imageUrl[imageIndex]}
                                 alt={activities[selectedIndex].title}
-                                className="w-full h-full bg-bgLight dark:bg-darkColor rounded-3xl object-cover absolute inset-0 z-10 blur-xl scale-125"
+                                className="w-full h-full rounded-3xl object-cover absolute inset-0 z-10 blur-xl scale-125"
                             />
                             {activities[selectedIndex].imageUrl.length > 1 && (
                                 <>

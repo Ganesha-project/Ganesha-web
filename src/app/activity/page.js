@@ -5,6 +5,7 @@ import { BannerActivity } from "@/components/BannerActivity";
 import { CardActivity } from "@/components/CardActivity";
 import { SkeletonBannerActivity } from "@/components/Skeleton/SkeletonBannerActivity";
 import { SkeletonCardActivity } from "@/components/Skeleton/SkeletonCardActivity";
+import Head from "next/head";
 
 export default function Activity() {
     const [activities, setActivities] = useState(null);
@@ -25,9 +26,6 @@ export default function Activity() {
                 }
 
                 const data = await res.json();
-                console.log('====================================');
-                console.log(data);
-                console.log('====================================');
 
                 // Format data
                 const formattedActivities = data.data.map((item) => ({
@@ -41,9 +39,6 @@ export default function Activity() {
                         ? item.attributes.mediaUrl.data.map(img => `https://cms-ganesha.ganeshaconsulting.co.id${img.attributes.url}`)
                         : ["https://via.placeholder.com/750"], // Placeholder jika tidak ada gambar
                 }));
-                console.log('====================================');
-                console.log(data);
-                console.log('====================================');
                 setActivities(formattedActivities);
                 setLoad(false);
             } catch (error) {
@@ -65,6 +60,17 @@ export default function Activity() {
 
     return (
         <>
+            <Head>
+                <title>Latest Activities | Ganesha Multi Kreatif</title>
+                <meta name="description" content="Discover the latest activities and events organized by Ganesha Multi Kreatif. Stay updated with our newest events, schedules, and locations." />
+                <meta name="keywords" content="activities, events, Ganesha Multi Kreatif, latest updates, workshops" />
+                <meta name="author" content="Ganesha Multi Kreatif" />
+                <meta property="og:title" content="Latest Activities | Ganesha Multi Kreatif" />
+                <meta property="og:description" content="Discover the latest activities and events organized by Ganesha Multi Kreatif." />
+                <meta property="og:image" content={activities?.[0]?.imageUrl?.[0] || "https://via.placeholder.com/750"} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.yourwebsite.com/activities" />
+            </Head>
             {error ? (
                 <div>Error: {error}</div>
             ) : load ? (
