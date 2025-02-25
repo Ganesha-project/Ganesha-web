@@ -886,6 +886,12 @@ export const DataSelectFilterArticle = [
 
 export const dataAdsBanner = [
     {
+        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/WEB_Banner_Ganesha_Consulting_72bc3c5c78.jpg",
+        bannerMobile: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/WEB_Banner_Ganesha_Consulting_72bc3c5c78.jpg",
+        href: "/web-development",
+        alt: "Ganesha Promo Pendirian Website"
+    },
+    {
         bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/DECEMBER_DEALS_38_OFF_GANESHA_a67d3b687a.webp",
         bannerMobile: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_11zon_b0375ea8ba.webp",
         href: "/web-development",

@@ -8,6 +8,14 @@ export const ClientsReview = [
         service: ''
     },
     {
+        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Client_Ganesha_Consulting_1e5c148cce.jpeg',
+        clientLogo: '',
+        clientName: '',
+        ptName: '',
+        review: '',
+        service: ''
+    },
+    {
         clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ztne5enfp7y6paomxi5p.webp',
         clientLogo: '',
         clientName: '',

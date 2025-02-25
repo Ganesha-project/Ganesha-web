@@ -12,8 +12,8 @@ export const PopupContent = () => {
                     width={100}
                     height={100}
                     className="w-[80lvw] h-[80lvw] md:w-[30lvw] md:h-[30lvw] object-cover rounded-2xl"
-                    src="https://cms-ganesha.ganeshaconsulting.co.id/uploads/Popup2_0f6d60e43c.png"
-                    alt="Ganesha December Deals" />
+                    src="https://cms-ganesha.ganeshaconsulting.co.id/uploads/Ppo_Up_Offers_Ganesha_Consulting_Revv_53e0cfae43.jpg"
+                    alt="Ganesha Deals" />
             </section>
         </>
     )
