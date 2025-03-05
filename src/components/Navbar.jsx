@@ -82,7 +82,7 @@ export const Navbar = () => {
             </li>
             <li className='relative flex flex-col items-center group'>
               <a
-                href={'/artikel'}
+                href={'/article'}
                 className={`block py-2 px-3 text-gray-800 dark:text-white rounded hover:bg-slate-100 md:hover:bg-transparent  dark:hover:text-baseColor hover:text-mainColor md:p-0`}
                 aria-current="page"
               >
