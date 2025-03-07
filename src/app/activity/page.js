@@ -6,6 +6,7 @@ import { CardActivity } from "@/components/CardActivity";
 import { SkeletonBannerActivity } from "@/components/Skeleton/SkeletonBannerActivity";
 import { SkeletonCardActivity } from "@/components/Skeleton/SkeletonCardActivity";
 import Head from "next/head";
+import { FiLoader } from "react-icons/fi";
 
 export default function Activity() {
     const [activities, setActivities] = useState([]);
@@ -13,11 +14,13 @@ export default function Activity() {
     const [error, setError] = useState(null);
     const [itemsToShow, setItemsToShow] = useState(9);
     const [sort, setSort] = useState("DESC");
+    const [loadingMore, setLoadingMore] = useState(false);
     const observerRef = useRef(null);
 
     useEffect(() => {
         async function fetchActivities() {
             try {
+                setLoadingMore(true);
                 let fetchUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/activities?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
                 const res = await fetch(fetchUrl);
                 if (!res.ok) {
@@ -37,9 +40,11 @@ export default function Activity() {
                 }));
                 setActivities(formattedActivities);
                 setLoad(false);
+                setLoadingMore(false);
             } catch (error) {
                 setError(error.message);
                 setLoad(false);
+                setLoadingMore(false);
             }
         }
         fetchActivities();
@@ -95,6 +100,13 @@ export default function Activity() {
                     />
                 )}
                 <div id="loadMoreTrigger" className="h-10" />
+                {loadingMore && itemsToShow >= activities.length && (
+                    <div className="flex justify-center py-4 w-full items-center">
+                        <p className="animate-spin text-2xl">
+                            <FiLoader />
+                        </p>
+                    </div>
+                )}
             </section>
         </>
     );
