@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BannerActivity } from "@/components/BannerActivity";
 import { CardActivity } from "@/components/CardActivity";
 import { SkeletonBannerActivity } from "@/components/Skeleton/SkeletonBannerActivity";
@@ -8,26 +8,22 @@ import { SkeletonCardActivity } from "@/components/Skeleton/SkeletonCardActivity
 import Head from "next/head";
 
 export default function Activity() {
-    const [activities, setActivities] = useState(null);
+    const [activities, setActivities] = useState([]);
     const [load, setLoad] = useState(true);
     const [error, setError] = useState(null);
     const [itemsToShow, setItemsToShow] = useState(9);
     const [sort, setSort] = useState("DESC");
+    const observerRef = useRef(null);
 
     useEffect(() => {
         async function fetchActivities() {
             try {
                 let fetchUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/activities?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
-
                 const res = await fetch(fetchUrl);
-
                 if (!res.ok) {
                     throw new Error("Network response was not ok");
                 }
-
                 const data = await res.json();
-
-                // Format data
                 const formattedActivities = data.data.map((item) => ({
                     title: item.attributes.title,
                     date: item.attributes.date,
@@ -37,7 +33,7 @@ export default function Activity() {
                     ig: item.attributes.ig,
                     imageUrl: item.attributes.mediaUrl?.data?.length
                         ? item.attributes.mediaUrl.data.map(img => `https://cms-ganesha.ganeshaconsulting.co.id${img.attributes.url}`)
-                        : ["https://via.placeholder.com/750"], // Placeholder jika tidak ada gambar
+                        : ["https://via.placeholder.com/750"],
                 }));
                 setActivities(formattedActivities);
                 setLoad(false);
@@ -49,14 +45,19 @@ export default function Activity() {
         fetchActivities();
     }, [itemsToShow, sort]);
 
-    const loadMore = () => {
-        setItemsToShow(prevItems => prevItems + 3);
-    };
-
-    const setSortOrder = (order) => {
-        setSort(order);
-    };
-
+    useEffect(() => {
+        observerRef.current = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                setItemsToShow(prev => prev + 3);
+            }
+        });
+        if (observerRef.current && document.getElementById("loadMoreTrigger")) {
+            observerRef.current.observe(document.getElementById("loadMoreTrigger"));
+        }
+        return () => {
+            if (observerRef.current) observerRef.current.disconnect();
+        };
+    }, []);
 
     return (
         <>
@@ -74,9 +75,7 @@ export default function Activity() {
             {error ? (
                 <div>Error: {error}</div>
             ) : load ? (
-                <>
-                    <SkeletonBannerActivity />
-                </>
+                <SkeletonBannerActivity />
             ) : (
                 <BannerActivity data={activities} />
             )}
@@ -84,20 +83,18 @@ export default function Activity() {
                 {error ? (
                     <div>Error: {error}</div>
                 ) : load ? (
-                    <>
-                        <SkeletonCardActivity/>
-                    </>
+                    <SkeletonCardActivity />
                 ) : activities.length === 0 ? (
                     <div className="h-[30lvh] flex items-center justify-center">
                         <p className="text-xl text-center">No activities found.</p>
                     </div>
                 ) : (
                     <CardActivity
-                        activities={activities} // Kirim data yang sudah diformat ke CardActivity
+                        activities={activities}
                         items={itemsToShow}
-                        loadMore={loadMore}
                     />
                 )}
+                <div id="loadMoreTrigger" className="h-10" />
             </section>
         </>
     );
