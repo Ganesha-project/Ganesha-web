@@ -67,8 +67,8 @@ export const MobileDrawer = () => {
                                Activity
                             </a>
                         </li>
-                    {[...NavLinks.others, ...NavLinks.about].map(link => (
-                        <li key={link.href}>
+                    {[...NavLinks.others, ...NavLinks.about].map((link, idLink) => (
+                        <li key={idLink}>
                             <a
                                 href={link.href}
                                 className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}

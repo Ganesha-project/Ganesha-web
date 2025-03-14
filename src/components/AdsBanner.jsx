@@ -46,7 +46,6 @@ export const AdsBanner = () => {
                                 alt={el.alt}
                             />
                             <img
-                                key={idx}
                                 className="md:hidden w-full h-full object-cover rounded-3xl inline-block bg-mainColor"
                                 src={el.bannerMobile}
                                 alt={el.alt}

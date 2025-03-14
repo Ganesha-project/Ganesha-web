@@ -1,5 +1,6 @@
 "use client"
 import { formatToRupiah } from "@/helper/formatToRupiah";
+import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -8,9 +9,12 @@ export const ReusableCards = ({ data, label, visibility }) => {
     const [scrollTo, setScrollTo] = useState(10);
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalItems = data.length;
+
     const [activeDot, setActiveDot] = useState(0);
     const carouselRef = useRef(null);
     const totalDots = data.length;
+
+    const path = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -104,14 +108,15 @@ export const ReusableCards = ({ data, label, visibility }) => {
                                 key={idx}
                                 className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} ${totalItems < 4 && "2xl:w-[32%]"} md:w-[30lvw] w-[90lvw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
                             >
-                                <div className="flex flex-col justify-center items-center gap-3 mt-5">
+                                <div className="flex flex-col justify-center items-center gap-3 mt-5 relative">
                                     <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-xl md:text-3xl font-bold tracking-tight`}>
                                         {el.type}
                                     </h1>
                                     <h3 className="text-center line-through text-lg dark:text-red-500 text-red-600">
                                         {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                                     </h3>
-                                    <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-xl md:text-3xl`}>
+                                    <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-xl md:text-3xl flex gap-2 items-center`}>
+                                        {path === "/web-development" && (<span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full"> Start From </span>)}
                                         {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
                                     <a
