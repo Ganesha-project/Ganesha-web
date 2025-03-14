@@ -116,7 +116,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                                         {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                                     </h3>
                                     <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-xl md:text-3xl flex gap-2 items-center`}>
-                                        {path === "/web-development" && (<span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full"> Start From </span>)}
+                                        {path === "/web-development" && el.price !== 0 && (<span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full"> Start From </span>)}
                                         {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
                                     <a
