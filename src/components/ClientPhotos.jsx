@@ -20,7 +20,7 @@ export const ClientPhotos = () => {
 
     return (
         <>
-            <section classNa me='relative overflow-hidden py-16'>
+            <section className='relative overflow-hidden py-16'>
                 <div className='md:mx-24 mx-5 mt-10'>
                     <Title className={'flex justify-center'} text={'Our Clients'} icon={<FaQuoteRight />} iconClassName={'text-red-500'} />
                 </div>

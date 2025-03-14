@@ -69,15 +69,14 @@ export const HomeBanner = () => {
                                 </p>
                                 <div className="flex gap-3 relative px-3 bg-white rounded-2xl w-fit">
                                     {governLogo.map((el, idx) => (
-                                        <>
-                                            <Image
-                                                key={idx}
-                                                width={100}
-                                                height={100}
-                                                className="w-[85px] h-[85px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
-                                                src={el.logoUrl}
-                                                alt={el.name} />
-                                        </>
+                                        <Image
+                                            key={idx}
+                                            width={100}
+                                            height={100}
+                                            className="w-[85px] h-[85px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
+                                            src={el.logoUrl}
+                                            alt={el.name} />
+
                                     ))}
                                 </div>
                             </div>
@@ -163,15 +162,13 @@ export const HomeBanner = () => {
                                 </p>
                                 <div className="flex flex-wrap gap-3 relative">
                                     {governLogo.map((el, idx) => (
-                                        <>
-                                            <Image
-                                                key={idx}
-                                                width={100}
-                                                height={100}
-                                                className="w-[50px] h-[50px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
-                                                src={el.logoUrl}
-                                                alt={el.name} />
-                                        </>
+                                        <Image
+                                            key={idx}
+                                            width={100}
+                                            height={100}
+                                            className="w-[50px] h-[50px] object-fill z-20 drop-shadow-[0px_0px_20px_#ffffff] relative"
+                                            src={el.logoUrl}
+                                            alt={el.name} />
                                     ))}
                                 </div>
                             </div>
