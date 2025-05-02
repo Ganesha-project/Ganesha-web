@@ -17,7 +17,7 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                 ) : filter === true ? (
                     <>
                         <div className="dropdown dropdown-bottom dropdown-end flex justify-end">
-                            <div tabIndex={0} role="button" className="flex items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor dark:bg-opacity-20 bg-white shadow bg-opacity-80 backdrop-blur-xl truncate font-semibold dark:text-white text-mainColor">
+                            <div tabIndex={0} role="button" className="flex text-sm items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor/20 bg-mainColor/10 truncate font-semibold dark:text-white text-mainColor">
                                 <FaSort />
                                 Sort By
                             </div>
@@ -40,7 +40,7 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                     </>
                 ) : (
                     <a href=""
-                        className="px-3 py-1 bg-baseColor dark:text-gray-900 dark:hover:text-white text-white rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor"
+                        className="px-3 py-1 bg-baseColor dark:text-neutral-900 dark:hover:text-white text-white rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor"
                     >
                         See More
                     </a>

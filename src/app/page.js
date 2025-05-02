@@ -1,7 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticles } from '@/store/articleSlice';
 import { HomeBanner } from "@/components/HomeBanner";
 import { AllServicesBtn } from "@/components/AllServicesBtn";
 import { ClientPhotos } from "@/components/ClientPhotos";
@@ -19,25 +17,9 @@ import { Support } from '@/components/AboutUs/Support';
 import { PseCertificate } from '@/components/PseCertificate';
 import { Popup } from '@/components/Popup';
 import { PopupContent } from '@/components/PopupContent';
+import { HeroSection } from '@/components/HeroSection';
 
 export default function Home() {
-  const dispatch = useDispatch();
-  const { articles, loading, error } = useSelector((state) => state.articles);
-
-  useEffect(() => {
-    dispatch(fetchArticles(6));
-  }, [dispatch]);
-
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  useEffect(() => {
-    // Timer untuk menampilkan popup 2 detik setelah halaman dimuat
-    const timer = setTimeout(() => {
-      setIsPopupOpen(true);
-    }, 2000);
-
-    // Bersihkan timer saat komponen di-unmount
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>
@@ -77,29 +59,15 @@ export default function Home() {
           `}
         </script>
       </Head>
-      <HomeBanner />
-      <Popup
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-        content={<PopupContent />}
-      />
+      <HeroSection />
       <AllServicesBtn />
-      <Support />
       <PseCertificate />
-      <PriceWrapper text={"Our Main Services"} text1={"Some of"} data={dataPriceWrapper.legal} />
-      <ClientPhotos />
-      <WebWork text={'Our Websites Work'} />
-      <SocmedWork text={'Our Social Media Work'} />
+      <PriceWrapper text={"Layanan Utama Kami"} text1={"Rekomendasi"} data={dataPriceWrapper.legal} />
+      <WebWork text1={'Jelajahi'} text={'Karya Website Kami'} />
+      <SocmedWork text1={'Sosial media'} text={'Yang kami tangani'} />
       <AdsBanner />
       <WhyUs />
       <ClientLogo />
-      {error ? (
-        <div>Error: {error}</div>
-      ) : loading ? (
-        <SkeletonReccomendation />
-      ) : (
-        <ArticleReccomendation data={articles} />
-      )}
     </>
   );
 }

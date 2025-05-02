@@ -84,9 +84,8 @@ export default async function PendirianBadanUsaha() {
             />
             <RWhyUs />
             <Faqs
-                className2={'!bg-gray-300 dark:!bg-opacity-25 w-full'}
                 text={'FAQ'}
-                color={'gray'}
+                color={'neutral'}
                 data={dataPageBadanUsaha.faqDataBU}
             />
         </>

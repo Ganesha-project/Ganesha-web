@@ -67,14 +67,12 @@ export default function ArticleDetail() {
             {isLoading ? (
                 <ArticleDetailSkeleton />
             ) : data ? (
-                <section className="flex md:flex-row flex-col gap-20 mx-5 md:mx-24 2xl:mx-80">
-                    <div className="md:w-[70%]">
+                <section className="flex flex-col gap-20">
+                    <div className="mx-5 md:mx-24 2xl:mx-80">
                         <BannerArticleDetail data={data} />
                         <ArticleContent data={data} />
                     </div>
-                    <div className="md:w-[30%]">
-                        <SideRec data={articles} />
-                    </div>
+                    <SideRec data={articles} />
                 </section>
             ) : (
                 <p>No article data available</p>

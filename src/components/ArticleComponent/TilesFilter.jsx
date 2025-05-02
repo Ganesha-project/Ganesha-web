@@ -16,7 +16,7 @@ export const TilesFilter = ({ categories }) => {
                     {uniqueCategories.map((el, idx) => (
                         <Link
                             href={`/article/${slugify(el)}`} key={idx}
-                            className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === uniqueCategories.length - 1 ? 'mr-5 md:mr-0' : ''} lowercase flex items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor dark:bg-opacity-20 bg-white bg-opacity-80 backdrop-blur-xl shadow hover:bg-mainColor hover:text-white dark:hover:text-baseColor duration-200 dark:text-white text-gray-900`}
+                            className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === uniqueCategories.length - 1 ? 'mr-5 md:mr-0' : ''} text-sm flex items-center gap-2 px-4 py-2 rounded-full bg-baseColor/20 hover:bg-mainColor hover:text-white dark:hover:text-baseColor duration-200 dark:text-white text-neutral-900`}
                         >
                             <span className="capitalize font-semibold truncate">
                                 {el}

@@ -28,7 +28,7 @@ export const BodyLanding = () => {
                                     className={`grow object-contain p-10 rounded-t-3xl md:h-auto min-h-[50lvh]`}
                                     src={el.data.bannerImage}
                                     alt={el.data.mainText} />
-                                <div className={`bg-white dark:bg-black dark:bg-opacity-20 bg-opacity-20 p-5 rounded-b-3xl space-y-1`}>
+                                <div className={`bg-white/20 dark:bg-black/20 p-5 rounded-b-3xl space-y-1`}>
                                     <h1 className={`${el.data.textAccent} brightness-95 dark:brightness-125 font-semibold text-xl md:text-2xl`}>
                                         {el.data.mainText}
                                     </h1>

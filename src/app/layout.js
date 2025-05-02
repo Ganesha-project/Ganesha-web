@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Quicksand } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingButton } from "@/components/FloatingButton";
@@ -7,13 +7,14 @@ import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes";
 import { NavigationMobile } from "@/components/NavigationMobile";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import ClientProvider from '@/components/ClientProvider';
 import Head from 'next/head';
 import Script from "next/script";
+import { Popup } from "@/components/Popup";
+import { PopupContent } from "@/components/PopupContent";
 
-const quicksand = Quicksand({
+const quicksand = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ['300', '400', '500', '700']
+  weight: ["200", "300", "400", "500", "600", "700", "800"]
 });
 
 export const metadata = {
@@ -56,13 +57,15 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <ThemeProvider enableSystem={true} attribute="class">
-          <ClientProvider>
-            <Navbar />
-            <FloatingButton />
-            <NavigationMobile />
-            {children}
-            <Footer />
-          </ClientProvider>
+            <Navbar>
+              {children}
+              <Footer />
+            </Navbar>
+          <FloatingButton />
+          <NavigationMobile />
+          {/* <Popup
+            content={<PopupContent />}
+          /> */}
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />

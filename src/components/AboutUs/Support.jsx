@@ -9,9 +9,9 @@ export const Support = () => {
                 </h1>
                 <div className="flex items-center justify-center gap-5 md:w-[50%]">
                     {dataAboutus.support.map(el => (
-                        <>
+                        <div key={el}>
                             <img className="w-[25%] md:w-[65%] h-[10lvh] bg-blend-multiply object-contain" src={el} alt="" />
-                        </>
+                        </div>
                     ))}
                 </div>
             </section>

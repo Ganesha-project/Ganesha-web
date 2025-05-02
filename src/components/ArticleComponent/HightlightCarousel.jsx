@@ -29,7 +29,7 @@ export const HighlightCarousel = ({ data }) => {
 
     return (
         <>
-            <div className="overflow-hidden rounded-box md:h-[50lvh] h-[30lvh] shadow">
+            <div className="overflow-hidden rounded-3xl md:h-[60lvh] h-[30lvh] shadow-mainShadow">
                 <div
                     className="whitespace-nowrap transition-transform ease-in-out duration-700 w-full h-full"
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
@@ -43,7 +43,7 @@ export const HighlightCarousel = ({ data }) => {
                             <img
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-2xl hover:scale-125 duration-150 bg-baseColor"
+                                className="w-full h-full object-cover rounded-3xl hover:scale-125 duration-150 bg-baseColor"
                                 src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                 alt={el.attributes.Title}
                             />

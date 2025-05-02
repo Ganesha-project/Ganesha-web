@@ -19,7 +19,7 @@ export const BodyContact = () => {
                         <Link
                             href={el.link}
                             key={idx}
-                            className="grow flex flex-col justify-between p-5 rounded-3xl dark:bg-darkColor bg-gray-200 hover:invert duration-300 ease-in-out hover:-translate-y-3 origin-bottom hover:shadow-mainShadow"
+                            className="grow flex flex-col justify-between p-5 rounded-3xl dark:bg-darkColor bg-neutral-200 hover:invert duration-300 ease-in-out hover:-translate-y-3 origin-bottom hover:shadow-mainShadow"
                         >
                             <div className="text-3xl md:text-5xl mb-10">
                                 {el.icon}
@@ -28,7 +28,7 @@ export const BodyContact = () => {
                                 <h1 className="font-medium text-lg md:text-xl">
                                     {el.label}
                                 </h1>
-                                <h2 className="font-bold text-xl bg-gradient-to-bl dark:from-secondaryColor dark:to-gray-100 from-mainColor to-darkColor bg-clip-text text-transparent">
+                                <h2 className="font-bold text-xl bg-gradient-to-bl dark:from-secondaryColor dark:to-neutral-100 from-mainColor to-darkColor bg-clip-text text-transparent">
                                     {el.data}
                                 </h2>
                             </div>

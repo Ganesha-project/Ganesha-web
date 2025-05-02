@@ -1,6 +1,6 @@
 const SkeletonImage = ({ className }) => {
     return (
-        <div className={`animate-pulse bg-gray-300 ${className}`}></div>
+        <div className={`animate-pulse bg-neutral-300 ${className}`}></div>
     );
 };
 

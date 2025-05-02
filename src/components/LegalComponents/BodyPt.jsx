@@ -52,8 +52,8 @@ export const BodyPT = () => {
                 <Title text1={'Undang - undang'} text={'Terkait PT di Indonesia'} />
                 <div className="md:grid md:grid-cols-2 flex flex-col gap-5">
                     {DataPageLegal.legalTexts.map((el, idx) => (
-                        <div key={idx} className="space-y-10 p-10 rounded-3xl dark:from-darkColor dark:to-transparent bg-gradient-to-b from-gray-200 to-transparent duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow">
-                            <div className="h-14 w-14 bg-gradient-to-bl dark:from-darkColor dark:to-sky-600 from-gray-200 to-sky-300 rounded-full flex items-center justify-center text-2xl md:text-4xl">
+                        <div key={idx} className="space-y-10 p-10 rounded-3xl dark:from-darkColor dark:to-transparent bg-gradient-to-b from-neutral-200 to-transparent duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow">
+                            <div className="h-14 w-14 bg-gradient-to-bl dark:from-darkColor dark:to-sky-600 from-neutral-200 to-sky-300 rounded-full flex items-center justify-center text-2xl md:text-4xl">
                                 {el.number}
                             </div>
                             <h1 className="font-medium">

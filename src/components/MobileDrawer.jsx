@@ -1,87 +1,171 @@
-import Link from "next/link"
-import { ExpandableButton } from "./ExpandableButton"
-import { NavLinks } from "@/app/Database"
-import { SearchNavbar } from "./SearchNavbar"
+'use client'
 
-export const MobileDrawer = () => {
+import { useRef, useState, useEffect } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import { AboutUsLinks, categorizedServices } from "@/DB/Database";
+import { HiHome } from "react-icons/hi";
+import ThemeSwitch from "./ThemeSwitch";
+
+export const MobileDrawer = ({ expandedId }) => {
+    const expandAnimationClass = expandedId
+        ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out"
+        : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
+
+    const [isExpanded, setIsExpanded] = useState(false);
+    const contentRef = useRef(null);
+    const minimizedRef = useRef(null);
+    const [contentHeight, setContentHeight] = useState('0px');
+    const [minimizedHeight, setMinimizedHeight] = useState('0px');
+
+    const allServices = [
+        ...categorizedServices.main,
+        ...categorizedServices.law,
+        ...categorizedServices.creative,
+        ...categorizedServices.management,
+        ...categorizedServices.finance,
+        ...categorizedServices.workspace,
+    ].filter(cat => cat.visibility);
+
+    const displayedServices = isExpanded ? allServices : allServices.slice(0, 6);
+
+    useEffect(() => {
+        if (contentRef.current) {
+            setContentHeight(`${contentRef.current.scrollHeight}px`);
+        }
+        if (minimizedRef.current) {
+            setMinimizedHeight(`${minimizedRef.current.scrollHeight}px`);
+        }
+    }, [isExpanded, allServices]);
+
     return (
-        <>
-            <ul className={`flex z-50 flex-col mx-5 my-10 min-h-full text-base-content noBar`}>
-                <div className='flex flex-col gap-3 font-bold'>
-                    {NavLinks.main.slice(0, 1).map(link => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}
-                                aria-current="page"
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                    <li>
-                        <ExpandableButton label={'Produk & Layanan'} order={'order-last'} className={'hover:bg-baseColor px-3 py-1 rounded-xl dark:hover:bg-mainColor dark:bg-opacity-50 bg-opacity-50'}>
-                            <div className={`z-10 rounded-xl mt-2 text-gray-800 dark:text-white divide-y divide-gray-100 shadow`}>
-                                <ul className="text-sm text-gray-800 dark:text-white">
-                                    {NavLinks.productsAndServices.map(link => (
-                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 dark:hover:bg-opacity-40 hover:bg-opacity-45 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
-                                            <a href={link.href}
-                                                className="flex items-center gap-2"
-                                            >
-                                                <span>
-                                                    {link.icon}
-                                                </span>
-                                                {link.label}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </ExpandableButton>
-                    </li>
-                    <li>
-                        <ExpandableButton label={'Legalitas'} order={'order-last'} className={'hover:bg-baseColor px-3 py-1 rounded-xl dark:hover:bg-mainColor dark:bg-opacity-50 bg-opacity-50'}>
-                            <div className={`z-10 rounded-xl mt-2 text-gray-800 dark:text-white divide-y divide-gray-100 shadow`}>
-                                <ul className="text-sm text-gray-800 dark:text-white">
-                                    {NavLinks.legalities.map(link => (
-                                        <li key={link.href} className="bg-gray-800 dark:bg-white font-medium dark:bg-opacity-10 dark:hover:bg-opacity-40 hover:bg-opacity-45 bg-opacity-5 rounded-xl block px-3 py-2 m-2 duration-300 hover:bg-[#bca0be72]">
-                                            <a href={link.href}
-                                                className="flex items-center gap-2"
-                                            >
-                                                <span>
-                                                    {link.icon}
-                                                </span>
-                                                {link.label}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </ExpandableButton>
-                    </li>
-                    <li>
-                            <a
-                                href={'/activity'}
-                                className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}
-                            >
-                               Activity
-                            </a>
-                        </li>
-                    {[...NavLinks.others, ...NavLinks.about].map((link, idLink) => (
-                        <li key={idLink}>
-                            <a
-                                href={link.href}
-                                className={`flex flex-col items-start group duration-200 hover:bg-white px-3 py-1 rounded-full dark:hover:bg-mainColor hover:text-mainColor dark:text-white text-gray-800 dark:hover:text-baseColor`}
-                            >
-                                {link.label}
-                            </a>
-                        </li>
-                    ))}
-                        <div className="flex flex-col justify-center gap-3 md:px-5 py-5 px-3">
-                            <SearchNavbar />
-                        </div>
+        <ul className="px-5 pt-14 pb-10">
+            <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between">
+                    <p onClick={() => setIsExpanded(!isExpanded)} className="font-bold text-sm opacity-60 dark:opacity-70">Produk & Layanan</p>
+                    {/* Expand/Minimize Button */}
+                    {allServices.length > 6 && (
+                        <button
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className={`${expandAnimationClass} text-sm font-semibold flex items-center justify-center`}
+                        >
+                            <span className="flex items-center justify-center gap-1 opacity-60 dark:opacity-70 w-fit dark:bg-darkColor/80 bg-lightColor/80 rounded-3xl px-2 py-2 text-md">
+                                <IoIosArrowDown
+                                    className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}
+                                />
+                            </span>
+                        </button>
+                    )}
                 </div>
-            </ul>
-        </>
-    )
-}
+
+                {/* Services with Animated Height */}
+                <div
+                    className={`${expandAnimationClass} transition-all duration-700 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: isExpanded ? contentHeight : minimizedHeight }}
+                >
+                    <div ref={contentRef} className="grid grid-cols-3 gap-2">
+                        {allServices.map((cat, index) => (
+                            <a href={cat.href} key={index}>
+                                <div
+                                    className={` grow aspect-square group transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl flex flex-col items-center justify-center p-3 hover:bg-opacity-20 hover:scale-95`}
+                                >
+                                    <div
+                                        className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-100"
+                                        style={{
+                                            backgroundColor: cat.accentLight,
+                                            transform: "translate(-50%, -50%)",
+                                        }}
+                                    />
+                                    <div
+                                        className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                        style={{
+                                            backgroundColor: cat.accentLight,
+                                            mixBlendMode: "multiply",
+                                        }}
+                                    />
+                                    <div className="flex flex-col items-center justify-center text-center gap-2 text-sm z-10">
+                                        <div
+                                            className="text-xl p-2 rounded-full"
+                                            style={{
+                                                color: cat.accentLight,
+                                                backgroundColor: cat.accentDark,
+                                            }}
+                                        >
+                                            {cat.icon}
+                                        </div>
+                                        <p
+                                            className="text-xs font-bold brightness-50 dark:brightness-100 leading-tight truncate-last-2"
+                                            style={{ color: cat.accentDark }}
+                                        >
+                                            {cat.label}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Ref container to measure minimized height */}
+                <div className="absolute invisible pointer-events-none h-0 overflow-hidden">
+                    <div ref={minimizedRef} className="grid grid-cols-3 gap-2 w-[calc(100vw-2.5rem)]">
+                        {allServices.slice(0, 6).map((cat, index) => (
+                            <div key={index} className="aspect-square"></div>
+                        ))}
+                    </div>
+                </div>
+
+                <p className="font-bold opacity-60 dark:opacity-70 text-sm">
+                    Kenali Kami
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                    {AboutUsLinks.filter(cat => cat.visibility).map((cat, index) => (
+                        <a href={cat.href} key={index}>
+                            <div
+                                className={`${expandAnimationClass} grow aspect-square group transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl flex flex-col items-center justify-center p-3 hover:bg-opacity-20 hover:scale-95`}
+                            >
+                                <div
+                                    className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80"
+                                    style={{
+                                        backgroundColor: cat.accentLight,
+                                        transform: "translate(-50%, -50%)",
+                                    }}
+                                />
+                                <div
+                                    className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    style={{
+                                        backgroundColor: cat.accentLight,
+                                        mixBlendMode: "multiply",
+                                    }}
+                                />
+                                <div className="flex flex-col items-center justify-center text-center gap-2 text-sm z-10">
+                                    <div
+                                        className="text-xl p-2 rounded-full"
+                                        style={{
+                                            color: cat.accentLight,
+                                            backgroundColor: cat.accentDark,
+                                        }}
+                                    >
+                                        {cat.icon}
+                                    </div>
+                                    <p
+                                        className="text-xs font-bold brightness-50 dark:brightness-100 leading-tight truncate-last-2"
+                                        style={{ color: cat.accentDark }}
+                                    >
+                                        {cat.label}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+                <div className=" flex self-end gap-2 px-3 py-2 bg-lightColor/50 dark:bg-darkColor/50 rounded-full">
+                    <a href="/"
+                    >
+                        <HiHome className="text-xl" />
+                    </a>
+                    <ThemeSwitch />
+                </div>
+            </div>
+        </ul>
+    );
+};

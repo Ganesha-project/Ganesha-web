@@ -40,7 +40,7 @@ export const BannerService = () => {
                 </h2>
                 <Link
                     href={WALINK}
-                    className={`${accent} ${visibility} dark:text-white font-bold z-40 w-fit px-4 py-1 text-gray-800 rounded-full duration-300 ease-in-out hover:brightness-75`}>
+                    className={`${accent} ${visibility} dark:text-white font-bold z-40 w-fit px-4 py-1 text-neutral-800 rounded-full duration-300 ease-in-out hover:brightness-75`}>
                     Contact
                 </Link>
             </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
+import { HiMoon, HiSun } from 'react-icons/hi2';
 
 export default function ThemeSwitch() {
   const { systemTheme, theme, setTheme } = useTheme('dark');
@@ -16,23 +16,25 @@ export default function ThemeSwitch() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <label className="swap swap-rotate">
-      {/* Hidden checkbox to control the state */}
-      <input
-        type="checkbox"
-        onChange={() => setTheme(currentTheme === 'light' ? 'dark' : 'light')}
-        checked={currentTheme === 'dark'}
-      />
+    <div className='flex'>
+      <label className="swap swap-rotate">
+        {/* Hidden checkbox to control the state */}
+        <input
+          type="checkbox"
+          onChange={() => setTheme(currentTheme === 'light' ? 'dark' : 'light')}
+          checked={currentTheme === 'dark'}
+        />
 
-      {/* Sun icon (for light mode) */}
-      <div className='swap-off tooltip tooltip-left p-2 rounded-full bg-gray-200 bg-opacity-40 dark:bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
-        <IoSunnySharp className="text-xl" />
-      </div>
+        {/* Sun icon (for light mode) */}
+        <div className='swap-off rounded-full'>
+          <HiSun className="text-xl" />
+        </div>
 
-      {/* Moon icon (for dark mode) */}
-      <div className='swap-on tooltip tooltip-left p-2 rounded-full bg-gray-200 bg-opacity-40 dark:bg-opacity-25 backdrop-blur-md hover:bg-opacity-100 hover:bg-mainColor hover:text-white duration-300 dark:hover:bg-secondaryColor'>
-        <IoMoonSharp className="text-xl" />
-      </div>
-    </label>
+        {/* Moon icon (for dark mode) */}
+        <div className='swap-on rounded-full'>
+          <HiMoon className="text-xl" />
+        </div>
+      </label>
+    </div>
   );
 }

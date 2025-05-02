@@ -98,7 +98,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                         <div className="w-full h-auto flex justify-center items-center pt-10">
                             <button
                                 onClick={loadMore}
-                                className="flex gap-2 items-center px-4 py-2 group border-2 border-mainColor text-mainColor dark:border-baseColor dark:text-baseColor dark:hover:bg-baseColor dark:hover:text-gray-800 rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor hover:text-white"
+                                className="flex gap-2 items-center px-4 py-2 group border-2 border-mainColor text-mainColor dark:border-baseColor dark:text-baseColor dark:hover:bg-baseColor dark:hover:text-neutral-800 rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor hover:text-white"
                             >
                                 Load More <FaArrowDown className="group-hover:animate-bounce" />
                             </button>
@@ -115,7 +115,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                     >
                         <IoIosClose />
                     </button>
-                    <div className="relative flex flex-col md:flex-row w-full md:min-h-[87.5lvh] md:max-h-[87.5lvh] max-w-5xl bg-bgLight dark:bg-darkColor rounded-3xl overflow-hidden">
+                    <div className="relative flex flex-col md:flex-row w-full md:min-h-[87.5lvh] md:max-h-[87.5lvh] max-w-5xl bg-lightColor dark:bg-darkColor rounded-3xl overflow-hidden">
                         <div className="md:w-2/3 bg-black/90 dark:bg-black/40 flex items-center justify-center relative overflow-hidden">
                             <Image
                                 width={500}
@@ -148,7 +148,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                 <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
                                 <a
                                     href=""
-                                    className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800 via-mainColor to-baseColor bg-clip-text text-transparent"
+                                    className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
                                 >
                                     Ganesha Consulting
                                 </a>

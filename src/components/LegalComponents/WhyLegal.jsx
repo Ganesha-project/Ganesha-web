@@ -50,9 +50,9 @@ export const WhyLegal = ({ data, text, text1 }) => {
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} shimmer relative group md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-gray-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
+                                className={`${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} shimmer relative group md:w-[20lvw] w-[90lvw] h-[60lvh] p-8 rounded-3xl dark:from-[#1f1f1f] dark:to-black from-neutral-200 to-white bg-gradient-to-b flex flex-col duration-300 ease-in-out hover:scale-105 origin-bottom hover:brightness-105 hover:shadow-mainShadow`}
                             >
-                                <h1 className="text-2xl font-semibold h-[30lvh] bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
+                                <h1 className="text-2xl font-semibold h-[30lvh] bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent">
                                     {el.title}
                                 </h1>
                                 <div>
@@ -72,10 +72,10 @@ export const WhyLegal = ({ data, text, text1 }) => {
                     </div>
                 </div>
                 <div className="flex justify-center w-full items-center space-x-2">
-                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                     </button>
-                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                     </button>
                 </div>

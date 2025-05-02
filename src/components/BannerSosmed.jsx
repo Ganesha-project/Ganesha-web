@@ -67,7 +67,7 @@ export const BannerSosmed = () => {
                             <p>
                                 Apa itu
                             </p>
-                            <p className="bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-violet-500 dark:to-violet-300 bg-clip-text text-transparent">
+                            <p className="bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-violet-500 dark:to-violet-300 bg-clip-text text-transparent">
                                 Social Media
                             </p>
                             <p>
@@ -75,8 +75,8 @@ export const BannerSosmed = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-gradient-radial from-white to-gray-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
-                        <p className="flex items-center justify-center text-justify text-xl leading-relaxed tracking-wide md:text-justify h-full bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-fuchsia-800 dark:to-fuchsia-300 bg-clip-text text-transparent">
+                    <div className="flex items-center justify-center p-5 rounded-[35px] md:w-[30lvw] md:h-[30lvw] 2xl:h-[25lvw] bg-gradient-radial from-white to-neutral-50 dark:from-black dark:to-darkColor transition-transform duration-500 hover:rotate-y-180 hover:scale-95 hover:shadow-mainShadow">
+                        <p className="flex items-center justify-center text-justify text-xl leading-relaxed tracking-wide md:text-justify h-full bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-fuchsia-800 dark:to-fuchsia-300 bg-clip-text text-transparent">
                             Sosial Media Manajemen adalah proses pengelolaan dan pengelolaan aktivitas serta konten di platform media sosial untuk mencapai tujuan tertentu, seperti membangun merek, meningkatkan visibilitas, atau berinteraksi dengan audiens.
                         </p>
                     </div>

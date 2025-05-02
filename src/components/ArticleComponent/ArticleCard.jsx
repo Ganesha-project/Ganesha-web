@@ -12,52 +12,39 @@ export const ArticleCard = ({ data, moms, isSearching, loadMore, items }) => {
         <>
             <section className="space-y-5">
                 {moms}
-                <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
+                <div className="md:grid md:grid-cols-4 flex flex-col gap-5">
                     {data?.data?.map((el, idx) => (
                         <>
                             <Link
                                 href={'/article/' + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
-                                key={idx} className="md:min-h-[45lvh] group bg-white dark:bg-baseColor dark:bg-opacity-20 rounded-2xl space-y-2 p-3 shadow-mainShadow flex flex-col justify-between duration-300 hover:bg-baseColor hover:bg-opacity-90">
+                                key={idx} className="md:min-h-[45lvh] group rounded-2xl space-y-2 p-0 flex flex-col justify-between duration-300">
                                 <div className="space-y-1 flex md:flex-col flex-row gap-2 w-full h-[20lvh] md:h-full">
                                     <div className="relative overflow-hidden rounded-xl md:w-full w-[50%]">
                                         <img
-                                            className="w-full h-[20lvh] md:h-[35lvh] object-cover rounded-xl group-hover:scale-125 duration-150"
+                                            className="w-full h-[20lvh] md:h-[50lvh] object-cover rounded-2xl group-hover:scale-125 duration-150"
                                             width={500}
                                             height={500}
                                             src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                             alt={el?.attributes?.Title} />
-                                        <div className="absolute inset-1 flex flex-col justify-between gap-2 group">
-                                            <h1 className="relative overflow-hidden truncate-last-1 text-xs text-wrap px-2 py-1 h-fit bg-black bg-opacity-35 backdrop-blur-lg text-white font-semibold rounded-lg w-fit">
-                                                {el?.attributes?.category?.data?.attributes?.ArticleCategory}
-                                            </h1>
-                                            {el.attributes.Trending === true ? (
-                                                <span className="flex gap-1 animate-pulse w-fit self-end items-center px-2 py-1 h-fit text-xs font-semibold bg-red-500 text-white rounded-lg ">
-                                                    HOT
-                                                    <FaFire className="text-sm" />
-                                                </span>
-                                            ) : null}
-                                        </div>
+
                                     </div>
 
-                                    <div className="space-y-1 md:w-full w-[50%] flex flex-col md:justify-between h-auto dark:text-white">
-                                        <div>
-                                            <h1 className="font-bold md:text-xl text-gray-900 dark:text-gray-100 group-hover:text-mainColor dark:group-hover:text-baseColor duration-150 truncate-last">
-                                                {el?.attributes?.Title}
-                                            </h1>
-                                            <h2 className="truncate text-sm md:text-base dark:text-gray-200 text-gray-700">
-                                                {el?.attributes?.Excerpt}
-                                            </h2>
+                                    <div className="space-y-2 md:w-full w-[50%] flex flex-col md:justify-between h-auto dark:text-white">
+                                        <h1 className="font-semibold text-md text-secondaryDark dark:text-secondaryLight dark:group-hover:text-baseColor group-hover:text-mainColor duration-150 truncate-last">
+                                            {el?.attributes?.Title}
+                                        </h1>
+                                        <div className="flex gap-2 items-center">
+                                            {el.attributes.Trending === true ? (
+                                                <div className="shimmer-animate px-2 py-1 border border-mainColor/5 text-mainColor dark:text-secondaryColor dark:border-secondaryColor/20 bg-mainColor/10 text-[10px] font-bold tracking-wider rounded-lg">
+                                                    Trending
+                                                </div>
+                                            ) : null}
+                                            <p className="text-xs font-bold tracking-wide opacity-50">
+                                                {el?.attributes?.category?.data?.attributes?.ArticleCategory}
+                                            </p>
                                         </div>
-                                        <span className="block md:hidden w-fit rounded-full text-mainColor mt-auto dark:text-baseColor text-sm">
-                                            {formatDateTime(el?.attributes?.PublishTime)}
-                                        </span>
                                     </div>
                                 </div>
-
-                                <span className="text-mainColor mt-auto md:block hidden  dark:text-baseColor">
-                                    {formatDateTime(el?.attributes?.PublishTime)}
-                                </span>
-
                             </Link>
                         </>
                     ))}

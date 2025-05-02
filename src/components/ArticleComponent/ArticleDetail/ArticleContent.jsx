@@ -59,7 +59,7 @@ export const ArticleContent = ({ data }) => {
                 <BlocksRenderer
                     blocks={{
                         // You can use the default components to set class names...
-                        paragraph: ({ children }) => <p className="text-neutral-900 dark:text-gray-100 prose lg:prose-xl">{children}</p>,
+                        paragraph: ({ children }) => <p className="text-neutral-900 dark:text-neutral-100 prose lg:prose-xl">{children}</p>,
                         // ...or point to a design system
                         heading: ({ children, level }) => {
                             switch (level) {
@@ -92,9 +92,9 @@ export const ArticleContent = ({ data }) => {
                         italic: ({ children }) => <span className="italic">{children}</span>,
                         underline: ({ children }) => <span className="underline">{children}</span>,
                         strikethrough: ({ children }) => <span className="line-through">{children}</span>,
-                        code: ({ children }) => <code className="bg-gray-200 dark:bg-slate-700 rounded p-1">{children}</code>,
-                        blockquote: ({ children }) => <blockquote className="border-l-4 border-gray-300 dark:border-gray-100 pl-4">{children}</blockquote>,
-                        preformatted: ({ children }) => <pre className="bg-gray-900 text-white p-2 rounded">{children}</pre>,
+                        code: ({ children }) => <code className="bg-neutral-200 dark:bg-slate-700 rounded p-1">{children}</code>,
+                        blockquote: ({ children }) => <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-100 pl-4">{children}</blockquote>,
+                        preformatted: ({ children }) => <pre className="bg-neutral-900 text-white p-2 rounded">{children}</pre>,
                         superscript: ({ children }) => <sup>{children}</sup>,
                         subscript: ({ children }) => <sub>{children}</sub>,
                     }}

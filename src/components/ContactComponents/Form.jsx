@@ -55,7 +55,7 @@ export const Form = () => {
             <Title text={'Tulis Pertanyaan Kamu Disini!'} />
             <form onSubmit={handleSubmit} className="space-y-3">
                 {dataFormContact.map((el, idx) => (
-                    <label key={idx} className="input input-bordered rounded-2xl bg-gray-100 dark:bg-darkColor flex items-center gap-2">
+                    <label key={idx} className="input input-bordered w-full rounded-2xl bg-neutral-100 dark:bg-darkColor flex items-center gap-2">
                         <span className="font-semibold">{el.placeholder}</span>
                         <input
                             type="text"
@@ -71,13 +71,13 @@ export const Form = () => {
                     name="message"
                     cols="30"
                     rows="5"
-                    className="border border-[#E2E6EA] dark:border-[#3D3F41] rounded-2xl bg-gray-100 dark:bg-darkColor placeholder:text-gray-900 dark:placeholder:text-white px-4 py-3 w-full placeholder:font-semibold"
+                    className="border border-[#E2E6EA] dark:border-[#3D3F41] rounded-2xl bg-neutral-100 dark:bg-darkColor placeholder:text-neutral-900 dark:placeholder:text-white px-4 py-3 w-full placeholder:font-semibold"
                     placeholder="Pesan"
                     value={formData.message}
                     onChange={handleChange}
                     required
                 ></textarea>
-                <button className="px-4 py-2 rounded-2xl w-full bg-gradient-to-bl from-gray-100 dark:from-darkColor to-sky-200 dark:to-sky-800 btn btn-ghost border-none hover:brightness-105">
+                <button className="px-4 py-2 rounded-2xl w-full bg-gradient-to-bl from-neutral-100 dark:from-darkColor to-sky-200 dark:to-sky-800 btn btn-ghost border-none hover:brightness-105">
                     Kirim
                     <IoSend />
                 </button>

@@ -45,7 +45,7 @@ export const SocmedWork = ({text1, text}) => {
     };
     return (
         <>
-            <section className="md:py-20 bg-gray-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
+            <section className="md:py-20 bg-neutral-100 dark:bg-darkColor md:my-20 py-10 my-10 relative">
                 <Title className={'md:mx-24 mx-5 2xl:mx-80'} text1={text1 || "Explore"} text={text || 'Our Works'} />
                 <div className="carousel w-[100%]">
                     <div
@@ -56,34 +56,34 @@ export const SocmedWork = ({text1, text}) => {
                             <Link
                                 key={idx}
                                 href={el.link}
-                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-gray-100 dark:from-black dark:to-darkColor rounded-3xl w-fit 
+                                className={`duration-300 ease-in-out hover:scale-[1.05] hover:shadow-mainShadow origin-bottom space-y-10 p-3 md:p-5 bg-gradient-to-b min-w-[80lvw] md:min-w-[25lvw] h-fit from-white to-neutral-100 dark:from-black dark:to-darkColor rounded-3xl w-fit 
                                     ${idx === 0 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === data.length - 1 ? 'mr-5 md:mr-24 2xl:mr-80' : ''}`}
                             >
                                 <div className="flex gap-2 w-full justify-between bg-white rounded-2xl">
                                     <Image
-                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
+                                        className="rounded-xl h-full w-[40lvw] md:w-[10lvw] object-cover"
                                         width={75}
                                         height={25}
                                         src={el.preview}
                                         alt={el.name} />
                                     <Image
-                                        className="rounded-2xl h-full w-[40lvw] md:w-[10lvw] object-cover"
+                                        className="rounded-xl h-full w-[40lvw] md:w-[10lvw] object-cover"
                                         width={75}
                                         height={25}
                                         src={el.preview2}
                                         alt={el.name} />
                                 </div>
                                 <div>
-                                    <h1 className="text-2xl font-bold">
+                                <h1 className="text-xl md:text-2xl font-bold">
                                         {el.brandName ? el.brandName : el.name}
                                     </h1>
-                                    <h2>
+                                    <h2 className="text-sm">
                                         {el.brandName ? el.name : null}
                                     </h2>
-                                    <h2 className="my-2 px-3 py-1 bg-gradient-to-t font-medium dark:from-gray-700 from-gray-200 to-transparent rounded-full w-fit">
+                                    <h2 className="md:text-lg text-sm my-2 px-3 py-1 bg-gradient-to-t font-medium dark:from-neutral-700 from-neutral-200 to-transparent rounded-full w-fit">
                                         {el.package}
                                     </h2>
-                                    <button className="hover:brightness-75 flex items-center gap-2 group dark:hover:brightness-125 duration-200 px-3 py-1 bg-gradient-to-tl from-gray-200 via-gray-100 to-sky-200 dark:from-darkColor dark:to-sky-900 rounded-full text-gray-600 dark:text-white font-bold">
+                                    <button className="text-sm md:text-lg hover:brightness-75 flex items-center gap-2 group dark:hover:brightness-125 duration-200 px-3 py-1 bg-gradient-to-tl from-neutral-200 via-neutral-100 to-sky-200 dark:from-darkColor dark:via-darkColor dark:to-sky-900 rounded-full text-neutral-600 dark:text-white font-bold">
                                         Visit <FaLongArrowAltRight className="group-hover:scale-125 origin-left duration-200 ease-in-out" />
                                     </button>
                                 </div>
@@ -95,10 +95,10 @@ export const SocmedWork = ({text1, text}) => {
 
                 <div className="block mx-5">
                     <div className={`flex justify-center w-full items-center gap-3`}>
-                        <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                        <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                             <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                         </button>
-                        <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                        <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100"} bg-gradient-radial dark:from-black dark:hover:from-sky-900 hover:from-sky-200 dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                             <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                         </button>
                     </div>

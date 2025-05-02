@@ -22,7 +22,7 @@ export const ArticleReccomendation = ({ data }) => {
                                 src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                 alt={el?.attributes?.Title}
                             />
-                            <div className="absolute bottom-0 text-gray-100 z-20 p-3 space-y-2">
+                            <div className="absolute bottom-0 text-neutral-100 z-20 p-3 space-y-2">
                                 <h1 className="md:text-lg font-semibold">
                                     {el?.attributes?.Title}
                                 </h1>

@@ -44,7 +44,7 @@ export const ReccomendationCard = () => {
 
     return (
         <>
-            <section className="bg-baseColor bg-opacity-10 dark:bg-opacity-15 py-10 md:py-24 relative">
+            <section className="bg-baseColor/15 py-10 md:py-24 relative">
                 <div className="md:mx-24 mx-5 2xl:mx-80">
                     <Title text1="Jelajahi" text="Layanan Lain Kami" />
                 </div>
@@ -76,12 +76,12 @@ export const ReccomendationCard = () => {
                                     </h2>
                                 </div>
                             </div>
-                            <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-3xl duration-300 ease-in-out">
+                            <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black/15 rounded-3xl duration-300 ease-in-out">
                                 <div
-                                    className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
+                                    className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-neutral-200">
                                     <button
-                                        className="flex font-semibold items-center pl-2 py-1 bg-white dark:bg-darkColor dark:bg-opacity-20 bg-opacity-20 rounded-full">
-                                        Jelajahi <span className="mx-1 p-1 bg-white dark:bg-darkColor dark:text-white rounded-full text-[13px] text-gray-800"><FaPlus /></span>
+                                        className="flex font-semibold items-center pl-2 py-1 bg-white/25 dark:bg-darkColor/25 rounded-full">
+                                        Jelajahi <span className="mx-1 p-1 bg-white dark:bg-darkColor dark:text-white rounded-full text-[13px] text-neutral-800"><FaPlus /></span>
                                     </button>
                                 </div>
                             </div>

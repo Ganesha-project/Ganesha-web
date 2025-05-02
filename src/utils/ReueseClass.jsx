@@ -1,0 +1,3 @@
+export const TextMainGradient = "bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
+export const TextGradientYellowPurple = "bg-gradient-to-br dark:from-secondaryColor dark:via-baseColor dark:to-secondaryYellow from-mainColor via-[#af40f4] to-yellow-600 bg-clip-text text-transparent"
+export const BgtGradientYellowPurple = "bg-gradient-to-br dark:from-secondaryColor dark:via-baseColor dark:to-secondaryYellow from-mainColor via-[#af40f4] to-yellow-600"

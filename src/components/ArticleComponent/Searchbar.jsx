@@ -7,7 +7,7 @@ export const Searchbar = ({
     placeholder = "Cari judul artikel...",
     resetButtonText = "Reset Search",
     searchButtonText = "Search",
-    searchIconColor = "text-gray-800 dark:text-white",
+    searchIconColor = "text-neutral-800 dark:text-white",
     resetButtonColor = "bg-red-500",
     searchButtonColor = "dark:bg-secondaryColor bg-mainColor",
     searchButtonHoverColor = "hover:bg-secondaryColor",
@@ -31,7 +31,7 @@ export const Searchbar = ({
 
     return (
         <form onSubmit={handleSearchSubmit} className="md:mx-0">
-            <label className={`input rounded-3xl bg-white dark:bg-baseColor dark:bg-opacity-20 bg-opacity-80 backdrop-blur-xl shadow flex items-center gap-2`}>
+            <label className={`input border-0 shadow-none w-full focus-within:bg-baseColor/20 rounded-3xl bg-baseColor/20 backdrop-blur-xl flex items-center gap-2`}>
                 <IoIosSearch className={`hidden md:block ${searchIconColor}`} />
                 <input
                     type="text"
@@ -43,7 +43,7 @@ export const Searchbar = ({
                 {searchTerm !== "" && (
                     <button
                         type="button"
-                        className={`flex items-center gap-1 md:pr-3 p-1 md:pl-1 py-1 ${resetButtonColor} rounded-full text-white font-semibold md:ml-2 ${resetButtonHoverColor} duration-300 ease-in-out`}
+                        className={`flex items-center gap-1 md:pr-3 p-1 md:pl-1 py-1 ${resetButtonColor} rounded-full text-secondaryLight font-semibold md:ml-2 ${resetButtonHoverColor} duration-300 ease-in-out`}
                         onClick={handleResetSearch}
                     >
                         <TiDelete className="text-xl" />

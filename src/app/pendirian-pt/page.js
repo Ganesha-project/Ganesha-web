@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from 'react';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { ReusableCards } from '@/components/ReusableCards';
 import { BannerService } from "@/components/ServicesComponent/BannerService";
@@ -15,23 +14,11 @@ import { AdsBanner } from '@/components/AdsBanner';
 import { Support } from '@/components/AboutUs/Support';
 import { PseCertificate } from '@/components/PseCertificate';
 import { ClientLogo } from '@/components/ClientLogo';
-import { Popup } from '@/components/Popup';
-import { PopupContent } from '@/components/PopupContent';
 import Head from 'next/head';
 import { ReccomendationCard } from '@/components/ReccomendationCard';
 
 export default function PendirianPtPage() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    useEffect(() => {
-        // Timer untuk menampilkan popup 2 detik setelah halaman dimuat
-        const timer = setTimeout(() => {
-            setIsPopupOpen(true);
-        }, 2000);
-
-        // Bersihkan timer saat komponen di-unmount
-        return () => clearTimeout(timer);
-    }, []);
     return (
         <>
             <Head>
@@ -73,12 +60,6 @@ export default function PendirianPtPage() {
                 </script>
             </Head>
             <BannerService />
-            <Popup
-                isOpen={isPopupOpen}
-                onClose={() => setIsPopupOpen(false)}
-                title="November DEALS"
-                content={<PopupContent />}
-            />
             <ReusableCards
                 data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
                 label={'Paket Pendirian PT'}

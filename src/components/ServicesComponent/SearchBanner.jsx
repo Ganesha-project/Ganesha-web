@@ -41,11 +41,11 @@ export const SearchBanner = () => {
                             Find Products & Services
                         </h1>
 
-                        <label className="z-[60] input rounded-3xl bg-baseColor dark:bg-baseColor dark:bg-opacity-20 bg-opacity-50 backdrop-blur-xl flex items-center gap-2 shadow-mainShadow">
-                            <IoIosSearch className="hidden md:block text-gray-800 dark:text-white" />
+                        <label className="z-[60] input rounded-3xl bg-baseColor/50 dark:bg-baseColor/20 backdrop-blur-xl flex items-center gap-2 shadow-mainShadow">
+                            <IoIosSearch className="hidden md:block text-neutral-800 dark:text-white" />
                             <input
                                 type="text"
-                                className="grow placeholder:text-gray-800 dark:placeholder:text-white"
+                                className="grow placeholder:text-neutral-800 dark:placeholder:text-white"
                                 placeholder="Find..."
                                 value={searchTerm}
                                 onChange={handleSearchChange}
@@ -70,14 +70,14 @@ export const SearchBanner = () => {
                                         key={idx}
                                         className="p-3 bg-baseColor bg-opacity-15 rounded-3xl flex items-center hover:bg-opacity-35 gap-4 ease-in-out duration-300"
                                     >
-                                        <div className="p-3 bg-white dark:bg-secondaryGray w-fit rounded-full bg-opacity-50 dark:bg-opacity-20 text-xl">
+                                        <div className="p-3 bg-white dark:bg-secondaryneutral w-fit rounded-full bg-opacity-50 dark:bg-opacity-20 text-xl">
                                             {el.icon}
                                         </div>
                                         <div>
                                             <h1 className="md:text-lg font-semibold">
                                                 {el.text}
                                             </h1>
-                                            <h3 className="md:text-base text-sm truncate-last-1 text-gray-700 dark:text-gray-300 capitalize">
+                                            <h3 className="md:text-base text-sm truncate-last-1 text-neutral-700 dark:text-neutral-300 capitalize">
                                                 {el.keywords.join(", ")}
                                             </h3>
                                         </div>
@@ -88,7 +88,7 @@ export const SearchBanner = () => {
                             <div className="absolute bottom-[-10px] md:bottom-[-55px] w-full md:h-[10lvh] h-[3lvh] backdrop-blur-sm z-50"></div>
                         </>
                     ) : (
-                        <div className="text-center text-gray-700 dark:text-gray-300 mt-20">
+                        <div className="text-center text-neutral-700 dark:text-neutral-300 mt-20">
                             <p>No products found. Please try a different search term.</p>
                         </div>
                     )}

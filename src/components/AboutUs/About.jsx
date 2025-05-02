@@ -10,7 +10,7 @@ export const About = () => {
                         src="https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/egneilhuh6m2daouhj4a.svg"
                         alt=""
                     />
-                    <div className="space-y-3 text-gray-800 text-justify">
+                    <div className="space-y-3 text-neutral-800 text-justify">
                         <h1 className="text-3xl text-[rgb(238,140,255)] font-semibold">
                             About Us
                         </h1>

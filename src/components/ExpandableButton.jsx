@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-export const ExpandableButton = ({ children, label, className, order, align, classNameInner }) => {
+export const ExpandableButton = ({ children, label, className, order, align, classNameInner, labelClassName }) => {
     const contentRef = useRef(null);
     const [contentHeight, setContentHeight] = useState('0px');
     const [isExpanded, setIsExpanded] = useState(false);
@@ -32,11 +32,13 @@ export const ExpandableButton = ({ children, label, className, order, align, cla
 
                 <button
                     onMouseEnter={() => setIsExpanded(true)}
-                    className={`${className} dark:text-white text-gray-900 flex items-center gap-1 rounded-full transition duration-300 ease-in-out transform`}
+                    className={`${className} dark:text-white text-neutral-900 flex items-center gap-1 rounded-full transition duration-300 ease-in-out transform`}
                     onClick={toggleExpand}
                 >
-                    {label}
-                    <div className={`${isExpanded ? 'rotate-180' : 'rotate-0'} duration-300 ease-in-out text-xl`}>
+                    <span className={labelClassName}>
+                        {label}
+                    </span>
+                    <div className={`${isExpanded ? 'rotate-180' : 'rotate-0'} duration-300 ease-in-out text-xl `}>
                         <IoIosArrowDown />
                     </div>
                 </button>

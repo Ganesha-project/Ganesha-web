@@ -56,10 +56,10 @@ export const HomeBanner = () => {
                                 percayakan pada ganesha consulting!
                             </h1>
                             <a className="flex gap-2" href="#search">
-                                <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 dark:bg-secondaryColor bg-mainColor bg-opacity-80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
+                                <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 dark:bg-secondaryColor bg-mainColor/80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     <FiSearch className="text-xl" />
                                 </span>
-                                <button className="py-2 w-fit flex items-center gap-1 bg-mainColor dark:bg-secondaryColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
+                                <button className="py-2 w-fit flex items-center gap-1 bg-mainColor/80 dark:bg-secondaryColor px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     Cari Layanan
                                 </button>
                             </a>
@@ -98,7 +98,7 @@ export const HomeBanner = () => {
                             ))}
                         </div>
                         <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-l from-transparent to-[#ffffff] dark:to-black w-[80%] group-hover:w-[100%] group-hover:backdrop-blur-[3px] duration-300 ease-in-out">
-                            <p className="dark:text-white text-gray-900 opacity-0 group-hover:opacity-100 ease-in-out duration-300 font-semibold text-2xl">
+                            <p className="dark:text-white text-neutral-900 opacity-0 group-hover:opacity-100 ease-in-out duration-300 font-semibold text-2xl">
                                 Our Clients
                             </p>
                         </span>
@@ -152,9 +152,9 @@ export const HomeBanner = () => {
                                 <span className="h-[2.5rem] w-[2.5rem] justify-center flex items-center gap-1 bg-mainColor bg-opacity-80 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     <FiSearch className="text-xl" />
                                 </span>
-                                <buttospann className="py-2 w-fit flex items-center gap-1 bg-mainColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
+                                <button className="py-2 w-fit flex items-center gap-1 bg-mainColor bg-opacity-80 px-4 rounded-full font-bold text-white hover:scale-95 duration-300 ease-in-out hover:bg-opacity-100">
                                     Cari Layanan
-                                </buttospann>
+                                </button>
                             </a>
                             <div className="space-y-1 mt-10">
                                 <p className="text-sm text-white">

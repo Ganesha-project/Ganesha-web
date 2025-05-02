@@ -49,17 +49,17 @@ export const RWhyUs = ({ color }) => {
     return (
         <>
             <section className="md:px-24 2xl:px-80 px-5 my-20">
-                <div className={`bg-gradient-to-b dark:from-darkColor dark:to-black from-gray-200 to-white space-y-10 dark:bg-opacity-25 p-6 md:p-10 rounded-[40px] `}>
+                <div className={`bg-gradient-to-b dark:from-darkColor dark:to-black from-neutral-200 to-white space-y-10 dark:bg-opacity-25 p-6 md:p-10 rounded-[40px] `}>
                     <h1 className={`text-2xl md:text-4xl font-black leading-relaxed tracking-tight text-center md:text-left`}>
-                        Kelebihan di <span className="bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-gray-800 via-mainColor to-baseColor bg-clip-text text-transparent">Ganesha Consulting</span> dibanding tempat lain
+                        Kelebihan di <span className="bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent">Ganesha Consulting</span> dibanding tempat lain
                     </h1>
                     <div className="flex md:flex-row flex-col gap-5">
                         {DataPageLegal.whyUsData.map((el, idx) => (
-                            <div key={idx} className={`bg-gradient-to-bl h-[30lvh] dark:from-darkColor dark:to-transparent from-gray-200 to-transparent flex flex-col gap-3 items-center pt-10 px-5 rounded-3xl md:w-[20%]`}>
+                            <div key={idx} className={`bg-gradient-to-bl h-[30lvh] dark:from-darkColor dark:to-transparent from-neutral-200 to-transparent flex flex-col gap-3 items-center pt-10 px-5 rounded-3xl md:w-[20%]`}>
                                 <span className={`dark:text-white text-5xl h-[10lvh]`}>
                                     {el.icon}
                                 </span>
-                                <h1 className="text-xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-center font-bold">
+                                <h1 className="text-xl bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-center font-bold">
                                     {el.text}
                                 </h1>
                             </div>

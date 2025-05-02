@@ -2,7 +2,7 @@
 
 const nextConfig = {
     reactStrictMode: true,
-    optimizeFonts: true,
+    devIndicators: false,
     env: {
         APIURL: process.env.NEXT_PUBLIC_APIURL,
     },

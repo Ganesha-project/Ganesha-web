@@ -68,8 +68,8 @@ export default async function VirtualOfficePage() {
             <Benefit />
             <Faqs
                 text={'FAQ'}
-                color={'gray'}
-                className={'dark:!text-gray-100 !text-gray-800'}
+                color={'neutral'}
+                className={'dark:!text-neutral-100 !text-neutral-800'}
                 data={dataPageVO.FAQ}
             />
         </>

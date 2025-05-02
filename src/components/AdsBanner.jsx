@@ -38,7 +38,7 @@ export const AdsBanner = () => {
                     className="whitespace-nowrap transition-transform ease-in-out duration-700 relative"
                 >
                     {data.map((el, idx) => (
-                        <Link href={el.href}>
+                        <Link key={idx} href={el.href}>
                             <img
                                 key={idx}
                                 className="w-full h-full object-cover rounded-3xl hidden md:inline-block bg-mainColor"
@@ -57,13 +57,13 @@ export const AdsBanner = () => {
                     <>
                         <button
                             onClick={prevSlide}
-                            className="absolute left-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
+                            className="absolute left-2 top-1/2 transform -translate-y-1/2 p-3 bg-neutral-100/20 dark:bg-darkColor/20 group-hover:bg-neutral-100/20 dark:group-hover:bg-dark-color hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
                         >
                             <IoIosArrowBack />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 bg-opacity-20 dark:bg-darkColor dark:bg-opacity-20 group-hover:bg-opacity-100 hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-neutral-100/20 dark:bg-darkColor/20 group-hover:bg-neutral-100/20 dark:group-hover:bg-dark-color hover:scale-105 hover:shadow-custom ease-in-out duration-300 rounded-full"
                         >
                             <IoIosArrowForward />
                         </button>

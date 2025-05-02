@@ -98,7 +98,7 @@ export const CardPriceSocmed = ({ data }) => {
                                 {el.features.map((feature) => (
                                     <div className='flex gap-3 align-middle items-center'>
                                         <Image className='w-5 h-5 ' src={feature.status === true ? check : cross} alt="checklist" />
-                                        <p className="font-normal text-gray-900">
+                                        <p className="font-normal text-neutral-900">
                                             {feature.feature}
                                         </p>
                                     </div>

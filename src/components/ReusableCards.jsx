@@ -54,33 +54,33 @@ export const ReusableCards = ({ data, label, visibility }) => {
                 <div className={`${visibility === false ? "hidden" : "block"} md:mx-24 2xl:mx-80 mx-5 space-y-5`}>
                     {totalItems <= 3 ? (
                         <div className="flex justify-center w-full items-center">
-                            <div className={`flex justify-center dark:text-gray-50 px-7 py-5 bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase w-fit`}>
-                                <p className="bg-gradient-to-tr from-black via-darkColor to-mainColor dark:from-white dark:via-gray-100 dark:to-secondaryColor bg-clip-text text-transparent">
+                            <div className={`flex justify-center dark:text-neutral-50 px-7 py-5 bg-gradient-to-bl from-neutral-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase w-fit`}>
+                                <p className="bg-gradient-to-tr from-black via-darkColor to-mainColor dark:from-white dark:via-neutral-100 dark:to-secondaryColor bg-clip-text text-transparent">
                                     {label}
                                 </p>
                             </div>
                         </div>
                     ) : (
                         <div
-                            className={`relative overflow-hidden flex justify-center md:justify-between w-full items-center bg-gradient-to-bl from-gray-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase `}>
+                            className={`relative overflow-hidden flex justify-center md:justify-between w-full items-center bg-gradient-to-bl from-neutral-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl uppercase `}>
                             <div
                                 className="absolute inset-0 z-0 bg-gradient-to-r from-[#e3cce6aa] to-transparent dark:from-[#331c3ae9] dark:to-transparent rounded-full transition-all duration-300"
                                 style={{ width: `${((activeDot + 1) / totalDots) * 100}%` }}
                             ></div>
                             {label ? (
                                 <>
-                                    <div className={`z-10 dark:text-gray-50 px-7 py-5 rounded-full`}>
-                                        <p className="bg-gradient-to-tr from-black via-darkColor to-mainColor dark:from-white dark:via-gray-100 dark:to-secondaryColor bg-clip-text text-transparent">
+                                    <div className={`z-10 dark:text-neutral-50 px-7 py-5 rounded-full`}>
+                                        <p className="bg-gradient-to-tr from-black via-darkColor to-mainColor dark:from-white dark:via-neutral-100 dark:to-secondaryColor bg-clip-text text-transparent">
                                             {label}
                                         </p>
                                     </div>
                                 </>
                             ) : null}
                             <div className={`z-10 items-center space-x-2 md:block hidden`}>
-                                <button onClick={() => handleDotClick(activeDot > 0 ? activeDot - 1 : totalDots - 1)} className={`bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <button onClick={() => handleDotClick(activeDot > 0 ? activeDot - 1 : totalDots - 1)} className={`bg-radial dark:from-black  dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                     <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                                 </button>
-                                <button onClick={() => handleDotClick(activeDot < totalDots - 1 ? activeDot + 1 : 0)} className={` bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                                <button onClick={() => handleDotClick(activeDot < totalDots - 1 ? activeDot + 1 : 0)} className={` bg-radial dark:from-black  dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                     <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                                 </button>
                             </div>
@@ -88,10 +88,10 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     )}
                     {totalItems <= 3 ? null : (
                         <div className={`flex justify-center w-full items-center gap-3 md:hidden`}>
-                            <button onClick={() => handleDotClick(activeDot > 0 ? activeDot - 1 : totalDots - 1)} className={`bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                            <button onClick={() => handleDotClick(activeDot > 0 ? activeDot - 1 : totalDots - 1)} className={`bg-radial dark:from-black  dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                             </button>
-                            <button onClick={() => handleDotClick(activeDot < totalDots - 1 ? activeDot + 1 : 0)} className={` bg-gradient-radial dark:from-black  dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                            <button onClick={() => handleDotClick(activeDot < totalDots - 1 ? activeDot + 1 : 0)} className={` bg-radial dark:from-black  dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                                 <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                             </button>
                         </div>
@@ -106,27 +106,27 @@ export const ReusableCards = ({ data, label, visibility }) => {
                         {data.map((el, idx) => (
                             <div
                                 key={idx}
-                                className={`bg-gradient-to-b from-gray-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} ${totalItems < 4 && "2xl:w-[32%]"} md:w-[30lvw] w-[90lvw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
+                                className={`bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} ${totalItems < 4 && "2xl:w-[32%]"} md:w-[30lvw] w-[90lvw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
                             >
                                 <div className="flex flex-col justify-center items-center gap-3 mt-5 relative">
-                                    <h1 className={`text-gray-700 dark:text-white mt-2 uppercase text-center text-xl md:text-3xl font-bold tracking-tight`}>
+                                    <h1 className={`text-neutral-700 dark:text-white mt-2 uppercase text-center text-xl md:text-3xl font-bold tracking-tight`}>
                                         {el.type}
                                     </h1>
                                     <h3 className="text-center line-through text-lg dark:text-red-500 text-red-600">
                                         {el.priceOriginal === 0 ? null : formatToRupiah(el.priceOriginal)}
                                     </h3>
-                                    <h2 className={`text-gray-950 dark:text-gray-100 font-bold text-xl md:text-3xl flex gap-2 items-center`}>
+                                    <h2 className={`text-neutral-950 dark:text-neutral-100 font-bold text-xl md:text-3xl flex gap-2 items-center`}>
                                         {path === "/web-development" && el.price !== 0 && (<span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full"> Start From </span>)}
                                         {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
                                     <a
                                         href={el.link}
-                                        className={`bg-gray-600 dark:bg-gray-200 w-full text-center dark:text-gray-800 text-white py-2 rounded-full font-bold ease-in-out duration-300 hover:scale-95`}>
+                                        className={`bg-neutral-600 dark:bg-neutral-200 w-full text-center dark:text-neutral-800 text-white py-2 rounded-full font-bold ease-in-out duration-300 hover:scale-95`}>
                                         Konsultasi Sekarang
                                     </a>
                                 </div>
                                 {el.discount !== 0 ? (
-                                    <div className="absolute top-[-30px] right-[-10px]">
+                                    <div className="absolute top-[-10px] right-[-10px]">
                                         <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-xl animate-pulse">
                                             OFF {el.discount}%
                                         </p>
@@ -138,7 +138,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                                             <span className="items-start">
                                                 {feature.status === true ? (<BsFillCheckCircleFill className="text-green-500" />) : (<BsFillXCircleFill className="text-red-500" />)}
                                             </span>
-                                            <h4 className="font-medium dark:text-gray-100 text-gray-900">
+                                            <h4 className="font-medium dark:text-neutral-100 text-neutral-900">
                                                 {feature.feature}
                                             </h4>
                                         </div>

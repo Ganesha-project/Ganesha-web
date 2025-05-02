@@ -72,24 +72,24 @@ export const CardVO = () => {
                                     <button
                                         onClick={() => document.getElementById(`modal-${idx}`).showModal()}
                                         className="h-10 w-10 flex items-center justify-center rounded-full dark:bg-black bg-white">
-                                        <FaPlus className="dark:text-gray-100 text-gray-600 text-xl group-hover:rotate-90 duration-300 ease-in-out" />
+                                        <FaPlus className="dark:text-neutral-100 text-neutral-600 text-xl group-hover:rotate-90 duration-300 ease-in-out" />
                                     </button>
                                 </div>
-                                <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black group-hover:bg-opacity-15 rounded-2xl duration-300 ease-in-out">
+                                <div className="absolute inset-0 group-hover:backdrop-blur-lg group-hover:bg-black/15 rounded-2xl duration-300 ease-in-out">
                                     <div
-                                        className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-gray-200">
+                                        className="group-hover:scale-100 space-x-2 scale-0 duration-300 w-full h-full flex justify-center items-center text-neutral-200">
                                         <button
                                             onClick={() => document.getElementById(`modal-${idx}`).showModal()}
-                                            className="flex font-semibold items-center pl-2 py-1 bg-white dark:bg-darkColor dark:bg-opacity-20 bg-opacity-20 rounded-full">
-                                            Preview <span className="mx-1 p-1 bg-white dark:bg-darkColor dark:text-white rounded-full text-[13px] text-gray-800"><FaPlus /></span>
+                                            className="flex font-semibold items-center pl-2 py-1 bg-white/20 dark:bg-darkColor/20 rounded-full">
+                                            Preview <span className="mx-1 p-1 bg-white dark:bg-darkColor dark:text-white rounded-full text-[13px] text-neutral-800"><FaPlus /></span>
                                         </button>
                                     </div>
                                 </div>
                                 <dialog id={`modal-${idx}`} className="modal backdrop-blur-md py-5">
                                     <div className="modal-box dark:bg-[#151515] bg-white md:w-[80lvw] h-full max-h-full max-w-full noBar">
                                         <form method="dialog" className="sticky top-0 right-0">
-                                            <button className="z-[!100] btn btn-circle border-none bg-gray-200 focus:ring-0 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-900 absolute right-0 top-0 rotate-45">
-                                                <FaPlus className="text-2xl text-gray-800 dark:text-gray-100" />
+                                            <button className="z-[100] btn btn-circle border-none bg-neutral-200 focus:ring-0 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-900 absolute right-0 top-0 rotate-45">
+                                                <FaPlus className="text-2xl text-neutral-800 dark:text-neutral-100" />
                                             </button>
                                         </form>
                                         <section className="md:mx-14 mt-5 space-y-10">
@@ -117,10 +117,10 @@ export const CardVO = () => {
                     </div>
                 </div>
                 <div className="flex justify-center w-full items-center space-x-2">
-                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handlePrevClick} className={`${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowBack className="text-2xl md:text-[2rem]" />
                     </button>
-                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-gray-100 dark:text-gray-100 text-gray-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
+                    <button onClick={handleNextClick} className={`${currentIndex >= data.length - itemsToShow ? "opacity-50 cursor-not-allowed" : "opacity-100 dark:hover:from-sky-900 hover:from-sky-200"} bg-gradient-radial dark:from-black dark:to-darkColor from-white to-neutral-100 dark:text-neutral-100 text-neutral-700 md:px-7 md:py-7 px-5 py-5 rounded-full hover:scale-95 duration-300 ease-in-out`}>
                         <IoIosArrowForward className="text-2xl md:text-[2rem]" />
                     </button>
                 </div>

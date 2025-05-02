@@ -62,14 +62,14 @@ export const BannerArticleDetail = ({ data }) => {
             <section className="min-h-screen pt-10">
                 <div className="flex justify-center flex-col gap-2 h-screen relative">
                     <Breadcrumbs slug={detail?.Slug} categories={detail?.category?.data?.attributes?.ArticleCategory} title={detail?.Title} />
-                    <h1 className="font-bold text-3xl dark:text-white text-gray-900">
+                    <h1 className="font-bold text-3xl dark:text-white text-neutral-900">
                         {detail?.Title}
                     </h1>
-                    <div className="flex items-center gap-3">
-                        <span className="px-3 py-1 bg-baseColor dark:text-white bg-opacity-50 text-sm font-semibold text-mainColor w-fit rounded-full">
+                    <div className="flex items-center gap-3 mb-3">
+                        <span className="px-2 py-1 border border-mainColor/5 text-mainColor dark:text-secondaryColor dark:border-secondaryColor/20 bg-mainColor/10 text-[10px] font-bold tracking-wider rounded-lg">
                             {detail?.category?.data?.attributes?.ArticleCategory}
                         </span>
-                        <h2>
+                        <h2 className="text-sm">
                             {formatDateTime(detail?.PublishTime)}
                         </h2>
                     </div>

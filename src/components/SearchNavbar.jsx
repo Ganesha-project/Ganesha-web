@@ -1,92 +1,93 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { DataProduct } from "@/app/Database";
-import { useState, useEffect } from "react";
-import { IoIosSearch } from "react-icons/io";
-import { TiDelete } from "react-icons/ti";
+import { useRouter } from 'next/navigation';
+import { useState, useTransition } from 'react';
+import { PiMagnifyingGlassBold } from 'react-icons/pi';
+import { RxCross2 } from 'react-icons/rx';
+import { FiLoader } from 'react-icons/fi';
 
-export const SearchNavbar = ({ label, className, readOnly, onFocus }) => {
+export const SearchNavbar = ({ className, onClose, scroll, variant = 'default' }) => {
     const [searchTerm, setSearchTerm] = useState("");
+
+    const [isPending, startTransition] = useTransition();
+    const router = useRouter();
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
     };
 
     const handleResetSearch = () => {
-        setSearchTerm(""); // Reset search term
+        setSearchTerm('');
     };
 
-    const filteredProducts = DataProduct.filter(product =>
-        product.keywords.some(keyword =>
-            keyword.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-    );
+    const executeSearch = () => {
+        if (searchTerm.trim() !== '') {
+            const formatted = searchTerm.trim().replace(/\s+/g, '-');
+            startTransition(() => {
+                router.push(`/search/${encodeURIComponent(formatted)}`);
+                onClose?.();
+            });
+        }
+    };
 
-    return (
-        <div className="relative space-y-5">
-            <div className="w-full h-auto z-50">
-                {label === true && (
-                    <h1 className="text-gray-800 dark:text-gray-200 md:text-2xl font-semibold z-20 mb-2">
-                        Find Products & Services
-                    </h1>
-                )}
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            executeSearch();
+        }
+    };
 
-                <label className={`${className} z-[60] input text-gray-800 dark:text-gray-200 rounded-3xl bg-gray-300 dark:bg-baseColor dark:bg-opacity-30 bg-opacity-50 flex items-center gap-[6px] shadow-mainShadow`}>
-                    <IoIosSearch className="text-gray-800 dark:text-gray-200 text-xl" />
-                    <input
-                        type="text"
-                        className="grow placeholder:text-gray-800 dark:placeholder:text-gray-200 text-black dark:text-white"
-                        placeholder="Cari Layanan"
-                        value={searchTerm}
-                        onChange={handleSearchChange}
-                        readOnly={readOnly} // Set to readOnly based on prop
-                        onFocus={onFocus} // Handle focus event
-                    />
-                    {searchTerm !== "" && (
-                        <button
-                            type="button"
-                            onClick={handleResetSearch}
-                        >
-                            <TiDelete className="text-3xl hover:text-red-600 duration-200 mr-[-6px]" />
-                        </button>
-                    )}
-                </label>
+    // ====== DEFAULT VARIANT (besar, elegan) ======
+    if (variant === 'default') {
+        return (
+            <div className={`${className} relative space-y-5 pt-8`}>
+                <div className="w-full h-auto z-50 group">
+                    <label className={`${searchTerm !== "" && "!border-b"} z-[60] input input-md md:input-xl w-full input-ghost focus-within:bg-transparent rounded-none !px-0 focus-within:!border-b focus-within:border-b-darkColor/40 dark:focus-within:border-b-lightColor/40 bg-opacity-0 focus:border-none focus:bg-none focus-within:outline-none outline-none border-0 focus:outline-transparent focus:outline-offset-0 text-neutral-800 dark:text-neutral-200 flex items-center gap-[6px]`}>
+                        {isPending && (
+                            <div className="text-4xl animate-spin">
+                                <FiLoader />
+                            </div>
+                        )}
+
+                        <PiMagnifyingGlassBold className={`${searchTerm !== "" && "hidden"} order-last text-black/50 dark:text-white/50 text-2xl md:text-3xl`} />
+
+                        <input
+                            type="text"
+                            className="h-12 grow text-2xl md:text-4xl py-2 font-semibold placeholder:text-black/50 dark:placeholder:text-white/50 placeholder:text-lg md:placeholder:text-4xl placeholder:font-semibold text-darkColor dark:text-lightColor"
+                            placeholder="Cari di Ganeshaconsulting.co.id"
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                            onKeyDown={handleKeyDown}
+                        />
+
+                        {searchTerm !== '' && (
+                            <button type="button" onClick={handleResetSearch}>
+                                <RxCross2 className="text-3xl hover:text-red-600 duration-200 mr-[-6px] text-black dark:text-white text-opacity-50 dark:text-opacity-50" />
+                            </button>
+                        )}
+                    </label>
+
+                    <div className={`${searchTerm !== "" && "opacity-40"} group-hover:opacity-40 opacity-0 w-full h-[1px] group-focus-within:opacity-0 bg-darkColor dark:bg-lightColor`}></div>
+                </div>
             </div>
+        );
+    }
 
-            {/* Render products only when there's a search term */}
-            {searchTerm !== "" && (
-                <>
-                    {filteredProducts.length > 0 ? (
-                        <div className="space-y-3 h-auto md:max-h-[75lvh] carousel carousel-vertical w-full z-30">
-                            {filteredProducts.map((el, idx) => (
-                                <Link
-                                    href={el.href}
-                                    key={idx}
-                                    style={{ transitionDelay: `${idx * 100}ms` }} // Stagger the animation
-                                    className="p-3 bg-baseColor bg-opacity-15 rounded-3xl flex w-full items-center hover:bg-opacity-35 gap-4 ease-in-out duration-300"
-                                >
-                                    <div className="p-3 bg-white text-gray-800 dark:text-gray-200 dark:bg-secondaryGray w-fit rounded-full bg-opacity-50 dark:bg-opacity-20 text-xl">
-                                        {el.icon}
-                                    </div>
-                                    <div>
-                                        <h1 className="md:text-lg font-semibold  text-gray-800 dark:text-gray-200">
-                                            {el.text}
-                                        </h1>
-                                        <h3 className="md:text-base text-sm truncate-last-1 text-gray-600 font-medium dark:text-gray-300 capitalize">
-                                            {el.keywords.join(", ")}
-                                        </h3>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    ) : (
-                        <div className="text-center text-gray-700 dark:text-gray-300 mt-20">
-                            <p>No products found of <span className="font-bold dark:text-baseColor text-mainColor">{searchTerm}</span>. Please try a different search term.</p>
-                        </div>
-                    )}
-                </>
-            )}
-        </div>
+    // ====== COMPACT VARIANT (rounded, kecil) ======
+    return (
+        <>
+            <label className={`input input-ghost focus-within:bg-white dark:focus-within:bg-black !text-secondaryDark w-full h-[2.5rem] backdrop-blur-lg dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full shadow-custom`}>
+                <PiMagnifyingGlassBold className='text-black/50 dark:text-white/50' />
+                <input
+                    required
+                    type="search"
+                    placeholder="Search"
+                    className={`${!searchTerm && !scroll && "hidden"} grow px-2 bg-transparent text-sm text-secondaryDark dark:text-lightColor outline-none`}
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                    onKeyDown={handleKeyDown}
+                />
+            </label>
+        </>
     );
 };

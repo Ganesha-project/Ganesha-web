@@ -39,12 +39,12 @@ export const AllProductButton = () => {
                         <Link
                             key={idx}
                             href={el.link}
-                            className="group flex flex-row items-center gap-3 duration-300 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-bl from-gray-100 to-white dark:from-darkColor dark:to-transparent"
+                            className="group flex flex-row items-center gap-3 duration-300 hover:shadow-mainShadow ease-in-out p-5 rounded-3xl bg-gradient-to-bl from-neutral-100 to-white dark:from-darkColor dark:to-transparent"
                         >
-                            <div className="md:text-3xl text-xl p-3 w-fit bg-gradient-radial from-gray-200 to-white dark:from-gray-600 dark:to-black text-darkColor dark:text-secondaryGray rounded-full ">
+                            <div className="md:text-3xl text-xl p-3 w-fit bg-gradient-radial from-neutral-200 to-white dark:from-neutral-600 dark:to-black text-darkColor dark:text-secondaryneutral rounded-full ">
                                 {el.icon}
                             </div>
-                            <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-bl from-darkColor to-mainColor dark:from-secondaryGray dark:to-baseColor bg-clip-text text-transparent">
+                            <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-bl from-darkColor to-mainColor dark:from-secondaryneutral dark:to-baseColor bg-clip-text text-transparent">
                                 {el.name}
                             </h2>
                         </Link>

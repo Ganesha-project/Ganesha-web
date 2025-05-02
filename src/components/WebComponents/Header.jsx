@@ -47,7 +47,7 @@ export const Header = ({ data }) => {
     return (
         <>
             <section className="md:mx-24 2xl:mx-80 mx-5">
-                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-gray-200 dark:bg-darkColor md:h-[80lvh] 2xl:h-[70lvh]">
+                <div className="flex md:flex-row flex-col gap-5 p-5 rounded-[40px] bg-neutral-200 dark:bg-darkColor md:h-[80lvh] 2xl:h-[70lvh]">
                     <div className="relative flex flex-col justify-between md:w-[50%] bg-darkColor rounded-[35px] overflow-hidden duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow">
                         <Image
                             width={500}
@@ -65,11 +65,11 @@ export const Header = ({ data }) => {
                     </div>
                     <div className="flex flex-col md:w-[50%] md:grid md:grid-cols-2 gap-5">
                         {data.features.map((el, idx) => (
-                            <div key={idx} className={`rounded-[35px] p-5 flex items-center justify-center flex-col gap-10  bg-gradient-to-b dark:from-black from-gray-50 to-transparent duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow`}>
+                            <div key={idx} className={`rounded-[35px] p-5 flex items-center justify-center flex-col gap-10  bg-gradient-to-b dark:from-black from-neutral-50 to-transparent duration-300 ease-in-out hover:scale-105 hover:shadow-mainShadow`}>
                                 <div className="text-4xl md:text-6xl">
                                     {el.icon}
                                 </div>
-                                <h1 className="font-bold text-xl md:text-3xl bg-gradient-to-tr dark:from-gray-100 from-gray-800 dark:via-gray-300 via-gray-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-center">
+                                <h1 className="font-bold text-xl md:text-3xl bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent text-center">
                                     {el.title}
                                 </h1>
                             </div>

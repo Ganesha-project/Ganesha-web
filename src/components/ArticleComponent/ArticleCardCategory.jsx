@@ -43,10 +43,10 @@ export const ArticleCardCategory = ({ data, moms, category }) => {
 
                                     <div className="space-y-1 md:w-full w-[50%] flex flex-col md:justify-between h-auto dark:text-white">
                                         <div>
-                                            <h1 className="font-bold md:text-xl text-gray-900 dark:text-gray-100 group-hover:text-mainColor dark:group-hover:text-baseColor duration-150 truncate-last">
+                                            <h1 className="font-bold md:text-xl text-neutral-900 dark:text-neutral-100 group-hover:text-mainColor dark:group-hover:text-baseColor duration-150 truncate-last">
                                                 {el?.attributes?.Title}
                                             </h1>
-                                            <h2 className="truncate text-sm md:text-base dark:text-gray-200 text-gray-700">
+                                            <h2 className="truncate text-sm md:text-base dark:text-neutral-200 text-neutral-700">
                                                 {el?.attributes?.Excerpt}
                                             </h2>
                                         </div>
