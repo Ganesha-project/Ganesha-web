@@ -254,7 +254,7 @@ export default function SearchPageQuery() {
                                                     </>
                                                 )}
                                         </li>
-                                    </Lnk>
+                                    </Link>
                                 )
                             })}
                         </ul>

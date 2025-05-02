@@ -86,7 +86,7 @@ export const CardWeb = ({ data }) => {
                                 {el.discount === 0 ? null : `Discount ${el.discount}%`}
                                     
                                     
-                                </p>
+                            </p>
                             </div>
                             <p className="text-center font-bold text-sky-800 text-3xl">
                             {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
