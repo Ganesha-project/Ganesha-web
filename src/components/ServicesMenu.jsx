@@ -7,7 +7,7 @@ import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { PiMagnifyingGlass } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
 
-export const ServicesMenu = ({ expandedId }) => {
+export const ServicesMenu = ({ expandedId, onClose }) => {
     const expandAnimationClass = expandedId ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out" : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
     const { mediaUrl, loadingHookMenu, errorHookMenu } = useHookMenu();
     const [searchQuery, setSearchQuery] = useState("");
@@ -109,6 +109,7 @@ export const ServicesMenu = ({ expandedId }) => {
                             <div className="grid gap-4 grid-cols-2">
                                 {filteredMain.map((cat, index) => (
                                     <Link
+                                        onClick={onClose}
                                         href={cat.href}
                                         key={index}
                                         className={`${expandAnimationClass} parent aspect-square transition-transform relative overflow-hidden w-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
@@ -175,7 +176,11 @@ export const ServicesMenu = ({ expandedId }) => {
                         <div className="col-span-3">
                             <div className="grid grid-cols-2 gap-4">
                                 {filteredOthers.filter(cat => cat.visibility).map((cat, index) => (
-                                    <Link href={cat.href} key={index}>
+                                    <Link
+                                        onClick={onClose}
+                                        href={cat.href}
+                                        key={index}
+                                    >
                                         <div
                                             key={index}
                                             className={`${cat.visibility === true ? "block" : "hidden"} ${expandAnimationClass} grow parent transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex p-3 hover:bg-opacity-20 hover:scale-95`}
@@ -204,7 +209,7 @@ export const ServicesMenu = ({ expandedId }) => {
                                                     className="text-xl p-2 rounded-full shadow-inner w-fit h-fit z-10"
                                                     style={{
                                                         color: cat.accentLight,
-                                                        backgroundColor: cat.accentDark 
+                                                        backgroundColor: cat.accentDark
                                                     }}
                                                 >
                                                     {cat.icon}

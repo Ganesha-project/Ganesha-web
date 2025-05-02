@@ -62,7 +62,9 @@ export const Navbar = ({ children }) => {
               setExpandedId={setExpandedId}
 
             >
-              <ServicesMenu expandedId={expandedId} />
+              <ServicesMenu
+                onClose={() => setExpandedId(null)}
+                expandedId={expandedId} />
             </MegaMenuNavbar>
             <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
@@ -105,7 +107,9 @@ export const Navbar = ({ children }) => {
                 expandedId={expandedId}
                 setExpandedId={setExpandedId}
               >
-                <AboutMenu expandedId={expandedId} />
+                <AboutMenu
+                  onClose={() => setExpandedId(null)}
+                  expandedId={expandedId} />
               </MegaMenuNavbar>
 
               {/* Searchbar */}
@@ -182,7 +186,9 @@ export const Navbar = ({ children }) => {
             iconClassName={''}
             expandedId={expandedId}
             setExpandedId={setExpandedId}
-            mobile={<MobileDrawer expandedId={expandedId} />}
+            mobile={<MobileDrawer
+              onClose={() => setExpandedId(null)}
+              expandedId={expandedId} />}
           >
           </MegaMenuNavbar>
         </div>
