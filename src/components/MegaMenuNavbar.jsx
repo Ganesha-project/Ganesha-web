@@ -64,11 +64,12 @@ export const MegaMenuNavbar = ({
                     {children}
                 </div>
             </div>
+
             {mobile && (
                 <div
-                    className={`fixed inset-0 w-full transition-all duration-300 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] 
-      ${isExpanded ? 'translate-y-0 opacity-100 pointer-events-auto h-full' : '-translate-y-5 opacity-0 pointer-events-none h-0'} 
-      bg-white/70 dark:bg-black/30 backdrop-blur-sm`}
+                    onMouseEnter={() => setExpandedId(id)}
+                    className={`fixed inset-0 w-full transition-all duration-300 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] bg-darkColor/20 dark:bg-lightColor/10 backdrop-blur-xl
+                    ${isExpanded ? 'translate-y-0 opacity-100 pointer-events-auto h-full overflow-y-scroll' : '-translate-y-5 opacity-0 pointer-events-none h-0'} `}
                 >
                     {mobile}
                 </div>

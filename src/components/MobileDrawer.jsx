@@ -45,22 +45,23 @@ export const MobileDrawer = ({ expandedId }) => {
                     <p onClick={() => setIsExpanded(!isExpanded)} className="font-bold text-sm opacity-60 dark:opacity-70">Produk & Layanan</p>
                     {/* Expand/Minimize Button */}
                     {allServices.length > 6 && (
-                        <button
-                            onClick={() => setIsExpanded(!isExpanded)}
-                            className={`${expandAnimationClass} text-sm font-semibold flex items-center justify-center`}
-                        >
-                            <span className="flex items-center justify-center gap-1 opacity-60 dark:opacity-70 w-fit dark:bg-darkColor/80 bg-lightColor/80 rounded-3xl px-2 py-2 text-md">
-                                <IoIosArrowDown
-                                    className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}
-                                />
-                            </span>
-                        </button>
+                 <button
+                 onClick={() => setIsExpanded(!isExpanded)}
+                 className={`text-sm font-semibold flex items-center justify-center`}
+               >
+                 <span className="flex items-center justify-center gap-1 opacity-60 dark:opacity-70 w-fit bg-transparent rounded-3xl px-2 py-2 text-md">
+                   <IoIosArrowDown
+                     className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : "rotate-0"}`}
+                   />
+                 </span>
+               </button>
+               
                     )}
                 </div>
 
                 {/* Services with Animated Height */}
                 <div
-                    className={`${expandAnimationClass} transition-all duration-700 ease-in-out overflow-hidden`}
+                    className={`${expandAnimationClass} transition-all duration-200 ease-in-out overflow-hidden`}
                     style={{ maxHeight: isExpanded ? contentHeight : minimizedHeight }}
                 >
                     <div ref={contentRef} className="grid grid-cols-3 gap-2">
