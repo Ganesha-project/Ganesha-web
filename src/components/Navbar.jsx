@@ -67,34 +67,34 @@ export const Navbar = ({ children }) => {
             <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
                 href={'/activity'}
-                className={`${path === '/activity' && 'bg-darkColor/5 dark:bg-lightColor/5'} font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                className={`${path === '/' && 'bg-darkColor/5 dark:bg-lightColor/5'} font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 <span className={TextGradientYellowPurple}>
                   Go Space
                 </span>
               </Link>
-              <span className={`${path === '/activity' ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${BgtGradientYellowPurple} rounded-full`}></span>
+              <span className={`${path.startsWith('/go-space') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${BgtGradientYellowPurple} rounded-full`}></span>
             </li>
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/activity'}
-                className={`${path === '/activity' && 'bg-darkColor/5 dark:bg-lightColor/5'} block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                className={`block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 Aktifitas
               </Link>
-              <span className={`${path === '/activity' ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
+              <span className={`${path.startsWith('/activity') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/article'}
-                className={`${path === '/activity' && 'bg-darkColor/5 dark:bg-lightColor/5'}  block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                className={`block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 Artikel
               </Link>
-              <span className={`${path === '/artikel' ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
+              <span className={`${path.startsWith('/article') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
             <div className='flex items-center gap-3 py-[6px] px-3 !-mr-3 bg-darkColor/5 dark:bg-lightColor/10 rounded-full'>
               {/* Menu */}
@@ -189,8 +189,8 @@ export const Navbar = ({ children }) => {
       </nav>
 
       {/* Background Layer & Effect */}
-      <div className={`fixed top-0 z-[80] ${expandedId ? "opacity-100 backdrop-blur-xl md:backdrop-blur-[30px] w-screen h-screen" : "opacity-0"} bg-darkColor/30 dark:bg-lightColor/30 transition-opacity duration-300`}></div>
-      <div className={`${expandedId ? "md:scale-105" : "scale-100"} transform origin-top transition-transform duration-500 ease-in-out`}>
+      <div className={`hidden md:block fixed top-0 z-[80] ${expandedId ? "opacity-100 backdrop-blur-xl md:backdrop-blur-[30px] w-screen h-screen" : "opacity-0"} noBar bg-lightColor/30 dark:bg-lightColor/20 transition-opacity duration-300`}></div>
+      <div className={`${expandedId ? "md:scale-105" : "md:scale-100"} noBar overflow-hidden md:transform md:origin-top md:transition-transform md:duration-500 md:ease-in-out`}>
         {children}
       </div>
     </>

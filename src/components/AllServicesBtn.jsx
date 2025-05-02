@@ -93,9 +93,9 @@ export const AllServicesBtn = () => {
                     <div className={expandAnimationClass}>
                         <Title text={'Layanan & Produk Kami'} />
                     </div>
-                    <div className="flex items-center gap-2 ">
+                    <div className="flex items-center md:justify-normal justify-end w-full gap-2 ">
                         {visible === false && (
-                            <div className="p-1 bg-lightColor/80 dark:bg-darkColor/80 rounded-full shadow-mainShadow flex items-center gap-2">
+                            <div className="hidden p-1 bg-lightColor/80 dark:bg-darkColor/80 rounded-full shadow-mainShadow md:flex items-center gap-2">
                                 <button
                                     onClick={() => setViewMode('carousel')}
                                     className={`cursor-pointer gap-2 py-1 px-2 rounded-full ${viewMode === 'carousel' ? 'bg-mainColor text-white' : 'bg-lightColor dark:bg-darkColor text-darkColor/90 dark:text-lightColor/90'} font-medium tracking-normal`}
@@ -110,7 +110,7 @@ export const AllServicesBtn = () => {
                                 </button>
                             </div>
                         )}
-                        <button onClick={() => setVisible(!visible)} className="cursor-pointer flex items-center gap-2 py-1 px-3 rounded-full bg-lightColor/80 dark:bg-darkColor/80 font-medium text-darkColor/90 dark:text-lightColor/90">
+                        <button onClick={() => setVisible(!visible)} className="cursor-pointer flex items-center gap-2 py-1 px-3 rounded-full bg-lightColor/80 dark:bg-darkColor/80 font-medium text-sm md:text-base text-darkColor/90 dark:text-lightColor/90">
                             {visible ? 'Tutup' : 'Cari Layanan'}
                             {visible ? <RxCross2 /> : <PiMagnifyingGlass />}
                         </button>
@@ -119,7 +119,7 @@ export const AllServicesBtn = () => {
             </section>
 
             {/* Services Content */}
-            <section className={`${visible === false ? "-translate-y-16" : "translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[55lvh]" : "max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
+            <section className={`${visible === false ? "-translate-y-16" : "translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[55lvh]" : "md:max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
                 {filteredMain.length > 0 && (
                     <>
                         {/* Carousel View */}
@@ -129,13 +129,13 @@ export const AllServicesBtn = () => {
                                 <>
                                     <button
                                         onClick={() => carouselRef?.scrollBy({ left: -300, behavior: "smooth" })}
-                                        className={`absolute left-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                        className={`absolute left-5 md:left-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                     >
                                         <HiChevronLeft />
                                     </button>
                                     <button
                                         onClick={() => carouselRef?.scrollBy({ left: 300, behavior: "smooth" })}
-                                        className={`absolute right-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                        className={`absolute right-5 md:right-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                     >
                                         <HiChevronRight />
                                     </button>
@@ -151,7 +151,7 @@ export const AllServicesBtn = () => {
                                     <a
                                         href={cat.href}
                                         key={index}
-                                        className={`${expandAnimationClass} ${index === 0 && "ml-5 md:ml-24 2xl:ml-80"} ${index === filteredMain.length - 1 && "mr-5 md:mr-24 2xl:mr-80"} carousel-item max-w-[15lvw] 2xl:max-w-[12lvw] h-[40lvh] group transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
+                                        className={`${expandAnimationClass} ${index === 0 && "ml-5 md:ml-24 2xl:ml-80"} ${index === filteredMain.length - 1 && "mr-5 md:mr-24 2xl:mr-80"} carousel-item max-w-[15lvw] 2xl:max-w-[12lvw] h-[40lvh] min-w-[50lvw] md:min-w-auto group transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
                                         style={{ transitionDelay: `${index * 10}ms` }}
                                     >
                                         <div className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80" style={{ backgroundColor: cat.accentDark, transform: 'translate(-50%, -50%)' }} />
@@ -173,7 +173,7 @@ export const AllServicesBtn = () => {
                         </div>
 
                         {/* Grid View */}
-                        <div className={`${viewMode === "grid" ? "-translate-y-[51%] 2xl:-translate-y-[61%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:mx-24 2xl:mx-80 mx-5`}>
+                        <div className={`${viewMode === "grid" ? "md:-translate-y-[51%] -translate-y-[25%] 2xl:-translate-y-[61%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:mx-24 2xl:mx-80 mx-5`}>
                             {filteredMain.map((cat, index) => (
                                 <a
                                     href={cat.href}

@@ -52,7 +52,7 @@ export const HeroSection = () => {
     }, []);
 
     return (
-        <section className="relative z-0 min-h-screen h-[155lvh] md:h-[185lvh] 2xl:h-[165lvh] flex flex-col items-center bg-lightColor/70 dark:bg-darkColor/50 overflow-hidden">
+        <section className="relative z-0 min-h-screen h-[170lvh] md:h-[185lvh] 2xl:h-[165lvh] flex flex-col items-center bg-lightColor/70 dark:bg-darkColor/50 overflow-hidden">
 
             {/* Glow Elements */}
             <div className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80 bg-[#ff562267] dark:bg-[#ff562243] -translate-x-1/2 -translate-y-1/2" />
@@ -63,9 +63,9 @@ export const HeroSection = () => {
             <div className="absolute z-10 bottom-[50px] left-[-0px] w-[10%] h-[10%] rounded-full blur-3xl opacity-80 bg-[#1ebd6e] -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute inset-0 z-10 pattern-overlay dark:invert"></div>
             <div className="absolute bottom-0 w-full h-[20%] bg-gradient-to-b from-lightColor/70 to-white dark:invert"></div>
-           
+
             {/* Text Content */}
-            <div className="relative z-20 flex flex-col items-center text-center mx-5 mt-40">
+            <div className="relative z-20 flex flex-col items-center text-center mx-5 mt-18 md:mt-40">
                 <div className="mb-1 w-fit relative flex flex-col items-center gap-[3px]">
                     <p className="tracking-wider text-sm shimmer-text">
                         One Stop Solution
@@ -82,7 +82,7 @@ export const HeroSection = () => {
                         Ganesha Consulting
                     </h1>
                 </div>
-                <p className="text-sm md:text-lg mb-6 max-w-3xl">
+                <p className="text-sm md:text-lg mb-6 max-w-3xl opacity-90">
                     Temukan solusi lengkap untuk semua kebutuhan bisnis Anda di Ganesha Consulting! Kami memberikan layanan all-in-one untuk memenuhi segala kebutuhan Anda!
                 </p>
                 <button className="cursor-pointer duration-300 hover:scale-95 active:scale-90 px-3 py-2 font-semibold text-white dark:text-black text-sm rounded-full from-baseColor via-mainColor to-mainColor bg-gradient-to-br dark:from-baseColor dark:via-baseColor dark:to-secondaryColor">
@@ -94,7 +94,7 @@ export const HeroSection = () => {
 
             {mounted && (
                 <div
-                    className="relative z-20 mt-16 md:w-full transition-transform duration-500 ease-out rounded-3xl md:overflow-hidden pointer-events-none md:my-0 !my-auto"
+                    className="hidden md:block relative z-20 mt-16 md:w-full transition-transform duration-500 ease-out rounded-3xl md:overflow-hidden pointer-events-none md:my-0 !my-auto"
                     style={{
                         transform: `scale(${scale})`,
                         borderRadius: `${rounded}px`,
@@ -105,6 +105,18 @@ export const HeroSection = () => {
                         backdropFilter: "blur(6px)",
                         WebkitBackdropFilter: "blur(6px)",
                     }}
+                >
+                    <ClientPhotos
+                        titleVisibility="hidden"
+                        padding="!p-0"
+                        padding2="!p-10"
+                    />
+                </div>
+            )}
+
+            {mounted && (
+                <div
+                    className="block md:hidden relative z-20 mt-16 md:w-full transition-transform duration-500 ease-out rounded-3xl md:overflow-hidden pointer-events-none md:my-0 !my-auto"
                 >
                     <ClientPhotos
                         titleVisibility="hidden"

@@ -30,7 +30,7 @@
   @apply bg-white dark:bg-black;
 }
 body {
-  @apply bg-white dark:bg-black text-neutral-900 dark:text-neutral-100;
+  @apply bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 overflow-x-hidden;
 }
 
 .truncate-last {
@@ -135,13 +135,14 @@ body {
 }
 
 .noBar::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .noBar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none !important;   /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+  overflow: hidden !important; /* Hide both vertical and horizontal scrollbars */
 }
 
 .carousel2 {

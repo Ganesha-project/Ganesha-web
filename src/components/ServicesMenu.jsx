@@ -71,7 +71,7 @@ export const ServicesMenu = ({ expandedId }) => {
                 <div className={`${visible === true ? "translate-y-[500%] opacity-0 scale-95" : "opacity-100 scale-100 -translate-y-8"} duration-300 ease-in-out grid grid-cols-8 gap-4`}>
                     <div className="col-span-3">
                         {visible === false ? (
-                            <button onClick={() => setVisible(true)} className="flex items-center gap-[2px] py-[1px] px-2 rounded-full bg-neutral-400/30 dark:bg-neutral-500/20 text-[12px] font-bold text-darkColor/90 tracking-normal dark:text-lightColor/90">
+                            <button onClick={() => setVisible(true)} className="flex items-center gap-[2px] py-[1px] px-2 rounded-full bg-neutral-300/30 dark:bg-neutral-500/20 text-[12px] font-bold text-darkColor/90 tracking-normal dark:text-lightColor/90">
                                 Cari Layanan
                                 <div className="">
                                     <PiMagnifyingGlass className="text-[12px]" />

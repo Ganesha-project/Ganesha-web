@@ -54,25 +54,27 @@ export const MegaMenuNavbar = ({
 
             {/* Mega Menu */}
             <div
-                className={`fixed inset-0 top-0 left-0 w-screen pt-16 pb-24 overflow-y-auto transition-all duration-300 ease-in-out transform
+                className={`fixed inset-0 top-0 left-0 w-screen pt-16 pb-24 transition-all duration-300 ease-in-out transform noBar
                          ${isExpanded ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}
             >
                 <div
                     onMouseEnter={() => setExpandedId(id)}
                     onMouseLeave={() => setExpandedId(null)}
-                    className="2xl:px-80 md:px-24 min-h-[50lvh] pt-5">
+                    className="2xl:px-80 md:px-24 min-h-[50lvh] pt-5 noBar">
                     {children}
                 </div>
             </div>
-
             {mobile && (
                 <div
-                    className={`fixed inset-0 top-0 left-0transition-all duration-300 ease-in-out transform origin-top
-                              ${isExpanded ? 'opacity-100 scale-100 pointer-events-auto overflow-y-scroll min-h-screen w-screen noBar' : 'min-h-0 opacity-0 scale-95 pointer-events-none'}`}
+                    className={`fixed inset-0 w-full transition-all duration-300 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] 
+      ${isExpanded ? 'translate-y-0 opacity-100 pointer-events-auto h-full' : '-translate-y-5 opacity-0 pointer-events-none h-0'} 
+      bg-white/70 dark:bg-black/30 backdrop-blur-sm`}
                 >
                     {mobile}
                 </div>
             )}
+
+
 
         </div>
 

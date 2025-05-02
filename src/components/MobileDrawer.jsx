@@ -8,8 +8,9 @@ import ThemeSwitch from "./ThemeSwitch";
 
 export const MobileDrawer = ({ expandedId }) => {
     const expandAnimationClass = expandedId
-        ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out"
-        : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
+        ? "opacity-100 translate-y-0 duration-300 ease-out"
+        : "opacity-0 translate-y-4 duration-200 ease-in";
+
 
     const [isExpanded, setIsExpanded] = useState(false);
     const contentRef = useRef(null);
@@ -38,7 +39,7 @@ export const MobileDrawer = ({ expandedId }) => {
     }, [isExpanded, allServices]);
 
     return (
-        <ul className="px-5 pt-14 pb-10">
+        <ul className="px-5 pt-14 pb-24">
             <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
                     <p onClick={() => setIsExpanded(!isExpanded)} className="font-bold text-sm opacity-60 dark:opacity-70">Produk & Layanan</p>
