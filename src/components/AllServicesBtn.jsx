@@ -5,6 +5,7 @@ import { HiMiniMagnifyingGlass, HiMiniSquares2X2, HiMiniSquare2Stack, HiMiniArro
 import { PiMagnifyingGlass } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
 import { Title } from "./Title";
+import Link from "next/link";
 
 export const AllServicesBtn = () => {
     const expandAnimationClass = "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out";
@@ -148,7 +149,7 @@ export const AllServicesBtn = () => {
                                 onScroll={updateCarouselPosition}
                             >
                                 {filteredMain.map((cat, index) => (
-                                    <a
+                                    <Link
                                         href={cat.href}
                                         key={index}
                                         className={`${expandAnimationClass} ${index === 0 && "ml-5 md:ml-24 2xl:ml-80"} ${index === filteredMain.length - 1 && "mr-5 md:mr-24 2xl:mr-80"} carousel-item max-w-[15lvw] 2xl:max-w-[12lvw] h-[40lvh] min-w-[50lvw] md:min-w-auto group transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
@@ -167,7 +168,7 @@ export const AllServicesBtn = () => {
                                                 ))}
                                             </p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -175,7 +176,7 @@ export const AllServicesBtn = () => {
                         {/* Grid View */}
                         <div className={`${viewMode === "grid" ? "md:-translate-y-[51%] -translate-y-[25%] 2xl:-translate-y-[61%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:mx-24 2xl:mx-80 mx-5`}>
                             {filteredMain.map((cat, index) => (
-                                <a
+                                <Link
                                     href={cat.href}
                                     key={index}
                                     className={`${expandAnimationClass} group aspect-square transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
@@ -194,7 +195,7 @@ export const AllServicesBtn = () => {
                                             ))}
                                         </p>
                                     </div>
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </>

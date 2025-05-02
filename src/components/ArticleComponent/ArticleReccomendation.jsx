@@ -10,7 +10,7 @@ export const ArticleReccomendation = ({ data }) => {
                 <Title text={'Read Our Articles'} />
                 <div className="snap-x md:grid md:grid-cols-3 carousel2 w-full gap-5 md:items-center md:justify-center ">
                     {data?.data?.map((el, idx) => (
-                        <a
+                        <Link
                             href={'/article/' + el.attributes.Slug}
                             key={idx}
                             className={`${idx === 0 ? 'ml-5 md:ml-0' : ''} ${idx === data.data.length - 1 ? 'mr-5 md:mr-0' : ''} snap-center md:w-full carousel-item relative hover:scale-95 duration-300 ease-in-out rounded-3xl`}
@@ -31,15 +31,15 @@ export const ArticleReccomendation = ({ data }) => {
                                 </h2>
                             </div>
                             <span className="w-full from-[#0000006f] bg-gradient-to-t rounded-3xl to-transparent absolute z-10 h-[50%] bottom-0"></span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
-                <a
+                <Link
                     href="/article"
                     className="btn btn-ghost rounded-full bg-baseColor bg-opacity-20 w-fit"
                 >
                     See More Articles
-                </a>
+                </Link>
             </section>
         </>
     )

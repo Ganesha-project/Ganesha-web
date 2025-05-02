@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const BannerBadanUsaha = () => {
     return (
         <>
@@ -15,18 +17,18 @@ export const BannerBadanUsaha = () => {
                     </h1>
                     {/* <h1 className="text-slate-500 font-medium text-xl w-[50vw]">Layanan Pendirian Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti reprehenderit minima voluptate, fuga accusantium iste, ducimus hic dolores consequuntur adipisci facere neque consequatur expedita non, aliquam aliquid iusto deserunt.</h1> */}
                     <div className="mt-4 flex flex-col md:flex-row gap-3">
-                        <a
+                        <Link
                             href='#packages'
                             className={`text-lg w-fit bg-slate-200 p-10 text-neutral-800 backdrop-blur-sm hover:bg-opacity-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full lg:text-sm px-4 py-2 text-center md:inline-block md:order-1`}
                         >
                             Pilih Paket
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href=''
                             className={`text-lg w-fit bg-slate-200 p-10 text-neutral-800 backdrop-blur-sm hover:bg-opacity-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full lg:text-sm px-4 py-2 text-center md:inline-block md:order-1`}
                         >
                             Konsultasi Sekarang
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

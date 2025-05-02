@@ -46,13 +46,13 @@ export const Navbar = ({ children }) => {
           <div className={`absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/50 bg-secondaryLight/50 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
           <ul className="flex items-center flex-col p-4 md:p-0 mt-4 font-medium md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 text-[14px]">
             <li className='relative flex flex-col items-center group'>
-              <a
+              <Link
                 href={'/'}
                 className={`z-[555] flex items-center gap-2 -ml-[11px] p-[7px] text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 <Image src={Artboard2} width={21} height={21} alt="Ganesha Logo" className='dark:brightness-[135%]' />
-              </a>
+              </Link>
               <span className={`${path === '/' ? 'scale-100' : 'scale-0'} -ml-[11px] absolute bottom-[3px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
             <MegaMenuNavbar

@@ -1,6 +1,7 @@
 "use client"
 import { categorizedServices } from "@/DB/Database"
 import { useHookMenu } from "@/hooks/useHookMenu";
+import Link from "next/link";
 import { useState, useMemo } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { PiMagnifyingGlass } from "react-icons/pi";
@@ -107,7 +108,7 @@ export const ServicesMenu = ({ expandedId }) => {
                         <div className="col-span-3">
                             <div className="grid gap-4 grid-cols-2">
                                 {filteredMain.map((cat, index) => (
-                                    <a
+                                    <Link
                                         href={cat.href}
                                         key={index}
                                         className={`${expandAnimationClass} parent aspect-square transition-transform relative overflow-hidden w-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
@@ -160,7 +161,7 @@ export const ServicesMenu = ({ expandedId }) => {
                                                 ))}
                                             </p>
                                         </div>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -174,7 +175,7 @@ export const ServicesMenu = ({ expandedId }) => {
                         <div className="col-span-3">
                             <div className="grid grid-cols-2 gap-4">
                                 {filteredOthers.filter(cat => cat.visibility).map((cat, index) => (
-                                    <a href={cat.href} key={index}>
+                                    <Link href={cat.href} key={index}>
                                         <div
                                             key={index}
                                             className={`${cat.visibility === true ? "block" : "hidden"} ${expandAnimationClass} grow parent transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex p-3 hover:bg-opacity-20 hover:scale-95`}
@@ -215,7 +216,7 @@ export const ServicesMenu = ({ expandedId }) => {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

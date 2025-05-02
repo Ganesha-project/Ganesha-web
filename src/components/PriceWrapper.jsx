@@ -2,6 +2,7 @@ import { FaPlus } from "react-icons/fa6"
 import { Title } from "./Title"
 import { formatToRupiah } from "@/helper/formatToRupiah"
 import { IoIosArrowForward } from "react-icons/io"
+import Link from "next/link"
 
 export const PriceWrapper = ({ data, text1, text }) => {
     return (
@@ -50,12 +51,12 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                         </button>
                                     </form>
                                     <section className="mt-7 space-y-5">
-                                        <a
+                                        <Link
                                             href={el.href}
                                             className="flex gap-2 items-center btn btn-ghost bg-neutral-200 order-last md:order-none dark:bg-darkColor rounded-full"
                                         >
                                             Cari Tahu Lebih Lengkap! <IoIosArrowForward/>
-                                        </a>
+                                        </Link>
                                         <div className="carousel2 w-full md:flex md:flex-wrap md:justify-center gap-5">
                                             {el.items.map((el, idx) => (
                                                 <div
@@ -84,11 +85,11 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                                             </span>
                                                         </div>
 
-                                                        <a
+                                                        <Link
                                                             href={el.link}
                                                             className={`text-sm bg-[#2e2e2e] dark:bg-neutral-200 w-fit px-3 text-center dark:text-neutral-800 text-white py-1 rounded-full font-bold ease-in-out duration-300 hover:scale-95`}>
                                                             Konsultasi Sekarang
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             ))}

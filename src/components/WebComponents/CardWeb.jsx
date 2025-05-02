@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import check from '../../public/IMG/IconVector/checkgreen.png'
 import cross from '../../public/IMG/IconVector/crossred.png'
 import Image from 'next/image'
@@ -92,11 +93,11 @@ export const CardWeb = ({ data }) => {
 
                             </p>
                             <div className="mt-3 flex justify-center">
-                                <a
+                                <Link
                                     href={el.link}
                                     className="text-white font-extrabold w-full md:w-full bg-gradient-to-br from-sky-600 to-indigo-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-indigo-300 rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">
                                     Konsultasi Sekarang
-                                </a>
+                                </Link>
                             </div>
                             <div className='mt-4'>
                                 {el.features.map((feature) => (

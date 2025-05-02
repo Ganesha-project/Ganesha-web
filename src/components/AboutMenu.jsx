@@ -7,6 +7,7 @@ import { ActivityLoader } from "./Loading/ActivityLoader";
 import { ArticleLoader } from "./Loading/ArticleLoader";
 import { AboutUsLinks } from "@/DB/Database";
 import { slugify } from "@/helper/slugify";
+import Link from "next/link";
 
 export const AboutMenu = ({ expandedId }) => {
     const expandAnimationClass = expandedId ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out" : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
@@ -62,7 +63,7 @@ export const AboutMenu = ({ expandedId }) => {
                 <div className="col-span-2">
                     <div className="grid grid-cols-2 gap-4">
                         {AboutUsLinks.filter(cat => cat.visibility).map((cat, index) => (
-                            <a href={cat.href} key={index}> 
+                            <Link href={cat.href} key={index}> 
                                 <div
                                     key={index}
                                     className={`${cat.visibility === true ? "block" : "hidden"} ${expandAnimationClass} grow aspect-square parent transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex flex-col items-center justify-center p-5 hover:bg-opacity-20  hover:scale-95`}
@@ -107,7 +108,7 @@ export const AboutMenu = ({ expandedId }) => {
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -138,7 +139,7 @@ export const AboutMenu = ({ expandedId }) => {
                     {articles?.data?.length ? (
                         <div className="grid grid-cols-1 gap-4">
                             {articles.data.map((article) => (
-                                <a
+                                <Link
                                     href={'/article/' + slugify(article?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + article.attributes.Slug}
                                     key={article.id}
                                     className={`${expandAnimationClass} hover:scale-95 hover:dark:bg-darkColor/80 hover:bg-lightColor/80 grow transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex flex-col py-3 px-5 hover:bg-opacity-20`}
@@ -146,7 +147,7 @@ export const AboutMenu = ({ expandedId }) => {
                                     <p className="font-bold text-md capitalize bg-gradient-to-br from-darkColor via-darkColor to-mainColor  dark:from-lightColor dark:via-lightColor dark:to-secondaryColor bg-clip-text text-transparent w-fit hover:underline">
                                         {article.attributes?.Title}
                                     </p>
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     ) : (

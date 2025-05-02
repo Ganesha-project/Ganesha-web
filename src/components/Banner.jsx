@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const Banner = () => {
     return (
         <>
@@ -10,12 +12,12 @@ export const Banner = () => {
                         </p>
                     </div>
                     <div className="p-3">
-                        <a
+                        <Link
                             href='/'
                             className="text-white bg-[#ffffff3e] backdrop-blur-sm hover:bg-[#762A7D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 text-center md:inline-block"
                         >
                             Lebih Lanjut
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Title } from "../Title"
 
 export const SkeletonReccomendation = () => {
@@ -31,12 +32,12 @@ export const SkeletonReccomendation = () => {
                         </div>
                     </div>
                 </div>
-                <a
+                <Link
                     href="/article"
                     className="btn btn-ghost rounded-full bg-baseColor/20 w-fit"
                 >
                     See More
-                </a>
+                </Link>
             </section>
         </>
     )

@@ -1,4 +1,5 @@
 import { DataSelectFilterArticle } from "@/app/Database";
+import Link from "next/link";
 import { FaSort } from "react-icons/fa6"
 
 export const Headtag = ({ label, visibility, children, filter, hide, setSortOrder }) => {
@@ -24,12 +25,12 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                             <ul tabIndex={0} className="dropdown-content menu bg-white dark:bg-black dark:shadow-mainShadow rounded-box z-[1] w-52 p-2 shadow">
                                 {DataSelectFilterArticle.map((el, idx) => (
                                     <li key={idx}>
-                                        <a
+                                        <Link
                                             className="capitalize cursor-pointer"
                                             onClick={() => handleSort(el.value)} // Panggil handleSort
                                         >
                                             {el.label}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -39,11 +40,11 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                     <>
                     </>
                 ) : (
-                    <a href=""
+                    <Link href=""
                         className="px-3 py-1 bg-baseColor dark:text-neutral-900 dark:hover:text-white text-white rounded-full font-semibold duration-300 ease-in-out hover:bg-mainColor"
                     >
                         See More
-                    </a>
+                    </Link>
                 )}
             </div>
         </>

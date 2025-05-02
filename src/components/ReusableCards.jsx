@@ -1,5 +1,6 @@
 "use client"
 import { formatToRupiah } from "@/helper/formatToRupiah";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "react-icons/bs";
@@ -119,11 +120,11 @@ export const ReusableCards = ({ data, label, visibility }) => {
                                         {path === "/web-development" && el.price !== 0 && (<span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full"> Start From </span>)}
                                         {el.price === 0 ? ("Talk With Us!") : formatToRupiah(el.price)}
                                     </h2>
-                                    <a
+                                    <Link
                                         href={el.link}
                                         className={`bg-neutral-600 dark:bg-neutral-200 w-full text-center dark:text-neutral-800 text-white py-2 rounded-full font-bold ease-in-out duration-300 hover:scale-95`}>
                                         Konsultasi Sekarang
-                                    </a>
+                                    </Link>
                                 </div>
                                 {el.discount !== 0 ? (
                                     <div className="absolute top-[-10px] right-[-10px]">

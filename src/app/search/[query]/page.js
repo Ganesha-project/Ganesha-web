@@ -17,6 +17,7 @@ import { BadanUsahaPackages } from "../../../DB/BuPackages";
 import { servicePackages } from "../../../DB/IzinPackages";
 import { useRouter } from "next/navigation";
 import { slugify } from "@/helper/slugify";
+import Link from "next/link";
 
 
 export default function SearchPageQuery() {
@@ -210,7 +211,7 @@ export default function SearchPageQuery() {
                                 const filtered = filteredFeatures(item.features || [], searchQuery);
                                 const keyoworded = filteredKeywords(item.keywords || [], searchQuery);
                                 return (
-                                    <a key={idx} href={`/${item.sourcePage}`}>
+                                    <Link key={idx} href={`/${item.sourcePage}`}>
                                         <li className="p-5 bg-lightColor dark:bg-darkColor rounded-3xl hover:scale-[.99] transition-all">
                                             <h2 className="font-semibold text-lg mb-3">
                                                 {highlightText(item.type, searchQuery)}
@@ -253,7 +254,7 @@ export default function SearchPageQuery() {
                                                     </>
                                                 )}
                                         </li>
-                                    </a>
+                                    </Lnk>
                                 )
                             })}
                         </ul>
