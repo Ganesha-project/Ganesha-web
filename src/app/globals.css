@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
-
+@source inline("opacity-100 scale-100 translate-y-0");
+@source inline("opacity-0 scale-95 translate-y-4");
+@source inline("duration-300 duration-500 ease-in-out");
 @theme {
   /* Color */
   --color-mainColor: #6b1e9c;
@@ -20,7 +22,12 @@
   --shadow-mainShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --shadow-secondaryShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+@safelist{
+
+}
 
 :root {
   background: #00000000;
