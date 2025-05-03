@@ -201,7 +201,7 @@ export const AllServicesBtn = () => {
                         </div>
 
                         {/* Grid View Mobile */}
-                        <div className={`${viewMode === "grid" ? "-translate-y-[75%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid grid-cols-3 gap-2 md:hidden md:mx-24 2xl:mx-80 mx-5`}>
+                        <div className={`${viewMode === "grid" ? "-translate-y-[65%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid grid-cols-3 gap-2 md:hidden md:mx-24 2xl:mx-80 mx-5`}>
                             {filteredMain.map((cat, index) => (
                                 <Link
                                     key={index}

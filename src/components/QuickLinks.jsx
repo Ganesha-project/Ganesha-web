@@ -45,13 +45,15 @@ export const QuickLinks = () => {
                 <Link
                     key={index}
                     href={link.link}
-                    className="opacity-80 font-medium flex items-center justify-between gap-2 border-b pb-3 border-b-neutral-500/50"
+                    className="opacity-80 font-medium flex items-center gap-2 w-full"
                 >
-                    <div className='flex items-center gap-2'>
-                   {link.icon}
-                    {link.label}
+                    <span className='pb-3 text-lg'>
+                        {link.icon}
+                    </span>
+                    <div className='flex items-center justify-between gap-2 border-b pb-3 border-b-neutral-500/50 dark:border-b-neutral-100/30 w-full'>
+                        {link.label}
+                        <IoIosArrowForward />
                     </div>
-                    <IoIosArrowForward />
                 </Link>
             ))}
         </div>
