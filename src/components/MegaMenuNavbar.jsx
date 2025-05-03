@@ -68,7 +68,7 @@ export const MegaMenuNavbar = ({
             {mobile && (
                 <div
                     onMouseEnter={() => setExpandedId(id)}
-                    className={`fixed inset-0 w-full transition-all duration-300 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] bg-darkColor/20 dark:bg-lightColor/10 backdrop-blur-md
+                    className={`fixed inset-0 w-full transition-all duration-500 ease-[cubic-bezier(0.25, 0.1, 0.25, 0.1)] bg-secondaryDark/20 dark:bg-secondaryLight/10 backdrop-blur-2xl
                     ${isExpanded ? 'translate-y-0 opacity-100 pointer-events-auto h-full overflow-y-scroll' : '-translate-y-5 opacity-0 pointer-events-none h-0'} `}
                 >
                     {mobile}

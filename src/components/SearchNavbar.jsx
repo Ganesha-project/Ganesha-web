@@ -49,11 +49,11 @@ export const SearchNavbar = ({ className, onClose, scroll, variant = 'default' }
                             </div>
                         )}
 
-                        <PiMagnifyingGlassBold className={`${searchTerm !== "" && "hidden"} order-last text-black/50 dark:text-white/50 text-2xl md:text-3xl`} />
+                        <PiMagnifyingGlassBold className={`${searchTerm !== "" && "hidden"} order-last text-black/80 dark:text-white/80 text-2xl md:text-3xl`} />
 
                         <input
                             type="text"
-                            className="h-12 grow text-2xl md:text-4xl py-2 font-semibold placeholder:text-black/50 dark:placeholder:text-white/50 placeholder:text-lg md:placeholder:text-4xl placeholder:font-semibold text-darkColor dark:text-lightColor"
+                            className="h-12 grow text-2xl md:text-4xl py-2 font-semibold placeholder:text-black/80 dark:placeholder:text-white/80 placeholder:text-lg md:placeholder:text-4xl placeholder:font-semibold text-darkColor dark:text-lightColor"
                             placeholder="Cari di Ganeshaconsulting.co.id"
                             value={searchTerm}
                             onChange={handleSearchChange}

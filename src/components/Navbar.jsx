@@ -17,6 +17,7 @@ import { RiSearchFill } from "react-icons/ri";
 import { ServicesMenu } from './ServicesMenu';
 import { AboutMenu } from './AboutMenu';
 import { BgtGradientYellowPurple, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
+import { QuickLinks } from './QuickLinks';
 
 export const Navbar = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -151,7 +152,9 @@ export const Navbar = ({ children }) => {
       </nav >
 
       {/* Mobile Navbar */}
-      <nav className={`${expandedId && "bg-transparent backdrop-blur-none dark:bg-transparent dark:backdrop-blur-none"}  ${isScrolled && "backdrop-blur-lg bg-lightColor/50 dark:bg-darkColor/50"} fixed space-x-2 max-w-screen navbar !min-h-[45px] h-[45px] z-[999] md:hidden lg:hidden`}>
+      <nav className={`fixed space-x-2 max-w-screen navbar !min-h-[50px] h-[50px] z-[999] md:hidden lg:hidden`}>
+        {/* Wrapper */}
+        <div className={`${isScrolled ? "" : "hidden"} absolute backdrop-blur-xl px-24 py-5 dark:bg-secondaryDark/50 bg-secondaryLight/50 w-full h-full -z-[100] top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2`}></div>
         <div className='navbar-start'>
           <Link
             href={'/'}
@@ -166,7 +169,7 @@ export const Navbar = ({ children }) => {
               alt="Ganesha Logo" />
           </Link>
         </div>
-        <div className='navbar-end space-x-5'>
+        <div className='navbar-end space-x-6 mr-2'>
           <MegaMenuNavbar
             id="search"
             icon={<HiMiniMagnifyingGlass className='text-xl mb-[2px]' />}
@@ -174,9 +177,13 @@ export const Navbar = ({ children }) => {
             expandedId={expandedId}
             setExpandedId={setExpandedId}
             mobile=
-            {<SearchNavbar
-              className={`mx-5 mt-10`}
-              expandedId={expandedId} />
+            {
+              <>
+                <SearchNavbar
+                  className={`mx-5 mt-10`}
+                  expandedId={expandedId} />
+                <QuickLinks />
+              </>
             }
           >
           </MegaMenuNavbar>
@@ -192,10 +199,10 @@ export const Navbar = ({ children }) => {
           >
           </MegaMenuNavbar>
         </div>
-      </nav>
+      </nav >
 
       {/* Background Layer & Effect */}
-      <div className={`hidden md:block fixed top-0 z-[80] ${expandedId ? "opacity-100 backdrop-blur-xl md:backdrop-blur-[30px] w-screen h-screen" : "opacity-0"} noBar bg-lightColor/30 dark:bg-lightColor/20 transition-opacity duration-300`}></div>
+      <div className={`hidden md:block fixed top-0 z-[80] ${expandedId ? "opacity-100 backdrop-blur-xl md:backdrop-blur-[30px] w-screen h-screen" : "opacity-0"} noBar bg-lightColor/30 dark:bg-lightColor/20 transition-opacity duration-300`} />
       <div className={`${expandedId ? "md:scale-105" : "md:scale-100"} noBar overflow-hidden md:transform md:origin-top md:transition-transform md:duration-500 md:ease-in-out`}>
         {children}
       </div>

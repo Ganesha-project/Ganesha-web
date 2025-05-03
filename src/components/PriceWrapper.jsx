@@ -35,7 +35,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                         {el.desc}
                                     </h2>
                                 </div>
-                                <div className="duration-300 ease-in-out translate-y-[200%] group-hover:translate-y-0 delay-100">    
+                                <div tabIndex={0} className="duration-300 ease-in-out translate-y-[200%] group-hover:translate-y-0 group-focus:translate-y-0 delay-100">    
                                     <button
                                         onClick={() => document.getElementById(`modal-${idx}`).showModal()}
                                         className="btn btn-sm mt-2 btn-ghost rounded-full bg-darkColor bg-opacity-50">

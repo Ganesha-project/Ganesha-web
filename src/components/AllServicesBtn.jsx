@@ -1,7 +1,7 @@
 'use client'
 import { categorizedServices } from "@/DB/Database"
 import { useState, useMemo, useEffect } from "react";
-import { HiMiniMagnifyingGlass, HiMiniSquares2X2, HiMiniSquare2Stack, HiMiniArrowSmallRight, HiMiniArrowSmallLeft, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { HiMiniMagnifyingGlass, HiMiniSquares2X2, HiMiniSquare2Stack, HiMiniArrowSmallRight, HiMiniArrowSmallLeft, HiChevronLeft, HiChevronRight, HiSquares2X2 } from "react-icons/hi2";
 import { PiMagnifyingGlass } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
 import { Title } from "./Title";
@@ -85,7 +85,7 @@ export const AllServicesBtn = () => {
                             </button>
                         )}
                     </label>
-                    <button onClick={closeSearch} className="h-[40px] w-[40px] rounded-full dark:bg-darkColor bg-lightColor flex items-center justify-center shadow-mainShadow">
+                    <button onClick={closeSearch} className="h-[40px] w-[40px] aspect-square border border-neutral-200/50 dark:border-neutral-500/50 rounded-full dark:bg-darkColor bg-lightColor flex items-center justify-center shadow-mainShadow">
                         <RxCross2 className="opacity-50" />
                     </button>
                 </div>
@@ -94,9 +94,9 @@ export const AllServicesBtn = () => {
                     <div className={expandAnimationClass}>
                         <Title text={'Layanan & Produk Kami'} />
                     </div>
-                    <div className="flex items-center md:justify-normal justify-end w-full gap-2 ">
+                    <div className="flex items-center md:justify-normal justify-between w-full gap-2 ">
                         {visible === false && (
-                            <div className="hidden p-1 bg-lightColor/80 dark:bg-darkColor/80 rounded-full shadow-mainShadow md:flex items-center gap-2">
+                            <div className="p-1 bg-lightColor dark:bg-darkColor rounded-full flex items-center justify-center gap-2">
                                 <button
                                     onClick={() => setViewMode('carousel')}
                                     className={`cursor-pointer gap-2 py-1 px-2 rounded-full ${viewMode === 'carousel' ? 'bg-mainColor text-white' : 'bg-lightColor dark:bg-darkColor text-darkColor/90 dark:text-lightColor/90'} font-medium tracking-normal`}
@@ -120,7 +120,7 @@ export const AllServicesBtn = () => {
             </section>
 
             {/* Services Content */}
-            <section className={`${visible === false ? "-translate-y-16" : "translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[55lvh]" : "md:max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
+            <section className={`${visible === false ? "-translate-y-16" : "-translate-y-10 md:translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[35lvh] md:max-h-[55lvh]" : "max-h-[50lvh] md:max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
                 {filteredMain.length > 0 && (
                     <>
                         {/* Carousel View */}
@@ -130,19 +130,20 @@ export const AllServicesBtn = () => {
                                 <>
                                     <button
                                         onClick={() => carouselRef?.scrollBy({ left: -300, behavior: "smooth" })}
-                                        className={`absolute left-5 md:left-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                        className={`hidden md:block absolute left-5 md:left-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                     >
                                         <HiChevronLeft />
                                     </button>
                                     <button
                                         onClick={() => carouselRef?.scrollBy({ left: 300, behavior: "smooth" })}
-                                        className={`absolute right-5 md:right-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                        className={`hidden md:block absolute right-5 md:right-24 top-1/2 transform -translate-y-1/2 z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                     >
                                         <HiChevronRight />
                                     </button>
                                 </>
                             )}
 
+                            {/* Carousel */}
                             <div
                                 ref={ref => setCarouselRef(ref)}
                                 className={`${viewMode === "carousel" ? "translate-x-0 opacity-100 scale-100" : "translate-x-full opacity-0 scale-50"} py-10 duration-500 ease-in-out carousel2 w-full gap-3 overflow-x-auto scroll-smooth`}
@@ -152,7 +153,7 @@ export const AllServicesBtn = () => {
                                     <Link
                                         href={cat.href}
                                         key={index}
-                                        className={`${expandAnimationClass} ${index === 0 && "ml-5 md:ml-24 2xl:ml-80"} ${index === filteredMain.length - 1 && "mr-5 md:mr-24 2xl:mr-80"} carousel-item max-w-[15lvw] 2xl:max-w-[12lvw] h-[40lvh] min-w-[50lvw] md:min-w-auto group transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
+                                        className={`${expandAnimationClass} ${index === 0 && "ml-5 md:ml-24 2xl:ml-80"} ${index === filteredMain.length - 1 && "mr-5 md:mr-24 2xl:mr-80"} carousel-item max-w-[15lvw] 2xl:max-w-[12lvw] h-[30lvh] md:h-[40lvh] min-w-[50lvw] md:min-w-auto group transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
                                         style={{ transitionDelay: `${index * 10}ms` }}
                                     >
                                         <div className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80" style={{ backgroundColor: cat.accentDark, transform: 'translate(-50%, -50%)' }} />
@@ -179,7 +180,7 @@ export const AllServicesBtn = () => {
                                 <Link
                                     href={cat.href}
                                     key={index}
-                                    className={`${expandAnimationClass} group aspect-square transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
+                                    className={`${expandAnimationClass} hidden group aspect-square transition-transform relative overflow-hidden w-full dark:bg-darkColor bg-lightColor rounded-3xl shadow-mainShadow md:flex flex-col p-5 hover:bg-opacity-20 hover:scale-95`}
                                     style={{ transitionDelay: `${index * 10}ms` }}
                                 >
                                     <div className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80" style={{ backgroundColor: cat.accentDark, transform: 'translate(-50%, -50%)' }} />
@@ -195,6 +196,29 @@ export const AllServicesBtn = () => {
                                             ))}
                                         </p>
                                     </div>
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* Grid View Mobile */}
+                        <div className={`${viewMode === "grid" ? "-translate-y-[75%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid grid-cols-3 gap-2 md:hidden md:mx-24 2xl:mx-80 mx-5`}>
+                            {filteredMain.map((cat, index) => (
+                                <Link
+                                    key={index}
+                                    href={cat.href}
+                                    className="relative flex flex-col items-center justify-center text-center px-2 py-3 bg-lightColor dark:bg-darkColor rounded-xl  hover:bg-opacity-70 transition-all duration-300"
+                                >
+                                    <div className="absolute inset-0 opacity-20 rounded-xl"
+                                        style={{ backgroundColor: cat.accentDark, }}
+
+                                    ></div>
+                                    <div
+                                        className="text-lg p-2 rounded-full mb-1"
+                                        style={{ color: cat.accentLight, backgroundColor: cat.accentDark }}
+                                    >
+                                        {cat.icon}
+                                    </div>
+                                    <div className="text-[11px] font-medium text-darkColor dark:text-lightColor truncate-last-2">{cat.label}</div>
                                 </Link>
                             ))}
                         </div>

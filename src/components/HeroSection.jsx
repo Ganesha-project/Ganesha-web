@@ -52,7 +52,7 @@ export const HeroSection = () => {
     }, []);
 
     return (
-        <section className="relative z-0 min-h-screen h-[130lvh] md:h-[185lvh] 2xl:h-[165lvh] flex flex-col items-center bg-lightColor/70 dark:bg-darkColor/50 overflow-hidden">
+        <section className="hidden relative z-0 min-h-screen h-[130lvh] md:h-[185lvh] 2xl:h-[165lvh] md:flex flex-col items-center bg-lightColor/70 dark:bg-darkColor/50 overflow-hidden">
 
             {/* Glow Elements */}
             <div className="absolute top-0 left-0 w-[50%] h-[50%] rounded-full blur-3xl opacity-80 bg-[#ff562267] dark:bg-[#ff562243] -translate-x-1/2 -translate-y-1/2" />

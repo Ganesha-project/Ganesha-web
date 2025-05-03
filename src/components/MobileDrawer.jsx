@@ -51,9 +51,9 @@ const CardItem = ({ cat, onClose }) => (
 );
 
 export const MobileDrawer = ({ expandedId, onClose }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
     const contentRef = useRef(null);
     const minimizedRef = useRef(null);
+    const [isExpanded, setIsExpanded] = useState(false);
     const [contentHeight, setContentHeight] = useState('0px');
     const [minimizedHeight, setMinimizedHeight] = useState('0px');
 
@@ -78,8 +78,8 @@ export const MobileDrawer = ({ expandedId, onClose }) => {
     }, [isExpanded]);
 
     const expandAnimationClass = expandedId
-        ? 'opacity-100 translate-y-0 duration-300 ease-out'
-        : 'opacity-0 translate-y-4 duration-300 ease-in';
+        ? 'opacity-100 translate-y-0 duration-500 ease-out'
+        : 'opacity-0 translate-y-4 duration-500 ease-in';
 
     return (
         <nav className="px-5 pt-14 pb-24">
@@ -135,7 +135,7 @@ export const MobileDrawer = ({ expandedId, onClose }) => {
                 <p className="font-bold opacity-60 dark:opacity-70 text-sm">Kenali Kami</p>
                 <div className="grid grid-cols-3 gap-2">
                     {AboutUsLinks.filter((cat) => cat.visibility).map((cat, index) => (
-                        <CardItem key={index} cat={cat} />
+                        <CardItem onClose={onClose} key={index} cat={cat} />
                     ))}
                 </div>
 

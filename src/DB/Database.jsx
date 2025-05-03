@@ -419,7 +419,7 @@ export const categorizedServices = {
             label: "Go Space",
             desc: "Nikmati layanan virtual office, meeting space, dan workspace yang fleksibel di lokasi strategis Jakarta",
             accentLight: "#410445",
-            accentDark: "#AA60C8",
+            accentDark: "#ce8be9",
             subs: ["Virtual Office", "Meeting Room", "Coworking Space"],
             visibility: true
         }
@@ -537,7 +537,7 @@ export const categorizedServices = {
             label: "Konsultan Pajak",
             desc: "Optimalisasi Pajak Anda dengan Bantuan Ahli Pajak Terpercaya!",
             accentLight: "#4e2a26",
-            accentDark: "#a5908e",
+            accentDark: "#dfc1bf",
             subs: ["Konsultasi Pajak", "Perencanaan Pajak", "Pelaporan Pajak"],
             visibility: true
         },
@@ -547,7 +547,7 @@ export const categorizedServices = {
             label: "Pelayanan Akuntansi",
             desc: "Dukungan akuntansi terpercaya untuk pencatatan keuangan dan pelaporan pajak.",
             accentLight: "#35756c",
-            accentDark: "#70bcb1",
+            accentDark: "#83e8d8",
             subs: ["Pembukuan", "Laporan Keuangan", "Kepatuhan Pajak"],
             visibility: true
         },

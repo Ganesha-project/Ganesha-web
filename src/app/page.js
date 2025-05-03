@@ -18,6 +18,7 @@ import { PseCertificate } from '@/components/PseCertificate';
 import { Popup } from '@/components/Popup';
 import { PopupContent } from '@/components/PopupContent';
 import { HeroSection } from '@/components/HeroSection';
+import { HomeBannerMobile } from '@/components/HomeBannerMobile';
 
 export default function Home() {
 
@@ -60,11 +61,15 @@ export default function Home() {
         </script>
       </Head>
       <HeroSection />
+      <HomeBannerMobile />
       <AllServicesBtn />
       <PseCertificate />
       <PriceWrapper text={"Layanan Utama Kami"} text1={"Rekomendasi"} data={dataPriceWrapper.legal} />
       <WebWork text1={'Jelajahi'} text={'Karya Website Kami'} />
       <SocmedWork text1={'Sosial media'} text={'Yang kami tangani'} />
+      <div className='md:hidden block'>
+        <ClientPhotos />
+      </div>
       <AdsBanner />
       <WhyUs />
       <ClientLogo />
