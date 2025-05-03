@@ -77,11 +77,11 @@ export const MobileDrawer = ({ expandedId, onClose }) => {
         }
     }, [isExpanded]);
 
-    // const expandAnimationClass = expandedId
-    //     ? 'opacity-100 translate-y-0 duration-500 ease-out'
-    //     : 'opacity-0 translate-y-4 duration-500 ease-in';
+    const expandAnimationClass = expandedId
+        ? 'opacity-100 translate-y-0 duration-500 ease-out'
+        : 'opacity-0 translate-y-4 duration-500 ease-in';
 
-    const expandAnimationClass = expandedId ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out delay-200" : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
+    // const expandAnimationClass = expandedId ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out delay-200" : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
 
 
     return (
