@@ -94,7 +94,7 @@ export const AllServicesBtn = () => {
                     <div className={expandAnimationClass}>
                         <Title text={'Layanan & Produk Kami'} />
                     </div>
-                    <div className="flex items-center md:justify-normal justify-between w-full gap-2 ">
+                    <div className="flex items-center md:justify-end justify-between w-full gap-2 ">
                         {visible === false && (
                             <div className="p-1 bg-lightColor dark:bg-darkColor rounded-full flex items-center justify-center gap-2">
                                 <button

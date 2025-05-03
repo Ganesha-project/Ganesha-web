@@ -131,7 +131,7 @@ export const HeroSection = () => {
             <p className="text-sm text-center z-20">
                 Resmi terdaftar di:
             </p>
-            <div className="relative z-20 flex flex-wrap justify-center gap-6 mt-4 mb-10 md:mb-0">
+            <div className="relative z-20 flex flex-wrap justify-center gap-6 mt-4 mb-10">
                 {governLogo.map((logo, idx) => (
                     <div key={idx} className="md:w-16 md:h-16 w-14 h-14 flex items-center justify-center relative">
                         <Image
