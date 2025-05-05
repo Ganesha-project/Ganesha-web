@@ -10,12 +10,13 @@ import { SearchNavbar } from './SearchNavbar';
 import { MobileDrawer } from './MobileDrawer';
 import { SlSocialInstagram } from 'react-icons/sl';
 import Link from 'next/link';
-import { HiHome, HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi2";
+import { HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi2";
 import { RiSearchFill } from "react-icons/ri";
 import { ServicesMenu } from './ServicesMenu';
 import { AboutMenu } from './AboutMenu';
 import { BgtGradientYellowPurple, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
 import { QuickLinks } from './QuickLinks';
+import { HiHome } from 'react-icons/hi';
 
 export const Navbar = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
