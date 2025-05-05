@@ -905,7 +905,7 @@ export const dataPriceWrapper = {
             tag: "Legalitas",
             label: "Pendirian PT",
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/pt_1_11zon_d883df6829.webp",
-            desc: "Pendirian PT proffesional, cepat dan murah hanya di Ganesha Consulting",
+            desc: "Pendirian PT, PT Perorangan, dan PT PMA.",
             items: [...PTPackages],
             href: "/pendirian-pt"
         },
@@ -913,7 +913,7 @@ export const dataPriceWrapper = {
             tag: "Legalitas",
             label: "Pendirian CV",
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/cv_3_11zon_e520b68e4b.webp",
-            desc: "Pendirian CV proffesional, cepat dan murah hanya di Ganesha Consulting",
+            desc: "Pendirian CV, CV PKP",
             items: [...CVPackages],
             href: "/pendirian-cv"
         },
@@ -921,7 +921,7 @@ export const dataPriceWrapper = {
             tag: "Legalitas",
             label: "Pendirian Badan Usaha",
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/badan_4_11zon_11zon_43b7ee1b61.webp",
-            desc: "Pendirian Firma Hukum, Asosiasi, Yayasan mudah dan cepat di Ganesha Consulting",
+            desc: "Pendirian Firma Hukum, Asosiasi, Yayasan.",
             items: [...BUPackages],
             href: "/pendirian-badan-usaha"
         },
@@ -929,7 +929,7 @@ export const dataPriceWrapper = {
             tag: "Izin",
             label: "Perizinan",
             image: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/izin_2_11zon_885422bfbc.webp",
-            desc: "Izin SKPLA, Izin lalulintas, Amdal dan lain-lain lnegkap hanya di Ganesha Consulting",
+            desc: "Izin SKPLA, Izin lalu lintas, Amdal dan lain-lain.",
             items: [...servicePackages],
             href: "/perizinan"
         }
