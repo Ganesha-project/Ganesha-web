@@ -26,7 +26,7 @@ export default function SearchPage() {
                 onClose?.();
             });
         }
-    };    
+    };
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
@@ -36,9 +36,9 @@ export default function SearchPage() {
     };
 
     return (
-        <div className="md:px-24 px-5 pt-24 sticky -top-10 backdrop-blur-sm bg-white/50 dark:bg-black/50 z-20">
+        <div className="md:px-24 px-5 pt-24 sticky -top-10 backdrop-blur-sm bg-white/50 dark:bg-black/50 z-20 min-h-[50lvh]">
             <div className="w-full h-auto z-50 group">
-                <label className={`${searchTerm !== "" && "!border-b"} z-[60] input input-md md:input-lg rounded-none !px-0 focus-within:!border-b focus-within:border-b-darkColor/40 dark:focus-within:border-b-lightColor/40 bg-opacity-0 focus:border-none focus:bg-none focus-within:outline-none outline-none border-0 focus:outline-transparent focus:outline-offset-0 text-gray-800 dark:text-gray-200 flex items-center gap-[6px]`}>
+                <label className={`${searchTerm !== "" && "!border-b"} z-[60] input w-full input-md md:input-xl rounded-none !px-0 focus-within:!border-b !bg-transparent focus-within:bg-transparent focus-within:border-b-darkColor/40 dark:focus-within:border-b-lightColor/40 bg-opacity-0 focus:border-none focus:bg-none focus-within:outline-none outline-none border-0 focus:outline-transparent focus:outline-offset-0 flex items-center gap-[6px]`}>
                     {isPending && (
                         <div className="text-4xl animate-spin" >
                             <FiLoader />
@@ -48,7 +48,7 @@ export default function SearchPage() {
                     <PiMagnifyingGlassBold className={`${searchTerm !== "" && "hidden"} order-last text-black dark:text-white text-opacity-50 dark:text-opacity-50 text-2xl md:text-3xl`} />
                     <input
                         type="text"
-                        className="grow text-2xl md:text-4xl py-2 font-semibold placeholder:text-black dark:placeholder:text-white dark:placeholder:text-opacity-50 placeholder:text-opacity-50 placeholder:text-2xl md:placeholder:text-4xl placeholder:font-semibold text-darkColor dark:text-lightColor"
+                        className="grow text-2xl md:text-4xl h-12 font-semibold placeholder:text-black dark:placeholder:text-white dark:placeholder:text-opacity-50 placeholder:text-opacity-50 placeholder:text-2xl md:placeholder:text-4xl placeholder:font-semibold text-darkColor dark:text-lightColor"
                         placeholder="Cari di Ganeshaconsulting.co.id"
                         value={searchTerm}
                         onChange={handleSearchChange}

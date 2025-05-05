@@ -115,10 +115,6 @@ export default function SearchPageQuery() {
         handleSearch(searchQuery, 0);
     };
 
-    console.log('====================================');
-    console.log(staticResults);
-    console.log('====================================');
-
     const handleClear = () => {
         setSearchQuery("");
         setStaticResults([]);
@@ -160,7 +156,7 @@ export default function SearchPageQuery() {
     };
 
     return (
-        <div>
+        <div className="min-h-[50lvh]">
             {/* Search Bar */}
             <div className="md:px-24 px-5 pt-24 sticky -top-10 backdrop-blur-sm bg-white/50 dark:bg-black/50 z-20">
                 <form onSubmit={handleSearchSubmit}>
@@ -185,7 +181,7 @@ export default function SearchPageQuery() {
                                 <RxCross2 className="text-xl hover:text-red-600 text-darkColor/50 dark:text-lightColor/50 duration-200 mr-[-3px]" />
                             </button>
                         ) : (
-                            <button type="submit" className={`btn btn-ghost border-none order-last text-black dark:text-white text-opacity-50 dark:text-opacity-50 text-2xl md:text-3xl`}>
+                            <button type="submit" className={`btn btn-ghost border-none order-last text-black !bg-transparent dark:text-white text-opacity-50 dark:text-opacity-50 text-2xl md:text-3xl`}>
                                 <PiMagnifyingGlassBold />
                             </button>
                         )}
@@ -217,45 +213,29 @@ export default function SearchPageQuery() {
                                                 {highlightText(item.type, searchQuery)}
                                             </h2>
                                             <p className="flex flex-wrap gap-1">
-                                                {filtered.length > 0 ? (
-                                                    filtered.map((el, i) => (
-                                                        <span
-                                                            className="text-xs px-2 py-1 bg-white dark:bg-black rounded-full"
-                                                            key={i}
-                                                        >
-                                                            {highlightText(el.feature, searchQuery)}
-                                                        </span>
-                                                    ))
-                                                ) : (
-                                                    <>
-                                                        {item.features?.map((el, i) => (
-                                                            <span
-                                                                className="text-xs px-2 py-1 bg-white dark:bg-black rounded-full"
-                                                                key={i}
-                                                            >
-                                                                {highlightText(el.feature, searchQuery)}
-                                                            </span>
-                                                        ))}
-                                                    </>
-                                                )}
+                                                {filtered.slice(0, 5).map((el, i) => (
+                                                    <span
+                                                        className="text-xs px-2 py-1 bg-white dark:bg-black rounded-full"
+                                                        key={i}
+                                                    >
+                                                        {highlightText(el.feature, searchQuery)}
+                                                    </span>
+                                                ))}
                                             </p>
-                                            {keyoworded.length > 0 && searchQuery !== "" &&
-                                                (
-                                                    <>
-                                                        <p className="flex gap-1 flex-wrap text-xs mt-3 opacity-70 italic">
-                                                            Terkait:
-                                                            {keyoworded.map((key, i) => (
-                                                                <span key={i}>
-                                                                    {highlightText(key, searchQuery)}
-                                                                    {i < keyoworded.length - 1 && ','}
-                                                                </span>
-                                                            ))}
-                                                        </p>
-                                                    </>
-                                                )}
+                                            {keyoworded.length > 0 && searchQuery !== "" && (
+                                                <p className="flex gap-1 flex-wrap text-xs mt-3 opacity-70 italic">
+                                                    Terkait:
+                                                    {keyoworded.slice(0, 5).map((key, i) => (
+                                                        <span key={i}>
+                                                            {highlightText(key, searchQuery)}
+                                                            {i < keyoworded.length - 1 && ','}
+                                                        </span>
+                                                    ))}
+                                                </p>
+                                            )}
                                         </li>
                                     </Link>
-                                )
+                                );
                             })}
                         </ul>
                     )

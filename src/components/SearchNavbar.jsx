@@ -44,7 +44,7 @@ export const SearchNavbar = ({ className, onClose, scroll, variant = 'default' }
                 <div className="w-full h-auto z-50 group">
                     <label className={`${searchTerm !== "" && "!border-b"} z-[60] input input-md md:input-xl w-full input-ghost focus-within:bg-transparent rounded-none !px-0 focus-within:!border-b focus-within:border-b-darkColor/40 dark:focus-within:border-b-lightColor/40 bg-opacity-0 focus:border-none focus:bg-none focus-within:outline-none outline-none border-0 focus:outline-transparent focus:outline-offset-0 text-neutral-800 dark:text-neutral-200 flex items-center gap-[6px]`}>
                         {isPending && (
-                            <div className="text-4xl animate-spin">
+                            <div className="text-4xl animate-spin text-darkColor dark:text-lightColor">
                                 <FiLoader />
                             </div>
                         )}

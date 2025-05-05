@@ -10,6 +10,7 @@ export const BodyContact = () => {
                 <Title text1={'List'} text={'Kontak Kami'} />
                 <div className="flex flex-wrap gap-5">
                     <Image
+                        alt="Contact Illustration"
                         width={500}
                         height={500}
                         src={'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/yglkieiqquwszhg3vedd.svg'}
