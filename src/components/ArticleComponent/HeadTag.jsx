@@ -10,7 +10,7 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
     return (
         <>
             <div className={`${visibility} flex items-center justify-between`}>
-                <h1 className="text-mainColor dark:text-baseColor text-2xl font-semibold">
+                <h1 className="text-mainColor dark:text-baseColor md:text-2xl font-semibold">
                     {label || 'Latest Update'}
                 </h1>
                 {children ? (
@@ -18,19 +18,19 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                 ) : filter === true ? (
                     <>
                         <div className="dropdown dropdown-bottom dropdown-end flex justify-end">
-                            <div tabIndex={0} role="button" className="flex text-sm items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor/20 bg-mainColor/10 truncate font-semibold dark:text-white text-mainColor">
+                            <div tabIndex={0} role="button" className="flex text-xs md:text-sm items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor/20 bg-mainColor/10 truncate font-semibold dark:text-white text-mainColor">
                                 <FaSort />
-                                Sort By
+                                Urutkan Berdasar
                             </div>
                             <ul tabIndex={0} className="dropdown-content menu bg-white dark:bg-black dark:shadow-mainShadow rounded-box z-[1] w-52 p-2 shadow">
                                 {DataSelectFilterArticle.map((el, idx) => (
                                     <li key={idx}>
-                                        <Link
+                                        <button
                                             className="capitalize cursor-pointer"
                                             onClick={() => handleSort(el.value)} // Panggil handleSort
                                         >
                                             {el.label}
-                                        </Link>
+                                        </button>
                                     </li>
                                 ))}
                             </ul>

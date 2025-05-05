@@ -8,6 +8,7 @@ import { SkeletonCard } from "@/components/Skeleton/SkeletonCard";
 import { SkeletonTopCategory } from "@/components/Skeleton/SkeletonTopCategory";
 import { Headtag } from "@/components/ArticleComponent/HeadTag";
 import { slugify } from "@/helper/slugify";
+import { Pagination } from "@/components/ArticleComponent/Pagination";
 
 export default function ArticlesCategoriesPage() {
     const { slug } = useParams()  // Ambil slug dari URL
@@ -70,9 +71,11 @@ export default function ArticlesCategoriesPage() {
                     <ArticleCardCategory
                         category={category}
                         data={newData}
-                        moms={<Headtag label={'Latest Update'} hide={true} />}
                     />
                 )}
+                {/* {itemsToShow < totalItems && !loadNew && (
+                    <Pagination loadMore={loadMore} />
+                )} */}
             </div>
         </>
     );

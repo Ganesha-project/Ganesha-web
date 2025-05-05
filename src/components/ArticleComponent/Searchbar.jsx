@@ -5,8 +5,8 @@ import { TiDelete } from "react-icons/ti";
 export const Searchbar = ({
     onSearch,
     placeholder = "Cari judul artikel...",
-    resetButtonText = "Reset Search",
-    searchButtonText = "Search",
+    resetButtonText = "Reset Pencarian",
+    searchButtonText = "Cari",
     searchIconColor = "text-neutral-800 dark:text-white",
     resetButtonColor = "bg-red-500",
     searchButtonColor = "dark:bg-secondaryColor bg-mainColor",

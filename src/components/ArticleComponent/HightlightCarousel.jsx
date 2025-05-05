@@ -29,7 +29,7 @@ export const HighlightCarousel = ({ data }) => {
 
     return (
         <>
-            <div className="overflow-hidden rounded-3xl md:h-[60lvh] h-[30lvh] shadow-mainShadow">
+            <div className="overflow-hidden rounded-3xl md:h-[98lvh] h-[75lvh] shadow-mainShadow relative flex items-center justify-center">
                 <div
                     className="whitespace-nowrap transition-transform ease-in-out duration-700 w-full h-full"
                     style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
@@ -37,23 +37,33 @@ export const HighlightCarousel = ({ data }) => {
                     {filteredData.map((el, i) => (
                         <Link
                             key={i}
-                            href={'article/'  + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
+                            href={'article/' + slugify(el?.attributes?.category?.data?.attributes?.ArticleCategory) + "/" + el.attributes.Slug}
                             className="inline-block shadow w-full relative overflow-hidden rounded-2xl h-full"
                         >
                             <img
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-3xl hover:scale-125 duration-150 bg-baseColor"
+                                className="w-full h-full object-cover rounded-3xl hover:scale-110 duration-150 bg-baseColor"
                                 src={`${baseURLImg}${el?.attributes?.Thumbnail?.data?.attributes?.url}`}
                                 alt={el.attributes.Title}
                             />
                             <span className="w-full from-[#0000006f] bg-gradient-to-t rounded-2xl to-transparent absolute z-10 h-[50%] bottom-0"></span>
-                            <div className="absolute inset-5 flex flex-col self-end z-20">
-                                <h1 className="text-xl text-white font-semibold text-wrap truncate-last">
+                            <div className="absolute mb-5 md:mb-0 inset-5 flex flex-col self-end z-20">
+                                <h1 className="md:text-2xl text-white font-semibold text-wrap truncate-last max-w-4xl">
                                     {el.attributes.Title}
                                 </h1>
                             </div>
                         </Link>
+                    ))}
+                </div>
+                <div className="absolute bottom-4 flex justify-end md:right-4 mt-4">
+                    {filteredData.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setIndex(i)}
+                            className={`w-2 h-2 mx-1 rounded-full ${i === index ? 'bg-white' : 'bg-gray-300/20'
+                                }`}
+                        />
                     ))}
                 </div>
             </div>

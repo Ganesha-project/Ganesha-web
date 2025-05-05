@@ -880,8 +880,8 @@ export const FaqMainData = {
 };
 
 export const DataSelectFilterArticle = [
-    { label: "Newest", value: "desc" },
-    { label: "Oldest", value: "asc" }
+    { label: "Terbaru", value: "desc" },
+    { label: "Terlama", value: "asc" }
 ];
 
 export const dataAdsBanner = [

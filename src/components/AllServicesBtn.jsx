@@ -120,7 +120,7 @@ export const AllServicesBtn = () => {
             </section>
 
             {/* Services Content */}
-            <section className={`${visible === false ? "-translate-y-16" : "-translate-y-10 md:translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[35lvh] md:max-h-[55lvh]" : "max-h-[50lvh] md:max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
+            <section className={`${visible === false ? "-translate-y-16" : "-translate-y-10 md:translate-y-1"} duration-300 ease-in-out ${viewMode === "carousel" ? "max-h-[35lvh] md:max-h-[55lvh]" : "max-h-[70lvh] md:max-h-[110lvh] 2xl:max-h-[90lvh]"}`}>
                 {filteredMain.length > 0 && (
                     <>
                         {/* Carousel View */}
@@ -201,12 +201,12 @@ export const AllServicesBtn = () => {
                         </div>
 
                         {/* Grid View Mobile */}
-                        <div className={`${viewMode === "grid" ? "-translate-y-[65%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid grid-cols-3 gap-2 md:hidden md:mx-24 2xl:mx-80 mx-5`}>
+                        <div className={`${viewMode === "grid" ? "-translate-y-[55%] opacity-100 scale-100" : "translate-y-full opacity-0 scale-50"} duration-500 ease-in-out grid grid-cols-3 gap-2 md:hidden md:mx-24 2xl:mx-80 mx-5`}>
                             {filteredMain.map((cat, index) => (
                                 <Link
                                     key={index}
                                     href={cat.href}
-                                    className="relative flex flex-col items-center justify-center text-center px-2 py-3 bg-lightColor dark:bg-darkColor rounded-xl  hover:bg-opacity-70 transition-all duration-300"
+                                    className="relative flex aspect-square flex-col items-center justify-center text-center px-2 py-3 bg-lightColor dark:bg-darkColor rounded-xl  hover:bg-opacity-70 transition-all duration-300"
                                 >
                                     <div className="absolute inset-0 opacity-20 rounded-xl"
                                         style={{ backgroundColor: cat.accentDark, }}

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Artboard2 from '../public/IMG/Artboard2.png';
 import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
-import { RiCustomerServiceFill } from 'react-icons/ri';
 import { dataContact } from '@/app/Database';
 import { usePathname } from "next/navigation";
 import { MegaMenuNavbar } from './MegaMenuNavbar';
@@ -11,8 +10,7 @@ import { SearchNavbar } from './SearchNavbar';
 import { MobileDrawer } from './MobileDrawer';
 import { SlSocialInstagram } from 'react-icons/sl';
 import Link from 'next/link';
-import { HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi2";
-import { HiHome } from "react-icons/hi";
+import { HiHome, HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi2";
 import { RiSearchFill } from "react-icons/ri";
 import { ServicesMenu } from './ServicesMenu';
 import { AboutMenu } from './AboutMenu';
@@ -44,7 +42,7 @@ export const Navbar = ({ children }) => {
       <nav className={`${isScrolled ? "" : "mt-2"} navbar fixed 2xl:px-80 md:px-24 w-full z-[100] ease-in-out duration-300 text-[14px] md:flex justify-center gap-2 hidden `}>
         <div className="relative navbar-center hidden lg:flex rounded-3xl px-4">
           {/* Wrapper */}
-          <div className={`absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/50 bg-secondaryLight/50 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
+          <div className={`absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
           <ul className="flex items-center flex-col p-4 md:p-0 mt-4 font-medium md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 text-[14px]">
             <li className='relative flex flex-col items-center group'>
               <Link
@@ -69,8 +67,8 @@ export const Navbar = ({ children }) => {
             </MegaMenuNavbar>
             <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
-                href={'/activity'}
-                className={`${path === '/' && 'bg-darkColor/5 dark:bg-lightColor/5'} font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                href={'/go-space'}
+                className={`z-[555] font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 <span className={TextGradientYellowPurple}>
@@ -82,7 +80,7 @@ export const Navbar = ({ children }) => {
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/activity'}
-                className={`block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                className={`z-[555] block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 Aktifitas
@@ -92,7 +90,7 @@ export const Navbar = ({ children }) => {
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/article'}
-                className={`block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                className={`z-[555] block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
                 Artikel
@@ -136,7 +134,7 @@ export const Navbar = ({ children }) => {
             href='/contact'
             className={`flex items-center `}
           >
-            <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-lightColor/50 dark:bg-darkColor/50 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
+            <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-lightColor/70 dark:bg-darkColor/70 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Contact
             </span>
           </Link>
@@ -168,8 +166,15 @@ export const Navbar = ({ children }) => {
               className={`${isScrolled ? "dark:brightness-125 brightness-90" : "grayscale brightness-[150] contrast-200 invert dark:invert-0"}`}
               alt="Ganesha Logo" />
           </Link>
+          <div className={`${expandedId ? "-translate-y-[0%] scale-100 -translate-x-7" : "-translate-y-[200%] scale-0"} z-[555] duration-200 ease-in-out flex gap-6 px-3 py-2 bg-lightColor/50 dark:bg-darkColor/50 rounded-full backdrop-blur-md`}>
+            <Link onClick={() => setExpandedId(null)} href="/">
+              <HiHome className="text-xl" />
+            </Link>
+            <ThemeSwitch />
+          </div>
         </div>
-        <div className='navbar-end space-x-6 mr-2'>
+        <div className={`navbar-end space-x-6 mr-2 ${expandedId && "!mr-6"} duration-200`}>
+          <div className={`${expandedId && "px-3 py-2 w-[88px] h-9 bg-lightColor/50 dark:bg-darkColor/50 rounded-full backdrop-blur-md z-[444] absolute -right-[5.5px]"} `}></div>
           <MegaMenuNavbar
             id="search"
             icon={<HiMiniMagnifyingGlass className={`text-xl mb-[2px]`} />}
@@ -199,6 +204,7 @@ export const Navbar = ({ children }) => {
               expandedId={expandedId} />}
           >
           </MegaMenuNavbar>
+
         </div>
       </nav >
 

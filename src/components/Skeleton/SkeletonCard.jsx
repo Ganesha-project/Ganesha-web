@@ -1,8 +1,18 @@
-export const SkeletonCard = () => {
+export const SkeletonCard = ({ header, items = 4 }) => {
+    const renderSkeletonItem = () => (
+        <span className="md:h-[55lvh] h-[70lvh] p-0 flex-1 flex md:flex-col flex-row gap-2 justify-between group  rounded-2xl relative">
+            <div className="bg-neutral-400/50 dark:bg-baseColor/50 dark md:flex-1 md:w-auto w-[30lvw] md:h-[30lvh] h-[30lvw] rounded-3xl shimmer-animate"></div>
+            {/* <div className="flex flex-col gap-2 flex-1 md:flex-[0]">
+                <span className="md:mt-3 bg-neutral-400/50 dark:bg-baseColor/50 dark animate-pulse rounded-xl h-[3lvh]"></span>
+                <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-xl animate-pulse h-[3lvh]"></span>
+            </div> */}
+        </span>
+    );
+
     return (
         <>
             <section className="space-y-5">
-                <div className="flex items-center justify-between animate-pulse">
+                <div className={`${header} flex items-center justify-between animate-pulse`}>
                     <span className="bg-neutral-200 text-neutral-200 rounded-full text-2xl dark:text-baseColor dark:bg-baseColor">
                         {'Latest Update'}
                     </span>
@@ -12,33 +22,12 @@ export const SkeletonCard = () => {
                         See More
                     </span>
                 </div>
-                <div className="md:grid md:grid-cols-3 flex flex-col gap-5">
-                    <span className="md:h-[45lvh] h-[70lvh] p-3 flex-1 flex md:flex-col flex-row gap-2 justify-between group bg-neutral-200 dark:bg-baseColor/20 rounded-2xl ">
-                        <div className="bg-neutral-400/50 dark:bg-baseColor/50 dark md:flex-1 md:w-auto w-[30lvw] md:h-[10lvh] h-[30lvw] rounded-xl animate-pulse"></div>
-                        <div className="flex flex-col gap-2 flex-1 md:flex-[0]">
-                            <span className="md:mt-3 bg-neutral-400/50 dark:bg-baseColor/50 dark animate-pulse rounded-lg h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                        </div>
-                    </span>
-                    <span className="md:h-[45lvh] h-[70lvh] p-3 flex-1 flex md:flex-col flex-row gap-2 justify-between group bg-neutral-200 dark:bg-baseColor/20 rounded-2xl ">
-                        <div className="bg-neutral-400/50 dark:bg-baseColor/50 dark md:flex-1 md:w-auto w-[30lvw] md:h-[10lvh] h-[30lvw] rounded-xl animate-pulse"></div>
-                        <div className="flex flex-col gap-2 flex-1 md:flex-[0]">
-                            <span className="md:mt-3 bg-neutral-400/50 dark:bg-baseColor/50 dark animate-pulse rounded-lg h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                        </div>
-                    </span>
-                    <span className="md:h-[45lvh] h-[70lvh] p-3 flex-1 flex md:flex-col flex-row gap-2 justify-between group bg-neutral-200 dark:bg-baseColor/20 rounded-2xl ">
-                        <div className="bg-neutral-400/50 dark:bg-baseColor/50 dark md:flex-1 md:w-auto w-[30lvw] md:h-[10lvh] h-[30lvw] rounded-xl animate-pulse"></div>
-                        <div className="flex flex-col gap-2 flex-1 md:flex-[0]">
-                            <span className="md:mt-3 bg-neutral-400/50 dark:bg-baseColor/50 dark animate-pulse rounded-lg h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                            <span className="bg-neutral-400/50 dark:bg-baseColor/50 dark rounded-lg animate-pulse h-[3lvh]"></span>
-                        </div>
-                    </span>
+                <div className="md:grid md:grid-cols-4 flex flex-col gap-5">
+                    {Array.from({ length: items }).map((_, index) => (
+                        <div key={index}>{renderSkeletonItem()}</div>
+                    ))}
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
