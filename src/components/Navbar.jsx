@@ -135,7 +135,7 @@ export const Navbar = ({ children }) => {
             href='/contact'
             className={`flex items-center `}
           >
-            <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-lightColor/75 dark:bg-darkColor/75 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
+            <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-secondaryLight/80 dark:bg-secondaryDark/80 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Kontak
             </span>
           </Link>
