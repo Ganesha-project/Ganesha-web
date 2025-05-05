@@ -44,7 +44,7 @@ export const PriceWrapper = ({ data, text1, text }) => {
                                     </button>
                                 </div>
                             </div>
-                            <dialog id={`modal-${idx}`} className="modal modal-bottom !p-[-1.5rem] backdrop-blur-md ">
+                            <dialog id={`modal-${idx}`} className="modal modal-bottom !p-[-1.5rem] backdrop-blur-xl">
                                 <div className="modal-box shadow-none bg-transparent md:w-[100%] md:h-full h-fit max-h-full max-w-full noBar">
                                     <form method="dialog" className="flex justify-end self-end w-full">
                                         <button className="m-2 btn btn-circle btn-sm  shadow-none border-none bg-neutral-200 focus:ring-0 dark:bg-darkColor hover:bg-neutral-300 dark:hover:bg-neutral-900 absolute right-0 top-0 rotate-45">
