@@ -48,7 +48,7 @@ export const HighlightCarousel = ({ data }) => {
                                 alt={el.attributes.Title}
                             />
                             <span className="w-full from-[#0000006f] bg-gradient-to-t rounded-2xl to-transparent absolute z-10 h-[50%] bottom-0"></span>
-                            <span className="w-full from-[#ffffff6f] dark:from-[#0000006f] bg-gradient-to-b to-transparent absolute z-10 h-[20%] top-0"></span>
+                            <span className="md:hidden w-full from-[#ffffff6f] dark:from-[#0000006f] bg-gradient-to-b to-transparent absolute z-10 h-[20%] top-0"></span>
                             <div className="absolute mb-5 md:mb-0 inset-5 flex flex-col self-end z-20">
                                 <h1 className="md:text-2xl text-white font-semibold text-wrap truncate-last max-w-4xl">
                                     {el.attributes.Title}
