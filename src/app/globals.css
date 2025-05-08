@@ -24,10 +24,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@safelist{
-
-}
-
 :root {
   background: #00000000;
 }

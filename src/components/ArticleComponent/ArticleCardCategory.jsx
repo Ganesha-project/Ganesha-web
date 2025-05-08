@@ -20,7 +20,7 @@ export const ArticleCardCategory = ({ data, moms, category }) => {
                             className="md:min-h-[60lvh] group rounded-3xl space-y-2 p-0 flex flex-col justify-between duration-300"
                         >
                             <div className="space-y-1 flex flex-col gap-2 w-full h-[50lvh] md:h-full relative">
-                                <div className="relative overflow-hidden rounded-3xl md:w-full w-[50%]">
+                                <div className="relative overflow-hidden rounded-3xl w-full">
                                 <img
                                         className="w-full h-[50lvh] md:h-[60lvh] object-cover rounded-3xl group-hover:scale-125 duration-150"
                                         width={500}

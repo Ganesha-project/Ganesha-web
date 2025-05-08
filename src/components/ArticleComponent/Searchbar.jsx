@@ -53,7 +53,7 @@ export const Searchbar = ({
                     </button>
                 )}
                 <button type="submit" className="">
-                    <span className={` md:block md:px-3 py-1 px-2 md:py-1 btnbtncir ${searchButtonColor} rounded-full text-white font-semibold -mr-2 ${searchButtonHoverColor} duration-300 ease-in-out`}>
+                    <span className={` md:block md:px-3 py-1 px-2 md:py-1 ${searchButtonColor} rounded-full text-white font-semibold md:-mr-2 -mr-1 ${searchButtonHoverColor} duration-300 ease-in-out`}>
                         {searchButtonText}
                     </span>
                 </button>

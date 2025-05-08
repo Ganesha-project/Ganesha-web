@@ -22,7 +22,7 @@ export default function ArticlePage() {
     const [sort, setSort] = useState('DESC');
     const [itemsToShow, setItemsToShow] = useState(8);
     const [loadNew, setloadNew] = useState(false);
-    const [totalItems, setTotalItems] = useState(0); 
+    const [totalItems, setTotalItems] = useState(0);
 
     useEffect(() => {
         async function fetchData() {
@@ -113,7 +113,7 @@ export default function ArticlePage() {
                 )}
             </BannerArticle>
 
-            <section className="md:px-24 2xl:px-80 px-5 space-y-5 pt-24 mb-10">
+            <section className="md:px-24 2xl:px-80 px-5 space-y-5 pt-10 mb-10">
                 <Searchbar onSearch={handleSearch} />
                 {error ? (
                     <div>Error: {error}</div>

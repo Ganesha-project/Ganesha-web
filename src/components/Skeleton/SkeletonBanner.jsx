@@ -1,13 +1,8 @@
-import { TextMainGradient } from "@/utils/ReueseClass";
-
 export const SkeletonBanner = () => {
     return (
         <>
-            <div className="mx-5 md:mx-0 min-w-[91rem] overflow-hidden">
-                <section className=" h-[80lvh] md:h-[98vh] shimmer-animate backdrop-blur-xl p-0 rounded-3xl">
-                    <div className="flex-1 h-full rounded-3xl bg-mainColor/25 dark:bg-baseColor/50"></div>
-                </section>
-            </div>
+            <div className="md:hidden w-full h-[50lvh] bg-mainColor/15 dark:bg-baseColor/25 rounded-b-3xl shimmer-animate"></div>
+            <div className="md:block w-full h-[50lvh] mx-24 mt-20 my-2 bg-mainColor/15 dark:bg-baseColor/25 rounded-3xl shimmer-animate"></div>
         </>
     );
 };

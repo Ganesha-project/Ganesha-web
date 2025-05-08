@@ -20,13 +20,13 @@ export const Headtag = ({ label, visibility, children, filter, hide, setSortOrde
                         <div className="dropdown dropdown-bottom dropdown-end flex justify-end">
                             <div tabIndex={0} role="button" className="flex text-xs md:text-sm items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor/20 bg-mainColor/10 truncate font-semibold dark:text-white text-mainColor">
                                 <FaSort />
-                                Urutkan Berdasar
+                                Urutkan
                             </div>
-                            <ul tabIndex={0} className="dropdown-content menu bg-white dark:bg-black dark:shadow-mainShadow rounded-box z-[1] w-52 p-2 shadow">
+                            <ul tabIndex={0} className="dropdown-content menu bg-lightColor dark:bg-darkColor dark:shadow-mainShadow rounded-3xl z-[1] w-45 p-2 mt-1 shadow">
                                 {DataSelectFilterArticle.map((el, idx) => (
                                     <li key={idx}>
                                         <button
-                                            className="capitalize cursor-pointer"
+                                            className="capitalize cursor-pointer rounded-3xl"
                                             onClick={() => handleSort(el.value)} // Panggil handleSort
                                         >
                                             {el.label}
