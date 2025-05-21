@@ -55,10 +55,10 @@ export default async function WebPage() {
     return (
         <>
             <BannerService />
-            <ReusableCards
+            {/* <ReusableCards
                 data={WebPackages}
                 label={'Paket Pembuatan Website'}
-            />
+            /> */}
             <WebWork />
             <Header
                 data={dataHeader.contentData}
