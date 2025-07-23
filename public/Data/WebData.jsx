@@ -31,10 +31,31 @@ export const dataHeader = {
 
 export const dataClientWeb = [
     {
+        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Bharata_Alam_Sentosa_By_Ganesha_Consulting_adeb8a03f5.webp",
+        brandName: "",
+        name: "PT Bharata Alam Sentosa ",
+        link: "https://www.bharatafreshbali.com/",
+        package: "Landing Page Company Profile"
+    },
+    {
+        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Elka_Mitra_Sejahtera_By_Ganesha_Consulting_0f1c8ac24b.webp",
+        brandName: "",
+        name: "PT Elka Mitra Sejahtera",
+        link: "https://pt-ems.vercel.app/",
+        package: "Landing Page Company Profile"
+    },
+    {
+        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_SGW_Indo_Logistik_By_Ganesha_Consulting_7aa61d87f5.webp",
+        brandName: "",
+        name: "PT SGW Indo Logistik",
+        link: "https://sgwindologistik.com/",
+        package: "Landing Page Company Profile"
+    },
+    {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300577/GaneshaAssets/WebSS/clti96ddpgr0jt9mhv1b.webp",
         brandName: "JMA Indonesia",
         name: "CV Jelita Makmur Abadi",
-        link: "https://www.jmaindonesia.com/",
+        link: "https://jma-web.vercel.app/",
         package: "Landing Page Company Profile"
     },
     {
@@ -48,28 +69,28 @@ export const dataClientWeb = [
         preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Web_PT_Wahyutatawasana_By_Ganeshaconsulting_51f64a2156.webp",
         brandName: "Wahyutatawasana",
         name: "PT Wahyutatawasana",
-        link: "https://www.wahyutatawasana.com/",
+        link: "https://pt-wahyu-web.vercel.app/",
         package: "Static Blog Company Profile"
     },
     {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300576/GaneshaAssets/WebSS/yksgoigvvphq5ufuj1zf.webp",
         brandName: "LPK Hidamari Kenshu Senta",
         name: "PT LPK Hidamari Kenshu Senta",
-        link: "https://www.hidamarikenshusenta.com/",
+        link: "https://lpk-web-git-main-raflyyys-projects.vercel.app/",
         package: "Company Profile Basic"
     },
     {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300575/GaneshaAssets/WebSS/pukqko2bl6jnxbilc19m.webp",
         brandName: "Savier Jasmine",
         name: "PT Sakti Viekontama Perkasa",
-        link: "https://www.savierjasmine88.com/",
+        link: "https://savier-jasmine-git-main-raflyyys-projects.vercel.app/",
         package: "Landing Page Company Profile"
     },
     {
         preview: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724300575/GaneshaAssets/WebSS/ynlykq8af5bmtfnaxpnn.webp",
         brandName: "TBN",
         name: "PT Teman Bumi Niaga",
-        link: "https://www.temanbuminiaga.co.id/",
+        link: "https://tbn-web.vercel.app/",
         package: "Static Blog Company Profile"
     },
     {
