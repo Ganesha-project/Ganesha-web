@@ -123,7 +123,7 @@ export const NavigationMobile = () => {
                                         <Link href={el.link} key={idx}>
                                             <button
                                                 className={`${(el.link === "/" && path === "/") || (el.link !== "/" && path.startsWith(el.link))
-                                                    ? "bg-white dark:bg-black px-3 py-[6px] rounded-full opacity-100"
+                                                    ? "bg-white dark:bg-black px-3 py-[6px] rounded-full opacity-100" 
                                                     : "bg-opacity-0 opacity-60"
                                                     } 
                                             ${(el.link === "/" && path === "/") ? "!-ml-7" : "!-ml-4"} text-xl flex flex-row items-center gap-2`}

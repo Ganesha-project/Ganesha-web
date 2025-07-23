@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { IoIosClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowDown } from "react-icons/fa6";
 import { formatDate } from "@/helper/formatDateTime";
@@ -10,15 +11,24 @@ export const CardActivity = ({ activities, loadMore, items }) => {
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [imageIndex, setImageIndex] = useState(0);
     const [cardImageIndex, setCardImageIndex] = useState({});
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const handleOpenModal = (index) => {
         setSelectedIndex(index);
         setImageIndex(0);
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
     };
 
     const handleCloseModal = () => {
         setSelectedIndex(null);
         setImageIndex(0);
+        // Restore body scroll when modal is closed
+        document.body.style.overflow = 'unset';
     };
 
     const handlePrevImage = () => {
@@ -53,6 +63,126 @@ export const CardActivity = ({ activities, loadMore, items }) => {
         }));
     };
 
+    // Modal component that will be rendered outside the transformed container
+    const Modal = () => (
+        <div 
+            className="fixed inset-0 flex items-center justify-center bg-black/30 z-[99999] backdrop-blur-md px-3 md:px-0"
+            style={{ 
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                transform: 'none', // Override any parent transforms
+                zIndex: 99999
+            }}
+        >
+            <button
+                className="absolute top-2 right-2 text-[39px] hover:bg-black rounded-full text-white z-50"
+                onClick={handleCloseModal}
+            >
+                <IoIosClose />
+            </button>
+            <div className="relative flex flex-col md:flex-row w-full md:min-h-[87.5lvh] md:max-h-[87.5lvh] max-w-5xl bg-lightColor dark:bg-darkColor rounded-3xl overflow-hidden">
+                <div className="md:w-2/3 bg-black/90 dark:bg-black/40 flex items-center justify-center relative overflow-hidden">
+                    <Image
+                        width={500}
+                        height={500}
+                        src={activities[selectedIndex].imageUrl[imageIndex]}
+                        alt={activities[selectedIndex].title}
+                        className="w-full h-full rounded-3xl max-h-[55lvh] md:max-h-full object-contain z-20"
+                    />
+                    <Image
+                        width={1}
+                        height={1}
+                        src={activities[selectedIndex].imageUrl[imageIndex]}
+                        alt={activities[selectedIndex].title}
+                        className="w-full h-full rounded-3xl object-cover absolute inset-0 z-10 blur-xl scale-125"
+                    />
+                    {activities[selectedIndex].imageUrl.length > 1 && (
+                        <>
+                            <button onClick={handlePrevImage} className="absolute z-20 left-4 p-2 bg-black/50 text-white rounded-full">
+                                <IoIosArrowBack />
+                            </button>
+                            <button onClick={handleNextImage} className="absolute z-20 right-4 p-2 bg-black/50 text-white rounded-full">
+                                <IoIosArrowForward />
+                            </button>
+                        </>
+                    )}
+                </div>
+
+                <div className="md:w-1/3 flex flex-col relative">
+                    <div className="absolute w-full backdrop-blur-md flex p-4 items-center gap-2 border-b pb-3 border-neutral-500/50">
+                        <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
+                        <a
+                            href=""
+                            className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
+                        >
+                            Ganesha Consulting
+                        </a>
+                    </div>
+                    <div className="flex flex-col justify-between h-full p-4 py-14 md:py-16 md:max-h-full max-h-[30lvh] overflow-x-scroll noBar">
+                        <div>
+                            <h3 className="md:text-lg font-bold">{activities[selectedIndex].title}</h3>
+                            {activities[selectedIndex].longDesc === null ?
+                                (
+                                    <p className="text-sm mt-2">{activities[selectedIndex].description}</p>
+                                )
+                                :
+                                (
+                                    <>
+                                        <ActivityLongDesc content={activities[selectedIndex].longDesc} />
+                                    </>
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div className="absolute bottom-0 flex items-center gap-2 w-full">
+                        <div className="px-5 py-2 md:py-3 w-full flex items-center gap-2 border-t border-neutral-500/50 backdrop-blur-md">
+                            <p className="text-xs md:text-sm text-neutral-500">
+                                {formatDate(activities[selectedIndex].date)}
+                            </p>
+                            {activities[selectedIndex].location !== null && (
+                                <p className="text-xs md:text-sm text-neutral-500">
+                                    - {activities[selectedIndex].location}
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="hidden md:block">
+                <button
+                    onClick={handlePrevActivity}
+                    className="absolute left-4 top-1/2 transform invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
+                >
+                    <IoIosArrowBack />
+                </button>
+                <button
+                    onClick={handleNextActivity}
+                    className="absolute right-4 top-1/2 transform invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
+                >
+                    <IoIosArrowForward />
+                </button>
+            </div>
+
+            <div className="absolute bottom-[-3px] space-x-5 md:hidden">
+                <button
+                    onClick={handlePrevActivity}
+                    className="invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
+                >
+                    <IoIosArrowBack />
+                </button>
+                <button
+                    onClick={handleNextActivity}
+                    className="invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
+                >
+                    <IoIosArrowForward />
+                </button>
+            </div>
+        </div>
+    );
 
     return (
         <>
@@ -65,7 +195,6 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                             className={`relative group cursor-pointer rounded-xl md:rounded-2xl overflow-hidden
                                      ${idx % 3 === 0 ? "md:col-span-2  md:row-span-2 " : "col-span-1 row-span-1"}
                                      ${idx % 5 === 0 ? "md:col-span-1 col-span-2 row-span-1" : "col-span-1 row-span-1"}
-
                                      `}
                         >
                             <Image
@@ -107,113 +236,10 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                 )}
             </section>
 
-            {selectedIndex !== null && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-[99999] backdrop-blur-md px-3 md:px-0">
-                    <button
-                        className="absolute top-2 right-2 text-[39px] hover:bg-black rounded-full text-white z-50"
-                        onClick={handleCloseModal}
-                    >
-                        <IoIosClose />
-                    </button>
-                    <div className="relative flex flex-col md:flex-row w-full md:min-h-[87.5lvh] md:max-h-[87.5lvh] max-w-5xl bg-lightColor dark:bg-darkColor rounded-3xl overflow-hidden">
-                        <div className="md:w-2/3 bg-black/90 dark:bg-black/40 flex items-center justify-center relative overflow-hidden">
-                            <Image
-                                width={500}
-                                height={500}
-                                src={activities[selectedIndex].imageUrl[imageIndex]}
-                                alt={activities[selectedIndex].title}
-                                className="w-full h-full rounded-3xl max-h-[55lvh] md:max-h-full object-contain z-20"
-                            />
-                            <Image
-                                width={1}
-                                height={1}
-                                src={activities[selectedIndex].imageUrl[imageIndex]}
-                                alt={activities[selectedIndex].title}
-                                className="w-full h-full rounded-3xl object-cover absolute inset-0 z-10 blur-xl scale-125"
-                            />
-                            {activities[selectedIndex].imageUrl.length > 1 && (
-                                <>
-                                    <button onClick={handlePrevImage} className="absolute z-20 left-4 p-2 bg-black/50 text-white rounded-full">
-                                        <IoIosArrowBack />
-                                    </button>
-                                    <button onClick={handleNextImage} className="absolute z-20 right-4 p-2 bg-black/50 text-white rounded-full">
-                                        <IoIosArrowForward />
-                                    </button>
-                                </>
-                            )}
-                        </div>
-
-                        <div className="md:w-1/3 flex flex-col relative">
-                            <div className="absolute w-full backdrop-blur-md flex p-4 items-center gap-2 border-b pb-3 border-neutral-500/50">
-                                <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
-                                <a
-                                    href=""
-                                    className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
-                                >
-                                    Ganesha Consulting
-                                </a>
-                            </div>
-                            <div className="flex flex-col justify-between h-full p-4 py-14 md:py-16 md:max-h-full max-h-[30lvh] overflow-x-scroll noBar">
-                                <div>
-                                    <h3 className="md:text-lg font-bold">{activities[selectedIndex].title}</h3>
-                                    {activities[selectedIndex].longDesc === null ?
-                                        (
-                                            <p className="text-sm mt-2">{activities[selectedIndex].description}</p>
-                                        )
-                                        :
-                                        (
-                                            <>
-                                                <ActivityLongDesc content={activities[selectedIndex].longDesc} />
-                                            </>
-                                        )
-                                    }
-                                </div>
-                            </div>
-                            <div className="absolute bottom-0 flex items-center gap-2 w-full">
-                                <div className="px-5 py-2 md:py-3 w-full flex items-center gap-2 border-t border-neutral-500/50 backdrop-blur-md">
-                                    <p className="text-xs md:text-sm text-neutral-500">
-                                        {formatDate(activities[selectedIndex].date)}
-                                    </p>
-                                    {activities[selectedIndex].location !== null && (
-                                        <p className="text-xs md:text-sm text-neutral-500">
-                                            - {activities[selectedIndex].location}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className="hidden md:block">
-                        <button
-                            onClick={handlePrevActivity}
-                            className="absolute left-4 top-1/2 transform invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
-                        >
-                            <IoIosArrowBack />
-                        </button>
-                        <button
-                            onClick={handleNextActivity}
-                            className="absolute right-4 top-1/2 transform invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
-                        >
-                            <IoIosArrowForward />
-                        </button>
-                    </div>
-
-                    <div className="absolute bottom-[-3px] space-x-5 md:hidden">
-                        <button
-                            onClick={handlePrevActivity}
-                            className="invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
-                        >
-                            <IoIosArrowBack />
-                        </button>
-                        <button
-                            onClick={handleNextActivity}
-                            className="invert -translate-y-1/2 p-2 text-xl bg-black/80 text-white hover:bg-black rounded-full"
-                        >
-                            <IoIosArrowForward />
-                        </button>
-                    </div>
-                </div>
+            {/* Render modal using createPortal to escape the transformed container */}
+            {selectedIndex !== null && mounted && createPortal(
+                <Modal />,
+                document.body
             )}
         </>
     );

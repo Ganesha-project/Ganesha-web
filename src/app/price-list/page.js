@@ -72,7 +72,7 @@ export default async function AllProductsPage() {
                 label={'Paket Pembuatan Website'}
             /> */}
             <ReusableCards
-                data={SMPackages}
+                data={SMPackages}WEB
                 label={'Paket Social Media Management'}
             />
             <ReusableCards
