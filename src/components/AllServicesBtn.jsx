@@ -122,13 +122,13 @@ export const AllServicesBtn = () => {
                             <div className="flex items-center gap-2">
                                 <button
                                     onClick={() => carouselRef?.scrollBy({ left: -1000, behavior: "smooth" })}
-                                    className={`hidden md:block z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                    className={`hidden md:block z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor backdrop-blur-md dark:bg-darkColor hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtStart ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                 >
                                     <HiChevronLeft />
                                 </button>
                                 <button
                                     onClick={() => carouselRef?.scrollBy({ left: 1000, behavior: "smooth" })}
-                                    className={`hidden md:block z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor/50 backdrop-blur-md dark:bg-darkColor/50 hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
+                                    className={`hidden md:block z-10 text-xl p-2 rounded-full shadow-lg bg-lightColor backdrop-blur-md dark:bg-darkColor hover:text-white hover:bg-mainColor/70 active:scale-95 transition-opacity duration-300 ${isAtEnd ? 'opacity-10 cursor-not-allowed' : 'opacity-100 cursor-pointer'}`}
                                 >
                                     <HiChevronRight />
                                 </button>
