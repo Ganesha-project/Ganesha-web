@@ -88,7 +88,7 @@ export const CVPackages = [
     },
     {
         type: "CV Lengkap + Website Company",
-        price: 5000000,
+        price: 6800000,
         priceOriginal: 7800000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
         discount: 36,
@@ -117,7 +117,7 @@ export const CVPackages = [
     },
     {
         type: "CV Lengkap + PKP + Website",
-        price: 6000000,
+        price: 7800000,
         priceOriginal: 9420000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
         discount: 36,

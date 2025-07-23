@@ -6,14 +6,36 @@ import { useEffect, useState, useRef } from "react";
 import { BsFillCheckCircleFill, BsFillXCircleFill, BsInfoCircleFill } from "react-icons/bs";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
+// Helper function to calculate original price from discounted price
+const calculateOriginalPrice = (discountedPrice, discountPercentage) => {
+    if (discountPercentage === 0 || discountedPrice === 0) return 0;
+    
+    // Formula: originalPrice = discountedPrice / (1 - discount/100)
+    const originalPrice = discountedPrice / (1 - discountPercentage / 100);
+    
+    // Round to nearest thousand for cleaner look
+    return Math.round(originalPrice / 1000) * 1000;
+};
+
+// Helper function to process data and calculate original prices
+const processCardData = (data) => {
+    return data.map(item => ({
+        ...item,
+        priceOriginal: item.discount > 0 ? calculateOriginalPrice(item.price, item.discount) : 0
+    }));
+};
+
 export const ReusableCards = ({ data, label, visibility }) => {
     const [scrollTo, setScrollTo] = useState(10);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalItems = data.length;
+    
+    // Process data to calculate original prices automatically
+    const processedData = processCardData(data);
+    const totalItems = processedData.length;
 
     const [activeDot, setActiveDot] = useState(0);
     const carouselRef = useRef(null);
-    const totalDots = data.length;
+    const totalDots = processedData.length;
 
     const path = usePathname();
 
@@ -47,7 +69,6 @@ export const ReusableCards = ({ data, label, visibility }) => {
             setActiveDot(index);
         }
     };
-
 
     return (
         <>
@@ -99,12 +120,12 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     )}
                 </div>
 
-                <div ref={carouselRef} className={`${data.length <= 3 ? "flex justify-center items-center flex-wrap 2xl:px-80 md:px-24" : "carousel"} relative w-[100%]`}>
+                <div ref={carouselRef} className={`${processedData.length <= 3 ? "flex justify-center items-center flex-wrap 2xl:px-80 md:px-24" : "carousel"} relative w-[100%]`}>
                     <div ref={carouselRef}
-                        className={`${data.length <= 3 ? "flex-col md:flex-row flex-wrap justify-center" : ""} flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
-                        style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }} // Removed itemsToShow from calculation
+                        className={`${processedData.length <= 3 ? "flex-col md:flex-row flex-wrap justify-center" : ""} flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
+                        style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }}
                     >
-                        {data.map((el, idx) => (
+                        {processedData.map((el, idx) => (
                             <div
                                 key={idx}
                                 className={`bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black ${idx === 0 && totalItems > 4 ? 'ml-5 md:ml-24 2xl:ml-80' : ''} ${idx === totalItems - 1 && totalItems > 4 ? 'mr-5 md:mr-24 2xl:mr-80' : ''} ${totalItems < 4 && "2xl:w-[32%]"} md:w-[30lvw] w-[90lvw] p-5 rounded-3xl space-y-5 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90`}
@@ -149,9 +170,12 @@ export const ReusableCards = ({ data, label, visibility }) => {
                                             <p className="mt-5 mb-2 font-semibold px-2 bg-yellow-400 dark:bg-amber-500 rounded-full w-fit">
                                                 Persyaratan
                                             </p>
-                                            {el.requirements?.map(el => (
-                                                <div className="flex items-center gap-3" >
-                                                    <BsInfoCircleFill className="dark:text-amber-500 text-yellow-400" />  {el}
+                                            {el.requirements?.map((requirement, reqIdx) => (
+                                                <div key={reqIdx} className="flex items-center gap-3">
+                                                    <BsInfoCircleFill className="dark:text-amber-500 text-yellow-400" />
+                                                    <span className="font-medium dark:text-neutral-100 text-neutral-900">
+                                                        {requirement}
+                                                    </span>
                                                 </div>
                                             ))}
                                         </>

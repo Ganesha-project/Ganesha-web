@@ -67,12 +67,12 @@ export default async function AllProductsPage() {
                 data={BadanUsahaPackages}
                 label={'Paket Pendirian Badan Usaha'}
             />
-            {/* <ReusableCards
+            <ReusableCards
                 data={WebPackages}
                 label={'Paket Pembuatan Website'}
-            /> */}
+            />
             <ReusableCards
-                data={SMPackages}WEB
+                data={SMPackages}
                 label={'Paket Social Media Management'}
             />
             <ReusableCards

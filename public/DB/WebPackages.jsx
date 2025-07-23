@@ -1,7 +1,7 @@
 export const WebPackages = [
     {
         type: "Mini Web Company Profile",
-        price: 1200000,
+        price: 2000000,
         priceOriginal: 1716000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -28,7 +28,7 @@ export const WebPackages = [
     },
     {
         type: "Company Profile Basic",
-        price: 2500000,
+        price: 7000000,
         priceOriginal: 3575000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -55,7 +55,7 @@ export const WebPackages = [
     },
     {
         type: "Blog Static / Product Catalog",
-        price: 4500000,
+        price: 9000000,
         priceOriginal: 6435000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -83,7 +83,7 @@ export const WebPackages = [
     },
     {
         type: "Dynamic Data Company Profile",
-        price: 6900000,
+        price: 14000000,
         priceOriginal: 9867000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -110,7 +110,7 @@ export const WebPackages = [
     },
     {
         type: "Company Blog Website",
-        price: 8950000,
+        price: 18000000,
         priceOriginal: 12798500,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -136,7 +136,7 @@ export const WebPackages = [
     },
     {
         type: "Company Business E-Commerce",
-        price: 24950000,
+        price: 0,
         priceOriginal: 47405000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",

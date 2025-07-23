@@ -94,7 +94,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + WEBSITE COMPANY",
-        price: 6500000,
+        price: 8300000,
         priceOriginal: 10205000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
         discount: 36,
@@ -124,7 +124,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + PKP + WEBSITE COMPANY",
-        price: 7000000,
+        price: 8800000,
         priceOriginal: 10990000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
         discount: 36,
