@@ -1,7 +1,7 @@
 export const WebPackages = [
     {
         type: "Mini Web Company Profile",
-        price: 2000000,
+        price: 1900000,
         priceOriginal: 1716000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
