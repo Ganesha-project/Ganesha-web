@@ -68,7 +68,7 @@ export const MegaMenuNavbar = ({
             {mobile && (
                 <div
                     onMouseEnter={() => setExpandedId(id)}
-                    className={`fixed inset-0 w-fullbg-secondaryDark/20 dark:bg-secondaryLight/10 backdrop-blur-2xltransition-all duration-700 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)]${isExpanded ? 'pointer-events-auto max-h-[100vh] opacity-100 translate-y-0 overflow-y-scroll noBar' : 'pointer-events-none max-h-0 opacity-0 -translate-y-5'}overflow-hidden  `}
+                    className={`fixed inset-0 w-fullbg-secondaryDark/20 dark:bg-secondaryLight/10 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)]${isExpanded ? 'pointer-events-auto max-h-[100vh] opacity-100 translate-y-0 overflow-y-scroll noBar' : 'pointer-events-none max-h-0 opacity-0 -translate-y-5'}overflow-hidden  `}
                 >
                     <div
                         className={`transition-transform duration-700 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}   `}
