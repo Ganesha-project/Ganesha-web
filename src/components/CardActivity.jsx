@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { IoIosClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { FaArrowDown } from "react-icons/fa6";
+import { FaArrowDown, FaInstagram } from "react-icons/fa6";
 import { formatDate } from "@/helper/formatDateTime";
 import { ActivityLongDesc } from "./ActivityLongDesc";
 
@@ -63,11 +63,16 @@ export const CardActivity = ({ activities, loadMore, items }) => {
         }));
     };
 
+    const handleInstagramClick = (e, url) => {
+        e.stopPropagation();
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     // Modal component that will be rendered outside the transformed container
     const Modal = () => (
-        <div 
+        <div
             className="fixed inset-0 flex items-center justify-center bg-black/30 z-[99999] backdrop-blur-md px-3 md:px-0"
-            style={{ 
+            style={{
                 position: 'fixed',
                 top: 0,
                 left: 0,
@@ -113,17 +118,32 @@ export const CardActivity = ({ activities, loadMore, items }) => {
 
                 <div className="md:w-1/3 flex flex-col relative">
                     <div className="absolute w-full backdrop-blur-md flex p-4 items-center gap-2 border-b pb-3 border-neutral-500/50">
-                        <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
-                        <a
-                            href=""
-                            className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
-                        >
-                            Ganesha Consulting
-                        </a>
+                        <div className="flex items-center justify-between w-full">
+                            <div className="flex items-center gap-2">
+                                <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
+                                <a
+                                    href=""
+                                    className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"
+                                >
+                                    Ganesha Consulting
+                                </a>
+                            </div>
+                            {activities[selectedIndex].ig === true && activities[selectedIndex].instagramUrl && (
+                                <button
+                                    onClick={(e) => handleInstagramClick(e, activities[selectedIndex].instagramUrl)}
+                                    className="cursor-pointer p-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full hover:scale-110 transition-transform duration-300 shadow-md"
+                                    title="View on Instagram"
+                                >
+                                    <FaInstagram className="text-sm" />
+                                </button>
+                            )}
+                        </div>
                     </div>
                     <div className="flex flex-col justify-between h-full p-4 py-14 md:py-16 md:max-h-full max-h-[30lvh] overflow-x-scroll noBar">
                         <div>
-                            <h3 className="md:text-lg font-bold">{activities[selectedIndex].title}</h3>
+                            <div className="flex items-center gap-3 mb-2">
+                                <h3 className="md:text-lg font-bold">{activities[selectedIndex].title}</h3>
+                            </div>
                             {activities[selectedIndex].longDesc === null ?
                                 (
                                     <p className="text-sm mt-2">{activities[selectedIndex].description}</p>
@@ -151,7 +171,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="hidden md:block">
                 <button
                     onClick={handlePrevActivity}
@@ -214,6 +234,19 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                                     </button>
                                 </>
                             )}
+
+                            {/* Instagram button on card hover */}
+                            {el.ig === true && (
+                                <button
+                                    onClick={(e) => handleInstagramClick(e, el.instagramUrl)}
+                                    className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-300 p-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full shadow-lg z-50 hover:scale-110"
+                                    title="View on Instagram"
+                                >
+                                    <FaInstagram className="text-sm" />
+                                </button>
+                            )}
+
+
                             <div className="absolute inset-0 flex items-end p-1 md:p-3">
                                 <h1 className={`${el.ig === true && "scale-0 group-hover:scale-100 translate-y-full group-hover:translate-y-0"} duration-300 text-white md:text-sm bg-black/25 px-2 py-1 rounded-lg backdrop-blur-lg truncate text-[10px]`}>
                                     {el.title}

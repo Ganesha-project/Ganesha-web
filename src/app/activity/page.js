@@ -34,6 +34,7 @@ export default function Activity() {
                     description: item.attributes.descriptions,
                     longDesc: item.attributes.longDesc,
                     ig: item.attributes.ig,
+                    instagramUrl: item.attributes.instagramUrl, 
                     imageUrl: item.attributes.mediaUrl?.data?.length
                         ? item.attributes.mediaUrl.data.map(img => `https://cms-ganesha.ganeshaconsulting.co.id${img.attributes.url}`)
                         : ["https://via.placeholder.com/750"],
