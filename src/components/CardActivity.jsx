@@ -64,8 +64,8 @@ export const CardActivity = ({ activities, loadMore, items }) => {
     };
 
     const handleInstagramClick = (e, url) => {
-        e.stopPropagation();
-        window.open(url, '_blank', 'noopener,noreferrer');
+        // e.stopPropagation();
+        window.open(url);
     };
 
     // Modal component that will be rendered outside the transformed container
@@ -239,7 +239,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                             {el.ig === true && (
                                 <button
                                     onClick={(e) => handleInstagramClick(e, el.instagramUrl)}
-                                    className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-300 p-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full shadow-lg z-50 hover:scale-110"
+                                    className="md:flex hidden absolute top-3 right-3 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-300 p-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-full shadow-lg z-50 hover:scale-110"
                                     title="View on Instagram"
                                 >
                                     <FaInstagram className="text-sm" />
