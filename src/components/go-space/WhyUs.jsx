@@ -1,29 +1,47 @@
 import React from "react";
-import { TextGradientYellowPurple } from "@/utils/ReueseClass"
-import clsx from 'clsx';
+import { TextGradientYellowPurple } from "@/utils/ReueseClass";
+import clsx from "clsx";
+import { TiStarburst } from "react-icons/ti";
 
-export const WhyUs = () => {
+
+const data = [
+  {
+    title: "Lorem Ipsum",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+  },
+  {
+    title: "Lorem Ipsum",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+  },
+  {
+    title: "Lorem Ipsum",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+  },
+];
+
+export const WhyUs = ({ fontCustom }) => {
   return (
-    <section className="flex flex-col mx-7 pb-12" >
-      <div className={clsx(TextGradientYellowPurple, "text-center text-4xl font-bold mb-10")} >
-        <h1 >WHY US?</h1>
+    <section className="mb-12 mx-7">
+      <div className={clsx(TextGradientYellowPurple, fontCustom, "text-center text-4xl font-bold mb-10")}>
+        <h1>WHY US?</h1>
       </div>
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-2" defaultChecked />
-        <div className="collapse-title font-semibold">How do I create an account?</div>
-        <div className="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-      </div>
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-2" />
-        <div className="collapse-title font-semibold">I forgot my password. What should I do?</div>
-        <div className="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-      </div>
-      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-2" />
-        <div className="collapse-title font-semibold">How do I update my profile information?</div>
-        <div className="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {data.map((e, idx) => (
+          <div key={idx} className="flex flex-col border b-2 bg-white border-mainColor rounded-xl">
+            <div className="flex justify-between">
+              <div className="ps-4 mt-3" >
+                <h1 className={clsx(fontCustom, "font-semibold text-3xl")}>{e.title}</h1>
+              </div>
+              <div className="bg-white p-1 text-[40px] text-mainColor mr-[-5px] mt-[-5px]" >
+                <TiStarburst />
+              </div>
+            </div>
+            <div className="px-4 py-5" >
+              <p>{e.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
-
