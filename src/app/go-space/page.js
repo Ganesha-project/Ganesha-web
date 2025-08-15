@@ -4,7 +4,7 @@ export default function GoSpacePage() {
     return (
         <>
             <div className="h-screen w-screen flex flex-col gap-3 items-center justify-center">
-               
+               {/* coming soon */}
                 <h1 className="text-3xl font-medium flex flex-col justify-center items-center gap-4">
                     <span className={`${TextGradientYellowPurple} text-5xl`}>
                         Go Space {" "}
