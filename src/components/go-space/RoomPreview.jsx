@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { FaChevronLeft, FaChevronRight, FaUsers, FaWifi, FaCoffee, FaPrint } from "react-icons/fa"
-import clsx from "clsx"
 
 const rooms = [
   {
@@ -10,7 +9,7 @@ const rooms = [
     name: "Creative Studio",
     capacity: "8-12 orang",
     features: ["High-speed WiFi", "Whiteboard", "Projector", "AC"],
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    image: "https://images.pexels.com/photos/260928/pexels-photo-260928.jpeg",
     description: "Ruang kreatif dengan pencahayaan natural yang sempurna untuk brainstorming dan workshop.",
   },
   {
@@ -18,7 +17,7 @@ const rooms = [
     name: "Meeting Room Pro",
     capacity: "4-8 orang",
     features: ["Video Conference", "Smart TV", "Sound System", "Coffee Station"],
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
+    image: "https://images.pexels.com/photos/20101490/pexels-photo-20101490.jpeg",
     description: "Ruang meeting profesional dengan teknologi terdepan untuk presentasi dan video call.",
   },
   {
@@ -26,7 +25,7 @@ const rooms = [
     name: "Focus Zone",
     capacity: "1-4 orang",
     features: ["Silent Area", "Ergonomic Chairs", "Personal Lockers", "Phone Booth"],
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    image: "https://images.pexels.com/photos/2976970/pexels-photo-2976970.jpeg",
     description: "Area tenang untuk deep work dan konsentrasi maksimal tanpa gangguan.",
   },
   {
@@ -34,7 +33,7 @@ const rooms = [
     name: "Collaboration Hub",
     capacity: "10-20 orang",
     features: ["Flexible Layout", "Mobile Furniture", "Multiple Screens", "Breakout Areas"],
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+    image: "https://images.pexels.com/photos/22718136/pexels-photo-22718136.jpeg",
     description: "Ruang kolaborasi fleksibel yang dapat disesuaikan untuk berbagai kebutuhan tim.",
   },
 ]
@@ -42,12 +41,14 @@ const rooms = [
 const featureIcons = {
   "High-speed WiFi": FaWifi,
   "Coffee Station": FaCoffee,
-  Printer: FaPrint,
+  "Printer": FaPrint,
   "Video Conference": FaUsers,
 }
 
-export const RoomPreview = ({ fontCustom }) => {
+export const RoomPreview = ({ fontCustom = "" }) => {
   const [currentRoom, setCurrentRoom] = useState(0)
+  const [imageError, setImageError] = useState({})
+  const [imageLoading, setImageLoading] = useState({})
 
   const nextRoom = () => {
     setCurrentRoom((prev) => (prev + 1) % rooms.length)
@@ -57,16 +58,22 @@ export const RoomPreview = ({ fontCustom }) => {
     setCurrentRoom((prev) => (prev - 1 + rooms.length) % rooms.length)
   }
 
+  const handleImageError = (roomId) => {
+    setImageError(prev => ({ ...prev, [roomId]: true }))
+    setImageLoading(prev => ({ ...prev, [roomId]: false }))
+  }
+
+  const handleImageLoad = (roomId) => {
+    setImageLoading(prev => ({ ...prev, [roomId]: false }))
+  }
+
   const room = rooms[currentRoom]
 
   return (
     <section className="mx-7 my-16">
       <div className="text-center mb-12">
         <h2
-          className={clsx(
-            "text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent",
-            fontCustom,
-          )}
+          className={`text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent ${fontCustom}`}
         >
           Jelajahi Ruang Kerja Kami
         </h2>
@@ -78,13 +85,35 @@ export const RoomPreview = ({ fontCustom }) => {
       <div className="max-w-6xl mx-auto">
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Image Section */}
-          <div className="relative h-80 md:h-96">
-            <div
-              className="w-full h-full bg-cover bg-center transition-all duration-500"
-              style={{ backgroundImage: `url("${room.image}")` }}
-            >
-              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-            </div>
+          <div className="relative h-80 md:h-96 bg-gray-200">
+            {imageError[room.id] ? (
+              // Fallback when image fails to load
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-blue-100">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaUsers className="text-purple-600 text-2xl" />
+                  </div>
+                  <p className="text-gray-600 font-medium">{room.name}</p>
+                </div>
+              </div>
+            ) : (
+              <>
+                <img
+                  src={room.image}
+                  alt={room.name}
+                  className="w-full h-full object-cover transition-all duration-500"
+                  onError={() => handleImageError(room.id)}
+                  onLoad={() => handleImageLoad(room.id)}
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                
+                {imageLoading[room.id] && (
+                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                  </div>
+                )}
+              </>
+            )}
 
             {/* Navigation Arrows */}
             <button
@@ -113,7 +142,7 @@ export const RoomPreview = ({ fontCustom }) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Left Column */}
               <div>
-                <h3 className={clsx("text-3xl font-bold mb-4 text-gray-800", fontCustom)}>{room.name}</h3>
+                <h3 className={`text-3xl font-bold mb-4 text-gray-800 ${fontCustom}`}>{room.name}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{room.description}</p>
 
                 <div className="flex items-center gap-2 mb-6">
@@ -151,10 +180,9 @@ export const RoomPreview = ({ fontCustom }) => {
             <button
               key={idx}
               onClick={() => setCurrentRoom(idx)}
-              className={clsx(
-                "w-3 h-3 rounded-full transition-all duration-300",
-                idx === currentRoom ? "bg-purple-600 scale-125" : "bg-gray-300 hover:bg-gray-400",
-              )}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                idx === currentRoom ? "bg-purple-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
+              }`}
             />
           ))}
         </div>

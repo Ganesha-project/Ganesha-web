@@ -3,7 +3,6 @@ import { TextGradientYellowPurple } from "@/utils/ReueseClass";
 import clsx from "clsx";
 import { TiStarburst } from "react-icons/ti";
 
-
 const data = [
   {
     title: "Lorem Ipsum",
@@ -27,16 +26,16 @@ export const WhyUs = ({ fontCustom }) => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {data.map((e, idx) => (
-          <div key={idx} className="flex flex-col border b-2 bg-white border-mainColor rounded-xl">
+          <div key={idx} className="group flex flex-col border b-2 bg-white border-mainColor rounded-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
             <div className="flex justify-between">
-              <div className="ps-4 mt-3" >
-                <h1 className={clsx(fontCustom, "font-semibold text-3xl")}>{e.title}</h1>
+              <div className="ps-4 mt-3">
+                <h1 className={`font-semibold text-3xl ${fontCustom}`}>{e.title}</h1>
               </div>
-              <div className="bg-white p-1 text-[40px] text-mainColor mr-[-5px] mt-[-5px]" >
+              <div className="bg-white rounded-full p-1 text-[40px] text-mainColor mr-[-10px] mt-[-10px] group-hover:rotate-180 transition-transform duration-500 ease-in-out">
                 <TiStarburst />
               </div>
             </div>
-            <div className="px-4 py-5" >
+            <div className="px-4 py-5">
               <p>{e.desc}</p>
             </div>
           </div>
