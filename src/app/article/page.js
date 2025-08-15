@@ -43,13 +43,13 @@ export default function ArticlePage() {
 
                 const articlesData = await articlesRes.json();
                 const categoriesData = await categoriesRes.json();
-                const trendingData = await trendingRes.json();
+                const trendingDataJson = await trendingRes.json();
 
-                setNewData(articlesData);
-                setCategories(categoriesData);
-                setTrendingData(trendingData);
-                setTotalItems(articlesData.meta.pagination.total); // NEW
-                setloadNew(false); // reset loading indicator
+                setNewData(articlesData ?? { data: [], meta: { pagination: { total: 0 } } });
+                setCategories(categoriesData ?? { data: [], meta: { pagination: { total: 0 } } });
+                setTrendingData(trendingDataJson ?? { data: [], meta: { pagination: { total: 0 } } });
+                setTotalItems(articlesData?.meta?.pagination?.total ?? 0);
+                setloadNew(false);
                 setLoad(false);
             } catch (error) {
                 setError(error.message);
@@ -70,7 +70,7 @@ export default function ArticlePage() {
             }
 
             const articlesData = await articlesRes.json();
-            setNewData(articlesData);
+            setNewData(articlesData ?? { data: [], meta: { pagination: { total: 0 } } });
             setLoad(false);
         } catch (error) {
             setError(error.message);
@@ -95,10 +95,10 @@ export default function ArticlePage() {
     return (
         <>
             <Head>
-                <title>{newData ? newData.data[0]?.attributes.Title : "Artikel Ganesha Consulting"}</title>
-                <meta property="og:title" content={newData ? newData.data[0]?.attributes.Title : "Artikel Ganesha Consulting"} />
-                <meta property="og:description" content={newData ? newData.data[0]?.attributes.Summary || "Pelajari panduan lengkap mengenai izin minuman beralkohol di Ganesha Consulting." : "Artikel Ganesha Consulting"} />
-                <meta property="og:image" content={newData ? newData.data[0]?.attributes.Thumbnail.url : "/default-thumbnail.jpg"} />
+                <title>{newData?.data?.[0]?.attributes?.Title ?? "Artikel Ganesha Consulting"}</title>
+                <meta property="og:title" content={newData?.data?.[0]?.attributes?.Title ?? "Artikel Ganesha Consulting"} />
+                <meta property="og:description" content={newData?.data?.[0]?.attributes?.Summary ?? "Pelajari panduan lengkap mengenai izin minuman beralkohol di Ganesha Consulting."} />
+                <meta property="og:image" content={newData?.data?.[0]?.attributes?.Thumbnail?.url ?? "/default-thumbnail.jpg"} />
                 <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ""} />
                 <meta property="og:type" content="article" />
             </Head>
@@ -120,14 +120,14 @@ export default function ArticlePage() {
                 ) : load ? (
                     <SkeletonTiles />
                 ) : (
-                    <TilesFilter categories={newData} />
+                    <TilesFilter categories={categories} />
                 )}
 
                 {error ? (
                     <div>Error: {error}</div>
                 ) : load ? (
                     <SkeletonCard />
-                ) : newData && newData.data && newData.data.length === 0 ? (
+                ) : newData?.data?.length === 0 ? (
                     <div className="h-[30lvh] flex items-center justify-center">
                         <p className="text-xl text-center">
                             No articles found for
@@ -143,7 +143,6 @@ export default function ArticlePage() {
                             isSearching={!!searchTerm}
                             data={newData}
                             moms={<Headtag label={'Artikel Populer'} filter={true} setSortOrder={setSortOrder} />}
-
                             items={itemsToShow}
                             loadNew={loadNew}
                         />
