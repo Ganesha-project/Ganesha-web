@@ -21,22 +21,61 @@ export default function ArticlePage() {
     const [searchTerm, setSearchTerm] = useState("");
     const [sort, setSort] = useState('DESC');
     const [itemsToShow, setItemsToShow] = useState(8);
-    const [loadNew, setloadNew] = useState(false);
+    const [loadingMore, setLoadingMore] = useState(false); // Renamed from loadNew
     const [totalItems, setTotalItems] = useState(0);
+
+    const fetchMoreArticles = async () => {
+        try {
+            setLoadingMore(true);
+
+            // Calculate next page based on current items
+            const nextPage = Math.ceil((itemsToShow + 4) / 4);
+            const newItemsToShow = itemsToShow + 4;
+
+            let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${newItemsToShow}`;
+
+            if (searchTerm) {
+                fetchArticlesUrl += `&filters[Title][$containsi]=${searchTerm}`;
+            }
+
+            const articlesRes = await fetch(fetchArticlesUrl);
+
+            if (!articlesRes.ok) {
+                throw new Error("Failed to fetch more articles");
+            }
+
+            const articlesData = await articlesRes.json();
+
+            const validArticlesData = {
+                ...articlesData,
+                data: articlesData.data ? articlesData.data.filter(item =>
+                    item &&
+                    item.attributes &&
+                    item.attributes.Title
+                ) : []
+            };
+
+            setNewData(validArticlesData);
+            setItemsToShow(newItemsToShow);
+            setLoadingMore(false);
+
+        } catch (error) {
+            console.error('Fetch more articles error:', error);
+            setError(error.message);
+            setLoadingMore(false);
+        }
+    };
 
     const fetchArticles = async (searchQuery = "", categorySlug = "") => {
         try {
             setLoad(true);
-            
-            // Base URL untuk articles
+
             let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
-            
-            // Tambahkan filter search jika ada
+
             if (searchQuery) {
                 fetchArticlesUrl += `&filters[Title][$containsi]=${searchQuery}`;
             }
-            
-            // Tambahkan filter category jika ada
+
             if (categorySlug) {
                 fetchArticlesUrl += `&filters[category][Slug][$eq]=${categorySlug}`;
             }
@@ -49,12 +88,11 @@ export default function ArticlePage() {
 
             const articlesData = await articlesRes.json();
 
-            // Validasi data sebelum set state
             const validArticlesData = {
                 ...articlesData,
-                data: articlesData.data ? articlesData.data.filter(item => 
-                    item && 
-                    item.attributes && 
+                data: articlesData.data ? articlesData.data.filter(item =>
+                    item &&
+                    item.attributes &&
                     item.attributes.Title
                 ) : []
             };
@@ -62,7 +100,7 @@ export default function ArticlePage() {
             setNewData(validArticlesData);
             setTotalItems(articlesData?.meta?.pagination?.total || 0);
             setLoad(false);
-            
+
         } catch (error) {
             console.error('Fetch articles error:', error);
             setError(error.message);
@@ -73,8 +111,7 @@ export default function ArticlePage() {
     const fetchInitialData = async () => {
         try {
             setLoad(true);
-            
-            // URLs untuk fetch data
+
             const fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
             const fetchTrendingUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:DESC&filters[Trending][$eq]=true&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
 
@@ -92,68 +129,57 @@ export default function ArticlePage() {
                 trendingRes.json()
             ]);
 
-            // Validasi dan transformasi data articles
             const validArticlesData = {
                 ...articlesData,
-                data: articlesData.data ? articlesData.data.filter(item => 
-                    item && 
-                    item.attributes && 
+                data: articlesData.data ? articlesData.data.filter(item =>
+                    item &&
+                    item.attributes &&
                     item.attributes.Title
                 ) : []
             };
 
-            // Validasi dan transformasi data trending
             const validTrendingData = {
                 ...trendingData,
-                data: trendingData.data ? trendingData.data.filter(item => 
-                    item && 
-                    item.attributes && 
+                data: trendingData.data ? trendingData.data.filter(item =>
+                    item &&
+                    item.attributes &&
                     item.attributes.Title
                 ) : []
             };
 
-            // Extract categories dari articles data - hanya yang memiliki category
             const categoriesFromArticles = validArticlesData.data
                 .map(article => article.attributes.category?.data)
-                .filter(category => category && category.attributes) // Filter out null categories
+                .filter(category => category && category.attributes)
                 .reduce((unique, category) => {
-                    // Remove duplicates berdasarkan id
                     if (!unique.find(item => item.id === category.id)) {
                         unique.push(category);
                     }
                     return unique;
                 }, []);
 
-            // Format categories data sesuai dengan yang diharapkan TilesFilter
             const validCategoriesData = {
                 data: categoriesFromArticles
             };
-
-            console.log('===============Articles Data=====================');
-            console.log(validArticlesData);
-            console.log('===============Categories Data==================');
-            console.log(validCategoriesData);
-            console.log('====================================');
 
             setNewData(validArticlesData);
             setCategories(validCategoriesData);
             setTrendingData(validTrendingData);
             setTotalItems(articlesData?.meta?.pagination?.total || 0);
-            setloadNew(false);
+            setLoadingMore(false);
             setLoad(false);
-            
+
         } catch (error) {
             console.error('Fetch initial data error:', error);
             setError(error.message);
             setLoad(false);
-            setloadNew(false);
+            setLoadingMore(false);
         }
     };
 
     // Effect untuk initial load
     useEffect(() => {
         fetchInitialData();
-    }, [itemsToShow, sort]);
+    }, [sort]); // Removed itemsToShow from dependency
 
     // Handler untuk search
     const handleSearch = (searchTerm) => {
@@ -161,14 +187,13 @@ export default function ArticlePage() {
         if (searchTerm.trim()) {
             fetchArticles(searchTerm);
         } else {
-            fetchInitialData(); // Reset ke data awal jika search kosong
+            fetchInitialData();
         }
     };
 
-    // Handler untuk load more
+    // Handler untuk load more - updated
     const loadMore = () => {
-        setloadNew(true);
-        setItemsToShow(prev => prev + 4);
+        fetchMoreArticles();
     };
 
     // Handler untuk sorting
@@ -181,30 +206,26 @@ export default function ArticlePage() {
         if (!newData || !newData.data || !Array.isArray(newData.data)) {
             return null;
         }
-        
-        return newData.data.find(article => 
-            article && 
-            article.attributes && 
+
+        return newData.data.find(article =>
+            article &&
+            article.attributes &&
             article.attributes.Title
         );
     };
 
-    // Get first valid article for meta tags
     const firstArticle = getFirstValidArticle();
-
-    // Safe meta data extraction
     const metaTitle = firstArticle?.attributes?.Title || "Artikel Ganesha Consulting";
     const metaDescription = firstArticle?.attributes?.Summary || firstArticle?.attributes?.Excerpt || "Pelajari panduan lengkap mengenai berbagai topik bisnis di Ganesha Consulting.";
     const metaImage = firstArticle?.attributes?.Thumbnail?.data?.attributes?.url || "/default-thumbnail.jpg";
 
-    // Error handler component
     const ErrorDisplay = ({ message, showReload = true }) => (
         <div className="flex items-center justify-center h-64">
             <div className="text-center">
                 <p className="text-red-500 font-semibold">Error: {message}</p>
                 {showReload && (
-                    <button 
-                        onClick={() => window.location.reload()} 
+                    <button
+                        onClick={() => window.location.reload()}
                         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
                     >
                         Reload Page
@@ -214,7 +235,6 @@ export default function ArticlePage() {
         </div>
     );
 
-    // No results component
     const NoResults = () => (
         <div className="h-[30lvh] flex items-center justify-center">
             <p className="text-xl text-center">
@@ -255,7 +275,7 @@ export default function ArticlePage() {
 
             <section className="md:px-24 2xl:px-80 px-5 space-y-5 pt-10 mb-10">
                 <Searchbar onSearch={handleSearch} />
-                
+
                 {error ? (
                     <ErrorDisplay message={error} showReload={false} />
                 ) : load ? (
@@ -276,20 +296,21 @@ export default function ArticlePage() {
                             isSearching={!!searchTerm}
                             data={newData}
                             moms={
-                                <Headtag 
-                                    label={searchTerm ? 'Search Results' : 'Artikel Populer'} 
-                                    filter={!searchTerm} 
-                                    setSortOrder={setSortOrder} 
+                                <Headtag
+                                    label={searchTerm ? 'Search Results' : 'Artikel Populer'}
+                                    filter={!searchTerm}
+                                    setSortOrder={setSortOrder}
                                 />
                             }
                             items={itemsToShow}
-                            loadNew={loadNew}
+                            loadNew={false} // Always false since we handle loading separately
                         />
 
-                        {loadNew && <SkeletonCard header={"hidden"} />}
+                        {/* Show skeleton cards only when loading more */}
+                        {loadingMore && <SkeletonCard header={"hidden"} count={4} />}
 
-                        {!searchTerm && itemsToShow < totalItems && !loadNew && (
-                            <Pagination loadMore={loadMore} />
+                        {!searchTerm && itemsToShow < totalItems && !loadingMore && (
+                            <Pagination loadMore={loadMore} loading={loadingMore} />
                         )}
                     </>
                 ) : null}
