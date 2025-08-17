@@ -24,93 +24,154 @@ export default function ArticlePage() {
     const [loadNew, setloadNew] = useState(false);
     const [totalItems, setTotalItems] = useState(0);
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                setLoad(true);
-                
-                let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
-                let fetchCategoriesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/categories?populate=*`;
-                let fetchTrending = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:DESC&filters[Trending][$eq]=true&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
-
-                const [articlesRes, categoriesRes, trendingRes] = await Promise.all([
-                    fetch(fetchArticlesUrl),
-                    fetch(fetchCategoriesUrl),
-                    fetch(fetchTrending),
-                ]);
-
-                if (!articlesRes.ok || !categoriesRes.ok || !trendingRes.ok) {
-                    throw new Error("Network response was not ok");
-                }
-
-                const articlesData = await articlesRes.json();
-                const categoriesData = await categoriesRes.json();
-                const trendingData = await trendingRes.json();
-
-                // Validasi data sebelum set state
-                const validArticlesData = {
-                    ...articlesData,
-                    data: articlesData.data ? articlesData.data.filter(item => item && item.attributes) : []
-                };
-
-                const validTrendingData = {
-                    ...trendingData,
-                    data: trendingData.data ? trendingData.data.filter(item => item && item.attributes) : []
-                };
-
-                setNewData(validArticlesData);
-                setCategories(categoriesData);
-                setTrendingData(validTrendingData);
-                setTotalItems(articlesData?.meta?.pagination?.total || 0);
-                setloadNew(false);
-                setLoad(false);
-            } catch (error) {
-                console.error('Fetch error:', error);
-                setError(error.message);
-                setLoad(false);
-                setloadNew(false);
-            }
-        }
-        fetchData();
-    }, [itemsToShow, sort]);
-
-    const fetchFilteredData = async (search) => {
+    const fetchArticles = async (searchQuery = "", categorySlug = "") => {
         try {
             setLoad(true);
-            let fetchFilteredArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?filters[Title][$containsi]=${search}&populate=*`;
-            const articlesRes = await fetch(fetchFilteredArticlesUrl);
+            
+            // Base URL untuk articles
+            let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
+            
+            // Tambahkan filter search jika ada
+            if (searchQuery) {
+                fetchArticlesUrl += `&filters[Title][$containsi]=${searchQuery}`;
+            }
+            
+            // Tambahkan filter category jika ada
+            if (categorySlug) {
+                fetchArticlesUrl += `&filters[category][Slug][$eq]=${categorySlug}`;
+            }
+
+            const articlesRes = await fetch(fetchArticlesUrl);
 
             if (!articlesRes.ok) {
-                throw new Error("Network response was not ok");
+                throw new Error("Failed to fetch articles");
             }
 
             const articlesData = await articlesRes.json();
-            
-            // Validasi data filtered
-            const validFilteredData = {
+
+            // Validasi data sebelum set state
+            const validArticlesData = {
                 ...articlesData,
-                data: articlesData.data ? articlesData.data.filter(item => item && item.attributes) : []
+                data: articlesData.data ? articlesData.data.filter(item => 
+                    item && 
+                    item.attributes && 
+                    item.attributes.Title
+                ) : []
             };
-            
-            setNewData(validFilteredData);
+
+            setNewData(validArticlesData);
+            setTotalItems(articlesData?.meta?.pagination?.total || 0);
             setLoad(false);
+            
         } catch (error) {
-            console.error('Filter fetch error:', error);
+            console.error('Fetch articles error:', error);
             setError(error.message);
             setLoad(false);
         }
     };
 
-    const handleSearch = (searchTerm) => {
-        setSearchTerm(searchTerm);
-        fetchFilteredData(searchTerm);
+    const fetchInitialData = async () => {
+        try {
+            setLoad(true);
+            
+            // URLs untuk fetch data
+            const fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
+            const fetchTrendingUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:DESC&filters[Trending][$eq]=true&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`;
+
+            const [articlesRes, trendingRes] = await Promise.all([
+                fetch(fetchArticlesUrl),
+                fetch(fetchTrendingUrl),
+            ]);
+
+            if (!articlesRes.ok || !trendingRes.ok) {
+                throw new Error("One or more network requests failed");
+            }
+
+            const [articlesData, trendingData] = await Promise.all([
+                articlesRes.json(),
+                trendingRes.json()
+            ]);
+
+            // Validasi dan transformasi data articles
+            const validArticlesData = {
+                ...articlesData,
+                data: articlesData.data ? articlesData.data.filter(item => 
+                    item && 
+                    item.attributes && 
+                    item.attributes.Title
+                ) : []
+            };
+
+            // Validasi dan transformasi data trending
+            const validTrendingData = {
+                ...trendingData,
+                data: trendingData.data ? trendingData.data.filter(item => 
+                    item && 
+                    item.attributes && 
+                    item.attributes.Title
+                ) : []
+            };
+
+            // Extract categories dari articles data - hanya yang memiliki category
+            const categoriesFromArticles = validArticlesData.data
+                .map(article => article.attributes.category?.data)
+                .filter(category => category && category.attributes) // Filter out null categories
+                .reduce((unique, category) => {
+                    // Remove duplicates berdasarkan id
+                    if (!unique.find(item => item.id === category.id)) {
+                        unique.push(category);
+                    }
+                    return unique;
+                }, []);
+
+            // Format categories data sesuai dengan yang diharapkan TilesFilter
+            const validCategoriesData = {
+                data: categoriesFromArticles
+            };
+
+            console.log('===============Articles Data=====================');
+            console.log(validArticlesData);
+            console.log('===============Categories Data==================');
+            console.log(validCategoriesData);
+            console.log('====================================');
+
+            setNewData(validArticlesData);
+            setCategories(validCategoriesData);
+            setTrendingData(validTrendingData);
+            setTotalItems(articlesData?.meta?.pagination?.total || 0);
+            setloadNew(false);
+            setLoad(false);
+            
+        } catch (error) {
+            console.error('Fetch initial data error:', error);
+            setError(error.message);
+            setLoad(false);
+            setloadNew(false);
+        }
     };
 
+    // Effect untuk initial load
+    useEffect(() => {
+        fetchInitialData();
+    }, [itemsToShow, sort]);
+
+    // Handler untuk search
+    const handleSearch = (searchTerm) => {
+        setSearchTerm(searchTerm);
+        if (searchTerm.trim()) {
+            fetchArticles(searchTerm);
+        } else {
+            fetchInitialData(); // Reset ke data awal jika search kosong
+        }
+    };
+
+    // Handler untuk load more
     const loadMore = () => {
         setloadNew(true);
         setItemsToShow(prev => prev + 4);
     };
 
+    // Handler untuk sorting
     const setSortOrder = (order) => {
         setSort(order);
     };
@@ -133,8 +194,42 @@ export default function ArticlePage() {
 
     // Safe meta data extraction
     const metaTitle = firstArticle?.attributes?.Title || "Artikel Ganesha Consulting";
-    const metaDescription = firstArticle?.attributes?.Summary || "Pelajari panduan lengkap mengenai izin minuman beralkohol di Ganesha Consulting.";
+    const metaDescription = firstArticle?.attributes?.Summary || firstArticle?.attributes?.Excerpt || "Pelajari panduan lengkap mengenai berbagai topik bisnis di Ganesha Consulting.";
     const metaImage = firstArticle?.attributes?.Thumbnail?.data?.attributes?.url || "/default-thumbnail.jpg";
+
+    // Error handler component
+    const ErrorDisplay = ({ message, showReload = true }) => (
+        <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+                <p className="text-red-500 font-semibold">Error: {message}</p>
+                {showReload && (
+                    <button 
+                        onClick={() => window.location.reload()} 
+                        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                    >
+                        Reload Page
+                    </button>
+                )}
+            </div>
+        </div>
+    );
+
+    // No results component
+    const NoResults = () => (
+        <div className="h-[30lvh] flex items-center justify-center">
+            <p className="text-xl text-center">
+                No articles found
+                {searchTerm && (
+                    <>
+                        <br />
+                        for <span className="font-semibold text-mainColor dark:text-baseColor">"{searchTerm}"</span>
+                        <br />
+                        Please try a different search term.
+                    </>
+                )}
+            </p>
+        </div>
+    );
 
     return (
         <>
@@ -145,21 +240,12 @@ export default function ArticlePage() {
                 <meta property="og:image" content={metaImage} />
                 <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ""} />
                 <meta property="og:type" content="article" />
+                <meta name="description" content={metaDescription} />
             </Head>
 
             <BannerArticle>
                 {error ? (
-                    <div className="flex items-center justify-center h-64">
-                        <div className="text-center">
-                            <p className="text-red-500 font-semibold">Error: {error}</p>
-                            <button 
-                                onClick={() => window.location.reload()} 
-                                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                            >
-                                Reload Page
-                            </button>
-                        </div>
-                    </div>
+                    <ErrorDisplay message={error} />
                 ) : load ? (
                     <SkeletonBanner />
                 ) : (
@@ -171,44 +257,38 @@ export default function ArticlePage() {
                 <Searchbar onSearch={handleSearch} />
                 
                 {error ? (
-                    <div className="text-center py-8">
-                        <p className="text-red-500">Error: {error}</p>
-                    </div>
+                    <ErrorDisplay message={error} showReload={false} />
                 ) : load ? (
                     <SkeletonTiles />
-                ) : (
+                ) : categories ? (
                     <TilesFilter categories={categories} />
-                )}
+                ) : null}
 
                 {error ? (
-                    <div className="text-center py-8">
-                        <p className="text-red-500">Error: {error}</p>
-                    </div>
+                    <ErrorDisplay message={error} showReload={false} />
                 ) : load ? (
                     <SkeletonCard />
                 ) : newData && newData.data && newData.data.length === 0 ? (
-                    <div className="h-[30lvh] flex items-center justify-center">
-                        <p className="text-xl text-center">
-                            No articles found for
-                            <br />
-                            <span className="font-semibold text text-mainColor dark:text-baseColor">"{searchTerm}"</span>
-                            <br />
-                            Please try a different search term.
-                        </p>
-                    </div>
+                    <NoResults />
                 ) : newData && newData.data ? (
                     <>
                         <ArticleCard
                             isSearching={!!searchTerm}
                             data={newData}
-                            moms={<Headtag label={'Artikel Populer'} filter={true} setSortOrder={setSortOrder} />}
+                            moms={
+                                <Headtag 
+                                    label={searchTerm ? 'Search Results' : 'Artikel Populer'} 
+                                    filter={!searchTerm} 
+                                    setSortOrder={setSortOrder} 
+                                />
+                            }
                             items={itemsToShow}
                             loadNew={loadNew}
                         />
 
                         {loadNew && <SkeletonCard header={"hidden"} />}
 
-                        {itemsToShow < totalItems && !loadNew && (
+                        {!searchTerm && itemsToShow < totalItems && !loadNew && (
                             <Pagination loadMore={loadMore} />
                         )}
                     </>
