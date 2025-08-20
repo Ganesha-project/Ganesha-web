@@ -4,7 +4,7 @@ import { useState } from "react"
 import { FaStar, FaPaperPlane, FaUser, FaEnvelope, FaComment } from "react-icons/fa"
 import clsx from "clsx"
 
-export const FeedbackForm = ({ fontCustom }) => {
+export const FeedbackForm = ({ fontCustom, titleComponent }) => {
   const [rating, setRating] = useState(0)
   const [hoveredRating, setHoveredRating] = useState(0)
   const [formData, setFormData] = useState({
@@ -27,13 +27,13 @@ export const FeedbackForm = ({ fontCustom }) => {
   }
 
   return (
-    <section className="mx-7 my-16">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+    <section className="mb-16" >
+      <div>
+        <div className="text-center mb-7">
           <h2
             className={clsx(
               "text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent",
-              fontCustom,
+              fontCustom, titleComponent
             )}
           >
             Berikan Feedback Anda
@@ -43,7 +43,7 @@ export const FeedbackForm = ({ fontCustom }) => {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+        <div className="bg-gray-50 rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Rating Section */}
             <div className="text-center">
@@ -125,7 +125,7 @@ export const FeedbackForm = ({ fontCustom }) => {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex px-8 py-4 items-center gap-3 go-button"
               >
                 <FaPaperPlane />
                 Kirim Feedback

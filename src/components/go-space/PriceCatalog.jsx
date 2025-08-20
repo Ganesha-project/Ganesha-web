@@ -45,14 +45,14 @@ const pricingPlans = [
   },
 ]
 
-export const PriceCatalog = ({ fontCustom }) => {
+export const PriceCatalog = ({ fontCustom, titleComponent }) => {
   return (
-    <section className="mx-7 my-16">
+    <section>
       <div className="text-center mb-12">
         <h2
           className={clsx(
-            "text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent",
-            fontCustom,
+            "text-4xl font-bold mb-4 bg-gradient-to-r from-goYellow to-goPurple bg-clip-text text-transparent",
+            fontCustom, titleComponent
           )}
         >
           Pilih Paket Terbaik
@@ -71,13 +71,13 @@ export const PriceCatalog = ({ fontCustom }) => {
               className={clsx(
                 "relative rounded-2xl p-8 transition-all duration-300 hover:scale-105",
                 plan.popular
-                  ? "bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white shadow-2xl border-2 border-yellow-400"
+                  ? "bg-gradient-to-br from-goPurple to-indigo-700 text-white shadow-2xl border-2 border-goYellow"
                   : "bg-white border-2 border-gray-200 hover:border-purple-300 shadow-lg",
               )}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                  <span className="bg-gradient-to-r from-goYellow to-goYellow/60 text-black px-4 py-2 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export const PriceCatalog = ({ fontCustom }) => {
 
               <div className="text-center mb-6">
                 <IconComponent
-                  className={clsx("text-3xl mx-auto mb-4", plan.popular ? "text-yellow-300" : "text-purple-600")}
+                  className={clsx("text-3xl mx-auto mb-4", plan.popular ? "text-goYellow" : "text-goPurple")}
                 />
                 <h3 className={clsx("text-2xl font-bold mb-2", fontCustom)}>{plan.name}</h3>
                 <p className={clsx("text-sm", plan.popular ? "text-gray-200" : "text-gray-600")}>{plan.description}</p>
@@ -109,8 +109,8 @@ export const PriceCatalog = ({ fontCustom }) => {
                 className={clsx(
                   "w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300",
                   plan.popular
-                    ? "bg-white text-purple-600 hover:bg-gray-100"
-                    : "bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700",
+                    ? "bg-white text-goPurple hover:bg-gray-100"
+                    : "go-button",
                 )}
               >
                 Pilih Paket

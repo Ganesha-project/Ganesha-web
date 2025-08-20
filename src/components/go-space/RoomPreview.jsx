@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { FaChevronLeft, FaChevronRight, FaUsers, FaWifi, FaCoffee, FaPrint } from "react-icons/fa"
+import clsx from 'clsx';
 
 const rooms = [
   {
@@ -45,7 +46,7 @@ const featureIcons = {
   "Video Conference": FaUsers,
 }
 
-export const RoomPreview = ({ fontCustom = "" }) => {
+export const RoomPreview = ({ fontCustom = "", titleComponent }) => {
   const [currentRoom, setCurrentRoom] = useState(0)
   const [imageError, setImageError] = useState({})
   const [imageLoading, setImageLoading] = useState({})
@@ -70,10 +71,10 @@ export const RoomPreview = ({ fontCustom = "" }) => {
   const room = rooms[currentRoom]
 
   return (
-    <section className="mx-7 my-16">
+    <section className="my-16" >
       <div className="text-center mb-12">
         <h2
-          className={`text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent ${fontCustom}`}
+          className={clsx('text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-goPurple bg-clip-text text-transparent', fontCustom, titleComponent)}
         >
           Jelajahi Ruang Kerja Kami
         </h2>
@@ -88,10 +89,10 @@ export const RoomPreview = ({ fontCustom = "" }) => {
           <div className="relative h-80 md:h-96 bg-gray-200">
             {imageError[room.id] ? (
               // Fallback when image fails to load
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-blue-100">
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-goPurple/100 to-blue-100">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaUsers className="text-purple-600 text-2xl" />
+                  <div className="w-16 h-16 bg-goPurple/200 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaUsers className="text-goPurple text-2xl" />
                   </div>
                   <p className="text-gray-600 font-medium">{room.name}</p>
                 </div>
@@ -109,7 +110,7 @@ export const RoomPreview = ({ fontCustom = "" }) => {
                 
                 {imageLoading[room.id] && (
                   <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-goPurple"></div>
                   </div>
                 )}
               </>
@@ -146,11 +147,11 @@ export const RoomPreview = ({ fontCustom = "" }) => {
                 <p className="text-gray-600 mb-6 leading-relaxed">{room.description}</p>
 
                 <div className="flex items-center gap-2 mb-6">
-                  <FaUsers className="text-purple-600" />
+                  <FaUsers className="text-goPurple" />
                   <span className="font-semibold text-gray-700">Kapasitas: {room.capacity}</span>
                 </div>
 
-                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <button className="px-8 py-3 go-button">
                   Book Sekarang
                 </button>
               </div>
@@ -163,7 +164,7 @@ export const RoomPreview = ({ fontCustom = "" }) => {
                     const IconComponent = featureIcons[feature] || FaUsers
                     return (
                       <div key={idx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                        <IconComponent className="text-purple-600" />
+                        <IconComponent className="text-goPurple" />
                         <span className="text-sm font-medium text-gray-700">{feature}</span>
                       </div>
                     )
@@ -181,7 +182,7 @@ export const RoomPreview = ({ fontCustom = "" }) => {
               key={idx}
               onClick={() => setCurrentRoom(idx)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                idx === currentRoom ? "bg-purple-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
+                idx === currentRoom ? "bg-goPurple scale-125" : "bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}
