@@ -1,43 +1,75 @@
-import React from "react";
-import { FaLocationArrow } from "react-icons/fa";
-import clsx from "clsx";
-import { TextMainGradient } from "@/utils/ReueseClass";
+"use client";
+import { useState, useEffect } from "react";
+import { FaStar } from "react-icons/fa";
 
-export const Banner = () => {
+export const Banner = ({ titleComponent }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section>
-      {/* Bagian “Our Story, Vision” */}
-      <div className="flex mt-25  justify-between items-end text-white">
+    <>
+      <section className="py-12 mt-12">
+        {/* Header section with title on left and rating card on right */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:mx-15 sm:mx-10 mx-7">
+          {/* Title section */}
+          <div className="flex-1 max-w-2xl">
+            <h1 className={`text-5xl lg:text-6xl font-bold text-purple-700 leading-tight mb-4 ${titleComponent || ''}`}>
+              Virtual Tours
+              <br />
+              That Sell
+            </h1>
+            <p className="text-xl text-purple-700/60 font-medium">
+              Experience the Future of Property Marketing
+            </p>
+          </div>
+          
+          {/* Rating card */}
+         <div className="flex-shrink-0">
+            <div className="bg-goPurple text-white p-6 max-w-sm rounded-lg relative overflow-hidden">
+              {/* diagonal cut overlay */}
+              <div 
+                className="absolute top-0 left-0 bg-white"
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  clipPath: 'polygon(0 0, 100% 0, 0 100%)'
+                }}
+              ></div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6 pb-4 border-b border-gray-700">
+                  <div>
+                    <h3 className="text-2xl font-bold">4.9/5</h3>
+                    <p className="text-gray-300 text-sm">Google Stars</p>
+                  </div>
+                  <div className="text-yellow-400">
+                    <FaStar className="text-2xl" />
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Immersive virtual tours that showcase properties in stunning detail, helping real estate professionals close deals faster and reach more buyers.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div className={clsx("py-3 px-5 text-goPurple text-4xl font-semibold", TextMainGradient)}>Our Story, Vision</div>
-        <div className="max-w-lg bg-white p-3 text-goPurple rounded-tr-2xl rounded-bl-2xl text-right font-semibold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
+      </section>
+      
+      {/* Hero image - positioned absolutely outside parent margins when not scrolled */}
+      <div className={`transition-all duration-500 ease-in-out ${isScrolled ? "md:mx-16 sm:mx-10 mx-7" : ""}`}>
+        <img
+          src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg"
+          alt="Modern living room with virtual tour technology"
+          className={`w-full h-[60vh] object-cover shadow-2xl transition-all duration-500 ease-in-out ${isScrolled ? "rounded-2xl" : "rounded-none"}`}
+        />
       </div>
-
-      {/* Banner utama */}
-      <div
-        className=" rounded-2xl relative flex flex-col justify-between"
-        style={{
-          backgroundImage: `url("https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "55svh",
-        }}
-      >
-
-        {/* Kiri atas: “and Values” */}
-        <div className="flex justify-between items-start text-white">
-        {/* // ini dibuat rounded out top right, tapi rounded nya keluar bisa ga */}
-          <div className="bg-white pb-3 px-5 text-goPurple text-4xl rounded-out-tr-2xl rounded-out-bl-2xl rounded-br-2xl font-semibold">and Values</div>
-        </div>
-
-        {/* Kanan bawah: tombol Go Space */}
-        <div className="self-end bg-white px-2 pt-2 rounded-tl-2xl rounded-out-bl-2xl rounded-out-tr-2xl">
-          <img className="w-30" src="/go-space-logo.png" alt="go space logo" />
-        </div>
-
-      </div>
-    </section>
+    </>
   );
 };

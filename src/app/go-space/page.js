@@ -16,14 +16,16 @@ const monaSans = Mona_Sans({
 
 export default function GoSpacePage() {
   return (
-      <main className={`${monaSans.className} min-h-screen md:mx-15 sm:mx-10 mx-7`}>
-        <Banner />
+    <main className={`${monaSans.className} min-h-screen`}>
+      <Banner titleComponent={GoTitle} />
+      <section className="md:mx-15 sm:mx-10 mx-7" >
         <AboutUs />
         <WhyUs fontCustom={monaSans.className} titleComponent={GoTitle} />
         <PriceCatalog fontCustom={monaSans.className} titleComponent={GoTitle} />
         <RoomPreview fontCustom={monaSans.className} titleComponent={GoTitle} />
         <FAQ fontCustom={monaSans.className} titleComponent={GoTitle} />
         <FeedbackForm fontCustom={monaSans.className} titleComponent={GoTitle} />
-      </main>
+      </section>
+    </main>
   );
 }

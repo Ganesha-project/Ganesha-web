@@ -28,6 +28,13 @@
   --shadow-secondaryShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+/* Di CSS file Anda */
+.banner-bg {
+  background-image: url("https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 @layer base {
   button {
     @apply cursor-pointer
