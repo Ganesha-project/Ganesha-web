@@ -20,54 +20,65 @@ export const Banner = ({ titleComponent }) => {
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:mx-15 sm:mx-10 mx-7">
           {/* Title section */}
           <div className="flex-1 max-w-2xl">
-            <h1 className={`text-5xl lg:text-6xl font-bold text-purple-700 leading-tight mb-4 ${titleComponent || ''}`}>
-              Virtual Tours
+            <h1
+              className={`text-5xl lg:text-6xl font-bold text-purple-700 leading-tight mb-4 ${
+                titleComponent || ""
+              }`}
+            >
+              Virtual Office
               <br />
-              That Sell
+              Real Growth
             </h1>
             <p className="text-xl text-purple-700/60 font-medium">
-              Experience the Future of Property Marketing
+              Alamat bisnis strategis, kredibilitas naik, biaya operasional lebih hemat.
             </p>
           </div>
           
           {/* Rating card */}
-         <div className="flex-shrink-0">
+          <div className="flex-shrink-0">
             <div className="bg-goPurple text-white p-6 max-w-sm rounded-lg relative overflow-hidden">
               {/* diagonal cut overlay */}
-              <div 
+              <div
                 className="absolute top-0 left-0 bg-white"
                 style={{
-                  width: '40px',
-                  height: '40px',
-                  clipPath: 'polygon(0 0, 100% 0, 0 100%)'
+                  width: "40px",
+                  height: "40px",
+                  clipPath: "polygon(0 0, 100% 0, 0 100%)",
                 }}
               ></div>
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6 pb-4 border-b border-gray-700">
                   <div>
                     <h3 className="text-2xl font-bold">4.9/5</h3>
-                    <p className="text-gray-300 text-sm">Google Stars</p>
+                    <p className="text-gray-300 text-sm">Client Satisfaction</p>
                   </div>
                   <div className="text-yellow-400">
                     <FaStar className="text-2xl" />
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Immersive virtual tours that showcase properties in stunning detail, helping real estate professionals close deals faster and reach more buyers.
+                  Go Space membantu bisnis tampil profesional dengan alamat
+                  kantor virtual strategis yang bisa digunakan untuk legalitas,
+                  branding, dan kebutuhan operasional.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
-      
+
       {/* Hero image - positioned absolutely outside parent margins when not scrolled */}
-      <div className={`transition-all duration-500 ease-in-out ${isScrolled ? "md:mx-16 sm:mx-10 mx-7" : ""}`}>
+      <div
+        className={`transition-all duration-500 ease-in-out ${
+          isScrolled ? "md:mx-16 sm:mx-10 mx-7" : ""
+        }`}
+      >
         <img
-          src="https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg"
-          alt="Modern living room with virtual tour technology"
-          className={`w-full h-[60vh] object-cover shadow-2xl transition-all duration-500 ease-in-out ${isScrolled ? "rounded-2xl" : "rounded-none"}`}
+          src="/go-space-banner.jpg"
+          alt="Modern office workspace representing Go Space virtual office"
+          className={`w-full h-[60vh] object-cover shadow-2xl transition-all duration-500 ease-in-out ${
+            isScrolled ? "rounded-2xl" : "rounded-none"
+          }`}
         />
       </div>
     </>

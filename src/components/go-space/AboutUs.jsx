@@ -1,7 +1,6 @@
 import React from "react";
 import { FaQuoteLeft, FaStarOfLife } from "react-icons/fa";
 import clsx from "clsx";
-import { BgGoGradient } from "@/utils/ReueseClass";
 
 export const AboutUs = () => {
   return (
@@ -9,16 +8,21 @@ export const AboutUs = () => {
       {/* Kolom kiri */}
       <div className="flex flex-col gap-4">
         <FaQuoteLeft className="text-2xl opacity-50" />
-        <p className="text-sm sm:text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <p className="text-sm sm:text-base leading-relaxed">
+          Di era bisnis modern, alamat kantor bukan sekadar lokasi—tapi citra profesional yang membuat klien dan mitra lebih percaya. 
+          Go Space hadir untuk menjawab kebutuhan itu dengan solusi <strong>Virtual Office</strong> yang praktis, hemat, dan kredibel. 
+          Mulai dari freelancer, startup, hingga perusahaan, semua bisa memiliki alamat bisnis strategis tanpa perlu menyewa ruang fisik.
         </p>
 
         {/* Gambar */}
         <div
-          className={clsx("rounded-2xl bg-cover bg-center w-full", "h-40 sm:h-48 md:h-56")}
+          className={clsx(
+            "rounded-2xl bg-cover bg-center w-full",
+            "h-40 sm:h-48 md:h-56"
+          )}
           style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg")',
+            backgroundImage:
+              'url("https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg")',
           }}
         />
       </div>
@@ -30,9 +34,14 @@ export const AboutUs = () => {
         </p>
 
         <p className="text-sm sm:text-base leading-relaxed">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-          ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-          adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          <strong>Go Space</strong> adalah layanan Virtual Office yang memberikan alamat bisnis strategis untuk 
+          mendukung legalitas, branding, dan kepercayaan klien. Kami percaya, setiap bisnis berhak tampil profesional 
+          tanpa terbebani biaya sewa kantor fisik yang besar.  
+          <br /><br />
+          Dengan layanan yang fleksibel, efisien, dan terpercaya, Go Space menjadi partner terbaik bagi 
+          para pengusaha, freelancer, dan startup yang ingin berkembang lebih cepat.  
+          <br /><br />
+          <em>Go Space – Tempat virtual, peluang nyata.</em>
         </p>
       </div>
     </section>
