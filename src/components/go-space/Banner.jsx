@@ -38,13 +38,14 @@ export const Banner = ({ titleComponent }) => {
             <div className="bg-goPurple text-white p-6 max-w-sm rounded-lg relative overflow-hidden">
               {/* diagonal cut overlay */}
               <div
-                className="absolute top-0 left-0 bg-white"
+                className="absolute top-0 left-0 bg-white dark:bg-[#000000]"
                 style={{
                   width: "40px",
                   height: "40px",
                   clipPath: "polygon(0 0, 100% 0, 0 100%)",
                 }}
               ></div>
+
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6 pb-4 border-b border-gray-700">
                   <div>
