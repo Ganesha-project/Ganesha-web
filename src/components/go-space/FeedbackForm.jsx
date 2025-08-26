@@ -1,8 +1,11 @@
+// components/go-space/FeedbackForm.js
 "use client"
 
 import { useState } from "react"
 import { FaStar, FaPaperPlane, FaUser, FaEnvelope, FaComment } from "react-icons/fa"
 import clsx from "clsx"
+import Toastify from "toastify-js"
+import "toastify-js/src/toastify.css"
 
 export const FeedbackForm = ({ fontCustom, titleComponent }) => {
   const [rating, setRating] = useState(0)
@@ -12,6 +15,7 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
     email: "",
     message: "",
   })
+  const [loading, setLoading] = useState(false)
 
   const handleInputChange = (e) => {
     setFormData({
@@ -20,20 +24,74 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Feedback submitted:", { ...formData, rating })
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Validasi di frontend
+    if (!formData.name || !formData.email || !formData.message || !rating) {
+      Toastify({
+        text: "Semua field harus diisi termasuk rating!",
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#f44336",
+        stopOnFocus: true,
+      }).showToast()
+      setLoading(false)
+      return
+    }
+
+    const payload = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+      rating: Number(rating)
+    }
+    try {
+      const response = await fetch("/api/sendFeedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || `HTTP error! status: ${response.status}`);
+      }
+
+      // Success handling
+      Toastify({
+        text: result.message,
+        // ... success config
+      }).showToast();
+
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+      setRating(0);
+
+    } catch (error) {
+      Toastify({
+        text: error.message || "Terjadi kesalahan jaringan",
+        // ... error config
+      }).showToast();
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <section className="mb-16" >
+    <section className="mb-16">
       <div>
         <div className="text-center mb-7">
           <h2
             className={clsx(
               "text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-purple-600 bg-clip-text text-transparent",
-              fontCustom, titleComponent
+              fontCustom,
+              titleComponent
             )}
           >
             Berikan Feedback Anda
@@ -43,9 +101,10 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
           </p>
         </div>
 
+        {/* Form Feedback */}
         <div className="bg-gray-50 rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Rating Section */}
+            {/* Rating */}
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Bagaimana pengalaman Anda?</h3>
               <div className="flex justify-center gap-2 mb-2">
@@ -78,9 +137,14 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
                   </span>
                 )}
               </p>
+              {rating === 0 && (
+                <p className="text-sm text-red-500 mt-2">
+                  * Pilih rating terlebih dahulu
+                </p>
+              )}
             </div>
 
-            {/* Form Fields */}
+            {/* Input Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative">
                 <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -125,10 +189,11 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex px-8 py-4 items-center gap-3 go-button"
+                disabled={loading}
+                className="inline-flex px-8 py-4 items-center gap-3 go-button disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <FaPaperPlane />
-                Kirim Feedback
+                {loading ? "Mengirim..." : "Kirim Feedback"}
               </button>
             </div>
           </form>
