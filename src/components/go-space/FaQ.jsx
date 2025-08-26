@@ -6,29 +6,34 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const faqData = [
   {
-    id: "account-creation",
-    question: "How do I create an account?",
-    answer: 'Click the "Sign Up" button in the top right corner and follow the registration process. You\'ll need a valid email address and a secure password.',
+    id: "registration",
+    question: "Bagaimana cara mendaftar layanan Go Space?",
+    answer:
+      'Klik tombol "Daftar Sekarang" di website kami, isi data bisnis, pilih paket virtual office yang sesuai, lalu lakukan pembayaran. Tim kami akan segera menghubungi Anda untuk verifikasi.',
   },
   {
-    id: "password-reset",
-    question: "I forgot my password. What should I do?",
-    answer: 'Click on "Forgot Password" on the login page and follow the instructions sent to your email. The reset link will be valid for 24 hours.',
+    id: "legal-usage",
+    question: "Apakah alamat virtual office bisa dipakai untuk legalitas PT atau CV?",
+    answer:
+      "Ya, alamat Go Space dapat digunakan untuk kebutuhan legalitas perusahaan seperti pembuatan PT, CV, dan perizinan usaha resmi sesuai regulasi yang berlaku.",
   },
   {
-    id: "profile-update",
-    question: "How do I update my profile information?",
-    answer: 'Go to "My Account" settings and select "Edit Profile" to make changes. Remember to save your changes before leaving the page.',
+    id: "mail-handling",
+    question: "Bagaimana dengan surat atau paket yang dikirim ke alamat virtual office?",
+    answer:
+      "Setiap surat atau paket yang masuk akan kami terima dan beri notifikasi kepada Anda. Anda dapat mengambil langsung di kantor kami atau menggunakan layanan penerusan (mail forwarding).",
   },
   {
-    id: "billing-support",
-    question: "How can I get help with billing issues?",
-    answer: "Contact our support team through the help center or email support@example.com. Include your account details for faster assistance.",
+    id: "billing",
+    question: "Bagaimana sistem pembayaran di Go Space?",
+    answer:
+      "Pembayaran dapat dilakukan secara bulanan atau tahunan melalui transfer bank atau e-wallet. Paket tahunan biasanya lebih hemat dibanding bulanan.",
   },
   {
-    id: "data-security",
-    question: "How is my data protected?",
-    answer: "We use industry-standard encryption and security measures to protect your data. Your information is never shared with third parties without consent.",
+    id: "support",
+    question: "Apakah ada dukungan jika saya mengalami kendala?",
+    answer:
+      "Tentu. Tim support Go Space siap membantu Anda melalui WhatsApp, email, atau telepon pada jam operasional. Kami pastikan kebutuhan bisnis Anda tetap lancar.",
   },
 ];
 
