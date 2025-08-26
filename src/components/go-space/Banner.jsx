@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 export const Banner = ({ titleComponent }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -17,13 +17,12 @@ export const Banner = ({ titleComponent }) => {
     <>
       <section className="py-12 mt-12">
         {/* Header section with title on left and rating card on right */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:mx-15 sm:mx-10 mx-7">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:px-24 2xl:px-80">
           {/* Title section */}
           <div className="flex-1 max-w-2xl">
             <h1
-              className={`text-5xl lg:text-6xl font-bold text-purple-700 leading-tight mb-4 ${
-                titleComponent || ""
-              }`}
+              className={`text-5xl lg:text-6xl font-bold text-purple-700 leading-tight mb-4 ${titleComponent || ""
+                }`}
             >
               Virtual Office
               <br />
@@ -33,7 +32,7 @@ export const Banner = ({ titleComponent }) => {
               Alamat bisnis strategis, kredibilitas naik, biaya operasional lebih hemat.
             </p>
           </div>
-          
+
           {/* Rating card */}
           <div className="flex-shrink-0">
             <div className="bg-goPurple text-white p-6 max-w-sm rounded-lg relative overflow-hidden">
@@ -69,16 +68,14 @@ export const Banner = ({ titleComponent }) => {
 
       {/* Hero image - positioned absolutely outside parent margins when not scrolled */}
       <div
-        className={`transition-all duration-500 ease-in-out ${
-          isScrolled ? "md:mx-16 sm:mx-10 mx-7" : ""
-        }`}
+        className={`transition-all duration-500 ease-in-out ${isScrolled ? "md:px-24 2xl:px-80" : ""
+          }`}
       >
         <img
           src="/go-space-banner.jpg"
           alt="Modern office workspace representing Go Space virtual office"
-          className={`w-full h-[60vh] object-cover shadow-2xl transition-all duration-500 ease-in-out ${
-            isScrolled ? "rounded-2xl" : "rounded-none"
-          }`}
+          className={`w-full h-[60vh] object-cover shadow-2xl transition-all duration-500 ease-in-out ${isScrolled ? "rounded-2xl" : "rounded-none"
+            }`}
         />
       </div>
     </>

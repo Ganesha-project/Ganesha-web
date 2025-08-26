@@ -57,12 +57,12 @@ export const PriceCatalog = ({ fontCustom, titleComponent }) => {
         >
           Pilih Paket Terbaik
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 ">
           Temukan ruang kerja yang sesuai dengan kebutuhan dan budget Anda
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pricingPlans.map((plan, idx) => {
           const IconComponent = plan.icon
           return (

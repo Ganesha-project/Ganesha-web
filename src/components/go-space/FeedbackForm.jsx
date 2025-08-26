@@ -199,7 +199,7 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
           </form>
         </div>
 
-        {/* Testimonials Preview */}
+        {/* Testimonials Preview
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
@@ -228,7 +228,8 @@ export const FeedbackForm = ({ fontCustom, titleComponent }) => {
               <p className="font-semibold text-gray-800 text-sm">- {testimonial.name}</p>
             </div>
           ))}
-        </div>
+        </div> */}
+      
       </div>
     </section>
   )

@@ -83,7 +83,7 @@ export const RoomPreview = ({ fontCustom = "", titleComponent }) => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div >
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Image Section */}
           <div className="relative h-80 md:h-96 bg-gray-200">

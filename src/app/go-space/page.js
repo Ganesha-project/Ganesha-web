@@ -18,7 +18,7 @@ export default function GoSpacePage() {
   return (
     <main className={`${monaSans.className} min-h-screen`}>
       <Banner titleComponent={GoTitle} />
-      <section className="md:mx-15 sm:mx-10 mx-7" >
+      <section className="md:px-24 2xl:px-80 flex flex-col gap-20" >
         <AboutUs />
         <WhyUs fontCustom={monaSans.className} titleComponent={GoTitle} />
         <PriceCatalog fontCustom={monaSans.className} titleComponent={GoTitle} />
