@@ -53,11 +53,18 @@ export const ExploreSpaces = () => {
               />
 
               {/* Overlay gradien */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:group-hover:backdrop-blur-lg transition-all duration-300"></div>
+              <div className=" absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:group-hover:backdrop-blur-lg transition-all duration-300"></div>
 
               {/* Icon pojok kanan atas */}
-              <div className="absolute top-0 right-0 p-3 bg-white text-purple-800 text-2xl shadow-lg flex justify-start rounded-out-rb-2xl flex-nowrap rounded-bl-4xl">
-                <BsArrowUpRightCircleFill className="text-3xl" />
+              <div className="absolute top-0 right-0 p-3 bg-white dark:bg-black text-purple-800 text-2xl shadow-lg flex justify-start rounded-out-rb-2xl flex-nowrap rounded-bl-4xl">
+                {" "}
+                <div className="bg-white dark:bg-black dark:text-black rounded-out-tl-2xl text-white rounded-bl-4xl">
+                  .
+                </div>{" "}
+                <div className="bg-white dark:bg-black rounded-out-rb-2xl">
+                  {" "}
+                  <BsArrowUpRightCircleFill className="text-3xl" />{" "}
+                </div>{" "}
               </div>
 
               {/* Konten teks di atas gambar */}

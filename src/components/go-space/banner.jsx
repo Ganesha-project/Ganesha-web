@@ -16,7 +16,7 @@ export const Banner = () => {
 
   return (
     <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
-      <section className="relative overflow-hidden rounded-2xl w-full h-[60vh]">
+      <section className="relative overflow-hidden rounded-2xl w-full h-[75vh]">
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait" initial={false}>
@@ -40,9 +40,9 @@ export const Banner = () => {
         <div className="absolute inset-0 flex flex-col justify-between z-20">
           {/* atas */}
           <div className="flex items-start justify-between">
-            <div className="bg-white dark:bg-black dark:text-white px-6 py-4 rounded-br-2xl rounded-out-bl-4xl text-purple-900 font-bold text-4xl relative">
+            <div className="bg-white dark:bg-black dark:text-white px-6 py-4 rounded-br-2xl rounded-out-bl-2xl text-purple-900 font-bold text-4xl relative">
               <div className="bg-white dark:bg-black dark:text-white rounded-out-lb-2xl"></div>
-              <div className="md:text-xl text-sm rounded-out-tr-3xl bg-white dark:bg-black dark:text-white font dark:shadow-2xl dark:shadow-white">
+              <div className="md:text-xl text-sm rounded-out-tr-2xl bg-white dark:bg-black dark:text-white font dark:shadow-2xl dark:shadow-white">
                 Go Space
               </div>
             </div>
@@ -75,23 +75,27 @@ export const Banner = () => {
             <div className="flex flex-col md:flex-row items-start md:items-end gap-5 text-sm text-white flex-1">
               <div className="md:max-w-sm">
                 <p className="pb-6 sm:text-sm text-[10px] px-4">
-                  Go Space membantu bisnis tampil profesional dengan alamat kantor virtual strategis yang bisa digunakan untuk legalitas, branding, dan kebutuhan operasional.
+                  Go Space membantu bisnis tampil profesional dengan alamat
+                  kantor virtual strategis yang bisa digunakan untuk legalitas,
+                  branding, dan kebutuhan operasional.
                 </p>
               </div>
 
               {/* Container untuk rounded out */}
               <div className="relative">
                 <div className="bg-white dark:bg-black text-purple-800 font-semibold rounded-tl-4xl p-6 text-xs md:text-sm flex flex-col gap-3">
-                  <div className="bg-white dark:bg-black rounded-out-rt-4xl flex items-start justify-between ">
+                  <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between ">
                     <img
                       src="/go-logo.png"
                       alt="go space logo"
-                      className="sm:w-20 w-15 mb-2 dark:drop-shadow-[0px_0px_10px_#ffffff]"
+                      className="sm:w-20 w-15 mb-2 dark:brightness-200"
                     />
+
                     <FaCircleArrowRight className="text-2xl" />
                   </div>
-                  <div className="bg-white dark:bg-black rounded-out-bl-4xl sm:pb-0 pb-5">
-                    Go Space by Ganesha Consulting. Alamat bisnis strategis, kredibilitas naik, biaya operasional lebih hemat.
+                  <div className="bg-white dark:bg-black dark:text-purple-300 rounded-out-bl-2xl sm:pb-0 pb-5">
+                    Go Space by Ganesha Consulting. Alamat bisnis strategis,
+                    kredibilitas naik, biaya operasional lebih hemat.
                   </div>
                 </div>
               </div>

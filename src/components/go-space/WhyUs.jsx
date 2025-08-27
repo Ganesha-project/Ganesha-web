@@ -18,7 +18,6 @@ const data = [
     desc: "Tingkatkan kredibilitas dengan alamat kantor bergengsi yang bisa digunakan untuk legalitas dan branding bisnismu.",
     icon: FaMapMarkerAlt,
     color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-50",
     textColor: "text-blue-600",
   },
   {
@@ -26,7 +25,6 @@ const data = [
     desc: "Nikmati fasilitas kantor tanpa harus membayar sewa fisik. Lebih efisien, lebih fleksibel, tetap profesional.",
     icon: FaWallet,
     color: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-50",
     textColor: "text-green-600",
   },
   {
@@ -34,7 +32,6 @@ const data = [
     desc: "Alamat Go Space bisa digunakan untuk kebutuhan pendaftaran PT, CV, dan perizinan usaha secara resmi.",
     icon: FaFileSignature,
     color: "from-purple-500 to-pink-500",
-    bgColor: "bg-purple-50",
     textColor: "text-purple-600",
   },
   {
@@ -42,7 +39,6 @@ const data = [
     desc: "Tidak perlu repot urus kantor fisik. Semua bisa dijalankan dari mana saja, kapan saja.",
     icon: FaLaptopHouse,
     color: "from-orange-500 to-red-500",
-    bgColor: "bg-orange-50",
     textColor: "text-orange-600",
   },
   {
@@ -50,7 +46,6 @@ const data = [
     desc: "Dibantu oleh tim yang berpengalaman dan responsif, siap menjawab kebutuhan bisnismu.",
     icon: FaUserTie,
     color: "from-yellow-500 to-orange-500",
-    bgColor: "bg-yellow-50",
     textColor: "text-yellow-600",
   },
   {
@@ -58,7 +53,6 @@ const data = [
     desc: "Bagian dari ekosistem Ganesha Group yang berpengalaman dalam layanan bisnis & konsultasi.",
     icon: FaHandshake,
     color: "from-indigo-500 to-blue-500",
-    bgColor: "bg-indigo-50",
     textColor: "text-indigo-600",
   },
 ];
@@ -104,10 +98,10 @@ export const WhyUs = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-purple-200 rounded-2xl p-10">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-5xl text-purple-950 font-extrabold">Why Us</h1>
-          <a className="cursor-pointer underline hover:text-purple-700 transition-colors">
+      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl p-10">
+        <div className="flex text-white justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold">Why Us</h1>
+          <a className="cursor-pointer underline hover:text-purple-300 transition-colors">
             See More
           </a>
         </div>
@@ -149,8 +143,17 @@ export const WhyUs = () => {
                     className="flex-shrink-0 px-3"
                     style={{ width: `${100 / cardsPerView}%` }}
                   >
-                    <div className="p-6 flex flex-col gap-5 justify-start bg-purple-900 rounded-2xl text-white shadow-lg transition-transform duration-300 h-full">
-                      <Icon size={28} />
+                    <div
+                      className="p-6 flex flex-col gap-5 justify-start 
+                                 bg-white/10 backdrop-blur-lg border border-white/20
+                                 rounded-2xl text-white shadow-lg 
+                                 transition-transform duration-300 h-full"
+                    >
+                      <div
+                        className={`w-12 h-12 flex items-center justify-center rounded-full bg-white ${item.textColor}`}
+                      >
+                        <Icon size={24} />
+                      </div>
                       <h2 className="text-xl font-semibold">{item.title}</h2>
                       <p className="text-gray-200 text-sm leading-relaxed flex-grow">
                         {item.desc}
