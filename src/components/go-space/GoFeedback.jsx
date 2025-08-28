@@ -1,71 +1,117 @@
+// src/components/go-space/GoFeedback.jsx
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 export const GoFeedback = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("✅ Feedback berhasil dikirim!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("❌ Gagal mengirim feedback.");
+      }
+    } catch (err) {
+      setStatus("❌ Terjadi kesalahan server.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="md:px-24 2xl:px-70 px-5 my-24">
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left side form */}
-        <div className="bg-gray-100 dark:bg-gray-900 h-full flex flex-col justify-center px-8 rounded-4xl drop-shadow-2xl py-7">
-          <h1 className="text-3xl font-bold mb-10">
-            Kritik & Saran
-          </h1>
+        {/* Form */}
+        <div className="bg-gray-100 dark:bg-gray-900 px-8 rounded-4xl drop-shadow-2xl py-7">
+          <h1 className="text-3xl font-bold mb-10">Kritik & Saran</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             Suara kamu penting untuk kami. Yuk, bagikan pengalaman atau
             masukanmu agar kami bisa terus berkembang.
           </p>
-          {/* form contact */}
-          <form className="space-y-4">
+
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               placeholder="Nama Lengkap"
+              required
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
                          border-gray-300 dark:border-gray-700 
                          bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100 
-                         placeholder-gray-400 dark:placeholder-gray-500"
+                         text-gray-900 dark:text-gray-100"
             />
             <input
               type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               placeholder="Alamat Email"
+              required
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
                          border-gray-300 dark:border-gray-700 
                          bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100 
-                         placeholder-gray-400 dark:placeholder-gray-500"
+                         text-gray-900 dark:text-gray-100"
             />
             <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Tulis pesan atau masukanmu di sini..."
+              required
               className="w-full border rounded-lg px-4 py-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 
                          border-gray-300 dark:border-gray-700 
                          bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100 
-                         placeholder-gray-400 dark:placeholder-gray-500"
+                         text-gray-900 dark:text-gray-100"
             />
             <button
               type="submit"
+              disabled={loading}
               className="px-6 py-2 bg-indigo-600 w-full py-5 text-white font-medium rounded-lg 
                          hover:bg-indigo-700 transition 
-                         dark:bg-indigo-500 dark:hover:bg-indigo-600"
+                         dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
             >
-              Kirim Feedback
+              {loading ? "Mengirim..." : "Kirim Feedback"}
             </button>
           </form>
+
+          {status && (
+            <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
+              {status}
+            </p>
+          )}
         </div>
 
-        {/* Right side background image with overlay + text */}
+        {/* Background + teks */}
         <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('https://images.pexels.com/photos/1181735/pexels-photo-1181735.jpeg')`,
             }}
-          ></div>
-          {/* overlay gelap biar teks kebaca */}
+          />
           <div className="absolute inset-0 bg-black/40"></div>
-          {/* teks di atas background */}
-          <div className="relative z-10 flex items-end justify-start h-full p-6">
-            <div className="relative bg-white/30 dark:bg-black/40 backdrop-blur-md border border-white/40 dark:border-gray-700 shadow-lg rounded-4xl py-4 px-6">
+          <div className="relative z-10 flex items-end h-full p-6">
+            <div className="bg-white/30 dark:bg-black/40 backdrop-blur-md border border-white/40 dark:border-gray-700 shadow-lg rounded-4xl py-4 px-6">
               <h2 className="text-2xl font-bold text-white drop-shadow">
                 Dengarkan Suaramu 🚀
               </h2>
