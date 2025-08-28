@@ -6,7 +6,7 @@ export const GoFeedback = () => {
     <main className="md:px-24 2xl:px-70 px-5 my-24">
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left side form */}
-        <div className="bg-gray-100 dark:bg-gray-900 h-full flex flex-col justify-center px-8 rounded-4xl drop-shadow-2xl">
+        <div className="bg-gray-100 dark:bg-gray-900 h-full flex flex-col justify-center px-8 rounded-4xl drop-shadow-2xl py-7">
           <h1 className="text-3xl font-bold mb-10">
             Kritik & Saran
           </h1>

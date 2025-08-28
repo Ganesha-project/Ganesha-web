@@ -35,19 +35,17 @@ export const PageFaq = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl p-10">
+      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl sm:p-10 py-10 px-3">
         {/* Header */}
-        <div className="flex text-white justify-between items-center mb-8">
+        <div className="px-3 flex text-white justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">
             Frequently Asked Questions
           </h1>
-          <a className="cursor-pointer underline hover:text-purple-300 transition-colors">
-            See More
-          </a>
+          {/* coba untuk togle buttonnya pindah kesini */}
         </div>
 
         {/* FAQ List */}
-        <div className=" flex flex-col gap-4">
+        <div className=" flex flex-col gap-4 px-3">
           {faqs.map((faq, index) => (
             <div
               key={index}

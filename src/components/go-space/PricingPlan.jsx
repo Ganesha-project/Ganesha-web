@@ -73,7 +73,7 @@ export const PricingPlan = () => {
                   <h3 className="text-xl text-gray-200 mb-2">{plan.title}</h3>
 
                   <div className="flex items-end gap-2 mb-4">
-                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-gray-200">
+                    <h2 className="text-xl md:text-3xl font-bold bg-clip-text text-gray-200">
                       {plan.price}
                     </h2>
                     <span className="text-gray-200 text-sm pb-1">

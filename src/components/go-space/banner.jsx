@@ -16,7 +16,7 @@ export const Banner = () => {
 
   return (
     <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
-      <section className="relative overflow-hidden rounded-2xl w-full h-[75vh]">
+      <section className="relative overflow-hidden rounded-2xl w-full min-h-[75vh]">
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait" initial={false}>
@@ -82,7 +82,7 @@ export const Banner = () => {
               </div>
 
               {/* Container untuk rounded out */}
-              <div className="relative">
+              <div className="relative ">
                 <div className="bg-white dark:bg-black text-purple-800 font-semibold rounded-tl-4xl p-6 text-xs md:text-sm flex flex-col gap-3">
                   <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between ">
                     <img

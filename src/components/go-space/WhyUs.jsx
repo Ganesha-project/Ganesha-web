@@ -60,24 +60,21 @@ const data = [
 export const WhyUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Calculate cards per view based on screen size
   const getCardsPerView = () => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1024) return 4; // lg and above - desktop
-      if (window.innerWidth >= 768) return 2; // md - tablet
-      return 1; // mobile
+      if (window.innerWidth >= 1024) return 4;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
     }
-    return 4; // default for SSR
+    return 4;
   };
 
   const [cardsPerView, setCardsPerView] = useState(getCardsPerView);
 
-  // Update cards per view on window resize
   React.useEffect(() => {
     const handleResize = () => {
       setCardsPerView(getCardsPerView());
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -98,34 +95,30 @@ export const WhyUs = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl p-10">
-        <div className="flex text-white justify-between items-center mb-8">
+      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl sm:p-10 py-10 px-3">
+        {/* Header + Controls */}
+        <div className="flex px-3 text-white justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Why Us</h1>
-          <a className="cursor-pointer underline hover:text-purple-300 transition-colors">
-            See More
-          </a>
+          <div className="flex gap-3">
+            <button
+              onClick={prevSlide}
+              disabled={currentIndex === 0}
+              className="bg-white text-purple-900 rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
+            >
+              <FaChevronLeft size={18} />
+            </button>
+            <button
+              onClick={nextSlide}
+              disabled={currentIndex >= maxIndex}
+              className="bg-white text-purple-900 rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
+            >
+              <FaChevronRight size={18} />
+            </button>
+          </div>
         </div>
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            disabled={currentIndex === 0}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-gray-50 disabled:bg-gray-100 disabled:text-gray-400 text-purple-900 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:hover:scale-100 disabled:cursor-not-allowed"
-          >
-            <FaChevronLeft size={20} />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            disabled={currentIndex >= maxIndex}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-gray-50 disabled:bg-gray-100 disabled:text-gray-400 text-purple-900 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 disabled:hover:scale-100 disabled:cursor-not-allowed"
-          >
-            <FaChevronRight size={20} />
-          </button>
-
-          {/* Carousel Track */}
           <div className="overflow-hidden rounded-xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
