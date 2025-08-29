@@ -16,7 +16,7 @@ export const Banner = () => {
 
   return (
     <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
-      <section className="relative overflow-hidden rounded-2xl w-full min-h-[75vh]">
+      <section className="relative overflow-hidden rounded-parent w-full min-h-[75vh]">
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait" initial={false}>

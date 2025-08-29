@@ -43,7 +43,7 @@ export const ExploreSpaces = () => {
           {spaces.map((space, idx) => (
             <div
               key={idx}
-              className="relative rounded-2xl overflow-hidden shadow-lg group"
+              className="relative rounded-parent overflow-hidden shadow-lg group"
             >
               {/* Gambar utama */}
               <img
@@ -56,12 +56,12 @@ export const ExploreSpaces = () => {
               <div className=" absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:group-hover:backdrop-blur-lg transition-all duration-300"></div>
 
               {/* Icon pojok kanan atas */}
-              <div className="absolute top-0 right-0 p-3 bg-white dark:bg-black text-purple-800 text-2xl shadow-lg flex justify-start rounded-out-rb-2xl flex-nowrap rounded-bl-4xl">
+              <div className="absolute top-0 right-0 p-3 bg-white dark:bg-black text-purple-800 text-2xl shadow-lg flex justify-start rounded-out-rb-parent flex-nowrap rounded-bl-parent">
                 {" "}
-                <div className="bg-white dark:bg-black dark:text-black rounded-out-tl-2xl text-white rounded-bl-4xl">
+                <div className="bg-white dark:bg-black dark:text-black rounded-out-tl-parent text-white rounded-bl-parent">
                   .
                 </div>{" "}
-                <div className="bg-white dark:bg-black rounded-out-rb-2xl">
+                <div className="bg-white dark:bg-black rounded-out-rb-parent">
                   {" "}
                   <BsArrowUpRightCircleFill className="text-3xl" />{" "}
                 </div>{" "}
@@ -71,7 +71,7 @@ export const ExploreSpaces = () => {
               <div className="absolute bottom-5 left-5 right-5 text-white z-10 pb-5">
                 <div className="translate-y-0 md:translate-y-[50%] md:group-hover:translate-y-0 transition-transform duration-300">
                   <h2 className="font-bold text-2xl">{space.title}</h2>
-                  <p className="text-sm text-gray-200 mt-2 line-clamp-none md:line-clamp-2 md:group-hover:line-clamp-none transition-all duration-300">
+                  <p className="text-sm text-gray-200 mt-7 line-clamp-none md:line-clamp-2 md:group-hover:line-clamp-none transition-all duration-300">
                     {space.desc}
                   </p>
                   <button
@@ -115,7 +115,7 @@ export const ExploreSpaces = () => {
                           key={imgIdx}
                           width={800}
                           height={600}
-                          className="z-50 max-h-screen rounded-2xl object-contain"
+                          className="z-50 max-h-screen roundedparentl object-contain"
                           src={image}
                           alt={`${space.title}-${imgIdx}`}
                         />

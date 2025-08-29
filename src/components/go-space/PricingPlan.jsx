@@ -58,7 +58,7 @@ export const PricingPlan = () => {
                 plan.popular
                   ? "bg-gradient-to-br from-purple-600 to-blue-600"
                   : "bg-gradient-to-br from-gray-700 to-gray-800"
-              } px-2 pb-2 rounded-3xl transform hover:scale-105 transition-transform duration-300 shadow-xl`}
+              } z-10 overflow-hidden px-2 pb-2 rounded-parent transform hover:scale-105 transition-transform duration-300 shadow-xl relative`}
             >
               {plan.popular && (
                 <div className="flex justify-between items-center py-6 px-4 text-white">
@@ -67,8 +67,9 @@ export const PricingPlan = () => {
                 </div>
               )}
 
-                {/* kenapa div ini ngelebihin container nya panjangnya */}
-              <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-black flex flex-col rounded-3xl p-6 text-white gap-5">
+              <div className="-z-10 blur-[120px] w-100 h-100 bg-yellow-400 absolute -right-53 top-5"></div>
+
+              <div className="!z-50 bg-gradient-to-br from-slate-900 via-gray-900 to-black flex flex-col rounded-children p-6 text-white gap-5">
                 <div className="flex-1">
                   <h3 className="text-xl text-gray-200 mb-2">{plan.title}</h3>
 
@@ -91,7 +92,7 @@ export const PricingPlan = () => {
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
                         : "bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600"
                     } py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full mb-8`}
-                  >
+                  >!
                     Book Now
                   </button>
 

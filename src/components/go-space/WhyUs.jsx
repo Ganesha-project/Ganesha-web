@@ -95,7 +95,7 @@ export const WhyUs = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl sm:p-10 py-10 px-3">
+      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500  sm:p-10 py-10 px-3 rounded-parent ">
         {/* Header + Controls */}
         <div className="flex px-3 text-white justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Why Us</h1>
@@ -119,7 +119,7 @@ export const WhyUs = () => {
 
         {/* Carousel Container */}
         <div className="relative">
-          <div className="overflow-hidden rounded-xl">
+          <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -139,7 +139,7 @@ export const WhyUs = () => {
                     <div
                       className="p-6 flex flex-col gap-5 justify-start 
                                  bg-white/10 backdrop-blur-lg border border-white/20
-                                 rounded-2xl text-white shadow-lg 
+                                 rounded-children text-white shadow-lg 
                                  transition-transform duration-300 h-full"
                     >
                       <div

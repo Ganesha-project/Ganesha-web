@@ -35,25 +35,24 @@ export const PageFaq = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500 rounded-2xl sm:p-10 py-10 px-3">
+      <section className="relative bg-gradient-to-b from-goPurple to-goPurple rounded-parent sm:p-10 py-10 px-3 overflow-hidden z-20">
+        <div className="-z-10 blur-[120px] w-100 h-100 bg-yellow-400 absolute -right-53 top-5"></div>
+
         {/* Header */}
-        <div className="px-3 flex text-white justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">
-            Frequently Asked Questions
-          </h1>
-          {/* coba untuk togle buttonnya pindah kesini */}
+        <div className="px-3 flex text-white justify-between items-center mb-8 relative z-10">
+          <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
         </div>
 
         {/* FAQ List */}
-        <div className=" flex flex-col gap-4 px-3">
+        <div className="flex flex-col gap-4 px-3 relative z-10">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-2xl overflow-hidden 
-                       bg-white/10 dark:bg-black/20 
-                       backdrop-blur-lg 
-                       border border-white/20 
-                       shadow-lg"
+              className="rounded-children overflow-hidden 
+                         bg-white/10 dark:bg-black/20 
+                         backdrop-blur-lg 
+                         border border-white/20 
+                         shadow-lg"
             >
               <button
                 onClick={() => toggleFaq(index)}
