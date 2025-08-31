@@ -19,7 +19,7 @@ const whyUsData = [
     type: "text-with-icon",
     title: "Alamat Bisnis Strategis & Bergengsi",
     icon: FaLocationDot,
-    className: "flex justify-center items-center bg-goPurple-secondary rounded-2xl lg:row-span-4 lg:col-span-2 px-7 font-bold gap-5 text-center",
+    className: "flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 font-bold gap-5 text-center",
     titleClassName: "text-start text-xl sm:text-2xl lg:text-3xl py-5",
     iconClassName: "text-4xl lg:text-5xl",
     // Mobile properties
@@ -116,7 +116,7 @@ const whyUsData = [
     type: "text-with-icon",
     title: "Akses Internet dan penggunaan Smart TV gratis selama penggunaan ruang rapat",
     icon: FaWifi,
-    className: "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary gap-4 text-start",
+    className: "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
     titleClassName: "text-base sm:text-lg lg:text-xl",
     iconClassName: "text-4xl lg:text-5xl"
   },
@@ -130,7 +130,7 @@ const whyUsData = [
     id: 10,
     type: "text-only",
     title: "Jaringan Komunitas dan Kolaborasi",
-    className: "font-semibold flex justify-center items-center bg-goPurple-secondary rounded-2xl lg:row-span-4 p-4 text-center"
+    className: "font-semibold flex justify-center items-center bg-goYellow dark:text-black/90 rounded-2xl lg:row-span-4 p-4 text-center"
   }
 ];
 
@@ -253,7 +253,7 @@ export const WhyUsMobile = () => {
 
   return (
     <main className="md:px-24 2xl:px-70 px-5">
-      <section className="bg-gradient-to-b from-purple-900 via-purple-700/80 to-purple-500  sm:p-10 py-10 px-3 rounded-parent ">
+      <section className="bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500  sm:p-10 py-10 px-3 rounded-parent ">
         {/* Header + Controls */}
         <div className="flex px-3 text-white justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">Why Us</h1>
@@ -261,14 +261,14 @@ export const WhyUsMobile = () => {
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className="bg-white text-purple-900 rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
+              className="bg-white text-goPurple rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
             >
               <FaChevronLeft size={18} />
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
-              className="bg-white text-purple-900 rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
+              className="bg-white text-goPurple rounded-full p-2 shadow-md hover:scale-110 transition disabled:bg-gray-200 disabled:text-gray-400 disabled:hover:scale-100"
             >
               <FaChevronRight size={18} />
             </button>
@@ -324,7 +324,7 @@ export const WhyUsMobile = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
                   currentIndex === index
-                    ? "bg-purple-900 scale-110"
+                    ? "bg-goPurple scale-110"
                     : "bg-purple-400 hover:bg-purple-600"
                 }`}
               />

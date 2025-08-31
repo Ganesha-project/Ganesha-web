@@ -1,4 +1,3 @@
-// src/components/go-space/GoFeedback.jsx
 "use client";
 import React, { useState } from "react";
 
@@ -24,13 +23,13 @@ export const GoFeedback = () => {
       });
       const data = await res.json();
       if (data.success) {
-        setStatus("✅ Feedback berhasil dikirim!");
+        setStatus("✅ Terima kasih! Masukan Anda telah berhasil dikirim dan sangat berarti bagi kami.");
         setForm({ name: "", email: "", message: "" });
       } else {
-        setStatus("❌ Gagal mengirim feedback.");
+        setStatus("❌ Maaf, terjadi kendala saat mengirim masukan. Silakan coba lagi.");
       }
     } catch (err) {
-      setStatus("❌ Terjadi kesalahan server.");
+      setStatus("❌ Koneksi bermasalah. Mohon periksa internet Anda dan coba lagi.");
     } finally {
       setLoading(false);
     }
@@ -41,58 +40,60 @@ export const GoFeedback = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Form */}
         <div className="bg-gray-100 h-full flex justify-center items-start flex-col dark:bg-gray-900 px-8 rounded-parent drop-shadow-2xl py-7">
-          <h1 className="text-3xl font-bold mb-10">Kritik & Saran</h1>
+          <h1 className="text-3xl font-bold mb-10">Suara Anda, Prioritas Kami</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Suara kamu penting untuk kami. Yuk, bagikan pengalaman atau
-            masukanmu agar kami bisa terus berkembang.
+            Pengalaman dan masukan Anda adalah kunci untuk terus meningkatkan kualitas layanan kami. 
+            Mari berkolaborasi menciptakan workspace yang lebih baik bersama-sama.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Nama Lengkap"
-              required
-              className="w-full border rounded-input px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                         border-gray-300 dark:border-gray-700 
-                         bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100"
-            />
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Alamat Email"
-              required
-              className="w-full border rounded-input px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                         border-gray-300 dark:border-gray-700 
-                         bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100"
-            />
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Tulis pesan atau masukanmu di sini..."
-              required
-              className="w-full border rounded-input px-4 py-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                         border-gray-300 dark:border-gray-700 
-                         bg-white dark:bg-gray-800 
-                         text-gray-900 dark:text-gray-100"
-            />
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-6 py-2 bg-indigo-600 w-full py-5 text-white font-medium rounded-input 
-                         hover:bg-indigo-700 transition 
-                         dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
-            >
-              {loading ? "Mengirim..." : "Kirim Feedback"}
-            </button>
-          </form>
+          <div className="w-full">
+            <div className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Nama Lengkap Anda"
+                required
+                className="w-full border rounded-input px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
+                           border-gray-300 dark:border-gray-700 
+                           bg-white dark:bg-gray-800 
+                           text-gray-900 dark:text-gray-100"
+              />
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email untuk Follow-up"
+                required
+                className="w-full border rounded-input px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 
+                           border-gray-300 dark:border-gray-700 
+                           bg-white dark:bg-gray-800 
+                           text-gray-900 dark:text-gray-100"
+              />
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Bagikan pengalaman, saran, atau kritik konstruktif Anda untuk membantu kami berkembang lebih baik..."
+                required
+                className="w-full border rounded-input px-4 py-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 
+                           border-gray-300 dark:border-gray-700 
+                           bg-white dark:bg-gray-800 
+                           text-gray-900 dark:text-gray-100"
+              />
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="px-6 py-2 bg-goPurple rounded-children w-full py-5 text-white font-medium rounded-input 
+                           hover:bg-indigo-700 transition 
+                           dark:bg-indigo-500 dark:hover:bg-goPurple disabled:opacity-50"
+              >
+                {loading ? "Sedang Mengirim..." : "Kirim Masukan Saya"}
+              </button>
+            </div>
+          </div>
 
           {status && (
             <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
@@ -112,11 +113,8 @@ export const GoFeedback = () => {
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 flex items-end h-full p-6">
             <div className="bg-white/30 dark:bg-black/40 backdrop-blur-md border border-white/40 dark:border-gray-700 shadow-lg rounded-children py-4 px-6">
-              <h2 className="text-2xl font-bold text-white drop-shadow">
-                Dengarkan Suaramu 🚀
-              </h2>
               <p className="text-gray-100 mt-2 text-sm md:text-base drop-shadow">
-                Setiap masukan akan membantu kami memberikan layanan terbaik.
+                Setiap masukan berharga dari Anda membantu kami menciptakan pengalaman workspace yang lebih baik dan inovatif.
               </p>
             </div>
           </div>

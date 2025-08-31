@@ -6,34 +6,54 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const dataPricing = [
   {
-    title: "Standard",
+    title: "Virtual Office Space Lite",
     benefit: [
-      "Semua fitur Basic",
-      "Ruang meeting 5 jam / bulan",
-      "Loker pribadi",
-      "Akses 24/7",
-      "Printing & scanning",
+      "Alamat Domisili Prestisius",
+      "Resepsionis Profesional",
+      "Penerimaan Surat & Paket",
+      "Free Wifi",
+      "Akses Private Lift",
+      "Smart TV",
+      "Whiteboard",
+      "Free Tea & Coffee",
+      "Self Service Pantry",
+      "Free meeting room 40 jam/tahun",
+      "Ruang meeting besar (10 orang)",
+      "Ruang meeting kecil (5 orang)",
+      "Meeting room smoking area (3 orang)",
     ],
-    price: "Rp 2.500.000",
+    originalPrice: "Rp 2.550.000",
+    price: "Rp 1.700.000",
+    discount: "33% OFF",
     period: "/ bulan",
     description:
-      "Solusi sempurna untuk profesional dan tim kecil yang memerlukan fasilitas lebih lengkap untuk produktivitas maksimal.",
+      "Solusi virtual office dengan fasilitas lengkap untuk profesional dan bisnis kecil yang membutuhkan alamat prestisius dan meeting room.",
     img: "/go-space-assets/spaces/room-4-1.jpg",
     popular: true,
   },
   {
-    title: "Premium",
+    title: "Virtual Office Space Core",
     benefit: [
-      "Semua fitur Standard",
-      "Ruang meeting unlimited",
-      "Alamat bisnis resmi",
-      "Resepsionis virtual",
-      "Priority support",
+      "Alamat Domisili Prestisius",
+      "Resepsionis Profesional",
+      "Penerimaan Surat & Paket",
+      "Free Wifi",
+      "Akses Private Lift",
+      "Smart TV",
+      "Whiteboard",
+      "Free Tea & Coffee",
+      "Self Service Pantry",
+      "Free meeting room 90 jam/tahun",
+      "Ruang meeting besar (10 orang)",
+      "Ruang meeting kecil (5 orang)",
+      "Meeting room smoking area (3 orang)",
     ],
-    price: "Rp 5.000.000",
+    originalPrice: "Rp 3.750.000",
+    price: "Rp 2.500.000",
+    discount: "33% OFF",
     period: "/ bulan",
     description:
-      "Paket eksklusif untuk perusahaan dan tim besar yang menginginkan layanan premium dan fleksibilitas penuh.",
+      "Paket virtual office premium dengan jam meeting room yang lebih banyak untuk bisnis yang memerlukan fleksibilitas lebih tinggi.",
     img: "/go-space-assets/spaces/room-12-1.jpg",
     popular: true,
   },
@@ -44,11 +64,11 @@ export const PricingPlan = () => {
     <main className="px-5 md:px-24 2xl:px-70 my-24">
       <section>
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Pricing Plan
+          Virtual Office Space Plans
         </h1>
         <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-          Pilih paket yang sesuai dengan kebutuhan Anda. Semua paket dilengkapi
-          dengan fasilitas terbaik untuk mendukung produktivitas kerja Anda.
+          Pilih paket virtual office yang sesuai dengan kebutuhan bisnis Anda. 
+          Dapatkan alamat prestisius dan fasilitas lengkap dengan diskon khusus.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {dataPricing.map((plan, index) => (
@@ -62,8 +82,13 @@ export const PricingPlan = () => {
             >
               {plan.popular && (
                 <div className="flex justify-between items-center py-6 px-4 text-white">
-                  <span className=" font-semibold text-xl">{plan.title}</span>
-                  <MdOutlineDiamond className="text-xl" />
+                  <span className="font-semibold text-xl">{plan.title}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
+                      {plan.discount}
+                    </span>
+                    <MdOutlineDiamond className="text-xl" />
+                  </div>
                 </div>
               )}
 
@@ -73,13 +98,23 @@ export const PricingPlan = () => {
                 <div className="flex-1">
                   <h3 className="text-xl text-gray-200 mb-2">{plan.title}</h3>
 
-                  <div className="flex items-end gap-2 mb-4">
-                    <h2 className="text-xl md:text-3xl font-bold bg-clip-text text-gray-200">
-                      {plan.price}
-                    </h2>
-                    <span className="text-gray-200 text-sm pb-1">
-                      {plan.period}
-                    </span>
+                  <div className="mb-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-gray-400 line-through text-lg">
+                        {plan.originalPrice}
+                      </span>
+                      <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                        {plan.discount}
+                      </span>
+                    </div>
+                    <div className="flex items-end gap-2">
+                      <h2 className="text-xl md:text-3xl font-bold bg-clip-text text-gray-200">
+                        {plan.price}
+                      </h2>
+                      <span className="text-gray-200 text-sm pb-1">
+                        {plan.period}
+                      </span>
+                    </div>
                   </div>
 
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
@@ -92,7 +127,7 @@ export const PricingPlan = () => {
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
                         : "bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600"
                     } py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full mb-8`}
-                  >!
+                  >
                     Book Now
                   </button>
 

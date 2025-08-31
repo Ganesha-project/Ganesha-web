@@ -16,7 +16,7 @@ export const Banner = () => {
 
   return (
     <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
-      <section className="relative overflow-hidden rounded-parent w-full min-h-[75vh]">
+      <section className="relative overflow-hidden rounded-parent w-full min-h-[75svh]">
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait" initial={false}>
@@ -40,15 +40,15 @@ export const Banner = () => {
         <div className="hidden md:flex absolute inset-0 flex-col justify-between z-20">
           {/* atas */}
           <div className="flex items-start justify-between">
-            <div className="bg-white dark:bg-black dark:text-white px-6 py-4 rounded-br-2xl rounded-out-bl-2xl text-purple-900 font-bold text-4xl relative">
+            <div className="bg-white dark:bg-black dark:text-white px-6 py-4 rounded-br-2xl rounded-out-bl-2xl text-goPurple font-bold text-4xl relative">
               <div className="bg-white dark:bg-black dark:text-white rounded-out-lb-2xl"></div>
-              <div className="md:text-xl text-sm rounded-out-tr-2xl bg-white dark:bg-black dark:text-white font dark:shadow-2xl dark:shadow-white">
+              <div className="text-xl sm:text-2xl font-bold rounded-out-tr-2xl bg-white dark:bg-black dark:text-white font dark:shadow-2xl dark:shadow-white">
                 Go Space
               </div>
             </div>
 
             <div className="px-6 py-4">
-              <button className="bg-purple-900 text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+              <button className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
                 Get Started
               </button>
             </div>
@@ -58,11 +58,11 @@ export const Banner = () => {
           <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-10">
             {/* bawah kiri */}
             <div className="flex flex-col gap-5 flex-1 text-white p-6">
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-xl md:text-5xl font-bold leading-tight">
                 Work Better, <br /> Together
               </h1>
               <div className="flex gap-3">
-                <button className="bg-purple-900 text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+                <button className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
                   Book Now
                 </button>
                 <button className="border border-white text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-white hover:text-black transition">
@@ -102,10 +102,10 @@ export const Banner = () => {
         </div>
 
         {/* === Mobile Content === */}
-        <div className="flex md:hidden relative z-20 flex-col justify-between">
+        <div className="flex md:hidden absolute inset-0 flex-col justify-between z-20 h-full">
           {/* atas */}
           <div className="flex items-start justify-between">
-            <div className="bg-white dark:bg-black dark:text-white px-4 py-3 rounded-br-2xl rounded-out-bl-2xl text-purple-900 font-bold text-lg relative">
+            <div className="bg-white dark:bg-black dark:text-white px-4 py-3 rounded-br-2xl rounded-out-bl-2xl text-goPurple font-bold text-lg relative">
               <div className="bg-white dark:bg-black dark:text-white rounded-out-lb-2xl"></div>
               <div className="text-xs rounded-out-tr-2xl bg-white dark:bg-black dark:text-white dark:shadow-2xl dark:shadow-white">
                 Go Space
@@ -113,19 +113,19 @@ export const Banner = () => {
             </div>
 
             <div className="px-4 py-2">
-              <button className="bg-purple-900 text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+              <button className="bg-goPurple text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
                 Get Started
               </button>
             </div>
           </div>
 
           {/* bawah */}
-          <div className="flex flex-col gap-6 justify-between mt-8 text-white">
+          <div className="flex flex-col gap-6 text-white pb-0">
             <h1 className="text-2xl font-bold leading-tight px-5">
               Work Better, <br /> Together
             </h1>
             <div className="flex gap-2 px-5">
-              <button className="bg-purple-900 text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+              <button className="bg-goPurple text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
                 Book Now
               </button>
               <button className="border border-white text-white rounded-full px-3 py-1 text-xs hover:bg-white hover:text-black transition">
