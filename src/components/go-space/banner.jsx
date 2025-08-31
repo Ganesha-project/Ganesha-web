@@ -36,8 +36,8 @@ export const Banner = () => {
         {/* overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent z-10" />
 
-        {/* konten di atas gambar */}
-        <div className="absolute inset-0 flex flex-col justify-between z-20">
+        {/* === Desktop Content === */}
+        <div className="hidden md:flex absolute inset-0 flex-col justify-between z-20">
           {/* atas */}
           <div className="flex items-start justify-between">
             <div className="bg-white dark:bg-black dark:text-white px-6 py-4 rounded-br-2xl rounded-out-bl-2xl text-purple-900 font-bold text-4xl relative">
@@ -81,22 +81,77 @@ export const Banner = () => {
                 </p>
               </div>
 
-              {/* Container untuk rounded out */}
-              <div className="relative ">
+              <div className="relative">
                 <div className="bg-white dark:bg-black text-purple-800 font-semibold rounded-tl-4xl p-6 text-xs md:text-sm flex flex-col gap-3">
-                  <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between ">
+                  <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between">
                     <img
                       src="/go-logo.png"
                       alt="go space logo"
                       className="sm:w-20 w-15 mb-2 dark:brightness-200"
                     />
-
                     <FaCircleArrowRight className="text-2xl" />
                   </div>
                   <div className="bg-white dark:bg-black dark:text-purple-300 rounded-out-bl-2xl sm:pb-0 pb-5">
                     Go Space by Ganesha Consulting. Alamat bisnis strategis,
                     kredibilitas naik, biaya operasional lebih hemat.
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* === Mobile Content === */}
+        <div className="flex md:hidden relative z-20 flex-col justify-between">
+          {/* atas */}
+          <div className="flex items-start justify-between">
+            <div className="bg-white dark:bg-black dark:text-white px-4 py-3 rounded-br-2xl rounded-out-bl-2xl text-purple-900 font-bold text-lg relative">
+              <div className="bg-white dark:bg-black dark:text-white rounded-out-lb-2xl"></div>
+              <div className="text-xs rounded-out-tr-2xl bg-white dark:bg-black dark:text-white dark:shadow-2xl dark:shadow-white">
+                Go Space
+              </div>
+            </div>
+
+            <div className="px-4 py-2">
+              <button className="bg-purple-900 text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          {/* bawah */}
+          <div className="flex flex-col gap-6 justify-between mt-8 text-white">
+            <h1 className="text-2xl font-bold leading-tight px-5">
+              Work Better, <br /> Together
+            </h1>
+            <div className="flex gap-2 px-5">
+              <button className="bg-purple-900 text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+                Book Now
+              </button>
+              <button className="border border-white text-white rounded-full px-3 py-1 text-xs hover:bg-white hover:text-black transition">
+                Read More
+              </button>
+            </div>
+
+            <p className="text-xs px-5">
+              Go Space membantu bisnis tampil profesional dengan alamat kantor
+              virtual strategis yang bisa digunakan untuk legalitas, branding,
+              dan kebutuhan operasional.
+            </p>
+
+            <div className="relative">
+              <div className="bg-white dark:bg-black text-purple-800 font-semibold rounded-tl-4xl p-4 text-xs flex flex-col gap-3">
+                <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between">
+                  <img
+                    src="/go-logo.png"
+                    alt="go space logo"
+                    className="w-12 mb-2 dark:brightness-200"
+                  />
+                  <FaCircleArrowRight className="text-xl" />
+                </div>
+                <div className="bg-white dark:bg-black dark:text-purple-300 rounded-out-bl-2xl pb-3">
+                  Go Space by Ganesha Consulting. Alamat bisnis strategis,
+                  kredibilitas naik, biaya operasional lebih hemat.
                 </div>
               </div>
             </div>

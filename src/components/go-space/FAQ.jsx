@@ -36,7 +36,7 @@ export const PageFaq = () => {
   return (
     <main className="md:px-24 2xl:px-70 px-5">
       <section className="relative bg-gradient-to-b from-goPurple to-goPurple rounded-parent sm:p-10 py-10 px-3 overflow-hidden z-20">
-        <div className="-z-10 blur-[120px] w-100 h-100 bg-yellow-400 absolute -right-53 top-5"></div>
+        <div className="-z-10 blur-[180px] w-120 h-120 bg-yellow-400 absolute -right-20 top-5"></div>
 
         {/* Header */}
         <div className="px-3 flex text-white justify-between items-center mb-8 relative z-10">
