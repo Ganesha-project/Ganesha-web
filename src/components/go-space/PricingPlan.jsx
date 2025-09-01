@@ -3,61 +3,7 @@
 import React from "react";
 import { MdOutlineDiamond } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-
-const dataPricing = [
-  {
-    title: "Virtual Office Space Lite",
-    benefit: [
-      "Alamat Domisili Prestisius",
-      "Resepsionis Profesional",
-      "Penerimaan Surat & Paket",
-      "Free Wifi",
-      "Akses Private Lift",
-      "Smart TV",
-      "Whiteboard",
-      "Free Tea & Coffee",
-      "Self Service Pantry",
-      "Free meeting room 40 jam/tahun",
-      "Ruang meeting besar (10 orang)",
-      "Ruang meeting kecil (5 orang)",
-      "Meeting room smoking area (3 orang)",
-    ],
-    originalPrice: "Rp 2.550.000",
-    price: "Rp 1.700.000",
-    discount: "33% OFF",
-    period: "/ bulan",
-    description:
-      "Solusi virtual office dengan fasilitas lengkap untuk profesional dan bisnis kecil yang membutuhkan alamat prestisius dan meeting room.",
-    img: "/go-space-assets/spaces/room-4-1.jpg",
-    popular: true,
-  },
-  {
-    title: "Virtual Office Space Core",
-    benefit: [
-      "Alamat Domisili Prestisius",
-      "Resepsionis Profesional",
-      "Penerimaan Surat & Paket",
-      "Free Wifi",
-      "Akses Private Lift",
-      "Smart TV",
-      "Whiteboard",
-      "Free Tea & Coffee",
-      "Self Service Pantry",
-      "Free meeting room 90 jam/tahun",
-      "Ruang meeting besar (10 orang)",
-      "Ruang meeting kecil (5 orang)",
-      "Meeting room smoking area (3 orang)",
-    ],
-    originalPrice: "Rp 3.750.000",
-    price: "Rp 2.500.000",
-    discount: "33% OFF",
-    period: "/ bulan",
-    description:
-      "Paket virtual office premium dengan jam meeting room yang lebih banyak untuk bisnis yang memerlukan fleksibilitas lebih tinggi.",
-    img: "/go-space-assets/spaces/room-12-1.jpg",
-    popular: true,
-  },
-];
+import { dataPricing } from "@/Data/GoSpace/PricingData";
 
 export const PricingPlan = () => {
 
