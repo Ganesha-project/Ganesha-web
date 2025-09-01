@@ -14,6 +14,12 @@ export const Banner = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const waNumber = "628871510044"; 
+  const waMessage = "Halo, saya tertarik dengan layanan Go Space!";
+  const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(
+    waMessage
+  )}`;
+
   return (
     <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
       <section className="relative overflow-hidden rounded-parent w-full min-h-[75svh]">
@@ -47,10 +53,10 @@ export const Banner = () => {
               </div>
             </div>
 
-            <div className="px-6 py-4">
-              <button className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+            <div className="mx-6 mt-8">
+              <a href={waLink} target="_blank"  className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
 
@@ -62,12 +68,12 @@ export const Banner = () => {
                 Work Better, <br /> Together
               </h1>
               <div className="flex gap-3">
-                <button className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+                <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
                   Book Now
-                </button>
-                <button className="border border-white text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-white hover:text-black transition">
+                </a>
+                <a  href="#why-us"className="border border-white text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-white hover:text-black transition">
                   Read More
-                </button>
+                </a>
               </div>
             </div>
 
@@ -112,10 +118,10 @@ export const Banner = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2">
-              <button className="bg-goPurple text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+            <div className="px-4 py-2 z-50">
+              <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-goPurple block text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
 

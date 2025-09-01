@@ -167,10 +167,6 @@ export const FAQ = [
         answer: "Ya, semua website yang kami buat memiliki desain responsif, yang berarti akan terlihat dan berfungsi dengan baik di perangkat apa pun, termasuk komputer, tablet, dan smartphone."
     },
     {
-        question: "Apakah saya bisa meng-update website sendiri setelah selesai dibuat?",
-        answer: "Tentu saja! Kami menggunakan Content Management System (CMS) seperti WordPress yang memungkinkan Anda untuk dengan mudah mengupdate konten, gambar, dan halaman tanpa memerlukan pengetahuan teknis."
-    },
-    {
         question: "Bagaimana jika saya membutuhkan fitur khusus pada website saya?",
         answer: "Kami dapat mengembangkan fitur khusus sesuai kebutuhan Anda, seperti e-commerce, sistem booking, forum, dan lainnya. Silakan diskusikan kebutuhan spesifik Anda dengan tim kami."
     },
@@ -185,10 +181,6 @@ export const FAQ = [
     {
         question: "Bagaimana proses pembuatan website dimulai?",
         answer: "Proses dimulai dengan konsultasi awal untuk memahami kebutuhan dan tujuan Anda. Setelah itu, kami akan mengembangkan konsep desain dan fungsi, dan setelah mendapat persetujuan Anda, kami akan mulai mengembangkan website."
-    },
-    {
-        question: "Apakah saya memiliki kendali penuh atas website saya setelah selesai?",
-        answer: "Ya, Anda akan memiliki kendali penuh dan akses ke website Anda. Namun untuk beberapa paket kami membuat web statis yang diharuskan teks Editor seperti (VsCode) untuk mengubah konten dalam web tersebut, Kami akan memberikan pelatihan dasar jika diperlukan untuk membantu Anda mengelola website."
     }
 ]
 export const dataPageWeb = {

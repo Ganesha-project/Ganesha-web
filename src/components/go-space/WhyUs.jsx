@@ -16,15 +16,18 @@ const whyUsData = [
   {
     id: 1,
     // Desktop properties
-    type: "text-with-icon",
+    type: "text-with-icon-desc",
     title: "Alamat Bisnis Strategis & Bergengsi",
     icon: FaLocationDot,
-    className: "flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 font-bold gap-5 text-center",
-    titleClassName: "text-start text-xl sm:text-2xl lg:text-3xl py-5",
+    className:
+      "flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 py-5 font-bold gap-5 text-center",
+    titleClassName: "text-start text-xl sm:text-2xl py-5",
     iconClassName: "text-4xl lg:text-5xl",
+    desc: "Gedung Fancy Mampang, Jl. Mampang Prpt. Raya No. 151 Lantai 4 Unit A7, RT.3/RW.001, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Jakarta, Indonesia 12760",
     // Mobile properties
     mobileTitle: "Alamat Strategis",
-    mobileDesc: "Tingkatkan kredibilitas dengan alamat kantor bergengsi yang bisa digunakan untuk legalitas dan branding bisnismu.",
+    mobileDesc:
+      "Tingkatkan kredibilitas dengan alamat kantor bergengsi yang bisa digunakan untuk legalitas dan branding bisnismu.",
     mobileIcon: FaMapMarkerAlt,
     mobileColor: "from-blue-500 to-cyan-500",
     mobileTextColor: "text-blue-600",
@@ -35,11 +38,13 @@ const whyUsData = [
     title: "Hemat Biaya Operasional",
     imageSrc: "/go-space-assets/icon/money.png",
     imageAlt: "money-3d",
-    className: "font-semibold flex flex-col justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
+    className:
+      "font-semibold flex flex-col justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
     imageClassName: "w-16 sm:w-20",
     // Mobile properties
     mobileTitle: "Hemat Biaya",
-    mobileDesc: "Nikmati fasilitas kantor tanpa harus membayar sewa fisik. Lebih efisien, lebih fleksibel, tetap profesional.",
+    mobileDesc:
+      "Nikmati fasilitas kantor tanpa harus membayar sewa fisik. Lebih efisien, lebih fleksibel, tetap profesional.",
     mobileIcon: FaWallet,
     mobileColor: "from-green-500 to-emerald-500",
     mobileTextColor: "text-green-600",
@@ -50,12 +55,15 @@ const whyUsData = [
     title: "Proses Cepat & Mudah – Aktivasi dalam 1 hari",
     backgroundImage: "/go-space-assets/spaces/room-2-2.jpg",
     backgroundAlt: "proses cepat",
-    className: "relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px]",
+    className:
+      "relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px]",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
-    overlayClassName: "absolute inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
+    overlayClassName:
+      "absolute inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
     // Mobile properties
     mobileTitle: "Legalitas Terjamin",
-    mobileDesc: "Alamat Go Space bisa digunakan untuk kebutuhan pendaftaran PT, CV, dan perizinan usaha secara resmi.",
+    mobileDesc:
+      "Alamat Go Space bisa digunakan untuk kebutuhan pendaftaran PT, CV, dan perizinan usaha secara resmi.",
     mobileIcon: FaFileSignature,
     mobileColor: "from-purple-500 to-pink-500",
     mobileTextColor: "text-purple-600",
@@ -66,11 +74,13 @@ const whyUsData = [
     title: "Layanan Resepsionis Profesional",
     imageSrc: "/go-space-assets/icon/resepsionis.png",
     imageAlt: "resepsionis",
-    className: "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-6 text-white p-4 flex-col gap-4 text-center",
+    className:
+      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-6 text-white p-4 flex-col gap-4 text-center",
     imageClassName: "w-20 sm:w-24",
     // Mobile properties
     mobileTitle: "Fleksibel & Praktis",
-    mobileDesc: "Tidak perlu repot urus kantor fisik. Semua bisa dijalankan dari mana saja, kapan saja.",
+    mobileDesc:
+      "Tidak perlu repot urus kantor fisik. Semua bisa dijalankan dari mana saja, kapan saja.",
     mobileIcon: FaLaptopHouse,
     mobileColor: "from-orange-500 to-red-500",
     mobileTextColor: "text-orange-600",
@@ -79,10 +89,12 @@ const whyUsData = [
     id: 5,
     type: "text-only",
     title: "Legalitas Lengkap & Dukungan Pengurusan Dokumen",
-    className: "text-start font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4",
+    className:
+      "text-start font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4",
     // Mobile properties
     mobileTitle: "Tim Support Profesional",
-    mobileDesc: "Dibantu oleh tim yang berpengalaman dan responsif, siap menjawab kebutuhan bisnismu.",
+    mobileDesc:
+      "Dibantu oleh tim yang berpengalaman dan responsif, siap menjawab kebutuhan bisnismu.",
     mobileIcon: FaUserTie,
     mobileColor: "from-yellow-500 to-orange-500",
     mobileTextColor: "text-yellow-600",
@@ -92,11 +104,13 @@ const whyUsData = [
     type: "background-image-only",
     backgroundImage: "/go-space-assets/spaces/room-12-2.jpg",
     backgroundAlt: "bg-legal",
-    className: "relative rounded-2xl lg:row-span-4 lg:col-span-3 overflow-hidden min-h-[200px]",
+    className:
+      "relative rounded-2xl lg:row-span-4 lg:col-span-3 overflow-hidden min-h-[200px]",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
     // Mobile properties
     mobileTitle: "Terpercaya",
-    mobileDesc: "Bagian dari ekosistem Ganesha Group yang berpengalaman dalam layanan bisnis & konsultasi.",
+    mobileDesc:
+      "Bagian dari ekosistem Ganesha Group yang berpengalaman dalam layanan bisnis & konsultasi.",
     mobileIcon: FaHandshake,
     mobileColor: "from-indigo-500 to-blue-500",
     mobileTextColor: "text-indigo-600",
@@ -107,31 +121,37 @@ const whyUsData = [
     title: "Dukungan Tim yang Profesional",
     backgroundImage: "/go-space-assets/spaces/room-4-2.jpg",
     backgroundAlt: "tim profesional",
-    className: "relative rounded-2xl lg:row-span-6 overflow-hidden min-h-[200px]",
+    className:
+      "relative rounded-2xl lg:row-span-6 overflow-hidden min-h-[200px]",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
-    overlayClassName: "absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center"
+    overlayClassName:
+      "absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
   },
   {
     id: 8,
     type: "text-with-icon",
-    title: "Akses Internet dan penggunaan Smart TV gratis selama penggunaan ruang rapat",
+    title:
+      "Akses Internet dan penggunaan Smart TV gratis selama penggunaan ruang rapat",
     icon: FaWifi,
-    className: "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
+    className:
+      "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
     titleClassName: "text-base sm:text-lg lg:text-xl",
-    iconClassName: "text-4xl lg:text-5xl"
+    iconClassName: "text-4xl lg:text-5xl",
   },
   {
     id: 9,
     type: "text-only",
     title: "Akses Ruang Meeting & Coworking",
-    className: "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4 text-center"
+    className:
+      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4 text-center",
   },
   {
     id: 10,
     type: "text-only",
     title: "Jaringan Komunitas dan Kolaborasi",
-    className: "font-semibold flex justify-center items-center bg-goYellow dark:text-black/90 rounded-2xl lg:row-span-4 p-4 text-center"
-  }
+    className:
+      "font-semibold flex justify-center items-center bg-goYellow dark:text-black/90 rounded-2xl lg:row-span-4 p-4 text-center",
+  },
 ];
 
 // Desktop Component - render function untuk setiap tipe item
@@ -141,13 +161,27 @@ const renderDesktopItem = (item) => {
       const IconComponent = item.icon;
       return (
         <div key={item.id} className={item.className}>
-          <h1 className={item.titleClassName}>
-            {item.title}
-          </h1>
+          <h1 className={item.titleClassName}>{item.title}</h1>
           <IconComponent className={item.iconClassName} />
         </div>
       );
-    
+
+    case "text-with-icon-desc":
+      const IconComponentTxt = item.icon;
+      return (
+        <div key={item.id} className={item.className}>
+          <div className="flex flex-col items-start" >
+            <h1 className={item.titleClassName}>{item.title}</h1>
+            <p className="text-start text-sm" >
+              {item.desc}
+            </p>
+          </div>
+          <div>
+            <IconComponentTxt className={item.iconClassName} />
+          </div>
+        </div>
+      );
+
     case "text-with-image":
       return (
         <div key={item.id} className={item.className}>
@@ -159,7 +193,7 @@ const renderDesktopItem = (item) => {
           <h1>{item.title}</h1>
         </div>
       );
-    
+
     case "background-image-with-overlay":
       return (
         <div key={item.id} className={item.className}>
@@ -168,12 +202,10 @@ const renderDesktopItem = (item) => {
             alt={item.backgroundAlt}
             className={item.imageClassName}
           />
-          <div className={item.overlayClassName}>
-            {item.title}
-          </div>
+          <div className={item.overlayClassName}>{item.title}</div>
         </div>
       );
-    
+
     case "background-image-only":
       return (
         <div key={item.id} className={item.className}>
@@ -184,14 +216,14 @@ const renderDesktopItem = (item) => {
           />
         </div>
       );
-    
+
     case "text-only":
       return (
         <div key={item.id} className={item.className}>
           {item.title}
         </div>
       );
-    
+
     default:
       return null;
   }
@@ -199,7 +231,7 @@ const renderDesktopItem = (item) => {
 
 export const WhyUsDekstop = () => {
   return (
-    <main className="py-8 px-4 sm:px-8 md:px-16 lg:px-24">
+    <main id="why-us" className="py-8 px-4 sm:px-8 md:px-16 lg:px-24">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
         Why Go Space
       </h1>
@@ -236,7 +268,7 @@ export const WhyUsMobile = () => {
   }, []);
 
   // Filter data yang memiliki mobile properties
-  const mobileData = whyUsData.filter(item => item.mobileTitle);
+  const mobileData = whyUsData.filter((item) => item.mobileTitle);
   const maxIndex = Math.max(0, mobileData.length - cardsPerView);
 
   const nextSlide = () => {
@@ -252,7 +284,7 @@ export const WhyUsMobile = () => {
   };
 
   return (
-    <main className="md:px-24 2xl:px-70 px-5">
+    <main id="why-us" className="md:px-24 2xl:px-70 px-5">
       <section className="bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500  sm:p-10 py-10 px-3 rounded-parent ">
         {/* Header + Controls */}
         <div className="flex px-3 text-white justify-between items-center mb-8">
@@ -305,7 +337,9 @@ export const WhyUsMobile = () => {
                       >
                         <Icon size={24} />
                       </div>
-                      <h2 className="text-xl font-semibold">{item.mobileTitle}</h2>
+                      <h2 className="text-xl font-semibold">
+                        {item.mobileTitle}
+                      </h2>
                       <p className="text-gray-200 text-sm leading-relaxed flex-grow">
                         {item.mobileDesc}
                       </p>

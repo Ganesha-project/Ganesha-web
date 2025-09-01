@@ -60,6 +60,13 @@ const dataPricing = [
 ];
 
 export const PricingPlan = () => {
+
+  const waNumber = "628871510044"; 
+  const waMessage = "Halo, saya tertarik dengan layanan Go Space!";
+  const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(
+    waMessage
+  )}`;
+
   return (
     <main className="px-5 md:px-24 2xl:px-70 my-24">
       <section>
@@ -121,17 +128,18 @@ export const PricingPlan = () => {
                     {plan.description}
                   </p>
 
-                  <button
+                  {/* kenapa ini w nya ga full */}
+                  <a href={waLink} target="_blank"
                     className={`${
                       plan.popular
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
                         : "bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600"
-                    } py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full mb-8`}
+                    } py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg mb-8 w-full mx-0 block text-center`}
                   >
                     Book Now
-                  </button>
+                  </a>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mt-8">
                     {plan.benefit.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start gap-3">
                         <IoMdCheckmarkCircleOutline className="text-gray-200 text-xl mt-0.5 flex-shrink-0" />
