@@ -21,9 +21,9 @@ export const GoBanner = () => {
   )}`;
 
   return (
-    <main className="py-20 flex items-center justify-center md:px-5 2xl:px-70 px-5">
+    <main className="py-20 flex items-center justify-center px-5">
       <section 
-      className="relative overflow-hidden rounded-parent w-full "
+      className="relative overflow-hidden rounded-parent w-full"
       style={{ height: "calc(100vh - 6.5rem )" }}
       >
         {/* slideshow image */}
