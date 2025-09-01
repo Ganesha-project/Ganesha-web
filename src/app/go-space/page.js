@@ -6,7 +6,7 @@ import { ExploreSpaces } from "@/components/go-space/ExploreSpaces";
 import { PricingPlan } from "@/components/go-space/PricingPlan";
 import { PageFaq } from "@/components/go-space/FAQ";
 import { WhyUsDekstop, WhyUsMobile } from "@/components/go-space/WhyUs";
-import { Banner } from "@/components/go-space/Banner";
+import { GoBanner } from "@/components/go-space/GoBanner";
 
 export default function GoSpacePage() {
     const [isMobile, setIsMobile] = useState(false);
@@ -29,7 +29,7 @@ export default function GoSpacePage() {
     return (
         <>
             {/* go-space page */}
-            <Banner/>
+            <GoBanner/>
             {isMobile ? <WhyUsMobile/> : <WhyUsDekstop/>}      
             <ExploreSpaces/>
             <PricingPlan/>

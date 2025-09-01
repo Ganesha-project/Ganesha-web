@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCircleArrowRight } from "react-icons/fa6";
 
-export const Banner = () => {
+export const GoBanner = () => {
   const images = ["/go-banner-1.png", "/go-banner-2.png", "/go-banner-3.png"];
   const [current, setCurrent] = useState(0);
 
@@ -21,7 +21,7 @@ export const Banner = () => {
   )}`;
 
   return (
-    <main className="py-20 pb-26 flex items-center justify-center md:px-5 2xl:px-70 px-5">
+    <main className="py-20 flex items-center justify-center md:px-5 2xl:px-70 px-5">
       <section 
       className="relative overflow-hidden rounded-parent w-full "
       style={{ height: "calc(100vh - 6.5rem )" }}
