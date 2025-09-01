@@ -28,7 +28,7 @@ export default function GoSpacePage() {
 
     return (
         <>
-            {/* go space page */}
+            {/* go-space page */}
             <Banner/>
             {isMobile ? <WhyUsMobile/> : <WhyUsDekstop/>}      
             <ExploreSpaces/>
