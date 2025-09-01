@@ -21,8 +21,11 @@ export const Banner = () => {
   )}`;
 
   return (
-    <main className="py-26 flex items-center justify-center md:px-24 2xl:px-70 px-5">
-      <section className="relative overflow-hidden rounded-parent w-full min-h-[75svh]">
+    <main className="py-20 pb-26 flex items-center justify-center md:px-5 2xl:px-70 px-5">
+      <section 
+      className="relative overflow-hidden rounded-parent w-full "
+      style={{ height: "calc(100vh - 6.5rem )" }}
+      >
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait" initial={false}>
@@ -30,7 +33,7 @@ export const Banner = () => {
               key={`banner-${current}`}
               src={images[current]}
               alt={`Hero Banner ${current + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover bg-mainColor/50"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

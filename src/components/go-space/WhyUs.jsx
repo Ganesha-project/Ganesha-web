@@ -40,7 +40,7 @@ const whyUsData = [
     imageAlt: "money-3d",
     className:
       "font-semibold flex flex-col justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
-    imageClassName: "w-16 sm:w-20",
+    imageClassName: "w-16 sm:w-25",
     // Mobile properties
     mobileTitle: "Hemat Biaya",
     mobileDesc:
@@ -52,14 +52,14 @@ const whyUsData = [
   {
     id: 3,
     type: "background-image-with-overlay",
-    title: "Proses Cepat & Mudah – Aktivasi dalam 1 hari",
-    backgroundImage: "/go-space-assets/spaces/room-2-2.jpg",
+    title: "Layanan Resepsionis Profesional",
+    backgroundImage: "/go-space-assets/resepsionist.jpg",
     backgroundAlt: "proses cepat",
     className:
-      "relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px]",
+      "relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px] text-2xl font-bold",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
     overlayClassName:
-      "absolute inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
+      "absolute inset-0 bg-black/5 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
     // Mobile properties
     mobileTitle: "Legalitas Terjamin",
     mobileDesc:
@@ -71,12 +71,12 @@ const whyUsData = [
   {
     id: 4,
     type: "text-with-image",
-    title: "Layanan Resepsionis Profesional",
-    imageSrc: "/go-space-assets/icon/resepsionis.png",
+    title: "Legalitas Lengkap & Dukungan Pengurusan Dokumen",
+    imageSrc: "/go-space-assets/legal.png",
     imageAlt: "resepsionis",
     className:
-      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-6 text-white p-4 flex-col gap-4 text-center",
-    imageClassName: "w-20 sm:w-24",
+      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-6 text-white p-4 flex-col text-center text-xl",
+    imageClassName: "sm:w-20 md:w-50",
     // Mobile properties
     mobileTitle: "Fleksibel & Praktis",
     mobileDesc:
@@ -88,9 +88,9 @@ const whyUsData = [
   {
     id: 5,
     type: "text-only",
-    title: "Legalitas Lengkap & Dukungan Pengurusan Dokumen",
+    title: "Proses Cepat & Mudah – Aktivasi dalam 1 hari",
     className:
-      "text-start font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4",
+      "text-xl text-start font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4",
     // Mobile properties
     mobileTitle: "Tim Support Profesional",
     mobileDesc:
@@ -136,7 +136,7 @@ const whyUsData = [
     className:
       "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
     titleClassName: "text-base sm:text-lg lg:text-xl",
-    iconClassName: "text-4xl lg:text-5xl",
+    iconClassName: "text-6xl",
   },
   {
     id: 9,
@@ -172,11 +172,11 @@ const renderDesktopItem = (item) => {
         <div key={item.id} className={item.className}>
           <div className="flex flex-col items-start" >
             <h1 className={item.titleClassName}>{item.title}</h1>
-            <p className="text-start text-sm" >
+            <p className="text-start text-sm text-black/80 font-medium " >
               {item.desc}
             </p>
           </div>
-          <div>
+          <div >
             <IconComponentTxt className={item.iconClassName} />
           </div>
         </div>
