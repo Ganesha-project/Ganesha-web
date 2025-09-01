@@ -20,7 +20,7 @@ const whyUsData = [
     title: "Alamat Bisnis Strategis & Bergengsi",
     icon: FaLocationDot,
     className:
-      "flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 py-5 font-bold gap-5 text-center",
+      "hover:scale-103 transition-all flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 py-5 font-bold gap-5 text-center ",
     titleClassName: "text-start text-xl sm:text-2xl py-5",
     iconClassName: "text-4xl lg:text-5xl",
     desc: "Gedung Fancy Mampang, Jl. Mampang Prpt. Raya No. 151 Lantai 4 Unit A7, RT.3/RW.001, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Jakarta, Indonesia 12760",
@@ -39,7 +39,7 @@ const whyUsData = [
     imageSrc: "/go-space-assets/icon/money.png",
     imageAlt: "money-3d",
     className:
-      "font-semibold flex flex-col justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
+      "hover:scale-103 transition-all font-semibold flex flex-col justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
     imageClassName: "w-16 sm:w-25",
     // Mobile properties
     mobileTitle: "Hemat Biaya",
@@ -56,10 +56,10 @@ const whyUsData = [
     backgroundImage: "/go-space-assets/resepsionist.jpg",
     backgroundAlt: "proses cepat",
     className:
-      "relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px] text-2xl font-bold",
+      "hover:scale-103 transition-all relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px] text-2xl font-bold",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
     overlayClassName:
-      "absolute inset-0 bg-black/5 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
+      "hover:scale-103 transition-all absolute inset-0 bg-black/5 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
     // Mobile properties
     mobileTitle: "Legalitas Terjamin",
     mobileDesc:
@@ -75,7 +75,7 @@ const whyUsData = [
     imageSrc: "/go-space-assets/legal.png",
     imageAlt: "resepsionis",
     className:
-      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-6 text-white p-4 flex-col text-center text-xl",
+      "hover:scale-103 transition-all font-semibold flex justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-6 text-white p-4 flex-col text-center text-xl",
     imageClassName: "sm:w-20 md:w-50",
     // Mobile properties
     mobileTitle: "Fleksibel & Praktis",
@@ -90,7 +90,7 @@ const whyUsData = [
     type: "text-only",
     title: "Proses Cepat & Mudah – Aktivasi dalam 1 hari",
     className:
-      "text-xl text-start font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4",
+      "hover:scale-103 transition-all text-xl text-start font-semibold flex justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-4 text-white p-4",
     // Mobile properties
     mobileTitle: "Tim Support Profesional",
     mobileDesc:
@@ -105,7 +105,7 @@ const whyUsData = [
     backgroundImage: "/go-space-assets/spaces/room-12-2.jpg",
     backgroundAlt: "bg-legal",
     className:
-      "relative rounded-2xl lg:row-span-4 lg:col-span-3 overflow-hidden min-h-[200px]",
+      "hover:scale-103 transition-all relative rounded-2xl lg:row-span-4 lg:col-span-3 overflow-hidden min-h-[200px]",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
     // Mobile properties
     mobileTitle: "Terpercaya",
@@ -119,13 +119,13 @@ const whyUsData = [
     id: 7,
     type: "background-image-with-overlay",
     title: "Dukungan Tim yang Profesional",
-    backgroundImage: "/go-space-assets/spaces/room-4-2.jpg",
+    backgroundImage: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
     backgroundAlt: "tim profesional",
     className:
-      "relative rounded-2xl lg:row-span-6 overflow-hidden min-h-[200px]",
+      "hover:scale-103 transition-all relative rounded-2xl lg:row-span-6 overflow-hidden min-h-[200px] sm:text-2xl text-lg ",
     imageClassName: "absolute inset-0 w-full h-full object-cover",
     overlayClassName:
-      "absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
+      "hover:scale-103 transition-all absolute inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center p-4 text-white font-semibold text-center",
   },
   {
     id: 8,
@@ -134,7 +134,7 @@ const whyUsData = [
       "Akses Internet dan penggunaan Smart TV gratis selama penggunaan ruang rapat",
     icon: FaWifi,
     className:
-      "font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
+      "hover:scale-103 transition-all font-semibold flex justify-center items-center rounded-2xl lg:row-span-4 lg:col-span-2 p-4 bg-goPurple-secondary dark:text-black/90 gap-4 text-start",
     titleClassName: "text-base sm:text-lg lg:text-xl",
     iconClassName: "text-6xl",
   },
@@ -143,14 +143,14 @@ const whyUsData = [
     type: "text-only",
     title: "Akses Ruang Meeting & Coworking",
     className:
-      "font-semibold flex justify-center items-center bg-goPurple rounded-2xl lg:row-span-4 text-white p-4 text-center",
+      "hover:scale-103 transition-all font-semibold flex justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-4 text-white p-4 text-center",
   },
   {
     id: 10,
     type: "text-only",
     title: "Jaringan Komunitas dan Kolaborasi",
     className:
-      "font-semibold flex justify-center items-center bg-goYellow dark:text-black/90 rounded-2xl lg:row-span-4 p-4 text-center",
+      "hover:scale-103 transition-all font-semibold flex justify-center items-center bg-goYellow dark:text-black/90 rounded-2xl lg:row-span-4 p-4 text-center",
   },
 ];
 
@@ -164,7 +164,7 @@ const renderDesktopItem = (item) => {
           <h1 className={item.titleClassName}>{item.title}</h1>
           <IconComponent className={item.iconClassName} />
         </div>
-      );
+      );  
 
     case "text-with-icon-desc":
       const IconComponentTxt = item.icon;

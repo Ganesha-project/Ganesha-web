@@ -92,13 +92,13 @@ export const GoBanner = () => {
 
               <div className="relative">
                 <div className="bg-white dark:bg-black text-purple-800 font-semibold rounded-tl-4xl p-6 text-xs md:text-sm flex flex-col gap-3">
-                  <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between">
+                  <div className="bg-white dark:bg-black rounded-out-rt-2xl flex items-start justify-between  ">
                     <img
                       src="/go-logo.png"
                       alt="go space logo"
-                      className="sm:w-20 w-15 mb-2 dark:brightness-200"
+                      className="sm:w-20 w-15 mb-2 dark:bg-white dark:p-2 dark:rounded-2xl"
                     />
-                    <FaCircleArrowRight className="text-2xl" />
+                    <FaCircleArrowRight className="text-2xl dark:text-purple-300" />
                   </div>
                   <div className="bg-white dark:bg-black dark:text-purple-300 rounded-out-bl-2xl sm:pb-0 pb-5">
                     Go Space by Ganesha Consulting. Alamat bisnis strategis,
@@ -154,9 +154,9 @@ export const GoBanner = () => {
                   <img
                     src="/go-logo.png"
                     alt="go space logo"
-                    className="w-12 mb-2 dark:brightness-200"
+                    className="w-17 mb-2 dark:bg-white dark:p-2 dark:rounded-2xl"
                   />
-                  <FaCircleArrowRight className="text-xl" />
+                  <FaCircleArrowRight className="text-xl dark:text-purple-300" />
                 </div>
                 <div className="bg-white dark:bg-black dark:text-purple-300 rounded-out-bl-2xl pb-3">
                   Go Space by Ganesha Consulting. Alamat bisnis strategis,
