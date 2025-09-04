@@ -7,6 +7,7 @@ import { SkeletonBannerActivity } from "@/components/Skeleton/SkeletonBannerActi
 import { SkeletonCardActivity } from "@/components/Skeleton/SkeletonCardActivity";
 import Head from "next/head";
 import { FiLoader } from "react-icons/fi";
+import Maintenance from "@/components/Maintenance";
 
 export default function Activity() {
     const [activities, setActivities] = useState([]);
@@ -16,6 +17,7 @@ export default function Activity() {
     const [sort, setSort] = useState("DESC");
     const [loadingMore, setLoadingMore] = useState(false);
     const observerRef = useRef(null);
+    const [isMaintenance, setIsMaintenance] = useState(true)
 
     useEffect(() => {
         async function fetchActivities() {
@@ -64,6 +66,12 @@ export default function Activity() {
             if (observerRef.current) observerRef.current.disconnect();
         };
     }, []);
+
+    if(isMaintenance){
+        return (
+            <Maintenance/>
+        )
+    }
 
     return (
         <>

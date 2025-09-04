@@ -24,7 +24,7 @@ export default function ArticlePage() {
     const [itemsToShow, setItemsToShow] = useState(8);
     const [loadingMore, setLoadingMore] = useState(false); // Renamed from loadNew
     const [totalItems, setTotalItems] = useState(0);
-    const [isMaintenance, setIsMaintenance] = useState(true)
+    const [isMaintenance, _] = useState(true)
 
     const fetchMoreArticles = async () => {
         try {

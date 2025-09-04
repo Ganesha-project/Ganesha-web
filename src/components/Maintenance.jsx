@@ -10,13 +10,13 @@ export default function Maintenance() {
       <div className="flex flex-col items-center gap-6 max-w-2xl text-center">
         <img 
           src="/maintenance.png" 
-          alt="Website sedang dalam pemeliharaan" 
+          alt="Halaman sedang dalam pemeliharaan" 
           className="w-60 h-auto"
         />
         
         <div className="flex flex-col gap-4">
-          <h1 className={`${TextGradientYellowPurple} text-4xl md:text-5xl font-bold`}>
-            Website Sedang Dalam Pemeliharaan
+          <h1 className={`${TextGradientYellowPurple} text-3xl md:text-4xl font-bold`}>
+            Halaman Sedang Dalam Pemeliharaan
           </h1>
           
           {/* p ini text nya ga center */}
