@@ -11,6 +11,7 @@ import { Headtag } from "@/components/ArticleComponent/HeadTag";
 import Head from "next/head";
 import { HighlightCarousel } from "@/components/ArticleComponent/HightlightCarousel";
 import { Pagination } from "@/components/ArticleComponent/Pagination";
+import Maintenance from "@/components/Maintenance";
 
 export default function ArticlePage() {
     const [newData, setNewData] = useState(null);
@@ -23,6 +24,7 @@ export default function ArticlePage() {
     const [itemsToShow, setItemsToShow] = useState(8);
     const [loadingMore, setLoadingMore] = useState(false); // Renamed from loadNew
     const [totalItems, setTotalItems] = useState(0);
+    const [isMaintenance, setIsMaintenance] = useState(true)
 
     const fetchMoreArticles = async () => {
         try {
@@ -250,6 +252,12 @@ export default function ArticlePage() {
             </p>
         </div>
     );
+
+    if(isMaintenance){
+        return (
+            <Maintenance/>
+        )
+    }
 
     return (
         <>
