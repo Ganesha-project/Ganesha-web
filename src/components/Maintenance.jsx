@@ -6,21 +6,21 @@ import Link from "next/link";
 
 export default function Maintenance() {
   return (
-    <div className="h-screen w-screen flex flex-col gap-6 items-center justify-center px-4 my-13">
-      <div className="flex flex-col items-center gap-6 max-w-2xl text-center">
+    <div className="h-[100svh] w-screen flex flex-col gap-6 items-center justify-center px-7">
+      <div className="flex flex-col items-center gap-4 max-w-2xl text-center">
         <img 
-          src="/maintenance.png" 
+          src="/maintenance-cuate.png" 
           alt="Halaman sedang dalam pemeliharaan" 
           className="w-60 h-auto"
         />
         
         <div className="flex flex-col gap-4">
-          <h1 className={`${TextGradientYellowPurple} text-3xl md:text-4xl font-bold`}>
+          <h1 className={`${TextGradientYellowPurple} text-2xl md:text-4xl font-bold`}>
             Halaman Sedang Dalam Pemeliharaan
           </h1>
           
           {/* p ini text nya ga center */}
-          <p className={`${TextMainGradient} text-xl md:text-xl font-medium`}>
+          <p className={`${TextMainGradient} text-lg md:text-xl font-medium`}>
             Kami sedang melakukan perbaikan untuk memberikan pengalaman yang lebih baik. 
             Silakan kembali lagi nanti.
           </p>
