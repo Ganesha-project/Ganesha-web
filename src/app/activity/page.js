@@ -17,7 +17,7 @@ export default function Activity() {
     const [sort, setSort] = useState("DESC");
     const [loadingMore, setLoadingMore] = useState(false);
     const observerRef = useRef(null);
-    const [isMaintenance, setIsMaintenance] = useState(true)
+    const [isMaintenance, _] = useState(true)
 
     useEffect(() => {
         async function fetchActivities() {
