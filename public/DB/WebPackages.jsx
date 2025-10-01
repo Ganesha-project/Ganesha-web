@@ -1,7 +1,7 @@
 export const WebPackages = [
     {
         type: "Mini Web Company Profile",
-        price: 1950000,
+        price: 1350000,
         priceOriginal: 1716000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -28,7 +28,7 @@ export const WebPackages = [
     },
     {
         type: "Company Profile Basic",
-        price: 7000000,
+        price: 3950000,
         priceOriginal: 3575000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
@@ -55,7 +55,7 @@ export const WebPackages = [
     },
     {
         type: "Blog Static / Product Catalog",
-        price: 9000000,
+        price: 7000000,
         priceOriginal: 6435000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20pembuatan%20Website%20nih!%20",
