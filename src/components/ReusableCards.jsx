@@ -251,9 +251,11 @@ export const ReusableCards = ({ data, label, visibility }) => {
                         <PiStarFourFill />
                       </div>
                       <div>
-                        <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-full animate-pulse">
-                          OFF {el.discount}%
-                        </p>
+                        {path !== "/social-media-management" && (
+                          <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-full animate-pulse">
+                            OFF {el.discount}%
+                          </p>
+                        )}
                       </div>
                     </div>
                     {/* JUDUL */}
