@@ -1,6 +1,7 @@
 export const KonsultanPajakPackages = [
   {
     type: "Pelaporan SPT Masa Tahunan Pribadi (Non Pegawai Nihil) 1 Tahun",
+    highlight: false,
     price: 100000,
     priceOriginal: 156250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Non%20Pegawai%20Nihil)%201%20Tahun!",
@@ -19,6 +20,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Pelaporan SPT Masa Tahunan Pribadi (Non Pegawai Omzet) 1 Tahun",
+    highlight: false,
     price: 200000,
     priceOriginal: 312500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Non%20Pegawai%20Omzet)%201%20Tahun!",
@@ -37,6 +39,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Pelaporan SPT Masa Tahunan Pribadi (Pegawai) 1 Tahun",
+    highlight: false,
     price: 100000,
     priceOriginal: 156250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Pegawai)%201%20Tahun!",
@@ -55,6 +58,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Pelaporan SPT Masa Tahunan Badan Usaha (Nihil) 1 Tahun",
+    highlight: false,
     price: 500000,
     priceOriginal: 781250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Badan%20Usaha%20(Nihil)%201%20Tahun!",
@@ -82,6 +86,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Pelaporan SPT Masa Tahunan Badan Usaha (Omzet) 1 Tahun",
+    highlight: false,
     price: 1000000,
     priceOriginal: 1562500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Badan%20Usaha%20(Omzet)%201%20Tahun!",
@@ -106,6 +111,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet Kurang dari 5M",
+    highlight: false,
     price: 1000000,
     priceOriginal: 1562500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%20Kurang%20dari%205M!",
@@ -137,6 +143,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 5M s/d 15M",
+    highlight: false,
     price: 1500000,
     priceOriginal: 2343750,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%205M%20s/d%2015M!",
@@ -168,6 +175,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 15M s/d 50M",
+    highlight: false,
     price: 2500000,
     priceOriginal: 3906250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%2015M%20s/d%2050M!",
@@ -199,6 +207,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet Lebih dari 50M",
+    highlight: false,
     price: 5000000,
     priceOriginal: 7812500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%20Lebih%20dari%2050M!",
@@ -230,6 +239,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Pribadi (Non Pegawai Nihil) 1 Tahun",
+    highlight: false,
     price: 500000,
     priceOriginal: 781250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Pribadi%20(Non%20Pegawai%20Nihil)%201%20Tahun!",
@@ -248,6 +258,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Pribadi (Non Pegawai Omzet) 1 Tahun",
+    highlight: false,
     price: 750000,
     priceOriginal: 1171875,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Pribadi%20(Non%20Pegawai%20Omzet)%201%20Tahun!",
@@ -266,6 +277,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultan Pajak Pribadi (Pegawai) 1 Tahun",
+    highlight: false,
     price: 500000,
     priceOriginal: 781250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Pribadi%20(Pegawai)%201%20Tahun!",
@@ -284,6 +296,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Laporan Keuangan UMKM (Sederhana) 1 Tahun",
+    highlight: false,
     price: 300000,
     priceOriginal: 468750,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Laporan%20Keuangan%20UMKM%20(Sederhana)%201%20Tahun!",
@@ -303,6 +316,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Laporan Keuangan UMKM (Kompleks) 1 Tahun",
+    highlight: false,
     price: 600000,
     priceOriginal: 937500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Laporan%20Keuangan%20UMKM%20(Kompleks)%201%20Tahun!",
@@ -324,6 +338,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Laporan Keuangan Badan (Sederhana) 1 Tahun",
+    highlight: false,
     price: 800000,
     priceOriginal: 1250000,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Laporan%20Keuangan%20Badan%20(Sederhana)%201%20Tahun!",
@@ -345,6 +360,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Laporan Keuangan Badan (Kompleks) 1 Tahun",
+    highlight: false,
     price: 1500000,
     priceOriginal: 2343750,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Laporan%20Keuangan%20Badan%20(Kompleks)%201%20Tahun!",
@@ -368,6 +384,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultasi Pajak UMKM (Sederhana) 1 Tahun",
+    highlight: false,
     price: 500000,
     priceOriginal: 781250,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultasi%20Pajak%20UMKM%20(Sederhana)%201%20Tahun!",
@@ -387,6 +404,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultasi Pajak UMKM (Kompleks) 1 Tahun",
+    highlight: false,
     price: 1000000,
     priceOriginal: 1562500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultasi%20Pajak%20UMKM%20(Kompleks)%201%20Tahun!",
@@ -408,6 +426,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultasi Pajak Badan (Sederhana) 1 Tahun",
+    highlight: false,
     price: 1000000,
     priceOriginal: 1562500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultasi%20Pajak%20Badan%20(Sederhana)%201%20Tahun!",
@@ -429,6 +448,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Konsultasi Pajak Badan (Kompleks) 1 Tahun",
+    highlight: false,
     price: 2000000,
     priceOriginal: 3125000,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultasi%20Pajak%20Badan%20(Kompleks)%201%20Tahun!",
@@ -452,6 +472,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Anggaran Keuangan UMKM (Sederhana) 1 Tahun",
+    highlight: false,
     price: 400000,
     priceOriginal: 625000,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Anggaran%20Keuangan%20UMKM%20(Sederhana)%201%20Tahun!",
@@ -468,6 +489,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Anggaran Keuangan UMKM (Kompleks) 1 Tahun",
+    highlight: false,
     price: 800000,
     priceOriginal: 1250000,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Anggaran%20Keuangan%20UMKM%20(Kompleks)%201%20Tahun!",
@@ -486,6 +508,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Anggaran Keuangan Badan (Sederhana) 1 Tahun",
+    highlight: false,
     price: 600000,
     priceOriginal: 937500,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Anggaran%20Keuangan%20Badan%20(Sederhana)%201%20Tahun!",
@@ -504,6 +527,7 @@ export const KonsultanPajakPackages = [
   },
   {
     type: "Penyusunan Anggaran Keuangan Badan (Kompleks) 1 Tahun",
+    highlight: false,
     price: 1200000,
     priceOriginal: 1875000,
     link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Penyusunan%20Anggaran%20Keuangan%20Badan%20(Kompleks)%201%20Tahun!",
@@ -525,6 +549,7 @@ export const KonsultanPajakPackages = [
 export const pelaporanSPT = [
   {
       type: "Pelaporan SPT Masa Tahunan Pribadi (Non Pegawai Nihil) 1 Tahun",
+      highlight: false,
       price: 100000,
       priceOriginal: 156250, // Assuming the original price is similar to the other items
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Non%20Pegawai%20Nihil)%201%20Tahun!",
@@ -543,6 +568,7 @@ export const pelaporanSPT = [
   },
   {
       type: "Pelaporan SPT Masa Tahunan Pribadi (Non Pegawai Omzet) 1 Tahun",
+      highlight: false,
       price: 200000,
       priceOriginal: 312500, // Assuming the original price is similar to the other items
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Non%20Pegawai%20Omzet)%201%20Tahun!",
@@ -561,6 +587,7 @@ export const pelaporanSPT = [
   },
   {
       type: "Pelaporan SPT Masa Tahunan Pribadi (Pegawai) 1 Tahun",
+      highlight: false,
       price: 100000,
       priceOriginal: 156250, // Assuming the original price is similar to the other items
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Pribadi%20(Pegawai)%201%20Tahun!",
@@ -579,6 +606,7 @@ export const pelaporanSPT = [
   },
   {
       type: "Pelaporan SPT Masa Tahunan Badan Usaha (Nihil) 1 Tahun",
+      highlight: false,
       price: 500000,
       priceOriginal: 781250, // Assuming the original price is similar to the other items
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Badan%20Usaha%20(Nihil)%201%20Tahun!",
@@ -606,6 +634,7 @@ export const pelaporanSPT = [
   },
   {
       type: "Pelaporan SPT Masa Tahunan Badan Usaha (Omzet) 1 Tahun",
+      highlight: false,
       price: 1000000,
       priceOriginal: 1562500, // Assuming the original price is similar to the other items
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pelaporan%20SPT%20Masa%20Tahunan%20Badan%20Usaha%20(Omzet)%201%20Tahun!",
@@ -633,6 +662,7 @@ export const pelaporanSPT = [
 export const konsultanPajakPMDN = [
   {
       type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet Kurang dari 5M",
+      highlight: false,
       price: 1000000,
       priceOriginal: 1562500,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%20Kurang%20dari%205M!",
@@ -664,6 +694,7 @@ export const konsultanPajakPMDN = [
   },
   {
       type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 5M s/d 15M",
+      highlight: false,
       price: 1500000,
       priceOriginal: 2343750,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%205M%20s/d%2015M!",
@@ -695,6 +726,7 @@ export const konsultanPajakPMDN = [
   },
   {
       type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 15M s/d 25M",
+      highlight: false,
       price: 2000000,
       priceOriginal: 3125000,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%2015M%20s/d%2025M!",
@@ -726,6 +758,7 @@ export const konsultanPajakPMDN = [
   },
   {
       type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 25M s/d 35M",
+      highlight: false,
       price: 2500000,
       priceOriginal: 3906250,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%2025M%20s/d%2035M!",
@@ -757,6 +790,7 @@ export const konsultanPajakPMDN = [
   },
   {
       type: "Konsultan Pajak Badan PMDN (Kontrak 1 Tahun) Omzet 35M s/d 50M",
+      highlight: false,
       price: 3000000,
       priceOriginal: 4687500,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMDN%20(Kontrak%201%20Tahun)%20Omzet%2035M%20s/d%2050M!",
@@ -791,6 +825,7 @@ export const konsultanPajakPMDN = [
 export const konsultanPajakPMA = [
   {
       type: "Konsultan Pajak Badan PMA (Kontrak 1 Tahun) Omzet Kurang dari 5M",
+      highlight: false,
       price: 1250000,
       priceOriginal: 1953125,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMA%20(Kontrak%201%20Tahun)%20Omzet%20Kurang%20dari%205M!",
@@ -822,6 +857,7 @@ export const konsultanPajakPMA = [
   },
   {
       type: "Konsultan Pajak Badan PMA (Kontrak 1 Tahun) Omzet 5M s/d 15M",
+      highlight: false,
       price: 1750000,
       priceOriginal: 2734375,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMA%20(Kontrak%201%20Tahun)%20Omzet%205M%20s/d%2015M!",
@@ -853,6 +889,7 @@ export const konsultanPajakPMA = [
   },
   {
       type: "Konsultan Pajak Badan PMA (Kontrak 1 Tahun) Omzet 15M s/d 25M",
+      highlight: false,
       price: 2250000,
       priceOriginal: 3515625,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMA%20(Kontrak%201%20Tahun)%20Omzet%2015M%20s/d%2025M!",
@@ -884,6 +921,7 @@ export const konsultanPajakPMA = [
   },
   {
       type: "Konsultan Pajak Badan PMA (Kontrak 1 Tahun) Omzet 25M s/d 35M",
+      highlight: false,
       price: 2750000,
       priceOriginal: 4296875,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMA%20(Kontrak%201%20Tahun)%20Omzet%2025M%20s/d%2035M!",
@@ -915,6 +953,7 @@ export const konsultanPajakPMA = [
   },
   {
       type: "Konsultan Pajak Badan PMA (Kontrak 1 Tahun) Omzet 35M s/d 50M",
+      highlight: false,
       price: 3250000,
       priceOriginal: 5078125,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Konsultan%20Pajak%20Badan%20PMA%20(Kontrak%201%20Tahun)%20Omzet%2035M%20s/d%2050M!",
@@ -949,6 +988,7 @@ export const konsultanPajakPMA = [
 export const pendaftaranPajakDaerah = [
   {
       type: "Pendaftaran Pajak Restoran (PB1) Badan/Perorangan",
+      highlight: false,
       price: 500000,
       priceOriginal: 781250,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pendaftaran%20Pajak%20Restoran%20(PB1)%20Badan%2FPerorangan!",
@@ -975,6 +1015,7 @@ export const pendaftaranPajakDaerah = [
   },
   {
       type: "Pendaftaran Pajak Hiburan",
+      highlight: false,
       price: 500000,
       priceOriginal: 781250,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pendaftaran%20Pajak%20Hiburan!",
@@ -1002,6 +1043,7 @@ export const pendaftaranPajakDaerah = [
   },
   {
       type: "Pendaftaran Pajak Reklame",
+      highlight: false,
       price: 500000,
       priceOriginal: 781250,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pendaftaran%20Pajak%20Reklame!",
@@ -1032,6 +1074,7 @@ export const pendaftaranPajakDaerah = [
 export const perpajakanLainnya = [
   {
       type: "Restitusi Pajak Periode 1 Tahun",
+      highlight: false,
       price: 30000000,
       priceOriginal: 46875000,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Restitusi%20Pajak%20Periode%201%20Tahun!",
@@ -1059,6 +1102,7 @@ export const perpajakanLainnya = [
   },
   {
       type: "Pendampingan Pajak SP2DK",
+      highlight: false,
       price: 1000000,
       priceOriginal: 1562500,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Pendampingan%20Pajak%20SP2DK!",
@@ -1079,6 +1123,7 @@ export const perpajakanLainnya = [
   },
   {
       type: "Brevet B & C (Kurang lebih 2.5 Bulan)",
+      highlight: false,
       price: 3000000,
       priceOriginal: 4687500,
       link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo!%20Saya%20mau%20konsultasi%20terkait%20Brevet%20B%20%26%20C!",

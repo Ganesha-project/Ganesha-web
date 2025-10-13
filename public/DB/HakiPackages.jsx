@@ -1,6 +1,7 @@
 export const HakiPackages = [
     {
         type: "Pengurusan HAKI (Merek, Hak Cipta, Paten, dll.)",
+        highlight: false,
         price: 3800000,
         priceOriginal: 5937500,
         link: "https://api.whatsapp.com/send?phone=628887127000",

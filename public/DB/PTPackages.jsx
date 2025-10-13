@@ -1,6 +1,7 @@
 export const PTPackages = [
     {
         type: "PT DASAR",
+        highlight: false,
         price: 4500000,
         priceOriginal: 8550000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -32,6 +33,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP",
+        highlight: false,
         price: 5000000,
         priceOriginal: 9500000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -63,6 +65,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + PKP",
+        highlight: false,
         price: 6000000,
         priceOriginal: 11400000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -94,6 +97,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + WEBSITE COMPANY",
+        highlight: false,
         price: 7300000,
         priceOriginal: 10205000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -124,6 +128,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + PKP + WEBSITE COMPANY",
+        highlight: false,
         price: 7800000,
         priceOriginal: 10990000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -154,6 +159,7 @@ export const PTPackages = [
     },
     {
         type: "PAKET SILVER PT PERORANGAN (1 Hari Kerja)",
+        highlight: false,
         price: 600000,
         priceOriginal: 942000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -183,6 +189,7 @@ export const PTPackages = [
     },
     {
         type: "PAKET GOLD PT PERORANGAN (2 Hari Kerja)",
+        highlight: false,
         price: 1500000,
         priceOriginal: 2350000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -216,6 +223,7 @@ export const PTPackages = [
 export const PMAPackages = [
     {
         type: "PT PMA (Penanaman Modal Asing)",
+        highlight: false,
         price: 7500000,
         priceOriginal: 11625000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20PMA%20nih!%20",
@@ -241,6 +249,7 @@ export const PMAPackages = [
 export const BadanUsahaPackages = [
     {
         type: "Pendirian Yayasan",
+        highlight: false,
         price: 4000000,
         priceOriginal: 6820000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Yayasan%20nih!%20",
@@ -262,6 +271,7 @@ export const BadanUsahaPackages = [
     },
     {
         type: "Pendirian Perkumpulan/Asosiasi",
+        highlight: false,
         price: 4000000,
         priceOriginal: 6820000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Asosiasi/Perkumpulan%20nih!%20",
@@ -283,6 +293,7 @@ export const BadanUsahaPackages = [
     },
     {
         type: "Pendirian Firma Hukum",
+        highlight: false,
         price: 3000000,
         priceOriginal: 4710000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Firma%20Hukum%20nih!%20",
@@ -307,6 +318,7 @@ export const BadanUsahaPackages = [
 export const ExtrasPackages = [
     {
         type: "Pengurusan PKP (Pengusaha Kena Pajak)",
+        highlight: false,
         price: 1500000,
         priceOriginal: 2500000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pengurusan%20PKP%20nih!%20",
@@ -319,6 +331,7 @@ export const ExtrasPackages = [
     },
     {
         type: "Pengurusan NIB (Nomor Induk Berusaha)",
+        highlight: false,
         price: 500000,
         priceOriginal: 1000000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pengurusan%20NIB%20nih!%20",
@@ -335,6 +348,7 @@ export const ExtrasPackages = [
 export const VOPAckages = [
     {
         type: "Virtual Office",
+        highlight: false,
         price: 2652000,
         priceOriginal: 4163640,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pendirian%20Virtual%20Office%20nih!%20",

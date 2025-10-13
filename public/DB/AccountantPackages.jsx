@@ -1,6 +1,7 @@
 export const AccountantPackages = [
     {
         type: "Jasa Akuntansi (Kontrak) Omzet Kurang dari 2,5 M (1 Tahun)",
+        highlight: false,
         price: 800000,
         priceOriginal: 1250000, // price = priceOriginal * (1 - discount)
         discount: 36,
@@ -28,6 +29,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 2,5M s/d 5M (1 Tahun)",
+        highlight: false,
         price: 1300000,
         priceOriginal: 2031250,
         discount: 36,
@@ -55,6 +57,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 5M s/d 7,5M (1 Tahun)",
+        highlight: false,
         price: 1800000,
         priceOriginal: 2812500,
         discount: 36,
@@ -82,6 +85,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 7,5M s/d 10M (1 Tahun)",
+        highlight: false,
         price: 2300000,
         priceOriginal: 3593750,
         discount: 36,
@@ -109,6 +113,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 10M s/d 12,5M (1 Tahun)",
+        highlight: false,
         price: 2800000,
         priceOriginal: 4375000,
         discount: 36,
@@ -136,6 +141,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 12,5M s/d 15M (1 Tahun)",
+        highlight: false,
         price: 3300000,
         priceOriginal: 5156250,
         discount: 36,
@@ -163,6 +169,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 15M s/d 17,5M (1 Tahun)",
+        highlight: false,
         price: 3800000,
         priceOriginal: 5937500,
         discount: 36,
@@ -190,6 +197,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 17,5M s/d 20M (1 Tahun)",
+        highlight: false,
         price: 4300000,
         priceOriginal: 6718750,
         discount: 36,
@@ -217,6 +225,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 20M s/d 25M (1 Tahun)",
+        highlight: false,
         price: 4800000,
         priceOriginal: 7500000,
         discount: 36,
@@ -244,6 +253,7 @@ export const AccountantPackages = [
     },
     {
         type: "Jasa Akuntansi (Kontrak) Omzet 25M s/d 30M (1 Tahun)",
+        highlight: false,
         price: 5300000,
         priceOriginal: 8281250,
         discount: 36,

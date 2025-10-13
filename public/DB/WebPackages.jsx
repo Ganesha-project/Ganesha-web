@@ -1,6 +1,7 @@
 export const WebPackages = [
     {
         type: "Mini Web Company Profile",
+        highlight: false,
         price: 1350000,
         priceOriginal: 1716000,
         discount: 30,
@@ -28,6 +29,7 @@ export const WebPackages = [
     },
     {
         type: "Company Profile Basic",
+        highlight: false,
         price: 3950000,
         priceOriginal: 3575000,
         discount: 30,
@@ -55,6 +57,7 @@ export const WebPackages = [
     },
     {
         type: "Blog Static / Product Catalog",
+        highlight: false,
         price: 7000000,
         priceOriginal: 6435000,
         discount: 30,
@@ -83,6 +86,7 @@ export const WebPackages = [
     },
     {
         type: "Dynamic Data Company Profile",
+        highlight: false,
         price: 14000000,
         priceOriginal: 9867000,
         discount: 30,
@@ -110,6 +114,7 @@ export const WebPackages = [
     },
     {
         type: "Company Blog Website",
+        highlight: false,
         price: 18000000,
         priceOriginal: 12798500,
         discount: 30,
@@ -136,6 +141,7 @@ export const WebPackages = [
     },
     {
         type: "Company Business E-Commerce",
+        highlight: false,
         price: 0,
         priceOriginal: 47405000,
         discount: 30,
@@ -162,6 +168,7 @@ export const WebPackages = [
     },
     {
         type: "Custom Web Client Request",
+        highlight: false,
         price: 0,
         priceOriginal: 0,
         discount: 0,

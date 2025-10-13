@@ -1,7 +1,8 @@
 export const SMPackages = [
     {
         type: "Paket BotLane",
-        price: 2000000,
+        highlight: false,
+        // price: 2000000,
         priceOriginal: 2850000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
@@ -26,7 +27,8 @@ export const SMPackages = [
     },
     {
         type: "Paket Midlane",
-        price: 5000000,
+        highlight: false,
+        // price: 5000000,
         priceOriginal: 7150000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
@@ -51,7 +53,8 @@ export const SMPackages = [
     },
     {
         type: "Paket Jungler",
-        price: 10000000,
+        highlight: false,
+        // price: 10000000,
         priceOriginal: 14300000,
         discount: 30,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
@@ -79,6 +82,7 @@ export const SMPackages = [
 export const DesignPackages = [
     {
         type: "Paket Minion",
+        highlight: false,
         price: 500000,
         priceOriginal: 950000,
         discount: 47,
@@ -116,6 +120,7 @@ export const DesignPackages = [
     },
     {
         type: "Paket Turtle",
+        highlight: false,
         price: 1100000,
         priceOriginal: 2090000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Paket%20Design%20Social%20Media%nih!%20",
@@ -153,6 +158,7 @@ export const DesignPackages = [
     },
     {
         type: "Paket Lord",
+        highlight: false,
         price: 1900000,
         priceOriginal: 3610000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Paket%20Design%20Social%20Media%nih!%20",
