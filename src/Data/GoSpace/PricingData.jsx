@@ -22,7 +22,7 @@ export const dataPricing = [
     period: "/ bulan",
     description:
       "Solusi virtual office dengan fasilitas lengkap untuk profesional dan bisnis kecil yang membutuhkan alamat prestisius dan meeting room.",
-    img: "/go-space-assets/spaces/room-4-1.jpg",
+    img: "/images/go-space-assets/spaces/room-4-1.jpg",
     popular: true,
   },
   {
@@ -48,7 +48,7 @@ export const dataPricing = [
     period: "/ bulan",
     description:
       "Paket virtual office premium dengan jam meeting room yang lebih banyak untuk bisnis yang memerlukan fleksibilitas lebih tinggi.",
-    img: "/go-space-assets/spaces/room-12-1.jpg",
+    img: "/images/go-space-assets/spaces/room-12-1.jpg",
     popular: true,
   },
 ];

@@ -34,7 +34,7 @@ export const whyUsData = [
     id: 2,
     type: "text-with-image",
     title: "Hemat Biaya Operasional",
-    imageSrc: "/go-space-assets/icon/money.png",
+    imageSrc: "/images/go-space-assets/icon/money.png",
     imageAlt: "money-3d",
     className:
       "hover:scale-103 transition-all font-semibold flex flex-col justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-4 text-white p-3 text-center gap-4",
@@ -51,7 +51,7 @@ export const whyUsData = [
     id: 3,
     type: "background-image-with-overlay",
     title: "Layanan Resepsionis Profesional",
-    backgroundImage: "/go-space-assets/resepsionist.jpg",
+    backgroundImage: "/images/go-space-assets/resepsionist.jpg",
     backgroundAlt: "proses cepat",
     className:
       "hover:scale-103 transition-all relative rounded-2xl lg:row-span-4 overflow-hidden min-h-[200px] text-2xl font-bold",
@@ -70,7 +70,7 @@ export const whyUsData = [
     id: 4,
     type: "text-with-image",
     title: "Legalitas Lengkap & Dukungan Pengurusan Dokumen",
-    imageSrc: "/go-space-assets/legal.png",
+    imageSrc: "/images/go-space-assets/legal.png",
     imageAlt: "resepsionis",
     className:
       "hover:scale-103 transition-all font-semibold flex justify-center items-center bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500 rounded-2xl lg:row-span-6 text-white p-4 flex-col text-center text-xl",
@@ -100,7 +100,7 @@ export const whyUsData = [
   {
     id: 6,
     type: "background-image-only",
-    backgroundImage: "/go-space-assets/spaces/room-12-2.jpg",
+    backgroundImage: "/images/go-space-assets/spaces/room-12-2.jpg",
     backgroundAlt: "bg-legal",
     className:
       "hover:scale-103 transition-all relative rounded-2xl lg:row-span-4 lg:col-span-3 overflow-hidden min-h-[200px]",
