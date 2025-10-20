@@ -1,6 +1,7 @@
 export const ClientsReview = [
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/qatjte1cixr8epyeo34t.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/qatjte1cixr8epyeo34t.webp',
+        clientPhoto: "/images/clients/c1.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -8,7 +9,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Client_Ganesha_Consulting_1e5c148cce.jpeg',
+        // clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Client_Ganesha_Consulting_1e5c148cce.jpeg',
+        clientPhoto: "/images/clients/c2.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -16,7 +18,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ztne5enfp7y6paomxi5p.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ztne5enfp7y6paomxi5p.webp',
+        clientPhoto: "/images/clients/c3.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -24,7 +27,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_06_at_14_37_19_11zon_60804d5fa8.webp',
+        // clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_06_at_14_37_19_11zon_60804d5fa8.webp',
+        clientPhoto: "/images/clients/c4.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -32,7 +36,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_14_at_19_24_52_03f96c1beb.jpeg',
+        // clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Whats_App_Image_2024_11_14_at_19_24_52_03f96c1beb.jpeg',
+        clientPhoto: "/images/clients/c5.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -40,7 +45,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/xet7za6udlkyp1il2aju.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989456/GaneshaAssets/ClientsPhoto/xet7za6udlkyp1il2aju.webp',
+        clientPhoto: "/images/clients/c6.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -48,7 +54,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989457/GaneshaAssets/ClientsPhoto/ddqd5wxd7ltqqnrvgwq7.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989457/GaneshaAssets/ClientsPhoto/ddqd5wxd7ltqqnrvgwq7.webp',
+        clientPhoto: "/images/clients/c7.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -56,7 +63,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/flpvwrbwx7isaeyz3uia.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/flpvwrbwx7isaeyz3uia.webp',
+        clientPhoto: "/images/clients/c8.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -64,7 +72,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/dh4bmxbakuwwjmsqanf9.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/dh4bmxbakuwwjmsqanf9.webp',
+        clientPhoto: "/images/clients/c9.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -72,7 +81,8 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/qviusryau0yuw7yxrlin.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/qviusryau0yuw7yxrlin.webp',
+        clientPhoto: "/images/clients/c10.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
@@ -80,53 +90,55 @@ export const ClientsReview = [
         service: ''
     },
     {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/v7yq193fkm0fuezl6nb3.webp',
+        // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/v7yq193fkm0fuezl6nb3.webp',
+        clientPhoto: "/images/clients/c11.png",
         clientLogo: '',
         clientName: '',
         ptName: '',
         review: '',
         service: ''
     },
-    {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ewswfybrndb8gt7hcm4g.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
-    {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725013466/GaneshaAssets/ClientsPhoto/y0dxlf9l7fo5ai0jxghd.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
-    {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725420145/GaneshaAssets/ClientsPhoto/rrc8jzexag9s2hba19uy.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
-    {
-        clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725013466/GaneshaAssets/ClientsPhoto/tmdfozbk5srtaviiue15.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
-    {
-        clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Screenshot_2024_10_29_at_11_10_24_11zon_e9216683b8.webp',
-        clientLogo: '',
-        clientName: '',
-        ptName: '',
-        review: '',
-        service: ''
-    },
+    // {
+    //     // clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1724989455/GaneshaAssets/ClientsPhoto/ewswfybrndb8gt7hcm4g.webp',
+    //     clientPhoto: "/images/clients/c11.png",
+    //     clientLogo: '',
+    //     clientName: '',
+    //     ptName: '',
+    //     review: '',
+    //     service: ''
+    // },
+    // {
+    //     clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725013466/GaneshaAssets/ClientsPhoto/y0dxlf9l7fo5ai0jxghd.webp',
+    //     clientLogo: '',
+    //     clientName: '',
+    //     ptName: '',
+    //     review: '',
+    //     service: ''
+    // },
+    // {
+    //     clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725420145/GaneshaAssets/ClientsPhoto/rrc8jzexag9s2hba19uy.webp',
+    //     clientLogo: '',
+    //     clientName: '',
+    //     ptName: '',
+    //     review: '',
+    //     service: ''
+    // },
+    // {
+    //     clientPhoto: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1725013466/GaneshaAssets/ClientsPhoto/tmdfozbk5srtaviiue15.webp',
+    //     clientLogo: '',
+    //     clientName: '',
+    //     ptName: '',
+    //     review: '',
+    //     service: ''
+    // },
+    // {
+    //     clientPhoto: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Screenshot_2024_10_29_at_11_10_24_11zon_e9216683b8.webp',
+    //     clientLogo: '',
+    //     clientName: '',
+    //     ptName: '',
+    //     review: '',
+    //     service: ''
+    // },
     {
         clientPhoto: '',
         clientLogo: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1723610189/GaneshaAssets/ClientLogo/kpmvn4myjqrmpptxhsdp.jpg',

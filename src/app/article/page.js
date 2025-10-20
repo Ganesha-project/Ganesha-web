@@ -24,7 +24,7 @@ export default function ArticlePage() {
     const [itemsToShow, setItemsToShow] = useState(8);
     const [loadingMore, setLoadingMore] = useState(false); // Renamed from loadNew
     const [totalItems, setTotalItems] = useState(0);
-    const [isMaintenance, _] = useState(true)
+    const [isMaintenance, _] = useState(false)
 
     const fetchMoreArticles = async () => {
         try {
@@ -34,19 +34,31 @@ export default function ArticlePage() {
             const nextPage = Math.ceil((itemsToShow + 4) / 4);
             const newItemsToShow = itemsToShow + 4;
 
-            let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${newItemsToShow}`;
+            // let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/api/articles?sort[0]=createdAt:${sort}&populate=*&pagination[page]=1&pagination[pageSize]=${newItemsToShow}`;
+
+             // dev
+             const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBjbXMuY29tIiwibmFtZSI6IkFkbWluIiwicm9sZSI6IlNVUEVSX0FETUlOIiwiaWF0IjoxNzYwMDkyMDg0LCJleHAiOjE3NjA2OTY4ODR9.2uR5d3oPSC0d4XSY04Y10FUG72KMA4qFglu6OV_o5Sc"
+            let fetchArticlesUrl = `${process.env.NEXT_PUBLIC_APIURL}/article`
 
             if (searchTerm) {
                 fetchArticlesUrl += `&filters[Title][$containsi]=${searchTerm}`;
             }
 
-            const articlesRes = await fetch(fetchArticlesUrl);
+            const articlesRes = await fetch(fetchArticlesUrl, {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
 
             if (!articlesRes.ok) {
                 throw new Error("Failed to fetch more articles");
             }
 
             const articlesData = await articlesRes.json();
+
+            // dev
+            console.log(articlesData)
 
             const validArticlesData = {
                 ...articlesData,

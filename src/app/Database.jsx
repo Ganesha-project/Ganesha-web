@@ -939,24 +939,24 @@ export const dataPriceWrapper = {
 
 export const governLogo = [
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/1_f391eadf0c.png",
+        logoPath: "/images/government-logo/pse.png",
         name: "PSE"
     },
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_ed7ed613e6.png",
+        logoPath: "/images/government-logo/kominfo.png",
         name: "Kominfo"
     },
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_c0b4c94b76.png",
+        logoPath: "/images/government-logo/oss.png",
         name: "OSS"
     },
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/4_6025db44cd.png",
+        logoPath: "/images/government-logo/djp.png",
         name: "DJP"
     },
     {
-        logoUrl: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/haki_27b511a770.png",
-        name: "Pengayoman"
+        logoPath: "/images/government-logo/djki.png",
+        name: "DJKI"
     },
 ]
 

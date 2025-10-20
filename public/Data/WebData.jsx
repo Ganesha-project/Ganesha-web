@@ -31,21 +31,24 @@ export const dataHeader = {
 
 export const dataClientWeb = [
     {
-        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Bharata_Alam_Sentosa_By_Ganesha_Consulting_adeb8a03f5.webp",
+        // preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Bharata_Alam_Sentosa_By_Ganesha_Consulting_adeb8a03f5.webp",
+        preview: "images/web-portofolio/bharata.png",
         brandName: "",
         name: "PT Bharata Alam Sentosa ",
         link: "https://www.bharatafreshbali.com/",
         package: "Landing Page Company Profile"
     },
     {
-        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Elka_Mitra_Sejahtera_By_Ganesha_Consulting_0f1c8ac24b.webp",
+        // preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Elka_Mitra_Sejahtera_By_Ganesha_Consulting_0f1c8ac24b.webp",
+        preview: "images/web-portofolio/eka.png",
         brandName: "",
         name: "PT Elka Mitra Sejahtera",
         link: "https://pt-ems.vercel.app/",
         package: "Landing Page Company Profile"
     },
     {
-        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_SGW_Indo_Logistik_By_Ganesha_Consulting_7aa61d87f5.webp",
+        // preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_SGW_Indo_Logistik_By_Ganesha_Consulting_7aa61d87f5.webp",
+        preview: "images/web-portofolio/sgw.png",
         brandName: "",
         name: "PT SGW Indo Logistik",
         link: "https://sgwindologistik.com/",
@@ -66,7 +69,8 @@ export const dataClientWeb = [
         package: "Company Profile Basic"
     },
     {
-        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Web_PT_Wahyutatawasana_By_Ganeshaconsulting_51f64a2156.webp",
+        // preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Web_PT_Wahyutatawasana_By_Ganeshaconsulting_51f64a2156.webp",
+        preview: "images/web-portofolio/wahyu.png",
         brandName: "Wahyutatawasana",
         name: "PT Wahyutatawasana",
         link: "https://pt-wahyu-web.vercel.app/",
@@ -108,7 +112,8 @@ export const dataClientWeb = [
         package: "Landing Page Company Profile"
     },
     {
-        preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Screenshot_2024_11_15_at_13_08_56_11zon_11zon_ca229e6010.webp",
+        // preview: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/Screenshot_2024_11_15_at_13_08_56_11zon_11zon_ca229e6010.webp",
+        preview: "images/web-portofolio/krek.png",
         brandName: "Krek Digital",
         name: "PT KREK TRANSFORMASI DIGITAL",
         link: "https://www.krekdigital.com/",

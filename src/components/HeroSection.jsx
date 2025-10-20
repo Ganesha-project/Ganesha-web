@@ -139,14 +139,14 @@ export const HeroSection = () => {
             className="md:w-16 md:h-16 w-14 h-14 flex items-center justify-center relative"
           >
             <Image
-              src={logo.logoUrl}
+              src={logo.logoPath}
               alt={`Govern Logo ${idx + 1}`}
               width={64}
               height={64}
               className="object-contain drop-shadow-[0px_0px_10px_#ffffff] blur-lg"
             />
             <Image
-              src={logo.logoUrl}
+              src={logo.logoPath}
               alt={`Govern Logo ${idx + 1}`}
               width={64}
               height={64}
