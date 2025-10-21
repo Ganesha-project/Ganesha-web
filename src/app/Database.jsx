@@ -16,6 +16,130 @@ import { CVPackages } from "../../public/DB/CVPackages";
 import { BUPackages } from "../../public/DB/OtherPackages";
 import { servicePackages } from "../../public/DB/IzinPackages";
 
+export const testimonyPromoEdition = [
+    {
+        id: 1,
+        client: "Michael D.",
+        review: "The contractor was very professional and completed the project on time. Highly recommended!",
+        rating: 4.8
+    },
+    {
+        id: 2,
+        client: "Sarah L.",
+        review: "Excellent service! The team was very responsive and handled everything smoothly.",
+        rating: 4.7
+    },
+    {
+        id: 3,
+        client: "James K.",
+        review: "Great attention to detail and very accommodating to my requests.",
+        rating: 4.9
+    },
+    {
+        id: 4,
+        client: "Emily R.",
+        review: "I love the final results! The quality of work is top-notch.",
+        rating: 4.5
+    },
+    {
+        id: 5,
+        client: "Daniel B.",
+        review: "The contractor was easy to work with and finished ahead of schedule.",
+        rating: 4.6
+    },
+    {
+        id: 6,
+        client: "Jessica T.",
+        review: "Very professional and transparent. Kept me updated throughout the process.",
+        rating: 4.8
+    },
+    {
+        id: 7,
+        client: "Robert C.",
+        review: "Superb craftsmanship! My home looks amazing now.",
+        rating: 4.7
+    },
+    {
+        id: 8,
+        client: "Laura M.",
+        review: "The workers were polite and dedicated. Happy with the results!",
+        rating: 4.9
+    },
+    {
+        id: 9,
+        client: "William O.",
+        review: "Fantastic work and well within my budget.",
+        rating: 4.6
+    },
+    {
+        id: 10,
+        client: "Sophia W.",
+        review: "I had a great experience! The project was completed flawlessly.",
+        rating: 4.5
+    },
+    {
+        id: 11,
+        client: "Anthony P.",
+        review: "Fast, reliable, and very well-managed team.",
+        rating: 4.8
+    },
+    {
+        id: 12,
+        client: "Olivia G.",
+        review: "Professional and efficient. The best contractor I’ve worked with.",
+        rating: 4.7
+    },
+    {
+        id: 13,
+        client: "David N.",
+        review: "Everything went as planned. No complaints at all!",
+        rating: 4.9
+    },
+    {
+        id: 14,
+        client: "Emma S.",
+        review: "Great quality work. The team paid attention to every little detail.",
+        rating: 4.6
+    },
+    {
+        id: 15,
+        client: "Benjamin T.",
+        review: "They were very organized and finished everything on schedule.",
+        rating: 4.5
+    },
+    {
+        id: 16,
+        client: "Charlotte R.",
+        review: "Exceeded my expectations! I’m very happy with the work.",
+        rating: 4.9
+    },
+    {
+        id: 17,
+        client: "Alexander V.",
+        review: "Responsive and professional. Kept everything clean and tidy.",
+        rating: 4.7
+    },
+    {
+        id: 18,
+        client: "Amelia D.",
+        review: "The pricing was fair and the quality was outstanding!",
+        rating: 4.8
+    },
+    {
+        id: 19,
+        client: "Henry J.",
+        review: "They listened to my ideas and delivered exactly what I wanted.",
+        rating: 4.6
+    },
+    {
+        id: 20,
+        client: "Mia P.",
+        review: "The best experience I've had with a contractor. Will hire again!",
+        rating: 4.9
+    }
+];
+
+
 export const DataProduct = [
     {
         href: "/legalitas",
