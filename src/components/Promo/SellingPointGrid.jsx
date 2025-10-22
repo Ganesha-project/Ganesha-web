@@ -9,7 +9,7 @@ const SellingPointGrid = () => {
       {/* First Card - Stats */}
       <div className={clsx("bg-[#22177A] flex flex-col justify-center items-center gap-4 md:gap-5 py-6 md:py-8", gridClass)}>
         <div className="flex items-center justify-center gap-3 md:gap-4 text-white">
-          <p className="font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-500">100+</p>
+          <p className="font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-500">400+</p>
           <p className="text-lg md:text-xl">Client</p>
         </div>
         <div className="flex items-center justify-center gap-3 md:gap-4 text-white">

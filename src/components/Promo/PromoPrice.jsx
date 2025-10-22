@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+
 import { formatToRupiah } from "@/helper/formatToRupiah";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
@@ -73,7 +73,6 @@ export const PromoPriceList = ({ data, label, visibility }) => {
 
   const toggleAccordion = (idx) => {
     setExpandedCards((prev) => ({
-      ...prev,
       [idx]: !prev[idx],
     }));
   };
@@ -154,15 +153,15 @@ export const PromoPriceList = ({ data, label, visibility }) => {
         ref={carouselRef}
         className={`${
           processedData.length <= 3
-            ? "flex justify-center items-center flex-wrap 2xl:px-80 md:px-24"
+            ? "flex justify-center items-start flex-wrap 2xl:px-80 md:px-24"
             : "carousel scroll-smooth snap-x snap-mandatory"
         } relative w-full`}
       >
         <div
           className={`${
             processedData.length <= 3
-              ? "flex-col md:flex-row flex-wrap justify-center"
-              : ""
+              ? "flex-col md:flex-row flex-wrap justify-center items-start"
+              : "items-start"
           } flex gap-6 transform transition-transform duration-500 ease-in-out py-6`}
           style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }}
         >
@@ -285,7 +284,7 @@ export const PromoPriceList = ({ data, label, visibility }) => {
                 <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     expandedCards[idx]
-                      ? "min-h-[2000px] opacity-100"
+                      ? "max-h-[3000px] opacity-100"
                       : "max-h-0 opacity-0"
                   }`}
                 >
@@ -293,9 +292,9 @@ export const PromoPriceList = ({ data, label, visibility }) => {
                     {el.features?.map((feature, fIdx) => (
                       <div key={fIdx} className="flex items-center gap-3">
                         {feature.status ? (
-                          <BsFillCheckCircleFill className="text-green-500" />
+                          <BsFillCheckCircleFill className="text-green-500 flex-shrink-0" />
                         ) : (
-                          <BsFillXCircleFill className="text-red-500" />
+                          <BsFillXCircleFill className="text-red-500 flex-shrink-0" />
                         )}
                         <h4 className="font-medium dark:text-neutral-100 text-neutral-900">
                           {feature.feature}
@@ -312,9 +311,9 @@ export const PromoPriceList = ({ data, label, visibility }) => {
                       {el.requirements.map((req, reqIdx) => (
                         <div
                           key={reqIdx}
-                          className="flex items-center gap-3 text-sm"
+                          className="flex items-center gap-3 text-sm mb-2"
                         >
-                          <BsInfoCircleFill className="dark:text-amber-500 text-yellow-400" />
+                          <BsInfoCircleFill className="dark:text-amber-500 text-yellow-400 flex-shrink-0" />
                           <span className="font-medium dark:text-neutral-100 text-neutral-900">
                             {req}
                           </span>

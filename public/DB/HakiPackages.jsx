@@ -8,7 +8,7 @@ export const HakiPackages = [
         discount: 36,
         features: [
             { feature: "Free Konsultasi", status: true },
-            { feature: "Proses 1-2 Hari Kerja", status: true }
+            // { feature: "Proses 1-2 Hari Kerja", status: true }
         ]
     }
 ];

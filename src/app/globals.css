@@ -5,6 +5,23 @@
 @plugin "@tailwindcss/typography";
 @source inline("{opacity-0,opacity-100} {scale-95,scale-100} {translate-y-0,translate-y-4} {duration-200,duration-300} {ease-in,ease-out}");
 
+/* Tambahkan di global.css atau CSS module */
+.notification-popup-debug {
+  /* Force visibility untuk desktop */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Override kemungkinan CSS framework yang hide di desktop */
+@media (min-width: 768px) {
+  .notification-popup-debug {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
 @theme {
   /* Color */
   --color-mainColor: #6b1e9c;

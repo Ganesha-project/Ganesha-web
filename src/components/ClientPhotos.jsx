@@ -1,3 +1,5 @@
+// buat scroll nya infinite loop jangan putus
+
 "use client";
 
 import Image from "next/image";
