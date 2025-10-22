@@ -158,7 +158,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PAKET SILVER PT PERORANGAN (1 Hari Kerja)",
+        type: "PAKET SILVER PT PERORANGAN",
         highlight: false,
         price: 600000,
         priceOriginal: 942000,
@@ -188,7 +188,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PAKET GOLD PT PERORANGAN (2 Hari Kerja)",
+        type: "PAKET GOLD PT PERORANGAN",
         highlight: false,
         price: 1500000,
         priceOriginal: 2350000,
@@ -224,7 +224,7 @@ export const PMAPackages = [
     {
         type: "PT PMA (Penanaman Modal Asing)",
         highlight: false,
-        price: 7500000,
+        price: 8500000,
         priceOriginal: 11625000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20PMA%20nih!%20",
         discount: 36,
