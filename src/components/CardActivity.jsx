@@ -120,7 +120,7 @@ export const CardActivity = ({ activities, loadMore, items }) => {
                     <div className="absolute w-full backdrop-blur-md flex p-4 items-center gap-2 border-b pb-3 border-neutral-500/50">
                         <div className="flex items-center justify-between w-full">
                             <div className="flex items-center gap-2">
-                                <Image src={'/Artboard2.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
+                                <Image src={'/logo-ganesha.png'} className="w-5 md:w-8" width={30} height={30} alt="Ganesha Logo" />
                                 <a
                                     href=""
                                     className="text-sm md:text-base font-[500] bg-gradient-to-br dark:from-white dark:via-baseColor dark:to-mainColor from-neutral-800 via-mainColor to-baseColor bg-clip-text text-transparent"

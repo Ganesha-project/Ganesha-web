@@ -203,14 +203,14 @@ export const ClientsReview = [
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
         service: 'Legalitas Usaha'
     },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/PNG_LOGO_PT_AMS_905d800af5.png',
-        clientName: '',
-        ptName: 'PT AMS BERKAH BUMI',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
-        service: 'Legalitas Usaha'
-    },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/PNG_LOGO_PT_AMS_905d800af5.png',
+    //     clientName: '',
+    //     ptName: 'PT AMS BERKAH BUMI',
+    //     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
+    //     service: 'Legalitas Usaha'
+    // },
     {
         clientPhoto: '',
         clientLogo: 'https://res.cloudinary.com/dzrh2ogbn/image/upload/v1723610187/GaneshaAssets/ClientLogo/ctodgie6oqmucytl2gvk.jpg',
@@ -275,68 +275,68 @@ export const ClientsReview = [
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.',
         service: 'Legalitas Usaha'
     },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/jma_f9551249b3.png',
-        clientName: '',
-        ptName: 'Jelita Makmur Abadi',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Ganpatih_dd6c30db69.png',
-        clientName: '',
-        ptName: 'PT Mitra Bisnis Bersama',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/JCF_96f67688fb.png',
-        clientName: 'Jasa Cuci Toren Farhan',
-        ptName: '',
-        review: '',
-        service: 'Social Media Management'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Sakti_viekontama_perkasa_c3f290b6f5.png',
-        clientName: '',
-        ptName: 'PT Sakti Viekontama Perkasa',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/1_09143a7c9d.png',
-        clientName: '',
-        ptName: 'PT Gemilang Andalan Seroja',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_b00c40b4bd.png',
-        clientName: '',
-        ptName: 'PT Teknologi Buana Ekatala',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_78e756f3d9.png',
-        clientName: '',
-        ptName: 'PT GYMZONE Inovasi Indonesia',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
-    {
-        clientPhoto: '',
-        clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/4_f13fb90266.png',
-        clientName: '',
-        ptName: 'Pt Guna Karya Dolasio',
-        review: '',
-        service: 'Legalitas Usaha'
-    },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/jma_f9551249b3.png',
+    //     clientName: '',
+    //     ptName: 'Jelita Makmur Abadi',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/Ganpatih_dd6c30db69.png',
+    //     clientName: '',
+    //     ptName: 'PT Mitra Bisnis Bersama',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/JCF_96f67688fb.png',
+    //     clientName: 'Jasa Cuci Toren Farhan',
+    //     ptName: '',
+    //     review: '',
+    //     service: 'Social Media Management'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/PT_Sakti_viekontama_perkasa_c3f290b6f5.png',
+    //     clientName: '',
+    //     ptName: 'PT Sakti Viekontama Perkasa',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/1_09143a7c9d.png',
+    //     clientName: '',
+    //     ptName: 'PT Gemilang Andalan Seroja',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/3_b00c40b4bd.png',
+    //     clientName: '',
+    //     ptName: 'PT Teknologi Buana Ekatala',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_78e756f3d9.png',
+    //     clientName: '',
+    //     ptName: 'PT GYMZONE Inovasi Indonesia',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
+    // {
+    //     clientPhoto: '',
+    //     clientLogo: 'https://cms-ganesha.ganeshaconsulting.co.id/uploads/4_f13fb90266.png',
+    //     clientName: '',
+    //     ptName: 'Pt Guna Karya Dolasio',
+    //     review: '',
+    //     service: 'Legalitas Usaha'
+    // },
 ]

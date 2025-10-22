@@ -70,7 +70,7 @@ export default function Home() {
       <div className='md:hidden block'>
         <ClientPhotos />
       </div>
-      <AdsBanner />
+      {/* <AdsBanner /> */}
       <WhyUs />
       <ClientLogo />
     </>

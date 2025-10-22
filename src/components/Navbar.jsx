@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image';
-import Artboard2 from '../public/IMG/Artboard2.png';
 import ThemeSwitch from './ThemeSwitch';
 import { useState, useEffect } from 'react';
 import { dataContact } from '@/app/Database';
@@ -51,7 +50,7 @@ export const Navbar = ({ children }) => {
                 className={`z-[555] flex items-center gap-2 -ml-[11px] p-[7px] text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >
-                <Image src={Artboard2} width={21} height={21} alt="Ganesha Logo" className='dark:brightness-[135%]' />
+                <Image src={"/logo-ganesha.png"} width={21} height={21} alt="Ganesha Logo" className='dark:brightness-[135%]' />
               </Link>
               <span className={`${path === '/' ? 'scale-100' : 'scale-0'} -ml-[11px] absolute bottom-[3px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
@@ -161,7 +160,7 @@ export const Navbar = ({ children }) => {
             aria-current="page"
           >
             <Image
-              src={Artboard2}
+              src={"/logo-ganesha.png"}
               width={25}
               height={25}
               className={`${isScrolled ? "dark:brightness-125 brightness-90" : "grayscale brightness-[150] contrast-200 invert dark:invert-0"}`}

@@ -13,7 +13,7 @@ export const Footer = () => {
                                 width={40}
                                 height={40}
                                 className="dark:brightness-[135%]"
-                                src="https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75"
+                                src="/logo-ganesha.png"
                                 alt="Ganesha Consulting Logo"
                             />
                             <p className={`${TextMainGradient} font-bold text-lg`}>
