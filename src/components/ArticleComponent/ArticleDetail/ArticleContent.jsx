@@ -1,17 +1,39 @@
 import Head from "next/head";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import Link from 'next/link';
 
 export const ArticleContent = ({ data }) => {
-    const content = data?.attributes?.Content || [];
-    const title = data?.attributes?.Title || "Article Content";
-    const description = data?.attributes?.Description || "Detailed article content.";
-    const imageUrl = `${process.env.NEXT_PUBLIC_URL_STRAPI_IMG}${data?.attributes?.Thumbnail?.data?.attributes?.url}`;
-    const url = `${process.env.NEXT_PUBLIC_SITE_URL}/article/${data?.attributes?.Slug}`;
+    // PERBAIKAN: Struktur data Prisma
+    const content = data?.content || "";
+    const title = data?.title || "Article Content";
+    const description = data?.excerpt || "Detailed article content.";
+    const imageUrl = data?.thumbnail?.url || "/default-thumbnail.jpg";
+    const url = `${process.env.NEXT_PUBLIC_SITE_URL}/article/${data?.slug}`;
+    const authorName = data?.author?.name || "Anonymous";
+
+    // Check if content exists
+    if (!content || content.trim() === "") {
+        return (
+            <section className="prose lg:prose-xl max-w-none">
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-6 text-center">
+                    <p className="text-yellow-800 dark:text-yellow-200 font-semibold mb-2">
+                        No Content Available
+                    </p>
+                    <p className="text-yellow-700 dark:text-yellow-300 text-sm">
+                        This article doesn't have any content yet.
+                    </p>
+                </div>
+            </section>
+        );
+    }
+
+    // Function to render HTML content safely
+    const renderContent = () => {
+        return { __html: content };
+    };
 
     return (
         <>
-           <Head>
+            <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 
@@ -38,69 +60,306 @@ export const ArticleContent = ({ data }) => {
                             headline: title,
                             description: description,
                             image: imageUrl,
-                            datePublished: data?.attributes?.PublishTime,
+                            datePublished: data?.publishedAt || data?.createdAt,
                             author: {
                                 "@type": "Person",
-                                name: "Author Name", // replace with the actual author if available
+                                name: authorName,
                             },
                             publisher: {
                                 "@type": "Organization",
-                                name: "Your Site Name", // replace with your site name
+                                name: "Ganesha Consulting",
                                 logo: {
                                     "@type": "ImageObject",
-                                    url: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75" // replace with your logo URL
+                                    url: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75"
                                 }
                             }
                         })
                     }}
                 />
             </Head>
-            <section className="prose lg:prose-xl">
-                <BlocksRenderer
-                    blocks={{
-                        // You can use the default components to set class names...
-                        paragraph: ({ children }) => <p className="text-neutral-900 dark:text-neutral-100 prose lg:prose-xl">{children}</p>,
-                        // ...or point to a design system
-                        heading: ({ children, level }) => {
-                            switch (level) {
-                                case 1:
-                                    return <h1 className='text-neutral-700 dark:text-neutral-200'>{children}</h1>;
-                                case 2:
-                                    return <h2 className='text-neutral-700 dark:text-neutral-200'>{children}</h2>;
-                                case 3:
-                                    return <h3 className='text-neutral-700 dark:text-neutral-200'>{children}</h3>;
-                                case 4:
-                                    return <h4 className='text-neutral-700 dark:text-neutral-200'>{children}</h4>;
-                                case 5:
-                                    return <h5 className='text-neutral-700 dark:text-neutral-200'>{children}</h5>;
-                                case 6:
-                                    return <h6 className='text-neutral-700 dark:text-neutral-200'>{children}</h6>;
-                                default:
-                                    return <h1 className='text-neutral-700 dark:text-neutral-200'>{children}</h1>;
-                            }
-                        },
-                        // For links, you may want to use the component from your router or framework
-                        link: ({ children, url }) => url ? <Link className='text-mainColor dark:text-baseColor link hover:text-blue-500 dark:hover:text-blue-300' href={url}>{children}</Link> : <span>{children}</span>,
-                        // Handle bulleted lists
-                        list: ({ children, ordered }) => {
-                            return ordered ? <ol className='text-neutral-700 dark:text-neutral-200'>{children}</ol> : <ul className='text-neutral-700 dark:text-neutral-200'>{children}</ul>;
-                        },
-                        listItem: ({ children }) => <li>{children}</li>,
-                    }}
-                    modifiers={{
-                        bold: ({ children }) => <strong className='text-neutral-700 dark:text-neutral-200'>{children}</strong>,
-                        italic: ({ children }) => <span className="italic">{children}</span>,
-                        underline: ({ children }) => <span className="underline">{children}</span>,
-                        strikethrough: ({ children }) => <span className="line-through">{children}</span>,
-                        code: ({ children }) => <code className="bg-neutral-200 dark:bg-slate-700 rounded p-1">{children}</code>,
-                        blockquote: ({ children }) => <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-100 pl-4">{children}</blockquote>,
-                        preformatted: ({ children }) => <pre className="bg-neutral-900 text-white p-2 rounded">{children}</pre>,
-                        superscript: ({ children }) => <sup>{children}</sup>,
-                        subscript: ({ children }) => <sub>{children}</sub>,
-                    }}
-                    content={content}
+            
+            <section className="prose lg:prose-xl max-w-none py-8">
+                {/* Render content as HTML */}
+                <div 
+                    className="article-content"
+                    dangerouslySetInnerHTML={renderContent()}
                 />
+                
+                {/* Author Info */}
+                {data?.author && (
+                    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 not-prose">
+                        <div className="flex items-start gap-4 bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <div className="flex-shrink-0">
+                                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                                    {data.author.name.charAt(0).toUpperCase()}
+                                </div>
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Written by</p>
+                                <p className="font-bold text-xl text-gray-900 dark:text-white mb-1">
+                                    {data.author.name}
+                                </p>
+                                {data.author.email && (
+                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                        {data.author.email}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Article Metadata */}
+                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 not-prose">
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        {data?.createdAt && (
+                            <div>
+                                <span className="font-semibold">Published:</span>{" "}
+                                {new Date(data.createdAt).toLocaleDateString('id-ID', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </div>
+                        )}
+                        {data?.updatedAt && data.updatedAt !== data.createdAt && (
+                            <div>
+                                <span className="font-semibold">Updated:</span>{" "}
+                                {new Date(data.updatedAt).toLocaleDateString('id-ID', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </div>
+                        )}
+                        {data?.category && (
+                            <div>
+                                <span className="font-semibold">Category:</span>{" "}
+                                <Link 
+                                    href={`/article/category/${data.category.slug}`}
+                                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                                >
+                                    {data.category.name}
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </section>
+
+            {/* Custom styling untuk article content */}
+            <style jsx global>{`
+                .article-content {
+                    color: inherit;
+                }
+                
+                .article-content h1 {
+                    font-size: 2.25rem;
+                    font-weight: 700;
+                    color: rgb(64 64 64 / 1);
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                    line-height: 1.2;
+                }
+                
+                .dark .article-content h1 {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content h2 {
+                    font-size: 1.875rem;
+                    font-weight: 700;
+                    color: rgb(64 64 64 / 1);
+                    margin-top: 1.75rem;
+                    margin-bottom: 0.875rem;
+                    line-height: 1.3;
+                }
+                
+                .dark .article-content h2 {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content h3 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: rgb(64 64 64 / 1);
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.75rem;
+                    line-height: 1.4;
+                }
+                
+                .dark .article-content h3 {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content h4 {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: rgb(64 64 64 / 1);
+                    margin-top: 1.25rem;
+                    margin-bottom: 0.625rem;
+                }
+                
+                .dark .article-content h4 {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content p {
+                    color: rgb(23 23 23 / 1);
+                    margin-bottom: 1rem;
+                    line-height: 1.75;
+                    font-size: 1.125rem;
+                }
+                
+                .dark .article-content p {
+                    color: rgb(245 245 245 / 1);
+                }
+                
+                .article-content a {
+                    color: rgb(37 99 235 / 1);
+                    text-decoration: underline;
+                    transition: color 0.2s;
+                }
+                
+                .article-content a:hover {
+                    color: rgb(59 130 246 / 1);
+                }
+                
+                .dark .article-content a {
+                    color: rgb(96 165 250 / 1);
+                }
+                
+                .dark .article-content a:hover {
+                    color: rgb(147 197 253 / 1);
+                }
+                
+                .article-content ul, 
+                .article-content ol {
+                    color: rgb(64 64 64 / 1);
+                    margin-bottom: 1rem;
+                    margin-left: 1.5rem;
+                    line-height: 1.75;
+                }
+                
+                .dark .article-content ul,
+                .dark .article-content ol {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content ul {
+                    list-style-type: disc;
+                }
+                
+                .article-content ol {
+                    list-style-type: decimal;
+                }
+                
+                .article-content li {
+                    margin-bottom: 0.5rem;
+                    padding-left: 0.25rem;
+                }
+                
+                .article-content strong, 
+                .article-content b {
+                    color: rgb(64 64 64 / 1);
+                    font-weight: 700;
+                }
+                
+                .dark .article-content strong,
+                .dark .article-content b {
+                    color: rgb(229 229 229 / 1);
+                }
+                
+                .article-content em, 
+                .article-content i {
+                    font-style: italic;
+                }
+                
+                .article-content code {
+                    background-color: rgb(229 229 229 / 1);
+                    border-radius: 0.25rem;
+                    padding: 0.125rem 0.375rem;
+                    font-size: 0.875rem;
+                    font-family: ui-monospace, monospace;
+                }
+                
+                .dark .article-content code {
+                    background-color: rgb(51 65 85 / 1);
+                }
+                
+                .article-content pre {
+                    background-color: rgb(23 23 23 / 1);
+                    color: rgb(255 255 255 / 1);
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    overflow-x: auto;
+                    margin-bottom: 1rem;
+                    font-size: 0.875rem;
+                }
+                
+                .article-content pre code {
+                    background-color: transparent;
+                    padding: 0;
+                    color: inherit;
+                }
+                
+                .article-content blockquote {
+                    border-left: 4px solid rgb(212 212 212 / 1);
+                    padding-left: 1rem;
+                    font-style: italic;
+                    margin: 1.5rem 0;
+                    color: rgb(115 115 115 / 1);
+                }
+                
+                .dark .article-content blockquote {
+                    border-left-color: rgb(245 245 245 / 1);
+                    color: rgb(212 212 212 / 1);
+                }
+                
+                .article-content img {
+                    border-radius: 0.5rem;
+                    margin: 1.5rem 0;
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .article-content table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 1.5rem 0;
+                }
+                
+                .article-content table th,
+                .article-content table td {
+                    border: 1px solid rgb(212 212 212 / 1);
+                    padding: 0.75rem;
+                    text-align: left;
+                }
+                
+                .dark .article-content table th,
+                .dark .article-content table td {
+                    border-color: rgb(64 64 64 / 1);
+                }
+                
+                .article-content table th {
+                    background-color: rgb(243 244 246 / 1);
+                    font-weight: 600;
+                }
+                
+                .dark .article-content table th {
+                    background-color: rgb(31 41 55 / 1);
+                }
+                
+                .article-content hr {
+                    border: none;
+                    border-top: 1px solid rgb(212 212 212 / 1);
+                    margin: 2rem 0;
+                }
+                
+                .dark .article-content hr {
+                    border-top-color: rgb(64 64 64 / 1);
+                }
+            `}</style>
         </>
     );
 };

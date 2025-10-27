@@ -2,14 +2,14 @@ import Head from "next/head";
 import Breadcrumbs from "./Breadcrumbs";
 import { formatDateTime } from "@/helper/formatDateTime";
 
-const baseURLImg = process.env.NEXT_PUBLIC_URL_STRAPI_IMG;
-
 export const BannerArticleDetail = ({ data }) => {
-    const detail = data?.attributes;
-    const title = detail?.Title || "Article Detail";
-    const description = detail?.Description || "Read more about this topic.";
-    const imageUrl = `${baseURLImg}${detail?.Thumbnail?.data?.attributes?.url}`;
-    const url = `${process.env.NEXT_PUBLIC_SITE_URL}/article/${detail?.Slug}`;
+    // PERBAIKAN: Prisma tidak menggunakan 'attributes', data langsung accessible
+    const title = data?.title || "Article Detail";
+    const description = data?.excerpt || "Read more about this topic.";
+    const imageUrl = data?.thumbnail?.url || "/default-thumbnail.jpg";
+    const url = `${process.env.NEXT_PUBLIC_SITE_URL}/article/${data?.slug}`;
+    const categoryName = data?.category?.name || "Uncategorized";
+    const authorName = data?.author?.name || "Anonymous";
 
     return (
         <>
@@ -40,17 +40,17 @@ export const BannerArticleDetail = ({ data }) => {
                             headline: title,
                             description: description,
                             image: imageUrl,
-                            datePublished: detail?.PublishTime,
+                            datePublished: data?.publishedAt || data?.createdAt,
                             author: {
                                 "@type": "Person",
-                                name: "Author Name", // replace with dynamic author data if available
+                                name: authorName,
                             },
                             publisher: {
                                 "@type": "Organization",
-                                name: "Your Site Name", // replace with your site name
+                                name: "Ganesha Consulting",
                                 logo: {
                                     "@type": "ImageObject",
-                                    url: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75" // replace with your logo URL
+                                    url: "https://www.ganeshaconsulting.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FArtboard2.b33b65bb.png&w=96&q=75"
                                 }
                             }
                         })
@@ -58,37 +58,40 @@ export const BannerArticleDetail = ({ data }) => {
                 />
             </Head>
 
-
             <section className="min-h-screen pt-10">
                 <div className="flex justify-center flex-col gap-2 h-screen relative">
-                    <Breadcrumbs slug={detail?.Slug} categories={detail?.category?.data?.attributes?.ArticleCategory} title={detail?.Title} />
+                    <Breadcrumbs 
+                        slug={data?.slug} 
+                        categories={categoryName} 
+                        title={title} 
+                    />
                     <h1 className="font-bold text-3xl dark:text-white text-neutral-900">
-                        {detail?.Title}
+                        {title}
                     </h1>
                     <div className="flex items-center gap-3 mb-3">
                         <span className="px-2 py-1 border border-mainColor/5 text-mainColor dark:text-secondaryColor dark:border-secondaryColor/20 bg-mainColor/10 text-[10px] font-bold tracking-wider rounded-lg">
-                            {detail?.category?.data?.attributes?.ArticleCategory}
+                            {categoryName}
                         </span>
                         <h2 className="text-sm">
-                            {formatDateTime(detail?.PublishTime)}
+                            {formatDateTime(data?.publishedAt || data?.createdAt)}
                         </h2>
                     </div>
                     <img
                         width={500}
                         height={500}
                         className="h-[70lvh] z-30 w-full rounded-3xl object-cover"
-                        src={`${baseURLImg}${detail?.Thumbnail?.data?.attributes?.url}`}
-                        alt={detail?.Title}
+                        src={imageUrl}
+                        alt={data?.thumbnail?.alt || title}
                     />
                     <img
                         width={30}
                         height={30}
                         className="absolute bottom-20 h-[20lvh] w-[200lvw] rounded-3xl object-cover blur-[100px]"
-                        src={`${baseURLImg}${detail?.Thumbnail?.data?.attributes?.url}`}
-                        alt={detail?.Title}
+                        src={imageUrl}
+                        alt={title}
                     />
                 </div>
             </section>
         </>
-    )
-}
+    );
+};

@@ -2,6 +2,7 @@ import { IoIosSearch } from "react-icons/io";
 import { useState } from "react";
 import { TiDelete } from "react-icons/ti";
 
+//
 export const Searchbar = ({
     onSearch,
     placeholder = "Cari judul artikel...",

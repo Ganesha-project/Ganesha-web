@@ -248,7 +248,8 @@ export default function SearchPageQuery() {
                     <>
                         <ul className={`flex flex-col gap-2 mt-2 ${articleResults.length > 0 && "order-first"}`}>
                             {articleResults?.map((item, idx) => (
-                                <a key={idx} href={`/article/${slugify(item.categorySlug)}/${item.slug}`}>
+                                // <a key={idx} href={`/article/${slugify(item.categorySlug)}/${item.slug}`}>
+                                <a key={idx} href={`/article/${item.slug}`}>
                                     <li className="p-5 bg-lightColor dark:bg-darkColor rounded-3xl">
                                         <h2 className="font-semibold text-lg">
                                             {highlightText(item.title, searchQuery)}

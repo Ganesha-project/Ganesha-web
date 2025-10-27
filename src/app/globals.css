@@ -5,6 +5,32 @@
 @plugin "@tailwindcss/typography";
 @source inline("{opacity-0,opacity-100} {scale-95,scale-100} {translate-y-0,translate-y-4} {duration-200,duration-300} {ease-in,ease-out}");
 
+button {
+  @apply cursor-pointer
+}
+
+.article-content h1, .article-content h2, .article-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.article-content img {
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.article-content blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
 /* Tambahkan di global.css atau CSS module */
 .notification-popup-debug {
   /* Force visibility untuk desktop */
