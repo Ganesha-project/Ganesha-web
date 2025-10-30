@@ -1,13 +1,12 @@
 import { testimonyPromoPtCv } from "@/app/Database";
 import { ClientLogo } from "@/components/ClientLogo";
 import { ClientPhotos } from "@/components/ClientPhotos";
-import Credibility from "@/components/Promo/Credibility";
+import { Credibility } from "@/components/Promo/Credibility";
 import { NotificationPopup } from "@/components/Promo/NotificationPopup";
-import PromoBanner from "@/components/Promo/PromoBanner";
+import { PromoBanner } from "@/components/Promo/PromoBanner";
 import { PromoPriceList } from "@/components/Promo/PromoPrice";
-import SellingPointGrid from "@/components/Promo/SellingPointGrid";
 import { Testimonies } from "@/components/Promo/Testimonies";
-import { ReusableCards } from "@/components/ReusableCards";
+import { Voucher } from "@/components/Promo/voucher";
 import { CVPackages } from "@/DB/CVPackages";
 import { ExtrasPackages, PMAPackages, PTPackages } from "@/DB/PTPackages";
 import Image from "next/image";
@@ -55,29 +54,30 @@ function PromoPtCvPage() {
 
   return (
     <>
-      <main>
-        <PromoBanner
-          title="Pendirian PT & CV Terjangkau"
-          subtitle="Layanan Pendirian PT & CV"
-          description="Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT dan CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"
-          backgroundImage="https://images.pexels.com/photos/32156209/pexels-photo-32156209.jpeg"
-          modelImage="/images/promo-assets/erlin.png"
-          scrollTargetId="details"
+      <main >
+        <PromoBanner  
+        badge={"Layanan Pendirian PT & CV"}
+        title={"Pendirian PT & CV Terjangkau"}
+        desc={"Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT dan CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"}
+        modelImage={"/images/promo-assets/glass-erlin.png"}
         />
-        <SellingPointGrid />
-        <Credibility />
+        <Voucher/>
+        <Credibility/>
+
+        {/* <SellingPointGrid /> */}
         <Testimonies duplicatedReviews={data} />
         <ClientPhotos />
+        
         {/* === Responsive Promotional Banner === */}
-        <div className="w-full max-w-7xl px-6 md:px-12 mb-20 mt-10">
-          <div className="overflow-hidden rounded-2xl">
+        <div className="w-full flex justify-center items-center  px-6 md:px-12 mb-20 mt-10">
+          <div className="overflow-hidden rounded-2xl max-w-6xl">
             <picture>
               <source
                 media="(max-width: 768px)"
-                srcSet="/images/promo-assets/promote-banner-mobile.png"
+                srcSet="/images/promo-assets/cta-mobile.png"
               />
               <Image
-                src="/images/promo-assets/promote-banner-desktop.png"
+                src="/images/promo-assets/cta-dekstop.png"
                 alt="Promotional Banner"
                 width={1200}
                 height={400}

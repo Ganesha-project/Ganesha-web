@@ -5,6 +5,10 @@
 @plugin "@tailwindcss/typography";
 @source inline("{opacity-0,opacity-100} {scale-95,scale-100} {translate-y-0,translate-y-4} {duration-200,duration-300} {ease-in,ease-out}");
 
+.promo-margin {
+  @apply mx-4 sm:mx-8 md:mx-12
+}
+
 button {
   @apply cursor-pointer
 }
