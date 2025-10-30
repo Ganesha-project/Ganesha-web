@@ -23,31 +23,31 @@ function PromoPtCvPage() {
     {
       name: "Pak Budi Santoso",
       action: "telah menyelesaikan pendirian PT LENGKAP + PKP",
-      time: "30 menit yang lalu",
+      time: "1 hari yang lalu",
       location: "Jakarta",
     },
     {
       name: "Ibu Siti Nurhaliza",
       action: "telah menyelesaikan pendirian PT PMDN",
-      time: "1 jam yang lalu",
+      time: "8 jam yang lalu",
       location: "Surabaya",
     },
     {
       name: "Pak Ahmad Rizki",
       action: "sedang berjalan layanan PT LENGKAP + WEBSITE COMPANY",
-      time: "2 jam yang lalu",
+      time: "3 jam yang lalu",
       location: "Bandung",
     },
     {
       name: "Ibu Diana Putri",
       action: "telah melakukan konsultasi terkait Pengurusan PKP (Pengusaha Kena Pajak)",
-      time: "3 jam yang lalu",
+      time: "5 jam yang lalu",
       location: "Medan",
     },
     {
       name: "Pak Hendro Wijaya",
       action: "telah menyelesaikan legalitas perusahaan",
-      time: "4 jam yang lalu",
+      time: "2 hari yang lalu",
       location: "Semarang",
     },
   ];

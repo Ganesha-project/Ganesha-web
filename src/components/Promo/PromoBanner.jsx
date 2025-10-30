@@ -65,7 +65,7 @@ export const PromoBanner = ({
       </div>
 
       {/* right grid */}
-      <div className="relative overflow-hidden rounded-2xl shadow-custom h-64 sm:h-80 lg:h-auto lg:w-1/2 w-full grow">
+      <div className="relative overflow-hidden rounded-2xl shadow-custom h-70 sm:h-80 lg:h-auto lg:w-1/2 w-full grow">
         <img
           className="absolute inset-0 object-cover h-full w-full"
           src="https://i.pinimg.com/1200x/ec/ba/9b/ecba9b63fe15f9cc4de57598f3f6b955.jpg"

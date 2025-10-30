@@ -10,6 +10,7 @@ export function NotificationPopup({ notifications }) {
   const [index, setIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
@@ -18,14 +19,35 @@ export function NotificationPopup({ notifications }) {
 
   useEffect(() => {
     if (!isClient || hidden) return;
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % notifications.length);
-      setHidden(false);
-    }, 3000);
+    
+    const showDuration = 8000; // Notifikasi tampil selama 8 detik
+    const hideDuration = 3000; // Notifikasi hilang selama 3 detik
+    
+    const cycle = () => {
+      // Tampilkan notifikasi
+      setIsVisible(true);
+      
+      setTimeout(() => {
+        // Sembunyikan notifikasi
+        setIsVisible(false);
+        
+        setTimeout(() => {
+          // Ganti ke notifikasi berikutnya setelah jeda
+          setIndex((prev) => (prev + 1) % notifications.length);
+        }, hideDuration);
+      }, showDuration);
+    };
+    
+    // Jalankan cycle pertama kali
+    cycle();
+    
+    // Ulangi cycle
+    const interval = setInterval(cycle, showDuration + hideDuration);
+    
     return () => clearInterval(interval);
   }, [isClient, notifications.length, hidden]);
 
-  if (!isClient || !mounted || hidden) return null;
+  if (!isClient || !mounted || hidden || !isVisible) return null;
 
   const current = notifications[index];
 
@@ -46,7 +68,7 @@ export function NotificationPopup({ notifications }) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5 }} // Slightly slower transition (0.4s -> 0.5s)
           className="
             relative
             bg-white/95 
