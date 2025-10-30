@@ -6,7 +6,7 @@ import { BgMainGradient, TextMainGradient } from "@/utils/ReueseClass";
 import clsx from "clsx";
 
 export const Voucher = () => {
-  const WaLink = "https://api.whatsapp.com/send?phone=628887127000";
+  const WaLink = "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20saya%20ingin%20klaim%20voucher";
   return (
     <section className="my-12 sm:my-16 lg:my-20 space-y-6 sm:space-y-8 lg:space-y-10 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center gap-2 sm:gap-3 text-center max-w-xs sm:max-w-lg lg:max-w-2xl">

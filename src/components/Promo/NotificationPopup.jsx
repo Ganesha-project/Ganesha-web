@@ -20,8 +20,8 @@ export function NotificationPopup({ notifications }) {
   useEffect(() => {
     if (!isClient || hidden) return;
     
-    const showDuration = 8000; // Notifikasi tampil selama 8 detik
-    const hideDuration = 3000; // Notifikasi hilang selama 3 detik
+    const showDuration = 3000; // Notifikasi tampil selama 8 detik
+    const hideDuration = 30000; // Notifikasi hilang selama 3 detik
     
     const cycle = () => {
       // Tampilkan notifikasi

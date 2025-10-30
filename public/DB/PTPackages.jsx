@@ -1,7 +1,7 @@
 export const PTPackages = [
     {
         type: "PT DASAR",
-        highlight: false,
+        highlight: true,
         price: 4500000,
         priceOriginal: 8550000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -33,7 +33,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP",
-        highlight: false,
+        highlight: true,
         price: 5000000,
         priceOriginal: 9500000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -97,7 +97,7 @@ export const PTPackages = [
     },
     {
         type: "PT LENGKAP + WEBSITE COMPANY",
-        highlight: false,
+        highlight: true,
         price: 7300000,
         priceOriginal: 10205000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20nih!%20",
@@ -223,7 +223,7 @@ export const PTPackages = [
 export const PMAPackages = [
     {
         type: "PT PMA (Penanaman Modal Asing)",
-        highlight: false,
+        highlight: true ,
         price: 8500000,
         priceOriginal: 11625000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20PMA%20nih!%20",

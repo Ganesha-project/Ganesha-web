@@ -40,7 +40,8 @@ function PromoPtCvPage() {
     },
     {
       name: "Ibu Diana Putri",
-      action: "telah melakukan konsultasi terkait Pengurusan PKP (Pengusaha Kena Pajak)",
+      action:
+        "telah melakukan konsultasi terkait Pengurusan PKP (Pengusaha Kena Pajak)",
       time: "5 jam yang lalu",
       location: "Medan",
     },
@@ -52,25 +53,33 @@ function PromoPtCvPage() {
     },
   ];
 
+  const WaLink = "https://api.whatsapp.com/send?phone=628887127000";
+
   return (
     <>
-      <main >
-        <PromoBanner  
-        badge={"Layanan Pendirian PT & CV"}
-        title={"Pendirian PT & CV Terjangkau"}
-        desc={"Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT dan CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"}
-        modelImage={"/images/promo-assets/glass-erlin.png"}
+      <main>
+        <PromoBanner
+          badge={"Layanan Pendirian PT & CV"}
+          title={"Pendirian PT & CV Terjangkau"}
+          desc={
+            "Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT dan CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"
+          }
+          modelImage={"/images/promo-assets/glass-erlin.png"}
+          priceNav="/promo/pt-cv#promo-price"
         />
-        <Voucher/>
-        <Credibility/>
+        <Voucher />
+        <Credibility />
 
-        {/* <SellingPointGrid /> */}
         <Testimonies duplicatedReviews={data} />
         <ClientPhotos />
-        
+
         {/* === Responsive Promotional Banner === */}
-        <div className="w-full flex justify-center items-center  px-6 md:px-12 mb-20 mt-10">
-          <div className="overflow-hidden rounded-2xl max-w-6xl">
+        <div className="w-full flex justify-center items-center  px-6 md:px-12 mb-20 mt-10  ">
+          <a
+            href={WaLink}
+            target="_blank"
+            className="hover:scale-98 ease-in-out transition-all overflow-hidden rounded-4xl max-w-5xl shadow-custom"
+          >
             <picture>
               <source
                 media="(max-width: 768px)"
@@ -85,9 +94,10 @@ function PromoPtCvPage() {
                 priority
               />
             </picture>
-          </div>
+          </a>
         </div>
 
+        {/* Tampilkan semua paket PT dan CV */}
         <PromoPriceList
           data={[...PTPackages, ...ExtrasPackages]}
           label={"Paket Pendirian PT"}
@@ -96,6 +106,7 @@ function PromoPtCvPage() {
           data={[...CVPackages, ...ExtrasPackages]}
           label={"Paket Pendirian CV"}
         />
+        
         <ClientLogo />
       </main>
 

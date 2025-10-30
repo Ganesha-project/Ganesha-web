@@ -5,7 +5,6 @@ import { Credibility } from "@/components/Promo/Credibility";
 import { NotificationPopup } from "@/components/Promo/NotificationPopup";
 import { PromoBanner } from "@/components/Promo/PromoBanner";
 import { PromoPriceList } from "@/components/Promo/PromoPrice";
-import SellingPointGrid from "@/components/Promo/SellingPointGrid";
 import { Testimonies } from "@/components/Promo/Testimonies";
 import { Voucher } from "@/components/Promo/voucher";
 import { PMAPackages } from "@/DB/PTPackages";
@@ -56,6 +55,7 @@ function PromoPTPMAPage() {
             "Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT PMA yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"
           }
           modelImage="/images/promo-assets/glass-aji.png"
+          priceNav="/promo/pt-pma#promo-price"
         />
         <Voucher />
         <Credibility />

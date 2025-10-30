@@ -37,6 +37,7 @@ const cvKeywords = [
 const CVPackagesRaw = [
     {
         type: "CV Dasar",
+        highlight:true,
         price: 3000000,
         priceOriginal: 4710000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
@@ -66,6 +67,7 @@ const CVPackagesRaw = [
     },
     {
         type: "CV Lengkap",
+        highlight:true,
         price: 3500000,
         priceOriginal: 5495000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
@@ -95,6 +97,7 @@ const CVPackagesRaw = [
     },
     {
         type: "CV Lengkap + PKP",
+        highlight:false,
         price: 4500000,
         priceOriginal: 7065000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
@@ -124,6 +127,7 @@ const CVPackagesRaw = [
     },
     {
         type: "CV Lengkap + Website Company",
+        highlight:true,
         price: 5000000,
         priceOriginal: 7800000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",
@@ -153,6 +157,7 @@ const CVPackagesRaw = [
     },
     {
         type: "CV Lengkap + PKP + Website",
+        highlight:false,
         price: 6000000,
         priceOriginal: 9420000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20CV%20nih!%20",

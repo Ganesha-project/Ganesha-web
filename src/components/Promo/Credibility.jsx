@@ -65,7 +65,7 @@ export const Credibility = () => {
             <h1
               className={clsx(
                 "text-xl sm:text-2xl md:text-3xl pb-1 font-bold bg-gradient-to-br",
-                "dark:from-white dark:via-lightColor dark:to-mainColor",
+                "",
                 "from-neutral-800 via-neutral-800 to-secondaryColor",
                 "bg-clip-text text-transparent leading-snug"
               )}
