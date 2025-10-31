@@ -27,7 +27,8 @@ export default function ArticlePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [sort, setSort] = useState('DESC');
-  const [isMaintenance, setIsMaintenance] = useState(false);
+  const [isMaintenance, setIsMaintenance] = useState(true);
+
 
   // Fetch all articles including highlight and categories data
   const fetchArticles = async (page = 1, search = "", status = "all", sortOrder = "DESC") => {
