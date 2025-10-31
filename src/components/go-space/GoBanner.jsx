@@ -2,9 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import Image from "next/image";
 
 export const GoBanner = () => {
-  const images = ["/go-banner-1.png", "/go-banner-2.png", "/go-banner-3.png"];
+  const images = [
+    "/images/go-space-assets/go-banner-1.webp",
+    "/images/go-space-assets/go-banner-2.webp",
+    "/images/go-space-assets/go-banner-3.webp",
+  ];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -14,7 +19,7 @@ export const GoBanner = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const waNumber = "628871510044"; 
+  const waNumber = "628871510044";
   const waMessage = "Halo, saya tertarik dengan layanan Go Space!";
   const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(
     waMessage
@@ -22,13 +27,13 @@ export const GoBanner = () => {
 
   return (
     <main className="py-20 flex items-center justify-center px-5">
-      <section 
-      className="relative overflow-hidden rounded-parent w-full"
-      style={{ height: "calc(100vh - 6.5rem )" }}
+      <section
+        className="relative overflow-hidden rounded-parent w-full"
+        style={{ height: "calc(100vh - 6.5rem )" }}
       >
         {/* slideshow image */}
         <div className="absolute inset-0 z-0">
-          <AnimatePresence mode="wait" initial={false}>
+          {/* <AnimatePresence mode="wait" initial={false}>
             <motion.img
               key={`banner-${current}`}
               src={images[current]}
@@ -39,6 +44,26 @@ export const GoBanner = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
             />
+          </AnimatePresence> */}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={`banner-${current}`}
+              className="absolute inset-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+            >
+              <Image
+                src={images[current]}
+                alt={`Hero Banner ${current + 1}`}
+                fill
+                priority={current === 0} // cuma banner pertama yang di-prioritaskan
+                quality={70} // kompres gambar tanpa kehilangan kualitas signifikan
+                sizes="100vw"
+                className="object-cover"
+              />
+            </motion.div>
           </AnimatePresence>
         </div>
 
@@ -57,7 +82,11 @@ export const GoBanner = () => {
             </div>
 
             <div className="mx-6 mt-8">
-              <a href={waLink} target="_blank"  className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+              <a
+                href={waLink}
+                target="_blank"
+                className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition"
+              >
                 Get Started
               </a>
             </div>
@@ -71,10 +100,18 @@ export const GoBanner = () => {
                 Work Better, <br /> Together
               </h1>
               <div className="flex gap-3">
-                <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition">
+                <a
+                  href={waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-goPurple text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-gray-800 transition"
+                >
                   Book Now
                 </a>
-                <a  href="#why-us"className="border border-white text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-white hover:text-black transition">
+                <a
+                  href="#why-us"
+                  className="border border-white text-white rounded-full sm:px-5 py-2 px-2 sm:text-sm text-[10px] md:text-base hover:bg-white hover:text-black transition"
+                >
                   Read More
                 </a>
               </div>
@@ -122,7 +159,12 @@ export const GoBanner = () => {
             </div>
 
             <div className="px-4 py-2 z-50">
-              <a href={waLink} target="_blank" rel="noopener noreferrer" className="bg-goPurple block text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition">
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-goPurple block text-white rounded-full px-3 py-1 text-xs hover:bg-gray-800 transition"
+              >
                 Get Started
               </a>
             </div>

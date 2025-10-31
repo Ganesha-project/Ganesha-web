@@ -19,7 +19,7 @@ export const dataPricing = [
     originalPrice: "Rp 2.550.000",
     price: "Rp 1.700.000",
     discount: "33% OFF",
-    period: "/ bulan",
+    // period: "/ bulan",
     description:
       "Solusi virtual office dengan fasilitas lengkap untuk profesional dan bisnis kecil yang membutuhkan alamat prestisius dan meeting room.",
     img: "/images/go-space-assets/spaces/room-4-1.jpg",
@@ -45,7 +45,7 @@ export const dataPricing = [
     originalPrice: "Rp 3.750.000",
     price: "Rp 2.500.000",
     discount: "33% OFF",
-    period: "/ bulan",
+    // period: "/ bulan",
     description:
       "Paket virtual office premium dengan jam meeting room yang lebih banyak untuk bisnis yang memerlukan fleksibilitas lebih tinggi.",
     img: "/images/go-space-assets/spaces/room-12-1.jpg",

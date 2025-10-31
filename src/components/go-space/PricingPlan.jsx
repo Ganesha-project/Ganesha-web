@@ -49,7 +49,7 @@ export const PricingPlan = () => {
 
               <div className="!z-50 bg-gradient-to-br from-slate-900 via-gray-900 to-black flex flex-col rounded-children p-6 text-white gap-5">
                 <div className="flex-1">
-                  <h3 className="text-xl text-gray-200 mb-2">{plan.title}</h3>
+                  {/* <h3 className="text-xl text-gray-200 mb-2">{plan.title}</h3> */}
 
                   <div className="mb-4">
                     <div className="flex items-center gap-2 mb-2">
@@ -74,7 +74,6 @@ export const PricingPlan = () => {
                     {plan.description}
                   </p>
 
-                  {/* kenapa ini w nya ga full */}
                   <a href={waLink} target="_blank"
                     className={`${
                       plan.popular
