@@ -21,7 +21,7 @@ export const whyUsData = [
       "hover:scale-103 transition-all flex justify-center items-center bg-goPurple-secondary dark:text-black/90 rounded-2xl lg:row-span-4 lg:col-span-2 px-7 py-5 font-bold gap-5 text-center ",
     titleClassName: "text-start text-xl sm:text-2xl py-5",
     iconClassName: "text-4xl lg:text-5xl",
-    desc: "Gedung Fancy Mampang, Jl. Mampang Prpt. Raya No. 151 Lantai 4 Unit A7, RT.3/RW.001, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Jakarta, Indonesia 12760",
+    desc: "Gedung Fancy Mampang, Jl. Mampang Prapatan Raya No. 151 Lantai 4 Unit A7, RT.3/RW.001, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Jakarta, Indonesia 12760",
     // Mobile properties
     mobileTitle: "Alamat Strategis",
     mobileDesc:

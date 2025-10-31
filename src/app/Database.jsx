@@ -1014,7 +1014,7 @@ export const dataContact = {
   address: [
     {
       label: "Kantor Operasional",
-      data: "Gedung Fancy Mampang, Jl. Mampang Prpt. Raya No.151 Lantai 4 Unit A7, RT.3/RW.1, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760",
+      data: "Gedung Fancy Mampang, Jl. Mampang Prapatan Raya No.151 Lantai 4 Unit A7, RT.3/RW.1, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760",
       embed:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126905.92495660148!2d106.76783528258977!3d-6.288666645245213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3007a6e8e39%3A0xf83b477d03a6931f!2sGANESHA%20CONSULTING!5e0!3m2!1sid!2sid!4v1745989232101!5m2!1sid!2sid",
       link: "https://maps.app.goo.gl/bYwmJbZR8cTUCdJf6",
