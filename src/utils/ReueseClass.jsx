@@ -3,3 +3,4 @@ export const BgMainGradient = "bg-gradient-to-br dark:from-white dark:via-baseCo
 export const TextGradientYellowPurple = "bg-gradient-to-br dark:from-secondaryColor dark:via-baseColor dark:to-secondaryYellow from-mainColor via-[#af40f4] to-yellow-600 bg-clip-text text-transparent"
 export const BgtGradientYellowPurple = "bg-gradient-to-br dark:from-secondaryColor dark:via-baseColor dark:to-secondaryYellow from-mainColor via-[#af40f4] to-yellow-600"
 export const TextSkyGradient = "bg-gradient-to-tr dark:from-neutral-100 from-neutral-800 dark:via-neutral-300 via-neutral-600 to-sky-800 dark:to-sky-300 bg-clip-text text-transparent"
+export const TextDarkPurple = "bg-gradient-to-br from-black via-neutral-600 to-secondaryColor bg-clip-text text-transparent dark:from-white dark:via-neutral-200 dark:secondaryColor "
