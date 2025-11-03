@@ -28,9 +28,10 @@ export default function ArticlePage() {
   const [statusFilter, setStatusFilter] = useState("all");
   const [sort, setSort] = useState('DESC');
   const [isMaintenance, setIsMaintenance] = useState(false);
+  const [categoryFilter, setCategoryFilter] = useState("all");
 
   // Fetch all articles including highlight and categories data
-  const fetchArticles = async (page = 1, search = "", status = "all", sortOrder = "DESC") => {
+  const fetchArticles = async (page = 1, search = "", status = "all", sortOrder = "DESC", category = "all") => {
     try {
       setLoading(true);
 
@@ -42,7 +43,13 @@ export default function ArticlePage() {
         ...(status !== "all" && { status: status.toUpperCase() }),
       });
 
+      // Add category filter - try different parameter names
+      if (category !== "all") {
+        params.append('categorySlug', category);
+      }
+
       console.log("Fetching articles with params:", params.toString());
+      console.log("Category filter:", category);
 
       const response = await fetch(`${API_URL}/article?${params}`);
 
@@ -79,6 +86,8 @@ export default function ArticlePage() {
             }
             return unique;
           }, []);
+
+          console.log("Extracted categories:", categoriesFromArticles);
 
         setCategories({
           data: categoriesFromArticles
@@ -121,28 +130,71 @@ export default function ArticlePage() {
     }
   };
 
+  // Fetch all categories for filter
+  const fetchCategories = async () => {
+    try {
+      const response = await fetch(`${API_URL}/article?limit=100&status=PUBLISH`);
+      
+      if (!response.ok) {
+        throw new Error("Failed to fetch categories");
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        const categoriesFromArticles = result.data
+          .map((article) => article.category)
+          .filter((category) => category && category.name)
+          .reduce((unique, category) => {
+            if (!unique.find(item => item.id === category.id)) {
+              unique.push({
+                id: category.id,
+                name: category.name,
+                slug: category.slug
+              });
+            }
+            return unique;
+          }, []);
+
+        setCategories({
+          data: categoriesFromArticles
+        });
+      }
+    } catch (err) {
+      console.error("Error fetching categories:", err);
+    }
+  };
+
   // Initial load
   useEffect(() => {
     const fetchData = async () => {
-      await fetchArticles(currentPage, searchQuery, statusFilter, sort);
+      await fetchArticles(currentPage, searchQuery, statusFilter, sort, categoryFilter);
       await fetchHighlightArticles();
+      await fetchCategories();
     };
     
     fetchData();
-  }, [currentPage, statusFilter, sort]);
+  }, [currentPage, statusFilter, sort, categoryFilter]);
 
   // Handle search
   const handleSearch = (searchTerm) => {
     setSearchQuery(searchTerm);
     setCurrentPage(1);
-    fetchArticles(1, searchTerm, statusFilter, sort);
+    fetchArticles(1, searchTerm, statusFilter, sort, categoryFilter);
   };
 
   // Handle status filter change
   const handleStatusChange = (status) => {
     setStatusFilter(status);
     setCurrentPage(1);
-    fetchArticles(1, searchQuery, status, sort);
+    fetchArticles(1, searchQuery, status, sort, categoryFilter);
+  };
+
+  // Handle category filter change
+  const handleCategoryChange = (categorySlug) => {
+    setCategoryFilter(categorySlug);
+    setCurrentPage(1);
+    fetchArticles(1, searchQuery, statusFilter, sort, categorySlug);
   };
 
   // Handle pagination
@@ -155,15 +207,28 @@ export default function ArticlePage() {
   const handleSortChange = (order) => {
     setSort(order);
     setCurrentPage(1);
-    fetchArticles(1, searchQuery, statusFilter, order);
+    fetchArticles(1, searchQuery, statusFilter, order, categoryFilter);
   };
 
   // Format articles data for ArticleCard component
   const formatArticlesForCard = (articlesData) => {
     if (!articlesData || !articlesData.data) return null;
 
+    // Apply client-side category filter if API doesn't support it
+    let filteredData = articlesData.data;
+    
+    if (categoryFilter !== "all") {
+      filteredData = articlesData.data.filter(article => 
+        article.category?.slug === categoryFilter
+      );
+    }
+
     return {
-      data: articlesData.data
+      data: filteredData,
+      pagination: {
+        ...articlesData.pagination,
+        totalItems: filteredData.length
+      }
     };
   };
 
@@ -178,7 +243,7 @@ export default function ArticlePage() {
         <p className="text-red-500 font-semibold">Error: {message}</p>
         {showReload && (
           <button
-            onClick={() => fetchArticles(currentPage, searchQuery, statusFilter, sort)}
+            onClick={() => fetchArticles(currentPage, searchQuery, statusFilter, sort, categoryFilter)}
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
           >
             Try Again
@@ -192,11 +257,14 @@ export default function ArticlePage() {
     <div className="h-[30lvh] flex items-center justify-center">
       <p className="text-xl text-center">
         No articles found
-        {(searchQuery || statusFilter !== "all") && (
+        {(searchQuery || statusFilter !== "all" || categoryFilter !== "all") && (
           <>
             <br />
             {searchQuery && (
               <>for <span className="font-semibold text-mainColor dark:text-baseColor">"{searchQuery}"</span></>
+            )}
+            {categoryFilter !== "all" && (
+              <> in category <span className="font-semibold text-mainColor dark:text-baseColor">{categoryFilter}</span></>
             )}
             {statusFilter !== "all" && (
               <> with status <span className="font-semibold text-mainColor dark:text-baseColor">{statusFilter}</span></>
@@ -249,10 +317,10 @@ export default function ArticlePage() {
         <Searchbar onSearch={handleSearch} />
 
         {/* Status Filter */}
-        <StatusFilter 
+        {/* <StatusFilter 
           onStatusChange={handleStatusChange} 
           currentStatus={statusFilter}
-        />
+        /> */}
 
         {/* Categories Filter */}
         {error ? (
@@ -260,7 +328,11 @@ export default function ArticlePage() {
         ) : loading ? (
           <SkeletonTiles />
         ) : categories && categories.data.length > 0 ? (
-          <TilesFilter categories={categories} />
+          <TilesFilter 
+            categories={categories} 
+            onChangeCategory={handleCategoryChange}
+            activeCategory={categoryFilter}
+          />
         ) : null}
 
         {/* Main Content */}
@@ -280,6 +352,8 @@ export default function ArticlePage() {
                   label={
                     searchQuery 
                       ? 'Search Results' 
+                      : categoryFilter !== "all"
+                      ? categories?.data?.find(cat => cat.slug === categoryFilter)?.name || 'Filtered Articles'
                       : statusFilter !== "all"
                       ? `${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)} Articles`
                       : 'Artikel Populer'
@@ -311,7 +385,8 @@ export default function ArticlePage() {
             Showing {articles.data.length} of {articles.pagination.totalItems}{" "}
             articles
             {searchQuery && ` for "${searchQuery}"`}
-            {statusFilter !== "all" && ` (${statusFilter})`}
+            {categoryFilter !== "all" && ` in ${categories?.data?.find(cat => cat.slug === categoryFilter)?.name || categoryFilter}`}
+            {/* {statusFilter !== "all" && ` (${statusFilter})`} */}
           </div>
         )}
       </section>
