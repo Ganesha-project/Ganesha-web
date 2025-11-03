@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 export const ArticleContent = ({ data }) => {
     // PERBAIKAN: Struktur data Prisma
+    console.log("artcile content:", data);
+    
+
     const content = data?.content || "";
     const title = data?.title || "Article Content";
     const description = data?.excerpt || "Detailed article content.";
@@ -78,7 +81,7 @@ export const ArticleContent = ({ data }) => {
                 />
             </Head>
             
-            <section className="prose lg:prose-xl max-w-none py-8">
+            <section className=" max-w-none py-8">
                 {/* Render content as HTML */}
                 <div 
                     className="article-content"
