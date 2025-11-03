@@ -19,13 +19,13 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
             method: "GET"
         })
         const data = await res.json()
-        console.log(data);
+        // console.log(data);
         setClientsData(data)
         
     
     } catch (err) {
       const errMsg = err instanceof Error ? err.message : "unknown";
-      console.log(errMsg);
+      // console.log(errMsg);
       setError(true);
     }
   };

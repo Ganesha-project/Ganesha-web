@@ -48,8 +48,8 @@ export default function ArticlePage() {
         params.append('categorySlug', category);
       }
 
-      console.log("Fetching articles with params:", params.toString());
-      console.log("Category filter:", category);
+      // console.log("Fetching articles with params:", params.toString());
+      // console.log("Category filter:", category);
 
       const response = await fetch(`${API_URL}/article?${params}`);
 
@@ -87,7 +87,7 @@ export default function ArticlePage() {
             return unique;
           }, []);
 
-          console.log("Extracted categories:", categoriesFromArticles);
+          // console.log("Extracted categories:", categoriesFromArticles);
 
         setCategories({
           data: categoriesFromArticles
@@ -98,7 +98,7 @@ export default function ArticlePage() {
         throw new Error(result.message || "Failed to load articles");
       }
     } catch (err) {
-      console.error("Error fetching articles:", err);
+      // console.error("Error fetching articles:", err);
       setError(err.message);
     } finally {
       setLoading(false);

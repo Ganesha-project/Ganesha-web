@@ -1,14 +1,14 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  console.log("=== FEEDBACK API CALLED ===");
+  // d("=== FEEDBACK API CALLED ===");
   
   try {
     // 1. Check environment variables
-    console.log("🔍 Checking environment variables...");
-    console.log("EMAIL_USER exists:", !!process.env.EMAIL_USER);
-    console.log("EMAIL_PASS exists:", !!process.env.EMAIL_PASS);
-    console.log("EMAIL_USER value:", process.env.EMAIL_USER);
+    d("🔍 Checking environment variables...");
+    d("EMAIL_USER exists:", !!process.env.EMAIL_USER);
+    d("EMAIL_PASS exists:", !!process.env.EMAIL_PASS);
+    d("EMAIL_USER value:", process.env.EMAIL_USER);
     // Don't log password for security
     
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
@@ -20,9 +20,9 @@ export async function POST(req) {
     }
 
     // 2. Parse request body
-    console.log("📝 Parsing request body...");
+    d("📝 Parsing request body...");
     const body = await req.json();
-    console.log("Request body:", body);
+    d("Request body:", body);
     
     const { name, email, message } = body;
 
@@ -36,7 +36,7 @@ export async function POST(req) {
     }
 
     // 4. Create transporter with multiple configurations
-    console.log("🚀 Creating email transporter...");
+    // d("🚀 Creating email transporter...");
     
     // Try with different Gmail configurations
     const transporterConfigs = [
@@ -85,17 +85,17 @@ export async function POST(req) {
     // Try each configuration
     for (const { name: configName, config } of transporterConfigs) {
       try {
-        console.log(`🔧 Trying configuration: ${configName}`);
+        // d(`🔧 Trying configuration: ${configName}`);
         transporter = nodemailer.createTransport(config); // Fixed the method name
         
-        console.log("✅ Verifying transporter...");
+        // d("✅ Verifying transporter...");
         await transporter.verify();
         
-        console.log(`✅ Configuration ${configName} works!`);
+        // d(`✅ Configuration ${configName} works!`);
         configUsed = configName;
         break;
       } catch (verifyError) {
-        console.log(`❌ Configuration ${configName} failed:`, verifyError.message);
+        // d(`❌ Configuration ${configName} failed:`, verifyError.message);
         continue;
       }
     }
@@ -109,7 +109,7 @@ export async function POST(req) {
     }
 
     // 5. Prepare email content
-    console.log("📧 Preparing email content...");
+    // d("📧 Preparing email content...");
     const mailOptions = {
       from: `"Go Space Feedback" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
@@ -162,12 +162,12 @@ Configuration used: ${configUsed}
     };
 
     // 6. Send email
-    console.log("📤 Sending email...");
+    // d("📤 Sending email...");
     const info = await transporter.sendMail(mailOptions);
     
-    console.log("✅ Email sent successfully!");
-    console.log("Message ID:", info.messageId);
-    console.log("Response:", info.response);
+    d("✅ Email sent successfully!");
+    d("Message ID:", info.messageId);
+    d("Response:", info.response);
 
     return Response.json({ 
       success: true, 
