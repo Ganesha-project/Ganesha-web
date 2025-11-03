@@ -43,10 +43,10 @@ export const Headtag = ({
             className="flex text-xs md:text-sm items-center gap-2 px-4 py-2 rounded-full dark:bg-baseColor/20 bg-mainColor/10 truncate font-semibold dark:text-white text-mainColor hover:bg-mainColor/20 dark:hover:bg-baseColor/30 transition-colors duration-200 cursor-pointer"
           >
             <FaSort className="text-sm" />
-            <span>Urutkan</span>
+            {/* <span>Urutkan</span> */}
             {currentSort && (
-              <span className="hidden sm:inline text-xs opacity-70">
-                ({currentSort === "DESC" ? "Terbaru" : "Terlama"})
+              <span className="hidden sm:inline opacity-70 font-bold text-base ">
+                {currentSort === "DESC" ? "Terbaru" : "Terlama"}
               </span>
             )}
           </div>

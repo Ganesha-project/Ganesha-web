@@ -109,42 +109,7 @@ export const ArticleContent = ({ data }) => {
                     </div>
                 )}
 
-                {/* Article Metadata */}
-                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 not-prose">
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
-                        {data?.createdAt && (
-                            <div>
-                                <span className="font-semibold">Published:</span>{" "}
-                                {new Date(data.createdAt).toLocaleDateString('id-ID', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric'
-                                })}
-                            </div>
-                        )}
-                        {data?.updatedAt && data.updatedAt !== data.createdAt && (
-                            <div>
-                                <span className="font-semibold">Updated:</span>{" "}
-                                {new Date(data.updatedAt).toLocaleDateString('id-ID', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric'
-                                })}
-                            </div>
-                        )}
-                        {data?.category && (
-                            <div>
-                                <span className="font-semibold">Category:</span>{" "}
-                                <Link 
-                                    href={`/article/category/${data.category.slug}`}
-                                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                                >
-                                    {data.category.name}
-                                </Link>
-                            </div>
-                        )}
-                    </div>
-                </div>
+               
             </section>
 
             {/* Custom styling untuk article content */}

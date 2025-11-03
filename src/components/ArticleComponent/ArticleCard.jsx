@@ -83,7 +83,7 @@ export const ArticleCard = ({
                     {/* Trending Badge */}
                     {trending === true && (
                       <div className="shimmer-animate px-2 py-1 border bg-darkColor/10 border-secondaryGray/5 text-secondaryYellow dark:border-secondaryColor/20 text-[10px] font-bold tracking-wider backdrop-blur-xl rounded-lg">
-                        Highlight
+                        Populer
                       </div>
                     )}
 
@@ -94,7 +94,7 @@ export const ArticleCard = ({
                   </div>
 
                   {/* Gradient Overlay */}
-                  <div className="gradient-blur h-[40%] duration-300 ease-in-out bg-gradient-to-t from-darkColor/50 via-darkColor/5 to-transparent"></div>
+                  <div className="gradient-blur h-[40%] duration-300 ease-in-out bg-black/40"></div>
                 </div>
               </Link>
             );
@@ -103,4 +103,4 @@ export const ArticleCard = ({
       </section>
     </>
   );
-};
+}  
