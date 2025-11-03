@@ -76,14 +76,14 @@ export const ArticleCard = ({
                   {/* Badges - Top Overlay */}
                   <div className="absolute z-10 top-0 left-0 flex items-center gap-1 mx-5 my-4 flex-wrap">
                     {/* Status Badge (if enabled) */}
-                    {showStatus && status && (
+                    {/* {showStatus && status && (
                       <StatusBadge status={status} />
-                    )}
+                    )} */}
 
                     {/* Trending Badge */}
                     {trending === true && (
                       <div className="shimmer-animate px-2 py-1 border bg-darkColor/10 border-secondaryGray/5 text-secondaryYellow dark:border-secondaryColor/20 text-[10px] font-bold tracking-wider backdrop-blur-xl rounded-lg">
-                        Trending
+                        Highlight
                       </div>
                     )}
 

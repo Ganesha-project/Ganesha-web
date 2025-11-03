@@ -51,7 +51,7 @@ export const HighlightCarousel = ({ data }) => {
                         return (
                             <Link
                                 key={el?.id || i}
-                                href={`/article/${categorySlug}/${slug}`}
+                                href={`/article/${slug}`}
                                 className="inline-block shadow w-full relative overflow-hidden h-full"
                             >
                                 {thumbnailUrl ? (
