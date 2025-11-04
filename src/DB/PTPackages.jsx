@@ -290,7 +290,7 @@ const PMAPackagesRaw = [
         sourcePage: "pendirian-pt",
         keywords: [],
         type: "PT PMA (Penanaman Modal Asing)",
-        highlight: false,
+        highlight: true,
         price: 8500000,
         priceOriginal: 11625000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pembuatan%20PT%20PMA%20nih!%20",
