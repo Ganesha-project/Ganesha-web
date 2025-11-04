@@ -131,13 +131,13 @@ export default function Activity() {
                 {/* Load More Trigger */}
                 <div ref={loadMoreTriggerRef} id="loadMoreTrigger" className="h-10" />
                 
-                {loadingMore && itemsToShow >= activities.length && (
+                {/* {loadingMore && itemsToShow >= activities.length && (
                     <div className="flex justify-center py-4 w-full items-center">
                         <p className="animate-spin text-2xl">
                             <FiLoader />
                         </p>
                     </div>
-                )}
+                )} */}
             </section>
         </>
     );
