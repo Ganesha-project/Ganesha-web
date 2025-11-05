@@ -1,6 +1,6 @@
 export const PTPackages = [
     {
-        type: "PT DASAR",
+        type: "PT Dasar",
         highlight: true,
         price: 4500000,
         priceOriginal: 8550000,
@@ -32,7 +32,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PT LENGKAP",
+        type: "PT Lengkap",
         highlight: true,
         price: 5000000,
         priceOriginal: 9500000,
@@ -64,7 +64,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PT LENGKAP + PKP",
+        type: "PT Lengkap + PKP",
         highlight: false,
         price: 6000000,
         priceOriginal: 11400000,
@@ -96,7 +96,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PT LENGKAP + WEBSITE COMPANY",
+        type: "PT Lengkap + Website Company",
         highlight: true,
         price: 7300000,
         priceOriginal: 10205000,
@@ -127,7 +127,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PT LENGKAP + PKP + WEBSITE COMPANY",
+        type: "PT Lengkap + PKP + Website Company",
         highlight: false,
         price: 7800000,
         priceOriginal: 10990000,
@@ -158,7 +158,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PAKET SILVER PT PERORANGAN",
+        type: "Paket Silver PT Perorangan",
         highlight: false,
         price: 600000,
         priceOriginal: 942000,
@@ -188,7 +188,7 @@ export const PTPackages = [
         ]
     },
     {
-        type: "PAKET GOLD PT PERORANGAN",
+        type: "Paket Gold PT PERORANGAN",
         highlight: false,
         price: 1500000,
         priceOriginal: 2350000,
