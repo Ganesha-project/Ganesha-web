@@ -7,6 +7,7 @@ import { PromoBanner } from "@/components/Promo/PromoBanner";
 import { PromoPriceList } from "@/components/Promo/PromoPrice";
 import { Testimonies } from "@/components/Promo/Testimonies";
 import { Voucher } from "@/components/Promo/voucher";
+import { ReusableCards } from "@/components/ReusableCards";
 import { CVPackages } from "@/DB/CVPackages";
 import { ExtrasPackages, PMAPackages, PTPackages } from "@/DB/PTPackages";
 import Image from "next/image";
@@ -98,15 +99,12 @@ function PromoPtCvPage() {
         </div>
 
         {/* Tampilkan semua paket PT dan CV */}
-        <PromoPriceList
-          data={[...PTPackages, ...ExtrasPackages]}
-          label={"Paket Pendirian PT"}
-        />
-        <PromoPriceList
-          data={[...CVPackages, ...ExtrasPackages]}
+        <ReusableCards data={[...PTPackages]} label={"Paket Pendirian PT"} />
+        <ReusableCards
+          data={[...CVPackages]}
           label={"Paket Pendirian CV"}
         />
-        
+
         <ClientLogo />
       </main>
 

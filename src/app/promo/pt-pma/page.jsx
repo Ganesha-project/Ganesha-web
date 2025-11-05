@@ -7,6 +7,7 @@ import { PromoBanner } from "@/components/Promo/PromoBanner";
 import { PromoPriceList } from "@/components/Promo/PromoPrice";
 import { Testimonies } from "@/components/Promo/Testimonies";
 import { Voucher } from "@/components/Promo/voucher";
+import { ReusableCards } from "@/components/ReusableCards";
 import { PMAPackages } from "@/DB/PTPackages";
 
 function PromoPTPMAPage() {
@@ -57,13 +58,13 @@ function PromoPTPMAPage() {
           modelImage="/images/promo-assets/glass-aji.png"
           priceNav="/promo/pt-pma#promo-price"
         />
-        <Voucher />
+        {/* <Voucher /> */}
         <Credibility />
         <Testimonies duplicatedReviews={data} />
         <ClientPhotos />
-        <PromoPriceList
+        <ReusableCards
           data={[...PMAPackages]}
-          label={"Paket Pendirian PT PMA"}
+          label={"Paket Pendirian PT"}
         />
         <ClientLogo />
       </main>
