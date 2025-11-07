@@ -177,16 +177,14 @@ export const ReusableCards = ({ data, label, visibility }) => {
         <div
           ref={carouselRef}
           className={`relative w-full ${
-            processedData.length <= 3
-              ? "flex justify-center"
-              : "overflow-hidden"
+            processedData.length <= 3 ? "flex justify-center" : "" // ❌ HAPUS overflow-hidden
           }`}
         >
           <div
             className={`${
               processedData.length <= 3
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-7xl mx-auto px-5"
-                : "flex gap-5 transform transition-transform duration-500 ease-in-out"
+                : "flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth" // ✅ TAMBAH scroll properties
             } py-5`}
             style={
               processedData.length > 3
@@ -197,11 +195,11 @@ export const ReusableCards = ({ data, label, visibility }) => {
             {processedData.map((el, idx) => (
               <div
                 key={idx}
-                className={`h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700
+                className={`h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700 flex-shrink-0 snap-center
           ${
             processedData.length <= 3
-              ? "w-full" // Grid item akan auto-size sesuai cols
-              : `min-w-[90vw] md:min-w-[30vw] ${
+              ? "w-full"
+              : `w-[90vw] md:w-[30vw] ${
                   idx === 0 && totalItems > 4 ? "ml-5 md:ml-24 2xl:ml-80" : ""
                 } ${
                   idx === totalItems - 1 && totalItems > 4
