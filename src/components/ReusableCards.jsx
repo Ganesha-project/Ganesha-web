@@ -95,10 +95,10 @@ export const ReusableCards = ({ data, label, visibility }) => {
         <div
           className={`${
             visibility === false ? "hidden" : "block"
-          } md:mx-24 2xl:mx-80 mx-5 space-y-5`}
+          }  space-y-5 md:mx-24 2xl:mx-80 mx-5`}
         >
           {totalItems <= 3 ? (
-            <div className="flex justify-center w-full items-center">
+            <div className="flex justify-center w-full items-center ">
               <div
                 className={`flex justify-center dark:text-neutral-50 px-7 py-5 bg-gradient-to-bl from-neutral-200 to-transparent dark:from-darkColor dark:to-transparent text-center rounded-full p-2 font-semibold md:text-5xl text-2xl  w-fit`}
               >
@@ -178,7 +178,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
           ref={carouselRef}
           className={`${
             processedData.length <= 3
-              ? "flex justify-center items-center flex-wrap 2xl:px-80 md:px-24"
+              ? "flex justify-center items-center flex-wrap "
               : "carousel"
           } relative w-[100%]`}
         >
@@ -186,7 +186,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
             ref={carouselRef}
             className={`${
               processedData.length <= 3
-                ? "flex-col md:flex-row flex-wrap justify-center"
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
                 : ""
             } flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
             style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }}
@@ -194,7 +194,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
             {processedData.map((el, idx) => (
               <div
                 key={idx}
-                className={`bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black ${
+                className={`h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black ${
                   idx === 0 && totalItems > 4 ? "ml-5 md:ml-24 2xl:ml-80" : ""
                 } ${
                   idx === totalItems - 1 && totalItems > 4
@@ -210,7 +210,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     className={`flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative  rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]`}
                   >
                     <div className="flex items-center justify-between">
-                      <div className="rounded-full bg-secondaryLight w-fit text-darkColor p-2">
+                      <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-2">
                         <PiStarFourFill />
                       </div>
                       <div>
@@ -238,14 +238,12 @@ export const ReusableCards = ({ data, label, visibility }) => {
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
                       <div className=" flex items-center text-xs">
-                        {path !== "/social-media-management" && (
                           <p
                             className="bg-red-400 font-medium
                            px-2 py-1 text-white rounded-full animate-pulse"
                           >
                             OFF {el.discount}%
                           </p>
-                        )}
                       </div>
                     </div>
 
@@ -274,7 +272,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                 ) : (
                   <div className=" flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start min-h-[320px]">
                     <div className="flex items-center justify-between">
-                      <div className="rounded-full bg-white w-fit text-darkColor p-2">
+                      <div className="rounded-full bg-white dark:bg-black dark:text-white w-fit text-darkColor p-2">
                         <PiStarFourFill />
                       </div>
                       <div className="min-h-[32px] flex items-center">
@@ -287,7 +285,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     </div>
                     {/* JUDUL */}
                     <h1
-                      className={`mt-2 text-2xl font-semibold tracking-tight min-h-[60px] flex items-center max-w-sm capitalize text-darkColor`}
+                      className={`mt-2 text-2xl font-semibold tracking-tight min-h-[60px] flex items-center max-w-sm capitalize text-darkColor dark:text-white/90`}
                     >
                       {el.type}
                     </h1>
@@ -299,32 +297,26 @@ export const ReusableCards = ({ data, label, visibility }) => {
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
                       <div className=" flex items-center text-xs">
-                        {path !== "/social-media-management" && (
                           <p
                             className="bg-red-500 font-medium
                            px-2 py-1 text-white rounded-full animate-pulse"
                           >
                             OFF {el.discount}%
                           </p>
-                        )}
                       </div>
                     </div>
 
                     <h2
                       className={`font-bold text-2xl md:text-3xl flex gap-2 items-center flex-wrap ${TextMainGradient}`}
                     >
-                      {path !== "/social-media-management" && (
-                        <>
-                          {path === "/web-development" && el.price !== 0 && (
-                            <span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full">
-                              Start From
-                            </span>
-                          )}
-                          {el.price === 0
-                            ? "Talk With Us!"
-                            : formatToRupiah(el.price)}
-                        </>
+                      {path === "/web-development" && el.price !== 0 && (
+                        <span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full">
+                          Start From
+                        </span>
                       )}
+                      {  el.price === 0 
+                        ? "Talk With Us!"
+                        : formatToRupiah(el.price)}
                     </h2>
                     <a
                       href={el.link}
@@ -339,9 +331,9 @@ export const ReusableCards = ({ data, label, visibility }) => {
                 <div>
                   {/* feature / benefit */}
                   <div className="space-y-2 mx-5">
-                    <div className="flex items-center gap-3 mb-3 pb-3 border-b-1 border-darkColor/50">
-                      <FaClipboardList className="text-darkColor/90" />
-                      <h1 className="font-semibold text-base  text-darkColor/90">
+                    <div className="flex items-center gap-3 mb-3 pb-3 border-b-1 border-darkColor/50 dark:border-white/30 text-darkColor/90 dark:text-neutral-300">
+                      <FaClipboardList />
+                      <h1 className="font-semibold text-base ">
                         Apa yang Kamu Dapat?
                       </h1>
                     </div>
@@ -365,7 +357,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                       <p className="mt-5 mx-5 mb-3 font-semibold px-2 bg-yellow-400 dark:bg-amber-500 rounded-full w-fit">
                         Persyaratan
                       </p>
-                      <div className="space-y-1" >
+                      <div className="space-y-1">
                         {el.requirements?.map((requirement, reqIdx) => (
                           <div
                             key={reqIdx}

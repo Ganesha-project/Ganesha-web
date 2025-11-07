@@ -2,9 +2,10 @@ export const SMPackages = [
     {
         type: "Paket BotLane",
         highlight: false,
+        price: 0,
         // price: 2000000,
-        priceOriginal: 2850000,
-        discount: 30,
+        priceOriginal: 0,
+        discount: 0,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
         features: [
             { feature: "Free Template Post", status: true },
@@ -29,8 +30,9 @@ export const SMPackages = [
         type: "Paket Midlane",
         highlight: false,
         // price: 5000000,
-        priceOriginal: 7150000,
-        discount: 30,
+        price: 0,
+        priceOriginal: 0,
+        discount: 0,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
         features: [
             { feature: "Free Template Post", status: true },
@@ -55,8 +57,9 @@ export const SMPackages = [
         type: "Paket Jungler",
         highlight: false,
         // price: 10000000,
-        priceOriginal: 14300000,
-        discount: 30,
+        price: 0,
+        priceOriginal: 0,
+        discount: 0,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Social%20Media%20Management%20nih!%20",
         features: [
             { feature: "Free Template Post", status: true },
