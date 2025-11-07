@@ -176,39 +176,44 @@ export const ReusableCards = ({ data, label, visibility }) => {
 
         <div
           ref={carouselRef}
-          className={`${
+          className={`relative w-full ${
             processedData.length <= 3
-              ? "flex justify-center items-center flex-wrap "
-              : "carousel"
-          } relative w-[100%]`}
+              ? "flex justify-center"
+              : "overflow-hidden"
+          }`}
         >
           <div
-            ref={carouselRef}
             className={`${
               processedData.length <= 3
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
-                : ""
-            } flex gap-5 transform transition-transform duration-500 ease-in-out py-5`}
-            style={{ transform: `translateX(-${currentIndex * scrollTo}%)` }}
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-7xl mx-auto px-5"
+                : "flex gap-5 transform transition-transform duration-500 ease-in-out"
+            } py-5`}
+            style={
+              processedData.length > 3
+                ? { transform: `translateX(-${currentIndex * scrollTo}%)` }
+                : {}
+            }
           >
             {processedData.map((el, idx) => (
               <div
                 key={idx}
-                className={`h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black ${
+                className={`h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700
+          ${
+            processedData.length <= 3
+              ? "w-full" // Grid item akan auto-size sesuai cols
+              : `min-w-[90vw] md:min-w-[30vw] ${
                   idx === 0 && totalItems > 4 ? "ml-5 md:ml-24 2xl:ml-80" : ""
                 } ${
                   idx === totalItems - 1 && totalItems > 4
                     ? "mr-5 md:mr-24 2xl:mr-80"
                     : ""
-                } ${
-                  totalItems < 4 && "2xl:w-[32%]"
-                } md:w-[30lvw] w-[90lvw] rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700 `}
+                }`
+          }
+        `}
               >
-                {/* KOTAK HIGLILIGHT */}
+                {/* KOTAK HIGHLIGHT */}
                 {el.highlight ? (
-                  <div
-                    className={`flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative  rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]`}
-                  >
+                  <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]">
                     <div className="flex items-center justify-between">
                       <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-2">
                         <PiStarFourFill />
@@ -219,15 +224,8 @@ export const ReusableCards = ({ data, label, visibility }) => {
                         </p>
                       </div>
                     </div>
-                    {/* JUDUL */}
-                    {/* <h1
-                      className={`mt-2 text-2xl text-white font-medium tracking-tight min-h-[60px] flex items-center`}
-                    >
-                      {el.type}
-                    </h1> */}
-                    <h1
-                      className={`mt-2 text-2xl text-white font-medium tracking-tight min-h-[60px] flex items-center`}
-                    >
+
+                    <h1 className="mt-2 text-2xl text-white font-medium tracking-tight min-h-[60px] flex items-center">
                       {el.type}
                     </h1>
 
@@ -237,23 +235,17 @@ export const ReusableCards = ({ data, label, visibility }) => {
                           ? null
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
-                      <div className=" flex items-center text-xs">
-                          <p
-                            className="bg-red-400 font-medium
-                           px-2 py-1 text-white rounded-full animate-pulse"
-                          >
-                            OFF {el.discount}%
-                          </p>
+                      <div className="flex items-center text-xs">
+                        <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                          OFF {el.discount}%
+                        </p>
                       </div>
                     </div>
 
-                    <h2
-                      className={`font-bold text-2xl md:text-3xl text-white flex gap-2 items-center flex-wrap`}
-                    >
+                    <h2 className="font-bold text-2xl md:text-3xl text-white flex gap-2 items-center flex-wrap">
                       {path === "/web-development" && el.price !== 0 && (
                         <span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full">
-                          {" "}
-                          Start From{" "}
+                          Start From
                         </span>
                       )}
                       {el.price === 0
@@ -263,30 +255,24 @@ export const ReusableCards = ({ data, label, visibility }) => {
 
                     <a
                       href={el.link}
-                      className={`bg-linear-to-bl from-neutral-50 to-neutral-300 text-darkColor border border-white/20 font-semibold text-base w-full py-2.5 shadow-custom text-center ease-in-out duration-300 hover:scale-95 rounded-lg mt-2 flex items-center justify-center gap-3 hover:gap-10 transition-all`}
+                      className="bg-linear-to-bl from-neutral-50 to-neutral-300 text-darkColor border border-white/20 font-semibold text-base w-full py-2.5 shadow-custom text-center ease-in-out duration-300 hover:scale-95 rounded-lg mt-2 flex items-center justify-center gap-3 hover:gap-10 transition-all"
                     >
                       <span>Konsultasi Sekarang</span>
                       <FiArrowUpRight className="text-xl" />
                     </a>
                   </div>
                 ) : (
-                  <div className=" flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start min-h-[320px]">
+                  <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start min-h-[320px]">
                     <div className="flex items-center justify-between">
                       <div className="rounded-full bg-white dark:bg-black dark:text-white w-fit text-darkColor p-2">
                         <PiStarFourFill />
                       </div>
                       <div className="min-h-[32px] flex items-center">
-                        {/* {path !== "/social-media-management" && (
-                          <p className="bg-red-500 font-bold px-2 py-1 text-white rounded-full animate-pulse">
-                            OFF {el.discount}%
-                          </p>
-                        )} */}
+                        {/* Placeholder for discount badge */}
                       </div>
                     </div>
-                    {/* JUDUL */}
-                    <h1
-                      className={`mt-2 text-2xl font-semibold tracking-tight min-h-[60px] flex items-center max-w-sm capitalize text-darkColor dark:text-white/90`}
-                    >
+
+                    <h1 className="mt-2 text-2xl font-semibold tracking-tight min-h-[60px] flex items-center max-w-sm capitalize text-darkColor dark:text-white/90">
                       {el.type}
                     </h1>
 
@@ -296,13 +282,10 @@ export const ReusableCards = ({ data, label, visibility }) => {
                           ? null
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
-                      <div className=" flex items-center text-xs">
-                          <p
-                            className="bg-red-500 font-medium
-                           px-2 py-1 text-white rounded-full animate-pulse"
-                          >
-                            OFF {el.discount}%
-                          </p>
+                      <div className="flex items-center text-xs">
+                        <p className="bg-red-500 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                          OFF {el.discount}%
+                        </p>
                       </div>
                     </div>
 
@@ -314,13 +297,14 @@ export const ReusableCards = ({ data, label, visibility }) => {
                           Start From
                         </span>
                       )}
-                      {  el.price === 0 
+                      {el.price === 0
                         ? "Talk With Us!"
                         : formatToRupiah(el.price)}
                     </h2>
+
                     <a
                       href={el.link}
-                      className={`w-full text-center text-white py-2.5 shadow-custom border border-darkColor/50 font-medium ease-in-out duration-300 hover:scale-95 rounded-lg mt-2 flex items-center justify-center gap-3 hover:gap-10 transition-all bg-linear-to-br from-[#6F00FF] to-[#3B0270]`}
+                      className="w-full text-center text-white py-2.5 shadow-custom border border-darkColor/50 font-medium ease-in-out duration-300 hover:scale-95 rounded-lg mt-2 flex items-center justify-center gap-3 hover:gap-10 transition-all bg-linear-to-br from-[#6F00FF] to-[#3B0270]"
                     >
                       <span>Konsultasi Sekarang</span>
                       <FiArrowUpRight className="text-xl" />
@@ -333,7 +317,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                   <div className="space-y-2 mx-5">
                     <div className="flex items-center gap-3 mb-3 pb-3 border-b-1 border-darkColor/50 dark:border-white/30 text-darkColor/90 dark:text-neutral-300">
                       <FaClipboardList />
-                      <h1 className="font-semibold text-base ">
+                      <h1 className="font-semibold text-base">
                         Apa yang Kamu Dapat?
                       </h1>
                     </div>
