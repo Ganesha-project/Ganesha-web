@@ -1,5 +1,6 @@
 "use client";
 
+import { event } from "@/lib/metaPixel";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -47,6 +48,22 @@ export const FloatingButton = () => {
     return false;
   };
 
+  function handleFloatingWaButton() {
+    event("FloatingWaButton", {
+      content_name: "From Floating WA Button",
+      value: 0,
+      // currency: "IDR",
+    });
+
+    const waNumber = "628887127000";
+    const waMessage = encodeURIComponent(
+      `Halo, saya tertarik untuk menggunakan layanan dari Ganesha Consulting`
+    );
+    const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+    window.open(waLink, "_blank");
+    ("https://api.whatsapp.com/send?phone=");
+  }
+
   return (
     <>
       <div className="hidden md:block fixed bottom-5 right-5 z-[100]">
@@ -72,14 +89,14 @@ export const FloatingButton = () => {
               ></path>
             </svg>
           </button>
-          <Link href={WaLink} target="_blank">
-            <button
-              // onClick={() => gtag_report_conversion(WaLink)}
-              className="bg-[#4DED69] hover:bg-[#35a549] hover:scale-95 duration-300 ease-in-out text-white font-bold py-3 px-3 rounded-full shadow-lg cursor-pointer"
-            >
-              <RiWhatsappFill size={25} />
-            </button>
-          </Link>
+          {/* <Link href={WaLink} target="_blank"> */}
+          <button
+            onClick={handleFloatingWaButton}
+            className="bg-[#4DED69] hover:bg-[#35a549] hover:scale-95 duration-300 ease-in-out text-white font-bold py-3 px-3 rounded-full shadow-lg cursor-pointer"
+          >
+            <RiWhatsappFill size={25} />
+          </button>
+          {/* </Link> */}
         </section>
       </div>
     </>

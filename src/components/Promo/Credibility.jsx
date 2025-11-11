@@ -1,9 +1,12 @@
+"use client";
+
 import { BgMainGradient } from "@/utils/ReueseClass";
 import clsx from "clsx";
 import React from "react";
 import { PiSealCheckFill } from "react-icons/pi";
 import { Title } from "../Title";
 import Image from "next/image";
+import { event } from "@/lib/metaPixel";
 
 export const Credibility = () => {
   const registeredData = [
@@ -54,6 +57,16 @@ export const Credibility = () => {
     },
   ];
 
+  function handleIgDirect() {
+    event("ButtonDirectIG", {
+      content_name: "Direct to Instagram",
+      value: 0,
+      // currency: "IDR",
+    });
+
+    window.open("https://www.instagram.com/ganeshamultikreatif", "_blank");
+  }
+
   return (
     <>
       {/* Section 1 - Header */}
@@ -73,14 +86,15 @@ export const Credibility = () => {
               Layanan di Ganesha Consulting Terverifikasi dan Terpercaya
             </h1>
 
-            <a
-              href="https://www.instagram.com/ganeshamultikreatif"
-              target="_blank"
+            <button
+              // href="https://www.instagram.com/ganeshamultikreatif"
+              // target="_blank"
+              onClick={handleIgDirect}
               rel="noopener noreferrer"
               className={`text-center text-white py-2 font-bold ease-in-out duration-300 hover:scale-95 rounded-2xl mt-2 flex items-center justify-center gap-3 transition-all w-fit px-8 ${BgMainGradient}`}
             >
               Kunjungi Instagram
-            </a>
+            </button>
           </div>
 
           {/* Right */}

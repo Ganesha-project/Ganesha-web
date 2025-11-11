@@ -56,7 +56,7 @@ function PromoPTPMAPage() {
             "Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT PMA yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"
           }
           modelImage="/images/promo-assets/glass-aji.png"
-          priceNav="/promo/pt-pma#promo-price"
+          priceNav="/promo/pt-pma#price-list"
         />
         {/* <Voucher /> */}
         <Credibility />

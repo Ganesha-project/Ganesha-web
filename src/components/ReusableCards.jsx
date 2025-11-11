@@ -103,7 +103,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
 
   return (
     <>
-      <section className={`py-10 space-y-5`}>
+      <section id="price-list" className={`py-10 space-y-5`}>
         <div
           className={`${
             visibility === false ? "hidden" : "block"

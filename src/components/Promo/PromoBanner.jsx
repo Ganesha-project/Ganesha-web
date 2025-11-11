@@ -7,12 +7,27 @@ import { Badge } from "../ui/badge";
 import { IoArrowDown, IoGiftSharp } from "react-icons/io5";
 import clsx from "clsx";
 import { TextMainGradient } from "@/utils/ReueseClass";
+import { event } from "@/lib/metaPixel";
 
 export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
+  const handleKonsultasiSekarang = () => {
+    event("KonsultasiButtonClicked", {
+      content_name: "Konsultasi Sekarang",
+      value: 0,
+      // currency: "IDR",
+    });
+
+    const waNumber = "628887127000";
+    const waMessage = encodeURIComponent(
+      `Halo, saya tertarik untuk konsultasi mengenai ${badge}`
+    );
+    const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+    window.open(waLink, "_blank");
+    ("https://api.whatsapp.com/send?phone=");
+  };
+
   return (
-    <section
-      className="mt-12 sm:mt-0 p-3 gap-3 overflow-hidden flex flex-col-reverse lg:flex-row items-stretch h-[calc(100vh - 4rem)]"
-    >
+    <section className="mt-12 sm:mt-0 p-3 gap-3 overflow-hidden flex flex-col-reverse lg:flex-row items-stretch h-[calc(100vh - 4rem)]">
       {/* LEFT GRID */}
       <div className="bg-white dark:bg-secondaryDark shadow-custom h-auto lg:w-1/2 w-full border rounded-2xl p-5 sm:p-8 lg:p-10 flex flex-col justify-between ">
         {/* badge */}
@@ -39,15 +54,14 @@ export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
 
           {/* buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a
-              href="https://api.whatsapp.com/send?phone=628887127000"
-              target="_blank"
+            <Button
+              onClick={handleKonsultasiSekarang}
+              className="text-sm text-white font-semibold sm:text-base w-full sm:w-auto bg-gradient-to-br from-green-500 to-green-800 hover:from-green-600 hover:to-green-900"
             >
-              <Button className="text-sm text-white font-semibold sm:text-base w-full sm:w-auto bg-gradient-to-br from-green-500 to-green-800 hover:from-green-600 hover:to-green-900">
-                <span>Konsultasi Sekarang</span>
-                <FaWhatsapp />
-              </Button>
-            </a>
+              <span>Konsultasi Sekarang</span>
+              <FaWhatsapp />
+            </Button>
+
             <a href={priceNav}>
               <Button
                 variant="outline"

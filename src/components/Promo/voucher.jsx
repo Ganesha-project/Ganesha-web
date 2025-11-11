@@ -1,12 +1,32 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ui/button";
 // import { IoTicket } from "react-icons/io5";
 import { GiTicket } from "react-icons/gi";
 import { BgMainGradient, TextMainGradient } from "@/utils/ReueseClass";
 import clsx from "clsx";
+import { event } from "@/lib/metaPixel";
 
 export const Voucher = () => {
-  const WaLink = "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20saya%20ingin%20klaim%20voucher";
+  const handleClaimVoucher = () => {
+    event("ClaimVoucherClicked", {
+      content_name: "Klaim Voucher",
+      value: 0,
+      // currency: "IDR",
+    });
+
+    const waNumber = "628887127000";
+    const waMessage = encodeURIComponent(
+      `Halo, saya tertarik untuk klaim voucher pendirian PT`
+    );
+    const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+    window.open(waLink, "_blank");
+    ("https://api.whatsapp.com/send?phone=");
+  };
+
+  const WaLink =
+    "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20saya%20ingin%20klaim%20voucher";
   return (
     <section className="my-12 sm:my-16 lg:my-20 space-y-6 sm:space-y-8 lg:space-y-10 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center gap-2 sm:gap-3 text-center max-w-xs sm:max-w-lg lg:max-w-2xl">
@@ -31,14 +51,15 @@ export const Voucher = () => {
           />
         </div>
 
-        <a
-          href={WaLink}
-          target="_blank"
+        <button
+          onClick={handleClaimVoucher}
           className={`w-full text-center text-white py-2.5 sm:py-3 lg:py-3.5 px-4 font-bold ease-in-out duration-300 hover:scale-95 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 transition-all ${BgMainGradient}`}
         >
-          <span className="text-base sm:text-lg lg:text-xl">Klaim Sekarang</span>
+          <span className="text-base sm:text-lg lg:text-xl">
+            Klaim Sekarang
+          </span>
           <GiTicket className="text-xl sm:text-2xl lg:text-2xl" />
-        </a>
+        </button>
       </div>
     </section>
   );

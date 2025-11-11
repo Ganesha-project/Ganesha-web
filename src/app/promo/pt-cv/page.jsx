@@ -66,7 +66,7 @@ function PromoPtCvPage() {
             "Mulai Bisnis Anda dengan Langkah Tepat! Kami menyediakan layanan pendirian PT dan CV yang cepat dan terpercaya yang akan membantu Anda dengan semua aspek legalitas dan perizinan yang dibutuhkan!"
           }
           modelImage={"/images/promo-assets/glass-erlin.png"}
-          priceNav="/promo/pt-cv#promo-price"
+          priceNav="/promo/pt-cv#price-list"
         />
         <Voucher />
         <Credibility />

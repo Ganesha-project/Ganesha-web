@@ -9,6 +9,7 @@ import { NavigationMobile } from "@/components/NavigationMobile";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import Script from "next/script";
+import { MetaPixelProvider } from "@/lib/metaPixelProvider";
 
 const quicksand = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window,document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '2630106004010805');
+              fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
               fbq('track', 'PageView');
             `,
           }}
@@ -98,6 +99,7 @@ export default function RootLayout({
 
         <Analytics />
         <SpeedInsights />
+        <MetaPixelProvider/>
       </body>
     </html>
   );
