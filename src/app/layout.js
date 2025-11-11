@@ -10,6 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import Script from "next/script";
 import { MetaPixelProvider } from "@/lib/metaPixelProvider";
+import { Suspense } from 'react'; // ✅ Tambahkan ini
 
 const quicksand = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,16 +25,14 @@ export const metadata = {
   description: "Legalkan Bisnis Mu Bersama Kami!",
 };
 
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <Head>
         <link rel="icon" type="image/png" sizes="16x16" href="icon.png" />
       </Head>
       <body className={`${quicksand.className}`}>
-        {/* ✅ META PIXEL BASE CODE */}
+        {/* META PIXEL BASE CODE */}
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
@@ -94,12 +93,15 @@ export default function RootLayout({
           </Navbar>
           <FloatingButton />
           <NavigationMobile />
-          {/* <Popup content={<PopupContent />} /> */}
         </ThemeProvider>
 
         <Analytics />
         <SpeedInsights />
-        <MetaPixelProvider/>
+        
+        {/* ✅ WRAP DENGAN SUSPENSE */}
+        <Suspense fallback={null}>
+          <MetaPixelProvider />
+        </Suspense>
       </body>
     </html>
   );
