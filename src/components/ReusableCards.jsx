@@ -8,11 +8,17 @@ import {
   BsFillXCircleFill,
   BsInfoCircleFill,
 } from "react-icons/bs";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import {
+  IoIosArrowBack,
+  IoIosArrowDown,
+  IoIosArrowForward,
+} from "react-icons/io";
 import { PiStarFourFill } from "react-icons/pi";
 import { FiArrowUpRight } from "react-icons/fi";
 import { BgMainGradient, TextMainGradient } from "@/utils/ReueseClass";
-import { FaClipboardList } from "react-icons/fa6";
+import { FaClipboardList, FaFileCode } from "react-icons/fa6";
+import { Button } from "./ui/button";
+import { MdOutlineArrowDownward } from "react-icons/md";
 
 // Helper function to calculate original price from discounted price
 const calculateOriginalPrice = (discountedPrice, discountPercentage) => {
@@ -38,13 +44,20 @@ const processCardData = (data) => {
     });
 };
 
-export const ReusableCards = ({ data, label, visibility }) => {
+export const ReusableCards = ({
+  data,
+  label,
+  visibility,
+  seePackageWorks = false,
+  availablePackageTypes = [],
+}) => {
   const [activeDot, setActiveDot] = useState(0);
   const carouselRef = useRef(null);
   const containerRef = useRef(null);
-  
+
   // Process data to calculate original prices automatically
   const processedData = processCardData(data);
+
   const totalItems = processedData.length;
   const totalDots = processedData.length;
 
@@ -55,14 +68,14 @@ export const ReusableCards = ({ data, label, visibility }) => {
     const container = containerRef.current;
     if (!container) return;
 
-    const cards = container.querySelectorAll('[data-card]');
+    const cards = container.querySelectorAll("[data-card]");
     if (cards[index]) {
       const card = cards[index];
       const scrollLeft = card.offsetLeft - container.offsetLeft - 20;
-      
+
       container.scrollTo({
         left: scrollLeft,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
       setActiveDot(index);
     }
@@ -86,20 +99,39 @@ export const ReusableCards = ({ data, label, visibility }) => {
     const handleScroll = () => {
       const scrollLeft = container.scrollLeft;
       const containerWidth = container.clientWidth;
-      
+
       // Calculate which card is currently most visible
       const cardIndex = Math.round(scrollLeft / containerWidth);
       setActiveDot(Math.min(cardIndex, totalDots - 1));
     };
 
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
   }, [totalDots]);
 
   // Reset active dot when data changes
   useEffect(() => {
     setActiveDot(0);
   }, [data]);
+
+  const handlePackagePortos = (packageType) => {
+    // Format package type menjadi ID yang valid
+    const formattedId = `package-${packageType
+      .toLowerCase()
+      .replace(/\s+/g, "-")}`;
+    const element = document.getElementById(formattedId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const hasPackageWork = (packageType) => {
+    return availablePackageTypes.includes(packageType);
+  };
 
   return (
     <>
@@ -197,25 +229,41 @@ export const ReusableCards = ({ data, label, visibility }) => {
                 key={idx}
                 data-card="true" // Simple data attribute
                 className={`max-w-sm h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700 flex-shrink-0 snap-center
-          ${
-            processedData.length <= 3
-              ? "w-full"
-              : "w-[85vw] md:w-[30vw]"
-          }
+          ${processedData.length <= 3 ? "w-full" : "w-[85vw] md:w-[30vw]"}
         `}
               >
                 {/* KOTAK HIGHLIGHT */}
                 {el.highlight ? (
+                  // HIGLIGHT KONTENNT
                   <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]">
-                    {/* ... (highlight content sama seperti sebelumnya) */}
-                    <div className="flex items-center justify-between">
-                      <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-2">
-                        <PiStarFourFill />
-                      </div>
-                      <div>
-                        <p className="bg-white/30 backdrop-blur-2xl font-regular text-sm px-3 py-2 text-white rounded-full border border-white/20">
-                          Most popular
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center bg-white/50 dark:bg-darkColor/60 backdrop-blur-2xl rounded-full border border-white/20">
+                        <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-1 sm:p-2 sm:block hidden text-center sm:text-start">
+                          <PiStarFourFill />
+                        </div>
+                        <p className=" font-semibold text-xs px-3 py-2  rounded-r-full text-darkColor dark:text-white">
+                          Popular
                         </p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {seePackageWorks && hasPackageWork(el.type) && (
+                          <a
+                            href={`/web-development#${el.type
+                              .split(" ")
+                              .join("-")
+                              .toLowerCase()}`}
+                          >
+                            <Button
+                              onClick={() => handlePackagePortos(el.type)}
+                              variant={"secondary"}
+                              className={
+                                "bg-white/30 dark:bg-darkColor/30 backdrop-blur-2xl border border-white/20 text-white text-xs rounded-full font-semibold hover:scale-105"
+                              }
+                            >
+                              Lihat Portofolio <MdOutlineArrowDownward />
+                            </Button>
+                          </a>
+                        )}
                       </div>
                     </div>
 
@@ -256,14 +304,31 @@ export const ReusableCards = ({ data, label, visibility }) => {
                     </a>
                   </div>
                 ) : (
+                  // NON HIGLIGHT
                   <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start min-h-[320px]">
-                    {/* ... (non-highlight content sama seperti sebelumnya) */}
                     <div className="flex items-center justify-between">
                       <div className="rounded-full bg-white dark:bg-black dark:text-white w-fit text-darkColor p-2">
                         <PiStarFourFill />
                       </div>
                       <div className="min-h-[32px] flex items-center">
-                        {/* Placeholder for discount badge */}
+                        {seePackageWorks && hasPackageWork(el.type) && (
+                          <a
+                            href={`/web-development#${el.type
+                              .split(" ")
+                              .join("-")
+                              .toLowerCase()}`}
+                          >
+                            <Button
+                              onClick={() => handlePackagePortos(el.type)}
+                              variant={"secondary"}
+                              className={
+                                "dark:bg-black text-[12px] rounded-full font-semibold hover:scale-105"
+                              }
+                            >
+                              Lihat Portofolio <IoIosArrowDown />
+                            </Button>
+                          </a>
+                        )}
                       </div>
                     </div>
 
@@ -331,7 +396,7 @@ export const ReusableCards = ({ data, label, visibility }) => {
                       </div>
                     ))}
                   </div>
-                  {el.requirements ? (
+                  {el.requirements.length > 0 && (
                     <>
                       <p className="mt-5 mx-5 mb-3 font-semibold px-2 bg-yellow-400 dark:bg-amber-500 rounded-full w-fit">
                         Persyaratan
@@ -350,13 +415,13 @@ export const ReusableCards = ({ data, label, visibility }) => {
                         ))}
                       </div>
                     </>
-                  ) : null}
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        
+
         {/* Scroll Progress Dots */}
         {totalItems >= 4 && (
           <div className="flex justify-center items-center mt-4">
