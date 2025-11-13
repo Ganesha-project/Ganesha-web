@@ -234,8 +234,10 @@ export const ReusableCards = ({
               >
                 {/* KOTAK HIGHLIGHT */}
                 {el.highlight ? (
-                  // HIGLIGHT KONTENNT
-                  <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]">
+                  // HIGLIGHT KONTENT
+                  seePackageWorks && hasPackageWork(el.type) ? (
+                    // PORTO SCROLL
+                    <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]">
                     <div className="flex items-center justify-between gap-2">
                       <div className="flex items-center bg-white/50 dark:bg-darkColor/60 backdrop-blur-2xl rounded-full border border-white/20">
                         <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-1 sm:p-2 sm:block hidden text-center sm:text-start">
@@ -246,7 +248,7 @@ export const ReusableCards = ({
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
-                        {seePackageWorks && hasPackageWork(el.type) && (
+                        
                           <a
                             href={`/web-development#${el.type
                               .split(" ")
@@ -263,7 +265,6 @@ export const ReusableCards = ({
                               Lihat Portofolio <MdOutlineArrowDownward />
                             </Button>
                           </a>
-                        )}
                       </div>
                     </div>
 
@@ -303,6 +304,58 @@ export const ReusableCards = ({
                       <FiArrowUpRight className="text-xl" />
                     </a>
                   </div>
+                  ) : (
+                    // NON PORTO SCROLL
+                    <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start bg-linear-to-br from-[#6F00FF] to-[#3B0270] min-h-[320px]">
+                    {/* ... (highlight content sama seperti sebelumnya) */}
+                    <div className="flex items-center justify-between">
+                      <div className="rounded-full bg-secondaryLight dark:text-white dark:bg-[#232323] w-fit text-darkColor p-2">
+                        <PiStarFourFill />
+                      </div>
+                      <div>
+                        <p className="bg-white/30 dark:bg-black/40 backdrop-blur-2xl font-regular text-sm px-3 py-2 text-white rounded-full border border-white/20">
+                          Most popular
+                        </p>
+                      </div>
+                    </div>
+
+                    <h1 className="mt-2 text-2xl text-white font-medium tracking-tight min-h-[60px] flex items-center">
+                      {el.type}
+                    </h1>
+
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-base line-through text-red-400 min-h-[24px]">
+                        {el.priceOriginal === 0
+                          ? null
+                          : formatToRupiah(el.priceOriginal)}
+                      </h3>
+                      <div className="flex items-center text-xs">
+                        <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                          OFF {el.discount}%
+                        </p>
+                      </div>
+                    </div>
+
+                    <h2 className="font-bold text-2xl md:text-3xl text-white flex gap-2 items-center flex-wrap">
+                      {path === "/web-development" && el.price !== 0 && (
+                        <span className="text-xs px-2 py-1 bg-gradient-to-bl from-baseColor/50 to-neutral-500/20 rounded-full">
+                          Start From
+                        </span>
+                      )}
+                      {el.price === 0
+                        ? "Talk With Us!"
+                        : formatToRupiah(el.price)}
+                    </h2>
+
+                    <a
+                      href={el.link}
+                      className="bg-linear-to-bl from-neutral-50 to-neutral-300 text-darkColor border border-white/20 font-semibold text-base w-full py-2.5 shadow-custom text-center ease-in-out duration-300 hover:scale-95 rounded-lg mt-2 flex items-center justify-center gap-3 hover:gap-10 transition-all"
+                    >
+                      <span>Konsultasi Sekarang</span>
+                      <FiArrowUpRight className="text-xl" />
+                    </a>
+                  </div>
+                  )
                 ) : (
                   // NON HIGLIGHT
                   <div className="flex flex-col justify-between gap-3 mx-2 mt-2 p-4 relative rounded-2xl text-white text-start min-h-[320px]">
@@ -396,7 +449,7 @@ export const ReusableCards = ({
                       </div>
                     ))}
                   </div>
-                  {el.requirements.length > 0 && (
+                  {el.requirements?.length > 0 && (
                     <>
                       <p className="mt-5 mx-5 mb-3 font-semibold px-2 bg-yellow-400 dark:bg-amber-500 rounded-full w-fit">
                         Persyaratan
