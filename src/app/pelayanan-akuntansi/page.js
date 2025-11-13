@@ -7,6 +7,7 @@ import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { Faqs } from '@/components/LegalComponents/Faqs';
 import { ReusableCards } from '@/components/ReusableCards';
 import { AccountantPackages } from '../../../public/DB/AccountantPackages';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
     title: "Pelayanan Akuntansi - Ganesha Consulting",
@@ -44,11 +45,14 @@ export const metadata = {
 };
 
 export default async function PelayananAkuntansi() {
+
+    const AccountantPackagesAPI = await getPackagesByServiceId(9)
     return (
         <>
             <BannerService />
             <ReusableCards  
-                data={AccountantPackages}
+                // data={AccountantPackages}
+                data={AccountantPackagesAPI}
                 label={'Paket Pelayanan Akuntansi'}
             />
             <Explanation

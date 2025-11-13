@@ -1,4 +1,3 @@
-"use client"
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { ReusableCards } from '@/components/ReusableCards';
 import { BannerService } from "@/components/ServicesComponent/BannerService";
@@ -16,9 +15,13 @@ import { PseCertificate } from '@/components/PseCertificate';
 import { ClientLogo } from '@/components/ClientLogo';
 import Head from 'next/head';
 import { ReccomendationCard } from '@/components/ReccomendationCard';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
-export default function PendirianPtPage() {
+export default async function PendirianPtPage() {
 
+    const PTPackagesAPI = await getPackagesByServiceId(1)
+    // console.log("PTPackagesAPI", PTPackagesAPI);
+    
     return (
         <>
             <Head>
@@ -61,7 +64,8 @@ export default function PendirianPtPage() {
             </Head>
             <BannerService />
             <ReusableCards
-                data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
+                // data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
+                data={PTPackagesAPI}
                 label={'Paket Pendirian PT'}
             />
             <Benefit

@@ -5,6 +5,7 @@ import { Faqs } from '@/components/LegalComponents/Faqs';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { servicePackages } from '../../../public/DB/IzinPackages';
 import { ReusableCards } from '@/components/ReusableCards';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
     title: "Layanan Perizinan - Ganesha Consulting",
@@ -56,11 +57,14 @@ export const metadata = {
 };
 
 export default async function IzinTambahanPage() {
+
+    const IzinTambahanPackageAPI = await getPackagesByServiceId(6)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={servicePackages}
+                // data={servicePackages}
+                data={IzinTambahanPackageAPI}
                 label={'Paket Perizinan'}
             />
             <WhyLegal

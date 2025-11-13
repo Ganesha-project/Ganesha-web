@@ -10,6 +10,7 @@ import { dataPageBadanUsaha, undangUndangTerkait, whyBadanUsaha } from "../../..
 import { Laws } from "@/components/LegalComponents/Laws";
 import { DataPageLegal } from "../../../public/Data/LegalitasData";
 import { AdsBanner } from "@/components/AdsBanner";
+import { getPackagesByServiceId } from "@/lib/getPackagesByServiceId";
 
 export const metadata = {
     title: "Pendirian Badan Usaha - Yayasan, Firma Hukum, & Asosiasi dengan Ganesha Consulting",
@@ -56,13 +57,15 @@ export const metadata = {
     }
 };
 
-
 export default async function PendirianBadanUsaha() {
+
+    const BadanUsahaPackagesAPI = await getPackagesByServiceId(4)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={BadanUsahaPackages}
+                // data={BadanUsahaPackages}
+                data={BadanUsahaPackagesAPI}
                 label={'Paket Pendirian Badan Usaha'}
             />
             <Benefit

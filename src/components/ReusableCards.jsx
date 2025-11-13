@@ -19,13 +19,7 @@ import { BgMainGradient, TextMainGradient } from "@/utils/ReueseClass";
 import { FaClipboardList, FaFileCode } from "react-icons/fa6";
 import { Button } from "./ui/button";
 import { MdOutlineArrowDownward } from "react-icons/md";
-
-// Helper function to calculate original price from discounted price
-const calculateOriginalPrice = (discountedPrice, discountPercentage) => {
-  if (discountPercentage === 0 || discountedPrice === 0) return 0;
-  const originalPrice = discountedPrice / (1 - discountPercentage / 100);
-  return Math.round(originalPrice / 1000) * 1000;
-};
+import { calculateOriginalPrice } from "@/helper/calculateOriginalPrice";
 
 // Helper function to process data and calculate original prices
 const processCardData = (data) => {
@@ -188,7 +182,8 @@ export const ReusableCards = ({
               </div>
             </div>
           )}
-          {totalItems <= 3 ? null : (
+
+          {!totalItems <= 3 && (
             <div
               className={`flex justify-center w-full items-center gap-3 md:hidden`}
             >
@@ -219,10 +214,10 @@ export const ReusableCards = ({
           <div
             ref={containerRef}
             className={`${
-              processedData.length <= 3
+              processedData.length == 3
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-7xl mx-auto px-5"
                 : "flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth px-5 md:px-24 2xl:px-80"
-            } py-5`}
+            } ${processedData?.length < 3 && "flex justify-center items-center" } py-5`}
           >
             {processedData.map((el, idx) => (
               <div

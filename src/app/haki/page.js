@@ -7,6 +7,7 @@ import { Faqs } from '@/components/LegalComponents/Faqs';
 import { HakiPackages } from '../../../public/DB/HakiPackages';
 import { ReusableCards } from '@/components/ReusableCards';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
     title: "HAKI | Hak Kekayaan Intelektual - Ganesha Consulting",
@@ -47,11 +48,13 @@ export const metadata = {
 
 export default async function HakiPage() {
 
+    const HAKIPackagesAPI = await getPackagesByServiceId(5)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={HakiPackages}
+                // data={HakiPackages}
+                data={HAKIPackagesAPI}
                 label={'Paket HAKI'}
             />
             <Explanation

@@ -14,7 +14,7 @@ import { Faqs } from "@/components/LegalComponents/Faqs";
 import { Header } from "@/components/WebComponents/Header";
 import { AdsBanner } from "@/components/AdsBanner";
 import { WebPackageWork } from "@/components/WebComponents/WebPackageWork";
-import { formattedPackages } from "@/helper/formattedPackages";
+import { getPackagesByServiceId } from "@/lib/getPackagesByServiceId";
 
 export const metadata = {
   title: "Jasa Pembuatan Website Profesional - Ganesha Consulting",
@@ -93,34 +93,10 @@ async function getAvailablePackageTypes() {
   }
 }
 
-async function getWebsitePackages() {
-  try {
-    const res = await fetch(
-      "https://ganesha-cms.vercel.app/api/packages?serviceId=3",
-      {
-        next: { revalidate: 3600 }, // Revalidate every hour
-      }
-    );
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-    const data = await res.json();
-    if (data?.data && Array.isArray(data.data)) {
-      // Sort: highlight true first, then by price ascending (0 last)
-        const result  = await formattedPackages(data.data)
-        return result
-    }
-    return [];
-  } catch (err) {
-    console.error("Error fetching website packages:", err.message);
-    return [];
-  }
-}
-
 export default async function WebPage() {
   // Fetch available package types on server
   const availablePackageTypes = await getAvailablePackageTypes();
-  const webPackagesAPI = await getWebsitePackages();
+  const webPackagesAPI = await getPackagesByServiceId(3)
 
   return (
     <>

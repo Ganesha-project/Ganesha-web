@@ -5,6 +5,7 @@ import { Faqs } from '@/components/LegalComponents/Faqs';
 import { CardVO } from '@/components/VirtualOffice/CardVO';
 import { Benefit } from '@/components/VirtualOffice/Benefit';
 import { dataPageVO } from '../../../public/Data/VOData';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
     title: "Virtual Office Jakarta - Sewa Virtual Office dengan Ganesha Consulting",
@@ -57,11 +58,14 @@ export const metadata = {
 };
 
 export default async function VirtualOfficePage() {
+
+    const VOPackagesAPI = await getPackagesByServiceId(10)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={VirtualOfficePackages}
+                // data={VirtualOfficePackages}
+                data={VOPackagesAPI}
                 label={'Paket Sewa Virtual Office'}
             />
             <CardVO />

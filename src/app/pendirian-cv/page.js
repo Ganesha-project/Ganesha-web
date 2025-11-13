@@ -15,6 +15,7 @@ import { AdsBanner } from "@/components/AdsBanner";
 import { ClientLogo } from "@/components/ClientLogo";
 import { Support } from "@/components/AboutUs/Support";
 import { PseCertificate } from "@/components/PseCertificate";
+import { getPackagesByServiceId } from "@/lib/getPackagesByServiceId";
 
 export const metadata = {
     title: "Jasa Pendirian CV - Ganesha Consulting",
@@ -55,11 +56,14 @@ export const metadata = {
 };
 
 export default async function PendirianCvPage() {
+    
+    const CVPackagesAPI = await getPackagesByServiceId(2)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={[...CVPackages, ...ExtrasPackages]}
+                // data={[...CVPackages, ...ExtrasPackages]}
+                data={CVPackagesAPI}
                 label={'Paket Pendirian CV'}
             />
             <ClientPhotos />

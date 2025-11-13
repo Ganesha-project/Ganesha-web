@@ -9,6 +9,7 @@ import { WhyLegal } from "@/components/LegalComponents/WhyLegal";
 import { Explanation } from "@/components/LegalComponents/Explanation";
 import { Faqs } from "@/components/LegalComponents/Faqs";
 import { SocmedWork } from "@/components/SocmedComponents/SocmedWork";
+import { getPackagesByServiceId } from "@/lib/getPackagesByServiceId";
 
 export const metadata = {
     title: "Manajemen Sosial Media & Desain - Ganesha Consulting",
@@ -49,11 +50,14 @@ export const metadata = {
 };
 
 export default async function SosmedPage() {
+
+    const SocmedPackagesAPI = await getPackagesByServiceId(7)
     return (
         <>
             <BannerService />
             <ReusableCards
-                data={SMPackages}
+                // data={SMPackages}
+                data={SocmedPackagesAPI}
                 label={'Paket Social Media Management'}
             />
             <SocmedWork />
