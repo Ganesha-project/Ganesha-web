@@ -129,7 +129,7 @@ export const ReusableCards = ({
 
   return (
     <>
-      <section id="price-list" className={`py-10 space-y-5`}>
+      <section id="price-list" className={`py-10 space-y-5 `}>
         <div
           className={`${
             visibility === false ? "hidden" : "block"
@@ -216,14 +216,14 @@ export const ReusableCards = ({
             className={`${
               processedData.length == 3
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-7xl mx-auto px-5"
-                : "flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth px-5 md:px-24 2xl:px-80"
+                : "flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth px-5 md:px-24 2xl:px-80 hide-scrollbar"
             } ${processedData?.length < 3 && "flex justify-center items-center" } py-5`}
           >
             {processedData.map((el, idx) => (
               <div
                 key={idx}
                 data-card="true" // Simple data attribute
-                className={`max-w-sm h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700 flex-shrink-0 snap-center
+                className={`max-w-sm h-fit pb-8 bg-gradient-to-b from-neutral-200 to-white dark:from-[#232323] dark:to-black rounded-3xl space-y-4 relative hover:scale-[1.01] origin-bottom duration-300 ease-in-out hover:shadow-mainShadow hover:brightness-105 dark:hover:brightness-90 shadow-custom border border-neutral-300 dark:border-neutral-700 flex-shrink-0 snap-center 
           ${processedData.length <= 3 ? "w-full" : "w-[85vw] md:w-[30vw]"}
         `}
               >

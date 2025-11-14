@@ -7,7 +7,8 @@ import { Faqs } from '@/components/LegalComponents/Faqs';
 import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { ReusableCards } from '@/components/ReusableCards';
-import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
+// import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
+import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
     title: "Konsultan Pajak Terbaik di Jakarta - Ganesha Consulting",
@@ -59,25 +60,60 @@ export const metadata = {
 };
 
 export default async function KonsultanPajakPage() {
+    // Ambil data dari API
+    const PajakPackagesAPI = await getPackagesByServiceId(8);
+
+    // Filter berdasarkan type
+    const pelaporanSPT = PajakPackagesAPI.filter(pkg => 
+        pkg.type.startsWith('Pelaporan SPT')
+    );
+
+    const konsultanPajakPMDN = PajakPackagesAPI.filter(pkg => 
+        pkg.type.includes('PMDN')
+    );
+
+    const konsultanPajakPMA = PajakPackagesAPI.filter(pkg => 
+        pkg.type.includes('PMA')
+    );
+
+    const pajakDaerahDanBrevet = PajakPackagesAPI.filter(pkg => 
+        !pkg.type.startsWith('Pelaporan SPT') && 
+        !pkg.type.includes('PMDN') && 
+        !pkg.type.includes('PMA')
+    );
+
     return (
         <>
             <BannerService />
-            <ReusableCards
-                data={pelaporanSPT}
-                label={'Paket Pelaporan SPT'}
-            />
-            <ReusableCards
-                data={konsultanPajakPMDN}
-                label={'Paket Konsultan Pajak PMDN'}
-            />
-            <ReusableCards
-                data={konsultanPajakPMA}
-                label={'Paket Konsultan Pajak PMA'}
-            />
-            <ReusableCards
-                data={[...pendaftaranPajakDaerah, ...perpajakanLainnya]}
-                label={'Paket Pajak Daerah & Brevet'}
-            />
+            
+            {pelaporanSPT.length > 0 && (
+                <ReusableCards
+                    data={pelaporanSPT}
+                    label={'Paket Pelaporan SPT'}
+                />
+            )}
+            
+            {konsultanPajakPMDN.length > 0 && (
+                <ReusableCards
+                    data={konsultanPajakPMDN}
+                    label={'Paket Konsultan Pajak PMDN'}
+                />
+            )}
+            
+            {konsultanPajakPMA.length > 0 && (
+                <ReusableCards
+                    data={konsultanPajakPMA}
+                    label={'Paket Konsultan Pajak PMA'}
+                />
+            )}
+            
+            {pajakDaerahDanBrevet.length > 0 && (
+                <ReusableCards
+                    data={pajakDaerahDanBrevet}
+                    label={'Paket Pajak Daerah & Brevet'}
+                />
+            )}
+            
             <Explanation
                 text1={'Apa itu'}
                 text={'Konsultasi Pajak?'}

@@ -4,10 +4,11 @@ import React from "react";
 import { Button } from "../ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 import { Badge } from "../ui/badge";
-import { IoArrowDown, IoGiftSharp } from "react-icons/io5";
+import { IoArrowDown, IoGiftSharp, IoLogoWhatsapp } from "react-icons/io5";
 import clsx from "clsx";
 import { TextMainGradient } from "@/utils/ReueseClass";
 import { event } from "@/lib/metaPixel";
+import { TbBrandWhatsapp } from "react-icons/tb";
 
 export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
   const handleKonsultasiSekarang = () => {
@@ -27,28 +28,29 @@ export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
   };
 
   return (
-    <section className="mt-12 sm:mt-0 p-3 gap-3 overflow-hidden flex flex-col-reverse lg:flex-row items-stretch h-[calc(100vh - 4rem)]">
+    // adjust h nya biar sesuai layar monitor user, kalau biasanya saya pakai style={{ height: "calc(100vh - 5.35rem)" }}
+    <section className="mt-12 sm:mt-0 p-3 gap-3 overflow-hidden flex flex-col-reverse lg:flex-row items-stretch min-h-[calc(100vh-0.5rem)] 2xl:justify-center w-full ">
       {/* LEFT GRID */}
-      <div className="bg-white dark:bg-secondaryDark shadow-custom h-auto lg:w-1/2 w-full border rounded-2xl p-5 sm:p-8 lg:p-10 flex flex-col justify-between ">
+      <div className="bg-white dark:bg-secondaryDark shadow-custom h-auto lg:w-1/2 w-full border rounded-2xl p-5 sm:p-8 lg:p-10 items-center flex flex-col justify-between  2xl:gap-10 max-w-3xl">
         {/* badge */}
         <Badge
           variant="outline"
-          className="text-xs sm:text-sm md:text-base border self-start mb-4"
+          className="text-xs sm:text-sm md:text-base 2xl:text-xl border self-start mb-4"
         >
           {badge}
         </Badge>
 
         {/* text area */}
-        <div className="space-y-4 sm:space-y-6 lg:space-y-8 flex-1">
+        <div className=" space-y-4 sm:space-y-6 lg:space-y-8 flex-1 flex flex-col justify-center">
           <h1
             className={clsx(
-              "text-darkColor text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold pb-1",
+              "text-darkColor text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold pb-2",
               TextMainGradient
             )}
           >
             {title}
           </h1>
-          <p className="text-darkColor/80 dark:text-white/90 text-sm sm:text-base leading-relaxed">
+          <p className="text-darkColor/80 dark:text-white/90 text-sm sm:text-base 2xl:text-2xl leading-relaxed">
             {desc}
           </p>
 
@@ -56,26 +58,30 @@ export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
             <Button
               onClick={handleKonsultasiSekarang}
-              className="text-sm text-white font-semibold sm:text-base w-full sm:w-auto bg-gradient-to-br from-green-500 to-green-800 hover:from-green-600 hover:to-green-900"
+              className="text-sm 2xl:text-xl 2xl:py-5 lg:py-2 text-white font-semibold sm:text-base w-full sm:w-auto bg-gradient-to-br from-green-500 to-green-800 hover:from-green-600 hover:to-green-900"
             >
               <span>Konsultasi Sekarang</span>
-              <FaWhatsapp />
+              <span>
+                <IoLogoWhatsapp/>
+              </span>
             </Button>
 
             <a href={priceNav}>
               <Button
                 variant="outline"
-                className="text-sm sm:text-base w-full sm:w-auto"
+                className="text-sm sm:text-base w-full sm:w-auto 2xl:text-xl 2xl:py-5"
               >
                 <span>Cek List Harga</span>
-                <IoArrowDown />
+                <span>
+                  <IoArrowDown />
+                </span>
               </Button>
             </a>
           </div>
         </div>
 
         {/* stats */}
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start gap-6 sm:gap-8 lg:gap-10 mt-8">
+        <div className="flex items-center justify-center sm:justify-between gap-6 sm:gap-8 lg:gap-10 mt-8 w-full">
           <div className="space-y-2 text-center sm:text-start">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
               400+
@@ -89,7 +95,7 @@ export const PromoBanner = ({ badge, title, desc, modelImage, priceNav }) => {
               2±
             </h1>
             <p className="text-xs sm:text-sm md:text-base text-darkColor/80 dark:text-white/70">
-              Hari Pengerjaan
+              Hari Kerja
             </p>
           </div>
           <div className="space-y-2 flex flex-col items-center sm:items-start text-center sm:text-start">

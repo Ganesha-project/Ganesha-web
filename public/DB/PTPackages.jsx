@@ -320,7 +320,6 @@ export const ExtrasPackages = [
         type: "Pengurusan PKP (Pengusaha Kena Pajak)",
         highlight: false,
         price: 1500000,
-        priceOriginal: 2500000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pengurusan%20PKP%20nih!%20",
         discount: 40,
         features: [
@@ -333,7 +332,6 @@ export const ExtrasPackages = [
         type: "Pengurusan NIB (Nomor Induk Berusaha)",
         highlight: false,
         price: 500000,
-        priceOriginal: 1000000,
         link: "https://api.whatsapp.com/send?phone=628887127000&text=Halo%20MinGans!%20Aku%20mau%20konsultasi%20terkait%20Pengurusan%20NIB%20nih!%20",
         discount: 50,
         features: [

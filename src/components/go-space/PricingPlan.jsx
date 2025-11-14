@@ -18,7 +18,7 @@ export const PricingPlan = ({ data }) => {
           Pilih paket virtual office yang sesuai dengan kebutuhan bisnis Anda. 
           Dapatkan alamat prestisius dan fasilitas lengkap dengan diskon khusus.
         </p>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className={`grid md:grid-cols-${data.length} gap-8`}>
           {data?.map((plan, index) => {
             const originalPrice = calculateOriginalPrice(plan.price, plan.discount)
             const originalPriceFormatted = formatToRupiah(originalPrice)
@@ -37,9 +37,9 @@ export const PricingPlan = ({ data }) => {
                   <div className="flex justify-between items-center py-6 px-4 text-white">
                     <span className="font-semibold text-xl">{plan.type}</span>
                     <div className="flex items-center gap-2">
-                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
+                      {/* <span className="bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
                         {plan.discount}%
-                      </span>
+                      </span> */}
                       <MdOutlineDiamond className="text-xl" />
                     </div>
                   </div>

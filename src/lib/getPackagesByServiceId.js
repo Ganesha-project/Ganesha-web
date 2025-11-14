@@ -3,7 +3,7 @@ import { formattedPackages } from "@/helper/formattedPackages";
 export async function getPackagesByServiceId(serviceId) {
   try {
     const res = await fetch(
-      `https://ganesha-cms.vercel.app/api/packages?serviceId=${serviceId}`,
+      `https://ganesha-cms.vercel.app/api/packages?serviceId=${serviceId}&limit=100`,
       {
         next: { revalidate: 3600 }, // Revalidate every hour
       }
