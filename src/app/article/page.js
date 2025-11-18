@@ -15,7 +15,8 @@ import { Pagination } from "@/components/ArticleComponent/Pagination";
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://ganesha-cms.vercel.app/api";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "https://ganesha-cms.vercel.app/api";
 
 export default function ArticlePage() {
   const [articles, setArticles] = useState(null);
@@ -26,12 +27,18 @@ export default function ArticlePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
-  const [sort, setSort] = useState('DESC');
+  const [sort, setSort] = useState("DESC");
   const [isMaintenance, setIsMaintenance] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState("all");
 
   // Fetch all articles including highlight and categories data
-  const fetchArticles = async (page = 1, search = "", status = "all", sortOrder = "DESC", category = "all") => {
+  const fetchArticles = async (
+    page = 1,
+    search = "",
+    status = "all",
+    sortOrder = "DESC",
+    category = "all"
+  ) => {
     try {
       setLoading(true);
 
@@ -45,7 +52,7 @@ export default function ArticlePage() {
 
       // Add category filter - try different parameter names
       if (category !== "all") {
-        params.append('categorySlug', category);
+        params.append("categorySlug", category);
       }
 
       // console.log("Fetching articles with params:", params.toString());
@@ -61,38 +68,40 @@ export default function ArticlePage() {
 
       if (result.success) {
         setArticles(result);
-        
+
         // Extract highlight articles (articles with highlight=true)
-        const highlightArticles = result.data.filter((article) => article.highlight === true);
-        
+        const highlightArticles = result.data.filter(
+          (article) => article.highlight === true
+        );
+
         // Format highlight data for HighlightCarousel component
         const formattedHighlightData = {
-          data: highlightArticles
+          data: highlightArticles,
         };
-        
+
         setHighlightData(formattedHighlightData);
-        
+
         // Extract categories from all articles
         const categoriesFromArticles = result.data
           .map((article) => article.category)
           .filter((category) => category && category.name)
           .reduce((unique, category) => {
-            if (!unique.find(item => item.id === category.id)) {
+            if (!unique.find((item) => item.id === category.id)) {
               unique.push({
                 id: category.id,
                 name: category.name,
-                slug: category.slug
+                slug: category.slug,
               });
             }
             return unique;
           }, []);
 
-          // console.log("Extracted categories:", categoriesFromArticles);
+        // console.log("Extracted categories:", categoriesFromArticles);
 
         setCategories({
-          data: categoriesFromArticles
+          data: categoriesFromArticles,
         });
-        
+
         setError(null);
       } else {
         throw new Error(result.message || "Failed to load articles");
@@ -108,8 +117,10 @@ export default function ArticlePage() {
   // Fetch highlight articles separately for banner
   const fetchHighlightArticles = async () => {
     try {
-      const response = await fetch(`${API_URL}/article?limit=50&status=PUBLISH&highlight=true`);
-      
+      const response = await fetch(
+        `${API_URL}/article?limit=50&status=PUBLISH&highlight=true`
+      );
+
       if (!response.ok) {
         throw new Error("Failed to fetch highlight articles");
       }
@@ -117,12 +128,14 @@ export default function ArticlePage() {
       const result = await response.json();
 
       if (result.success) {
-        const highlightArticles = result.data.filter((article) => article.highlight === true);
-        
+        const highlightArticles = result.data.filter(
+          (article) => article.highlight === true
+        );
+
         const formattedHighlightData = {
-          data: highlightArticles
+          data: highlightArticles,
         };
-        
+
         setHighlightData(formattedHighlightData);
       }
     } catch (err) {
@@ -133,8 +146,10 @@ export default function ArticlePage() {
   // Fetch all categories for filter
   const fetchCategories = async () => {
     try {
-      const response = await fetch(`${API_URL}/article?limit=100&status=PUBLISH`);
-      
+      const response = await fetch(
+        `${API_URL}/article?limit=100&status=PUBLISH`
+      );
+
       if (!response.ok) {
         throw new Error("Failed to fetch categories");
       }
@@ -146,18 +161,18 @@ export default function ArticlePage() {
           .map((article) => article.category)
           .filter((category) => category && category.name)
           .reduce((unique, category) => {
-            if (!unique.find(item => item.id === category.id)) {
+            if (!unique.find((item) => item.id === category.id)) {
               unique.push({
                 id: category.id,
                 name: category.name,
-                slug: category.slug
+                slug: category.slug,
               });
             }
             return unique;
           }, []);
 
         setCategories({
-          data: categoriesFromArticles
+          data: categoriesFromArticles,
         });
       }
     } catch (err) {
@@ -168,11 +183,17 @@ export default function ArticlePage() {
   // Initial load
   useEffect(() => {
     const fetchData = async () => {
-      await fetchArticles(currentPage, searchQuery, statusFilter, sort, categoryFilter);
+      await fetchArticles(
+        currentPage,
+        searchQuery,
+        statusFilter,
+        sort,
+        categoryFilter
+      );
       await fetchHighlightArticles();
       await fetchCategories();
     };
-    
+
     fetchData();
   }, [currentPage, statusFilter, sort, categoryFilter]);
 
@@ -216,10 +237,10 @@ export default function ArticlePage() {
 
     // Apply client-side category filter if API doesn't support it
     let filteredData = articlesData.data;
-    
+
     if (categoryFilter !== "all") {
-      filteredData = articlesData.data.filter(article => 
-        article.category?.slug === categoryFilter
+      filteredData = articlesData.data.filter(
+        (article) => article.category?.slug === categoryFilter
       );
     }
 
@@ -227,14 +248,16 @@ export default function ArticlePage() {
       data: filteredData,
       pagination: {
         ...articlesData.pagination,
-        totalItems: filteredData.length
-      }
+        totalItems: filteredData.length,
+      },
     };
   };
 
   const firstArticle = articles?.data?.[0];
   const metaTitle = firstArticle?.title || "Artikel Ganesha Consulting";
-  const metaDescription = firstArticle?.excerpt || "Pelajari panduan lengkap mengenai berbagai topik bisnis di Ganesha Consulting.";
+  const metaDescription =
+    firstArticle?.excerpt ||
+    "Pelajari panduan lengkap mengenai berbagai topik bisnis di Ganesha Consulting.";
   const metaImage = firstArticle?.thumbnail?.url || "/default-thumbnail.jpg";
 
   const ErrorDisplay = ({ message, showReload = true }) => (
@@ -243,7 +266,15 @@ export default function ArticlePage() {
         <p className="text-red-500 font-semibold">Error: {message}</p>
         {showReload && (
           <button
-            onClick={() => fetchArticles(currentPage, searchQuery, statusFilter, sort, categoryFilter)}
+            onClick={() =>
+              fetchArticles(
+                currentPage,
+                searchQuery,
+                statusFilter,
+                sort,
+                categoryFilter
+              )
+            }
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
           >
             Try Again
@@ -257,17 +288,36 @@ export default function ArticlePage() {
     <div className="h-[30lvh] flex items-center justify-center">
       <p className="text-xl text-center">
         No articles found
-        {(searchQuery || statusFilter !== "all" || categoryFilter !== "all") && (
+        {(searchQuery ||
+          statusFilter !== "all" ||
+          categoryFilter !== "all") && (
           <>
             <br />
             {searchQuery && (
-              <>for <span className="font-semibold text-mainColor dark:text-baseColor">"{searchQuery}"</span></>
+              <>
+                for{" "}
+                <span className="font-semibold text-mainColor dark:text-baseColor">
+                  "{searchQuery}"
+                </span>
+              </>
             )}
             {categoryFilter !== "all" && (
-              <> in category <span className="font-semibold text-mainColor dark:text-baseColor">{categoryFilter}</span></>
+              <>
+                {" "}
+                in category{" "}
+                <span className="font-semibold text-mainColor dark:text-baseColor">
+                  {categoryFilter}
+                </span>
+              </>
             )}
             {statusFilter !== "all" && (
-              <> with status <span className="font-semibold text-mainColor dark:text-baseColor">{statusFilter}</span></>
+              <>
+                {" "}
+                with status{" "}
+                <span className="font-semibold text-mainColor dark:text-baseColor">
+                  {statusFilter}
+                </span>
+              </>
             )}
             <br />
             Please try adjusting your filters.
@@ -282,7 +332,7 @@ export default function ArticlePage() {
   }
 
   const formattedArticles = formatArticlesForCard(articles);
-
+  
   return (
     <>
       <Head>
@@ -290,7 +340,10 @@ export default function ArticlePage() {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={metaImage} />
-        <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ""} />
+        <meta
+          property="og:url"
+          content={typeof window !== "undefined" ? window.location.href : ""}
+        />
         <meta property="og:type" content="article" />
         <meta name="description" content={metaDescription} />
       </Head>
@@ -304,10 +357,13 @@ export default function ArticlePage() {
         ) : highlightData && highlightData.data.length > 0 ? (
           <HighlightCarousel data={highlightData} />
         ) : (
-          articles?.data && articles.data.length > 0 && (
-            <HighlightCarousel data={{
-              data: articles.data.slice(0, 3)
-            }} />
+          articles?.data &&
+          articles.data.length > 0 && (
+            <HighlightCarousel
+              data={{
+                data: articles.data.slice(0, 3),
+              }}
+            />
           )
         )}
       </BannerArticle>
@@ -328,8 +384,8 @@ export default function ArticlePage() {
         ) : loading ? (
           <SkeletonTiles />
         ) : categories && categories.data.length > 0 ? (
-          <TilesFilter 
-            categories={categories} 
+          <TilesFilter
+            categories={categories}
             onChangeCategory={handleCategoryChange}
             activeCategory={categoryFilter}
           />
@@ -350,13 +406,18 @@ export default function ArticlePage() {
               moms={
                 <Headtag
                   label={
-                    searchQuery 
-                      ? 'Search Results' 
+                    searchQuery
+                      ? "Search Results"
                       : categoryFilter !== "all"
-                      ? categories?.data?.find(cat => cat.slug === categoryFilter)?.name || 'Filtered Articles'
+                      ? categories?.data?.find(
+                          (cat) => cat.slug === categoryFilter
+                        )?.name || "Filtered Articles"
                       : statusFilter !== "all"
-                      ? `${statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1)} Articles`
-                      : 'Artikel Populer'
+                      ? `${
+                          statusFilter.charAt(0).toUpperCase() +
+                          statusFilter.slice(1)
+                        } Articles`
+                      : "Artikel Populer"
                   }
                   filter={!searchQuery}
                   setSortOrder={handleSortChange}
@@ -373,6 +434,7 @@ export default function ArticlePage() {
                   currentPage={articles.pagination.currentPage}
                   totalPages={articles.pagination.totalPages}
                   onPageChange={handlePageChange}
+                  loading={loading}
                 />
               </div>
             )}
@@ -380,15 +442,7 @@ export default function ArticlePage() {
         ) : null}
 
         {/* Results Info */}
-        {articles?.pagination && !loading && (
-          <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
-            Showing {articles.data.length} of {articles.pagination.totalItems}{" "}
-            articles
-            {searchQuery && ` for "${searchQuery}"`}
-            {categoryFilter !== "all" && ` in ${categories?.data?.find(cat => cat.slug === categoryFilter)?.name || categoryFilter}`}
-            {/* {statusFilter !== "all" && ` (${statusFilter})`} */}
-          </div>
-        )}
+        
       </section>
     </>
   );
