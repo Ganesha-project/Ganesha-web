@@ -1,3 +1,5 @@
+"use client"
+
 import { whyUsData } from "@/Data/GoSpace/WhyUsData";
 import React, { useState } from "react";
 import {
@@ -82,7 +84,7 @@ const renderDesktopItem = (item) => {
 
 export const WhyUsDekstop = () => {
   return (
-    <main id="why-us" className="py-8 px-4 sm:px-8 md:px-16 lg:px-24">
+    <main id="why-us" className="md: py-8 px-4 sm:px-8 md:px-16 lg:px-24 hidden md:block">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
         Why Go Space
       </h1>
@@ -135,7 +137,7 @@ export const WhyUsMobile = () => {
   };
 
   return (
-    <main id="why-us" className="md:px-24 2xl:px-70 px-5">
+    <main id="why-us" className="md:px-24 2xl:px-70 px-5 block md:hidden">
       <section className="bg-gradient-to-b from-goPurple via-purple-700/80 to-purple-500  sm:p-10 py-10 px-3 rounded-parent ">
         {/* Header + Controls */}
         <div className="flex px-3 text-white justify-between items-center mb-8">

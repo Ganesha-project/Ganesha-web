@@ -1,6 +1,4 @@
-"use client";
 
-import { useState, useEffect } from "react";
 import { GoFeedback } from "@/components/go-space/GoFeedback";
 import { ExploreSpaces } from "@/components/go-space/ExploreSpaces";
 import { PricingPlan } from "@/components/go-space/PricingPlan";
@@ -10,22 +8,6 @@ import { GoBanner } from "@/components/go-space/GoBanner";
 import { getPackagesByServiceId } from "@/lib/getPackagesByServiceId";
 
 export default async function GoSpacePage() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsMobile(window.innerWidth < 768); // breakpoint md
-        };
-
-        // Check initial screen size
-        checkScreenSize();
-
-        // Add event listener for screen resize
-        window.addEventListener('resize', checkScreenSize);
-
-        // Cleanup event listener
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
 
     const GoSpacePackagesAPI = await getPackagesByServiceId(11)
 
@@ -33,7 +15,8 @@ export default async function GoSpacePage() {
         <>
             {/* go-space page */}
             <GoBanner/>
-            {isMobile ? <WhyUsMobile/> : <WhyUsDekstop/>}      
+            <WhyUsDekstop/>     
+            <WhyUsMobile/>
             <ExploreSpaces/>
             <PricingPlan data={GoSpacePackagesAPI} />
             <PageFaq/>
