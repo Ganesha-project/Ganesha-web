@@ -17,7 +17,7 @@ export default function Activity() {
     const [loadingMore, setLoadingMore] = useState(false);
     const observerRef = useRef(null);
     const loadMoreTriggerRef = useRef(null);
-    const [isMaintenance] = useState(true);
+    const [isMaintenance] = useState(false);
 
     // Format activities untuk komponen
     const formattedActivities = activities.map(activity => ({
@@ -42,7 +42,7 @@ export default function Activity() {
         async function fetchActivities() {
             try {
                 setLoadingMore(true);
-                const res = await fetch(`https://ganesha-cms.vercel.app/api/activity?page=1&limit=${itemsToShow}`);
+                const res = await fetch(`https://ganesha-cms.vercel.app/api/activity`);
                 
                 if (!res.ok) {
                     throw new Error("Failed to fetch activities");
