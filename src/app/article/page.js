@@ -28,7 +28,7 @@ export default function ArticlePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [sort, setSort] = useState("DESC");
-  const [isMaintenance, setIsMaintenance] = useState(true);
+  const [isMaintenance, setIsMaintenance] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState("all");
 
   // Fetch all articles including highlight and categories data
