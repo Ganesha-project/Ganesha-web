@@ -17,7 +17,7 @@ export default function Activity() {
     const [loadingMore, setLoadingMore] = useState(false);
     const observerRef = useRef(null);
     const loadMoreTriggerRef = useRef(null);
-    const [isMaintenance] = useState(false);
+    const [isMaintenance] = useState(true);
 
     // Format activities untuk komponen
     const formattedActivities = activities.map(activity => ({
