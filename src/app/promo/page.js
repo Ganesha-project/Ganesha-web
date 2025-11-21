@@ -9,7 +9,7 @@ import Head from "next/head";
 import { FiLoader } from "react-icons/fi";
 import Maintenance from "@/components/Maintenance";
 
-export default function Activity() {
+export default function PromoPage() {
   const [activities, setActivities] = useState([]);
   const [load, setLoad] = useState(true);
   const [error, setError] = useState(null);
@@ -56,18 +56,8 @@ export default function Activity() {
         const data = await res.json();
 
         if (data.success) {
-
-          const sortedData = data.data.sort((a, b) => {
-            const dateA = new Date(a.date);
-            const dateB = new Date(b.date);
-            return dateB - dateA;
-          });
-
-          console.log("Sorted Data:", sortedData);
-
-          // setActivities(sortedData);
-          const filterredActivity = sortedData.filter((i) => i.isPromo === false )
-          setActivities(filterredActivity);
+          const filteredActivity = data.data.filter((i) => i.isPromo === true);
+          setActivities(filteredActivity);
         } else {
           throw new Error(data.message || "Failed to fetch activities");
         }
@@ -107,23 +97,23 @@ export default function Activity() {
   return (
     <>
       <Head>
-        <title>Latest Activities | Ganesha Multi Kreatif</title>
+        <title>Latest Promos | Ganesha Multi Kreatif</title>
         <meta
           name="description"
-          content="Discover the latest activities and events organized by Ganesha Multi Kreatif. Stay updated with our newest events, schedules, and locations."
+          content="Discover the latest promotions and special offers from Ganesha Multi Kreatif. Stay updated with our newest deals and discounts."
         />
         <meta
           name="keywords"
-          content="activities, events, Ganesha Multi Kreatif, latest updates, workshops"
+          content="promotions, deals, discounts, Ganesha Multi Kreatif, special offers"
         />
         <meta name="author" content="Ganesha Multi Kreatif" />
         <meta
           property="og:title"
-          content="Latest Activities | Ganesha Multi Kreatif"
+          content="Latest Promos | Ganesha Multi Kreatif"
         />
         <meta
           property="og:description"
-          content="Discover the latest activities and events organized by Ganesha Multi Kreatif."
+          content="Discover the latest promotions and special offers from Ganesha Multi Kreatif."
         />
         <meta
           property="og:image"
@@ -133,10 +123,7 @@ export default function Activity() {
           }
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.yourwebsite.com/activities"
-        />
+        <meta property="og:url" content="https://www.yourwebsite.com/promos" />
       </Head>
 
       {/* Banner Section */}
@@ -145,14 +132,16 @@ export default function Activity() {
       ) : load ? (
         <SkeletonBannerActivity />
       ) : (
-        <BannerActivity 
-        title={"Our Activity"}
-        desc={"Update terbaru seputar aktivitas, program, dan proyek Ganesha Consulting."}
-        data={formattedActivities} 
+        <BannerActivity
+          title={"Our Promos"}
+          desc={
+            "Update terbaru seputar promo terbaru dan termurah Ganesha Consulting."
+          }
+          data={formattedActivities}
         />
       )}
 
-      {/* Activities Grid Section */}
+      {/* Promos Grid Section */}
       <section>
         {error ? (
           <div>Error: {error}</div>
@@ -160,7 +149,7 @@ export default function Activity() {
           <SkeletonCardActivity />
         ) : formattedActivities.length === 0 ? (
           <div className="h-[30lvh] flex items-center justify-center">
-            <p className="text-xl text-center">No activities found.</p>
+            <p className="text-xl text-center">No promos found.</p>
           </div>
         ) : (
           <CardActivity activities={formattedActivities} items={itemsToShow} />

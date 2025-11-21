@@ -6,12 +6,14 @@ import { IoIosClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowDown, FaInstagram } from "react-icons/fa6";
 import { formatDate } from "@/helper/formatDateTime";
 import { ActivityLongDesc } from "./ActivityLongDesc";
+import { usePathname } from "next/navigation";
 
 export const CardActivity = ({ activities, items }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState({});
   const [mounted, setMounted] = useState(false);
+  const path = usePathname()
 
   useEffect(() => {
     setMounted(true);
@@ -239,22 +241,27 @@ export const CardActivity = ({ activities, items }) => {
   return (
     <>
       <section className="mx-5 md:mx-24 2xl:mx-80">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2 auto-cols-auto">
+        <div className={`grid grid-cols-2 ${path.startsWith("/promo") ? "md:grid-cols-3" : "md:grid-cols-4"} gap-1 md:gap-2 auto-cols-auto`}>
           {displayedActivities.map((el, idx) => (
             <div
               key={idx}
               onClick={() => handleOpenModal(idx)}
               className={`relative group cursor-pointer rounded-xl md:rounded-2xl overflow-hidden
-                                     ${
-                                       idx % 3 === 0
-                                         ? "md:col-span-2  md:row-span-2 "
-                                         : "col-span-1 row-span-1"
-                                     }
+
+                        ${
+                          path.startsWith("/promo")
+                            ? ""
+                            : `${
+                                idx % 3 === 0
+                                  ? "md:col-span-2  md:row-span-2 "
+                                  : "col-span-1 row-span-1"
+                              }
                                      ${
                                        idx % 5 === 0
                                          ? "md:col-span-1 col-span-2 row-span-1"
                                          : "col-span-1 row-span-1"
-                                     }
+                                     }`
+                        }
                                      `}
             >
               <Image

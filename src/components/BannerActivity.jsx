@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const BannerActivity = ({ data }) => {
+export const BannerActivity = ({ data, title, desc }) => {
     // const bannerImage = data?.[0]?.imageUrl?.[0] || "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
     const bannerImage = "https://i.pinimg.com/736x/e2/db/2e/e2db2e63c4984d8010c7a1ec3735efb8.jpg";
     
@@ -17,10 +17,10 @@ export const BannerActivity = ({ data }) => {
                     <div className="absolute inset-0 w-full h-full">
                         <div className="flex flex-col gap-1 md:gap-3 items-center justify-center h-full px-10">
                             <h1 className="text-2xl pb-1 md:text-4xl font-bold bg-gradient-to-tr from-neutral-50 via-neutral-300 to-neutral-400 bg-clip-text text-transparent">
-                                Our Activity
+                                {title}
                             </h1>
                             <p className="text-sm md:text-base text-center font-medium bg-gradient-to-tr from-neutral-50 via-neutral-300 to-neutral-400 bg-clip-text text-transparent">
-                                Update terbaru seputar aktivitas, program, dan proyek Ganesha Consulting.
+                                {desc}
                             </p>
                         </div>
                     </div>

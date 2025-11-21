@@ -89,6 +89,16 @@ export const Navbar = ({ children }) => {
             </li>
             <li className='relative flex flex-col items-center group'>
               <Link
+                href={'/promo'}
+                className={`z-[555] block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                aria-current="page"
+              >
+                Promo
+              </Link>
+              <span className={`${path.startsWith('/promo') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
+            </li>
+            <li className='relative flex flex-col items-center group'>
+              <Link
                 href={'/article'}
                 className={`z-[555] block py-[6px] px-3 items-center text-gray-800 dark:text-white rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
