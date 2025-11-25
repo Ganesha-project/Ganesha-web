@@ -8,18 +8,45 @@ import { formatDate } from "@/helper/formatDateTime";
 import { ActivityLongDesc } from "./ActivityLongDesc";
 import { usePathname } from "next/navigation";
 
+const sendCounter = async (activity, pathParams) => {
+  try {
+    const res = await fetch("https://ganesha-cms.vercel.app/api/counter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: pathParams.startsWith("/promo")
+        ? JSON.stringify({
+            refId: activity.id,
+            type: "PROMO",
+          })
+        : JSON.stringify({
+            refId: activity.id,
+            type: "ACTIVITY",
+          }),
+    });
+
+    const data = await res.json();
+    console.log("Counter response:", data);
+  } catch (err) {
+    console.log("Counter error:", err);
+  }
+};
+
 export const CardActivity = ({ activities, items }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [cardImageIndex, setCardImageIndex] = useState({});
   const [mounted, setMounted] = useState(false);
-  const path = usePathname()
+  const path = usePathname();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const handleOpenModal = (index) => {
+    const activity = activities[index];
+    // console.log("COUNTER STRIKE ", activity.id);
+    sendCounter(activity, path);
+
     setSelectedIndex(index);
     setImageIndex(0);
     document.body.style.overflow = "hidden";
@@ -241,7 +268,11 @@ export const CardActivity = ({ activities, items }) => {
   return (
     <>
       <section className="mx-5 md:mx-24 2xl:mx-80">
-        <div className={`grid grid-cols-2 ${path.startsWith("/promo") ? "md:grid-cols-3" : "md:grid-cols-4"} gap-1 md:gap-2 auto-cols-auto`}>
+        <div
+          className={`grid grid-cols-2 ${
+            path.startsWith("/promo") ? "md:grid-cols-3" : "md:grid-cols-4"
+          } gap-1 md:gap-2 auto-cols-auto`}
+        >
           {displayedActivities.map((el, idx) => (
             <div
               key={idx}

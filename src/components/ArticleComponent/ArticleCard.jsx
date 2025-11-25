@@ -2,6 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { slugify } from "@/helper/slugify";
 
+const sendArticleCounter = async (articleId) => {
+  try {
+    const res = await fetch(`https://ganesha-cms.vercel.app/api/counter`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        refId: articleId,
+        type: "ARTICLE",
+      }),
+    });
+
+    const data = await res.json();
+    console.log("Counter Article:", data);
+
+  } catch (err) {
+    console.log("Counter error:", err);
+  }
+};
+
+
 // Status badge component
 const StatusBadge = ({ status }) => {
   const statusConfig = {
@@ -53,6 +73,7 @@ export const ArticleCard = ({
                 key={el?.id || idx}
                 href={'/article' + "/" + slug}
                 className="md:min-h-[60lvh] group rounded-3xl space-y-2 p-0 flex flex-col justify-between duration-300"
+                onClick={() => {sendArticleCounter(el.id)}}
               >
                 <div className="space-y-1 flex flex-col gap-2 w-full h-[50lvh] md:h-full relative">
                   {/* Image Container */}

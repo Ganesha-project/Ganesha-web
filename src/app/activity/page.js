@@ -21,6 +21,7 @@ export default function Activity() {
 
   // Format activities untuk komponen
   const formattedActivities = activities.map((activity) => ({
+     id: activity.id,
     title: activity.title,
     date: activity.date,
     location: null,
