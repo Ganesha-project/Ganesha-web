@@ -14,7 +14,7 @@ const sendArticleCounter = async (articleId) => {
     });
 
     const data = await res.json();
-    console.log("Counter Article:", data);
+    // console.log("Counter Article:", data);
 
   } catch (err) {
     console.log("Counter error:", err);

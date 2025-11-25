@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const ArticleContent = ({ data }) => {
     // PERBAIKAN: Struktur data Prisma
-    console.log("artcile content:", data);
+    // console.log("artcile content:", data);
     
 
     const content = data?.content || "";

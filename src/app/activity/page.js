@@ -64,7 +64,7 @@ export default function Activity() {
             return dateB - dateA;
           });
 
-          console.log("Sorted Data:", sortedData);
+          // console.log("Sorted Data:", sortedData);
 
           // setActivities(sortedData);
           const filterredActivity = sortedData.filter((i) => i.isPromo === false )

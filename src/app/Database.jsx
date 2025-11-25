@@ -28,9 +28,11 @@ import {
 import { MdHomeRepairService } from "react-icons/md";
 import { SiReadthedocs } from "react-icons/si";
 import {
+  HiCurrencyDollar,
   HiDeviceMobile,
   HiLightningBolt,
   HiOfficeBuilding,
+  HiOutlineCurrencyDollar,
   HiReceiptTax,
 } from "react-icons/hi";
 import { IoSearchCircle } from "react-icons/io5";
@@ -607,6 +609,12 @@ export const BtmNavigationLinks = {
       iconActive: <RiCompass3Fill />,
       label: "Activity",
       link: "/activity",
+    },
+    {
+      icon: <HiOutlineCurrencyDollar />,
+      iconActive: <HiCurrencyDollar />,
+      label: "Promo",
+      link: "/promo",
     },
     {
       icon: <RiBookOpenLine />,

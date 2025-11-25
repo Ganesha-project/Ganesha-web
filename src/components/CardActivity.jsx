@@ -25,7 +25,7 @@ const sendCounter = async (activity, pathParams) => {
     });
 
     const data = await res.json();
-    console.log("Counter response:", data);
+    // console.log("Counter response:", data);
   } catch (err) {
     console.log("Counter error:", err);
   }
