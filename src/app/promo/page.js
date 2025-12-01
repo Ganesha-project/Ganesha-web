@@ -47,7 +47,7 @@ export default function PromoPage() {
       try {
         setLoadingMore(true);
         const res = await fetch(
-          `https://ganesha-cms.vercel.app/api/activity?limit=100`
+          `https://ganesha-cms.vercel.app/api/content/activity?limit=100`
         );
 
         if (!res.ok) {

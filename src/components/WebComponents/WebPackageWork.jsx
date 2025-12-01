@@ -21,7 +21,7 @@ export const WebPackageWork = ({ text1, text }) => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://ganesha-cms.vercel.app/api/projects?serviceId=3&limit=20"
+          "https://ganesha-cms.vercel.app/api/business/projects?serviceId=3&limit=20"
         );
         const result = await response.json();
 

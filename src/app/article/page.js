@@ -58,7 +58,7 @@ export default function ArticlePage() {
       // console.log("Fetching articles with params:", params.toString());
       // console.log("Category filter:", category);
 
-      const response = await fetch(`${API_URL}/article?${params}`);
+      const response = await fetch(`${API_URL}/content/articles?${params}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch articles");
@@ -118,7 +118,7 @@ export default function ArticlePage() {
   const fetchHighlightArticles = async () => {
     try {
       const response = await fetch(
-        `${API_URL}/article?limit=50&status=PUBLISH&highlight=true`
+        `${API_URL}/content/articles?limit=50&status=PUBLISH&highlight=true`
       );
 
       if (!response.ok) {
@@ -147,7 +147,7 @@ export default function ArticlePage() {
   const fetchCategories = async () => {
     try {
       const response = await fetch(
-        `${API_URL}/article?limit=100&status=PUBLISH`
+        `${API_URL}/content/articles?limit=100&status=PUBLISH`
       );
 
       if (!response.ok) {

@@ -23,7 +23,7 @@ export default function ArticleDetail() {
             
             try {
                 // PERBAIKAN: Gunakan endpoint yang benar dengan slug
-                const response = await fetch(`${API_URL}/article/${slug}`);
+                const response = await fetch(`${API_URL}/content/articles/${slug}`);
                 
                 if (!response.ok) {
                     if (response.status === 404) {
@@ -50,7 +50,7 @@ export default function ArticleDetail() {
         async function fetchRecommendedArticles() {
             try {
                 // Fetch artikel terkait untuk rekomendasi
-                const response = await fetch(`${API_URL}/article?limit=6&status=PUBLISHED`);
+                const response = await fetch(`${API_URL}/content/articles?limit=6&status=PUBLISHED`);
                 
                 if (!response.ok) throw new Error("Failed to fetch recommended articles");
 

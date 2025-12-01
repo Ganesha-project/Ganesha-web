@@ -19,7 +19,7 @@ export const SocmedWork = ({ text1, text }) => {
       setLoading(true);
       try {
         const res = await fetch(
-          "https://ganesha-cms.vercel.app/api/projects?serviceId=7&limit=20"
+          "https://ganesha-cms.vercel.app/api/business/projects?serviceId=7&limit=20"
         );
         const data = await res.json();
         if (data) {
