@@ -40,14 +40,11 @@ export const ClientLogo = () => {
       clearInterval(intervalRef.current);
     }
 
-    // Setup interval baru
     intervalRef.current = setInterval(() => {
       setIndex((prevIndex) => {
-        // Hitung total slide (sesuaikan dengan jumlah item yang ingin ditampilkan per slide)
         const itemsPerView = isMobile ? 3 : 8; // 3 item untuk mobile, 8 untuk desktop
         const totalSlides = Math.ceil(clients.length / itemsPerView);
         
-        // Reset ke 0 jika sudah di akhir
         return prevIndex >= totalSlides - 1 ? 0 : prevIndex + 1;
       });
     }, 5000);
