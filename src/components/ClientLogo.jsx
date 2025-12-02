@@ -16,7 +16,7 @@ export const ClientLogo = () => {
       try {
         setLoading(true);
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_APIURL}/business/clients?limit=100`
+          `https://ganesha-cms.vercel.app/api/business/clients?limit=100`
         );
         const data = await res.json();
         if (data && Array.isArray(data.data)) {
@@ -44,7 +44,7 @@ export const ClientLogo = () => {
       setIndex((prevIndex) => {
         const itemsPerView = isMobile ? 3 : 8; // 3 item untuk mobile, 8 untuk desktop
         const totalSlides = Math.ceil(clients.length / itemsPerView);
-        
+
         return prevIndex >= totalSlides - 1 ? 0 : prevIndex + 1;
       });
     }, 5000);
@@ -69,7 +69,7 @@ export const ClientLogo = () => {
   };
 
   // Filter clients yang memiliki companyLogo
-  const clientsWithLogo = clients.filter(client => client.companyLogo);
+  const clientsWithLogo = clients.filter((client) => client.companyLogo);
 
   if (loading) {
     return (
@@ -114,8 +114,12 @@ export const ClientLogo = () => {
               <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{
-                  transform: `translateX(-${index * (100 / getItemsPerView())}%)`,
-                  width: `${(clientsWithLogo.length / getItemsPerView()) * 100}%`
+                  transform: `translateX(-${
+                    index * (100 / getItemsPerView())
+                  }%)`,
+                  width: `${
+                    (clientsWithLogo.length / getItemsPerView()) * 100
+                  }%`,
                 }}
               >
                 {clientsWithLogo.map((client, idx) => (
@@ -130,7 +134,7 @@ export const ClientLogo = () => {
                         src={client.companyLogo}
                         alt={client.companyName || client.clientName}
                         onError={(e) => {
-                          e.target.src = '/placeholder-logo.png'; // Fallback image
+                          e.target.src = "/placeholder-logo.png"; // Fallback image
                         }}
                       />
                       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
@@ -145,18 +149,15 @@ export const ClientLogo = () => {
             ) : (
               // Grid untuk desktop
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-                {clientsWithLogo.map((client, idx) => (
-                  <div
-                    key={client.id || idx}
-                    className="flex justify-center"
-                  >
+                {clientsWithLogo?.map((client, idx) => (
+                  <div key={client.id || idx} className="flex justify-center">
                     <div className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
                       <img
                         className="object-contain w-full h-full bg-blend-multiply"
                         src={client.companyLogo}
                         alt={client.companyName || client.clientName}
                         onError={(e) => {
-                          e.target.src = '/placeholder-logo.png';
+                          e.target.src = "/placeholder-logo.png";
                         }}
                       />
                       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
@@ -173,13 +174,13 @@ export const ClientLogo = () => {
             {/* Indikator untuk mobile */}
             {isMobile && clientsWithLogo.length > getItemsPerView() && (
               <div className="flex justify-center mt-4 space-x-2">
-                {Array.from({ 
-                  length: Math.ceil(clientsWithLogo.length / getItemsPerView()) 
+                {Array.from({
+                  length: Math.ceil(clientsWithLogo.length / getItemsPerView()),
                 }).map((_, i) => (
                   <button
                     key={i}
                     className={`h-2 rounded-full transition-all duration-300 ${
-                      i === index ? 'w-6 bg-blue-600' : 'w-2 bg-gray-300'
+                      i === index ? "w-6 bg-blue-600" : "w-2 bg-gray-300"
                     }`}
                     onClick={() => setIndex(i)}
                   />
