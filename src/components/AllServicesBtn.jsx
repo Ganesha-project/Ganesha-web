@@ -66,7 +66,7 @@ export const AllServicesBtn = () => {
     }, [carouselRef]);
 
     return (
-        <section className="py-12">
+        <section className="pb-12 pt-7 sm:py-12">
             {/* Search Bar & Labels */}
             <section className={`${expandAnimationClass} md:mx-24 2xl:mx-80 mx-5`}>
                 <div className={`${visible ? "opacity-100 scale-100 translate-y-20" : "translate-y-[500%] opacity-0 scale-95"} duration-300 ease-in-out flex items-center justify-center gap-2 w-full`}>
