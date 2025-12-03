@@ -7,35 +7,15 @@ import { IoClose } from "react-icons/io5";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { RiArrowRightWideLine } from "react-icons/ri";
 import Link from "next/link";
+import { usePromos } from "@/hooks/usePromos";
 
 const PopupAds = () => {
-  const [promos, setPromos] = useState();
-  const [loading, setLoading] = useState();
+  // const [promos, setPromos] = useState();
+  // const [loading, setLoading] = useState();
   const [isMinimized, setIsMinimized] = useState(false);
-  const [visible, setIsVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        const res = await fetch(
-          "https://ganesha-cms.vercel.app/api/business/promos?limit=100"
-        );
-        const data = await res.json();
-        if (data) {
-          setPromos(data.data);
-        }
-      } catch (err) {
-        const errMsg =
-          err instanceof Error ? err.message : "Internal Server Error";
-        console.log(errMsg);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+  const { promos, setPromos, loading, setLoading } = usePromos()
 
   useEffect(() => {
     if (!promos?.length) return;
@@ -51,7 +31,7 @@ const PopupAds = () => {
       {promos?.map((el, index) => (
         <section
           key={`dekstop-${index}`}
-          className={`hidden md:block fixed bottom-5 left-2 z-[100] `}
+          className={`hidden md:block fixed bottom-5 left-2 z-[70] `}
         >
           <div
             className={`flex flex-col items-start gap-0 duration-300

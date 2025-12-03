@@ -1,8 +1,9 @@
 "use client";
 import { categorizedServices } from "@/DB/Database";
 import { useHookMenu } from "@/hooks/useHookMenu";
+import { usePromos } from "@/hooks/usePromos";
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { PiMagnifyingGlass } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
@@ -51,6 +52,18 @@ export const ServicesMenu = ({ expandedId, onClose }) => {
     setSearchQuery("");
     setVisible(false);
   };
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const { promos, setPromos, error: errHooks } = usePromos();
+
+  useEffect(() => {
+    if (!promos.length) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === promos.length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [promos]);
 
   return (
     <>
@@ -283,22 +296,23 @@ export const ServicesMenu = ({ expandedId, onClose }) => {
                     </div>
                 )}
  */}
-        {!loadingHookMenu && searchQuery === "" && (
-          <div
-            className={`${expandAnimationClass} hover:scale-95 col-span-2 w-fit h-fit rounded-3xl overflow-hidden`}
-          >
-            <img
-              src={errorHookMenu ? "/fallback-rekomendasi.jpg" : mediaUrl}
-              alt="Hook Menu Media"
-              className="w-full h-auto rounded-xl object-cover"
-            />
-            {/* {errorHookMenu && (
-              <p className="text-xs font-semibold text-center text-red-500 mt-2">
-                Terjadi kesalahan saat memuat data.
-              </p>
-            )} */}
-          </div>
-        )}
+        <div
+          className={` transition-opacity duration-700 ease-in-out  col-span-2 w-fit h-fit rounded-3xl overflow-hidden`}
+        >
+          {promos?.map((el, idx) => (
+            <div key={`promo-image-id-${idx}`}>
+              <img
+                src={el.url_mobile}
+                alt="Hook Menu Media"
+                className={`${
+                  idx === currentIndex
+                    ? "opacity-100 block"
+                    : "opacity-0 hidden"
+                } w-full h-auto rounded-xl object-cover`}
+              />
+            </div>
+          ))}
+        </div>
 
         {/* Not Found Label */}
         {filteredOthers.length === 0 && filteredMain.length === 0 && (

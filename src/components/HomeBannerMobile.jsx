@@ -1,39 +1,18 @@
 "use client";
 
+import { usePromos } from "@/hooks/usePromos";
 import { BgMainGradient } from "@/utils/ReueseClass";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 export const HomeBannerMobile = () => {
-  const [banners, setBanners] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // touch control
   const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
+  const touchEndX = useRef(0);//
 
-  // Fetch banners
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        const res = await fetch(
-          "https://ganesha-cms.vercel.app/api/business/promos?limit=100"
-        );
-        const data = await res.json();
-
-        if (data) {
-          setBanners(data.data);
-        }
-      } catch (err) {
-        console.error("error");
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+  const { promos: banners , setPromos: setBanners, loading, error } = usePromos()
 
   // Auto slide
   useEffect(() => {
@@ -84,14 +63,11 @@ export const HomeBannerMobile = () => {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
+
         {banners?.map((el, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === currentIndex
-                ? "opacity-100 z-10"
-                : "opacity-0 z-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out `}
           >
             <Image
               src={el.url_desktop}
