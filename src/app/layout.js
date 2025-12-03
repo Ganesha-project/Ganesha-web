@@ -11,6 +11,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { MetaPixelProvider } from "@/lib/metaPixelProvider";
 import { Suspense } from 'react'; // ✅ Tambahkan ini
+import PopupAds from "@/components/PopupAds";
 
 const quicksand = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </Navbar>
           <FloatingButton />
+          <PopupAds/>
           <NavigationMobile />
         </ThemeProvider>
 

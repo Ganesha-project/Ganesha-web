@@ -80,7 +80,7 @@ export const HomeBannerMobile = () => {
       <div className="absolute inset-0 z-50 bg-gradient-to-b dark:from-black/35 dark:via-black/15 from-white/35 via-white/15 to-transparent w-full h-[50%]"></div>
 
       <div
-        className={`${BgMainGradient} w-full h-[220px] relative rounded-b-3xl overflow-hidden`}
+        className={`${BgMainGradient} w-full h-[220px] sm:h-[300px] relative rounded-b-3xl overflow-hidden`}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >

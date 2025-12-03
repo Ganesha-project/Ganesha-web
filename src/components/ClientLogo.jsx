@@ -133,9 +133,9 @@ export const ClientLogo = () => {
                         className="object-contain w-full h-full bg-blend-multiply"
                         src={client.companyLogo}
                         alt={client.companyName || client.clientName}
-                        onError={(e) => {
-                          e.target.src = "/placeholder-logo.png"; // Fallback image
-                        }}
+                        // onError={(e) => {
+                        //   e.target.src = "/placeholder-logo.png"; // Fallback image
+                        // }}
                       />
                       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
                         <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
@@ -156,9 +156,9 @@ export const ClientLogo = () => {
                         className="object-contain w-full h-full bg-blend-multiply"
                         src={client.companyLogo}
                         alt={client.companyName || client.clientName}
-                        onError={(e) => {
-                          e.target.src = "/placeholder-logo.png";
-                        }}
+                        // onError={(e) => {
+                        //   e.target.src = "/placeholder-logo.png";
+                        // }}
                       />
                       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
                         <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
