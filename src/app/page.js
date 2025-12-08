@@ -82,7 +82,7 @@ export default function Home() {
       <Voucher />
       <Credibility/>
 
-      {/* <PseCertificate /> */}
+      <PseCertificate />
       {/* <PriceWrapper text={"Layanan Utama Kami"} text1={"Rekomendasi"} data={dataPriceWrapper.legal} /> */}
       <WebWork text1={"Jelajahi"} text={"Karya Website Kami"} />
       <SocmedWork text1={"Sosial media"} text={"Yang kami tangani"} />

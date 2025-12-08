@@ -4,12 +4,12 @@ export const PseCertificate = () => {
             <section className="md:mx-24 2xl:mx-80 mx-5 pb-20">
                 <img
                     className="w-full h-full object-cover rounded-3xl hidden md:inline-block shadow-mainShadow"
-                    src={'https://cms-ganesha.ganeshaconsulting.co.id/uploads/psenew_11zon_11zon_2a7903b9a0.webp'}
+                    src={'/images/pse_dekstop.png'}
                     alt={'Ganesha Pse certificate'}
                 />
                 <img
                     className="w-full h-full object-cover rounded-3xl inline-block shadow-mainShadow md:hidden"
-                    src={'https://cms-ganesha.ganeshaconsulting.co.id/uploads/pseportrait_11zon_75cc32d277.webp'}
+                    src={'/images/pse_mobile.png'}
                     alt={'Ganesha Pse certificate'}
                 />
             </section>
