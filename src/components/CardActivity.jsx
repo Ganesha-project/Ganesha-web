@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 
 const sendCounter = async (activity, pathParams) => {
   try {
-    const res = await fetch("https://ganesha-cms.vercel.app/api/system/counter", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/system/counter`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: pathParams.startsWith("/promo")

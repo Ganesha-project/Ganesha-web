@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Head from 'next/head';
 import { ArticleDetailSkeleton } from "@/components/Skeleton/ArticleDetailSkeleton";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://ganesha-cms.vercel.app/api";
+const API_URL = process.env.NEXT_PUBLIC_APIURL
 
 export default function ArticleDetail() {
     // PERBAIKAN: Gunakan 'slug' bukan 'id'

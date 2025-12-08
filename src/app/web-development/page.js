@@ -65,7 +65,7 @@ export const metadata = {
 async function getAvailablePackageTypes() {
   try {
     const response = await fetch(
-      "https://ganesha-cms.vercel.app/api/business/projects?serviceId=3&limit=20",
+      `${process.env.NEXT_PUBLIC_APIURL}/business/projects?serviceId=3&limit=20`,
       {
         next: { revalidate: 3600 }, // Revalidate every hour
       }

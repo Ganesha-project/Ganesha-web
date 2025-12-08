@@ -4,7 +4,7 @@ import { slugify } from "@/helper/slugify";
 
 const sendArticleCounter = async (articleId) => {
   try {
-    const res = await fetch(`https://ganesha-cms.vercel.app/api/system/counter`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/system/counter`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

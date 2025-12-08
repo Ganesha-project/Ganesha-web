@@ -9,6 +9,8 @@ import Head from "next/head";
 import { FiLoader } from "react-icons/fi";
 import Maintenance from "@/components/Maintenance";
 
+const API_URL = process.env.NEXT_PUBLIC_APIURL
+
 export default function Activity() {
   const [activities, setActivities] = useState([]);
   const [load, setLoad] = useState(true);
@@ -47,7 +49,7 @@ export default function Activity() {
       try {
         setLoadingMore(true);
         const res = await fetch(
-          `https://ganesha-cms.vercel.app/api/content/activity?limit=100`
+          `${API_URL}/content/activity?limit=100`
         );
 
         if (!res.ok) {

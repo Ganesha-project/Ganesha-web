@@ -15,8 +15,7 @@ import { Pagination } from "@/components/ArticleComponent/Pagination";
 import Head from "next/head";
 import Maintenance from "@/components/Maintenance";
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "https://ganesha-cms.vercel.app/api";
+const API_URL = process.env.NEXT_PUBLIC_APIURL
 
 export default function ArticlePage() {
   const [articles, setArticles] = useState(null);

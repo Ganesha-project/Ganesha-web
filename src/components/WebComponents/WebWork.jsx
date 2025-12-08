@@ -18,7 +18,7 @@ export const WebWork = ({ text1, text }) => {
     const fetchWebProjects = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://ganesha-cms.vercel.app/api/business/projects?serviceId=3&limit=20");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/business/projects?serviceId=3&limit=20`);
         const data = await response.json();
         if (data) {
           console.log("Fetched web projects:", data);

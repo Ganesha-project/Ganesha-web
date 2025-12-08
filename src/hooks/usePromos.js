@@ -10,7 +10,7 @@ export const usePromos = () => {
       try {
         setLoading(true);
         const res = await fetch(
-          "https://ganesha-cms.vercel.app/api/business/promos?limit=100"
+          `${process.env.NEXT_PUBLIC_APIURL}/business/promos?limit=100`
         );
         const data = await res.json();
 

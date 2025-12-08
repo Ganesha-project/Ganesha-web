@@ -15,7 +15,7 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
 
   const fetchClients = async () => {
     try {
-        const res = await fetch("https://ganesha-cms.vercel.app/api/business/clients", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/business/clients`, {
             method: "GET"
         })
         const data = await res.json()
