@@ -519,16 +519,16 @@ export const categorizedServices = {
             subs: ["Content Creation", "Account Management", "Social Media Ads"],
             visibility: true
         },
-        {
-            href: "/software-management-system",
-            icon: <HiCog />,
-            label: "Software Management System",
-            desc: "Solusi terkini untuk meningkatkan efisiensi dan kinerja operasional.",
-            accentLight: "#be56b8",
-            accentDark: "#ecace7",
-            subs: ["Accounting Software", "Inventory Management", "CRM System"],
-            visibility: true
-        }
+        // {
+        //     href: "/software-management-system",
+        //     icon: <HiCog />,
+        //     label: "Software Management System",
+        //     desc: "Solusi terkini untuk meningkatkan efisiensi dan kinerja operasional.",
+        //     accentLight: "#be56b8",
+        //     accentDark: "#ecace7",
+        //     subs: ["Accounting Software", "Inventory Management", "CRM System"],
+        //     visibility: true
+        // }
     ],
     finance: [
         {
@@ -551,28 +551,28 @@ export const categorizedServices = {
             subs: ["Pembukuan", "Laporan Keuangan", "Kepatuhan Pajak"],
             visibility: true
         },
-        {
-            href: "/audit",
-            icon: <HiUserCircle />,
-            label: "Audit",
-            desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
-            accentLight: "#a17f30",
-            accentDark: "#ead08d",
-            subs: ["Audit Internal", "Audit Eksternal", "Audit Kepatuhan"],
-            visibility: true
-        }
+        // {
+        //     href: "/audit",
+        //     icon: <HiUserCircle />,
+        //     label: "Audit",
+        //     desc: "Layanan Audit profesional kami memberikan keyakinan terhadap informasi keuangan Anda.",
+        //     accentLight: "#a17f30",
+        //     accentDark: "#ead08d",
+        //     subs: ["Audit Internal", "Audit Eksternal", "Audit Kepatuhan"],
+        //     visibility: true
+        // }
     ],
     management: [
-        {
-            href: '/pelayanan-manajemen',
-            icon: <HiAdjustmentsHorizontal />,
-            label: 'Pelayanan Manajemen',
-            desc: "Layanan pengelolaan bisnis yang terintegrasi dan efisien.",
-            accentLight: "#5f2616",
-            accentDark: "#e39f8c",
-            subs: ["Alamat Bisnis", "Layanan Resepsionis", "Pengelolaan Surat"],
-            visibility: true
-        }
+        // {
+        //     href: '/pelayanan-manajemen',
+        //     icon: <HiAdjustmentsHorizontal />,
+        //     label: 'Pelayanan Manajemen',
+        //     desc: "Layanan pengelolaan bisnis yang terintegrasi dan efisien.",
+        //     accentLight: "#5f2616",
+        //     accentDark: "#e39f8c",
+        //     subs: ["Alamat Bisnis", "Layanan Resepsionis", "Pengelolaan Surat"],
+        //     visibility: true
+        // }
 
     ],
     workspace: [
