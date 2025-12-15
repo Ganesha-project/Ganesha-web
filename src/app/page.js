@@ -21,6 +21,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { HomeBannerMobile } from "@/components/HomeBannerMobile";
 import { Voucher } from "@/components/Promo/voucher";
 import { Credibility } from "@/components/Promo/Credibility";
+import { MarketingCard } from "@/components/MarketingCard";
 
 export default function Home() {
   return (
@@ -81,7 +82,7 @@ export default function Home() {
       <AllServicesBtn />
       <Voucher />
       <Credibility/>
-
+      <MarketingCard/>
       <PseCertificate />
       {/* <PriceWrapper text={"Layanan Utama Kami"} text1={"Rekomendasi"} data={dataPriceWrapper.legal} /> */}
       <WebWork text1={"Jelajahi"} text={"Karya Website Kami"} />
