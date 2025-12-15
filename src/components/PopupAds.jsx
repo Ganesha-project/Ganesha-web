@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoCloseSharp } from "react-icons/io5";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { RiArrowRightWideLine } from "react-icons/ri";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const PopupAds = () => {
           className={`hidden md:block fixed bottom-5 left-2 z-[70] `}
         >
           <div
-            className={`flex flex-col items-start gap-0 duration-300
+            className={`flex items-start gap-0 duration-300
                      ${
                        isMinimized
                          ? "transform -translate-x-[105%] scale-0"
@@ -60,18 +60,18 @@ const PopupAds = () => {
                 <p>Coming Soon for new Promo!</p>
               )}
             </Link>
-            <div className="aspect-square ps-1 py-2 pe-2 rounded-r-full ">
+            <div className="aspect-square bg-white/20 p-1 rounded-full ">
               <button
                 onClick={() => {
                   setIsMinimized(!isMinimized);
                 }}
                 variant={"secondary"}
                 className={
-                  "rounded-full p-2 bg-darkColor/10 backdrop-blur-xl text-mainColor hover:text-white text-sm"
+                  "rounded-full p-2 bg-red-600/70 text-white backdrop-blur-xl hover:text-white text-sm"
                 }
               >
                 <span>
-                  <IoIosArrowBack className="text-sm" />
+                  <IoCloseSharp className="text-base" />
                 </span>
               </button>
             </div>
@@ -88,10 +88,10 @@ const PopupAds = () => {
               setIsMinimized(!isMinimized);
             }}
             className={
-              "bg-darkColor/10 text-2xl backdrop-blur-2xl h-10 -ml-0.5 -mr-1 hover:text-white rounded-r-lg "
+              "bg-secondaryColor/50 text-mainColor dark:bg-white/60 text-2xl backdrop-blur-2xl h-10 -ml-0.5 -mr-1 dark:text-mainColor rounded-r-lg "
             }
           >
-            <RiArrowRightWideLine className="opacity-50" />
+            <RiArrowRightWideLine className="opacity-50 " />
           </button>
         </div>
       </section>

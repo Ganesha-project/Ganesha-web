@@ -63,24 +63,36 @@ export const ReusableCards = ({
     if (!container) return;
 
     const cards = container.querySelectorAll("[data-card]");
-    if (cards[index]) {
-      const card = cards[index];
-      const scrollLeft = card.offsetLeft - container.offsetLeft - 20;
+    if (!cards[index]) return;
 
-      container.scrollTo({
-        left: scrollLeft,
-        behavior: "smooth",
-      });
-      setActiveDot(index);
-    }
+    const card = cards[index];
+    const containerRect = container.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+
+    // Calculate scroll position to center the card in the container
+    const targetScrollLeft = container.scrollLeft + cardRect.left - containerRect.left - (containerRect.width - cardRect.width) / 2;
+
+    // Ensure we don't scroll beyond bounds
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const clampedScrollLeft = Math.max(0, Math.min(targetScrollLeft, maxScrollLeft));
+
+    container.scrollTo({
+      left: clampedScrollLeft,
+      behavior: "smooth",
+    });
+
+    // Update active dot after scroll animation completes
+    setTimeout(() => setActiveDot(index), 300);
   }, []);
 
   const handleNext = useCallback(() => {
+    if (totalDots === 0) return;
     const nextIndex = (activeDot + 1) % totalDots;
     scrollToIndex(nextIndex);
   }, [activeDot, totalDots, scrollToIndex]);
 
   const handlePrev = useCallback(() => {
+    if (totalDots === 0) return;
     const prevIndex = (activeDot - 1 + totalDots) % totalDots;
     scrollToIndex(prevIndex);
   }, [activeDot, totalDots, scrollToIndex]);
@@ -91,22 +103,41 @@ export const ReusableCards = ({
     if (!container) return;
 
     const handleScroll = () => {
-      const scrollLeft = container.scrollLeft;
-      const containerWidth = container.clientWidth;
+      const cards = container.querySelectorAll("[data-card]");
+      if (cards.length === 0) return;
 
-      // Calculate which card is currently most visible
-      const cardIndex = Math.round(scrollLeft / containerWidth);
-      setActiveDot(Math.min(cardIndex, totalDots - 1));
+      const containerRect = container.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distance = Math.abs(cardCenter - containerCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActiveDot(closestIndex);
     };
 
     container.addEventListener("scroll", handleScroll);
+    // Trigger initial calculation
+    handleScroll();
     return () => container.removeEventListener("scroll", handleScroll);
   }, [totalDots]);
 
   // Reset active dot when data changes
   useEffect(() => {
     setActiveDot(0);
-  }, [data]);
+    // Scroll to first card when data changes
+    setTimeout(() => scrollToIndex(0), 100);
+  }, [data, scrollToIndex]);
 
   const handlePackagePortos = (packageType) => {
     // Format package type menjadi ID yang valid
