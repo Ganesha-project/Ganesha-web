@@ -2,12 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 import { BannerActivity } from "@/components/BannerActivity";
-import { CardActivity } from "@/components/CardActivity";
+// import { CardActivity } from "@/components/CardActivity";
 import { SkeletonBannerActivity } from "@/components/Skeleton/SkeletonBannerActivity";
 import { SkeletonCardActivity } from "@/components/Skeleton/SkeletonCardActivity";
 import Head from "next/head";
-import { FiLoader } from "react-icons/fi";
 import Maintenance from "@/components/Maintenance";
+import { PromoCards } from "@/components/Promo/PromoCards";
+import { SkeletonCardPromos } from "@/components/Skeleton/SkeletonCardPromos";
 
 export default function PromoPage() {
   const [activities, setActivities] = useState([]);
@@ -147,13 +148,14 @@ export default function PromoPage() {
         {error ? (
           <div>Error: {error}</div>
         ) : load ? (
-          <SkeletonCardActivity />
+          <SkeletonCardPromos />
         ) : formattedActivities.length === 0 ? (
           <div className="h-[30lvh] flex items-center justify-center">
             <p className="text-xl text-center">No promos found.</p>
           </div>
         ) : (
-          <CardActivity activities={formattedActivities} items={itemsToShow} />
+          // <CardActivity activities={formattedActivities} items={itemsToShow} />
+          <PromoCards activities={formattedActivities} />
         )}
 
         {/* Load More Trigger */}
