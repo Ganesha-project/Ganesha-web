@@ -7,8 +7,11 @@ import { PiSealCheckFill } from "react-icons/pi";
 import { Title } from "../Title";
 import Image from "next/image";
 import { event } from "@/lib/metaPixel";
+import { usePathname } from "next/navigation";
 
 export const Credibility = () => {
+  const path = usePathname();
+
   const registeredData = [
     {
       name: "DJKI",
@@ -109,37 +112,39 @@ export const Credibility = () => {
       </section>
 
       {/* Section 2 - Flex Bento Grid */}
-      <section className="md:mx-24 2xl:mx-80 mx-5 space-y-10 mb-30">
-        <Title text1="Terdaftar di" text="Instansi Resmi" />
+      {path.startsWith("/promo") && (
+        <section className="md:mx-24 2xl:mx-80 mx-5 space-y-10 mb-30">
+          <Title text1="Terdaftar di" text="Instansi Resmi" />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
-          {registeredData.map((el, idx) => (
-            <a
-              key={idx}
-              href={el.link}
-              target="_blank"
-              className={clsx(
-                "group relative overflow-hidden rounded-3xl p-4 flex flex-col items-center justify-start text-center bg-neutral-200 dark:bg-darkColor",
-                "hover:-translate-y-2 hover:shadow-mainShadow hover:invert duration-300 ease-in-out",
-                "transition-all"
-              )}
-            >
-              <div className="relative w-16 h-16 md:w-20 md:h-20">
-                <Image
-                  src={el.logo}
-                  width={1000}
-                  height={1000}
-                  alt={el.name}
-                  className="object-contain rounded-xl group-hover:scale-105 duration-300"
-                />
-              </div>
-              <h2 className="mt-3 font-semibold text-xs sm:text-sm md:text-base bg-gradient-to-bl dark:from-secondaryColor dark:to-neutral-100 from-mainColor to-darkColor bg-clip-text text-transparent">
-                {el.name}
-              </h2>
-            </a>
-          ))}
-        </div>
-      </section>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-5">
+            {registeredData.map((el, idx) => (
+              <a
+                key={idx}
+                href={el.link}
+                target="_blank"
+                className={clsx(
+                  "group relative overflow-hidden rounded-3xl p-4 flex flex-col items-center justify-start text-center bg-neutral-200 dark:bg-darkColor",
+                  "hover:-translate-y-2 hover:shadow-mainShadow hover:invert duration-300 ease-in-out",
+                  "transition-all"
+                )}
+              >
+                <div className="relative w-16 h-16 md:w-20 md:h-20">
+                  <Image
+                    src={el.logo}
+                    width={1000}
+                    height={1000}
+                    alt={el.name}
+                    className="object-contain rounded-xl group-hover:scale-105 duration-300"
+                  />
+                </div>
+                <h2 className="mt-3 font-semibold text-xs sm:text-sm md:text-base bg-gradient-to-bl dark:from-secondaryColor dark:to-neutral-100 from-mainColor to-darkColor bg-clip-text text-transparent">
+                  {el.name}
+                </h2>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Bank Partner */}
       <section className="flex flex-col space-y-10 mb-20 md:mx-24 2xl:mx-80 mx-5">
@@ -150,7 +155,7 @@ export const Credibility = () => {
             <div
               key={idx}
               className={clsx(
-                "group relative overflow-hidden rounded-3xl p-3 flex flex-col items-center justify-center text-center bg-neutral-200 dark:bg-darkColor",
+                "group relative overflow-hidden rounded-3xl p-3 flex flex-col items-center justify-center text-center bg-neutral-200 dark:bg-white/90",
                 "hover:-translate-y-2 hover:shadow-mainShadow hover:invert duration-300 ease-in-out",
                 "transition-all py-6 md:py-8"
               )}

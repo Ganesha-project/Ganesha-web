@@ -7,27 +7,65 @@ import { useState, useEffect, useRef } from "react";
 
 export const HomeBannerMobile = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // touch control
   const touchStartX = useRef(0);
-  const touchEndX = useRef(0);//
+  const touchEndX = useRef(0);
+  const autoPlayRef = useRef(null);
 
   const { promos: banners , setPromos: setBanners, loading, error } = usePromos()
 
-  // Auto slide
+  // Cleanup on unmount
   useEffect(() => {
-    if (!banners.length) return;
-    const interval = setInterval(() => {
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, []);
+
+  // Auto slide with pause/resume functionality 
+  useEffect(() => {
+    if (!banners.length || banners.length <= 1 || !isAutoPlaying) return;
+
+    autoPlayRef.current = setInterval(() => {
       setCurrentIndex((prev) =>
         prev === banners.length - 1 ? 0 : prev + 1
       );
     }, 3000);
 
-    return () => clearInterval(interval);
-  }, [banners]);
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, [banners, isAutoPlaying]);
+
+  // Pause auto slide on user interaction
+  const pauseAutoPlay = () => {
+    setIsAutoPlaying(false);
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+  };
+
+  // Resume auto slide after user interaction
+  const resumeAutoPlay = () => {
+    setIsAutoPlaying(true);
+  };
+
+  // Handle manual navigation
+  const goToSlide = (index) => {
+    pauseAutoPlay();
+    setCurrentIndex(index);
+    // Resume auto play after 5 seconds of inactivity
+    setTimeout(resumeAutoPlay, 5000);
+  };
 
   // Swipe handlers
   const onTouchStart = (e) => {
+    pauseAutoPlay();
     touchStartX.current = e.changedTouches[0].clientX;
   };
 
@@ -39,18 +77,23 @@ export const HomeBannerMobile = () => {
   const handleSwipe = () => {
     const swipeDistance = touchStartX.current - touchEndX.current;
 
-    if (swipeDistance > 50) {
-      // swipe left
-      setCurrentIndex((prev) =>
-        prev === banners.length - 1 ? 0 : prev + 1
-      );
-    }
-
-    if (swipeDistance < -50) {
-      // swipe right
-      setCurrentIndex((prev) =>
-        prev === 0 ? banners.length - 1 : prev - 1
-      );
+    if (Math.abs(swipeDistance) > 50) {
+      if (swipeDistance > 50) {
+        // swipe left - next slide
+        setCurrentIndex((prev) =>
+          prev === banners.length - 1 ? 0 : prev + 1
+        );
+      } else {
+        // swipe right - previous slide
+        setCurrentIndex((prev) =>
+          prev === 0 ? banners.length - 1 : prev - 1
+        );
+      }
+      // Resume auto play after swipe
+      setTimeout(resumeAutoPlay, 5000);
+    } else {
+      // If swipe wasn't significant, resume immediately
+      resumeAutoPlay();
     }
   };
 
@@ -67,7 +110,9 @@ export const HomeBannerMobile = () => {
         {banners?.map((el, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out `}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             <Image
               src={el.url_desktop}
@@ -85,7 +130,7 @@ export const HomeBannerMobile = () => {
         {banners?.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => goToSlide(index)}
             className={`w-2.5 h-2.5 rounded-full transition ${
               index === currentIndex
                 ? "bg-white dark:bg-white"
