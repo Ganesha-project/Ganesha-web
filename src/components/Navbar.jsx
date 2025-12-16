@@ -13,7 +13,7 @@ import { HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi
 import { RiSearchFill } from "react-icons/ri";
 import { ServicesMenu } from './ServicesMenu';
 import { AboutMenu } from './AboutMenu';
-import { BgtGradientYellowPurple, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
+import { BgtGradientYellowPurple, GecGradientBg, GecGradientText, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
 import { QuickLinks } from './QuickLinks';
 import { HiHome } from 'react-icons/hi';
 
@@ -76,6 +76,18 @@ export const Navbar = ({ children }) => {
                 </span>
               </Link>
               <span className={`${path.startsWith('/go-space') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${BgtGradientYellowPurple} rounded-full`}></span>
+            </li>
+              <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
+              <Link
+                href={'https://www.ganeshaec.co.id/'}
+                className={`z-[555] font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
+                aria-current="page"
+              >
+                <span className={GecGradientText}>
+                  GEC
+                </span>
+              </Link>
+              <span className={`${path.startsWith('/go-space') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${GecGradientBg} rounded-full`}></span>
             </li>
             <li className='relative flex flex-col items-center group'>
               <Link
