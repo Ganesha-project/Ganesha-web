@@ -59,7 +59,7 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
               (el, idx) => (
                 <div key={idx} className="flex-shrink-0">
                   {el.clientPhoto && (
-                    <div className="md:min-w-[30vw] min-w-[80vw] h-[65lvh] md:h-[70vh] relative group duration-300 ease-in-out hover:scale-105 hover:drop-shadow-md rounded-3xl hover:shadow-[0px_2px_35px_0px_#682D79] dark:hover:shadow-[0px_2px_35px_0px_#A781A9]">
+                    <div className="md:min-w-[30vw] min-w-[80vw] h-[40vh] md:h-[70vh] relative group duration-300 ease-in-out hover:scale-105 hover:drop-shadow-md rounded-3xl hover:shadow-[0px_2px_35px_0px_#682D79] dark:hover:shadow-[0px_2px_35px_0px_#A781A9]">
                       {imageLoading[idx] && (
                         <SkeletonImage className="object-cover rounded-3xl h-full w-full" />
                       )}

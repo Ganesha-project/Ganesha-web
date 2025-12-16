@@ -1,14 +1,31 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Title } from "./Title";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+// Mock Title component
+const Title = ({ text, className }) => (
+  <h2 className={`text-3xl font-bold ${className}`}>{text}</h2>
+);
 
 export const ClientLogo = () => {
-  const [index, setIndex] = useState(0);
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState(true);
-  const intervalRef = useRef(null);
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const [windowWidth, setWindowWidth] = useState(0); // Start with 0 to indicate not mounted
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Handle initial mount and window resize
+  useEffect(() => {
+    setIsMounted(true);
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Fetch data dari API
   useEffect(() => {
@@ -24,6 +41,15 @@ export const ClientLogo = () => {
         }
       } catch (err) {
         console.error("Error fetching client data:", err);
+        // Mock data for demo
+        setClients([
+          { id: 1, companyLogo: "https://via.placeholder.com/150", companyName: "Company 1" },
+          { id: 2, companyLogo: "https://via.placeholder.com/150", companyName: "Company 2" },
+          { id: 3, companyLogo: "https://via.placeholder.com/150", companyName: "Company 3" },
+          { id: 4, companyLogo: "https://via.placeholder.com/150", companyName: "Company 4" },
+          { id: 5, companyLogo: "https://via.placeholder.com/150", companyName: "Company 5" },
+          { id: 6, companyLogo: "https://via.placeholder.com/150", companyName: "Company 6" },
+        ]);
       } finally {
         setLoading(false);
       }
@@ -31,41 +57,11 @@ export const ClientLogo = () => {
     fetchData();
   }, []);
 
-  // Carousel otomatis hanya untuk mobile
-  useEffect(() => {
-    if (!isMobile || clients.length === 0) return;
-
-    // Bersihkan interval sebelumnya
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-
-    intervalRef.current = setInterval(() => {
-      setIndex((prevIndex) => {
-        const itemsPerView = isMobile ? 3 : 8; // 3 item untuk mobile, 8 untuk desktop
-        const totalSlides = Math.ceil(clients.length / itemsPerView);
-
-        return prevIndex >= totalSlides - 1 ? 0 : prevIndex + 1;
-      });
-    }, 5000);
-
-    // Cleanup interval
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [isMobile, clients]);
-
-  // Hitung jumlah item per view berdasarkan device
-  const getItemsPerView = () => {
-    if (typeof window === "undefined") return 4;
-    const width = window.innerWidth;
-    if (width < 640) return 2; // Mobile kecil
-    if (width < 768) return 3; // Mobile
-    if (width < 1024) return 4; // Tablet
-    if (width < 1280) return 6; // Desktop kecil
-    return 8; // Desktop besar
+  // Cek apakah menggunakan carousel (mobile/tablet)
+  const shouldUseCarousel = () => {
+    // Return false during SSR, will be calculated after mount
+    if (!isMounted) return false;
+    return windowWidth < 1024; // Carousel untuk screen < 1024px
   };
 
   // Filter clients yang memiliki companyLogo
@@ -99,6 +95,44 @@ export const ClientLogo = () => {
     );
   }
 
+  // Calculate animation duration based on number of items (slower for more items)
+  const animationDuration = Math.max(20, clientsWithLogo.length * 2);
+
+  // Show loading state until mounted to prevent hydration mismatch
+  if (!isMounted) {
+    return (
+      <section className="block py-10 md:py-24 space-y-5">
+        <Title
+          text={"Klien Kami"}
+          className={"mb-5 md:mb-10 md:mx-24 mx-5 flex justify-center"}
+        />
+        <div className="md:mx-24 2xl:mx-80 mx-0">
+          <div className="relative">
+            {/* Default to grid view during SSR */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+              {clientsWithLogo?.map((client, idx) => (
+                <div key={client.id || idx} className="flex justify-center">
+                  <div className="dark:bg-white bg-white bg-opacity-90 rounded-3xl h-32 w-32 flex items-center p-4 relative group shadow-sm">
+                    <img
+                      className="object-contain w-full h-full"
+                      src={client.companyLogo}
+                      alt={client.companyName || client.clientName}
+                    />
+                    <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-90 ease-in-out rounded-3xl">
+                      <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
+                        {client.companyName || client.clientName}
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       <section className="block py-10 md:py-24 space-y-5">
@@ -108,82 +142,70 @@ export const ClientLogo = () => {
         />
         <div className="md:mx-24 2xl:mx-80 mx-0">
           {/* Container utama */}
-          <div className="relative overflow-hidden">
-            {/* Carousel untuk mobile */}
-            {isMobile ? (
-              <div
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{
-                  transform: `translateX(-${
-                    index * (100 / getItemsPerView())
-                  }%)`,
-                  width: `${
-                    (clientsWithLogo.length / getItemsPerView()) * 100
-                  }%`,
-                }}
-              >
-                {clientsWithLogo.map((client, idx) => (
-                  <div
-                    key={client.id || idx}
-                    className={`flex-shrink-0 px-2`}
-                    style={{ width: `${100 / getItemsPerView()}%` }}
-                  >
-                    <div className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-full flex items-center p-2 relative group">
-                      <img
-                        className="object-contain w-full h-full bg-blend-multiply"
-                        src={client.companyLogo}
-                        alt={client.companyName || client.clientName}
-                        // onError={(e) => {
-                        //   e.target.src = "/placeholder-logo.png"; // Fallback image
-                        // }}
-                      />
-                      <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
-                        <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
-                          {client.companyName || client.clientName}
-                        </h4>
+          <div className="relative">
+            {/* Infinite scroll marquee untuk mobile/tablet */}
+            {shouldUseCarousel() ? (
+              <div className="relative w-full overflow-hidden">
+                {/* Gradient overlays for smooth edges */}
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+                
+                <motion.div
+                  className="flex gap-4"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{
+                    duration: animationDuration,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  style={{ width: "fit-content" }}
+                >
+                  {/* Triple the array for seamless loop */}
+                  {[...clientsWithLogo, ...clientsWithLogo, ...clientsWithLogo].map(
+                    (client, idx) => (
+                      <div
+                        key={`${client.id}-${idx}`}
+                        className="flex-shrink-0"
+                      >
+                        <div
+                          className="
+                            dark:bg-white bg-white bg-opacity-90
+                            rounded-2xl
+                            h-32 w-32 sm:h-24 sm:w-32
+                            flex items-center justify-center
+                            p-4
+                            shadow-sm
+                          "
+                        >
+                          <img
+                            className="object-contain max-h-full max-w-full"
+                            src={client.companyLogo}
+                            alt={client.companyName || client.clientName}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    )
+                  )}
+                </motion.div>
               </div>
             ) : (
               // Grid untuk desktop
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
                 {clientsWithLogo?.map((client, idx) => (
                   <div key={client.id || idx} className="flex justify-center">
-                    <div className="dark:bg-white bg-opacity-50 rounded-[25px] h-32 w-32 flex items-center p-2 relative group">
+                    <div className="dark:bg-white bg-white bg-opacity-90 rounded-3xl h-32 w-32 flex items-center p-4 relative group shadow-sm">
                       <img
-                        className="object-contain w-full h-full bg-blend-multiply"
+                        className="object-contain w-full h-full"
                         src={client.companyLogo}
                         alt={client.companyName || client.clientName}
-                        // onError={(e) => {
-                        //   e.target.src = "/placeholder-logo.png";
-                        // }}
                       />
-                      <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-50 ease-in-out rounded-[25px]">
+                      <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-90 ease-in-out rounded-3xl">
                         <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
                           {client.companyName || client.clientName}
                         </h4>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            )}
-
-            {/* Indikator untuk mobile */}
-            {isMobile && clientsWithLogo.length > getItemsPerView() && (
-              <div className="flex justify-center mt-4 space-x-2">
-                {Array.from({
-                  length: Math.ceil(clientsWithLogo.length / getItemsPerView()),
-                }).map((_, i) => (
-                  <button
-                    key={i}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === index ? "w-6 bg-blue-600" : "w-2 bg-gray-300"
-                    }`}
-                    onClick={() => setIndex(i)}
-                  />
                 ))}
               </div>
             )}
