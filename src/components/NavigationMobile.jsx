@@ -8,6 +8,7 @@ import { RiAppsFill, RiAppsLine, RiArrowDropLeftLine, RiWhatsappFill } from "rea
 import { IoArrowUp } from "react-icons/io5";
 import { SearchNavbar } from "./SearchNavbar";
 import { IoIosArrowBack } from "react-icons/io";
+import { seasonalColor } from "@/utils/ReueseClass";
 
 export const NavigationMobile = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -117,7 +118,7 @@ export const NavigationMobile = () => {
                             </button>
                         </div>
                     <div className="w-full flex justify-between items-center gap-2">
-                            <div className="flex justify-between items-center w-full py-2 px-9 shadow-custom bg-lightColor/80 dark:bg-darkColor/80 backdrop-blur-md rounded-full">
+                            <div className={`${seasonalColor.christmas} flex justify-between items-center w-full py-2 px-9 shadow-custom bg-lightColor/80 dark:bg-darkColor/80 backdrop-blur-md rounded-full`}>
                                 <div className="flex items-center justify-between w-full">
                                     {BtmNavigationLinks.main.map((el, idx) => (
                                         <Link href={el.link} key={idx}>

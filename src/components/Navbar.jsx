@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import ThemeSwitch from './ThemeSwitch';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { dataContact } from '@/app/Database';
 import { usePathname } from "next/navigation";
@@ -8,12 +9,11 @@ import { MegaMenuNavbar } from './MegaMenuNavbar';
 import { SearchNavbar } from './SearchNavbar';
 import { MobileDrawer } from './MobileDrawer';
 import { SlSocialInstagram } from 'react-icons/sl';
-import Link from 'next/link';
 import { HiMiniBars2, HiMiniMagnifyingGlass, HiSquares2X2 } from "react-icons/hi2";
 import { RiSearchFill } from "react-icons/ri";
 import { ServicesMenu } from './ServicesMenu';
 import { AboutMenu } from './AboutMenu';
-import { BgtGradientYellowPurple, GecGradientBg, GecGradientText, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
+import { BgtGradientYellowPurple, GecGradientBg, GecGradientText, seasonalColor, TextGradientYellowPurple, TextMainGradient } from '@/utils/ReueseClass';
 import { QuickLinks } from './QuickLinks';
 import { HiHome } from 'react-icons/hi';
 
@@ -21,10 +21,6 @@ export const Navbar = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedId, setExpandedId] = useState(null);
   const path = usePathname();
-
-  const seasonalColor = {
-    christmas: "bg-natalLight/50! dark:bg-natalDark/50! border border-2 border-emerald-800/50"
-  }
 
   useEffect(() => {
     const handleScroll = () => {
