@@ -14,7 +14,7 @@ export const HomeBannerMobile = () => {
   const touchEndX = useRef(0);
   const autoPlayRef = useRef(null);
 
-  const { promos: banners , setPromos: setBanners, loading, error } = usePromos()
+  const { promos: banners, setPromos: setBanners, loading, error } = usePromos()
 
   // Cleanup on unmount
   useEffect(() => {
@@ -100,7 +100,20 @@ export const HomeBannerMobile = () => {
   return (
     <section className="relative block md:hidden">
       <div className="absolute inset-0 z-50 bg-gradient-to-b dark:from-black/35 dark:via-black/15 from-white/35 via-white/15 to-transparent w-full h-[50%]"></div>
-
+      <div className='absolute bottom-1 -left-5 translate-y-1/2'>
+        <div className=' flex items-center justify-center'>
+          {Array.from({ length: 30 }).map((_, index) => (
+            <Image
+              className='-ml-1.5 rotate-180 animate-wiggle'
+              key={index}
+              width={80}
+              height={80}
+              src="https://gallery.yopriceville.com/downloadfullsize/send/16278"
+              alt=""
+            />
+          ))}
+        </div>
+      </div>
       <div
         className={`${BgMainGradient} w-full h-[220px] sm:h-[300px] relative rounded-b-3xl overflow-hidden`}
         onTouchStart={onTouchStart}
@@ -110,9 +123,8 @@ export const HomeBannerMobile = () => {
         {banners?.map((el, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <Image
               src={el.url_desktop}
@@ -131,11 +143,10 @@ export const HomeBannerMobile = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-2.5 h-2.5 rounded-full transition ${
-              index === currentIndex
+            className={`w-2.5 h-2.5 rounded-full transition ${index === currentIndex
                 ? "bg-white dark:bg-white"
                 : "bg-white/40 dark:bg-white/40"
-            }`}
+              }`}
           />
         ))}
       </div>
