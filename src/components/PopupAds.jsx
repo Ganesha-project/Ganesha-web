@@ -35,11 +35,10 @@ const PopupAds = () => {
         >
           <div
             className={`flex items-start gap-0 duration-300
-                     ${
-                       isMinimized
-                         ? "transform -translate-x-[105%] scale-0"
-                         : "scale-100"
-                     }`}
+                     ${isMinimized
+                ? "transform -translate-x-[105%] scale-0"
+                : "scale-100"
+              }`}
           >
             <Link
               href={el.url}
@@ -60,14 +59,14 @@ const PopupAds = () => {
                 <p>Coming Soon for new Promo!</p>
               )}
             </Link>
-            <div className="aspect-square bg-white/20 p-1 rounded-full ">
+            <div className="">
               <button
                 onClick={() => {
                   setIsMinimized(!isMinimized);
                 }}
                 variant={"secondary"}
                 className={
-                  "rounded-full p-2 bg-red-600/70 text-white backdrop-blur-xl hover:text-white text-sm"
+                  "rounded-full p-2 bg-white/10 text-black drop-shadow-xl dark:text-white backdrop-blur-xl hover:text-red-400 duration-200 hover:bg-lightColor dark:hover:bg-darkColor text-sm"
                 }
               >
                 <span>

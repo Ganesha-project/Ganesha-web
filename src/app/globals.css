@@ -90,13 +90,17 @@ button {
   --color-lightColor: #f1f1f1;
   --color-secondaryLight: #e3e3e3;
 
-  /* go space */
+  /* Go Space */
   --color-goPurple: #864af9;
   --color-goPurple-secondary: #e9e3fa;
   --color-goYellow: #ffd35a;
   --radius-parent: 32px;
   --radius-children: 24px;
   --radius-input: 8px;
+
+  /* Seasonal */
+  --color-natalLight: #D25757;
+  --color-natalDark: #6b0a12;
 
   /* BoxShadow */
   --shadow-custom: rgba(17, 17, 26, 0.1) 0px 4px 16px,
@@ -613,4 +617,23 @@ body {
     rgba(255, 255, 255, 1) 70%,
     rgba(255, 255, 255, 1) 100%
   );
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 1.5s ease-in-out infinite;
 }

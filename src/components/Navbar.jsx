@@ -22,6 +22,10 @@ export const Navbar = ({ children }) => {
   const [expandedId, setExpandedId] = useState(null);
   const path = usePathname();
 
+  const seasonalColor = {
+    christmas: "bg-natalLight/50! dark:bg-natalDark/50! border border-2 border-emerald-800/50"
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -40,10 +44,45 @@ export const Navbar = ({ children }) => {
     <>
       {/* Navbar Desktop */}
       <nav className={`${isScrolled ? "" : "mt-2"} navbar fixed 2xl:px-80 md:px-24 w-full z-[100] ease-in-out duration-300 text-[14px] md:flex justify-center gap-2 hidden `}>
-        <div className="relative navbar-center hidden lg:flex rounded-3xl px-4">
+        <div className="relative navbar-center hidden lg:flex rounded-3xl px-4 overflow-hidden">
+
+          {/* Seasonal Ornament */}
+          <div className='absolute -top-10 left-0 translate-y-1/2'>
+            <div className=' flex items-center justify-center'>
+              {Array.from({ length: 30 }).map((_, index) => (
+                <Image
+                  className='opacity-60 -ml-4'
+                  key={index}
+                  width={50}
+                  height={50}
+                  src="https://gallery.yopriceville.com/downloadfullsize/send/16278"
+                  alt=""
+                />
+              ))}
+            </div>
+          </div>
+          <div className='absolute -bottom-2.5 -left-5 translate-y-1/2'>
+            <div className=' flex items-center justify-center'>
+              {Array.from({ length: 30 }).map((_, index) => (
+                <Image
+                  className='opacity-60 -ml-4 rotate-180'
+                  key={index}
+                  width={50}
+                  height={50}
+                  src="https://gallery.yopriceville.com/downloadfullsize/send/16278"
+                  alt=""
+                />
+              ))}
+            </div>
+          </div>
+          {/* Seasonal Ornament */}
+
+
           {/* Wrapper */}
-          <div className={`absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
+          <div className={`${seasonalColor.christmas} absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
+
           <ul className="flex items-center flex-col p-4 md:p-0 mt-4 font-medium md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 text-[14px]">
+
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/'}
@@ -54,6 +93,7 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path === '/' ? 'scale-100' : 'scale-0'} -ml-[11px] absolute bottom-[3px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
+
             <MegaMenuNavbar
               id="produk"
               title="Produk & Layanan"
@@ -65,6 +105,7 @@ export const Navbar = ({ children }) => {
                 onClose={() => setExpandedId(null)}
                 expandedId={expandedId} />
             </MegaMenuNavbar>
+
             <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
                 href={'/go-space'}
@@ -77,7 +118,8 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path.startsWith('/go-space') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${BgtGradientYellowPurple} rounded-full`}></span>
             </li>
-              <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
+
+            <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
                 href={'https://www.ganeshaec.co.id/'}
                 className={`z-[555] font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
@@ -89,6 +131,7 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path.startsWith('/go-space') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 ${GecGradientBg} rounded-full`}></span>
             </li>
+
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/activity'}
@@ -99,6 +142,7 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path.startsWith('/activity') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
+
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/promo'}
@@ -109,6 +153,7 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path.startsWith('/promo') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
+
             <li className='relative flex flex-col items-center group'>
               <Link
                 href={'/article'}
@@ -119,7 +164,9 @@ export const Navbar = ({ children }) => {
               </Link>
               <span className={`${path.startsWith('/article') ? 'scale-100' : 'scale-0'} absolute bottom-[4px] w-[3px] h-[3px] ease-in-out duration-300 group-hover:scale-100 scale-0 dark:bg-lightColor bg-darkColor rounded-full`}></span>
             </li>
-            <div className='flex items-center gap-3 py-[6px] px-3 !-mr-3 bg-darkColor/5 dark:bg-lightColor/10 rounded-full'>
+
+            {/* Quick Actions */}
+            <div className=' flex items-center gap-3 py-[4px] px-3 !-mr-3 bg-darkColor/5 dark:bg-lightColor/10 rounded-full'>
               {/* Menu */}
               <MegaMenuNavbar
                 id="tentang"
@@ -151,14 +198,45 @@ export const Navbar = ({ children }) => {
             </div>
           </ul>
         </div>
+
         <div className="space-x-2">
-          <Link
+          {/* <Link
             href='/contact'
             className={`flex items-center `}
           >
             <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-secondaryLight/80 dark:bg-secondaryDark/80 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Kontak
             </span>
+          </Link> */}
+
+          <Link
+            href='/contact'
+            className={`flex items-center relative`}
+          >
+            <div className='md:flex gap-1 items-center justify-center hidden font-semibold shadow-custom ease-in-out duration-300 px-4 py-2 rounded-full backdrop-blur-sm
+            bg-linear-to-br dark:from-natalDark/50 dark:via-natalDark/50 dark:to-orange-300/50 dark:to-140% from-natalLight/50 via-natalLight/50 to-orange-500/50
+            hover:bg-natalLight dark:hover:bg-natalDark
+            '>
+              Kontak
+              <div className='pr-2'>
+                <img
+                  width={25}
+                  height={25}
+                  src="https://static.vecteezy.com/system/resources/previews/011/016/451/non_2x/christmas-decoration-with-balls-and-bell-free-png.png"
+                  alt=""
+                  className='opacity-0'
+                />
+              </div>
+
+              <div className='absolute right-1 animate-wiggle'>
+                <img
+                  width={40}
+                  height={40}
+                  src="https://static.vecteezy.com/system/resources/previews/011/016/451/non_2x/christmas-decoration-with-balls-and-bell-free-png.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </Link>
 
           <Link

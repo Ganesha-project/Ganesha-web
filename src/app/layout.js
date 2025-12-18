@@ -12,6 +12,7 @@ import Script from "next/script";
 import { MetaPixelProvider } from "@/lib/metaPixelProvider";
 import { Suspense } from 'react'; // ✅ Tambahkan ini
 import PopupAds from "@/components/PopupAds";
+import { ChristmasSeason } from "@/components/SeasonalComponents/ChristmasSeason";
 
 const quicksand = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -88,18 +89,19 @@ export default function RootLayout({ children }) {
         />
 
         <ThemeProvider enableSystem={true} attribute="class">
+          <ChristmasSeason />
           <Navbar>
             {children}
             <Footer />
           </Navbar>
           <FloatingButton />
-          <PopupAds/>
+          <PopupAds />
           <NavigationMobile />
         </ThemeProvider>
 
         <Analytics />
         <SpeedInsights />
-        
+
         {/* ✅ WRAP DENGAN SUSPENSE */}
         <Suspense fallback={null}>
           <MetaPixelProvider />
