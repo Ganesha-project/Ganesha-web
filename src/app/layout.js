@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
 
-        <ThemeProvider enableSystem={true} attribute="class">
+        <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class">
           <ChristmasSeason />
           <Navbar>
             {children}
