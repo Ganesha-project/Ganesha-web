@@ -104,7 +104,8 @@ export const Navbar = ({ children }) => {
 
             <li className='relative flex flex-col items-center group duration-200 ease-in-out hover:scale-[102%]'>
               <Link
-                href={'/go-space'}
+                href={'https://www.gospace.co.id'}
+                target={"_blank"}
                 className={`z-[555] font-semibold shimmer-animate shimmer-text block py-[6px] px-3 items-center rounded-full hover:bg-darkColor/5 dark:hover:bg-lightColor/5 duration-200 ease-in-out`}
                 aria-current="page"
               >

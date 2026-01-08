@@ -414,7 +414,7 @@ export const categorizedServices = {
             visibility: true
         },
         {
-            href: "/go-space",
+            href: "https://www.gospace.co.id",
             icon: <HiCubeTransparent />,
             label: "Go Space",
             desc: "Nikmati layanan virtual office, meeting space, dan workspace yang fleksibel di lokasi strategis Jakarta",
