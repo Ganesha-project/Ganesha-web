@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { FaQuoteRight } from "react-icons/fa6";
 import { Title } from "./Title";
 import { useEffect, useState } from "react";
@@ -29,7 +28,6 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
         const data = await res.json();
         if (data && Array.isArray(data.data)) {
           setClients(data.data);
-          // console.log("INI DATA PHOTOS MENTAH NYA: ", data.data);
           
         }
       } catch (err) {
@@ -43,8 +41,6 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
   }, []);
 
   const clientsWithPhotos = clients.filter((c) => c.clientPhoto)
-  // console.log("clientsWithPhotos: ", clientsWithPhotos);
-  
 
   const handleImageLoad = (idx) => {
     setImageLoading((prev) => ({
@@ -79,15 +75,13 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
                   <SkeletonImage className="object-cover rounded-3xl h-full w-full" />
                 )}
 
-                <Image
-                  width={900}
-                  height={900}
+                <img
                   src={client?.clientPhoto}
                   alt={client.ptName || client.companyName || `client-${idx}`}
                   className={`object-cover rounded-3xl h-full w-full ${
                     imageLoading[idx] !== false ? "hidden" : "block"
                   }`}
-                  onLoadingComplete={() => handleImageLoad(idx)}
+                  onLoad={() => handleImageLoad(idx)}
                 />
               </div>
             </div>
