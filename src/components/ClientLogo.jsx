@@ -41,15 +41,7 @@ export const ClientLogo = () => {
         }
       } catch (err) {
         console.error("Error fetching client data:", err);
-        // Mock data for demo
-        setClients([
-          { id: 1, companyLogo: "https://via.placeholder.com/150", companyName: "Company 1" },
-          { id: 2, companyLogo: "https://via.placeholder.com/150", companyName: "Company 2" },
-          { id: 3, companyLogo: "https://via.placeholder.com/150", companyName: "Company 3" },
-          { id: 4, companyLogo: "https://via.placeholder.com/150", companyName: "Company 4" },
-          { id: 5, companyLogo: "https://via.placeholder.com/150", companyName: "Company 5" },
-          { id: 6, companyLogo: "https://via.placeholder.com/150", companyName: "Company 6" },
-        ]);
+      
       } finally {
         setLoading(false);
       }
@@ -149,7 +141,7 @@ export const ClientLogo = () => {
                 {/* Gradient overlays for smooth edges */}
                 <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
                 <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
-                
+
                 <motion.div
                   className="flex gap-4"
                   animate={{ x: ["0%", "-50%"] }}
@@ -161,14 +153,14 @@ export const ClientLogo = () => {
                   style={{ width: "fit-content" }}
                 >
                   {/* Triple the array for seamless loop */}
-                  {[...clientsWithLogo, ...clientsWithLogo, ...clientsWithLogo].map(
-                    (client, idx) => (
+                  {[
+                    ...clientsWithLogo,
+                    ...clientsWithLogo,
+                    ...clientsWithLogo,
+                  ].map((client, idx) => (
+                    <div key={`${client.id}-${idx}`} className="flex-shrink-0">
                       <div
-                        key={`${client.id}-${idx}`}
-                        className="flex-shrink-0"
-                      >
-                        <div
-                          className="
+                        className="
                             dark:bg-white bg-white bg-opacity-90
                             rounded-2xl
                             h-32 w-32 sm:h-24 sm:w-32
@@ -176,16 +168,15 @@ export const ClientLogo = () => {
                             p-4
                             shadow-sm
                           "
-                        >
-                          <img
-                            className="object-contain max-h-full max-w-full"
-                            src={client.companyLogo}
-                            alt={client.companyName || client.clientName}
-                          />
-                        </div>
+                      >
+                        <img
+                          className="object-contain max-h-full max-w-full"
+                          src={client.companyLogo}
+                          alt={client.companyName || client.clientName}
+                        />
                       </div>
-                    )
-                  )}
+                    </div>
+                  ))}
                 </motion.div>
               </div>
             ) : (
@@ -194,11 +185,14 @@ export const ClientLogo = () => {
                 {clientsWithLogo?.map((client, idx) => (
                   <div key={client.id || idx} className="flex justify-center">
                     <div className="dark:bg-white bg-white bg-opacity-90 rounded-3xl h-32 w-32 flex items-center p-4 relative group shadow-sm">
-                      <img
-                        className="object-contain w-full h-full"
-                        src={client.companyLogo}
-                        alt={client.companyName || client.clientName}
-                      />
+
+                        <img
+                          className="object-contain w-full h-full"
+                          src={client.companyLogo}
+                          alt={client.companyName || client.clientName}
+                        />
+                    
+
                       <div className="absolute inset-0 group-hover:opacity-100 opacity-0 backdrop-blur-md duration-300 bg-white flex flex-col justify-center bg-opacity-90 ease-in-out rounded-3xl">
                         <h4 className="text-center text-neutral-900 font-semibold text-xs md:text-sm p-2">
                           {client.companyName || client.clientName}
@@ -215,3 +209,5 @@ export const ClientLogo = () => {
     </>
   );
 };
+
+// cara nya agar yang client.companyLogo ada / tidak = null / tidak = - aja yang di render

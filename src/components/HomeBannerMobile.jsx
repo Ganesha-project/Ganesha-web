@@ -97,6 +97,8 @@ export const HomeBannerMobile = () => {
     }
   };
 
+  const mobileBanners = banners.filter((x) => x.url_desktop )
+
   return (
     <section className="relative block md:hidden">
       <div className="absolute inset-0 z-50 bg-gradient-to-b dark:from-black/35 dark:via-black/15 from-white/35 via-white/15 to-transparent w-full h-[50%]"></div>
@@ -107,7 +109,7 @@ export const HomeBannerMobile = () => {
         onTouchEnd={onTouchEnd}
       >
 
-        {banners?.map((el, index) => (
+        {mobileBanners?.map((el, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
@@ -126,7 +128,7 @@ export const HomeBannerMobile = () => {
 
       {/* Indicator dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-50">
-        {banners?.map((_, index) => (
+        {mobileBanners?.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
