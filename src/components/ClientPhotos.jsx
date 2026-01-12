@@ -29,7 +29,7 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
         const data = await res.json();
         if (data && Array.isArray(data.data)) {
           setClients(data.data);
-          console.log("INI MEMEK: ", data.data);
+          // console.log("INI DATA PHOTOS MENTAH NYA: ", data.data);
           
         }
       } catch (err) {
@@ -43,7 +43,7 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
   }, []);
 
   const clientsWithPhotos = clients.filter((c) => c.clientPhoto)
-  console.log("clientsWithPhotos: ", clientsWithPhotos);
+  // console.log("clientsWithPhotos: ", clientsWithPhotos);
   
 
   const handleImageLoad = (idx) => {
@@ -97,5 +97,3 @@ export const ClientPhotos = ({ titleVisibility, padding, padding2 }) => {
     </section>
   );
 };
-
-// KENAPA GA MUNCUL PADAHAL INI MUNCUL:

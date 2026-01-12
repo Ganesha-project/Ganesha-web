@@ -7,7 +7,8 @@ const nextConfig = {
         APIURL: process.env.NEXT_PUBLIC_APIURL,
     },
     images: {
-        unoptimized: true,
+        domains: ["res.cloudinary.com"],
+        // unoptimized: true,
         remotePatterns: [
             {
                 protocol: "https",
@@ -52,8 +53,8 @@ const nextConfig = {
             {
                 protocol: "http",
                 hostname: "localhost",
-                port: "1337", // Tambahkan port jika diperlukan
-                pathname: "/uploads/**", // Pastikan pathname sesuai dengan struktur URL
+                port: "1337", 
+                pathname: "/uploads/**", 
             },
         ],
     },
