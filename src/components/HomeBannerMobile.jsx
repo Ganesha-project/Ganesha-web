@@ -100,20 +100,7 @@ export const HomeBannerMobile = () => {
   return (
     <section className="relative block md:hidden">
       <div className="absolute inset-0 z-50 bg-gradient-to-b dark:from-black/35 dark:via-black/15 from-white/35 via-white/15 to-transparent w-full h-[50%]"></div>
-      <div className='absolute bottom-1 -left-5 translate-y-1/2'>
-        <div className=' flex items-center justify-center'>
-          {Array.from({ length: 30 }).map((_, index) => (
-            <Image
-              className='-ml-1.5 rotate-180 animate-wiggle'
-              key={index}
-              width={80}
-              height={80}
-              src="https://gallery.yopriceville.com/downloadfullsize/send/16278"
-              alt=""
-            />
-          ))}
-        </div>
-      </div>
+      
       <div
         className={`${BgMainGradient} w-full h-[220px] sm:h-[300px] relative rounded-b-3xl overflow-hidden`}
         onTouchStart={onTouchStart}
@@ -127,7 +114,7 @@ export const HomeBannerMobile = () => {
               }`}
           >
             <Image
-              src={el.url_desktop}
+              src={el.url_desktop || "/placeholder-image.png"}
               alt={`Banner Promo ${index + 1}`}
               fill
               className="object-cover w-full h-full"

@@ -92,7 +92,7 @@ export const FloatingButton = () => {
           {/* <Link href={WaLink} target="_blank"> */}
           <button
             onClick={handleFloatingWaButton}
-            className="bg-linear-to-bl from-natalDark to-natalLight bg-[#4DED69] hover:bg-[#35a549] hover:scale-95 duration-300 ease-in-out text-white font-bold py-3 px-3 rounded-full shadow-lg cursor-pointer"
+            className="bg-linear-to-bl bg-[#4DED69] hover:bg-[#35a549] hover:scale-95 duration-300 ease-in-out text-white font-bold py-3 px-3 rounded-full shadow-lg cursor-pointer"
           >
             <RiWhatsappFill size={25} />
           </button>

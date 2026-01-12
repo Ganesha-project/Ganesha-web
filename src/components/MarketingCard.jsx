@@ -39,10 +39,9 @@ export const MarketingCard = () => {
                 <Title text1={"Konsultasi Dengan"} text={"Team Marketing Kami"} />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {marketingCards.map((el, idx) => (
-                        <Link
+                        <div
                             key={idx}
                             className="relative rounded-parent overflow-hidden group"
-                            href=""
                         >
                             <Image
                                 width={500}
@@ -78,7 +77,7 @@ export const MarketingCard = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
             </section>

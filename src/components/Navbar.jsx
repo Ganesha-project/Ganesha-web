@@ -43,7 +43,7 @@ export const Navbar = ({ children }) => {
         <div className="relative navbar-center hidden lg:flex rounded-3xl px-4 overflow-hidden">
 
           {/* Seasonal Ornament */}
-          <div className='absolute -top-10 left-0 translate-y-1/2'>
+          {/* <div className='absolute -top-10 left-0 translate-y-1/2'>
             <div className=' flex items-center justify-center'>
               {Array.from({ length: 30 }).map((_, index) => (
                 <Image
@@ -56,8 +56,9 @@ export const Navbar = ({ children }) => {
                 />
               ))}
             </div>
-          </div>
-          <div className='absolute -bottom-2.5 -left-5 translate-y-1/2'>
+          </div> */}
+
+          {/* <div className='absolute -bottom-2.5 -left-5 translate-y-1/2'>
             <div className=' flex items-center justify-center'>
               {Array.from({ length: 30 }).map((_, index) => (
                 <Image
@@ -70,12 +71,12 @@ export const Navbar = ({ children }) => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
           {/* Seasonal Ornament */}
 
 
           {/* Wrapper */}
-          <div className={`${seasonalColor.christmas} absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
+          <div className={`absolute backdrop-blur-lg px-24 py-5 dark:bg-secondaryDark/80 bg-secondaryLight/80 border border-darkColor/5 dark:border-lightColor/5 rounded-full w-full h-[35px] -z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom`}></div>
 
           <ul className="flex items-center flex-col p-4 md:p-0 mt-4 font-medium md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 text-[14px]">
 
@@ -196,16 +197,16 @@ export const Navbar = ({ children }) => {
         </div>
 
         <div className="space-x-2">
-          {/* <Link
+          <Link
             href='/contact'
             className={`flex items-center `}
           >
             <span className='border border-darkColor/5 dark:border-lightColor/5 md:block hidden font-semibold text-neutral-800 dark:text-white bg-secondaryLight/80 dark:bg-secondaryDark/80 backdrop-blur-lg shadow-custom hover:bg-mainColor hover:text-white ease-in-out duration-300 dark:hover:bg-secondaryColor px-4 py-2 rounded-full'>
               Kontak
             </span>
-          </Link> */}
+          </Link>
 
-          <Link
+          {/* <Link
             href='/contact'
             className={`flex items-center relative`}
           >
@@ -233,7 +234,7 @@ export const Navbar = ({ children }) => {
                 />
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           <Link
             href={dataContact.media[0].link}

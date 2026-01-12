@@ -17,6 +17,7 @@ const CardItem = ({ cat, onClose }) => (
                     transform: 'translate(-50%, -50%)',
                 }}
             />
+            
             <div
                 className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
