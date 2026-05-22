@@ -52,19 +52,22 @@ export default function SearchPageQuery() {
     const articleResults = isQueryValid
         ? rawArticles
             .filter((item) => {
-                const title = item.attributes?.Title?.toLowerCase() || "";
-                const excerpt = item.attributes?.Excerpt?.toLowerCase() || "";
+                const title = (item.title || item.attributes?.Title || "").toLowerCase();
+                const excerpt = (item.excerpt || item.attributes?.Excerpt || "").toLowerCase();
                 return title.includes(searchQuery.toLowerCase()) || excerpt.includes(searchQuery.toLowerCase());
             })
             .map((item) => {
                 const attr = item.attributes || {};
                 return {
                     id: item.id,
-                    title: attr.Title || "No Title",
-                    slug: attr.Slug || "",
-                    categorySlug: attr.category?.data?.attributes?.ArticleCategory,
-                    trending: attr.Trending || false,
-                    content: attr.Excerpt || "",
+                    title: item.title || attr.Title || "No Title",
+                    slug: item.slug || attr.Slug || "",
+                    categorySlug:
+                        item.category?.name ||
+                        item.category?.slug ||
+                        attr.category?.data?.attributes?.ArticleCategory,
+                    trending: item.highlight || attr.Trending || false,
+                    content: item.excerpt || attr.Excerpt || "",
                 };
             })
         : [];

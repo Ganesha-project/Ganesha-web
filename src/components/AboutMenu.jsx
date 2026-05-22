@@ -1,43 +1,14 @@
 "use client";
 
 import { useArticles } from "@/hooks/useArticle";
-import { useState } from "react";
-import { useActivities } from "@/hooks/useActivities";
-import { ActivityLoader } from "./Loading/ActivityLoader";
-import { ArticleLoader } from "./Loading/ArticleLoader";
 import { AboutUsLinks } from "@/DB/Database";
-import { slugify } from "@/helper/slugify";
 import Link from "next/link";
 
 export const AboutMenu = ({ expandedId, onClose }) => {
   const expandAnimationClass = expandedId
     ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out"
     : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
-  const { activities, loadActivity, errorActivity } = useActivities({
-    initialShow: 2,
-  });
   const { articles } = useArticles({ initialLimit: 6 });
-  const [images, setImages] = useState([]);
-  ("");
-  const [orientations, setOrientations] = useState([]);
-
-  const handleImageLoad = (e, idx) => {
-    const { naturalWidth, naturalHeight } = e.target;
-    const isPortrait = naturalHeight > naturalWidth;
-    setOrientations((prev) => {
-      const newOrientations = [...prev];
-      newOrientations[idx] = isPortrait ? "portrait" : "landscape";
-      return newOrientations;
-    });
-  };
-
-  const getGridClass = () => {
-    if (orientations.length < images.length) return "grid-cols-2"; // Default while loading
-    const [a, b] = orientations;
-
-    if (a === "portrait" && b === "portrait") return "grid-cols-2";
-    return "grid-cols-1";
-  };
 
   return (
     <>
@@ -123,20 +94,12 @@ export const AboutMenu = ({ expandedId, onClose }) => {
               {articles.data.map((article) => (
                 <Link
                   onClick={onClose}
-                  href={
-                    "/article/" +
-                    slugify(
-                      article?.attributes?.category?.data?.attributes
-                        ?.ArticleCategory
-                    ) +
-                    "/" +
-                    article.attributes.Slug
-                  }
+                  href={`/article/${article.slug || article.attributes?.Slug}`}
                   key={article.id}
                   className={`${expandAnimationClass} hover:scale-95 hover:dark:bg-darkColor/80 hover:bg-lightColor/80 grow transition-transform relative overflow-hidden w-full h-full dark:bg-darkColor/50 bg-lightColor/50 rounded-3xl shadow-mainShadow flex flex-col py-3 px-5 hover:bg-opacity-20`}
                 >
                   <p className="font-bold text-md capitalize bg-gradient-to-br from-darkColor via-darkColor to-mainColor  dark:from-lightColor dark:via-lightColor dark:to-secondaryColor bg-clip-text text-transparent w-fit hover:underline">
-                    {article.attributes?.Title}
+                    {article.title || article.attributes?.Title}
                   </p>
                 </Link>
               ))}

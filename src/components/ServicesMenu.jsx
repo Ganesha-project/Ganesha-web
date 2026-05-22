@@ -1,6 +1,5 @@
 "use client";
 import { categorizedServices } from "@/DB/Database";
-import { useHookMenu } from "@/hooks/useHookMenu";
 import { usePromos } from "@/hooks/usePromos";
 import Link from "next/link";
 import { useState, useMemo, useEffect } from "react";
@@ -12,7 +11,6 @@ export const ServicesMenu = ({ expandedId, onClose }) => {
   const expandAnimationClass = expandedId
     ? "scale-100 -translate-y-0 opacity-100 duration-500 ease-in-out"
     : "scale-[.90] -translate-y-12 opacity-0 duration-500 ease-in-out";
-  const { mediaUrl, loadingHookMenu, errorHookMenu } = useHookMenu();
   const [searchQuery, setSearchQuery] = useState("");
   const [visible, setVisible] = useState(false);
 
@@ -57,7 +55,7 @@ export const ServicesMenu = ({ expandedId, onClose }) => {
   const { promos, setPromos, error: errHooks } = usePromos();
 
   useEffect(() => {
-    if (!promos.length) return;
+    if (!promos?.length) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === promos.length - 1 ? 0 : prev + 1));
     }, 3000);

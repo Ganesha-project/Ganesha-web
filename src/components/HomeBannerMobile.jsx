@@ -27,7 +27,7 @@ export const HomeBannerMobile = () => {
 
   // Auto slide with pause/resume functionality 
   useEffect(() => {
-    if (!banners.length || banners.length <= 1 || !isAutoPlaying) return;
+    if (!banners?.length || banners.length <= 1 || !isAutoPlaying) return;
 
     autoPlayRef.current = setInterval(() => {
       setCurrentIndex((prev) =>
@@ -97,7 +97,7 @@ export const HomeBannerMobile = () => {
     }
   };
 
-  const mobileBanners = banners.filter((x) => x.url_desktop )
+  const mobileBanners = (banners || []).filter((x) => x.url_desktop )
 
   return (
     <section className="relative block md:hidden">

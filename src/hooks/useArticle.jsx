@@ -1,5 +1,20 @@
 import { useEffect, useState } from "react";
 
+const getCategoriesFromArticles = (items = []) =>
+    items
+        .map((article) => article.category)
+        .filter((category) => category && category.name)
+        .reduce((unique, category) => {
+            if (!unique.find((item) => item.id === category.id)) {
+                unique.push({
+                    id: category.id,
+                    name: category.name,
+                    slug: category.slug,
+                });
+            }
+            return unique;
+        }, []);
+
 export function useArticles({ initialLimit = 9 }) {
     const [articles, setArticles] = useState(null);
     const [categories, setCategories] = useState(null);
@@ -9,53 +24,96 @@ export function useArticles({ initialLimit = 9 }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [itemsToShow, setItemsToShow] = useState(initialLimit);
     const [sortOrder, setSortOrder] = useState("DESC");
+    const [hasMore, setHasMore] = useState(false);
 
     const apiUrl = process.env.NEXT_PUBLIC_APIURL;
+
+    const fetchArticlesPage = async ({ page = 1, limit = initialLimit, search = "", highlight = false } = {}) => {
+        const params = new URLSearchParams({
+            page: page.toString(),
+            limit: limit.toString(),
+            sort: sortOrder,
+            status: "PUBLISH",
+        });
+
+        if (search) params.append("search", search);
+        if (highlight) params.append("highlight", "true");
+
+        const res = await fetch(`${apiUrl}/content/articles?${params}`);
+        if (!res.ok) throw new Error("Network response was not ok");
+
+        const data = await res.json();
+        if (!data?.success) {
+            throw new Error(data?.message || "Failed to load articles");
+        }
+
+        return {
+            ...data,
+            data: Array.isArray(data.data) ? data.data : [],
+        };
+    };
 
     const fetchAllData = async () => {
         setLoading(true);
         try {
-            const [articlesRes, categoriesRes, trendingRes] = await Promise.all([
-                fetch(`${apiUrl}/api/articles?sort[0]=createdAt:${sortOrder}&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`),
-                fetch(`${apiUrl}/api/categories?populate=*`),
-                fetch(`${apiUrl}/api/articles?sort[0]=createdAt:DESC&filters[Trending][$eq]=true&populate=*&pagination[page]=1&pagination[pageSize]=${itemsToShow}`),
+            const [articlesData, categoriesData, trendingData] = await Promise.all([
+                fetchArticlesPage({ page: 1, limit: itemsToShow }),
+                fetchArticlesPage({ page: 1, limit: 100 }),
+                fetchArticlesPage({ page: 1, limit: itemsToShow, highlight: true }),
             ]);
 
-            if (!articlesRes.ok || !categoriesRes.ok || !trendingRes.ok) {
-                throw new Error("Network response was not ok");
-            }
-
-            const articlesData = await articlesRes.json();
-            const categoriesData = await categoriesRes.json();
-            const trendingData = await trendingRes.json();
-
             setArticles(articlesData);
-            setCategories(categoriesData);
+            setCategories({ data: getCategoriesFromArticles(categoriesData.data) });
             setTrending(trendingData);
+            setHasMore(
+                articlesData.pagination?.currentPage < articlesData.pagination?.totalPages
+            );
+            setError(null);
         } catch (err) {
             setError(err.message);
+            setArticles({ data: [], pagination: null });
+            setCategories({ data: [] });
+            setTrending({ data: [] });
+            setHasMore(false);
         } finally {
             setLoading(false);
         }
     };
 
-    const fetchFilteredArticles = async (search) => {
+    const fetchFilteredArticles = async (search, offset = 0, append = false) => {
         setLoading(true);
         try {
-            const res = await fetch(`${apiUrl}/api/articles?filters[Title][$containsi]=${search}&populate=*`);
-            if (!res.ok) throw new Error("Network response was not ok");
-            const data = await res.json();
-            setArticles(data);
+            const page = Math.floor(offset / initialLimit) + 1;
+            const data = await fetchArticlesPage({ page, limit: initialLimit, search });
+
+            setArticles((prev) =>
+                append
+                    ? {
+                        ...data,
+                        data: [...(prev?.data || []), ...data.data],
+                    }
+                    : data
+            );
+            setHasMore(data.pagination?.currentPage < data.pagination?.totalPages);
+            setError(null);
         } catch (err) {
             setError(err.message);
+            if (!append) {
+                setArticles({ data: [], pagination: null });
+            }
+            setHasMore(false);
         } finally {
             setLoading(false);
         }
     };
 
-    const handleSearch = (search) => {
+    const handleSearch = (search, offset = 0) => {
         setSearchTerm(search);
-        fetchFilteredArticles(search);
+        fetchFilteredArticles(search, offset);
+    };
+
+    const fetchMore = (search, offset = 0) => {
+        fetchFilteredArticles(search, offset, true);
     };
 
     const loadMore = () => {
@@ -74,6 +132,8 @@ export function useArticles({ initialLimit = 9 }) {
         errorArticles: error,
         searchTerm,
         handleSearch,
+        fetchMore,
+        hasMore,
         loadMore,
         setSortOrder,
     };

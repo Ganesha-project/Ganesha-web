@@ -12,13 +12,19 @@ export const usePromos = () => {
         const res = await fetch(
           `${process.env.NEXT_PUBLIC_APIURL}/business/promos?limit=100`
         );
+        if (!res.ok) {
+          throw new Error("Failed to fetch promos");
+        }
         const data = await res.json();
 
-        if (data) {
+        if (data?.success && Array.isArray(data.data)) {
           setPromos(data.data);
+        } else {
+          setPromos([]);
         }
       } catch (err) {
-        console.error("error");
+        setError(err instanceof Error ? err.message : "Failed to fetch promos");
+        setPromos([]);
       } finally {
         setLoading(false);
       }
