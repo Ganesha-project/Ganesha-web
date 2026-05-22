@@ -19,7 +19,7 @@ export const MarketingCard = () => {
             id: 2,
             name: "Guntur",
             waLink: "https://api.whatsapp.com/send?phone=628887127000",
-            imageUrl: "https://ganesha-cms.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdzrh2ogbn%2Fimage%2Fupload%2Fv1765793849%2Fcms_media%2F585cf50d27afa5340e80d4010c7056f9.jpg&w=3840&q=75",
+            imageUrl: "https://ganesha-cms.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdzrh2ogbn%2Fimage%2Fupload%2Fv1779436890%2Fcms_media%2Ffd29581564408d91be5469070ffc4ccb.jpg&w=1920&q=75",
             bio: "Konsultasikan segala kebutuhan Bisnis mu dengan Kami.",
             brand: "Ganesha Consulting"
         },
