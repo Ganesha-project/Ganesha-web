@@ -985,7 +985,7 @@ export const dataContact = {
         {
             label: "LinkedIn",
             icon: <RiLinkedinFill />,
-            data: "Ganesha Multi Kreatif",
+            data: "Ganesha Consulting",
             link: "https://www.linkedin.com/company/ganesha-multi-kreatif/"
         },
         {
@@ -1030,7 +1030,7 @@ export const dataAboutus = {
     content: (
         <>
             <p>
-                Kami Ganesha Multi Kreatif adalah penyedia layanan terpadu yang mengedepankan profesionalisme dan inovasi untuk mendukung kesuksesan bisnis Anda. Kami adalah semangat anak muda yang mengedepankan kreativitas dan professionalitas. "Ganesha" merupakan simbol dari harapan dan keberuntungan, sementara "Multi Kreatif" mencerminkan kemampuan serbaguna kami.
+                Kami Ganesha Consulting adalah penyedia layanan terpadu yang mengedepankan profesionalisme dan inovasi untuk mendukung kesuksesan bisnis Anda. Kami adalah semangat anak muda yang mengedepankan kreativitas dan professionalitas. "Ganesha" merupakan simbol dari harapan dan keberuntungan, sementara "Multi Kreatif" mencerminkan kemampuan serbaguna kami.
             </p>
             <p>
                 Sebagai konsultan yang inovatif, kami menawarkan berbagai macam layanan diantaranya adalah Pendirian Badan Usaha, Pengurusan Perizinan, Pembuatan Website, Desain Grafis, Pengelolaan Sosial Media, Konsultasi Pajak dan layanan eksklusif lainnya. Kami berkomitmen untuk memberikan pelayanan yang berkualitas dan kreatif, menjadikan kami destinasi satu atap untuk mejadi solusi kesuksesan bisnis Anda.

@@ -99,23 +99,23 @@ export default function PromoPage() {
   return (
     <>
       <Head>
-        <title>Latest Promos | Ganesha Multi Kreatif</title>
+        <title>Latest Promos | PT Ganesha Bisnis Kreasi</title>
         <meta
           name="description"
-          content="Discover the latest promotions and special offers from Ganesha Multi Kreatif. Stay updated with our newest deals and discounts."
+          content="Discover the latest promotions and special offers from Ganesha Consulting. Stay updated with our newest deals and discounts."
         />
         <meta
           name="keywords"
-          content="promotions, deals, discounts, Ganesha Multi Kreatif, special offers"
+          content="promotions, deals, discounts, Ganesha Consulting, special offers"
         />
-        <meta name="author" content="Ganesha Multi Kreatif" />
+        <meta name="author" content="Ganesha Consulting" />
         <meta
           property="og:title"
-          content="Latest Promos | Ganesha Multi Kreatif"
+          content="Latest Promos | Ganesha Consulting"
         />
         <meta
           property="og:description"
-          content="Discover the latest promotions and special offers from Ganesha Multi Kreatif."
+          content="Discover the latest promotions and special offers from Ganesha Consulting."
         />
         <meta
           property="og:image"

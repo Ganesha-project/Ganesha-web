@@ -110,23 +110,23 @@ export default function Activity() {
   return (
     <>
       <Head>
-        <title>Latest Activities | Ganesha Multi Kreatif</title>
+        <title>Latest Activities | PT Ganesha Bisnis Kreasi</title>
         <meta
           name="description"
-          content="Discover the latest activities and events organized by Ganesha Multi Kreatif. Stay updated with our newest events, schedules, and locations."
+          content="Discover the latest activities and events organized by PT Ganesha Bisnis Kreasi. Stay updated with our newest events, schedules, and locations."
         />
         <meta
           name="keywords"
-          content="activities, events, Ganesha Multi Kreatif, latest updates, workshops"
+          content="activities, events, PT Ganesha Bisnis Kreasi, latest updates, workshops"
         />
-        <meta name="author" content="Ganesha Multi Kreatif" />
+        <meta name="author" content="PT Ganesha Bisnis Kreasi" />
         <meta
           property="og:title"
-          content="Latest Activities | Ganesha Multi Kreatif"
+          content="Latest Activities | PT Ganesha Bisnis Kreasi"
         />
         <meta
           property="og:description"
-          content="Discover the latest activities and events organized by Ganesha Multi Kreatif."
+          content="Discover the latest activities and events organized by PT Ganesha Bisnis Kreasi."
         />
         <meta
           property="og:image"

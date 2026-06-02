@@ -17,7 +17,7 @@ export const Footer = () => {
                                 alt="Ganesha Consulting Logo"
                             />
                             <p className={`${TextMainGradient} font-bold text-lg`}>
-                                PT Ganesha Multi Kreatif
+                                PT Ganesha Bisnis Kreasi
                             </p>
                         </div>
 
