@@ -26,7 +26,6 @@ import {
     HiShieldCheck,
     HiIdentification,
     HiCog,
-    HiCurrencyDollar,
     HiNewspaper,
     HiEnvelope,
     HiClock,
@@ -281,12 +280,6 @@ export const NavLinks = {
     ],
     others: [
         {
-            href: '/price-list',
-            label: 'List Harga',
-            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
-            accent: "dark:bg-[#cf9898] bg-[#cd7575]",
-        },
-        {
             href: '/article',
             label: 'Artikel',
             desc: "Baca artikel terbaru kami untuk mendapatkan wawasan lebih lanjut.",
@@ -300,13 +293,6 @@ export const NavLinks = {
             icon: <HiBuildingOffice2 />,
             desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
             accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
-        },
-        {
-            href: '/price-list',
-            label: 'List Harga',
-            icon: <HiCurrencyDollar />,
-            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
-            accent: "dark:bg-[#cf9898] bg-[#cd7575]",
         },
         {
             href: '/contact',
@@ -326,16 +312,6 @@ export const AboutUsLinks = [
         desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
         accentLight: "#73107e",
         accentDark: "#D398D9",
-        subs: [],
-        visibility: true,
-    },
-    {
-        href: "/price-list",
-        icon: <HiCurrencyDollar />,
-        label: "List Harga",
-        desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
-        accentLight: "#853939",
-        accentDark: "#cf9898",
         subs: [],
         visibility: true,
     },
@@ -878,17 +854,6 @@ export const DataBanner = [
         },
     },
     {
-        href: "price-list",
-        data: {
-            bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/gdoh9ffyjrko6vj4gms3.svg",
-            mainText: "Daftar Harga Paket Kami",
-            desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda. Klik untuk melihat harga dan dapatkan layanan terbaik dari kami!",
-            accent: "bg-[#cf9898] dark:bg-[#cd7575]",
-            accent2: "bg-[#7FAEF1] dark:bg-[#7FAEF1]",
-            textAccent: "dark:text-[#eb9090] text-[#eb9090]"
-        },
-    },
-    {
         href: "contact",
         data: {
             bannerImage: "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236562/GaneshaAssets/lless9yoyqqflx15prvq.svg",
@@ -1202,11 +1167,6 @@ export const dataAdsBanner = [
         bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/2_1_11zon_9f38d3100f.webp",
         href: "/pendirian-pt",
         alt: "Ganesha Promo Pendirian PT"
-    },
-    {
-        bannerImg: "https://cms-ganesha.ganeshaconsulting.co.id/uploads/5_11zon_3_11zon_d42ca9df45.webp",
-        href: "/price-list",
-        alt: "Ganesha Promo Semua Paket"
     },
 ];
 

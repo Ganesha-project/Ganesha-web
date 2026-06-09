@@ -5,7 +5,10 @@ export async function getPackagesByServiceId(serviceId) {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_APIURL}/business/packages?serviceId=${serviceId}&limit=100`,
       {
-        next: { revalidate: 3600 }, // Revalidate every hour
+        next: {
+          revalidate: 3600,
+          tags: ["packages", `packages:${serviceId}`],
+        },
       }
     );
     if (!res.ok) {

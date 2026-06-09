@@ -7,7 +7,7 @@ import {
   TbHours24,
 } from "react-icons/tb";
 import { GoLaw } from "react-icons/go";
-import { FaBuildingWheat, FaMoneyBills, FaUserTie } from "react-icons/fa6";
+import { FaBuildingWheat, FaUserTie } from "react-icons/fa6";
 import {
   RiAppsFill,
   RiBookOpenFill,
@@ -553,12 +553,6 @@ export const NavLinks = {
   ],
   others: [
     {
-      href: "/price-list",
-      label: "List Harga",
-      desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
-      accent: "dark:bg-[#cf9898] bg-[#cd7575]",
-    },
-    {
       href: "/article",
       label: "Artikel",
       desc: "Baca artikel terbaru kami untuk mendapatkan wawasan lebih lanjut.",
@@ -572,13 +566,6 @@ export const NavLinks = {
       icon: <IoIosInformationCircle />,
       desc: "Kami menyediakan solusi all-in-one untuk bisnis Anda, lebih lanjut.",
       accent: "dark:bg-[#D398D9] bg-[#d298d98e]",
-    },
-    {
-      href: "/price-list",
-      label: "List Harga",
-      icon: <FaMoneyBills />,
-      desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda.",
-      accent: "dark:bg-[#cf9898] bg-[#cd7575]",
     },
     {
       href: "/contact",
@@ -901,18 +888,6 @@ export const DataBanner = [
       desc: "Lindungi merek, hak cipta, dan paten bisnis Anda dengan layanan HAKI kami, memberikan keunggulan kompetitif.",
       accent: "bg-[#eb9090] dark:bg-[#eb9090]",
       accent2: "bg-[#aa9168] dark:bg-[#aa9168]",
-      textAccent: "dark:text-[#eb9090] text-[#eb9090]",
-    },
-  },
-  {
-    href: "price-list",
-    data: {
-      bannerImage:
-        "https://res.cloudinary.com/dzrh2ogbn/image/upload/v1722236551/GaneshaAssets/gdoh9ffyjrko6vj4gms3.svg",
-      mainText: "Daftar Harga Paket Kami",
-      desc: "Jelajahi pilihan paket kami dan temukan opsi yang sesuai dengan kebutuhan Anda. Klik untuk melihat harga dan dapatkan layanan terbaik dari kami!",
-      accent: "bg-[#cf9898] dark:bg-[#cd7575]",
-      accent2: "bg-[#7FAEF1] dark:bg-[#7FAEF1]",
       textAccent: "dark:text-[#eb9090] text-[#eb9090]",
     },
   },
