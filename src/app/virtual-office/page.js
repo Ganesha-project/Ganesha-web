@@ -59,12 +59,11 @@ export const metadata = {
 
 export default async function VirtualOfficePage() {
 
-    const VOPackagesAPI = await getPackagesByServiceId(10)
+    const VOPackagesAPI = await getPackagesByServiceId(10, VirtualOfficePackages)
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={VirtualOfficePackages}
                 data={VOPackagesAPI}
                 label={'Paket Sewa Virtual Office'}
             />

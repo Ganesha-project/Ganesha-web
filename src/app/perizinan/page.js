@@ -58,12 +58,11 @@ export const metadata = {
 
 export default async function IzinTambahanPage() {
 
-    const IzinTambahanPackageAPI = await getPackagesByServiceId(6)
+    const IzinTambahanPackageAPI = await getPackagesByServiceId(6, servicePackages)
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={servicePackages}
                 data={IzinTambahanPackageAPI}
                 label={'Paket Perizinan'}
             />

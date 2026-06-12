@@ -48,12 +48,11 @@ export const metadata = {
 
 export default async function HakiPage() {
 
-    const HAKIPackagesAPI = await getPackagesByServiceId(5)
+    const HAKIPackagesAPI = await getPackagesByServiceId(5, HakiPackages)
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={HakiPackages}
                 data={HAKIPackagesAPI}
                 label={'Paket HAKI'}
             />

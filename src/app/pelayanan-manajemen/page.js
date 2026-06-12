@@ -1,4 +1,7 @@
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { ReusableCards } from '@/components/ReusableCards';
+import { createConsultationPackages } from '@/helper/createConsultationPackages';
+import { ManagementPackages } from '../../../public/DB/OtherPackages';
 
 export const metadata = {
     title: "Pelayanan Manajemen - Ganesha Consulting",
@@ -44,9 +47,15 @@ export const metadata = {
 };
 
 export default async function PelayananManajemenPage() {
+    const managementPackages = createConsultationPackages(ManagementPackages);
+
     return (
         <>
             <BannerService />
+            <ReusableCards
+                data={managementPackages}
+                label={'Paket Pelayanan Manajemen'}
+            />
         </>
     );
 }

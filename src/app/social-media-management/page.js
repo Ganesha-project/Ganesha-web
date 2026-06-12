@@ -51,12 +51,11 @@ export const metadata = {
 
 export default async function SosmedPage() {
 
-    const SocmedPackagesAPI = await getPackagesByServiceId(7)
+    const SocmedPackagesAPI = await getPackagesByServiceId(7, SMPackages)
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={SMPackages}
                 data={SocmedPackagesAPI}
                 label={'Paket Social Media Management'}
             />

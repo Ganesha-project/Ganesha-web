@@ -59,12 +59,11 @@ export const metadata = {
 
 export default async function PendirianBadanUsaha() {
 
-    const BadanUsahaPackagesAPI = await getPackagesByServiceId(4)
+    const BadanUsahaPackagesAPI = await getPackagesByServiceId(4, BadanUsahaPackages)
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={BadanUsahaPackages}
                 data={BadanUsahaPackagesAPI}
                 label={'Paket Pendirian Badan Usaha'}
             />

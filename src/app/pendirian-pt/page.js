@@ -19,7 +19,11 @@ import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export default async function PendirianPtPage() {
 
-    const PTPackagesAPI = await getPackagesByServiceId(1)
+    const PTPackagesAPI = await getPackagesByServiceId(1, [
+        ...PTPackages,
+        ...PMAPackages,
+        ...ExtrasPackages,
+    ])
     // console.log("PTPackagesAPI", PTPackagesAPI);
     
     return (
@@ -64,7 +68,6 @@ export default async function PendirianPtPage() {
             </Head>
             <BannerService />
             <ReusableCards
-                // data={[...PTPackages, ...PMAPackages, ...ExtrasPackages]}
                 data={PTPackagesAPI}
                 label={'Paket Pendirian PT'}
             />

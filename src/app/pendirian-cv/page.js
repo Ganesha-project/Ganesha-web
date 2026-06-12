@@ -57,12 +57,14 @@ export const metadata = {
 
 export default async function PendirianCvPage() {
     
-    const CVPackagesAPI = await getPackagesByServiceId(2)
+    const CVPackagesAPI = await getPackagesByServiceId(2, [
+        ...CVPackages,
+        ...ExtrasPackages,
+    ])
     return (
         <>
             <BannerService />
             <ReusableCards
-                // data={[...CVPackages, ...ExtrasPackages]}
                 data={CVPackagesAPI}
                 label={'Paket Pendirian CV'}
             />

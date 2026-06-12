@@ -1,4 +1,7 @@
 import { BannerService } from '@/components/ServicesComponent/BannerService';
+import { ReusableCards } from '@/components/ReusableCards';
+import { createConsultationPackages } from '@/helper/createConsultationPackages';
+import { AuditPackages } from '../../../public/DB/OtherPackages';
 
 export const metadata = {
     title: "Layanan Audit Profesional - Ganesha Consulting",
@@ -45,9 +48,15 @@ export const metadata = {
 
 
 export default async function AuditPage() {
+    const auditPackages = createConsultationPackages(AuditPackages);
+
     return (
         <>
             <BannerService />
+            <ReusableCards
+                data={auditPackages}
+                label={'Paket Audit'}
+            />
         </>
     );
 }

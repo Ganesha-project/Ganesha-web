@@ -46,12 +46,11 @@ export const metadata = {
 
 export default async function PelayananAkuntansi() {
 
-    const AccountantPackagesAPI = await getPackagesByServiceId(9)
+    const AccountantPackagesAPI = await getPackagesByServiceId(9, AccountantPackages)
     return (
         <>
             <BannerService />
             <ReusableCards  
-                // data={AccountantPackages}
                 data={AccountantPackagesAPI}
                 label={'Paket Pelayanan Akuntansi'}
             />

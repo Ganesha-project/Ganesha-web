@@ -7,7 +7,7 @@ import { Faqs } from '@/components/LegalComponents/Faqs';
 import { CopyWriting } from '@/components/PajakCompontns/CopyWriting';
 import { RWhyUs } from '@/components/LegalComponents/RWhyUs';
 import { ReusableCards } from '@/components/ReusableCards';
-// import { konsultanPajakPMA, konsultanPajakPMDN, pelaporanSPT, pendaftaranPajakDaerah, perpajakanLainnya } from '../../../public/DB/PajakPackages';
+import { KonsultanPajakPackages } from '../../../public/DB/PajakPackages';
 import { getPackagesByServiceId } from '@/lib/getPackagesByServiceId';
 
 export const metadata = {
@@ -61,7 +61,7 @@ export const metadata = {
 
 export default async function KonsultanPajakPage() {
     // Ambil data dari API
-    const PajakPackagesAPI = await getPackagesByServiceId(8);
+    const PajakPackagesAPI = await getPackagesByServiceId(8, KonsultanPajakPackages);
 
     // Filter berdasarkan type
     const pelaporanSPT = PajakPackagesAPI.filter(pkg => 

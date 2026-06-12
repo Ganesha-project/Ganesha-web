@@ -96,13 +96,12 @@ async function getAvailablePackageTypes() {
 export default async function WebPage() {
   // Fetch available package types on server
   const availablePackageTypes = await getAvailablePackageTypes();
-  const webPackagesAPI = await getPackagesByServiceId(3)
+  const webPackagesAPI = await getPackagesByServiceId(3, WebPackages)
 
   return (
     <>
       <BannerService />
       <ReusableCards
-        // data={WebPackages}
         data={webPackagesAPI}
         label={"Paket Pembuatan Website"}
         seePackageWorks={true}

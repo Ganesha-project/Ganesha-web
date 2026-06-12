@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef, useCallback } from "react";
 import {
   BsFillCheckCircleFill,
-  BsFillXCircleFill,
   BsInfoCircleFill,
 } from "react-icons/bs";
 import {
@@ -21,9 +20,13 @@ import { Button } from "./ui/button";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { calculateOriginalPrice } from "@/helper/calculateOriginalPrice";
 
+const DEFAULT_VISIBLE_FEATURES = 5;
+
 // Helper function to process data and calculate original prices
 const processCardData = (data) => {
-  return data
+  const cards = Array.isArray(data) ? data : [];
+
+  return cards
     .map((item) => ({
       ...item,
       priceOriginal:
@@ -46,6 +49,7 @@ export const ReusableCards = ({
   availablePackageTypes = [],
 }) => {
   const [activeDot, setActiveDot] = useState(0);
+  const [expandedFeatureCards, setExpandedFeatureCards] = useState({});
   const carouselRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -97,6 +101,13 @@ export const ReusableCards = ({
     scrollToIndex(prevIndex);
   }, [activeDot, totalDots, scrollToIndex]);
 
+  const toggleFeatureExpansion = useCallback((cardIndex) => {
+    setExpandedFeatureCards((prev) => ({
+      ...prev,
+      [cardIndex]: !prev[cardIndex],
+    }));
+  }, []);
+
   // Handle scroll to update active dot
   useEffect(() => {
     const container = containerRef.current;
@@ -135,6 +146,7 @@ export const ReusableCards = ({
   // Reset active dot when data changes
   useEffect(() => {
     setActiveDot(0);
+    setExpandedFeatureCards({});
     // Scroll to first card when data changes
     setTimeout(() => scrollToIndex(0), 100);
   }, [data, scrollToIndex]);
@@ -304,11 +316,13 @@ export const ReusableCards = ({
                           ? null
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
-                      <div className="flex items-center text-xs">
-                        <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
-                          OFF {el.discount}%
-                        </p>
-                      </div>
+                      {el.discount > 0 && (
+                        <div className="flex items-center text-xs">
+                          <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                            OFF {el.discount}%
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <h2 className="font-bold text-2xl md:text-3xl text-white flex gap-2 items-center flex-wrap">
@@ -355,11 +369,13 @@ export const ReusableCards = ({
                           ? null
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
-                      <div className="flex items-center text-xs">
-                        <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
-                          OFF {el.discount}%
-                        </p>
-                      </div>
+                      {el.discount > 0 && (
+                        <div className="flex items-center text-xs">
+                          <p className="bg-red-400 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                            OFF {el.discount}%
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <h2 className="font-bold text-2xl md:text-3xl text-white flex gap-2 items-center flex-wrap">
@@ -421,11 +437,13 @@ export const ReusableCards = ({
                           ? null
                           : formatToRupiah(el.priceOriginal)}
                       </h3>
-                      <div className="flex items-center text-xs">
-                        <p className="bg-red-500 font-medium px-2 py-1 text-white rounded-full animate-pulse">
-                          OFF {el.discount}%
-                        </p>
-                      </div>
+                      {el.discount > 0 && (
+                        <div className="flex items-center text-xs">
+                          <p className="bg-red-500 font-medium px-2 py-1 text-white rounded-full animate-pulse">
+                            OFF {el.discount}%
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <h2
@@ -460,20 +478,52 @@ export const ReusableCards = ({
                         Apa yang Kamu Dapat?
                       </h1>
                     </div>
-                    {el.features?.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <span className="items-start">
-                          {feature.status === true ? (
-                            <BsFillCheckCircleFill className="text-mainColor" />
-                          ) : (
-                            <BsFillXCircleFill className="text-red-500" />
+                    {(() => {
+                      const availableFeatures = (el.features || []).filter(
+                        (feature) => feature.status === true
+                      );
+                      const isExpanded = Boolean(expandedFeatureCards[idx]);
+                      const visibleFeatures = isExpanded
+                        ? availableFeatures
+                        : availableFeatures.slice(0, DEFAULT_VISIBLE_FEATURES);
+                      const hiddenFeatureCount =
+                        availableFeatures.length - DEFAULT_VISIBLE_FEATURES;
+
+                      return (
+                        <>
+                          {visibleFeatures.map((feature, featureIdx) => (
+                            <div
+                              key={featureIdx}
+                              className="flex items-center gap-3"
+                            >
+                              <span className="items-start">
+                                <BsFillCheckCircleFill className="text-mainColor" />
+                              </span>
+                              <h4 className="font-medium dark:text-neutral-100 text-neutral-900">
+                                {feature.feature}
+                              </h4>
+                            </div>
+                          ))}
+
+                          {availableFeatures.length > DEFAULT_VISIBLE_FEATURES && (
+                            <button
+                              type="button"
+                              onClick={() => toggleFeatureExpansion(idx)}
+                              className="mt-3 flex items-center gap-2 text-sm font-semibold text-mainColor dark:text-secondaryColor hover:opacity-80"
+                            >
+                              {isExpanded
+                                ? "Tampilkan lebih sedikit"
+                                : `Lihat ${hiddenFeatureCount} fitur lainnya`}
+                              <IoIosArrowDown
+                                className={`duration-300 ${
+                                  isExpanded ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
                           )}
-                        </span>
-                        <h4 className="font-medium dark:text-neutral-100 text-neutral-900">
-                          {feature.feature}
-                        </h4>
-                      </div>
-                    ))}
+                        </>
+                      );
+                    })()}
                   </div>
                   {el.requirements?.length > 0 && (
                     <>

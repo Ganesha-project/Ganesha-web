@@ -5,6 +5,9 @@ import { dataPageSMS, faqsSMS, reasonsCompaniesNeedSMS, softwareManagementSystem
 import { WhyLegal } from '@/components/LegalComponents/WhyLegal';
 import { Faqs } from '@/components/LegalComponents/Faqs';
 import { KindOfService } from '@/components/PartnerComponents/KindOfService';
+import { ReusableCards } from '@/components/ReusableCards';
+import { createConsultationPackages } from '@/helper/createConsultationPackages';
+import { SoftwarePackages } from '../../../public/DB/OtherPackages';
 
 export const metadata = {
     title: "Software Management System - Ganesha Consulting",
@@ -44,9 +47,15 @@ export const metadata = {
 };
 
 export default async function SoftwareManagementSystem() {
+    const softwarePackages = createConsultationPackages(SoftwarePackages);
+
     return (
         <>
             <BannerService />
+            <ReusableCards
+                data={softwarePackages}
+                label={'Paket Software Management System'}
+            />
             <Explanation
                 text1={'Apa itu'}
                 text={'Software Management System (SMS)?'}
